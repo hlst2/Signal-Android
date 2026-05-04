@@ -113,8 +113,7 @@ class WelcomeFragment : LoggingFragment(R.layout.fragment_registration_welcome_v
   }
 
   private fun navigateToNextScreenViaContinue() {
-    sharedViewModel.maybePrefillE164(requireContext())
-    findNavController().safeNavigate(WelcomeFragmentDirections.goToEnterPhoneNumber(EnterPhoneNumberMode.NORMAL))
+    findNavController().safeNavigate(WelcomeFragmentDirections.goToEnterDisplayName())
   }
 
   private fun onTermsClicked() {

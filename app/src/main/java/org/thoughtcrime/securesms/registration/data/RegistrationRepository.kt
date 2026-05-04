@@ -475,6 +475,62 @@ object RegistrationRepository {
     return@withContext RegisterAccountResult.from(result)
   }
 
+  /**
+   * Register an account against a private self-hosted Signal-Server with no SMS verification, captcha,
+   * registration lock, or SVR/PIN flow. The server derives an internal account identifier from the
+   * provided display name. Returns the full [AccountRegistrationResult] on success.
+   */
+  suspend fun registerPrivateAccount(context: Context, displayName: String, registrationData: RegistrationData): RegisterAccountResult = withContext(Dispatchers.IO) {
+    Log.v(TAG, "registerPrivateAccount()")
+    val api: RegistrationApi = AccountManagerFactory.getInstance()
+      .createUnauthenticated(context, registrationData.e164, SignalServiceAddress.DEFAULT_DEVICE_ID, registrationData.password)
+      .registrationApi
+
+    val universalUnidentifiedAccess: Boolean = TextSecurePreferences.isUniversalUnidentifiedAccess(context)
+    val unidentifiedAccessKey: ByteArray = UnidentifiedAccess.deriveAccessKeyFrom(registrationData.profileKey)
+
+    val accountAttributes = AccountAttributes(
+      signalingKey = null,
+      registrationId = registrationData.registrationId,
+      fetchesMessages = registrationData.isNotFcm,
+      registrationLock = null,
+      unidentifiedAccessKey = unidentifiedAccessKey,
+      unrestrictedUnidentifiedAccess = universalUnidentifiedAccess,
+      capabilities = AppCapabilities.getCapabilities(true),
+      discoverableByPhoneNumber = false,
+      name = null,
+      pniRegistrationId = registrationData.pniRegistrationId,
+      recoveryPassword = null
+    )
+
+    SignalStore.account.generateAciIdentityKeyIfNecessary()
+    val aciIdentity: IdentityKeyPair = SignalStore.account.aciIdentityKey
+
+    SignalStore.account.generatePniIdentityKeyIfNecessary()
+    val pniIdentity: IdentityKeyPair = SignalStore.account.pniIdentityKey
+
+    val aciPreKeyCollection = generateSignedAndLastResortPreKeys(aciIdentity, SignalStore.account.aciPreKeys)
+    val pniPreKeyCollection = generateSignedAndLastResortPreKeys(pniIdentity, SignalStore.account.pniPreKeys)
+
+    val result: NetworkResult<AccountRegistrationResult> = api
+      .registerPrivateAccount(displayName, accountAttributes, aciPreKeyCollection, pniPreKeyCollection, registrationData.fcmToken)
+      .map { response: VerifyAccountResponse ->
+        AccountRegistrationResult(
+          uuid = response.uuid,
+          pni = response.pni,
+          storageCapable = response.storageCapable,
+          number = response.number,
+          masterKey = null,
+          pin = null,
+          aciPreKeyCollection = aciPreKeyCollection,
+          pniPreKeyCollection = pniPreKeyCollection,
+          reRegistration = response.reregistration
+        )
+      }
+
+    return@withContext RegisterAccountResult.from(result)
+  }
+
   @WorkerThread
   fun registerAsLinkedDevice(
     context: Context,

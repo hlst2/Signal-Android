@@ -16,6 +16,7 @@ import org.whispersystems.signalservice.internal.delete
 import org.whispersystems.signalservice.internal.get
 import org.whispersystems.signalservice.internal.push.ConfirmUsernameRequest
 import org.whispersystems.signalservice.internal.push.ConfirmUsernameResponse
+import org.whispersystems.signalservice.internal.push.DirectoryResponse
 import org.whispersystems.signalservice.internal.push.GcmRegistrationId
 import org.whispersystems.signalservice.internal.push.PushServiceSocket
 import org.whispersystems.signalservice.internal.push.ReserveUsernameRequest
@@ -45,6 +46,17 @@ class AccountApi(private val authWebSocket: SignalWebSocket.AuthenticatedWebSock
   fun whoAmI(): NetworkResult<WhoAmIResponse> {
     val request = WebSocketRequestMessage.get("/v1/accounts/whoami")
     return NetworkResult.fromWebSocketRequest(authWebSocket, request, WhoAmIResponse::class)
+  }
+
+  /**
+   * Fetch the directory of every registered account on this private deployment.
+   *
+   * GET /v1/accounts/directory
+   * - 200: Success
+   */
+  fun getDirectory(): NetworkResult<DirectoryResponse> {
+    val request = WebSocketRequestMessage.get("/v1/accounts/directory")
+    return NetworkResult.fromWebSocketRequest(authWebSocket, request, DirectoryResponse::class)
   }
 
   /**

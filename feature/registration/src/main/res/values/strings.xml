@@ -7,6 +7,30 @@
     <!-- Screen title for restoring or transfering account -->
     <string name="registration_activity__restore_or_transfer">Restore or transfer</string>
 
+    <!-- ServerSetupFragment -->
+    <!-- Title shown above the URL input on first boot -->
+    <string name="ServerSetupFragment_title">Connect to your server</string>
+    <!-- Body text describing what to enter -->
+    <string name="ServerSetupFragment_description">Enter the URL of your private Signal server, including https:// and port if needed.</string>
+    <!-- Hint inside the URL text field -->
+    <string name="ServerSetupFragment_url_hint">https://10.0.1.50:8443</string>
+    <!-- Continue button label -->
+    <string name="ServerSetupFragment_continue">Continue</string>
+    <!-- Validation error shown when the URL is malformed -->
+    <string name="ServerSetupFragment_invalid_url">Enter a valid URL starting with http:// or https://</string>
+
+    <!-- EnterDisplayNameFragment -->
+    <!-- Title shown above the display-name input -->
+    <string name="EnterDisplayNameFragment_title">Choose your name</string>
+    <!-- Subtitle / description for the display-name screen -->
+    <string name="EnterDisplayNameFragment_description">This is how other people on the server will see you.</string>
+    <!-- Hint text inside the display-name input -->
+    <string name="EnterDisplayNameFragment_hint">Display name</string>
+    <!-- Validation error when the user leaves the name field empty -->
+    <string name="EnterDisplayNameFragment_blank">Enter a display name</string>
+    <!-- Error toast shown when registration against the private server fails -->
+    <string name="EnterDisplayNameFragment_failed">Couldn\'t register. Check the server URL and your network and try again.</string>
+
     <!-- GrantPermissionsFragment -->
     <!-- Displayed as a title at the top of the screen -->
     <string name="GrantPermissionsFragment__allow_permissions">Allow permissions</string>

@@ -73,6 +73,7 @@ import org.thoughtcrime.securesms.contacts.paged.ContactSearchSortOrder;
 import org.thoughtcrime.securesms.contacts.paged.ContactSearchState;
 import org.thoughtcrime.securesms.contacts.selection.ContactSelectionArguments;
 import org.thoughtcrime.securesms.contacts.sync.ContactDiscovery;
+import org.thoughtcrime.securesms.jobs.PrivateDirectoryRefreshJob;
 import org.thoughtcrime.securesms.database.RecipientTable;
 import org.thoughtcrime.securesms.groups.SelectionLimits;
 import org.thoughtcrime.securesms.groups.ui.GroupLimitDialog;
@@ -643,6 +644,10 @@ public final class ContactSelectionListFragment extends LoggingFragment {
 
       @Override
       protected Boolean doInBackground(Void... voids) {
+        if (SignalStore.customServer().isConfigured()) {
+          PrivateDirectoryRefreshJob.enqueue();
+          return true;
+        }
         try {
           ContactDiscovery.refreshAll(context, false);
           return true;

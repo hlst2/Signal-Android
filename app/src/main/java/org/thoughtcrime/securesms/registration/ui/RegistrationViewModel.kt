@@ -41,6 +41,7 @@ import org.thoughtcrime.securesms.backup.v2.RestoreTimestampResult
 import org.thoughtcrime.securesms.database.model.databaseprotos.LinkedDeviceInfo
 import org.thoughtcrime.securesms.database.model.databaseprotos.RestoreDecisionState
 import org.thoughtcrime.securesms.dependencies.AppDependencies
+import org.thoughtcrime.securesms.jobs.PrivateDirectoryRefreshJob
 import org.thoughtcrime.securesms.jobs.ReclaimUsernameAndLinkJob
 import org.thoughtcrime.securesms.keyvalue.NewAccount
 import org.thoughtcrime.securesms.keyvalue.SignalStore
@@ -1055,6 +1056,36 @@ class RegistrationViewModel : ViewModel() {
 
   private fun getCurrentE164(): String? {
     return store.value.phoneNumber?.toE164()
+  }
+
+  /**
+   * Register against a private self-hosted Signal-Server. Skips the SMS verification, captcha, and
+   * registration-lock state machine; goes straight from "user typed a name" to a created account.
+   */
+  fun registerPrivateAccount(context: Context, displayName: String) {
+    setRegistrationCheckpoint(RegistrationCheckpoint.PHONE_NUMBER_CONFIRMED)
+    setInProgress(true)
+
+    viewModelScope.launch(context = coroutineExceptionHandler) {
+      val fcmToken = updateFcmToken(context)
+      val registrationData = RegistrationData(
+        code = "",
+        e164 = displayName,
+        password = password,
+        registrationId = RegistrationRepository.getRegistrationId(),
+        profileKey = RegistrationRepository.getProfileKey(displayName),
+        fcmToken = fcmToken,
+        pniRegistrationId = RegistrationRepository.getPniRegistrationId(),
+        recoveryPassword = null
+      )
+
+      val registrationResult = RegistrationRepository.registerPrivateAccount(context, displayName, registrationData)
+      val success = handleRegistrationResult(context, registrationData, registrationResult, false)
+      if (success) {
+        PrivateDirectoryRefreshJob.enqueue()
+      }
+      setInProgress(false)
+    }
   }
 
   private suspend fun getRegistrationData(): RegistrationData {

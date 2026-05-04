@@ -180,6 +180,7 @@ public class PushServiceSocket {
   private static final String REMOTE_CONFIG = "/v2/config";
 
   private static final String REGISTRATION_PATH    = "/v1/registration";
+  private static final String REGISTRATION_PRIVATE_PATH = "/v1/registration/private";
 
   private static final String BACKUP_AUTH_CHECK_V2 = "/v2/svr/auth/check";
   private static final String BACKUP_AUTH_CHECK_V3 = "/v3/backup/auth/check";
@@ -334,6 +335,43 @@ public class PushServiceSocket {
     }
 
     String response = makeServiceRequest(path, "POST", JsonUtil.toJson(body), NO_HEADERS, new RegistrationSessionResponseHandler(), SealedSenderAccess.NONE);
+    return JsonUtil.fromJson(response, VerifyAccountResponse.class);
+  }
+
+  public VerifyAccountResponse submitPrivateRegistrationRequest(String displayName, AccountAttributes attributes, PreKeyCollection aciPreKeys, PreKeyCollection pniPreKeys, @Nullable String fcmToken) throws IOException {
+    GcmRegistrationId gcmRegistrationId = attributes.getFetchesMessages() ? null : new GcmRegistrationId(fcmToken, true);
+
+    PrivateRegistrationRequestBody body;
+    try {
+      final SignedPreKeyEntity aciSignedPreKey = new SignedPreKeyEntity(Objects.requireNonNull(aciPreKeys.getSignedPreKey()).getId(),
+                                                                        aciPreKeys.getSignedPreKey().getKeyPair().getPublicKey(),
+                                                                        aciPreKeys.getSignedPreKey().getSignature());
+      final SignedPreKeyEntity pniSignedPreKey = new SignedPreKeyEntity(Objects.requireNonNull(pniPreKeys.getSignedPreKey()).getId(),
+                                                                        pniPreKeys.getSignedPreKey().getKeyPair().getPublicKey(),
+                                                                        pniPreKeys.getSignedPreKey().getSignature());
+      final KyberPreKeyEntity aciLastResortKyberPreKey = new KyberPreKeyEntity(Objects.requireNonNull(aciPreKeys.getLastResortKyberPreKey()).getId(),
+                                                                               aciPreKeys.getLastResortKyberPreKey().getKeyPair().getPublicKey(),
+                                                                               aciPreKeys.getLastResortKyberPreKey().getSignature());
+      final KyberPreKeyEntity pniLastResortKyberPreKey = new KyberPreKeyEntity(Objects.requireNonNull(pniPreKeys.getLastResortKyberPreKey()).getId(),
+                                                                               pniPreKeys.getLastResortKyberPreKey().getKeyPair().getPublicKey(),
+                                                                               pniPreKeys.getLastResortKyberPreKey().getSignature());
+
+      body = new PrivateRegistrationRequestBody(displayName,
+                                                attributes,
+                                                Base64.encodeWithoutPadding(aciPreKeys.getIdentityKey().serialize()),
+                                                Base64.encodeWithoutPadding(pniPreKeys.getIdentityKey().serialize()),
+                                                aciSignedPreKey,
+                                                pniSignedPreKey,
+                                                aciLastResortKyberPreKey,
+                                                pniLastResortKyberPreKey,
+                                                gcmRegistrationId,
+                                                true,
+                                                true);
+    } catch (InvalidKeyException e) {
+      throw new AssertionError("unexpected invalid key", e);
+    }
+
+    String response = makeServiceRequest(REGISTRATION_PRIVATE_PATH, "POST", JsonUtil.toJson(body), NO_HEADERS, new RegistrationSessionResponseHandler(), SealedSenderAccess.NONE);
     return JsonUtil.fromJson(response, VerifyAccountResponse.class);
   }
 

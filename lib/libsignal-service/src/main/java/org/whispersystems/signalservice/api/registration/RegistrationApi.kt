@@ -109,6 +109,17 @@ class RegistrationApi(
   }
 
   /**
+   * Register an account against a private self-hosted deployment with no phone-number verification.
+   *
+   * `POST /v1/registration/private`
+   */
+  fun registerPrivateAccount(displayName: String, attributes: AccountAttributes, aciPreKeys: PreKeyCollection, pniPreKeys: PreKeyCollection, fcmToken: String?): NetworkResult<VerifyAccountResponse> {
+    return NetworkResult.fromFetch {
+      pushServiceSocket.submitPrivateRegistrationRequest(displayName, attributes, aciPreKeys, pniPreKeys, fcmToken)
+    }
+  }
+
+  /**
    * Validates the provided SVR2 auth credentials, returning information on their usability.
    *
    * `POST /v2/svr/auth/check`

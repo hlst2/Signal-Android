@@ -49,6 +49,8 @@ import org.thoughtcrime.securesms.R
 import org.thoughtcrime.securesms.components.settings.app.AppSettingsActivity
 import org.thoughtcrime.securesms.conversation.NewConversationUiState.UserMessage
 import org.thoughtcrime.securesms.groups.ui.creategroup.CreateGroupActivity
+import org.thoughtcrime.securesms.jobs.PrivateDirectoryRefreshJob
+import org.thoughtcrime.securesms.keyvalue.SignalStore
 import org.thoughtcrime.securesms.recipients.Recipient
 import org.thoughtcrime.securesms.recipients.RecipientId
 import org.thoughtcrime.securesms.recipients.ui.RecipientLookupFailureMessage
@@ -77,6 +79,10 @@ class NewConversationActivity : PassphraseRequiredActivity() {
   override fun onCreate(savedInstanceState: Bundle?, ready: Boolean) {
     enableEdgeToEdge()
     super.onCreate(savedInstanceState, ready)
+
+    if (SignalStore.customServer.isConfigured) {
+      PrivateDirectoryRefreshJob.enqueue()
+    }
 
     val navigateBack = onBackPressedDispatcher::onBackPressed
 

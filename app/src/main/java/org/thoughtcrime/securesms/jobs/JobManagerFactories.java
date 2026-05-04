@@ -172,6 +172,7 @@ public final class JobManagerFactories {
       put(DeprecatedNotificationJob.KEY,               new DeprecatedNotificationJob.Factory());
       put(DeviceNameChangeJob.KEY,                     new DeviceNameChangeJob.Factory());
       put(DirectoryRefreshJob.KEY,                     new DirectoryRefreshJob.Factory());
+      put(PrivateDirectoryRefreshJob.KEY,              new PrivateDirectoryRefreshJob.Factory());
       put(DownloadLatestEmojiDataJob.KEY,              new DownloadLatestEmojiDataJob.Factory());
       put(E164FormattingJob.KEY,                       new E164FormattingJob.Factory());
       put(EmojiSearchIndexDownloadJob.KEY,             new EmojiSearchIndexDownloadJob.Factory());
