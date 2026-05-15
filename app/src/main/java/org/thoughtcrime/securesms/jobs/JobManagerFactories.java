@@ -74,7 +74,6 @@ import org.thoughtcrime.securesms.migrations.EmojiDownloadMigrationJob;
 import org.thoughtcrime.securesms.migrations.EmojiSearchEnglishLabelsMigrationJob;
 import org.thoughtcrime.securesms.migrations.EmojiSearchIndexCheckMigrationJob;
 import org.thoughtcrime.securesms.migrations.FixChangeNumberErrorMigrationJob;
-import org.thoughtcrime.securesms.migrations.GooglePlayBillingPurchaseTokenMigrationJob;
 import org.thoughtcrime.securesms.migrations.IdentityTableCleanupMigrationJob;
 import org.thoughtcrime.securesms.migrations.LegacyMigrationJob;
 import org.thoughtcrime.securesms.migrations.MigrationCompleteJob;
@@ -106,7 +105,6 @@ import org.thoughtcrime.securesms.migrations.StorageFixLocalUnknownMigrationJob;
 import org.thoughtcrime.securesms.migrations.StorageServiceMigrationJob;
 import org.thoughtcrime.securesms.migrations.StorageServiceSystemNameMigrationJob;
 import org.thoughtcrime.securesms.migrations.StoryViewedReceiptsStateMigrationJob;
-import org.thoughtcrime.securesms.migrations.SubscriberIdMigrationJob;
 import org.thoughtcrime.securesms.migrations.Svr2MirrorMigrationJob;
 import org.thoughtcrime.securesms.migrations.SyncCallLinksMigrationJob;
 import org.thoughtcrime.securesms.migrations.SyncChatFoldersMigrationJob;
@@ -324,7 +322,7 @@ public final class JobManagerFactories {
       put(EmojiSearchEnglishLabelsMigrationJob.KEY,       new EmojiSearchEnglishLabelsMigrationJob.Factory());
       put(EmojiSearchIndexCheckMigrationJob.KEY,          new EmojiSearchIndexCheckMigrationJob.Factory());
       put(FixChangeNumberErrorMigrationJob.KEY,           new FixChangeNumberErrorMigrationJob.Factory());
-      put(GooglePlayBillingPurchaseTokenMigrationJob.KEY, new GooglePlayBillingPurchaseTokenMigrationJob.Factory());
+      // GooglePlayBillingPurchaseTokenMigrationJob retired in server-private. Mapped to PassingMigrationJob below.
       put(IdentityTableCleanupMigrationJob.KEY,           new IdentityTableCleanupMigrationJob.Factory());
       put(LegacyMigrationJob.KEY,                         new LegacyMigrationJob.Factory());
       put(MigrationCompleteJob.KEY,                       new MigrationCompleteJob.Factory());
@@ -355,7 +353,7 @@ public final class JobManagerFactories {
       put(StorageServiceMigrationJob.KEY,                 new StorageServiceMigrationJob.Factory());
       put(StorageServiceSystemNameMigrationJob.KEY,       new StorageServiceSystemNameMigrationJob.Factory());
       put(StoryViewedReceiptsStateMigrationJob.KEY,       new StoryViewedReceiptsStateMigrationJob.Factory());
-      put(SubscriberIdMigrationJob.KEY,                   new SubscriberIdMigrationJob.Factory());
+      // SubscriberIdMigrationJob retired in server-private. Mapped to PassingMigrationJob below.
       put(Svr2MirrorMigrationJob.KEY,                     new Svr2MirrorMigrationJob.Factory());
       put(SyncCallLinksMigrationJob.KEY,                  new SyncCallLinksMigrationJob.Factory());
       put(SyncChatFoldersMigrationJob.KEY,                new SyncChatFoldersMigrationJob.Factory());
@@ -386,6 +384,8 @@ public final class JobManagerFactories {
       put("BackupSubscriptionCheckJob",                  new FailingJob.Factory());
       put("MultiDeviceSubscriptionSyncRequestJob",       new FailingJob.Factory());
       put("PostRestoreBackupRedemptionJob",              new FailingJob.Factory());
+      put("SubscriberIdMigrationJob",                    new PassingMigrationJob.Factory());
+      put("GooglePlayBillingPurchaseTokenMigrationJob",  new PassingMigrationJob.Factory());
       put("PushContentReceiveJob",                       new FailingJob.Factory());
       put("AttachmentUploadJob",                         new FailingJob.Factory());
       put("MmsSendJob",                                  new FailingJob.Factory());

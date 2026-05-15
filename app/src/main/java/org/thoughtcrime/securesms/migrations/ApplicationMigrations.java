@@ -720,9 +720,7 @@ public class ApplicationMigrations {
       jobs.put(Version.ATTACHMENT_HASH_BACKFILL, new AttachmentHashBackfillMigrationJob());
     }
 
-    if (lastSeenVersion < Version.SUBSCRIBER_ID) {
-      jobs.put(Version.SUBSCRIBER_ID, new SubscriberIdMigrationJob());
-    }
+    // SUBSCRIBER_ID migration retired in server-private (no donations).
 
     if (lastSeenVersion < Version.CONTACT_LINK_REBUILD) {
       jobs.put(Version.CONTACT_LINK_REBUILD, new ContactLinkRebuildMigrationJob());
@@ -792,9 +790,7 @@ public class ApplicationMigrations {
       jobs.put(Version.BAD_E164_FIX, new BadE164MigrationJob());
     }
 
-    if (lastSeenVersion < Version.GPB_TOKEN_MIGRATION) {
-      jobs.put(Version.GPB_TOKEN_MIGRATION, new GooglePlayBillingPurchaseTokenMigrationJob());
-    }
+    // GPB_TOKEN_MIGRATION retired in server-private (no Google Play Billing).
 
     if (lastSeenVersion < Version.GROUP_ADD_MIGRATION) {
       jobs.put(Version.GROUP_ADD_MIGRATION, new DatabaseMigrationJob());
