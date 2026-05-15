@@ -41,14 +41,12 @@ import org.whispersystems.signalservice.api.SignalServiceMessageReceiver
 import org.whispersystems.signalservice.api.SignalServiceMessageSender
 import org.whispersystems.signalservice.api.account.AccountApi
 import org.whispersystems.signalservice.api.attachment.AttachmentApi
-import org.whispersystems.signalservice.api.donations.DonationsApi
 import org.whispersystems.signalservice.api.groupsv2.GroupsV2Operations
 import org.whispersystems.signalservice.api.keys.KeysApi
 import org.whispersystems.signalservice.api.message.MessageApi
 import org.whispersystems.signalservice.api.profiles.ProfileApi
 import org.whispersystems.signalservice.api.push.TrustStore
 import org.whispersystems.signalservice.api.registration.RegistrationApi
-import org.whispersystems.signalservice.api.services.DonationsService
 import org.whispersystems.signalservice.api.services.ProfileService
 import org.whispersystems.signalservice.api.storage.StorageServiceApi
 import org.whispersystems.signalservice.api.util.Tls12SocketFactory
@@ -145,10 +143,6 @@ class NetworkDependenciesModule(
     provider.provideProfileService(groupsV2Operations.profileOperations, authWebSocket, unauthWebSocket)
   }
 
-  val donationsService: DonationsService by lazy {
-    provider.provideDonationsService(donationsApi)
-  }
-
   val archiveApi: ArchiveApi by lazy {
     provider.provideArchiveApi(authWebSocket, unauthWebSocket, pushServiceSocket)
   }
@@ -215,10 +209,6 @@ class NetworkDependenciesModule(
 
   val remoteConfigApi: RemoteConfigApi by lazy {
     provider.provideRemoteConfigApi(authWebSocket, pushServiceSocket)
-  }
-
-  val donationsApi: DonationsApi by lazy {
-    provider.provideDonationsApi(authWebSocket, unauthWebSocket)
   }
 
   val svrBApi: SvrBApi by lazy {

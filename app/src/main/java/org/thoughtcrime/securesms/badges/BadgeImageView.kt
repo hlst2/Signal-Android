@@ -12,7 +12,6 @@ import org.thoughtcrime.securesms.R
 import org.thoughtcrime.securesms.badges.load.BadgeSpriteTransformation
 import org.thoughtcrime.securesms.badges.load.GiftBadgeModel
 import org.thoughtcrime.securesms.badges.models.Badge
-import org.thoughtcrime.securesms.components.settings.app.subscription.BadgeImageSize
 import org.thoughtcrime.securesms.database.model.databaseprotos.GiftBadge
 import org.thoughtcrime.securesms.recipients.Recipient
 import org.thoughtcrime.securesms.util.ScreenDensity
@@ -30,10 +29,6 @@ class BadgeImageView @JvmOverloads constructor(
     }
 
     isClickable = false
-  }
-
-  constructor(context: Context, badgeImageSize: BadgeImageSize) : this(context) {
-    badgeSize = badgeImageSize.sizeCode
   }
 
   override fun setOnClickListener(l: OnClickListener?) {

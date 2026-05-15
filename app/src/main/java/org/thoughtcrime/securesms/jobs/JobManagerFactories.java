@@ -235,7 +235,7 @@ public final class JobManagerFactories {
       put(PushGroupSendJob.KEY,                        new PushGroupSendJob.Factory());
       put(PushGroupSilentUpdateSendJob.KEY,            new PushGroupSilentUpdateSendJob.Factory());
       put(MessageFetchJob.KEY,                         new MessageFetchJob.Factory());
-      put(PostRegistrationBackupRedemptionJob.KEY,     new PostRegistrationBackupRedemptionJob.Factory());
+      // PostRegistrationBackupRedemptionJob retired in server-private (no paid backup tier). Mapped to FailingJob below.
       put(PushProcessEarlyMessagesJob.KEY,             new PushProcessEarlyMessagesJob.Factory());
       put(PushProcessMessageErrorJob.KEY,              new PushProcessMessageErrorJob.Factory());
       put(PushProcessMessageJob.KEY,                   new PushProcessMessageJob.Factory());
@@ -385,6 +385,7 @@ public final class JobManagerFactories {
       put("InAppPaymentStripeRecurringSetupJob",         new FailingJob.Factory());
       put("BackupSubscriptionCheckJob",                  new FailingJob.Factory());
       put("MultiDeviceSubscriptionSyncRequestJob",       new FailingJob.Factory());
+      put("PostRestoreBackupRedemptionJob",              new FailingJob.Factory());
       put("PushContentReceiveJob",                       new FailingJob.Factory());
       put("AttachmentUploadJob",                         new FailingJob.Factory());
       put("MmsSendJob",                                  new FailingJob.Factory());

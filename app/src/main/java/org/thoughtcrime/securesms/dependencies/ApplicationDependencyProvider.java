@@ -94,7 +94,6 @@ import org.whispersystems.signalservice.api.attachment.AttachmentApi;
 import org.signal.network.api.CallingApi;
 import org.signal.network.api.CdsApi;
 import org.signal.network.api.CertificateApi;
-import org.whispersystems.signalservice.api.donations.DonationsApi;
 import org.whispersystems.signalservice.api.groupsv2.ClientZkOperations;
 import org.whispersystems.signalservice.api.groupsv2.GroupsV2Operations;
 import org.whispersystems.signalservice.api.keys.KeysApi;
@@ -108,7 +107,6 @@ import org.signal.core.models.ServiceId.PNI;
 import org.signal.network.api.RateLimitChallengeApi;
 import org.whispersystems.signalservice.api.registration.RegistrationApi;
 import org.signal.network.api.RemoteConfigApi;
-import org.whispersystems.signalservice.api.services.DonationsService;
 import org.whispersystems.signalservice.api.services.ProfileService;
 import org.whispersystems.signalservice.api.storage.StorageServiceApi;
 import org.signal.network.api.SvrBApi;
@@ -461,11 +459,6 @@ public class ApplicationDependencyProvider implements AppDependencies.Provider {
   }
 
   @Override
-  public @NonNull DonationsService provideDonationsService(@NonNull DonationsApi donationsApi) {
-    return new DonationsService(donationsApi);
-  }
-
-  @Override
   public @NonNull ProfileService provideProfileService(@NonNull ClientZkProfileOperations clientZkProfileOperations,
                                                        @NonNull SignalWebSocket.AuthenticatedWebSocket authWebSocket,
                                                        @NonNull SignalWebSocket.UnauthenticatedWebSocket unauthWebSocket)
@@ -573,11 +566,6 @@ public class ApplicationDependencyProvider implements AppDependencies.Provider {
   @Override
   public @NonNull RemoteConfigApi provideRemoteConfigApi(@NonNull SignalWebSocket.AuthenticatedWebSocket authWebSocket, @NonNull PushServiceSocket pushServiceSocket) {
     return new RemoteConfigApi(authWebSocket, pushServiceSocket);
-  }
-
-  @Override
-  public @NonNull DonationsApi provideDonationsApi(@NonNull SignalWebSocket.AuthenticatedWebSocket authWebSocket, @NonNull SignalWebSocket.UnauthenticatedWebSocket unauthWebSocket) {
-    return new DonationsApi(authWebSocket, unauthWebSocket);
   }
 
   @Override

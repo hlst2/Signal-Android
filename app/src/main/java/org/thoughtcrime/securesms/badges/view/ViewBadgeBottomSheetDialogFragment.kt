@@ -6,7 +6,6 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.core.content.ContextCompat
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.viewModels
 import androidx.viewpager2.widget.ViewPager2
@@ -19,12 +18,9 @@ import org.thoughtcrime.securesms.badges.BadgeRepository
 import org.thoughtcrime.securesms.badges.models.Badge
 import org.thoughtcrime.securesms.badges.models.LargeBadge
 import org.thoughtcrime.securesms.components.ViewBinderDelegate
-import org.thoughtcrime.securesms.components.settings.app.AppSettingsActivity
-import org.thoughtcrime.securesms.components.settings.app.subscription.InAppDonations
 import org.thoughtcrime.securesms.databinding.ViewBadgeBottomSheetDialogFragmentBinding
 import org.thoughtcrime.securesms.recipients.Recipient
 import org.thoughtcrime.securesms.recipients.RecipientId
-import org.thoughtcrime.securesms.util.CommunicationActions
 import org.thoughtcrime.securesms.util.ViewUtil
 import org.thoughtcrime.securesms.util.adapter.mapping.MappingAdapter
 import org.thoughtcrime.securesms.util.visible
@@ -57,18 +53,7 @@ class ViewBadgeBottomSheetDialogFragment : FixedRoundedCornerBottomSheetDialogFr
       binding.action.visible = false
     }
 
-    if (!InAppDonations.hasAtLeastOnePaymentMethodAvailable()) {
-      binding.noSupport.visible = true
-      binding.action.icon = ContextCompat.getDrawable(requireContext(), R.drawable.ic_open_20)
-      binding.action.setText(R.string.preferences__donate_to_signal)
-      binding.action.setOnClickListener {
-        CommunicationActions.openBrowserLink(requireContext(), getString(R.string.donate_url))
-      }
-    } else {
-      binding.action.setOnClickListener {
-        startActivity(AppSettingsActivity.subscriptions(requireContext()))
-      }
-    }
+    binding.action.visible = false
 
     val adapter = MappingAdapter()
 

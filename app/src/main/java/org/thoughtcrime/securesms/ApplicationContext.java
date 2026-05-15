@@ -60,7 +60,6 @@ import org.thoughtcrime.securesms.gcm.FcmFetchManager;
 import org.thoughtcrime.securesms.glide.SignalGlideComponents;
 import org.thoughtcrime.securesms.jobs.AccountConsistencyWorkerJob;
 import org.thoughtcrime.securesms.jobs.BackupRefreshJob;
-import org.thoughtcrime.securesms.jobs.BackupSubscriptionCheckJob;
 import org.thoughtcrime.securesms.jobs.BuildExpirationConfirmationJob;
 import org.thoughtcrime.securesms.jobs.CallingAssetsDownloadJob;
 import org.thoughtcrime.securesms.jobs.CheckKeyTransparencyJob;
@@ -71,8 +70,6 @@ import org.thoughtcrime.securesms.jobs.FcmRefreshJob;
 import org.thoughtcrime.securesms.jobs.FontDownloaderJob;
 import org.thoughtcrime.securesms.jobs.GroupRingCleanupJob;
 import org.thoughtcrime.securesms.jobs.GroupV2UpdateSelfProfileKeyJob;
-import org.thoughtcrime.securesms.jobs.InAppPaymentAuthCheckJob;
-import org.thoughtcrime.securesms.jobs.InAppPaymentKeepAliveJob;
 import org.thoughtcrime.securesms.jobs.LinkedDeviceInactiveCheckJob;
 import org.thoughtcrime.securesms.jobs.MultiDeviceContactUpdateJob;
 import org.thoughtcrime.securesms.jobs.PreKeysSyncJob;
@@ -256,13 +253,11 @@ public class ApplicationContext extends Application implements AppForegroundObse
     AppDependencies.getFrameRateTracker().start();
     AppDependencies.getMegaphoneRepository().onAppForegrounded();
     AppDependencies.getDeadlockDetector().start();
-    InAppPaymentKeepAliveJob.enqueueAndTrackTimeIfNecessary();
     FcmFetchManager.onForeground(this);
     startAnrDetector();
 
     SignalExecutors.BOUNDED.execute(() -> {
       BackupRefreshJob.enqueueIfNecessary();
-      InAppPaymentAuthCheckJob.enqueueIfNeeded();
       RemoteConfig.refreshIfNecessary();
       RetrieveProfileJob.enqueueRoutineFetchIfNecessary();
       executePendingContactSync();
@@ -271,7 +266,6 @@ public class ApplicationContext extends Application implements AppForegroundObse
       checkBuildExpiration();
       checkFreeDiskSpace();
       MemoryTracker.start();
-      BackupSubscriptionCheckJob.enqueueIfAble();
       CheckKeyTransparencyJob.enqueueIfNecessary(true);
       AppDependencies.getAuthWebSocket().registerKeepAliveToken(SignalWebSocket.FOREGROUND_KEEPALIVE);
       AppDependencies.getUnauthWebSocket().registerKeepAliveToken(SignalWebSocket.FOREGROUND_KEEPALIVE);

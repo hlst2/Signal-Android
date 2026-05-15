@@ -64,13 +64,11 @@ import org.whispersystems.signalservice.api.SignalServiceMessageReceiver
 import org.whispersystems.signalservice.api.SignalServiceMessageSender
 import org.whispersystems.signalservice.api.account.AccountApi
 import org.whispersystems.signalservice.api.attachment.AttachmentApi
-import org.whispersystems.signalservice.api.donations.DonationsApi
 import org.whispersystems.signalservice.api.groupsv2.GroupsV2Operations
 import org.whispersystems.signalservice.api.keys.KeysApi
 import org.whispersystems.signalservice.api.message.MessageApi
 import org.whispersystems.signalservice.api.profiles.ProfileApi
 import org.whispersystems.signalservice.api.registration.RegistrationApi
-import org.whispersystems.signalservice.api.services.DonationsService
 import org.whispersystems.signalservice.api.services.ProfileService
 import org.whispersystems.signalservice.api.storage.StorageServiceApi
 import org.whispersystems.signalservice.api.websocket.SignalWebSocket
@@ -325,10 +323,6 @@ object AppDependencies {
     get() = networkModule.profileService
 
   @JvmStatic
-  val donationsService: DonationsService
-    get() = networkModule.donationsService
-
-  @JvmStatic
   val archiveApi: ArchiveApi
     get() = networkModule.archiveApi
 
@@ -390,9 +384,6 @@ object AppDependencies {
 
   val remoteConfigApi: RemoteConfigApi
     get() = networkModule.remoteConfigApi
-
-  val donationsApi: DonationsApi
-    get() = networkModule.donationsApi
 
   val keyTransparencyApi: KeyTransparencyApi
     get() = networkModule.keyTransparencyApi
@@ -463,7 +454,6 @@ object AppDependencies {
     fun provideGiphyMp4Cache(): GiphyMp4Cache
     fun provideExoPlayerPool(): SimpleExoPlayerPool
     fun provideAndroidCallAudioManager(): AudioManagerCompat
-    fun provideDonationsService(donationsApi: DonationsApi): DonationsService
     fun provideProfileService(profileOperations: ClientZkProfileOperations, authWebSocket: SignalWebSocket.AuthenticatedWebSocket, unauthWebSocket: SignalWebSocket.UnauthenticatedWebSocket): ProfileService
     fun provideDeadlockDetector(): DeadlockDetector
     fun provideClientZkReceiptOperations(signalServiceConfiguration: SignalServiceConfiguration): ClientZkReceiptOperations
@@ -490,7 +480,6 @@ object AppDependencies {
     fun provideCertificateApi(authWebSocket: SignalWebSocket.AuthenticatedWebSocket): CertificateApi
     fun provideProfileApi(authWebSocket: SignalWebSocket.AuthenticatedWebSocket, unauthWebSocket: SignalWebSocket.UnauthenticatedWebSocket, pushServiceSocket: PushServiceSocket, clientZkProfileOperations: ClientZkProfileOperations): ProfileApi
     fun provideRemoteConfigApi(authWebSocket: SignalWebSocket.AuthenticatedWebSocket, pushServiceSocket: PushServiceSocket): RemoteConfigApi
-    fun provideDonationsApi(authWebSocket: SignalWebSocket.AuthenticatedWebSocket, unauthWebSocket: SignalWebSocket.UnauthenticatedWebSocket): DonationsApi
     fun provideSvrBApi(libSignalNetwork: Network): SvrBApi
     fun provideKeyTransparencyApi(unauthWebSocket: SignalWebSocket.UnauthenticatedWebSocket): KeyTransparencyApi
   }
