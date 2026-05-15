@@ -8,7 +8,6 @@ package org.thoughtcrime.securesms.components.settings.app.routes
 import android.os.Parcelable
 import androidx.annotation.StringRes
 import kotlinx.parcelize.Parcelize
-import org.signal.donations.InAppPaymentType
 import org.thoughtcrime.securesms.database.model.DistributionListId
 import org.thoughtcrime.securesms.groups.GroupId
 import org.thoughtcrime.securesms.profiles.manage.UsernameEditMode
@@ -104,19 +103,6 @@ sealed interface AppSettingsRoute : Parcelable {
   }
 
   @Parcelize
-  sealed interface DonationsRoute : AppSettingsRoute {
-    data class Donations(
-      val directToCheckoutType: InAppPaymentType = InAppPaymentType.UNKNOWN
-    ) : DonationsRoute
-
-    data object Badges : DonationsRoute
-    data object Receipts : DonationsRoute
-    data class Receipt(val id: Long) : DonationsRoute
-    data object LearnMore : DonationsRoute
-    data object Featured : DonationsRoute
-  }
-
-  @Parcelize
   sealed interface LabsRoute : AppSettingsRoute {
     data object Labs : LabsRoute
   }
@@ -124,13 +110,10 @@ sealed interface AppSettingsRoute : Parcelable {
   @Parcelize
   sealed interface InternalRoute : AppSettingsRoute {
     data object Internal : InternalRoute
-    data object DonorErrorConfiguration : InternalRoute
     data object StoryDialogs : InternalRoute
     data object Search : InternalRoute
     data object SvrPlayground : InternalRoute
     data object ChatSpringboard : InternalRoute
-    data object OneTimeDonationConfiguration : InternalRoute
-    data object TerminalDonationConfiguration : InternalRoute
     data object BackupPlayground : InternalRoute
     data object StorageServicePlayground : InternalRoute
     data object SqlitePlayground : InternalRoute

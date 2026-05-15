@@ -9,8 +9,6 @@ import org.thoughtcrime.securesms.util.RemoteConfig
 data class AppSettingsState(
   val isPrimaryDevice: Boolean,
   val unreadPaymentsCount: Int,
-  val hasExpiredGiftBadge: Boolean,
-  val allowUserToGoToDonationManagementScreen: Boolean,
   val userUnregistered: Boolean,
   val clientDeprecated: Boolean,
   val showInternalPreferences: Boolean = RemoteConfig.internalUser,

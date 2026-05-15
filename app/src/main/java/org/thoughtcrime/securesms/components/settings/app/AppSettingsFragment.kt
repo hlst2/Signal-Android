@@ -71,11 +71,7 @@ import org.thoughtcrime.securesms.banner.ui.compose.Importance
 import org.thoughtcrime.securesms.components.emoji.Emojifier
 import org.thoughtcrime.securesms.components.settings.app.routes.AppSettingsRoute
 import org.thoughtcrime.securesms.components.settings.app.routes.AppSettingsRouter
-import org.thoughtcrime.securesms.components.settings.app.subscription.BadgeImageMedium
-import org.thoughtcrime.securesms.components.settings.app.subscription.InAppPaymentsRepository
-import org.thoughtcrime.securesms.components.settings.app.subscription.completed.InAppPaymentsBottomSheetDelegate
 import org.thoughtcrime.securesms.compose.rememberStatusBarColorNestedScrollModifier
-import org.thoughtcrime.securesms.database.model.InAppPaymentSubscriberRecord
 import org.thoughtcrime.securesms.profiles.ProfileName
 import org.thoughtcrime.securesms.recipients.Recipient
 import org.thoughtcrime.securesms.util.CommunicationActions
@@ -88,8 +84,6 @@ class AppSettingsFragment : ComposeFragment(), Callbacks {
   private val appSettingsRouter by viewModels<AppSettingsRouter>()
 
   override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-    viewLifecycleOwner.lifecycle.addObserver(InAppPaymentsBottomSheetDelegate(childFragmentManager, viewLifecycleOwner))
-
     viewLifecycleOwner.lifecycleScope.launch {
       repeatOnLifecycle(Lifecycle.State.RESUMED) {
         appSettingsRouter.currentRoute.collect { route ->
@@ -97,7 +91,6 @@ class AppSettingsFragment : ComposeFragment(), Callbacks {
             is AppSettingsRoute.BackupsRoute.Remote -> findNavController().safeNavigate(R.id.action_appSettingsFragment_to_remoteBackupsSettingsFragment)
             is AppSettingsRoute.AccountRoute.Account -> findNavController().safeNavigate(R.id.action_appSettingsFragment_to_accountSettingsFragment)
             is AppSettingsRoute.LinkDeviceRoute.LinkDevice -> findNavController().safeNavigate(R.id.action_appSettingsFragment_to_linkDeviceFragment)
-            is AppSettingsRoute.DonationsRoute.Donations -> findNavController().safeNavigate(R.id.action_appSettingsFragment_to_manageDonationsFragment)
             is AppSettingsRoute.AppearanceRoute.Appearance -> findNavController().safeNavigate(R.id.action_appSettingsFragment_to_appearanceSettingsFragment)
             is AppSettingsRoute.ChatsRoute.Chats -> findNavController().safeNavigate(R.id.action_appSettingsFragment_to_chatsSettingsFragment)
             is AppSettingsRoute.StoriesRoute.Privacy -> findNavController().safeNavigate(AppSettingsFragmentDirections.actionAppSettingsFragmentToStoryPrivacySettings(route.titleId))
@@ -160,37 +153,6 @@ class AppSettingsFragment : ComposeFragment(), Callbacks {
     viewModel.refreshDeprecatedOrUnregistered()
   }
 
-  override fun copyDonorBadgeSubscriberIdToClipboard() {
-    copySubscriberIdToClipboard(
-      subscriberType = InAppPaymentSubscriberRecord.Type.DONATION,
-      toastSuccessStringRes = R.string.AppSettingsFragment__copied_donor_subscriber_id_to_clipboard
-    )
-  }
-
-  override fun copyRemoteBackupsSubscriberIdToClipboard() {
-    copySubscriberIdToClipboard(
-      subscriberType = InAppPaymentSubscriberRecord.Type.BACKUP,
-      toastSuccessStringRes = R.string.AppSettingsFragment__copied_backups_subscriber_id_to_clipboard
-    )
-  }
-
-  private fun copySubscriberIdToClipboard(
-    subscriberType: InAppPaymentSubscriberRecord.Type,
-    @StringRes toastSuccessStringRes: Int
-  ) {
-    lifecycleScope.launch {
-      val subscriber = withContext(Dispatchers.IO) {
-        InAppPaymentsRepository.getSubscriber(subscriberType)
-      }
-
-      withContext(Dispatchers.Main) {
-        if (subscriber != null) {
-          Toast.makeText(requireContext(), toastSuccessStringRes, Toast.LENGTH_LONG).show()
-          Util.copyToClipboard(requireContext(), subscriber.subscriberId.serialize())
-        }
-      }
-    }
-  }
 }
 
 @Composable
@@ -314,45 +276,6 @@ private fun AppSettingsContent(
           }
 
           item {
-            val context = LocalContext.current
-            val donateUrl = stringResource(R.string.donate_url)
-
-            Rows.TextRow(
-              text = {
-                Text(
-                  text = stringResource(R.string.preferences__donate_to_signal),
-                  modifier = Modifier.weight(1f)
-                )
-
-                if (state.hasExpiredGiftBadge) {
-                  Icon(
-                    painter = painterResource(R.drawable.symbol_info_fill_24),
-                    tint = colorResource(R.color.signal_accent_primary),
-                    contentDescription = null
-                  )
-                }
-              },
-              icon = {
-                Icon(
-                  painter = painterResource(R.drawable.symbol_heart_24),
-                  contentDescription = null,
-                  tint = MaterialTheme.colorScheme.onSurface
-                )
-              },
-              onClick = {
-                if (state.allowUserToGoToDonationManagementScreen) {
-                  callbacks.navigate(AppSettingsRoute.DonationsRoute.Donations())
-                } else {
-                  CommunicationActions.openBrowserLink(context, donateUrl)
-                }
-              },
-              onLongClick = {
-                callbacks.copyDonorBadgeSubscriberIdToClipboard()
-              }
-            )
-          }
-
-          item {
             Dividers.Default()
           }
         }
@@ -418,9 +341,6 @@ private fun AppSettingsContent(
               text = stringResource(R.string.preferences_chats__backups),
               onClick = {
                 callbacks.navigate(AppSettingsRoute.BackupsRoute.Backups())
-              },
-              onLongClick = {
-                callbacks.copyRemoteBackupsSubscriberIdToClipboard()
               },
               enabled = isRegisteredAndUpToDate
             )
@@ -702,8 +622,6 @@ private fun AppSettingsContentPreview() {
       state = AppSettingsState(
         isPrimaryDevice = true,
         unreadPaymentsCount = 5,
-        hasExpiredGiftBadge = true,
-        allowUserToGoToDonationManagementScreen = true,
         userUnregistered = false,
         clientDeprecated = false,
         showInternalPreferences = true,
@@ -739,8 +657,6 @@ private fun AppSettingsContentUnregisteredPreview() {
       state = AppSettingsState(
         isPrimaryDevice = true,
         unreadPaymentsCount = 5,
-        hasExpiredGiftBadge = true,
-        allowUserToGoToDonationManagementScreen = true,
         userUnregistered = true,
         clientDeprecated = false,
         showInternalPreferences = true,
@@ -781,8 +697,6 @@ private fun BioRowPreview() {
 private interface Callbacks {
   fun onNavigationClick(): Unit = error("Not implemented.")
   fun navigate(route: AppSettingsRoute): Unit = error("Not implemented")
-  fun copyDonorBadgeSubscriberIdToClipboard(): Unit = error("Not implemented")
-  fun copyRemoteBackupsSubscriberIdToClipboard(): Unit = error("Not implemented")
 }
 
 private object EmptyCallbacks : Callbacks
