@@ -151,7 +151,7 @@ public final class JobManagerFactories {
       put(BackupDeleteJob.KEY,                         new BackupDeleteJob.Factory());
       put(BackupMessagesJob.KEY,                       new BackupMessagesJob.Factory());
       put(BackupRestoreMediaJob.KEY,                   new BackupRestoreMediaJob.Factory());
-      put(BackupSubscriptionCheckJob.KEY,              new BackupSubscriptionCheckJob.Factory());
+      // BackupSubscriptionCheckJob retired in server-private (free-tier only). Mapped to FailingJob below.
       put(BuildExpirationConfirmationJob.KEY,          new BuildExpirationConfirmationJob.Factory());
       put(CallingAssetsDownloadJob.KEY,                new CallingAssetsDownloadJob.Factory());
       put(CallLinkPeekJob.KEY,                         new CallLinkPeekJob.Factory());
@@ -187,17 +187,7 @@ public final class JobManagerFactories {
       put(GroupCallPeekWorkerJob.KEY,                  new GroupCallPeekWorkerJob.Factory());
       put(GroupRingCleanupJob.KEY,                     new GroupRingCleanupJob.Factory());
       put(GroupV2UpdateSelfProfileKeyJob.KEY,          new GroupV2UpdateSelfProfileKeyJob.Factory());
-      put(InAppPaymentAuthCheckJob.KEY,                new InAppPaymentAuthCheckJob.Factory());
-      put(InAppPaymentGiftSendJob.KEY,                 new InAppPaymentGiftSendJob.Factory());
-      put(InAppPaymentKeepAliveJob.KEY,                new InAppPaymentKeepAliveJob.Factory());
-      put(InAppPaymentPurchaseTokenJob.KEY,            new InAppPaymentPurchaseTokenJob.Factory());
-      put(InAppPaymentRecurringContextJob.KEY,         new InAppPaymentRecurringContextJob.Factory());
-      put(InAppPaymentOneTimeContextJob.KEY,           new InAppPaymentOneTimeContextJob.Factory());
-      put(InAppPaymentRedemptionJob.KEY,               new InAppPaymentRedemptionJob.Factory());
-      put(InAppPaymentPayPalOneTimeSetupJob.KEY,       new InAppPaymentPayPalOneTimeSetupJob.Factory());
-      put(InAppPaymentPayPalRecurringSetupJob.KEY,     new InAppPaymentPayPalRecurringSetupJob.Factory());
-      put(InAppPaymentStripeOneTimeSetupJob.KEY,       new InAppPaymentStripeOneTimeSetupJob.Factory());
-      put(InAppPaymentStripeRecurringSetupJob.KEY,     new InAppPaymentStripeRecurringSetupJob.Factory());
+      // InAppPayment* jobs retired in server-private (donations/IAP/Stripe/PayPal removed). Mapped to FailingJob below.
       put(IndividualSendJob.KEY,                       new IndividualSendJob.Factory());
       put(LeaveGroupV2Job.KEY,                         new LeaveGroupV2Job.Factory());
       put(LeaveGroupV2WorkerJob.KEY,                   new LeaveGroupV2WorkerJob.Factory());
@@ -224,7 +214,7 @@ public final class JobManagerFactories {
       put(MultiDeviceStickerPackOperationJob.KEY,      new MultiDeviceStickerPackOperationJob.Factory());
       put(MultiDeviceStickerPackSyncJob.KEY,           new MultiDeviceStickerPackSyncJob.Factory());
       put(MultiDeviceStorageSyncRequestJob.KEY,        new MultiDeviceStorageSyncRequestJob.Factory());
-      put(MultiDeviceSubscriptionSyncRequestJob.KEY,   new MultiDeviceSubscriptionSyncRequestJob.Factory());
+      // MultiDeviceSubscriptionSyncRequestJob retired in server-private. Mapped to FailingJob below.
       put(MultiDeviceVerifiedUpdateJob.KEY,            new MultiDeviceVerifiedUpdateJob.Factory());
       put(MultiDeviceViewOnceOpenJob.KEY,              new MultiDeviceViewOnceOpenJob.Factory());
       put(MultiDeviceViewedUpdateJob.KEY,              new MultiDeviceViewedUpdateJob.Factory());
@@ -381,6 +371,20 @@ public final class JobManagerFactories {
       // Dead jobs
       put(FailingJob.KEY,                                new FailingJob.Factory());
       put(PassingMigrationJob.KEY,                       new PassingMigrationJob.Factory());
+      // Donation / IAP / subscription jobs removed in server-private fork
+      put("InAppPaymentAuthCheckJob",                    new FailingJob.Factory());
+      put("InAppPurchaseOneTimeGiftSendJob",             new FailingJob.Factory());
+      put("InAppPurchaseRecurringKeepAliveJob",          new FailingJob.Factory());
+      put("InAppPaymentPurchaseTokenJob",                new FailingJob.Factory());
+      put("InAppPurchaseRecurringContextJob",            new FailingJob.Factory());
+      put("InAppPurchaseOneTimeContextJob",              new FailingJob.Factory());
+      put("InAppPurchaseRedemptionJob",                  new FailingJob.Factory());
+      put("InAppPaymentPayPalOneTimeSetupJob",           new FailingJob.Factory());
+      put("InAppPaymentPayPalRecurringSetupJob",         new FailingJob.Factory());
+      put("InAppPaymentStripeOneTimeSetupJob",           new FailingJob.Factory());
+      put("InAppPaymentStripeRecurringSetupJob",         new FailingJob.Factory());
+      put("BackupSubscriptionCheckJob",                  new FailingJob.Factory());
+      put("MultiDeviceSubscriptionSyncRequestJob",       new FailingJob.Factory());
       put("PushContentReceiveJob",                       new FailingJob.Factory());
       put("AttachmentUploadJob",                         new FailingJob.Factory());
       put("MmsSendJob",                                  new FailingJob.Factory());
