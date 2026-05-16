@@ -13,9 +13,9 @@ import java.util.Locale
  */
 class InAppPaymentValues internal constructor(store: KeyValueStore) : SignalStoreValues(store) {
 
-  override fun onFirstEverAppLaunch() = Unit
+  public override fun onFirstEverAppLaunch() = Unit
 
-  override fun getKeysToIncludeInBackup(): MutableList<String> = mutableListOf()
+  public override fun getKeysToIncludeInBackup(): MutableList<String> = mutableListOf()
 
   fun getRecurringDonationCurrency(): Currency = Currency.getInstance(Locale.getDefault())
 
