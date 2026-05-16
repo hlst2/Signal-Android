@@ -8,11 +8,6 @@ import org.json.JSONArray
 import org.json.JSONException
 import org.signal.core.util.concurrent.SignalExecutors
 import org.signal.core.util.logging.Log
-import org.signal.donations.InAppPaymentType
-import org.thoughtcrime.securesms.badges.models.Badge
-import org.thoughtcrime.securesms.components.settings.app.subscription.InAppDonations
-import org.thoughtcrime.securesms.components.settings.app.subscription.InAppPaymentsRepository
-import org.thoughtcrime.securesms.components.settings.app.subscription.donate.CheckoutFlowActivity
 import org.thoughtcrime.securesms.database.RemoteMegaphoneTable
 import org.thoughtcrime.securesms.database.SignalDatabase
 import org.thoughtcrime.securesms.database.model.RemoteMegaphoneRecord
@@ -24,7 +19,6 @@ import org.thoughtcrime.securesms.recipients.Recipient
 import org.thoughtcrime.securesms.util.LocaleRemoteConfig
 import org.thoughtcrime.securesms.util.RemoteConfig
 import org.thoughtcrime.securesms.util.VersionTracker
-import java.util.Objects
 import kotlin.math.min
 import kotlin.time.Duration.Companion.days
 
@@ -55,21 +49,13 @@ object RemoteMegaphoneRepository {
     }
   }
 
-  private val donate: Action = Action { context, controller, remote ->
-    controller.onMegaphoneNavigationRequested(CheckoutFlowActivity.createIntent(context, InAppPaymentType.ONE_TIME_DONATION))
-    snooze.run(context, controller, remote)
-  }
-
-  private val donateForFriend: Action = Action { context, controller, remote ->
-    controller.onMegaphoneNavigationRequested(CheckoutFlowActivity.createIntent(context, InAppPaymentType.ONE_TIME_GIFT))
-    snooze.run(context, controller, remote)
-  }
+  // Donate / donate-for-friend megaphone actions removed in server-private fork.
 
   private val actions = mapOf(
     ActionId.SNOOZE.id to snooze,
     ActionId.FINISH.id to finish,
-    ActionId.DONATE.id to donate,
-    ActionId.DONATE_FOR_FRIEND.id to donateForFriend
+    ActionId.DONATE.id to snooze,
+    ActionId.DONATE_FOR_FRIEND.id to snooze
   )
 
   @WorkerThread
@@ -131,17 +117,7 @@ object RemoteMegaphoneRepository {
     return gapDays == null || (record.snoozedAt + gapDays.days.inWholeMilliseconds <= now)
   }
 
-  private fun shouldShowDonateMegaphone(): Boolean {
-    return VersionTracker.getDaysSinceFirstInstalled(context) >= 7 &&
-      SignalStore.account.isRegistered &&
-      InAppDonations.hasAtLeastOnePaymentMethodAvailable() &&
-      !InAppPaymentsRepository.hasPendingDonation() &&
-      Recipient.self()
-        .badges
-        .stream()
-        .filter { obj: Badge? -> Objects.nonNull(obj) }
-        .noneMatch { (_, category): Badge -> category === Badge.Category.Donor }
-  }
+  private fun shouldShowDonateMegaphone(): Boolean = false
 
   fun interface Action {
     fun run(context: Context, controller: MegaphoneActionController, remoteMegaphone: RemoteMegaphoneRecord)

@@ -14,8 +14,6 @@ import org.whispersystems.signalservice.api.push.exceptions.ServerRejectedExcept
 import org.whispersystems.signalservice.api.push.exceptions.UnregisteredUserException
 import org.whispersystems.signalservice.api.websocket.WebSocketUnavailableException
 import org.whispersystems.signalservice.internal.push.SendMessageResponse
-import org.whispersystems.signalservice.internal.push.exceptions.InAppPaymentProcessorError
-import org.whispersystems.signalservice.internal.push.exceptions.InAppPaymentReceiptCredentialError
 import org.whispersystems.signalservice.internal.push.exceptions.MismatchedDevicesException
 import org.whispersystems.signalservice.internal.push.exceptions.PaymentsRegionException
 import org.whispersystems.signalservice.internal.push.exceptions.StaleDevicesException
@@ -181,11 +179,8 @@ object NetworkResultUtil {
       }
       is NetworkResult.NetworkError -> throw result.exception
       is NetworkResult.StatusCodeError -> {
-        throw when (result.code) {
-          402 -> result.parseJsonBody<InAppPaymentReceiptCredentialError>() ?: result.exception
-          440 -> result.parseJsonBody<InAppPaymentProcessorError>() ?: result.exception
-          else -> result.exception
-        }
+        // 402 / 440 in-app-payment specific error decoding removed in server-private fork.
+        throw result.exception
       }
     }
   }
