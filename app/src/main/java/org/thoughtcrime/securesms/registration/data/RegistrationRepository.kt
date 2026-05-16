@@ -40,7 +40,6 @@ import org.thoughtcrime.securesms.database.IdentityTable
 import org.thoughtcrime.securesms.database.SignalDatabase
 import org.thoughtcrime.securesms.database.model.databaseprotos.LocalRegistrationMetadata
 import org.thoughtcrime.securesms.dependencies.AppDependencies
-import org.thoughtcrime.securesms.gcm.FcmUtil
 import org.thoughtcrime.securesms.jobmanager.runJobBlocking
 import org.thoughtcrime.securesms.jobs.CheckKeyTransparencyJob
 import org.thoughtcrime.securesms.jobs.DirectoryRefreshJob
@@ -109,11 +108,10 @@ object RegistrationRepository {
   private val PUSH_REQUEST_TIMEOUT = 5.seconds.inWholeMilliseconds
 
   /**
-   * Retrieve the FCM token from the Firebase service.
+   * server-private fork: Firebase Messaging is gone; always report no FCM token so the
+   * server registers the account as "fetchesMessages" / push-disabled.
    */
-  suspend fun getFcmToken(context: Context): String? = withContext(Dispatchers.Default) {
-    FcmUtil.getToken(context).orElse(null)
-  }
+  suspend fun getFcmToken(@Suppress("UNUSED_PARAMETER") context: Context): String? = null
 
   /**
    * Queries, and creates if needed, the local registration ID.
@@ -321,7 +319,7 @@ object RegistrationRepository {
    */
   suspend fun createSession(context: Context, e164: String, password: String, mcc: String?, mnc: String?): RegistrationSessionCreationResult = withContext(Dispatchers.IO) {
     Log.d(TAG, "About to create a registration session…")
-    val fcmToken: String? = FcmUtil.getToken(context).orElse(null)
+    val fcmToken: String? = null // server-private fork: Firebase removed
     val api: RegistrationApi = AccountManagerFactory.getInstance().createUnauthenticated(context, e164, SignalServiceAddress.DEFAULT_DEVICE_ID, password).registrationApi
 
     val registrationSessionResult = if (fcmToken == null) {

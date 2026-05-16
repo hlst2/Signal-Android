@@ -173,7 +173,7 @@ public final class JobManagerFactories {
       put(DownloadLatestEmojiDataJob.KEY,              new DownloadLatestEmojiDataJob.Factory());
       put(E164FormattingJob.KEY,                       new E164FormattingJob.Factory());
       put(EmojiSearchIndexDownloadJob.KEY,             new EmojiSearchIndexDownloadJob.Factory());
-      put(FcmRefreshJob.KEY,                           new FcmRefreshJob.Factory());
+      // FcmRefreshJob retired in server-private fork. Mapped to FailingJob below.
       put(FetchRemoteMegaphoneImageJob.KEY,            new FetchRemoteMegaphoneImageJob.Factory());
       put(FontDownloaderJob.KEY,                       new FontDownloaderJob.Factory());
       put(ForceUpdateGroupV2Job.KEY,                   new ForceUpdateGroupV2Job.Factory());
@@ -383,6 +383,7 @@ public final class JobManagerFactories {
       put("GooglePlayBillingPurchaseTokenMigrationJob",  new PassingMigrationJob.Factory());
       put("RecheckPaymentsMigrationJob",                 new PassingMigrationJob.Factory());
       // Payment* (MobileCoin wallet) jobs retired in server-private fork
+      put("FcmRefreshJob",                               new FailingJob.Factory());
       put("MultiDeviceOutgoingPaymentSyncJob",           new FailingJob.Factory());
       put("PaymentLedgerUpdateJob",                      new FailingJob.Factory());
       put("PaymentNotificationSendJob",                  new FailingJob.Factory());

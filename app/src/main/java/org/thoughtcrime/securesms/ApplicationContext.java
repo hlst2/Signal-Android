@@ -56,7 +56,6 @@ import org.thoughtcrime.securesms.dependencies.AppDependencies;
 import org.thoughtcrime.securesms.dependencies.ApplicationDependencyProvider;
 import org.thoughtcrime.securesms.emoji.EmojiSource;
 import org.thoughtcrime.securesms.emoji.JumboEmoji;
-import org.thoughtcrime.securesms.gcm.FcmFetchManager;
 import org.thoughtcrime.securesms.glide.SignalGlideComponents;
 import org.thoughtcrime.securesms.jobs.AccountConsistencyWorkerJob;
 import org.thoughtcrime.securesms.jobs.BackupRefreshJob;
@@ -66,7 +65,6 @@ import org.thoughtcrime.securesms.jobs.CheckKeyTransparencyJob;
 import org.thoughtcrime.securesms.jobs.CheckServiceReachabilityJob;
 import org.thoughtcrime.securesms.jobs.DownloadLatestEmojiDataJob;
 import org.thoughtcrime.securesms.jobs.EmojiSearchIndexDownloadJob;
-import org.thoughtcrime.securesms.jobs.FcmRefreshJob;
 import org.thoughtcrime.securesms.jobs.FontDownloaderJob;
 import org.thoughtcrime.securesms.jobs.GroupRingCleanupJob;
 import org.thoughtcrime.securesms.jobs.GroupV2UpdateSelfProfileKeyJob;
@@ -253,7 +251,7 @@ public class ApplicationContext extends Application implements AppForegroundObse
     AppDependencies.getFrameRateTracker().start();
     AppDependencies.getMegaphoneRepository().onAppForegrounded();
     AppDependencies.getDeadlockDetector().start();
-    FcmFetchManager.onForeground(this);
+    // FCM removed in server-private fork (no Firebase). WebSocket delivery handles messages.
     startAnrDetector();
 
     SignalExecutors.BOUNDED.execute(() -> {
@@ -433,15 +431,7 @@ public class ApplicationContext extends Application implements AppForegroundObse
   }
 
   private void initializeFcmCheck() {
-    if (SignalStore.account().isRegistered()) {
-      long lastSetTime = SignalStore.account().getFcmTokenLastSetTime();
-      long nextSetTime = lastSetTime + TimeUnit.HOURS.toMillis(6);
-      long now         = System.currentTimeMillis();
-
-      if (SignalStore.account().getFcmToken() == null || nextSetTime <= now || lastSetTime > now) {
-        AppDependencies.getJobManager().add(new FcmRefreshJob());
-      }
-    }
+    // FCM removed in server-private fork; no token refresh needed.
   }
 
   private void initializeExpiringMessageManager() {

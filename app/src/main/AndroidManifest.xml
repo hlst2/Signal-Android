@@ -101,14 +101,9 @@
         <meta-data
             android:name="com.google.android.gms.car.application"
             android:resource="@xml/automotive_app_desc" />
-        <meta-data
-            android:name="firebase_analytics_collection_deactivated"
-            android:value="true" />
+        <!-- firebase / google-analytics meta-data removed in server-private fork (no Firebase dep). -->
         <meta-data
             android:name="google_analytics_adid_collection_enabled"
-            android:value="false" />
-        <meta-data
-            android:name="firebase_messaging_auto_init_enabled"
             android:value="false" />
         <meta-data
             android:name="android.webkit.WebView.MetricsOptOut"
@@ -1361,29 +1356,7 @@
             android:exported="false"
             android:foregroundServiceType="dataSync" />
 
-        <service
-            android:name=".gcm.FcmFetchBackgroundService"
-            android:exported="false" />
-
-        <service
-            android:name=".gcm.FcmFetchForegroundService"
-            android:exported="false"
-            android:foregroundServiceType="remoteMessaging" />
-
-        <service
-            android:name=".gcm.FcmReceiveService"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="com.google.firebase.MESSAGING_EVENT" />
-            </intent-filter>
-        </service>
-
-        <service
-            android:name=".gcm.FcmJobService"
-            android:enabled="@bool/enable_job_service"
-            android:exported="false"
-            android:permission="android.permission.BIND_JOB_SERVICE"
-            tools:targetApi="26" />
+        <!-- FCM services removed in server-private fork (no Firebase Messaging). -->
 
         <service
             android:name=".jobmanager.JobSchedulerScheduler$SystemService"

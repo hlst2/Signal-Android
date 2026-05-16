@@ -48,7 +48,6 @@ import org.signal.registration.NetworkController.VerificationCodeTransport
 import org.signal.registration.proto.RegistrationProvisionMessage
 import org.thoughtcrime.securesms.BuildConfig
 import org.thoughtcrime.securesms.dependencies.AppDependencies
-import org.thoughtcrime.securesms.gcm.FcmUtil
 import org.thoughtcrime.securesms.jobs.RefreshAttributesJob
 import org.thoughtcrime.securesms.jobs.ResetSvrGuessCountJob
 import org.thoughtcrime.securesms.keyvalue.SignalStore
@@ -346,12 +345,8 @@ class AppRegistrationNetworkController(
   }
 
   override suspend fun getFcmToken(): String? {
-    return try {
-      FcmUtil.getToken(context).orElse(null)
-    } catch (e: Exception) {
-      Log.w(TAG, "Failed to get FCM token", e)
-      null
-    }
+    // server-private fork: Firebase removed; always report no FCM token.
+    return null
   }
 
   override suspend fun awaitPushChallengeToken(): String? = withContext(Dispatchers.IO) {

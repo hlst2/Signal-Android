@@ -291,7 +291,7 @@ android {
       isMinifyEnabled = false
       proguardFiles(
         getDefaultProguardFile("proguard-android.txt"),
-        "proguard/proguard-firebase-messaging.pro",
+        // proguard-firebase-messaging.pro removed in server-private fork (no FCM dep).
         "proguard/proguard-google-play-services.pro",
         "proguard/proguard-jackson.pro",
         "proguard/proguard-sqlite.pro",
@@ -661,11 +661,7 @@ dependencies {
   implementation(libs.androidx.asynclayoutinflater)
   implementation(libs.androidx.asynclayoutinflater.appcompat)
   implementation(libs.androidx.emoji2)
-  implementation(libs.firebase.messaging) {
-    exclude(group = "com.google.firebase", module = "firebase-core")
-    exclude(group = "com.google.firebase", module = "firebase-analytics")
-    exclude(group = "com.google.firebase", module = "firebase-measurement-connector")
-  }
+  // firebase-messaging removed in server-private fork (no FCM).
   implementation(libs.google.play.services.maps)
   implementation(libs.google.play.services.auth)
   implementation(libs.google.signin)
