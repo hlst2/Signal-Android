@@ -93,7 +93,8 @@ class BackupsSettingsFragment : ComposeFragment() {
           is BackupState.Error -> Unit
 
           BackupState.None -> {
-            checkoutLauncher.launch(null)
+            // server-private fork: no paid checkout flow; route to remote backups settings directly.
+            findNavController().safeNavigate(R.id.action_backupsSettingsFragment_to_remoteBackupsSettingsFragment)
           }
 
           else -> {

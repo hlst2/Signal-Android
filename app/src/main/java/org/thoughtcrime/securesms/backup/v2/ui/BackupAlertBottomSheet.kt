@@ -63,13 +63,13 @@ class BackupAlertBottomSheet : ComposeBottomSheetDialogFragment() {
 
     @JvmStatic
     fun create(backupAlert: BackupAlert): DialogFragment {
-      return if (backupAlert is BackupAlert.MediaBackupsAreOff) {
+      val fragment: DialogFragment = if (backupAlert is BackupAlert.MediaBackupsAreOff) {
         MediaBackupsAreOffBottomSheet()
       } else {
         BackupAlertBottomSheet()
-      }.apply {
-        arguments = bundleOf(ARG_ALERT to backupAlert)
       }
+      fragment.arguments = bundleOf(ARG_ALERT to backupAlert)
+      return fragment
     }
   }
 
