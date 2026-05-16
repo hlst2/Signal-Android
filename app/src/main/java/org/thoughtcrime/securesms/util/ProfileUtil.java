@@ -415,16 +415,8 @@ public final class ProfileUtil {
   }
 
   private static @Nullable PaymentAddress getSelfPaymentsAddressProtobuf() {
-    if (!SignalStore.payments().mobileCoinPaymentsEnabled()) {
-      return null;
-    } else {
-      IdentityKeyPair         identityKeyPair = SignalStore.account().getAciIdentityKey();
-      MobileCoinPublicAddress publicAddress   = AppDependencies.getPayments()
-                                                               .getWallet()
-                                                               .getMobileCoinPublicAddress();
-
-      return MobileCoinPublicAddressProfileUtil.signPaymentsAddress(publicAddress.serialize(), identityKeyPair);
-    }
+    // server-private fork: MobileCoin wallet removed; profile.paymentAddress always null.
+    return null;
   }
 
   private static @NonNull SignalServiceAddress toSignalServiceAddress(@NonNull Context context, @NonNull Recipient recipient) throws IOException {
