@@ -2538,11 +2538,7 @@ public final class ConversationItem extends RelativeLayout implements BindableCo
     }
   }
 
-  // Gift-badge OpenableGift interface methods removed in server-private fork (no gift badges).
-
-  public @NonNull AnimationSign getAnimationSign() {
-    return AnimationSign.get(ViewUtil.isLtr(this), messageRecord.isOutgoing());
-  }
+  // Gift-badge OpenableGift interface methods (incl. getAnimationSign) removed in server-private fork.
 
   @Override
   public @Nullable View getQuotedIndicatorView() {
