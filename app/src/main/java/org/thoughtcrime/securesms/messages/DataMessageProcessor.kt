@@ -2,7 +2,6 @@ package org.thoughtcrime.securesms.messages
 
 import android.content.Context
 import android.text.TextUtils
-import com.mobilecoin.lib.exceptions.SerializationException
 import okio.ByteString.Companion.toByteString
 import org.signal.core.models.ServiceId
 import org.signal.core.models.ServiceId.ACI

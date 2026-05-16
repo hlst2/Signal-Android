@@ -60,7 +60,6 @@ import org.thoughtcrime.securesms.mediapreview.MediaIntentFactory;
 import org.thoughtcrime.securesms.mediapreview.MediaPreviewCache;
 import org.thoughtcrime.securesms.mediapreview.MediaPreviewV2Fragment;
 import org.thoughtcrime.securesms.mediasend.v2.MediaSelectionActivity;
-import org.thoughtcrime.securesms.payments.PaymentsAddressException;
 import org.signal.core.util.permissions.PermissionCompat;
 import org.signal.core.ui.permissions.Permissions;
 import org.thoughtcrime.securesms.providers.BlobProvider;

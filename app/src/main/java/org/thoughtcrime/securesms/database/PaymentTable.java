@@ -11,8 +11,6 @@ import androidx.annotation.WorkerThread;
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 
-import com.mobilecoin.lib.exceptions.SerializationException;
-
 import org.signal.core.util.CursorExtensionsKt;
 import org.signal.core.util.CursorUtil;
 import org.signal.core.util.SQLiteDatabaseExtensionsKt;
@@ -32,7 +30,6 @@ import org.thoughtcrime.securesms.payments.Payment;
 import org.thoughtcrime.securesms.payments.State;
 import org.thoughtcrime.securesms.payments.proto.PaymentMetaData;
 import org.thoughtcrime.securesms.recipients.RecipientId;
-import org.signal.core.util.Base64;
 import org.thoughtcrime.securesms.util.livedata.LiveDataUtil;
 import org.whispersystems.signalservice.api.payments.Money;
 import org.signal.core.util.UuidUtil;
@@ -105,82 +102,9 @@ public final class PaymentTable extends DatabaseTable implements RecipientIdData
     this.changeSignal = new MutableLiveData<>(new Object());
   }
 
-  @WorkerThread
-  public void createIncomingPayment(@NonNull UUID uuid,
-                                    @Nullable RecipientId fromRecipient,
-                                    long timestamp,
-                                    @NonNull String note,
-                                    @NonNull Money amount,
-                                    @NonNull Money fee,
-                                    @NonNull byte[] receipt,
-                                    boolean seen)
-      throws PublicKeyConflictException, SerializationException
-  {
-    create(uuid, fromRecipient, null, timestamp, 0, note, Direction.RECEIVED, State.SUBMITTED, amount, fee, null, receipt, null, seen);
-  }
-
-  @WorkerThread
-  public void createOutgoingPayment(@NonNull UUID uuid,
-                                    @Nullable RecipientId toRecipient,
-                                    @NonNull MobileCoinPublicAddress publicAddress,
-                                    long timestamp,
-                                    @NonNull String note,
-                                    @NonNull Money amount)
-  {
-    try {
-      create(uuid, toRecipient, publicAddress, timestamp, 0, note, Direction.SENT, State.INITIAL, amount, amount.toZero(), null, null, null, true);
-    } catch (PublicKeyConflictException e) {
-      Log.w(TAG, "Tried to create payment but the public key appears already in the database", e);
-      throw new IllegalArgumentException(e);
-    } catch (SerializationException e) {
-      throw new IllegalArgumentException(e);
-    }
-  }
-
-  /**
-   * Inserts a payment in its final successful state.
-   * <p>
-   * This is for when a linked device has told us about the payment only.
-   */
-  @WorkerThread
-  public void createSuccessfulPayment(@NonNull UUID uuid,
-                                      @Nullable RecipientId toRecipient,
-                                      @NonNull MobileCoinPublicAddress publicAddress,
-                                      long timestamp,
-                                      long blockIndex,
-                                      @NonNull String note,
-                                      @NonNull Money amount,
-                                      @NonNull Money fee,
-                                      @NonNull byte[] receipt,
-                                      @NonNull PaymentMetaData metaData)
-    throws SerializationException
-  {
-    try {
-      create(uuid, toRecipient, publicAddress, timestamp, blockIndex, note, Direction.SENT, State.SUCCESSFUL, amount, fee, null, receipt, metaData, true);
-    } catch (PublicKeyConflictException e) {
-      Log.w(TAG, "Tried to create payment but the public key appears already in the database", e);
-      throw new AssertionError(e);
-    }
-  }
-
-  @WorkerThread
-  public void createDefrag(@NonNull UUID uuid,
-                           @Nullable RecipientId self,
-                           @NonNull MobileCoinPublicAddress selfPublicAddress,
-                           long timestamp,
-                           @NonNull Money fee,
-                           @NonNull byte[] transaction,
-                           @NonNull byte[] receipt)
-  {
-    try {
-      create(uuid, self, selfPublicAddress, timestamp, 0, "", Direction.SENT, State.SUBMITTED, fee.toZero(), fee, transaction, receipt, null, true);
-    } catch (PublicKeyConflictException e) {
-      Log.w(TAG, "Tried to create payment but the public key appears already in the database", e);
-      throw new AssertionError(e);
-    } catch (SerializationException e) {
-      throw new IllegalArgumentException(e);
-    }
-  }
+  // server-private fork: MobileCoin wallet removed. The table is kept as legacy data
+  // shape so existing rows still read back and backup restore continues to work, but
+  // we no longer create new payments through the wallet UI or sync paths.
 
   @WorkerThread
   public UUID restoreFromBackup(@NonNull RecipientId recipientId,
@@ -205,7 +129,7 @@ public final class PaymentTable extends DatabaseTable implements RecipientIdData
       if (failureReason != null) {
         markPaymentFailed(uuid, failureReason);
       }
-    } catch (SerializationException | PublicKeyConflictException e) {
+    } catch (PublicKeyConflictException e) {
       return null;
     }
     return uuid;
@@ -226,7 +150,7 @@ public final class PaymentTable extends DatabaseTable implements RecipientIdData
                       @Nullable byte[] receipt,
                       @Nullable PaymentMetaData metaData,
                       boolean seen)
-      throws PublicKeyConflictException, SerializationException
+      throws PublicKeyConflictException
   {
     if (recipientId == null && publicAddress == null) {
       throw new AssertionError();
@@ -268,15 +192,16 @@ public final class PaymentTable extends DatabaseTable implements RecipientIdData
     }
     if (receipt != null) {
       values.put(RECEIPT, receipt);
-      values.put(PUBLIC_KEY, Base64.encodeWithPadding(PaymentMetaDataUtil.receiptPublic(PaymentMetaDataUtil.fromReceipt(receipt))));
     } else {
       values.putNull(RECEIPT);
-      values.putNull(PUBLIC_KEY);
     }
+    // PUBLIC_KEY was previously derived from the receipt via the MobileCoin SDK; with
+    // the SDK gone we leave it null (the UNIQUE index permits multiple nulls).
+    values.putNull(PUBLIC_KEY);
     if (metaData != null) {
       values.put(META_DATA, metaData.encode());
     } else {
-      values.put(META_DATA, PaymentMetaDataUtil.fromReceiptAndTransaction(receipt, transaction).encode());
+      values.put(META_DATA, new PaymentMetaData.Builder().build().encode());
     }
     values.put(SEEN, seen ? 1 : 0);
 
@@ -481,61 +406,6 @@ public final class PaymentTable extends DatabaseTable implements RecipientIdData
     int count = getWritableDatabase().update(TABLE_NAME, values, RECIPIENT_ID + " = ?", SqlUtil.buildArgs(fromId));
 
     Log.d(TAG, "Remapped " + fromId + " to " + toId + ". count: " + count);
-  }
-
-  public boolean markPaymentSubmitted(@NonNull UUID uuid,
-                                      @NonNull byte[] transaction,
-                                      @NonNull byte[] receipt,
-                                      @NonNull Money fee)
-      throws PublicKeyConflictException
-  {
-    SQLiteDatabase database  = databaseHelper.getSignalWritableDatabase();
-    String         where     = PAYMENT_UUID + " = ?";
-    String[]       whereArgs = {uuid.toString()};
-    int            updated;
-    ContentValues  values    = new ContentValues(6);
-
-    values.put(STATE, State.SUBMITTED.serialize());
-    values.put(TRANSACTION, transaction);
-    values.put(RECEIPT, receipt);
-    try {
-      values.put(PUBLIC_KEY, Base64.encodeWithPadding(PaymentMetaDataUtil.receiptPublic(PaymentMetaDataUtil.fromReceipt(receipt))));
-      values.put(META_DATA, PaymentMetaDataUtil.fromReceiptAndTransaction(receipt, transaction).encode());
-    } catch (SerializationException e) {
-      throw new IllegalArgumentException(e);
-    }
-    values.put(FEE, CryptoValueUtil.moneyToCryptoValue(fee).encode());
-
-    database.beginTransaction();
-    try {
-      updated = database.update(TABLE_NAME, values, where, whereArgs);
-
-      if (updated == -1) {
-        throw new PublicKeyConflictException();
-      }
-
-      if (updated > 1) {
-        Log.w(TAG, "More than one row matches criteria");
-        throw new AssertionError();
-      }
-      database.setTransactionSuccessful();
-    } finally {
-      database.endTransaction();
-    }
-
-    if (updated > 0) {
-      notifyChanged(uuid);
-    }
-
-    return updated > 0;
-  }
-
-  public boolean markPaymentSuccessful(@NonNull UUID uuid, long blockIndex) {
-    return markPayment(uuid, State.SUCCESSFUL, null, null, blockIndex);
-  }
-
-  public boolean markReceivedPaymentSuccessful(@NonNull UUID uuid, @NonNull Money amount, long blockIndex) {
-    return markPayment(uuid, State.SUCCESSFUL, amount, null, blockIndex);
   }
 
   public boolean markPaymentFailed(@NonNull UUID uuid, @NonNull FailureReason failureReason) {
