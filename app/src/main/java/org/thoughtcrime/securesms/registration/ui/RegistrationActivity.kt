@@ -49,7 +49,9 @@ class RegistrationActivity : BaseActivity() {
       // server-private fork: registration completes on the first screen (ServerSetupFragment).
       // Defer the MainActivity transition until WelcomeFragment Continue is clicked,
       // so the user still sees the permissions screens after a successful register.
+      Log.d(TAG, "uiState observed: checkpoint=${state.registrationCheckpoint} welcomeFlowComplete=${state.welcomeFlowComplete}")
       if (state.registrationCheckpoint >= RegistrationCheckpoint.LOCAL_REGISTRATION_COMPLETE && state.welcomeFlowComplete) {
+        Log.i(TAG, "Conditions met, launching MainActivity")
         RegistrationUtil.maybeMarkRegistrationComplete()
         handleSuccessfulVerify()
       }

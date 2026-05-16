@@ -1094,6 +1094,7 @@ class RegistrationViewModel : ViewModel() {
    * permissions screens after registration on the private fork.
    */
   fun markWelcomeFlowComplete() {
+    Log.i(TAG, "markWelcomeFlowComplete() called; checkpoint=${store.value.registrationCheckpoint}")
     store.update { it.copy(welcomeFlowComplete = true) }
   }
 

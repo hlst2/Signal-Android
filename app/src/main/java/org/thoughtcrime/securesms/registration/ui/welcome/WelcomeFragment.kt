@@ -115,6 +115,7 @@ class WelcomeFragment : LoggingFragment(R.layout.fragment_registration_welcome_v
   private fun navigateToNextScreenViaContinue() {
     // server-private fork: account is already registered by ServerSetupFragment. Completing
     // the welcome/permissions flow here signals RegistrationActivity to launch MainActivity.
+    Log.i(TAG, "navigateToNextScreenViaContinue: calling markWelcomeFlowComplete()")
     sharedViewModel.markWelcomeFlowComplete()
   }
 

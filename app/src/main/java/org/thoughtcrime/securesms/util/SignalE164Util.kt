@@ -28,10 +28,20 @@ object SignalE164Util {
 
   /**
    * Formats the number for human-readable display. e.g. "(555) 555-5555"
+   *
+   * server-private fork: on a self-hosted deployment the account's stored "E164" is
+   * actually a synthetic identifier derived from the user's display name, not a real
+   * phone number. libphonenumber throws NumberParseException on those, which used to
+   * crash the App Settings screen. Fall back to the raw input so the UI shows _something_
+   * (the displayName-derived synthetic ID) instead of taking down the activity.
    */
   @JvmStatic
   fun prettyPrint(input: String): String {
-    return BidiUtil.forceLtr(getFormatter().prettyPrint(input))
+    return try {
+      BidiUtil.forceLtr(getFormatter().prettyPrint(input))
+    } catch (e: Exception) {
+      BidiUtil.forceLtr(input)
+    }
   }
 
   /**
