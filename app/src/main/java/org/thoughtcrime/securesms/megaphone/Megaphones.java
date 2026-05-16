@@ -127,11 +127,11 @@ public final class Megaphones {
       put(Event.REMOTE_MEGAPHONE, shouldShowRemoteMegaphone(records) ? RecurringSchedule.every(TimeUnit.DAYS.toMillis(1)) : NEVER);
       put(Event.LINKED_DEVICE_INACTIVE, shouldShowLinkedDeviceInactiveMegaphone() ? RecurringSchedule.every(TimeUnit.DAYS.toMillis(3)): NEVER);
 
-      // Specifically putting backup reminders here, above PIN reminders
-      put(Event.BACKUP_LOW_STORAGE_UPSELL, shouldShowBackupLowStorageUpsell(context) ? new BackupUpsellSchedule(records, TimeUnit.DAYS.toMillis(60), TimeUnit.DAYS.toMillis(120)) : NEVER);
-      put(Event.BACKUP_MEDIA_SIZE_UPSELL, shouldShowBackupMediaSizeUpsell() ? new BackupUpsellSchedule(records, TimeUnit.DAYS.toMillis(60), TimeUnit.DAYS.toMillis(120)) : NEVER);
-      put(Event.BACKUP_MESSAGE_COUNT_UPSELL, shouldShowBackupMessageCountUpsell(context) ? new BackupUpsellSchedule(records, TimeUnit.DAYS.toMillis(60)) : NEVER);
-      put(Event.BACKUPS_GENERIC_UPSELL, shouldShowGenericBackupsMegaphone(context) ? new BackupUpsellSchedule(records, TimeUnit.DAYS.toMillis(60)) : NEVER);
+      // Backup upsell megaphones removed in server-private fork (no paid backup tier).
+      put(Event.BACKUP_LOW_STORAGE_UPSELL, NEVER);
+      put(Event.BACKUP_MEDIA_SIZE_UPSELL, NEVER);
+      put(Event.BACKUP_MESSAGE_COUNT_UPSELL, NEVER);
+      put(Event.BACKUPS_GENERIC_UPSELL, NEVER);
       put(Event.VERIFY_BACKUP_KEY, new VerifyBackupKeyReminderSchedule());
       put(Event.USE_NEW_ON_DEVICE_BACKUPS, shouldShowUseNewOnDeviceBackupsMegaphone() ? RecurringSchedule.every(TimeUnit.DAYS.toMillis(14)) : NEVER);
 

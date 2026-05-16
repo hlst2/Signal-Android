@@ -28,12 +28,9 @@ import org.thoughtcrime.securesms.backup.v2.util.isValidUsername
 import org.thoughtcrime.securesms.backup.v2.util.parseChatWallpaper
 import org.thoughtcrime.securesms.backup.v2.util.toLocal
 import org.thoughtcrime.securesms.backup.v2.util.toLocalAttachment
-import org.thoughtcrime.securesms.components.settings.app.subscription.InAppPaymentsRepository
 import org.thoughtcrime.securesms.components.settings.app.usernamelinks.UsernameQrCodeColorScheme
 import org.thoughtcrime.securesms.conversation.colors.ChatColors
 import org.thoughtcrime.securesms.database.SignalDatabase
-import org.thoughtcrime.securesms.database.model.InAppPaymentSubscriberRecord
-import org.thoughtcrime.securesms.database.model.databaseprotos.InAppPaymentData
 import org.thoughtcrime.securesms.dependencies.AppDependencies
 import org.thoughtcrime.securesms.jobs.RetrieveProfileAvatarJob
 import org.thoughtcrime.securesms.keyvalue.PhoneNumberPrivacyValues
@@ -47,10 +44,6 @@ import org.thoughtcrime.securesms.util.ProfileUtil
 import org.thoughtcrime.securesms.util.TextSecurePreferences
 import org.thoughtcrime.securesms.webrtc.CallDataMode
 import org.whispersystems.signalservice.api.push.UsernameLinkComponents
-import org.whispersystems.signalservice.api.storage.IAPSubscriptionId.AppleIAPOriginalTransactionId
-import org.whispersystems.signalservice.api.storage.IAPSubscriptionId.GooglePlayBillingPurchaseToken
-import org.whispersystems.signalservice.api.subscriptions.SubscriberId
-import java.util.Currency
 import kotlin.time.Duration.Companion.minutes
 import kotlin.time.Duration.Companion.seconds
 
@@ -67,13 +60,9 @@ object AccountDataArchiveProcessor {
     val selfId = db.recipientTable.getByAci(signalStore.accountValues.aci!!).get()
     val selfRecord = db.recipientTable.getRecordForSync(selfId)!!
 
-    val donationCurrency = signalStore.inAppPaymentValues.getRecurringDonationCurrency()
-    val donationSubscriber = db.inAppPaymentSubscriberTable.getByCurrencyCode(donationCurrency.currencyCode)
-
+    // server-private fork: no donor or backup subscribers (no donations, no paid backup tier).
     val chatColors = SignalStore.chatColors.chatColors
     val chatWallpaper = SignalStore.wallpaper.currentRawWallpaper
-
-    val backupSubscriberRecord = db.inAppPaymentSubscriberTable.getBackupsSubscriber()
 
     val screenLockTimeoutSeconds = signalStore.settingsValues.screenLockTimeout
     val screenLockTimeoutMinutes = if (screenLockTimeoutSeconds > 0) {
@@ -121,11 +110,11 @@ object AccountDataArchiveProcessor {
             hasViewedOnboardingStory = signalStore.storyValues.userHasViewedOnboardingStory,
             hasSetMyStoriesPrivacy = signalStore.storyValues.userHasBeenNotifiedAboutStories,
             keepMutedChatsArchived = signalStore.settingsValues.shouldKeepMutedChatsArchived(),
-            displayBadgesOnProfile = signalStore.inAppPaymentValues.getDisplayBadgesOnProfile(),
+            displayBadgesOnProfile = false,
             hasSeenGroupStoryEducationSheet = signalStore.storyValues.userHasSeenGroupStoryEducationSheet,
             hasCompletedUsernameOnboarding = signalStore.uiHintValues.hasCompletedUsernameOnboarding(),
             customChatColors = db.chatColorsTable.getSavedChatColors().toRemoteChatColors().also { colors -> exportState.customChatColorIds.addAll(colors.map { it.id }) },
-            optimizeOnDeviceStorage = signalStore.backupValues.optimizeStorage && signalStore.backupValues.backupTier == MessageBackupTier.PAID,
+            optimizeOnDeviceStorage = false,
             backupTier = signalStore.backupValues.backupTier.toRemoteBackupTier(),
             defaultSentMediaQuality = signalStore.settingsValues.sentMediaQuality.toRemoteSentMediaQuality(),
             autoDownloadSettings = AccountData.AutoDownloadSettings(
@@ -148,8 +137,8 @@ object AccountDataArchiveProcessor {
             allowAutomaticKeyVerification = signalStore.settingsValues.automaticVerificationEnabled,
             hasSeenAdminDeleteEducationDialog = signalStore.uiHintValues.hasSeenAdminDeleteEducationDialog()
           ),
-          donationSubscriberData = donationSubscriber?.toSubscriberData(signalStore.inAppPaymentValues.isDonationSubscriptionManuallyCancelled()),
-          backupsSubscriberData = backupSubscriberRecord?.toIAPSubscriberData(),
+          donationSubscriberData = null,
+          backupsSubscriberData = null,
           androidSpecificSettings = AccountData.AndroidSpecificSettings(
             useSystemEmoji = signalStore.settingsValues.isPreferSystemEmoji,
             screenshotSecurity = TextSecurePreferences.isScreenSecurityEnabled(context),
@@ -191,50 +180,7 @@ object AccountDataArchiveProcessor {
       SignalDatabase.recipients.setAbout(selfId, accountData.bioText.takeIf { it.isNotBlank() }, accountData.bioEmoji.takeIf { it.isNotBlank() })
     }
 
-    val donationSubscriberData = accountData.donationSubscriberData
-    if (donationSubscriberData != null) {
-      if (donationSubscriberData.subscriberId.size > 0) {
-        val remoteSubscriberId = SubscriberId.fromBytes(donationSubscriberData.subscriberId.toByteArray())
-        val localSubscriber = InAppPaymentsRepository.getSubscriber(InAppPaymentSubscriberRecord.Type.DONATION)
-
-        val subscriber = InAppPaymentSubscriberRecord(
-          subscriberId = remoteSubscriberId,
-          currency = Currency.getInstance(donationSubscriberData.currencyCode),
-          type = InAppPaymentSubscriberRecord.Type.DONATION,
-          requiresCancel = localSubscriber?.requiresCancel ?: donationSubscriberData.manuallyCancelled,
-          paymentMethodType = InAppPaymentsRepository.getLatestPaymentMethodType(InAppPaymentSubscriberRecord.Type.DONATION),
-          iapSubscriptionId = null
-        )
-
-        InAppPaymentsRepository.setSubscriber(subscriber)
-      }
-
-      if (donationSubscriberData.manuallyCancelled) {
-        SignalStore.inAppPayments.updateLocalStateForManualCancellation(InAppPaymentSubscriberRecord.Type.DONATION)
-      }
-    }
-
-    val backupsSubscriberData = accountData.backupsSubscriberData
-    if (backupsSubscriberData != null && backupsSubscriberData.subscriberId.size > 0 && (backupsSubscriberData.purchaseToken != null || backupsSubscriberData.originalTransactionId != null)) {
-      val remoteSubscriberId = SubscriberId.fromBytes(backupsSubscriberData.subscriberId.toByteArray())
-      val localSubscriber = InAppPaymentsRepository.getSubscriber(InAppPaymentSubscriberRecord.Type.BACKUP)
-
-      val purchaseToken = backupsSubscriberData.purchaseToken
-      val subscriber = InAppPaymentSubscriberRecord(
-        subscriberId = remoteSubscriberId,
-        currency = localSubscriber?.currency,
-        type = InAppPaymentSubscriberRecord.Type.BACKUP,
-        requiresCancel = localSubscriber?.requiresCancel ?: false,
-        paymentMethodType = InAppPaymentData.PaymentMethodType.UNKNOWN,
-        iapSubscriptionId = if (purchaseToken != null) {
-          GooglePlayBillingPurchaseToken(purchaseToken)
-        } else {
-          AppleIAPOriginalTransactionId(backupsSubscriberData.originalTransactionId!!)
-        }
-      )
-
-      InAppPaymentsRepository.setSubscriber(subscriber)
-    }
+    // server-private fork: skip donor / backup subscriber restore — no subscriptions exist.
 
     if (accountData.avatarUrlPath.isNotEmpty()) {
       AppDependencies.jobManager.add(RetrieveProfileAvatarJob(Recipient.self().fresh(), accountData.avatarUrlPath))
@@ -406,31 +352,7 @@ object AccountDataArchiveProcessor {
     }
   }
 
-  /**
-   * This method only supports donations subscriber data, and assumes there is a currency code available.
-   */
-  private fun InAppPaymentSubscriberRecord.toSubscriberData(manuallyCancelled: Boolean): AccountData.SubscriberData {
-    val subscriberId = subscriberId.bytes.toByteString()
-    val currencyCode = currency!!.currencyCode
-    return AccountData.SubscriberData(subscriberId = subscriberId, currencyCode = currencyCode, manuallyCancelled = manuallyCancelled)
-  }
-
-  private fun InAppPaymentSubscriberRecord?.toIAPSubscriberData(): AccountData.IAPSubscriberData? {
-    if (this == null) {
-      return null
-    }
-
-    val builder = AccountData.IAPSubscriberData.Builder()
-      .subscriberId(this.subscriberId.bytes.toByteString())
-
-    if (this.iapSubscriptionId?.purchaseToken != null) {
-      builder.purchaseToken(this.iapSubscriptionId.purchaseToken)
-    } else if (this.iapSubscriptionId?.originalTransactionId != null) {
-      builder.originalTransactionId(this.iapSubscriptionId.originalTransactionId)
-    }
-
-    return builder.build()
-  }
+  // toSubscriberData / toIAPSubscriberData helpers removed in server-private fork.
 
   private fun List<ChatColors>.toRemoteChatColors(): List<ChatStyle.CustomChatColor> {
     return this

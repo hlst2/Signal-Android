@@ -9,10 +9,7 @@ import org.signal.core.util.logging.Log
 import org.thoughtcrime.securesms.backup.DeletionState
 import org.thoughtcrime.securesms.backup.v2.BackupRepository
 import org.thoughtcrime.securesms.backup.v2.MessageBackupTier
-import org.thoughtcrime.securesms.components.settings.app.subscription.InAppPaymentsRepository
-import org.thoughtcrime.securesms.components.settings.app.subscription.RecurringInAppPaymentRepository
 import org.thoughtcrime.securesms.database.SignalDatabase
-import org.thoughtcrime.securesms.database.model.InAppPaymentSubscriberRecord
 import org.thoughtcrime.securesms.dependencies.AppDependencies
 import org.thoughtcrime.securesms.jobmanager.Job
 import org.thoughtcrime.securesms.jobmanager.impl.DeletionNotAwaitingMediaDownloadConstraint
@@ -177,26 +174,7 @@ class BackupDeleteJob private constructor(
   }
 
   private fun cancelActiveSubscription(): Result {
-    if (backupDeleteJobData.completed.contains(BackupDeleteJobData.Stage.CANCEL_SUBSCRIBER)) {
-      Log.d(TAG, "Already canceled active subscription.")
-      return Result.success()
-    }
-
-    Log.d(TAG, "Checking for an active backups subscription.")
-    val subscriberId = InAppPaymentsRepository.getSubscriber(InAppPaymentSubscriberRecord.Type.BACKUP)
-    if (subscriberId != null) {
-      Log.d(TAG, "Found a subscriber. Canceling subscription.")
-      try {
-        RecurringInAppPaymentRepository.cancelActiveSubscriptionSync(InAppPaymentSubscriberRecord.Type.BACKUP)
-      } catch (e: Exception) {
-        Log.w(TAG, "Failed to cancel active backups subscription. Failing.", e)
-        return Result.failure()
-      }
-      Log.d(TAG, "Finished canceling subscription.")
-    } else {
-      Log.d(TAG, "No subscriber found. Skipping subscription cancellation.")
-    }
-
+    // server-private fork: no paid backup subscription to cancel. Mark stage complete and move on.
     addStageToCompletions(BackupDeleteJobData.Stage.CANCEL_SUBSCRIBER)
     return Result.success()
   }

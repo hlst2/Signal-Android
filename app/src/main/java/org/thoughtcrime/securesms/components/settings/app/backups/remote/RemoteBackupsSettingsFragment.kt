@@ -99,12 +99,10 @@ import org.thoughtcrime.securesms.backup.v2.ui.status.BackupCreateErrorRow
 import org.thoughtcrime.securesms.backup.v2.ui.status.BackupStatusRow
 import org.thoughtcrime.securesms.backup.v2.ui.status.RestoreType
 import org.thoughtcrime.securesms.backup.v2.ui.subscription.MessageBackupsType
-import org.thoughtcrime.securesms.billing.launchManageBackupsSubscription
 import org.thoughtcrime.securesms.components.compose.BiometricsAuthentication
 import org.thoughtcrime.securesms.components.compose.rememberBiometricsAuthentication
 import org.thoughtcrime.securesms.components.settings.app.AppSettingsActivity
 import org.thoughtcrime.securesms.components.settings.app.backups.BackupState
-import org.thoughtcrime.securesms.components.settings.app.subscription.MessageBackupsCheckoutLauncher.createBackupsCheckoutLauncher
 import org.thoughtcrime.securesms.compose.StatusBarColorNestedScrollConnection
 import org.thoughtcrime.securesms.help.HelpFragment
 import org.thoughtcrime.securesms.keyvalue.SignalStore
@@ -135,7 +133,8 @@ class RemoteBackupsSettingsFragment : ComposeFragment() {
 
   private val args: RemoteBackupsSettingsFragmentArgs by navArgs()
 
-  private lateinit var checkoutLauncher: ActivityResultLauncher<MessageBackupTier?>
+  // No paid-tier checkout flow in server-private fork; stub closure replaces the activity launcher.
+  private val checkoutLauncher: (MessageBackupTier?) -> Unit = { /* no-op */ }
 
   @Composable
   override fun FragmentContent() {
@@ -162,14 +161,11 @@ class RemoteBackupsSettingsFragment : ComposeFragment() {
     }
 
     override fun onBackupTypeActionClick(tier: MessageBackupTier) {
-      when (tier) {
-        MessageBackupTier.FREE -> checkoutLauncher.launch(MessageBackupTier.PAID)
-        MessageBackupTier.PAID -> launchManageBackupsSubscription()
-      }
+      // No paid-tier upgrade / manage flow in server-private fork.
     }
 
     override fun onLaunchBackupsCheckoutFlow() {
-      checkoutLauncher.launch(null)
+      // No paid-tier checkout flow in server-private fork.
     }
 
     override fun onBackUpUsingCellularClick(canUseCellular: Boolean) {
@@ -225,7 +221,7 @@ class RemoteBackupsSettingsFragment : ComposeFragment() {
     }
 
     override fun onRenewLostSubscription() {
-      checkoutLauncher.launch(MessageBackupTier.PAID)
+      // No paid-tier subscription in server-private fork.
     }
 
     override fun onCancelUploadClick() {
@@ -289,11 +285,7 @@ class RemoteBackupsSettingsFragment : ComposeFragment() {
 
   override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
     super.onViewCreated(view, savedInstanceState)
-    checkoutLauncher = createBackupsCheckoutLauncher { backUpLater ->
-      if (backUpLater) {
-        viewModel.requestSnackbar(RemoteBackupsSettingsState.Snackbar.BACKUP_WILL_BE_CREATED_OVERNIGHT)
-      }
-    }
+    // checkoutLauncher is a no-op closure in server-private fork.
 
     setFragmentResultListener(BackupKeyDisplayFragment.AEP_ROTATION_KEY) { _, bundle ->
       val didRotate = bundle.getBoolean(BackupKeyDisplayFragment.AEP_ROTATION_KEY, false)

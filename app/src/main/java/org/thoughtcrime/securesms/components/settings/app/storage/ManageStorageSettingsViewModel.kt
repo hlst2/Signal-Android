@@ -11,14 +11,9 @@ import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
-import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 import org.signal.core.util.concurrent.SignalExecutors
-import org.thoughtcrime.securesms.backup.v2.MessageBackupTier
-import org.thoughtcrime.securesms.backup.v2.ui.subscription.BackupUpgradeAvailabilityChecker
-import org.thoughtcrime.securesms.components.settings.app.subscription.InAppPaymentsRepository
-import org.thoughtcrime.securesms.database.InAppPaymentTable
 import org.thoughtcrime.securesms.database.MediaTable
 import org.thoughtcrime.securesms.database.SignalDatabase
 import org.thoughtcrime.securesms.database.SignalDatabase.Companion.media
@@ -41,13 +36,7 @@ class ManageStorageSettingsViewModel : ViewModel() {
   val state = store.asStateFlow()
 
   init {
-    viewModelScope.launch(Dispatchers.IO) {
-      InAppPaymentsRepository.observeLatestBackupPayment()
-        .collectLatest { payment ->
-          store.update { it.copy(isPaidTierPending = payment.state == InAppPaymentTable.State.PENDING) }
-        }
-    }
-
+    // server-private fork: no IAP payment observation. isPaidTierPending stays false.
     viewModelScope.launch {
       store.update {
         it.copy(onDeviceStorageOptimizationState = getOnDeviceStorageOptimizationState())
@@ -130,13 +119,9 @@ class ManageStorageSettingsViewModel : ViewModel() {
     return state.value.lengthLimit == ManageStorageState.NO_LIMIT || (newLimit != ManageStorageState.NO_LIMIT && newLimit < state.value.lengthLimit)
   }
 
-  private suspend fun getOnDeviceStorageOptimizationState(): OnDeviceStorageOptimizationState {
-    return when {
-      !SignalStore.backup.areBackupsEnabled || !BackupUpgradeAvailabilityChecker.isUpgradeAvailable(AppDependencies.application) -> OnDeviceStorageOptimizationState.FEATURE_NOT_AVAILABLE
-      SignalStore.backup.backupTier != MessageBackupTier.PAID -> OnDeviceStorageOptimizationState.REQUIRES_PAID_TIER
-      SignalStore.backup.optimizeStorage -> OnDeviceStorageOptimizationState.ENABLED
-      else -> OnDeviceStorageOptimizationState.DISABLED
-    }
+  private fun getOnDeviceStorageOptimizationState(): OnDeviceStorageOptimizationState {
+    // server-private fork: no paid tier; feature is never available.
+    return OnDeviceStorageOptimizationState.FEATURE_NOT_AVAILABLE
   }
 
   override fun onCleared() {

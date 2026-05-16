@@ -10,37 +10,30 @@ import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.delay
-import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.flow.collectLatest
-import kotlinx.coroutines.flow.flatMapLatest
 import kotlinx.coroutines.flow.onEach
 import kotlinx.coroutines.flow.takeWhile
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.isActive
 import kotlinx.coroutines.launch
-import kotlinx.coroutines.reactive.asFlow
 import kotlinx.coroutines.withContext
 import org.signal.core.util.bytes
 import org.signal.core.util.concurrent.SignalDispatchers
 import org.signal.core.util.logging.Log
 import org.signal.core.util.mebiBytes
 import org.signal.core.util.throttleLatest
-import org.signal.donations.InAppPaymentType
 import org.thoughtcrime.securesms.backup.ArchiveUploadProgress
 import org.thoughtcrime.securesms.backup.DeletionState
 import org.thoughtcrime.securesms.backup.v2.ArchiveRestoreProgress
 import org.thoughtcrime.securesms.backup.v2.ArchiveRestoreProgressState.RestoreStatus
 import org.thoughtcrime.securesms.backup.v2.BackupRepository
 import org.thoughtcrime.securesms.backup.v2.MessageBackupTier
-import org.thoughtcrime.securesms.backup.v2.ui.subscription.BackupUpgradeAvailabilityChecker
 import org.thoughtcrime.securesms.backup.v2.ui.subscription.MessageBackupsType
 import org.thoughtcrime.securesms.components.settings.app.backups.BackupState
 import org.thoughtcrime.securesms.components.settings.app.backups.BackupStateObserver
-import org.thoughtcrime.securesms.components.settings.app.subscription.InAppPaymentsRepository
-import org.thoughtcrime.securesms.database.InAppPaymentTable
 import org.thoughtcrime.securesms.database.SignalDatabase
 import org.thoughtcrime.securesms.database.attachmentUpdates
 import org.thoughtcrime.securesms.dependencies.AppDependencies
@@ -84,7 +77,7 @@ class RemoteBackupsSettingsViewModel : ViewModel() {
   )
 
   private val _restoreState: MutableStateFlow<BackupRestoreState> = MutableStateFlow(BackupRestoreState.None)
-  private val latestPurchaseId = MutableSharedFlow<InAppPaymentTable.InAppPaymentId>()
+  // latestPurchaseId removed in server-private fork (no IAP).
 
   val state: StateFlow<RemoteBackupsSettingsState> = _state
   val restoreState: StateFlow<BackupRestoreState> = _restoreState
@@ -94,24 +87,9 @@ class RemoteBackupsSettingsViewModel : ViewModel() {
   init {
     ArchiveUploadProgress.triggerUpdate()
 
-    viewModelScope.launch(Dispatchers.IO) {
-      val isBillingApiAvailable = AppDependencies.billingApi.getApiAvailability().isSuccess
-      if (isBillingApiAvailable) {
-        _state.update {
-          it.copy(isPaidTierPricingAvailable = true)
-        }
-      } else {
-        val paidType = BackupRepository.getPaidType()
-        _state.update {
-          it.copy(isPaidTierPricingAvailable = paidType is NetworkResult.Success)
-        }
-      }
-    }
-
-    viewModelScope.launch {
-      _state.update {
-        it.copy(isGooglePlayServicesAvailable = BackupUpgradeAvailabilityChecker.isUpgradeAvailable(AppDependencies.application))
-      }
+    // server-private fork: no paid tier pricing, no Google Play Services upgrade availability check.
+    _state.update {
+      it.copy(isPaidTierPricingAvailable = false, isGooglePlayServicesAvailable = false)
     }
 
     viewModelScope.launch(Dispatchers.IO) {
@@ -124,14 +102,7 @@ class RemoteBackupsSettingsViewModel : ViewModel() {
       }
     }
 
-    viewModelScope.launch(Dispatchers.IO) {
-      latestPurchaseId
-        .flatMapLatest { id -> InAppPaymentsRepository.observeUpdates(id).asFlow() }
-        .collectLatest { purchase ->
-          Log.d(TAG, "Refreshing state after archive IAP update.")
-          refreshState(purchase)
-        }
-    }
+    // In-app purchase update observer removed in server-private fork.
 
     viewModelScope.launch(Dispatchers.IO) {
       AppDependencies
@@ -260,13 +231,8 @@ class RemoteBackupsSettingsViewModel : ViewModel() {
 
   fun refresh() {
     viewModelScope.launch(Dispatchers.IO) {
-      val id = SignalDatabase.inAppPayments.getLatestInAppPaymentByType(InAppPaymentType.RECURRING_BACKUP)?.id
-
-      if (id != null) {
-        latestPurchaseId.emit(id)
-      } else {
-        refreshState(null)
-      }
+      // No IAP table to query in server-private fork; just refresh state directly.
+      refreshState(null)
     }
   }
 
@@ -313,17 +279,18 @@ class RemoteBackupsSettingsViewModel : ViewModel() {
     }
   }
 
-  private suspend fun refreshState(lastPurchase: InAppPaymentTable.InAppPayment?) {
+  // server-private fork: lastPurchase parameter dropped (no IAP).
+  private suspend fun refreshState(@Suppress("UNUSED_PARAMETER") unused: Any?) {
     try {
       Log.i(TAG, "Performing a state refresh.")
-      performStateRefresh(lastPurchase)
+      performStateRefresh()
     } catch (e: Exception) {
       Log.w(TAG, "State refresh failed", e)
       throw e
     }
   }
 
-  private suspend fun performStateRefresh(lastPurchase: InAppPaymentTable.InAppPayment?) {
+  private suspend fun performStateRefresh() {
     if (BackupRepository.shouldDisplayOutOfRemoteStorageSpaceUx()) {
       val paidType = BackupRepository.getPaidType()
 
@@ -358,7 +325,7 @@ class RemoteBackupsSettingsViewModel : ViewModel() {
         canBackUpUsingCellular = SignalStore.backup.backupWithCellular,
         canRestoreUsingCellular = SignalStore.backup.restoreWithCellular,
         isOutOfStorageSpace = BackupRepository.shouldDisplayOutOfRemoteStorageSpaceUx(),
-        hasRedemptionError = lastPurchase?.data?.error?.data_ == "409",
+        hasRedemptionError = false,
         backupCreationError = SignalStore.backup.backupCreationError,
         lastMessageCutoffTime = SignalStore.backup.lastUsedMessageCutoffTime
       )

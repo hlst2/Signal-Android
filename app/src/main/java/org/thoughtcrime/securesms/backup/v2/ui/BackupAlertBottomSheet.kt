@@ -43,7 +43,6 @@ import org.signal.core.ui.compose.Previews
 import org.signal.core.ui.compose.theme.SignalTheme
 import org.thoughtcrime.securesms.R
 import org.thoughtcrime.securesms.backup.v2.BackupRepository
-import org.thoughtcrime.securesms.billing.launchManageBackupsSubscription
 import org.thoughtcrime.securesms.components.contactsupport.ContactSupportDialogFragment
 import org.thoughtcrime.securesms.components.settings.app.AppSettingsActivity
 import org.thoughtcrime.securesms.jobs.BackupMessagesJob
@@ -95,7 +94,7 @@ class BackupAlertBottomSheet : ComposeBottomSheetDialogFragment() {
         startActivity(AppSettingsActivity.remoteBackups(requireContext()))
       }
 
-      BackupAlert.FailedToRenew -> launchManageBackupsSubscription()
+      BackupAlert.FailedToRenew -> Unit // No paid backup subscription in server-private fork.
       is BackupAlert.MediaBackupsAreOff -> error("Use MediaBackupsAreOffBottomSheet instead.")
 
       is BackupAlert.DownloadYourBackupData -> {

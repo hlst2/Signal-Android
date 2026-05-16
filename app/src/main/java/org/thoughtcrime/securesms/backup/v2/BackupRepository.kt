@@ -87,7 +87,6 @@ import org.thoughtcrime.securesms.backup.v2.processor.StickerArchiveProcessor
 import org.thoughtcrime.securesms.backup.v2.ui.BackupAlert
 import org.thoughtcrime.securesms.backup.v2.ui.subscription.MessageBackupsType
 import org.thoughtcrime.securesms.components.settings.app.AppSettingsActivity
-import org.thoughtcrime.securesms.components.settings.app.subscription.RecurringInAppPaymentRepository
 import org.thoughtcrime.securesms.crypto.AttachmentSecretProvider
 import org.thoughtcrime.securesms.crypto.DatabaseSecretProvider
 import org.thoughtcrime.securesms.database.AttachmentTable
@@ -100,7 +99,6 @@ import org.thoughtcrime.securesms.database.SignalDatabase
 import org.thoughtcrime.securesms.database.SignedPreKeyTable
 import org.thoughtcrime.securesms.database.StickerTable
 import org.thoughtcrime.securesms.database.ThreadTable
-import org.thoughtcrime.securesms.database.model.InAppPaymentSubscriberRecord
 import org.thoughtcrime.securesms.dependencies.AppDependencies
 import org.thoughtcrime.securesms.groups.GroupId
 import org.thoughtcrime.securesms.jobmanager.Job
@@ -2023,74 +2021,33 @@ object BackupRepository {
       }
   }
 
+  // server-private fork: no donations service, no paid tier. The functions
+  // below always return free-tier (or 404 for paid).
+
+  /** Free-tier media retention default for server-private (matches former server free tier). */
+  private const val DEFAULT_FREE_TIER_MEDIA_DAYS = 30
+
   suspend fun getBackupTypes(availableBackupTiers: List<MessageBackupTier>): List<MessageBackupsType> {
-    return availableBackupTiers.mapNotNull {
-      val type = getBackupsType(it)
-
-      if (type is NetworkResult.Success) type.result else null
-    }
-  }
-
-  private suspend fun getBackupsType(tier: MessageBackupTier): NetworkResult<out MessageBackupsType> {
-    return when (tier) {
-      MessageBackupTier.FREE -> getFreeType()
-      MessageBackupTier.PAID -> getPaidType()
+    return availableBackupTiers.mapNotNull { tier ->
+      when (tier) {
+        MessageBackupTier.FREE -> MessageBackupsType.Free(mediaRetentionDays = DEFAULT_FREE_TIER_MEDIA_DAYS)
+        MessageBackupTier.PAID -> null
+      }
     }
   }
 
   @WorkerThread
   fun getBackupLevelConfiguration(): NetworkResult<SubscriptionsConfiguration.BackupLevelConfiguration> {
-    return AppDependencies.donationsService
-      .getDonationsConfiguration(Locale.getDefault())
-      .toNetworkResult()
-      .then {
-        val config = it.backupConfiguration.backupLevelConfigurationMap[SubscriptionsConfiguration.BACKUPS_LEVEL]
-        if (config != null) {
-          NetworkResult.Success(config)
-        } else {
-          NetworkResult.StatusCodeError(NonSuccessfulResponseCodeException(404))
-        }
-      }
+    return NetworkResult.StatusCodeError(NonSuccessfulResponseCodeException(404))
   }
 
   @WorkerThread
   fun getFreeType(): NetworkResult<MessageBackupsType.Free> {
-    return AppDependencies.donationsService
-      .getDonationsConfiguration(Locale.getDefault())
-      .toNetworkResult()
-      .map {
-        MessageBackupsType.Free(
-          mediaRetentionDays = it.backupConfiguration.freeTierMediaDays
-        )
-      }
+    return NetworkResult.Success(MessageBackupsType.Free(mediaRetentionDays = DEFAULT_FREE_TIER_MEDIA_DAYS))
   }
 
   suspend fun getPaidType(): NetworkResult<MessageBackupsType.Paid> {
-    val productPrice: FiatMoney? = if (SignalStore.backup.backupTierInternalOverride == MessageBackupTier.PAID) {
-      Log.d(TAG, "Accessing price via mock subscription.")
-      RecurringInAppPaymentRepository.getActiveSubscriptionSync(InAppPaymentSubscriberRecord.Type.BACKUP).successOrNull()?.activeSubscription?.let {
-        FiatMoney.fromSignalNetworkAmount(it.amount, Currency.getInstance(it.currency))
-      }
-    } else if (AppDependencies.billingApi.getApiAvailability().isSuccess) {
-      Log.d(TAG, "Accessing price via billing api.")
-      AppDependencies.billingApi.queryProduct()?.price
-    } else {
-      FiatMoney(BigDecimal.ZERO, SignalStore.inAppPayments.getRecurringDonationCurrency())
-    }
-
-    if (productPrice == null) {
-      Log.w(TAG, "No pricing available. Exiting.")
-      return NetworkResult.StatusCodeError(NonSuccessfulResponseCodeException(404))
-    }
-
-    return getBackupLevelConfiguration()
-      .map {
-        MessageBackupsType.Paid(
-          pricePerMonth = productPrice,
-          storageAllowanceBytes = it.storageAllowanceBytes,
-          mediaTtl = it.mediaTtlDays.days
-        )
-      }
+    return NetworkResult.StatusCodeError(NonSuccessfulResponseCodeException(404))
   }
 
   /**

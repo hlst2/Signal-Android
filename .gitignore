@@ -35,3 +35,4 @@ kls_database.db
 lefthook-local.yml
 sample-videos/
 SERVER_PRIVATE_DELETION_ROADMAP.md
+.claude/

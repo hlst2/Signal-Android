@@ -8,7 +8,6 @@ package org.thoughtcrime.securesms.components.settings.app.backups
 import android.content.Context
 import android.os.Bundle
 import android.view.View
-import androidx.activity.result.ActivityResultLauncher
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -54,7 +53,6 @@ import org.thoughtcrime.securesms.R
 import org.thoughtcrime.securesms.backup.DeletionState
 import org.thoughtcrime.securesms.backup.v2.MessageBackupTier
 import org.thoughtcrime.securesms.backup.v2.ui.subscription.MessageBackupsType
-import org.thoughtcrime.securesms.components.settings.app.subscription.MessageBackupsCheckoutLauncher.createBackupsCheckoutLauncher
 import org.thoughtcrime.securesms.keyvalue.SignalStore
 import org.thoughtcrime.securesms.payments.FiatMoneyUtil
 import org.thoughtcrime.securesms.util.DateUtils
@@ -75,19 +73,12 @@ import org.signal.core.ui.R as CoreUiR
  */
 class BackupsSettingsFragment : ComposeFragment() {
 
-  private lateinit var checkoutLauncher: ActivityResultLauncher<MessageBackupTier?>
-
   private val viewModel: BackupsSettingsViewModel by viewModels()
   private val args: BackupsSettingsFragmentArgs by navArgs()
 
   override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-    checkoutLauncher = createBackupsCheckoutLauncher {
-      findNavController().safeNavigate(R.id.action_backupsSettingsFragment_to_remoteBackupsSettingsFragment)
-    }
-
-    if (savedInstanceState == null && args.launchCheckoutFlow) {
-      checkoutLauncher.launch(null)
-    }
+    // Paid-tier checkout launcher removed in server-private fork.
+    // The launchCheckoutFlow arg is ignored.
   }
 
   @Composable

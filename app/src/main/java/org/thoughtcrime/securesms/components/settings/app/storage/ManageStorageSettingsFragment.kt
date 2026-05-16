@@ -65,8 +65,6 @@ import org.signal.core.ui.compose.Texts
 import org.signal.core.ui.compose.theme.SignalTheme
 import org.signal.core.util.bytes
 import org.thoughtcrime.securesms.R
-import org.thoughtcrime.securesms.billing.upgrade.UpgradeToEnableOptimizedStorageSheet
-import org.thoughtcrime.securesms.billing.upgrade.UpgradeToPaidTierBottomSheet
 import org.thoughtcrime.securesms.database.MediaTable
 import org.thoughtcrime.securesms.keyvalue.KeepMessagesDuration
 import org.thoughtcrime.securesms.keyvalue.SignalStore
@@ -83,9 +81,7 @@ class ManageStorageSettingsFragment : ComposeFragment() {
   private val viewModel by viewModel<ManageStorageSettingsViewModel> { ManageStorageSettingsViewModel() }
 
   override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-    UpgradeToPaidTierBottomSheet.addResultListener(this) {
-      viewModel.setOptimizeStorage(true)
-    }
+    // UpgradeToPaidTierBottomSheet result listener removed in server-private fork.
   }
 
   @ExperimentalMaterial3Api
@@ -114,13 +110,8 @@ class ManageStorageSettingsFragment : ComposeFragment() {
             onSyncTrimThreadDeletes = { viewModel.setSyncTrimDeletes(it) },
             onDeleteChatHistory = { navController.navigate("confirm-delete-chat-history") },
             onToggleOnDeviceStorageOptimization = { enabled ->
-              if (state.isPaidTierPending) {
-                navController.navigate("paid-tier-pending")
-              } else if (state.onDeviceStorageOptimizationState == ManageStorageSettingsViewModel.OnDeviceStorageOptimizationState.REQUIRES_PAID_TIER) {
-                UpgradeToEnableOptimizedStorageSheet().show(parentFragmentManager, BottomSheetUtil.STANDARD_BOTTOM_SHEET_FRAGMENT_TAG)
-              } else {
-                viewModel.setOptimizeStorage(enabled)
-              }
+              // server-private fork: paid-tier branches removed.
+              viewModel.setOptimizeStorage(enabled)
             }
           )
         }
