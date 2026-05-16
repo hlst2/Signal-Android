@@ -32,7 +32,7 @@ import org.signal.core.ui.compose.NightPreview
 import org.signal.core.ui.compose.Previews
 import org.thoughtcrime.securesms.R
 import org.thoughtcrime.securesms.avatar.AvatarImage
-import org.thoughtcrime.securesms.components.settings.app.subscription.BadgeImageSmall
+import org.thoughtcrime.securesms.badges.BadgeImageSmall
 import org.thoughtcrime.securesms.components.webrtc.CallParticipantListUpdate
 import org.thoughtcrime.securesms.components.webrtc.v2.CallParticipantUpdatePopupController.DisplayState
 import org.thoughtcrime.securesms.events.CallParticipant

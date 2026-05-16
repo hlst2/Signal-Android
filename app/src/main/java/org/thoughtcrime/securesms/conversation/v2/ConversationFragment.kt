@@ -131,7 +131,6 @@ import org.signal.core.util.logging.Log
 import org.signal.core.util.orNull
 import org.signal.core.util.requireParcelableCompat
 import org.signal.core.util.setActionItemTint
-import org.signal.donations.InAppPaymentType
 import org.signal.ringrtc.CallLinkRootKey
 import org.thoughtcrime.securesms.BlockUnblockDialog
 import org.thoughtcrime.securesms.MainActivity
@@ -139,12 +138,6 @@ import org.thoughtcrime.securesms.MuteDialog
 import org.thoughtcrime.securesms.R
 import org.thoughtcrime.securesms.attachments.AttachmentSaver
 import org.thoughtcrime.securesms.audio.AudioRecorder
-import org.thoughtcrime.securesms.backup.v2.ui.subscription.BackupUpgradeAvailabilityChecker
-import org.thoughtcrime.securesms.badges.gifts.OpenableGift
-import org.thoughtcrime.securesms.badges.gifts.OpenableGiftItemDecoration
-import org.thoughtcrime.securesms.badges.gifts.viewgift.received.ViewReceivedGiftBottomSheet
-import org.thoughtcrime.securesms.badges.gifts.viewgift.sent.ViewSentGiftBottomSheet
-import org.thoughtcrime.securesms.billing.upgrade.UpgradeToStartMediaBackupSheet
 import org.thoughtcrime.securesms.calls.YouAreAlreadyInACallSnackbar
 import org.thoughtcrime.securesms.components.AnimatingToggle
 import org.thoughtcrime.securesms.components.ComposeText
@@ -169,8 +162,6 @@ import org.thoughtcrime.securesms.components.mention.MentionAnnotation
 import org.thoughtcrime.securesms.components.menu.ActionItem
 import org.thoughtcrime.securesms.components.menu.SignalBottomActionBar
 import org.thoughtcrime.securesms.components.settings.app.AppSettingsActivity
-import org.thoughtcrime.securesms.components.settings.app.subscription.donate.CheckoutFlowActivity
-import org.thoughtcrime.securesms.components.settings.app.subscription.donate.DonateToSignalFragment
 import org.thoughtcrime.securesms.components.settings.conversation.ConversationSettingsActivity
 import org.thoughtcrime.securesms.components.snackbars.makeSnackbar
 import org.thoughtcrime.securesms.components.spoiler.SpoilerAnnotation
@@ -462,10 +453,6 @@ class ConversationFragment :
     MessageRequestRepository(requireContext())
   }
 
-  private val checkoutLauncher by lazy {
-    registerForActivityResult(CheckoutFlowActivity.Contract()) {}
-  }
-
   private val disposables = LifecycleDisposable()
   private val binding by ViewBinderDelegate(bindingFactory = V2ConversationFragmentBinding::bind, onBindingWillBeDestroyed = { _binding ->
     _binding.conversationInputPanel.embeddedTextEditor.apply {
@@ -577,7 +564,6 @@ class ConversationFragment :
   private lateinit var recyclerViewColorizer: RecyclerViewColorizer
   private lateinit var attachmentManager: AttachmentManager
   private lateinit var multiselectItemDecoration: MultiselectItemDecoration
-  private lateinit var openableGiftItemDecoration: OpenableGiftItemDecoration
   private lateinit var conversationHeaderPositionDecoration: ConversationHeaderPositionDecoration
   private lateinit var conversationItemDecorations: ConversationItemDecorations
   private lateinit var optionsMenuCallback: ConversationOptionsMenuCallback
@@ -2271,9 +2257,6 @@ class ConversationFragment :
       requireContext()
     ) { viewModel.wallpaperSnapshot }
 
-    openableGiftItemDecoration = OpenableGiftItemDecoration(requireContext())
-    binding.conversationItemRecycler.addItemDecoration(openableGiftItemDecoration)
-
     binding.conversationItemRecycler.addItemDecoration(multiselectItemDecoration)
     viewLifecycleOwner.lifecycle.addObserver(multiselectItemDecoration)
 
@@ -2828,14 +2811,7 @@ class ConversationFragment :
   }
 
   private fun isUnopenedGift(itemView: View, messageRecord: MessageRecord): Boolean {
-    if (itemView is OpenableGift) {
-      val projection = (itemView as OpenableGift).getOpenableGiftProjection(false)
-      if (projection != null) {
-        projection.release()
-        return !openableGiftItemDecoration.hasOpenedGiftThisSession(messageRecord.id)
-      }
-    }
-
+    // Gift badges removed in server-private fork.
     return false
   }
 
@@ -3601,15 +3577,7 @@ class ConversationFragment :
     }
 
     override fun onDisplayMediaNoLongerAvailableSheet() {
-      viewLifecycleOwner.lifecycleScope.launch {
-        val isUpgradeAvailable = BackupUpgradeAvailabilityChecker.isUpgradeAvailable(requireContext())
-
-        if (SignalStore.backup.areBackupsEnabled && isUpgradeAvailable) {
-          UpgradeToStartMediaBackupSheet().show(parentFragmentManager, BottomSheetUtil.STANDARD_BOTTOM_SHEET_FRAGMENT_TAG)
-        } else {
-          MediaNoLongerAvailableBottomSheet().show(parentFragmentManager, BottomSheetUtil.STANDARD_BOTTOM_SHEET_FRAGMENT_TAG)
-        }
-      }
+      // Paid backup upgrade flow removed in server-private fork; nothing to show.
     }
 
     override fun onMessageWithErrorClicked(messageRecord: MessageRecord) {
@@ -3800,7 +3768,7 @@ class ConversationFragment :
 
     override fun onCallToAction(action: String) {
       when (action) {
-        "gift_badge" -> checkoutLauncher.launch(InAppPaymentType.ONE_TIME_GIFT)
+        "gift_badge" -> Unit // Gift purchase removed in server-private fork.
         "username_edit" -> startActivity(EditProfileActivity.getIntentForUsernameEdit(requireContext()))
         "calls_tab" -> startActivity(MainActivity.clearTopAndOpenTab(requireContext(), MainNavigationListLocation.CALLS))
         "chat_folder" -> startActivity(AppSettingsActivity.chatFolders(requireContext()))
@@ -3815,11 +3783,7 @@ class ConversationFragment :
     }
 
     override fun onDonateClicked() {
-      requireActivity()
-        .supportFragmentManager
-        .beginTransaction()
-        .add(DonateToSignalFragment.Dialog.create(InAppPaymentType.ONE_TIME_DONATION), "one_time_nav")
-        .commitNow()
+      // Donations removed in server-private fork.
     }
 
     override fun onBlockJoinRequest(recipient: Recipient) {
@@ -3872,15 +3836,7 @@ class ConversationFragment :
     }
 
     override fun onViewGiftBadgeClicked(messageRecord: MessageRecord) {
-      if (!messageRecord.hasGiftBadge()) {
-        return
-      }
-
-      if (messageRecord.isOutgoing) {
-        ViewSentGiftBottomSheet.show(childFragmentManager, (messageRecord as MmsMessageRecord))
-      } else {
-        ViewReceivedGiftBottomSheet.show(childFragmentManager, (messageRecord as MmsMessageRecord))
-      }
+      // Gift badge view sheets removed in server-private fork.
     }
 
     override fun onGiftBadgeRevealed(messageRecord: MessageRecord) {

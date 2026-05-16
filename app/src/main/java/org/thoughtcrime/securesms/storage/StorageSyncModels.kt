@@ -21,10 +21,7 @@ import org.thoughtcrime.securesms.database.SignalDatabase
 import org.thoughtcrime.securesms.database.SignalDatabase.Companion.callLinks
 import org.thoughtcrime.securesms.database.SignalDatabase.Companion.distributionLists
 import org.thoughtcrime.securesms.database.SignalDatabase.Companion.groups
-import org.thoughtcrime.securesms.database.SignalDatabase.Companion.inAppPaymentSubscribers
-import org.thoughtcrime.securesms.database.model.InAppPaymentSubscriberRecord
 import org.thoughtcrime.securesms.database.model.RecipientRecord
-import org.thoughtcrime.securesms.database.model.databaseprotos.InAppPaymentData
 import org.thoughtcrime.securesms.groups.BadGroupIdException
 import org.thoughtcrime.securesms.groups.GroupId
 import org.thoughtcrime.securesms.keyvalue.PhoneNumberPrivacyValues
@@ -33,7 +30,6 @@ import org.thoughtcrime.securesms.recipients.Recipient
 import org.thoughtcrime.securesms.recipients.RecipientId
 import org.thoughtcrime.securesms.util.RemoteConfig
 import org.whispersystems.signalservice.api.push.SignalServiceAddress
-import org.whispersystems.signalservice.api.storage.IAPSubscriptionId
 import org.whispersystems.signalservice.api.storage.SignalCallLinkRecord
 import org.whispersystems.signalservice.api.storage.SignalChatFolderRecord
 import org.whispersystems.signalservice.api.storage.SignalContactRecord
@@ -51,13 +47,11 @@ import org.whispersystems.signalservice.api.storage.toSignalGroupV2Record
 import org.whispersystems.signalservice.api.storage.toSignalNotificationProfileRecord
 import org.whispersystems.signalservice.api.storage.toSignalStorageRecord
 import org.whispersystems.signalservice.api.storage.toSignalStoryDistributionListRecord
-import org.whispersystems.signalservice.api.subscriptions.SubscriberId
 import org.whispersystems.signalservice.internal.storage.protos.AccountRecord
 import org.whispersystems.signalservice.internal.storage.protos.ContactRecord
 import org.whispersystems.signalservice.internal.storage.protos.ContactRecord.IdentityState
 import org.whispersystems.signalservice.internal.storage.protos.GroupV2Record
 import java.time.DayOfWeek
-import java.util.Currency
 import kotlin.math.max
 import org.whispersystems.signalservice.internal.storage.protos.AvatarColor as RemoteAvatarColor
 import org.whispersystems.signalservice.internal.storage.protos.ChatFolderRecord as RemoteChatFolder
@@ -333,63 +327,6 @@ object StorageSyncModels {
       VerifiedStatus.VERIFIED -> IdentityState.VERIFIED
       VerifiedStatus.UNVERIFIED -> IdentityState.UNVERIFIED
       else -> IdentityState.DEFAULT
-    }
-  }
-
-  fun remoteToLocalBackupSubscriber(
-    iapData: AccountRecord.IAPSubscriberData?
-  ): InAppPaymentSubscriberRecord? {
-    if (iapData == null || iapData.subscriberId.isNullOrEmpty()) {
-      return null
-    }
-
-    val subscriberId = SubscriberId.fromBytes(iapData.subscriberId.toByteArray())
-    val localSubscriberRecord = inAppPaymentSubscribers.getBySubscriberId(subscriberId)
-    val requiresCancel = localSubscriberRecord != null && localSubscriberRecord.requiresCancel
-    val paymentMethodType = localSubscriberRecord?.paymentMethodType ?: InAppPaymentData.PaymentMethodType.GOOGLE_PLAY_BILLING
-    val iapSubscriptionId = IAPSubscriptionId.from(iapData) ?: return null
-
-    return InAppPaymentSubscriberRecord(
-      subscriberId = subscriberId,
-      currency = null,
-      type = InAppPaymentSubscriberRecord.Type.BACKUP,
-      requiresCancel = requiresCancel,
-      paymentMethodType = paymentMethodType,
-      iapSubscriptionId = iapSubscriptionId
-    )
-  }
-
-  fun remoteToLocalDonorSubscriber(
-    subscriberId: ByteString,
-    subscriberCurrencyCode: String
-  ): InAppPaymentSubscriberRecord? {
-    if (subscriberId.isNotEmpty()) {
-      val subscriberId = SubscriberId.fromBytes(subscriberId.toByteArray())
-      val localSubscriberRecord = inAppPaymentSubscribers.getBySubscriberId(subscriberId)
-      val requiresCancel = localSubscriberRecord != null && localSubscriberRecord.requiresCancel
-      val paymentMethodType = localSubscriberRecord?.paymentMethodType ?: InAppPaymentData.PaymentMethodType.UNKNOWN
-
-      val currency: Currency
-      if (subscriberCurrencyCode.isBlank()) {
-        return null
-      } else {
-        try {
-          currency = Currency.getInstance(subscriberCurrencyCode)
-        } catch (e: IllegalArgumentException) {
-          return null
-        }
-      }
-
-      return InAppPaymentSubscriberRecord(
-        subscriberId = subscriberId,
-        currency = currency,
-        type = InAppPaymentSubscriberRecord.Type.DONATION,
-        requiresCancel = requiresCancel,
-        paymentMethodType = paymentMethodType,
-        iapSubscriptionId = null
-      )
-    } else {
-      return null
     }
   }
 

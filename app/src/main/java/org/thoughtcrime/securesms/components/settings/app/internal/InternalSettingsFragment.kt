@@ -34,7 +34,6 @@ import org.thoughtcrime.securesms.components.settings.DSLConfiguration
 import org.thoughtcrime.securesms.components.settings.DSLSettingsFragment
 import org.thoughtcrime.securesms.components.settings.DSLSettingsText
 import org.thoughtcrime.securesms.components.settings.app.privacy.advanced.AdvancedPrivacySettingsRepository
-import org.thoughtcrime.securesms.components.settings.app.subscription.InAppPaymentsRepository
 import org.thoughtcrime.securesms.components.settings.configure
 import org.thoughtcrime.securesms.components.snackbars.SnackbarState
 import org.thoughtcrime.securesms.components.snackbars.makeSnackbar
@@ -45,7 +44,6 @@ import org.thoughtcrime.securesms.database.LogDatabase
 import org.thoughtcrime.securesms.database.MegaphoneDatabase
 import org.thoughtcrime.securesms.database.OneTimePreKeyTable
 import org.thoughtcrime.securesms.database.SignalDatabase
-import org.thoughtcrime.securesms.database.model.InAppPaymentSubscriberRecord
 import org.thoughtcrime.securesms.database.model.MessageRecord
 import org.thoughtcrime.securesms.dependencies.AppDependencies
 import org.thoughtcrime.securesms.jobmanager.JobTracker
@@ -53,7 +51,6 @@ import org.thoughtcrime.securesms.jobs.BackfillCollapsedMessageJob
 import org.thoughtcrime.securesms.jobs.CheckKeyTransparencyJob
 import org.thoughtcrime.securesms.jobs.DownloadLatestEmojiDataJob
 import org.thoughtcrime.securesms.jobs.EmojiSearchIndexDownloadJob
-import org.thoughtcrime.securesms.jobs.InAppPaymentKeepAliveJob
 import org.thoughtcrime.securesms.jobs.RefreshAttributesJob
 import org.thoughtcrime.securesms.jobs.RefreshOwnProfileJob
 import org.thoughtcrime.securesms.jobs.RemoteConfigRefreshJob
@@ -723,65 +720,7 @@ class InternalSettingsFragment : DSLSettingsFragment(R.string.preferences__inter
 
       dividerPref()
 
-      // TODO [alex] -- db access on main thread!
-      if (InAppPaymentsRepository.getSubscriber(InAppPaymentSubscriberRecord.Type.DONATION) != null) {
-        sectionHeaderPref(DSLSettingsText.from("Badges"))
-
-        clickPref(
-          title = DSLSettingsText.from("Enqueue redemption."),
-          onClick = {
-            enqueueSubscriptionRedemption()
-          }
-        )
-
-        clickPref(
-          title = DSLSettingsText.from("Enqueue keep-alive."),
-          onClick = {
-            enqueueSubscriptionKeepAlive()
-          }
-        )
-
-        clickPref(
-          title = DSLSettingsText.from("Set error state."),
-          onClick = {
-            findNavController().safeNavigate(InternalSettingsFragmentDirections.actionInternalSettingsFragmentToDonorErrorConfigurationFragment())
-          }
-        )
-
-        clickPref(
-          title = DSLSettingsText.from("Clear keep-alive timestamps"),
-          onClick = {
-            SignalStore.inAppPayments.setLastEndOfPeriod(0L)
-            Toast.makeText(context, "Cleared", Toast.LENGTH_SHORT).show()
-          }
-        )
-        dividerPref()
-      }
-
-      if (state.hasPendingOneTimeDonation) {
-        clickPref(
-          title = DSLSettingsText.from("Clear pending one-time donation."),
-          onClick = {
-            SignalStore.inAppPayments.setPendingOneTimeDonation(null)
-          }
-        )
-      } else {
-        clickPref(
-          title = DSLSettingsText.from("Set pending one-time donation."),
-          onClick = {
-            findNavController().safeNavigate(InternalSettingsFragmentDirections.actionInternalSettingsFragmentToOneTimeDonationConfigurationFragment())
-          }
-        )
-      }
-
-      clickPref(
-        title = DSLSettingsText.from("Enqueue terminal donation"),
-        onClick = {
-          findNavController().safeNavigate(InternalSettingsFragmentDirections.actionInternalSettingsFragmentToTerminalDonationConfigurationFragment())
-        }
-      )
-
-      dividerPref()
+      // Donation/IAP internal pref groups removed in server-private fork.
 
       sectionHeaderPref(DSLSettingsText.from("Release channel"))
 
@@ -827,19 +766,7 @@ class InternalSettingsFragment : DSLSettingsFragment(R.string.preferences__inter
         }
       )
 
-      clickPref(
-        title = DSLSettingsText.from("Add remote donate megaphone"),
-        onClick = {
-          viewModel.addRemoteDonateMegaphone()
-        }
-      )
-
-      clickPref(
-        title = DSLSettingsText.from("Add donate_friend remote megaphone"),
-        onClick = {
-          viewModel.addRemoteDonateFriendMegaphone()
-        }
-      )
+      // Remote donate megaphone test prefs removed in server-private fork.
 
       dividerPref()
 
@@ -1117,14 +1044,6 @@ class InternalSettingsFragment : DSLSettingsFragment(R.string.preferences__inter
   private fun clearAllLocalMetricsState() {
     LocalMetricsDatabase.getInstance(AppDependencies.application).clear()
     Toast.makeText(context, "Cleared all local metrics state.", Toast.LENGTH_SHORT).show()
-  }
-
-  private fun enqueueSubscriptionRedemption() {
-    viewModel.enqueueSubscriptionRedemption()
-  }
-
-  private fun enqueueSubscriptionKeepAlive() {
-    InAppPaymentKeepAliveJob.enqueueAndTrackTime(System.currentTimeMillis().milliseconds)
   }
 
   private fun clearCdsHistory() {

@@ -35,7 +35,7 @@ import org.signal.core.ui.compose.theme.SignalTheme
 import org.thoughtcrime.securesms.R
 import org.thoughtcrime.securesms.avatar.AvatarImage
 import org.thoughtcrime.securesms.components.emoji.Emojifier
-import org.thoughtcrime.securesms.components.settings.app.subscription.BadgeImageMedium
+import org.thoughtcrime.securesms.badges.BadgeImageMedium
 import org.thoughtcrime.securesms.database.RecipientTable
 import org.thoughtcrime.securesms.recipients.Recipient
 import org.thoughtcrime.securesms.recipients.RecipientId

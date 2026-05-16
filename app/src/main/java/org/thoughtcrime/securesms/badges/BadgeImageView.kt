@@ -31,6 +31,10 @@ class BadgeImageView @JvmOverloads constructor(
     isClickable = false
   }
 
+  constructor(context: Context, badgeImageSize: BadgeImageSize) : this(context) {
+    badgeSize = badgeImageSize.sizeCode
+  }
+
   override fun setOnClickListener(l: OnClickListener?) {
     val wasClickable = isClickable
     super.setOnClickListener(l)

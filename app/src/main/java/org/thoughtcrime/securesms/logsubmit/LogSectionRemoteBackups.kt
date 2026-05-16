@@ -6,20 +6,10 @@
 package org.thoughtcrime.securesms.logsubmit
 
 import android.content.Context
-import com.google.android.gms.common.GoogleApiAvailability
-import kotlinx.coroutines.runBlocking
-import org.signal.donations.InAppPaymentType
 import org.thoughtcrime.securesms.backup.v2.ArchiveRestoreProgress
-import org.thoughtcrime.securesms.backup.v2.ui.subscription.GooglePlayServicesAvailability
-import org.thoughtcrime.securesms.components.settings.app.subscription.DonationSerializationHelper.toFiatMoney
-import org.thoughtcrime.securesms.components.settings.app.subscription.InAppPaymentsRepository
 import org.thoughtcrime.securesms.database.SignalDatabase
-import org.thoughtcrime.securesms.database.model.InAppPaymentSubscriberRecord
-import org.thoughtcrime.securesms.dependencies.AppDependencies
 import org.thoughtcrime.securesms.keyvalue.SignalStore
 import org.thoughtcrime.securesms.keyvalue.protos.ArchiveUploadProgressState
-import org.thoughtcrime.securesms.payments.FiatMoneyUtil
-import org.whispersystems.signalservice.api.storage.IAPSubscriptionId
 
 class LogSectionRemoteBackups : LogSection {
   override fun getTitle(): String = "REMOTE BACKUPS"
@@ -41,41 +31,8 @@ class LogSectionRemoteBackups : LogSection {
     output.append("Has backup been uploaded            : ${SignalStore.backup.hasBackupBeenUploaded}\n")
     output.append("Backup failure state                : ${SignalStore.backup.backupCreationError?.name ?: "None"}\n")
     output.append("Optimize storage                    : ${SignalStore.backup.optimizeStorage}\n")
-    output.append("Detected subscription state mismatch: ${SignalStore.backup.subscriptionStateMismatchDetected}\n")
     output.append("Last verified key time              : ${SignalStore.backup.lastVerifyKeyTime}\n")
     output.append("Restore state                       : ${ArchiveRestoreProgress.state}\n")
-    output.append("\n -- Subscription State\n")
-
-    val backupSubscriptionId = InAppPaymentsRepository.getSubscriber(InAppPaymentSubscriberRecord.Type.BACKUP)
-    val googlePlayBillingAccess = runBlocking { AppDependencies.billingApi.getApiAvailability() }
-    val googlePlayServicesAvailability = GooglePlayServicesAvailability.fromCode(GoogleApiAvailability.getInstance().isGooglePlayServicesAvailable(context))
-    val inAppPayment = SignalDatabase.inAppPayments.getLatestInAppPaymentByType(InAppPaymentType.RECURRING_BACKUP)
-
-    val backupSubscriptionType = when (backupSubscriptionId?.iapSubscriptionId) {
-      is IAPSubscriptionId.GooglePlayBillingPurchaseToken -> "Google Play Billing"
-      is IAPSubscriptionId.AppleIAPOriginalTransactionId -> "Apple IAP"
-      null -> if (backupSubscriptionId != null) "Unknown" else "None"
-    }
-
-    output.append("Has backup subscription id       : ${backupSubscriptionId != null}\n")
-    output.append("Backup subscription type         : $backupSubscriptionType\n")
-    output.append("Google Play Billing state        : $googlePlayBillingAccess\n")
-    output.append("Google Play Services state       : $googlePlayServicesAvailability\n\n")
-
-    if (inAppPayment != null) {
-      output.append("IAP end of period (seconds)      : ${inAppPayment.endOfPeriodSeconds}\n")
-      output.append("IAP state                        : ${inAppPayment.state.name}\n")
-      output.append("IAP inserted at (seconds)        : ${inAppPayment.insertedAt.inWholeSeconds}\n")
-      output.append("IAP updated at (seconds)         : ${inAppPayment.updatedAt.inWholeSeconds}\n")
-      output.append("IAP notified flag                : ${inAppPayment.notified}\n")
-      output.append("IAP level                        : ${inAppPayment.data.level}\n")
-      output.append("IAP redemption stage (or null)   : ${inAppPayment.data.redemption?.stage}\n")
-      output.append("IAP error type (or null)         : ${inAppPayment.data.error?.type}\n")
-      output.append("IAP cancellation reason (or null): ${inAppPayment.data.cancellation?.reason}\n")
-      output.append("IAP price                        : ${inAppPayment.data.amount?.toFiatMoney()?.let { FiatMoneyUtil.format(context.resources, it)} ?: "Not available" }\n")
-    } else {
-      output.append("No in-app payment data available.\n")
-    }
 
     output.append("\n -- Imported DebugInfo\n")
     if (SignalStore.internal.importedBackupDebugInfo != null) {

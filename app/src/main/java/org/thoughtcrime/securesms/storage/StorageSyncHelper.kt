@@ -11,12 +11,8 @@ import org.signal.core.util.UuidUtil
 import org.signal.core.util.logging.Log
 import org.signal.core.util.toByteArray
 import org.thoughtcrime.securesms.backup.v2.MessageBackupTier
-import org.thoughtcrime.securesms.components.settings.app.subscription.InAppPaymentsRepository.getSubscriber
-import org.thoughtcrime.securesms.components.settings.app.subscription.InAppPaymentsRepository.isUserManuallyCancelled
-import org.thoughtcrime.securesms.components.settings.app.subscription.InAppPaymentsRepository.setSubscriber
 import org.thoughtcrime.securesms.database.NotificationProfileTables
 import org.thoughtcrime.securesms.database.SignalDatabase
-import org.thoughtcrime.securesms.database.model.InAppPaymentSubscriberRecord
 import org.thoughtcrime.securesms.database.model.RecipientRecord
 import org.thoughtcrime.securesms.dependencies.AppDependencies
 import org.thoughtcrime.securesms.jobs.RetrieveProfileAvatarJob
@@ -157,8 +153,8 @@ object StorageSyncHelper {
       primarySendsSms = false
       universalExpireTimer = SignalStore.settings.universalExpireTimer
       preferredReactionEmoji = SignalStore.emoji.reactions
-      displayBadgesOnProfile = SignalStore.inAppPayments.getDisplayBadgesOnProfile()
-      subscriptionManuallyCancelled = isUserManuallyCancelled(InAppPaymentSubscriberRecord.Type.DONATION)
+      displayBadgesOnProfile = false
+      subscriptionManuallyCancelled = false
       keepMutedChatsArchived = SignalStore.settings.shouldKeepMutedChatsArchived()
       hasSetMyStoriesPrivacy = SignalStore.story.userHasBeenNotifiedAboutStories
       hasViewedOnboardingStory = SignalStore.story.userHasViewedOnboardingStory
@@ -186,13 +182,7 @@ object StorageSyncHelper {
 
       notificationProfileManualOverride = getNotificationProfileManualOverride()
 
-      getSubscriber(InAppPaymentSubscriberRecord.Type.DONATION)?.let {
-        safeSetSubscriber(it.subscriberId.bytes.toByteString(), it.currency?.currencyCode ?: "")
-      }
-
-      getSubscriber(InAppPaymentSubscriberRecord.Type.BACKUP)?.let {
-        safeSetBackupsSubscriber(it.subscriberId.bytes.toByteString(), it.iapSubscriptionId)
-      }
+      // Donor / backup subscriber storage sync removed in server-private fork.
 
       safeSetPayments(SignalStore.payments.mobileCoinPaymentsEnabled(), Optional.ofNullable(SignalStore.payments.paymentsEntropy).map { obj: Entropy -> obj.bytes }.orElse(null))
       automaticKeyVerificationDisabled = !SignalStore.settings.automaticVerificationEnabled
@@ -252,7 +242,6 @@ object StorageSyncHelper {
     SignalStore.payments.setEnabledAndEntropy(update.new.proto.payments?.enabled == true, Entropy.fromBytes(update.new.proto.payments?.entropy?.toByteArray()))
     SignalStore.settings.universalExpireTimer = update.new.proto.universalExpireTimer
     SignalStore.emoji.reactions = update.new.proto.preferredReactionEmoji
-    SignalStore.inAppPayments.setDisplayBadgesOnProfile(update.new.proto.displayBadgesOnProfile)
     SignalStore.settings.setKeepMutedChatsArchived(update.new.proto.keepMutedChatsArchived)
     SignalStore.story.userHasBeenNotifiedAboutStories = update.new.proto.hasSetMyStoriesPrivacy
     SignalStore.story.userHasViewedOnboardingStory = update.new.proto.hasViewedOnboardingStory
@@ -275,19 +264,7 @@ object StorageSyncHelper {
       SignalStore.story.viewedReceiptsEnabled = update.new.proto.storyViewReceiptsEnabled == OptionalBool.ENABLED
     }
 
-    val remoteSubscriber = StorageSyncModels.remoteToLocalDonorSubscriber(update.new.proto.subscriberId, update.new.proto.subscriberCurrencyCode)
-    if (remoteSubscriber != null) {
-      setSubscriber(remoteSubscriber)
-    }
-
-    val remoteBackupsSubscriber = StorageSyncModels.remoteToLocalBackupSubscriber(update.new.proto.backupSubscriberData)
-    if (remoteBackupsSubscriber != null) {
-      setSubscriber(remoteBackupsSubscriber)
-    }
-
-    if (update.new.proto.subscriptionManuallyCancelled && !update.old.proto.subscriptionManuallyCancelled) {
-      SignalStore.inAppPayments.updateLocalStateForManualCancellation(InAppPaymentSubscriberRecord.Type.DONATION)
-    }
+    // Donor / backup subscriber sync + manual-cancellation sync removed in server-private fork.
 
     if (fetchProfile && update.new.proto.avatarUrlPath.isNotBlank()) {
       AppDependencies.jobManager.add(RetrieveProfileAvatarJob(self, update.new.proto.avatarUrlPath))

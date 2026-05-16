@@ -24,13 +24,7 @@ class InternalSettingsViewModel(private val repository: InternalSettingsReposito
       store.update { it.copy(emojiVersion = version) }
     }
 
-    val pendingOneTimeDonation: Observable<Boolean> = SignalStore.inAppPayments.observablePendingOneTimeDonation
-      .distinctUntilChanged()
-      .map { it.isPresent }
-
-    store.update(pendingOneTimeDonation) { pending, state ->
-      state.copy(hasPendingOneTimeDonation = pending)
-    }
+    // pendingOneTimeDonation observer removed in server-private fork.
   }
 
   val state: LiveData<InternalSettingsState> = store.stateLiveData
@@ -159,18 +153,6 @@ class InternalSettingsViewModel(private val repository: InternalSettingsReposito
     repository.addSampleReleaseNote(callToAction)
   }
 
-  fun addRemoteDonateMegaphone() {
-    repository.addRemoteMegaphone(RemoteMegaphoneRecord.ActionId.DONATE)
-  }
-
-  fun addRemoteDonateFriendMegaphone() {
-    repository.addRemoteMegaphone(RemoteMegaphoneRecord.ActionId.DONATE_FOR_FRIEND)
-  }
-
-  fun enqueueSubscriptionRedemption() {
-    repository.enqueueSubscriptionRedemption()
-  }
-
   fun refresh() {
     store.update { getState().copy(emojiVersion = it.emojiVersion) }
   }
@@ -200,7 +182,6 @@ class InternalSettingsViewModel(private val repository: InternalSettingsReposito
     canClearOnboardingState = SignalStore.story.hasDownloadedOnboardingStory && Stories.isFeatureEnabled(),
     pnpInitialized = SignalStore.misc.hasPniInitializedDevices,
     useConversationItemV2ForMedia = SignalStore.internal.useConversationItemV2Media,
-    hasPendingOneTimeDonation = SignalStore.inAppPayments.getPendingOneTimeDonation() != null,
     hevcEncoding = SignalStore.internal.hevcEncoding,
     forceSplitPane = SignalStore.internal.forceSplitPane,
     useNewMediaActivity = SignalStore.internal.useNewMediaActivity,

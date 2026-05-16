@@ -71,7 +71,7 @@ import org.thoughtcrime.securesms.R
 import org.thoughtcrime.securesms.avatar.AvatarImage
 import org.thoughtcrime.securesms.badges.models.Badge
 import org.thoughtcrime.securesms.components.emoji.EmojiTextView
-import org.thoughtcrime.securesms.components.settings.app.subscription.BadgeImageLarge
+import org.thoughtcrime.securesms.badges.BadgeImageLarge
 import org.thoughtcrime.securesms.conversation.colors.AvatarGradientColors
 import org.thoughtcrime.securesms.conversation.v2.data.AvatarDownloadStateCache
 import org.thoughtcrime.securesms.fonts.SignalSymbols

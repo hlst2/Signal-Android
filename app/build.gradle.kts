@@ -260,8 +260,6 @@ android {
     buildConfigField("String", "BUILD_ENVIRONMENT_TYPE", "\"unset\"")
     buildConfigField("String", "BUILD_VARIANT_TYPE", "\"unset\"")
     buildConfigField("String", "BADGE_STATIC_ROOT", "\"https://updates2.signal.org/static/badges/\"")
-    buildConfigField("String", "STRIPE_BASE_URL", "\"https://api.stripe.com/v1\"")
-    buildConfigField("String", "STRIPE_PUBLISHABLE_KEY", "\"pk_live_6cmGZopuTsV8novGgJJW9JpC00vLIgtQ1D\"")
     buildConfigField("boolean", "TRACING_ENABLED", "false")
     buildConfigField("boolean", "LINK_DEVICE_UX_ENABLED", "false")
     buildConfigField("boolean", "USE_STRING_ID", "false")
@@ -336,7 +334,6 @@ android {
       applicationIdSuffix = ".instrumentation"
 
       buildConfigField("String", "BUILD_VARIANT_TYPE", "\"Instrumentation\"")
-      buildConfigField("String", "STRIPE_BASE_URL", "\"http://127.0.0.1:8080/stripe\"")
     }
 
     create("spinner") {
@@ -605,7 +602,6 @@ dependencies {
   implementation(project(":lib:video"))
   implementation(project(":lib:device-transfer"))
   implementation(project(":lib:image-editor"))
-  implementation(project(":lib:donations"))
   implementation(project(":lib:debuglogs-viewer"))
   implementation(project(":lib:contacts"))
   implementation(project(":lib:qr"))

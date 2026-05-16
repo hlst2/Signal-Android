@@ -74,8 +74,6 @@ import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
-import io.reactivex.rxjava3.subjects.PublishSubject
-import io.reactivex.rxjava3.subjects.Subject
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.flow.distinctUntilChangedBy
@@ -93,7 +91,6 @@ import org.signal.core.util.concurrent.LifecycleDisposable
 import org.signal.core.util.getParcelableCompat
 import org.signal.core.util.getSerializableCompat
 import org.signal.core.util.logging.Log
-import org.signal.donations.StripeApi
 import org.signal.mediasend.MediaSendActivityContract
 import org.thoughtcrime.securesms.backup.v2.ArchiveRestoreProgress
 import org.thoughtcrime.securesms.backup.v2.ArchiveRestoreProgressState
@@ -110,10 +107,7 @@ import org.thoughtcrime.securesms.components.PromptBatterySaverDialogFragment
 import org.thoughtcrime.securesms.components.compose.ConnectivityWarningBottomSheet
 import org.thoughtcrime.securesms.components.compose.DeviceSpecificNotificationBottomSheet
 import org.thoughtcrime.securesms.components.settings.app.AppSettingsActivity
-import org.thoughtcrime.securesms.components.settings.app.AppSettingsActivity.Companion.manageSubscriptions
 import org.thoughtcrime.securesms.components.settings.app.notifications.manual.NotificationProfileSelectionFragment
-import org.thoughtcrime.securesms.components.settings.app.subscription.GooglePayComponent
-import org.thoughtcrime.securesms.components.settings.app.subscription.GooglePayRepository
 import org.thoughtcrime.securesms.components.snackbars.LocalSnackbarStateConsumerRegistry
 import org.thoughtcrime.securesms.components.snackbars.SnackbarHostKey
 import org.thoughtcrime.securesms.components.snackbars.SnackbarState
@@ -205,8 +199,7 @@ class MainActivity :
   Material3OnScrollHelperBinder,
   ConversationListFragment.Callback,
   MainNavigationRouter,
-  CallLogFragment.Callback,
-  GooglePayComponent {
+  CallLogFragment.Callback {
 
   companion object {
     private val TAG = Log.tag(MainActivity::class)
@@ -268,9 +261,6 @@ class MainActivity :
   private val mainBottomChromeCallback = BottomChromeCallback()
   private val megaphoneActionController = MainMegaphoneActionController()
   private val mainNavigationCallback = MainNavigationCallback()
-
-  override val googlePayRepository: GooglePayRepository by lazy { GooglePayRepository(this) }
-  override val googlePayResultPublisher: Subject<GooglePayComponent.GooglePayResult> = PublishSubject.create()
 
   private lateinit var mediaSendLauncher: ActivityResultLauncher<MediaSendActivityContract.Args>
 
@@ -1014,7 +1004,6 @@ class MainActivity :
     handleProxyInIntent(intent)
     handleSignalMeIntent(intent)
     handleCallLinkInIntent(intent)
-    handleDonateReturnIntent(intent)
     handleQuickRestoreIntent(intent)
   }
 
@@ -1062,14 +1051,6 @@ class MainActivity :
     intent.data?.let { data ->
       CommunicationActions.handlePotentialCallLinkUrl(this, data.toString()) {
         show(findViewById(android.R.id.content))
-      }
-    }
-  }
-
-  private fun handleDonateReturnIntent(intent: Intent) {
-    intent.data?.let { data ->
-      if (data.toString().startsWith(StripeApi.RETURN_URL_IDEAL)) {
-        startActivity(manageSubscriptions(this))
       }
     }
   }
