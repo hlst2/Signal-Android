@@ -31,9 +31,8 @@ object SignalE164Util {
    *
    * server-private fork: on a self-hosted deployment the account's stored "E164" is
    * actually a synthetic identifier derived from the user's display name, not a real
-   * phone number. libphonenumber throws NumberParseException on those, which used to
-   * crash the App Settings screen. Fall back to the raw input so the UI shows _something_
-   * (the displayName-derived synthetic ID) instead of taking down the activity.
+   * phone number. libphonenumber throws NumberParseException on those. Fall back to
+   * the raw input so the UI shows _something_ instead of taking down the activity.
    */
   @JvmStatic
   fun prettyPrint(input: String): String {
@@ -48,39 +47,43 @@ object SignalE164Util {
    * Returns the country code for the local number, if present. Otherwise, it returns 0.
    */
   fun getLocalCountryCode(): Int {
-    return getFormatter().localNumber?.countryCode ?: 0
+    return try {
+      getFormatter().localNumber?.countryCode ?: 0
+    } catch (e: Exception) {
+      0
+    }
   }
 
   /**
    * Formats the number as an E164, or null if the number cannot be reasonably interpreted as a phone number.
-   * This does not check if the number is *valid* for a given region. Instead, it's very lenient and just
-   * does it's best to interpret the input string as a number that could be put into the E164 format.
    *
-   * Note that shortcodes will not have leading '+' signs.
-   *
-   * In other words, if this method returns null, you likely do not have anything that could be considered
-   * a phone number.
+   * server-private fork: see getFormatter() — synthetic identifiers cause libphonenumber to throw, and the
+   * exception used to escape into registerAccountLocally → trustedPush → RecipientTable.getAndPossiblyMerge,
+   * aborting the registration's local bookkeeping after a successful server-side register and leaving the
+   * checkpoint stuck at SERVICE_REGISTRATION_COMPLETED. Catch and return null (the existing "not a phone
+   * number" semantics) so callers handle it gracefully.
    */
   @JvmStatic
   fun formatAsE164(input: String): String? {
-    return getFormatter().formatAsE164(input)
+    return try {
+      getFormatter().formatAsE164(input)
+    } catch (e: Exception) {
+      null
+    }
   }
 
   /**
-   * Formats the number as an E164, or null if the number cannot be reasonably interpreted as a phone number, or if
-   * the number is a shortcode (<= 6 digits, excluding leading '+' and zeroes).
-   *
-   * This does not check if the number is *valid* for a given region. Instead, it's very lenient and just
-   * does it's best to interpret the input string as a number that could be put into the E164 format.
-   *
-   * Note that shortcodes will return null.
-   *
-   * In other words, if this method returns null, you likely do not have anything that could be considered
-   * a phone number.
+   * Formats the number as an E164, or null if the number cannot be reasonably interpreted as a phone number,
+   * or if the number is a shortcode (<= 6 digits, excluding leading '+' and zeroes).
    */
   @JvmStatic
   fun formatNonShortCodeAsE164(input: String): String? {
-    return getFormatter().formatAsE164(input)?.takeIf { !getFormatter().isValidShortNumber(input) }
+    return try {
+      val formatter = getFormatter()
+      formatter.formatAsE164(input)?.takeIf { !formatter.isValidShortNumber(input) }
+    } catch (e: Exception) {
+      null
+    }
   }
 
   /**
@@ -99,6 +102,15 @@ object SignalE164Util {
     return formatNonShortCodeAsE164(input) != null
   }
 
+  /**
+   * server-private fork: the account's stored "E164" on private deployments is a synthetic
+   * identifier derived from the user's display name. [E164Util.createFormatterForE164] calls
+   * [com.google.i18n.phonenumbers.PhoneNumberUtil.parse] under the hood and throws
+   * NumberParseException on anything that doesn't look like a phone number. Catch and fall
+   * back to the [defaultFormatter] (which uses null localNumber + the SIM country) so the
+   * exception doesn't escape into registration's onSuccessfulRegistration path and abort
+   * the local bookkeeping with the checkpoint still at SERVICE_REGISTRATION_COMPLETED.
+   */
   private fun getFormatter(): E164Util.Formatter {
     val localNumber = SignalStore.account.e164 ?: return defaultFormatter
     val formatter = cachedFormatters[localNumber]
@@ -112,7 +124,11 @@ object SignalE164Util {
         return formatter
       }
 
-      val newFormatter = E164Util.createFormatterForE164(localNumber)
+      val newFormatter = try {
+        E164Util.createFormatterForE164(localNumber)
+      } catch (e: Exception) {
+        defaultFormatter
+      }
       cachedFormatters[localNumber] = newFormatter
       return newFormatter
     }

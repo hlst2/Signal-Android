@@ -42,8 +42,12 @@ class ServerSetupFragment : LoggingFragment(R.layout.fragment_registration_serve
 
     // If we've already registered and the user reopens the registration flow somehow,
     // skip straight to the welcome screen and let the activity-level observer carry them
-    // through to MainActivity.
-    if (SignalStore.account.isRegistered) {
+    // through to MainActivity. Exception: when re-registering (e.g. after a 401 deregisters
+    // the account), we must show the setup screen again so the user re-confirms the URL +
+    // name and we re-hit /v1/registration/private to refresh credentials. Otherwise the
+    // checkpoint never advances past INITIALIZATION on the new RegistrationActivity instance
+    // and the Welcome→MainActivity gate never opens.
+    if (SignalStore.account.isRegistered && !sharedViewModel.isReregister) {
       findNavController().safeNavigate(ServerSetupFragmentDirections.goToWelcome())
       return
     }
