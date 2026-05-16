@@ -60,7 +60,6 @@ import org.thoughtcrime.securesms.jobs.StorageForcePushJob
 import org.thoughtcrime.securesms.keyvalue.SignalStore
 import org.thoughtcrime.securesms.megaphone.MegaphoneRepository
 import org.thoughtcrime.securesms.megaphone.Megaphones
-import org.thoughtcrime.securesms.payments.DataExportUtil
 import org.thoughtcrime.securesms.recipients.Recipient
 import org.thoughtcrime.securesms.recipients.RecipientId
 import org.thoughtcrime.securesms.registration.data.QuickstartCredentialExporter
@@ -423,13 +422,7 @@ class InternalSettingsFragment : DSLSettingsFragment(R.string.preferences__inter
 
       sectionHeaderPref(DSLSettingsText.from("Payments"))
 
-      clickPref(
-        title = DSLSettingsText.from("Copy payments data"),
-        summary = DSLSettingsText.from("Copy all payment records to clipboard."),
-        onClick = {
-          copyPaymentsDataToClipboard()
-        }
-      )
+      // "Copy payments data" internal pref removed in server-private fork (MobileCoin wallet gone).
 
       dividerPref()
 
@@ -947,41 +940,7 @@ class InternalSettingsFragment : DSLSettingsFragment(R.string.preferences__inter
       .show()
   }
 
-  private fun copyPaymentsDataToClipboard() {
-    MaterialAlertDialogBuilder(requireContext())
-      .setMessage(
-        """
-    Local payments history will be copied to the clipboard.
-    It may therefore compromise privacy.
-    However, no private keys will be copied.
-        """.trimIndent()
-      )
-      .setPositiveButton(
-        "Copy"
-      ) { _: DialogInterface?, _: Int ->
-        val context: Context = AppDependencies.application
-        val clipboard = context.getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
-
-        SimpleTask.run<Any?>(
-          SignalExecutors.UNBOUNDED,
-          {
-            val tsv = DataExportUtil.createTsv()
-            val clip = ClipData.newPlainText(context.getString(R.string.app_name), tsv)
-            clipboard.setPrimaryClip(clip)
-            null
-          },
-          {
-            Toast.makeText(
-              context,
-              "Payments have been copied",
-              Toast.LENGTH_SHORT
-            ).show()
-          }
-        )
-      }
-      .setNegativeButton(android.R.string.cancel, null)
-      .show()
-  }
+  // copyPaymentsDataToClipboard removed in server-private fork.
 
   private fun refreshAttributes() {
     AppDependencies.jobManager

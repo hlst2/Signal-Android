@@ -308,7 +308,6 @@ import org.thoughtcrime.securesms.mms.StickerSlide
 import org.thoughtcrime.securesms.mms.VideoSlide
 import org.thoughtcrime.securesms.nicknames.NicknameActivity
 import org.thoughtcrime.securesms.notifications.v2.ConversationId
-import org.thoughtcrime.securesms.payments.preferences.PaymentsActivity
 import org.thoughtcrime.securesms.polls.Poll
 import org.thoughtcrime.securesms.polls.PollOption
 import org.thoughtcrime.securesms.polls.PollRecord
@@ -3045,15 +3044,8 @@ class ConversationFragment :
   }
 
   private fun handleViewPaymentDetails(conversationMessage: ConversationMessage) {
-    val record: MmsMessageRecord = conversationMessage.messageRecord as? MmsMessageRecord ?: return
-    val payment = record.payment
-    if (payment == null || record.isPaymentTombstone) {
-      showPaymentTombstoneLearnMoreDialog()
-      return
-    }
-    if (record.isPaymentNotification) {
-      startActivity(PaymentsActivity.navigateToPaymentDetails(requireContext(), payment.uuid))
-    }
+    // server-private fork: MobileCoin wallet UI removed; always show the tombstone dialog.
+    showPaymentTombstoneLearnMoreDialog()
   }
 
   private fun showPaymentTombstoneLearnMoreDialog() {
@@ -3820,12 +3812,11 @@ class ConversationFragment :
     }
 
     override fun onActivatePaymentsClicked() {
-      startActivity(Intent(requireContext(), PaymentsActivity::class.java))
+      // server-private fork: MobileCoin wallet activation removed.
     }
 
     override fun onSendPaymentClicked(recipientId: RecipientId) {
-      val recipient = viewModel.recipientSnapshot ?: return
-      AttachmentManager.selectPayment(this@ConversationFragment, recipient)
+      // server-private fork: send-payment flow removed.
     }
 
     override fun onScheduledIndicatorClicked(view: View, conversationMessage: ConversationMessage) = Unit

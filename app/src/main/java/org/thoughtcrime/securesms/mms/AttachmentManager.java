@@ -60,12 +60,7 @@ import org.thoughtcrime.securesms.mediapreview.MediaIntentFactory;
 import org.thoughtcrime.securesms.mediapreview.MediaPreviewCache;
 import org.thoughtcrime.securesms.mediapreview.MediaPreviewV2Fragment;
 import org.thoughtcrime.securesms.mediasend.v2.MediaSelectionActivity;
-import org.thoughtcrime.securesms.payments.CanNotSendPaymentDialog;
 import org.thoughtcrime.securesms.payments.PaymentsAddressException;
-import org.thoughtcrime.securesms.payments.create.CreatePaymentFragmentArgs;
-import org.thoughtcrime.securesms.payments.preferences.PaymentsActivity;
-import org.thoughtcrime.securesms.payments.preferences.RecipientHasNotEnabledPaymentsDialog;
-import org.thoughtcrime.securesms.payments.preferences.model.PayeeParcelable;
 import org.signal.core.util.permissions.PermissionCompat;
 import org.signal.core.ui.permissions.Permissions;
 import org.thoughtcrime.securesms.providers.BlobProvider;
@@ -303,32 +298,7 @@ public class AttachmentManager {
   }
 
   public static void selectPayment(@NonNull Fragment fragment, @NonNull Recipient recipient) {
-    if (!ExpiringProfileCredentialUtil.isValid(recipient.getExpiringProfileKeyCredential())) {
-      CanNotSendPaymentDialog.show(fragment.requireContext());
-      return;
-    }
-
-    SimpleTask.run(fragment.getViewLifecycleOwner().getLifecycle(),
-                   () -> {
-                     try {
-                       return ProfileUtil.getAddressForRecipient(recipient);
-                     } catch (IOException | PaymentsAddressException e) {
-                       Log.w(TAG, "Could not get address for recipient: ", e);
-                       return null;
-                     }
-                   },
-                   (address) -> {
-                     if (address != null) {
-                       Intent intent = new Intent(fragment.requireContext(), PaymentsActivity.class);
-                       intent.putExtra(PaymentsActivity.EXTRA_PAYMENTS_STARTING_ACTION, R.id.action_directly_to_createPayment);
-                       intent.putExtra(PaymentsActivity.EXTRA_STARTING_ARGUMENTS, new CreatePaymentFragmentArgs.Builder(new PayeeParcelable(recipient.getId())).setFinishOnConfirm(true).build().toBundle());
-                       fragment.startActivity(intent);
-                     } else if (RemoteConfig.paymentsRequestActivateFlow()) {
-                       showRequestToActivatePayments(fragment.requireContext(), recipient);
-                     } else {
-                       RecipientHasNotEnabledPaymentsDialog.show(fragment.requireContext());
-                     }
-                   });
+    // server-private fork: MobileCoin wallet removed. Send-payment flow is a no-op.
   }
 
   public static void showRequestToActivatePayments(@NonNull Context context, @NonNull Recipient recipient) {

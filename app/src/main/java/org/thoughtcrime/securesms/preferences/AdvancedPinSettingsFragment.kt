@@ -37,8 +37,6 @@ import org.signal.core.ui.compose.showSnackbar
 import org.thoughtcrime.securesms.R
 import org.thoughtcrime.securesms.components.settings.app.backups.remote.BackupKeyDisplayFragment
 import org.thoughtcrime.securesms.lock.v2.CreateSvrPinActivity
-import org.thoughtcrime.securesms.payments.backup.PaymentsRecoveryStartFragmentArgs.Builder
-import org.thoughtcrime.securesms.payments.preferences.PaymentsActivity
 import org.thoughtcrime.securesms.pin.PinOptOutDialog
 import org.thoughtcrime.securesms.util.navigation.safeNavigate
 
@@ -67,11 +65,7 @@ class AdvancedPinSettingsFragment : ComposeFragment() {
               startActivityForResult(CreateSvrPinActivity.getIntentForPinCreate(requireContext()), CreateSvrPinActivity.REQUEST_NEW_PIN)
             }
             AdvancedPinSettingsViewModel.Event.LAUNCH_RECOVERY_PHRASE_HANDLING -> {
-              val intent = Intent(requireContext(), PaymentsActivity::class.java)
-              intent.putExtra(PaymentsActivity.EXTRA_PAYMENTS_STARTING_ACTION, R.id.action_directly_to_paymentsBackup)
-              intent.putExtra(PaymentsActivity.EXTRA_STARTING_ARGUMENTS, Builder().setFinishOnConfirm(true).build().toBundle())
-
-              startActivity(intent)
+              // server-private fork: MobileCoin wallet recovery removed; this event should never fire.
             }
             AdvancedPinSettingsViewModel.Event.SHOW_PIN_DISABLED_SNACKBAR -> {
               displayOptOutSnackbar()
