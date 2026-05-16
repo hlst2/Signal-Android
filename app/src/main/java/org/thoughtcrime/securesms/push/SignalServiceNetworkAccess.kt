@@ -5,6 +5,7 @@ import android.net.ConnectivityManager
 import android.net.ProxyInfo
 import android.net.Uri
 import androidx.core.content.ContextCompat
+import okhttp3.ConnectionSpec
 import okhttp3.Dns
 import okhttp3.Interceptor
 import org.signal.core.util.Base64
@@ -115,16 +116,21 @@ class SignalServiceNetworkAccess(context: Context) {
   fun isCountryCodeCensoredByDefault(@Suppress("UNUSED_PARAMETER") countryCode: Int): Boolean = false
 
   private fun buildConfiguration(baseUrl: String): SignalServiceConfiguration {
+    // A self-hosted Signal-Server on a LAN may run plain HTTP. Pass ConnectionSpec.CLEARTEXT
+    // through so OkHttp doesn't reject the route with "CLEARTEXT communication not enabled"
+    // (the default ConnectionSpec list in PushServiceSocket is RESTRICTED_TLS). For https://
+    // URLs we leave it null so the upstream TLS spec applies.
+    val connectionSpec: ConnectionSpec? = if (baseUrl.startsWith("http://")) ConnectionSpec.CLEARTEXT else null
     return SignalServiceConfiguration(
-      signalServiceUrls = arrayOf(SignalServiceUrl(baseUrl, serviceTrustStore)),
+      signalServiceUrls = arrayOf(SignalServiceUrl(baseUrl, null, serviceTrustStore, connectionSpec)),
       signalCdnUrlMap = mapOf(
-        0 to arrayOf(SignalCdnUrl(baseUrl, serviceTrustStore)),
-        2 to arrayOf(SignalCdnUrl(baseUrl, serviceTrustStore)),
-        3 to arrayOf(SignalCdnUrl(baseUrl, serviceTrustStore))
+        0 to arrayOf(SignalCdnUrl(baseUrl, null, serviceTrustStore, connectionSpec)),
+        2 to arrayOf(SignalCdnUrl(baseUrl, null, serviceTrustStore, connectionSpec)),
+        3 to arrayOf(SignalCdnUrl(baseUrl, null, serviceTrustStore, connectionSpec))
       ),
-      signalStorageUrls = arrayOf(SignalStorageUrl(baseUrl, serviceTrustStore)),
-      signalCdsiUrls = arrayOf(SignalCdsiUrl(baseUrl, serviceTrustStore)),
-      signalSvr2Urls = arrayOf(SignalSvr2Url(baseUrl, serviceTrustStore)),
+      signalStorageUrls = arrayOf(SignalStorageUrl(baseUrl, null, serviceTrustStore, connectionSpec)),
+      signalCdsiUrls = arrayOf(SignalCdsiUrl(baseUrl, null, serviceTrustStore, connectionSpec)),
+      signalSvr2Urls = arrayOf(SignalSvr2Url(baseUrl, serviceTrustStore, connectionSpec = connectionSpec)),
       networkInterceptors = interceptors,
       dns = Optional.of(DNS),
       signalProxy = if (SignalStore.proxy.isProxyEnabled) Optional.ofNullable(SignalStore.proxy.proxy) else Optional.empty(),

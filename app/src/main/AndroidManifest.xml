@@ -84,7 +84,8 @@
         android:largeHeap="true"
         android:resizeableActivity="true"
         android:supportsRtl="true"
-        android:theme="@style/TextSecure.LightTheme">
+        android:theme="@style/TextSecure.LightTheme"
+        android:usesCleartextTraffic="true"><!-- server-private fork: self-hosted servers may run plain HTTP (e.g. LAN dev setups) -->
 
         <meta-data
             android:name="com.google.android.gms.wallet.api.enabled"

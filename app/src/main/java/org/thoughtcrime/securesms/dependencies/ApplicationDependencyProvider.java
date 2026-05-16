@@ -116,8 +116,8 @@ import org.whispersystems.signalservice.api.websocket.WebSocketFactory;
 import org.whispersystems.signalservice.api.websocket.WebSocketUnavailableException;
 import org.whispersystems.signalservice.internal.configuration.SignalServiceConfiguration;
 import org.whispersystems.signalservice.internal.push.PushServiceSocket;
-import org.whispersystems.signalservice.internal.websocket.LibSignalChatConnection;
 import org.whispersystems.signalservice.internal.websocket.LibSignalNetworkExtensions;
+import org.whispersystems.signalservice.internal.websocket.OkHttpWebSocketConnection;
 
 import java.util.Optional;
 import java.util.concurrent.TimeUnit;
@@ -337,12 +337,15 @@ public class ApplicationDependencyProvider implements AppDependencies.Provider {
         throw new WebSocketUnavailableException("Invalid auth credentials");
       }
 
-      Network network = libSignalNetworkSupplier.get();
-      return new LibSignalChatConnection("libsignal-auth",
-                                         network,
-                                         credentialsProvider,
-                                         Stories.isFeatureEnabled(),
-                                         healthMonitor);
+      // server-private fork: use the OkHttp-backed websocket so the connection follows
+      // SignalServiceConfiguration (i.e. the custom server URL) instead of libsignal-net's
+      // hardcoded production chat endpoints.
+      return new OkHttpWebSocketConnection("auth",
+                                           signalServiceConfigurationSupplier.get(),
+                                           Optional.of(credentialsProvider),
+                                           StandardUserAgentInterceptor.USER_AGENT,
+                                           healthMonitor,
+                                           Stories.isFeatureEnabled());
     };
 
     SignalWebSocket.AuthenticatedWebSocket webSocket = new SignalWebSocket.AuthenticatedWebSocket(authFactory,
@@ -364,12 +367,14 @@ public class ApplicationDependencyProvider implements AppDependencies.Provider {
     SignalWebSocketHealthMonitor healthMonitor = new SignalWebSocketHealthMonitor(sleepTimer, false);
 
     WebSocketFactory unauthFactory = () -> {
-      Network network = libSignalNetworkSupplier.get();
-      return new LibSignalChatConnection("libsignal-unauth",
-                                         network,
-                                         null,
-                                         Stories.isFeatureEnabled(),
-                                         healthMonitor);
+      // server-private fork: see comment in provideAuthWebSocket — OkHttp websocket so
+      // we hit the custom server, not libsignal-net's hardcoded chat endpoints.
+      return new OkHttpWebSocketConnection("unauth",
+                                           signalServiceConfigurationSupplier.get(),
+                                           Optional.empty(),
+                                           StandardUserAgentInterceptor.USER_AGENT,
+                                           healthMonitor,
+                                           Stories.isFeatureEnabled());
     };
 
     SignalWebSocket.UnauthenticatedWebSocket webSocket = new SignalWebSocket.UnauthenticatedWebSocket(unauthFactory,
