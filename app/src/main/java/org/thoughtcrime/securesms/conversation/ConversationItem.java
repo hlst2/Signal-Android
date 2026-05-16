@@ -245,7 +245,11 @@ public final class ConversationItem extends RelativeLayout implements BindableCo
   private                Stub<ViewOnceMessageView>               revealableStub;
   private                Stub<MaterialButton>                    joinCallLinkStub;
   private                Stub<Button>                            callToActionStub;
-  private                Stub<GiftMessageView>                   giftViewStub;
+  // giftViewStub used to wrap a GiftMessageView; that view class was deleted in
+  // server-private fork. The Stub is kept (typed as View) so the visibility-toggle
+  // calls scattered throughout this file still compile; gift_view_stub layout is now
+  // an empty placeholder.
+  private                Stub<View>                              giftViewStub;
   private                Stub<PaymentMessageView>                paymentViewStub;
   private                Stub<ComposeView>                       pollView;
   private @Nullable      EventListener                           eventListener;
@@ -274,7 +278,7 @@ public final class ConversationItem extends RelativeLayout implements BindableCo
   private final Rect                            thumbnailMaskingRect            = new Rect();
   private final TouchDelegateChangedListener    touchDelegateChangedListener    = new TouchDelegateChangedListener();
   private final DoubleTapEditTouchListener      doubleTapEditTouchListener      = new DoubleTapEditTouchListener();
-  private final GiftMessageViewCallback         giftMessageViewCallback         = new GiftMessageViewCallback();
+  // GiftMessageViewCallback removed in server-private fork (no gift badges).
   private final PaymentTombstoneClickListener   paymentTombstoneClickListener   = new PaymentTombstoneClickListener();
 
   private final Context context;
@@ -1520,9 +1524,8 @@ public final class ConversationItem extends RelativeLayout implements BindableCo
       if (joinCallLinkStub.resolved()) joinCallLinkStub.get().setVisibility(View.GONE);
       paymentViewStub.setVisibility(View.GONE);
 
-      MmsMessageRecord mmsMessageRecord = (MmsMessageRecord) messageRecord;
-      giftViewStub.get().setGiftBadge(requestManager, Objects.requireNonNull(mmsMessageRecord.getGiftBadge()), messageRecord.isOutgoing(), giftMessageViewCallback, messageRecord.getFromRecipient(), messageRecord.getToRecipient());
-      giftViewStub.get().setVisibility(VISIBLE);
+      // server-private fork: GiftMessageView class is gone; just keep the placeholder hidden.
+      giftViewStub.get().setVisibility(View.GONE);
 
       footer.setVisibility(VISIBLE);
     } else if (messageRecord.isPaymentNotification()) {
@@ -2537,7 +2540,6 @@ public final class ConversationItem extends RelativeLayout implements BindableCo
 
   // Gift-badge OpenableGift interface methods removed in server-private fork (no gift badges).
 
-  @Override
   public @NonNull AnimationSign getAnimationSign() {
     return AnimationSign.get(ViewUtil.isLtr(this), messageRecord.isOutgoing());
   }
@@ -2912,13 +2914,7 @@ public final class ConversationItem extends RelativeLayout implements BindableCo
     }
   }
 
-  private class GiftMessageViewCallback implements GiftMessageView.Callback {
-
-    @Override
-    public void onViewGiftBadgeClicked() {
-      eventListener.onViewGiftBadgeClicked(messageRecord);
-    }
-  }
+  // GiftMessageViewCallback inner class removed in server-private fork (GiftMessageView class is gone).
 
   private class ClickListener implements View.OnClickListener {
     private final OnClickListener parent;

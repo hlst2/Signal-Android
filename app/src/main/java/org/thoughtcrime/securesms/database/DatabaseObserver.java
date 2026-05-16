@@ -70,7 +70,7 @@ public class DatabaseObserver {
   private final Map<RecipientId, Set<Observer>>    storyObservers;
   private final Set<Observer>                      callUpdateObservers;
   private final Map<CallLinkRoomId, Set<Observer>> callLinkObservers;
-  private final Set<InAppPaymentObserver>          inAppPaymentObservers;
+  // inAppPaymentObservers removed in server-private fork (no IAP).
   private final Set<Observer>                      chatFolderObservers;
   private final Set<Observer>                      starredMessageObservers;
 
@@ -94,7 +94,6 @@ public class DatabaseObserver {
     this.scheduledMessageObservers    = new HashMap<>();
     this.callUpdateObservers          = new HashSet<>();
     this.callLinkObservers            = new HashMap<>();
-    this.inAppPaymentObservers        = new HashSet<>();
     this.chatFolderObservers          = new HashSet<>();
     this.starredMessageObservers      = new HashSet<>();
   }
@@ -208,9 +207,7 @@ public class DatabaseObserver {
     });
   }
 
-  public void registerInAppPaymentObserver(@NonNull InAppPaymentObserver observer) {
-    executor.execute(() -> inAppPaymentObservers.add(observer));
-  }
+  // registerInAppPaymentObserver removed in server-private fork (no IAP).
 
   public void registerChatFolderObserver(@NonNull Observer observer) {
     executor.execute(() -> chatFolderObservers.add(observer));
@@ -249,11 +246,7 @@ public class DatabaseObserver {
     });
   }
 
-  public void unregisterObserver(@NonNull InAppPaymentObserver listener) {
-    executor.execute(() -> {
-      inAppPaymentObservers.remove(listener);
-    });
-  }
+  // unregisterObserver(InAppPaymentObserver) removed in server-private fork.
 
   public void notifyConversationListeners(Set<Long> threadIds) {
     for (long threadId : threadIds) {
@@ -397,11 +390,7 @@ public class DatabaseObserver {
     runPostSuccessfulTransaction(KEY_CALL_LINK_UPDATES, () -> notifyMapped(callLinkObservers, callLinkRoomId));
   }
 
-  public void notifyInAppPaymentsObservers(@NonNull InAppPaymentTable.InAppPayment inAppPayment) {
-    runPostSuccessfulTransaction(KEY_IN_APP_PAYMENTS, () -> {
-      inAppPaymentObservers.forEach(item -> item.onInAppPaymentChanged(inAppPayment));
-    });
-  }
+  // notifyInAppPaymentsObservers removed in server-private fork.
 
   public void notifyChatFolderObservers() {
     runPostSuccessfulTransaction(KEY_CHAT_FOLDER, () -> notifySet(chatFolderObservers));
@@ -477,7 +466,5 @@ public class DatabaseObserver {
     void onMessageChanged(@NonNull MessageId messageId);
   }
 
-  public interface InAppPaymentObserver {
-    void onInAppPaymentChanged(@NonNull InAppPaymentTable.InAppPayment inAppPayment);
-  }
+  // InAppPaymentObserver interface removed in server-private fork.
 }
