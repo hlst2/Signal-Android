@@ -24,7 +24,6 @@
   <!-- Removed by excludeNonTranslatables <string name="donate_faq_url" translatable="false">https://support.signal.org/hc/articles/360031949872#donate</string> -->
 
     <!-- First placeholder is productId, second placeholder is app package -->
-    <string name="backup_subscription_management_url">https://play.google.com/store/account/subscriptions?sku=%1$s&amp;package=%2$s</string>
 
     <string name="yes">네</string>
     <string name="no">아니요</string>
@@ -158,7 +157,6 @@
 
     <!-- Fcm notifications -->
     <!-- Notification we show when there may be messages for you, but we cannot connect to the server to check -->
-    <string name="FcmFetchManager__you_may_have_messages">새 메시지가 있을 수 있어요</string>
 
     <!-- BlockedUsersActivity -->
     <string name="BlockedUsersActivity__blocked_users">차단한 사용자</string>
@@ -172,45 +170,26 @@
 
     <!-- CreditCardFragment -->
     <!-- Title of fragment -->
-    <string name="CreditCardFragment__credit_or_debit_card">신용카드 또는 체크카드</string>
     <!-- Explanation of how to fill in the form and a note about pii, displayed above the credit card text fields -->
-    <string name="CreditCardFragment__enter_your_card_details">카드 세부 정보를 입력하세요. Signal은 개인정보를 수집하거나 저장하지 않습니다.</string>
     <!-- Displayed as a hint in the card number text field -->
-    <string name="CreditCardFragment__card_number">카드 번호</string>
     <!-- Displayed as a hint in the card expiry text field -->
-    <string name="CreditCardFragment__mm_yy">MM/YY</string>
     <!-- Displayed as a hint in the card cvv text field -->
-    <string name="CreditCardFragment__cvv">CVV</string>
     <!-- Error displayed under the card number text field when there is an invalid card number entered -->
-    <string name="CreditCardFragment__invalid_card_number">잘못된 카드 번호입니다.</string>
     <!-- Error displayed under the card expiry text field when the card is expired -->
-    <string name="CreditCardFragment__card_has_expired">만료된 카드입니다.</string>
     <!-- Error displayed under the card cvv text field when the cvv is too short -->
-    <string name="CreditCardFragment__code_is_too_short">코드가 너무 짧습니다.</string>
     <!-- Error displayed under the card cvv text field when the cvv is too long -->
-    <string name="CreditCardFragment__code_is_too_long">코드가 너무 깁니다.</string>
     <!-- Error displayed under the card cvv text field when the cvv is invalid -->
-    <string name="CreditCardFragment__invalid_code">잘못된 코드입니다.</string>
     <!-- Error displayed under the card expiry text field when the expiry month is invalid -->
-    <string name="CreditCardFragment__invalid_month">잘못된 월입니다.</string>
     <!-- Error displayed under the card expiry text field when the expiry is missing the year -->
-    <string name="CreditCardFragment__year_required">연도를 입력하세요.</string>
     <!-- Error displayed under the card expiry text field when the expiry year is invalid -->
-    <string name="CreditCardFragment__invalid_year">잘못된 연도입니다.</string>
     <!-- Button label to confirm credit card input and proceed with one-time payment -->
-    <string name="CreditCardFragment__donate_s">%1$s 후원하기</string>
     <!-- Button label to confirm credit card input and proceed with subscription payment -->
-    <string name="CreditCardFragment__donate_s_month">월 %1$s 후원하기</string>
     <!-- Button label to confirm credit card input and proceed with backups payment. Placeholder is formatted price. -->
-    <string name="CreditCardFragment__pay_s_month">월 %1$s 후원하기</string>
 
     <!-- OneTimeDonationPreference -->
     <!-- Preference title with placeholder for amount. -->
-    <string name="OneTimeDonationPreference__one_time_s">1회 %1$s</string>
     <!-- Preference subtitle when donation is pending -->
-    <string name="OneTimeDonationPreference__donation_pending">후원 대기 중</string>
     <!-- Preference subtitle when donation is processing -->
-    <string name="OneTimeDonationPreference__donation_processing">후원 처리 중</string>
 
     <!-- BlockUnblockDialog -->
     <string name="BlockUnblockDialog_block_and_leave_s">%1$s 그룹을 차단하고 나갈까요?</string>
@@ -4115,7 +4094,6 @@
     <string name="preferences__slow">느리게</string>
     <string name="preferences__help">문의</string>
     <string name="preferences__advanced">고급</string>
-    <string name="preferences__donate_to_signal">Signal 후원하기</string>
     <!-- Preference label for making one-time donations to Signal -->
     <string name="preferences__privacy">개인 정보</string>
     <!-- Preference label for stories -->
@@ -4303,9 +4281,6 @@
 
     <!-- Payments -->
     <string name="PaymentsActivityFragment__all_activity">모든 활동</string>
-    <string name="PaymentsAllActivityFragment__all">전체</string>
-    <string name="PaymentsAllActivityFragment__sent">보낸 시간</string>
-    <string name="PaymentsAllActivityFragment__received">받은 시간</string>
 
     <!-- Displayed on a welcome screen for payments -->
     <string name="PaymentsHomeFragment_introducing_payments">결제 소개</string>
@@ -4314,58 +4289,28 @@
     <string name="PaymentsHomeFragment__activating_payments">결제 활성화 중…</string>
     <string name="PaymentsHomeFragment__restore_payments_account">결제 계정 복원</string>
     <string name="PaymentsHomeFragment__no_recent_activity_yet">아직 최근 활동이 없습니다.</string>
-    <string name="PaymentsHomeFragment__recent_activity">최근 활동</string>
     <string name="PaymentsHomeFragment__see_all">모두 보기</string>
     <string name="PaymentsHomeFragment__add_funds">자금 추가</string>
     <string name="PaymentsHomeFragment__send">보내기</string>
-    <string name="PaymentsHomeFragment__sent_s">%1$s을(를) 보냈습니다.</string>
-    <string name="PaymentsHomeFragment__received_s">%1$s을(를) 받았습니다.</string>
     <string name="PaymentsHomeFragment__transfer_to_exchange">거래소로 이체</string>
     <string name="PaymentsHomeFragment__currency_conversion">통화 환산</string>
     <string name="PaymentsHomeFragment__deactivate_payments">결제 비활성화</string>
     <string name="PaymentsHomeFragment__recovery_phrase">복원 문구</string>
     <string name="PaymentsHomeFragment__help">도움말</string>
-    <string name="PaymentsHomeFragment__coin_cleanup_fee">코인 정리 수수료</string>
-    <string name="PaymentsHomeFragment__sent_payment">송금됨</string>
-    <string name="PaymentsHomeFragment__received_payment">결제 완료</string>
-    <string name="PaymentsHomeFragment__processing_payment">결제 처리 중</string>
-    <string name="PaymentsHomeFragment__unknown_amount">---</string>
-    <string name="PaymentsHomeFragment__currency_conversion_not_available">통화 환산을 사용할 수 없습니다</string>
-    <string name="PaymentsHomeFragment__cant_display_currency_conversion">통화 환산을 표시할 수 없습니다. 휴대전화의 연결을 확인하고 다시 시도하세요.</string>
-    <string name="PaymentsHomeFragment__payments_is_not_available_in_your_region">해당 지역에서는 결제가 불가능합니다.</string>
-    <string name="PaymentsHomeFragment__could_not_enable_payments">결제를 활성화할 수 없습니다. 나중에 다시 시도하세요.</string>
-    <string name="PaymentsHomeFragment__deactivate_payments_question">결제를 비활성화할까요?</string>
-    <string name="PaymentsHomeFragment__you_will_not_be_able_to_send">결제를 비활성화하면 Signal에서 MobileCoin을 보내거나 받을 수 없습니다.</string>
-    <string name="PaymentsHomeFragment__deactivate">비활성화</string>
-    <string name="PaymentsHomeFragment__continue">계속</string>
-    <string name="PaymentsHomeFragment__balance_is_not_currently_available">현재 잔액을 사용할 수 없습니다.</string>
-    <string name="PaymentsHomeFragment__payments_deactivated">결제가 비활성화되었습니다.</string>
-    <string name="PaymentsHomeFragment__payment_failed">결제 실패</string>
-    <string name="PaymentsHomeFragment__details">세부 정보</string>
   <!-- Removed by excludeNonTranslatables <string name="PaymentsHomeFragment__learn_more__activate_payments" translatable="false">https://support.signal.org/hc/articles/360057625692#payments_activate</string> -->
     <!-- Displayed as a description in a dialog when the user tries to activate payments -->
-    <string name="PaymentsHomeFragment__you_can_use_signal_to_send_and">Signal을 사용하여 MobileCoin을 주고받으세요. 모든 결제에는 MobileCoins와 MobileCoin Wallet의 사용 약관이 적용됩니다. 일부 문제가 발생할 수 있으며, 손실된 결제나 잔액은 복구할 수 없습니다. </string>
-    <string name="PaymentsHomeFragment__activate">활성화</string>
-    <string name="PaymentsHomeFragment__view_mobile_coin_terms">MobileCoin 용어 보기</string>
-    <string name="PaymentsHomeFragment__payments_not_available">Signal 결제 서비스를 더 이상 이용할 수 없습니다. 기존 자금을 거래소로 보내는 것은 가능하지만, 새로운 결제나 송금, 금액 충전은 제한됩니다.</string>
 
   <!-- Removed by excludeNonTranslatables <string name="PaymentsHomeFragment__mobile_coin_terms_url" translatable="false">https://www.mobilecoin.com/terms-of-use.html</string> -->
     <!-- Alert dialog title which shows up after a payment to turn on payment lock -->
-    <string name="PaymentsHomeFragment__turn_on">지금부터 결제 잠금을 켤까요?</string>
     <!-- Alert dialog description for why payment lock should be enabled before sending payments -->
-    <string name="PaymentsHomeFragment__add_an_additional_layer">자금 이체 시 Android 화면 잠금 또는 지문 인증을 통해 보안을 한층 강화하세요.</string>
     <!-- Alert dialog button to enable payment lock -->
     <string name="PaymentsHomeFragment__enable">켜기</string>
     <!-- Alert dialog button to not enable payment lock for now -->
     <string name="PaymentsHomeFragment__not_now">나중에</string>
     <!-- Alert dialog title which shows up to update app to send payments -->
-    <string name="PaymentsHomeFragment__update_required">업데이트가 필요합니다.</string>
     <!-- Alert dialog description that app update is required to send payments-->
-    <string name="PaymentsHomeFragment__an_update_is_required">입/출금 기능을 계속 이용하고 결제 잔액 최신 상태를 보려면 앱을 업데이트해야 합니다.</string>
     <!-- Alert dialog button to cancel -->
-    <string name="PaymentsHomeFragment__cancel">취소</string>
     <!-- Alert dialog button to update now -->
-    <string name="PaymentsHomeFragment__update_now">지금 업데이트하세요.</string>
 
 
     <!-- PaymentsSecuritySetupFragment -->
@@ -4380,46 +4325,26 @@
     <!-- Option to cancel -->
     <string name="PaymentsSecuritySetupFragment__not_now">나중에</string>
     <!-- Dialog title to confirm skipping the step -->
-    <string name="PaymentsSecuritySetupFragment__skip_this_step">이 단계를 건너뛸까요?</string>
     <!-- Dialog description to let users know why payment lock is required -->
-    <string name="PaymentsSecuritySetupFragment__skipping_this_step">이 단계를 건너뛰면 휴대전화에 직접 접근하는 사람이 자금을 이체하거나 복원 문구를 볼 수 있습니다.</string>
     <!-- Dialog option to cancel -->
-    <string name="PaymentsSecuritySetupFragment__cancel">취소</string>
     <!-- Dialog option to skip -->
-    <string name="PaymentsSecuritySetupFragment__skip">건너뛰기</string>
 
     <!-- PaymentsAddMoneyFragment -->
     <string name="PaymentsAddMoneyFragment__add_funds">자금 추가</string>
     <string name="PaymentsAddMoneyFragment__your_wallet_address">지갑 주소</string>
     <string name="PaymentsAddMoneyFragment__copy">복사</string>
-    <string name="PaymentsAddMoneyFragment__copied_to_clipboard">클립보드로 복사됨</string>
     <string name="PaymentsAddMoneyFragment__to_add_funds">자금을 추가하려면 MobileCoin을 지갑 주소로 보내세요. MobileCoin을 지원하는 거래소의 계정에서 거래를 시작한 다음 QR 코드를 스캔하거나 지갑 주소를 복사하세요.</string>
   <!-- Removed by excludeNonTranslatables <string name="PaymentsAddMoneyFragment__learn_more__information" translatable="false">https://support.signal.org/hc/articles/360057625692#payments_transfer_from_exchange</string> -->
 
     <!-- PaymentsDetailsFragment -->
     <string name="PaymentsDetailsFragment__details">세부 정보</string>
     <string name="PaymentsDetailsFragment__status">상태</string>
-    <string name="PaymentsDetailsFragment__submitting_payment">결제 제출 중…</string>
-    <string name="PaymentsDetailsFragment__processing_payment">결제 처리 중…</string>
-    <string name="PaymentsDetailsFragment__payment_complete">결제 완료</string>
-    <string name="PaymentsDetailsFragment__payment_failed">결제 실패</string>
     <string name="PaymentsDetailsFragment__network_fee">네트워크 요금</string>
     <string name="PaymentsDetailsFragment__sent_by">발신자</string>
-    <string name="PaymentsDetailsFragment__sent_to_s">%1$s 님에게 보냄</string>
-    <string name="PaymentsDetailsFragment__you_on_s_at_s">%1$s의 %2$s</string>
-    <string name="PaymentsDetailsFragment__s_on_s_at_s">%1$s, %2$s, %3$s</string>
     <!-- Prefix to a name to indicate who a payment was sent to -->
-    <string name="PaymentsDetailsFragment__to">받는이:</string>
-    <string name="PaymentsDetailsFragment__from">보낸이:</string>
     <string name="PaymentsDetailsFragment__information">지불 금액 및 거래 시간을 비롯한 거래 세부 정보는 MobileCoin Ledger의 일부입니다.</string>
-    <string name="PaymentsDetailsFragment__coin_cleanup_fee">코인 정리 수수료</string>
-    <string name="PaymentsDetailsFragment__coin_cleanup_information">보유하고 있는 코인을 합산하여 거래를 완료할 수 없는 경우 \'코인 정리 수수료\'가 부과됩니다. 정리를 통해 계속 지불할 수 있습니다.</string>
-    <string name="PaymentsDetailsFragment__no_details_available">이 거래에 대해 사용할 수 있는 추가 세부정보가 없습니다.</string>
   <!-- Removed by excludeNonTranslatables <string name="PaymentsDetailsFragment__learn_more__information" translatable="false">https://support.signal.org/hc/articles/360057625692#payments_details</string> -->
   <!-- Removed by excludeNonTranslatables <string name="PaymentsDetailsFragment__learn_more__cleanup_fee" translatable="false">https://support.signal.org/hc/articles/360057625692#payments_details_fees</string> -->
-    <string name="PaymentsDetailsFragment__sent_payment">송금됨</string>
-    <string name="PaymentsDetailsFragment__received_payment">결제 완료</string>
-    <string name="PaymentsDeatilsFragment__payment_completed_s">결제 완료 %1$s</string>
     <string name="PaymentsDetailsFragment__block_number">번호 차단</string>
 
     <!-- PaymentsTransferFragment -->
@@ -4428,13 +4353,6 @@
     <string name="PaymentsTransferFragment__to_scan_or_enter_wallet_address">수신자: 지갑 주소 스캔 또는 입력</string>
     <string name="PaymentsTransferFragment__you_can_transfer">거래소에서 발급받은 지갑 주소로 이체를 진행하면 MobileCoin을 송금할 수 있습니다. 지갑 주소는 대개 QR 코드 아래에 표시된 영문과 숫자의 조합입니다.</string>
     <string name="PaymentsTransferFragment__next">다음</string>
-    <string name="PaymentsTransferFragment__invalid_address">유효하지 않은 주소</string>
-    <string name="PaymentsTransferFragment__check_the_wallet_address">이체하려는 지갑 주소를 확인하고 다시 시도하세요.</string>
-    <string name="PaymentsTransferFragment__you_cant_transfer_to_your_own_signal_wallet_address">본인의 Signal 지갑 주소로는 이체할 수 없습니다. 지원되는 거래소 계정에서 발급된 지갑 주소를 입력해 주세요.</string>
-    <string name="PaymentsTransferFragment__to_scan_a_qr_code_signal_needs">QR 코드를 스캔하려면 Signal이 카메라에 액세스할 수 있어야 합니다.</string>
-    <string name="PaymentsTransferFragment__signal_needs_the_camera_permission_to_capture_qr_code_go_to_settings">Signal이 QR 코드를 캡처하려면 카메라 권한이 필요합니다. 설정으로 이동하여 \'권한\'을 선택하고 \'카메라\'를 활성화하세요.</string>
-    <string name="PaymentsTransferFragment__to_scan_a_qr_code_signal_needs_access_to_the_camera">QR 코드를 스캔하려면 Signal이 카메라에 액세스할 수 있어야 합니다.</string>
-    <string name="PaymentsTransferFragment__settings">설정</string>
 
     <!-- PaymentsTransferQrScanFragment -->
     <string name="PaymentsTransferQrScanFragment__scan_address_qr_code">주소 QR 코드 스캔</string>
@@ -4444,7 +4362,6 @@
     <!-- Button text to request the payment from a user -->
     <string name="CreatePaymentFragment__request">요청</string>
     <string name="CreatePaymentFragment__pay">지불</string>
-    <string name="CreatePaymentFragment__available_balance_s">사용 가능한 잔액: %1$s</string>
     <string name="CreatePaymentFragment__toggle_content_description">토글</string>
     <string name="CreatePaymentFragment__1">1</string>
     <string name="CreatePaymentFragment__2">2</string>
@@ -4457,10 +4374,8 @@
     <string name="CreatePaymentFragment__9">9</string>
     <string name="CreatePaymentFragment__decimal">.</string>
     <string name="CreatePaymentFragment__0">0</string>
-    <string name="CreatePaymentFragment__lt">&lt;</string>
     <string name="CreatePaymentFragment__backspace">백스페이스</string>
     <string name="CreatePaymentFragment__add_note">메모 추가</string>
-    <string name="CreatePaymentFragment__conversions_are_just_estimates">전환된 금액은 추정치일 뿐 정확하지 않을 수 있습니다.</string>
   <!-- Removed by excludeNonTranslatables <string name="CreatePaymentFragment__learn_more__conversions" translatable="false">https://support.signal.org/hc/articles/360057625692#payments_currency_conversion</string> -->
 
     <!-- EditNoteFragment -->
@@ -4470,26 +4385,10 @@
 
     <!-- ConfirmPaymentFragment -->
     <string name="ConfirmPayment__confirm_payment">결제 확인</string>
-    <string name="ConfirmPayment__network_fee">네트워크 요금</string>
-    <string name="ConfirmPayment__estimated_s">예상 %1$s</string>
     <!-- Prefix to a name to indicate who a payment will be sent to -->
-    <string name="ConfirmPayment__to">받는이:</string>
-    <string name="ConfirmPayment__total_amount">총액</string>
-    <string name="ConfirmPayment__balance_s">잔액: %1$s</string>
-    <string name="ConfirmPayment__submitting_payment">결제 제출 중…</string>
-    <string name="ConfirmPayment__processing_payment">결제 처리 중…</string>
-    <string name="ConfirmPayment__payment_complete">결제 완료</string>
-    <string name="ConfirmPayment__payment_failed">결제 실패</string>
-    <string name="ConfirmPayment__payment_will_continue_processing">결제가 계속 처리됩니다.</string>
-    <string name="ConfirmPaymentFragment__invalid_recipient">잘못된 수신자</string>
     <!-- Title of a dialog show when we were unable to present the user\'s screenlock before sending a payment -->
-    <string name="ConfirmPaymentFragment__failed_to_show_payment_lock">결제 잠금을 표시하지 못함</string>
     <!-- Body of a dialog show when we were unable to present the user\'s screenlock before sending a payment -->
-    <string name="ConfirmPaymentFragment__you_enabled_payment_lock_in_the_settings">설정에서 결제 잠금 기능을 활성화했으나 표시할 수 없습니다.</string>
     <!-- Button in a dialog that will take the user to the privacy settings -->
-    <string name="ConfirmPaymentFragment__go_to_settings">설정으로 이동</string>
-    <string name="ConfirmPaymentFragment__this_person_has_not_activated_payments">해당 사용자는 결제를 활성화하지 않았습니다.</string>
-    <string name="ConfirmPaymentFragment__unable_to_request_a_network_fee">네트워크 요금을 요청할 수 없습니다. 이 결제를 계속하려면 확인을 눌러 다시 시도하세요.</string>
 
     <!-- BiometricDeviceAuthentication -->
     <!-- Biometric/Device authentication prompt title -->
@@ -4501,7 +4400,6 @@
 
     <!-- SetCurrencyFragment -->
     <string name="SetCurrencyFragment__set_currency">통화 설정</string>
-    <string name="SetCurrencyFragment__all_currencies">모든 통화</string>
 
     <!-- **************************************** -->
     <!-- menus -->
@@ -5371,20 +5269,9 @@
     <!-- InfoCard -->
     <string name="payment_info_card_about_mobilecoin">모바일 코인 소개</string>
     <string name="payment_info_card_mobilecoin_is_a_new_privacy_focused_digital_currency">MobileCoin은 개인정보 보호에 특화된 새로운 디지털 통화입니다.</string>
-    <string name="payment_info_card_adding_funds">자금 추가</string>
-    <string name="payment_info_card_you_can_add_funds_for_use_in">MobileCoin을 지갑 주소로 전송하여 Signal에서 사용할 자금을 추가할 수 있습니다.</string>
-    <string name="payment_info_card_cashing_out">현금화</string>
-    <string name="payment_info_card_you_can_cash_out_mobilecoin">MobileCoin 지원 거래소에서 언제든지 현금화할 수 있습니다. 거래소에서 본인의 계좌로 출금 이체만 진행하시면 됩니다.</string>
     <string name="payment_info_card_hide_this_card">이 카드를 숨길까요?</string>
-    <string name="payment_info_card_hide">숨기기</string>
     <!-- Title of save recovery phrase card -->
-    <string name="payment_info_card_save_recovery_phrase">복원 문구 저장</string>
-    <string name="payment_info_card_your_recovery_phrase_gives_you">복원 문구는 결제 계정을 복원할 수 있는 추가 수단입니다.</string>
     <!-- Button in save recovery phrase card -->
-    <string name="payment_info_card_save_your_phrase">문구 저장</string>
-    <string name="payment_info_card_update_your_pin">PIN을 업데이트하세요</string>
-    <string name="payment_info_card_with_a_high_balance">잔액이 많은 경우, 보안 수준을 높이기 위해 영숫자 조합 PIN으로 변경하는 것을 권장합니다.</string>
-    <string name="payment_info_card_update_pin">PIN 업데이트</string>
 
   <!-- Removed by excludeNonTranslatables <string name="payment_info_card__learn_more__about_mobilecoin" translatable="false">https://support.signal.org/hc/articles/360057625692#payments_which_ones</string> -->
   <!-- Removed by excludeNonTranslatables <string name="payment_info_card__learn_more__adding_to_your_wallet" translatable="false">https://support.signal.org/hc/articles/360057625692#payments_transfer_from_exchange</string> -->
@@ -5396,44 +5283,28 @@
     <string name="DeactivateWalletFragment__its_recommended_that_you">결제를 비활성화하기 전에 다른 지갑 주소로 자금을 이체하는 것이 좋습니다. 지금 이체하지 않더라도, 나중에 결제 기능을 다시 활성화하면 Signal에 연결된 지갑 내 잔액을 그대로 이용하실 수 있습니다.</string>
     <string name="DeactivateWalletFragment__transfer_remaining_balance">잔액 이체</string>
     <string name="DeactivateWalletFragment__deactivate_without_transferring">이전하지 않고 비활성화</string>
-    <string name="DeactivateWalletFragment__deactivate">비활성화</string>
-    <string name="DeactivateWalletFragment__deactivate_without_transferring_question">이전하지 않고 비활성화할까요?</string>
-    <string name="DeactivateWalletFragment__your_balance_will_remain">결제를 다시 활성화하기로 선택할 경우 잔액이 Signal에 연결된 지갑에 남아 있게 됩니다.</string>
-    <string name="DeactivateWalletFragment__error_deactivating_wallet">지갑을 비활성화하는 동안 오류가 발생했습니다.</string>
   <!-- Removed by excludeNonTranslatables <string name="DeactivateWalletFragment__learn_more__we_recommend_transferring_your_funds" translatable="false">https://support.signal.org/hc/articles/360057625692#payments_deactivate</string> -->
 
     <!-- PaymentsRecoveryStartFragment -->
     <string name="PaymentsRecoveryStartFragment__recovery_phrase">복원 문구</string>
     <string name="PaymentsRecoveryStartFragment__view_recovery_phrase">복원 문구 보기</string>
     <!-- Title in save recovery phrase screen -->
-    <string name="PaymentsRecoveryStartFragment__save_recovery_phrase">복원 문구 저장</string>
-    <string name="PaymentsRecoveryStartFragment__enter_recovery_phrase">복원 문구 입력</string>
     <plurals name="PaymentsRecoveryStartFragment__your_balance_will_automatically_restore">
         <item quantity="other">Signal을 재설치할 때 PIN 번호를 입력하면 잔액이 자동으로 복구됩니다. 또한 %1$d개 단어로 구성된 복원 문구를 사용하여 복구할 수도 있습니다. 복원 문구는 종이에 적어 안전한 곳에 보관하세요.</item>
     </plurals>
     <!-- Description in save recovery phrase screen which shows up when user has non zero balance -->
-    <string name="PaymentsRecoveryStartFragment__got_balance">잔액이 있어요! 잔액을 복원할 때 사용할 복원 문구(24단어)를 지금 저장해 두세요.</string>
     <!-- Description in save recovery phrase screen which shows up when user navigates from info card -->
-    <string name="PaymentsRecoveryStartFragment__time_to_save">잔액을 복원할 때 사용할 복원 문구(24단어)를 지금 저장해 두세요.</string>
-    <string name="PaymentsRecoveryStartFragment__your_recovery_phrase_is_a">복원 문구는 %1$d개 단어로 구성되어 있으며, 회원마다 다르게 제공됩니다. 이 문구를 사용하여 잔액을 복원하세요.</string>
     <string name="PaymentsRecoveryStartFragment__start">시작</string>
-    <string name="PaymentsRecoveryStartFragment__enter_manually">수동으로 입력</string>
     <string name="PaymentsRecoveryStartFragment__paste_from_clipboard">클립보드에서 붙여넣기</string>
     <!-- Alert dialog title which asks before going back if user wants to save recovery phrase -->
-    <string name="PaymentsRecoveryStartFragment__continue_without_saving">저장하지 않고 계속할까요?</string>
     <!-- Alert dialog description to let user know why recovery phrase needs to be saved -->
-    <string name="PaymentsRecoveryStartFragment__your_recovery_phrase">만약의 사태가 발생하더라도 복원 문구를 사용해 잔액을 복원할 수 있습니다. 복원 문구는 꼭 저장하시는 게 좋아요.</string>
     <!-- Alert dialog option to skip recovery phrase -->
-    <string name="PaymentsRecoveryStartFragment__skip_recovery_phrase">복원 문구 건너뛰기</string>
     <!-- Alert dialog option to cancel dialog-->
-    <string name="PaymentsRecoveryStartFragment__cancel">취소</string>
 
     <!-- PaymentsRecoveryPasteFragment -->
     <string name="PaymentsRecoveryPasteFragment__paste_recovery_phrase">복원 문구 붙여넣기</string>
     <string name="PaymentsRecoveryPasteFragment__recovery_phrase">복원 문구</string>
     <string name="PaymentsRecoveryPasteFragment__next">다음</string>
-    <string name="PaymentsRecoveryPasteFragment__invalid_recovery_phrase">잘못된 복원 문구</string>
-    <string name="PaymentsRecoveryPasteFragment__make_sure">%1$d개 단어를 입력했는지 확인하고 다시 시도하세요.</string>
 
   <!-- Removed by excludeNonTranslatables <string name="PaymentsRecoveryStartFragment__learn_more__view" translatable="false">https://support.signal.org/hc/articles/360057625692#payments_wallet_view_passphrase</string> -->
   <!-- Removed by excludeNonTranslatables <string name="PaymentsRecoveryStartFragment__learn_more__restore" translatable="false">https://support.signal.org/hc/articles/360057625692#payments_wallet_restore_passphrase</string> -->
@@ -5443,38 +5314,24 @@
     <string name="PaymentsRecoveryPhraseFragment__edit">수정</string>
     <string name="PaymentsRecoveryPhraseFragment__your_recovery_phrase">나의 복원 문구</string>
     <string name="PaymentsRecoveryPhraseFragment__write_down_the_following_d_words">다음 %1$d개 단어를 순서대로 쓰세요. 안전한 장소에 목록을 저장하세요.</string>
-    <string name="PaymentsRecoveryPhraseFragment__make_sure_youve_entered">문구를 올바르게 입력했는지 확인하세요.</string>
     <string name="PaymentsRecoveryPhraseFragment__do_not_screenshot_or_send_by_email">스크린샷을 찍거나 이메일로 보내지 마세요.</string>
-    <string name="PaymentsRecoveryPhraseFragment__payments_account_restored">결제 계정이 복원되었습니다.</string>
-    <string name="PaymentsRecoveryPhraseFragment__invalid_recovery_phrase">잘못된 복원 문구</string>
-    <string name="PaymentsRecoveryPhraseFragment__make_sure_youve_entered_your_phrase_correctly_and_try_again">문구를 올바르게 입력했는지 확인하고 다시 시도하세요.</string>
-    <string name="PaymentsRecoveryPhraseFragment__copy_to_clipboard">클립보드에 복사할까요?</string>
-    <string name="PaymentsRecoveryPhraseFragment__if_you_choose_to_store">복원 문구를 디지털 방식으로 저장하는 경우, 본인이 신뢰할 수 있는 안전한 곳에 보관해 주세요.</string>
     <string name="PaymentsRecoveryPhraseFragment__copy">복사</string>
 
     <!-- PaymentsRecoveryPhraseConfirmFragment -->
     <string name="PaymentRecoveryPhraseConfirmFragment__confirm_recovery_phrase">복원 문구 확인하기</string>
     <string name="PaymentRecoveryPhraseConfirmFragment__enter_the_following_words">복원 문구의 다음 단어를 입력하세요.</string>
-    <string name="PaymentRecoveryPhraseConfirmFragment__word_d">단어 %1$d</string>
     <string name="PaymentRecoveryPhraseConfirmFragment__see_phrase_again">문구 다시 확인</string>
     <string name="PaymentRecoveryPhraseConfirmFragment__done">확인</string>
-    <string name="PaymentRecoveryPhraseConfirmFragment__recovery_phrase_confirmed">복원 문구 확인 완료</string>
 
     <!-- PaymentsRecoveryEntryFragment -->
     <string name="PaymentsRecoveryEntryFragment__enter_recovery_phrase">복원 문구 입력</string>
-    <string name="PaymentsRecoveryEntryFragment__enter_word_d">%1$d를 입력하세요.</string>
-    <string name="PaymentsRecoveryEntryFragment__word_d">단어 %1$d</string>
     <string name="PaymentsRecoveryEntryFragment__next">다음</string>
-    <string name="PaymentsRecoveryEntryFragment__invalid_word">유효하지 않은 단어</string>
 
     <!-- UnreadPayments -->
     <string name="UnreadPayments__s_sent_you_s">%1$s 님이 나에게 %2$s을 보냈습니다.</string>
     <string name="UnreadPayments__d_new_payment_notifications">%1$d 새 결제 알림</string>
 
     <!-- CanNotSendPaymentDialog -->
-    <string name="CanNotSendPaymentDialog__cant_send_payment">송금할 수 없음</string>
-    <string name="CanNotSendPaymentDialog__to_send_a_payment_to_this_user">해당 사용자에게 결제를 보내려면 먼저 메시지 요청이 수락되어야 합니다. 메시지를 전송하여 메시지 요청을 생성하세요.</string>
-    <string name="CanNotSendPaymentDialog__send_a_message">메시지 보내기</string>
 
     <!-- GroupsInCommonMessageRequest -->
     <string name="GroupsInCommonMessageRequest__you_have_no_groups_in_common_with_this_person">해당 사용자와 공유하는 그룹이 없습니다. 원치 않는 메시지를 받지 않도록 수락 전 요청 내용을 신중하게 검토하세요.</string>
@@ -5908,13 +5765,9 @@
     <!-- ChatColorGradientTool -->
 
     <!-- Title text for prompt to donate. Shown in a popup at the bottom of the chat list. -->
-    <string name="Donate2022Q2Megaphone_donate_to_signal">Signal 후원하기</string>
     <!-- Body text for prompt to donate. Shown in a popup at the bottom of the chat list. -->
-    <string name="Donate2022Q2Megaphone_signal_is_powered_by_people_like_you">Signal은 여러분의 참여로 운영됩니다. 매월 Signal에 정기후원하고 배지를 받아보세요.</string>
     <!-- Button label that brings a user to the donate screen. Shown in a popup at the bottom of the chat list. -->
-    <string name="Donate2022Q2Megaphone_donate">후원하기</string>
     <!-- Button label that dismissed a prompt to donate. Shown in a popup at the bottom of the chat list. -->
-    <string name="Donate2022Q2Megaphone_not_now">나중에</string>
 
     <!-- EditReactionsFragment -->
     <string name="EditReactionsFragment__customize_reactions">맞춤 반응 설정하기</string>
@@ -5931,11 +5784,7 @@
     <string name="AddAProfilePhotoMegaphone__add_photo">사진 추가</string>
 
     <!-- BecomeASustainerMegaphone -->
-    <string name="BecomeASustainerMegaphone__become_a_sustainer">후원자 되기</string>
     <!-- Displayed in the Become a Sustainer megaphone -->
-    <string name="BecomeASustainerMegaphone__signal_is_powered_by">Signal은 여러분의 참여로 운영됩니다. Signal을 후원하고 배지를 받아보세요.</string>
-    <string name="BecomeASustainerMegaphone__not_now">나중에</string>
-    <string name="BecomeASustainerMegaphone__donate">후원하기</string>
 
     <!-- KeyboardPagerFragment -->
     <string name="KeyboardPagerFragment_emoji">이모지</string>
@@ -6276,15 +6125,9 @@
     <string name="MediaCaptureFragment_device_link_dialog_continue">계속</string>
 
 
-    <string name="BadgesOverviewFragment__my_badges">내 배지</string>
     <string name="BadgesOverviewFragment__featured_badge">프로필 배지</string>
-    <string name="BadgesOverviewFragment__display_badges_on_profile">프로필에 배지 표시</string>
-    <string name="BadgesOverviewFragment__failed_to_update_profile">프로필을 업데이트하지 못했습니다.</string>
 
 
-    <string name="SelectFeaturedBadgeFragment__select_a_badge">배지 선택</string>
-    <string name="SelectFeaturedBadgeFragment__you_must_select_a_badge">배지를 선택해야 합니다.</string>
-    <string name="SelectFeaturedBadgeFragment__failed_to_update_profile">프로필을 업데이트하지 못했습니다.</string>
 
     <!-- Displayed on primary button in the bottom sheet as a call-to-action to launch into the donation flow -->
     <string name="ViewBadgeBottomSheetDialogFragment__donate_now">후원하기</string>
@@ -6297,29 +6140,21 @@
 
     <string name="ImageView__badge">배지</string>
 
-    <string name="SubscribeFragment__cancel_subscription">구독 취소</string>
     <string name="SubscribeFragment__confirm_cancellation">취소할까요?</string>
     <string name="SubscribeFragment__you_wont_be_charged_again">요금이 다시 청구되지 않습니다. 청구 기간이 끝나면 프로필에서 배지가 사라집니다.</string>
     <string name="SubscribeFragment__not_now">나중에</string>
     <string name="SubscribeFragment__confirm">확인</string>
-    <string name="SubscribeFragment__update_subscription">구독 업데이트</string>
-    <string name="SubscribeFragment__your_subscription_has_been_cancelled">구독을 취소했습니다.</string>
-    <string name="SubscribeFragment__update_subscription_question">구독을 업데이트할까요?</string>
     <string name="SubscribeFragment__update">업데이트</string>
     <string name="SubscribeFragment__you_will_be_charged_the_full_amount_s_of">오늘 새 구독 요금의 전체 금액(%1$s)이 청구됩니다. 구독은 매월 갱신됩니다.</string>
 
-    <string name="Subscription__s_per_month">%1$s/1개월</string>
     <!-- Shown when a subscription is active and isn\'t going to expire at the end of the term -->
-    <string name="Subscription__renews_s">%1$s 갱신</string>
     <!-- Shown when a subscription is active and is going to expire at the end of the term -->
-    <string name="Subscription__expires_s">%1$s에 만료됨</string>
 
     <!-- Title of learn more sheet -->
     <string name="SubscribeLearnMoreBottomSheetDialogFragment__signal_is_different">Signal은 독립적인 비영리단체로, 메시지와 통화의 프라이버시 보호를 핵심 가치로 삼고 있습니다. 광고도, 추적도, 감시도 없습니다. Signal의 사명을 지지하신다면 지금 후원해 보세요.</string>
     <!-- First small text blurb on learn more sheet -->
     <string name="SubscribeLearnMoreBottomSheetDialogFragment__private_messaging">No ads, no trackers, no surveillance. Donate today to support Signal.</string>
     <!-- Second small text blurb on learn more sheet -->
-    <string name="SubscribeLearnMoreBottomSheetDialogFragment__donate_and_get_badge">후원하면 프로필에 표시되는 배지를 받을 수 있어요.</string>
     <!-- Third small text blurb on learn more sheet -->
     <string name="SubscribeLearnMoreBottomSheetDialogFragment__your_privacy_is_our_mission">개인정보 보호는 Signal의 사명입니다.</string>
     <!-- Fourth small text blurb on learn more sheet. Non-English translations should use "Signal is a nonprofit." instead, dropping the 501c3 reference. -->
@@ -6327,60 +6162,37 @@
 
     <string name="SubscribeThanksForYourSupportBottomSheetDialogFragment__thanks_for_your_support">후원에 감사드립니다!</string>
     <!-- Subtext underneath the dialog title on the thanks sheet -->
-    <string name="SubscribeThanksForYourSupportBottomSheetDialogFragment__youve_earned_a_donor_badge">Signal에서 후원자 배지를 받았어요! 프로필에 표시하여 Signal을 응원하는 마음을 표현해 보세요.</string>
     <string name="SubscribeThanksForYourSupportBottomSheetDialogFragment__you_can_also">다른 기여 방법을 찾으신다면</string>
-    <string name="SubscribeThanksForYourSupportBottomSheetDialogFragment__become_a_montly_sustainer">월 정기후원 옵션을 살펴보세요.</string>
     <string name="SubscribeThanksForYourSupportBottomSheetDialogFragment__display_on_profile">프로필에 표시</string>
-    <string name="SubscribeThanksForYourSupportBottomSheetDialogFragment__make_featured_badge">프로필 배지 등록</string>
     <string name="SubscribeThanksForYourSupportBottomSheetDialogFragment__continue">계속</string>
     <string name="ThanksForYourSupportBottomSheetFragment__when_you_have_more">배지가 여러 개 있는 경우 프로필에 표시하고 싶은 배지를 선택하여 등록할 수 있습니다.</string>
 
-    <string name="BecomeASustainerFragment__get_badges">Signal을 후원하고 프로필 배지를 받으세요.</string>
-    <string name="BecomeASustainerFragment__signal_is_a_non_profit">Signal은 광고주나 투자자 없이 오로지 사용자의 기여로 운영되는 비영리 단체입니다.</string>
 
     <!-- Button label for creating a donation -->
-    <string name="ManageDonationsFragment__donate_to_signal">Signal 후원하기</string>
     <!-- Heading for more area of manage subscriptions page -->
-    <string name="ManageDonationsFragment__more">더 보기</string>
     <!-- Heading for receipts area of manage subscriptions page -->
     <!-- Heading for my subscription area of manage subscriptions page -->
-    <string name="ManageDonationsFragment__my_support">후원 표시</string>
-    <string name="ManageDonationsFragment__manage_subscription">구독 관리</string>
     <!-- Label for Donation Receipts button -->
-    <string name="ManageDonationsFragment__donation_receipts">기부 영수증</string>
-    <string name="ManageDonationsFragment__badges">배지</string>
     <!-- Label that externally links to Signal Donor FAQ page -->
-    <string name="ManageDonationsFragment__subscription_faq">후원자 FAQ</string>
     <!-- Preference heading for other ways to donate -->
-    <string name="ManageDonationsFragment__other_ways_to_give">다른 기여 방법</string>
     <!-- Preference label to launch badge gifting -->
-    <string name="ManageDonationsFragment__donate_for_a_friend">친구를 대신해 후원하세요.</string>
     <!-- Dialog title shown when a donation requires verifying/confirmation outside of the app and the user hasn\'t done that yet -->
-    <string name="ManageDonationsFragment__couldnt_confirm_donation">후원 확인 실패</string>
     <!-- Dialog message shown when a monthly donation requires verifying/confirmation outside of the app and the user hasn\'t done that yet, placeholder is money amount -->
-    <string name="ManageDonationsFragment__your_monthly_s_donation_couldnt_be_confirmed_ideal_wero">Your %1$s/month donation couldn\'t be confirmed. Check your banking app to approve your iDEAL | Wero payment.</string>
     <!-- Dialog message shown when a one-time donation requires verifying/confirmation outside of the app and the user hasn\'t done that yet, placeholder is money amount -->
-    <string name="ManageDonationsFragment__your_one_time_s_donation_couldnt_be_confirmed_ideal_wero">Your one-time %1$s donation couldn\'t be confirmed. Check your banking app to approve your iDEAL | Wero payment.</string>
 
-    <string name="Boost__enter_custom_amount">직접 금액 입력하기</string>
     <!-- Error label when the amount is smaller than what we can accept -->
-    <string name="Boost__the_minimum_amount_you_can_donate_is_s">후원할 수 있는 최소 금액은 %1$s입니다.</string>
 
     <string name="MySupportPreference__s_per_month">%1$s/월</string>
     <string name="MySupportPreference__renews_s">%1$s 갱신</string>
     <!-- Subtitle shown when processing a donation transaction -->
     <string name="MySupportPreference__processing_transaction">거래 처리 중…</string>
     <!-- Displayed on "My Support" screen when user badge failed to be added to their account -->
-    <string name="MySupportPreference__couldnt_add_badge_s">배지를 추가하지 못했습니다. %1$s</string>
     <string name="MySupportPreference__please_contact_support">고객 지원팀으로 문의하세요.</string>
     <!-- Displayed as a subtitle on a row in the Manage Donations screen when payment for a donation is pending -->
-    <string name="MySupportPreference__payment_pending">송금 대기 중</string>
     <!-- Displayed as a dialog message when clicking on a donation row that is pending. Placeholder is a formatted fiat amount -->
-    <string name="MySupportPreference__your_bank_transfer_of_s">%1$s의 계좌 이체가 대기 중입니다. 계좌 이체를 완료하는 데 영업일 기준 1~14일이 걸릴 수 있습니다.  </string>
     <!-- Displayed in the pending help dialog, used to launch user to more details about bank transfers -->
     <string name="MySupportPreference__learn_more">자세히 알아보기</string>
     <!-- Displayed when a subscription refresh is being performed -->
-    <string name="MySupportPreference__checking_subscription">구독을 확인하는 중…</string>
 
     <!-- Title of dialog telling user they need to update signal as it expired -->
     <string name="UpdateSignalExpiredDialog__title">시그널 최신 버전으로 업데이트</string>
@@ -6401,126 +6213,66 @@
     <string name="ReregisterSignalDialog__cancel_action">취소</string>
 
     <!-- Title of expiry sheet when boost badge falls off profile unexpectedly. -->
-    <string name="ExpiredBadgeBottomSheetDialogFragment__boost_badge_expired">부스트 배지 만료</string>
     <!-- Displayed in the bottom sheet if a monthly donation badge unexpectedly falls off the user\'s profile -->
-    <string name="ExpiredBadgeBottomSheetDialogFragment__monthly_donation_cancelled">월 정기후원이 취소되었어요</string>
     <!-- Displayed in the bottom sheet when a boost badge expires -->
-    <string name="ExpiredBadgeBottomSheetDialogFragment__your_boost_badge_has_expired_and">부스트 배지가 만료되어 더 이상 프로필에 표시되지 않습니다.</string>
-    <string name="ExpiredBadgeBottomSheetDialogFragment__you_can_reactivate">일회성 기부를 통해 부스트 배지를 30일 더 활성화할 수 있습니다.</string>
     <!-- Displayed when we do not think the user is a subscriber when their boost expires -->
-    <string name="ExpiredBadgeBottomSheetDialogFragment__you_can_keep">Signal은 계속 이용하실 수 있지만, 매월 소액의 후원으로 함께해 주시면 Signal의 지속적인 운영에 큰 힘이 될 수 있어요.</string>
-    <string name="ExpiredBadgeBottomSheetDialogFragment__become_a_sustainer">후원자 되기</string>
-    <string name="ExpiredBadgeBottomSheetDialogFragment__add_a_boost">부스트 추가</string>
-    <string name="ExpiredBadgeBottomSheetDialogFragment__not_now">나중에</string>
     <!-- Copy displayed when badge expires after user inactivity -->
-    <string name="ExpiredBadgeBottomSheetDialogFragment__your_recurring_monthly_donation_was_automatically">오랫동안 활동 기록이 없어 월간 정기후원이 자동으로 취소되었습니다. %1$s 배지가 더는 프로필에 표시되지 않습니다.</string>
     <!-- Copy displayed when badge expires after payment failure -->
-    <string name="ExpiredBadgeBottomSheetDialogFragment__your_recurring_monthly_donation_was_canceled">결제를 처리할 수 없어 월 정기후원이 취소되었습니다. 배지가 더는 프로필에 표시되지 않습니다.</string>
     <!-- Copy displayed when badge expires after a payment failure and we have a displayable charge failure reason -->
-    <string name="ExpiredBadgeBottomSheetDialogFragment__your_recurring_monthly_donation_was_canceled_s">월 정기후원이 취소되었습니다. %1$s %2$s 배지가 더는 프로필에 표시되지 않습니다.</string>
-    <string name="ExpiredBadgeBottomSheetDialogFragment__you_can">Signal을 계속 사용할 수는 있지만 앱을 지원하고 배지를 재활성화하려면 지금 갱신하세요.</string>
-    <string name="ExpiredBadgeBottomSheetDialogFragment__renew_subscription">구독 갱신</string>
     <!-- Button label to send user to Google Pay website -->
-    <string name="ExpiredBadgeBottomSheetDialogFragment__go_to_google_pay">Google Pay로 이동</string>
 
-    <string name="CantProcessSubscriptionPaymentBottomSheetDialogFragment__cant_process_subscription_payment">구독 결제를 처리할 수 없습니다.</string>
-    <string name="CantProcessSubscriptionPaymentBottomSheetDialogFragment__were_having_trouble">Signal 기여자 결제를 처리하는 도중 문제가 발생했습니다. 결제 수단 정보가 최신 상태인지 확인해 주세요. 최신 상태가 아닐 경우 Google Pay에서 업데이트하세요. Signal이 며칠 후 다시 결제 처리를 시도합니다.</string>
-    <string name="CantProcessSubscriptionPaymentBottomSheetDialogFragment__dont_show_this_again">다시 표시 안 함</string>
 
-    <string name="Subscription__contact_support">지원에 문의</string>
-    <string name="Subscription__get_a_s_badge">%1$s 배지 받기</string>
 
     <!-- *PaymentInProgressFragment strings -->
-    <string name="InAppPaymentInProgressFragment__processing_donation">후원을 처리하고 있어요</string>
-    <string name="InAppPaymentInProgressFragment__processing_payment">결제를 처리하는 중…</string>
 
     <!--InAppDonations -->
     <!-- Label displayed in google play and on receipts for recurring subscriptions. Placeholder is level -->
-    <string name="InAppDonations__recurring_d">정기후원 %1$d</string>
 
     <!-- InAppPaymentErrors -->
     <!-- Displayed as a title in a dialog or notification when a payment failure happens. -->
-    <string name="InAppPaymentErrors__error_processing_payment">결제 처리 오류</string>
     <!-- Displayed as a message in a dialog or notification when a payment setup error happens. -->
-    <string name="InAppPaymentErrors__your_payment_couldnt_be_processed">결제를 처리하지 못했으며 요금이 청구되지 않았습니다. 다시 시도하세요.</string>
     <!-- Displayed as a message in a dialog when we timeout waiting for a payment to be processed and token to be redeemed -->
-    <string name="InAppPaymentErrors__your_payment_is_still">구독을 아직 처리하는 중입니다. 연결 상태에 따라 몇 분이 소요될 수 있습니다.</string>
     <!-- Displayed as a message in a dialog or notification when stripe decline code issuer not available for backup payment. -->
-    <string name="InAppPaymentErrors__StripeDeclineCode__try_completing_the_payment_again">결제를 다시 시도하거나 은행에 자세한 정보를 문의하세요.</string>
     <!-- Failure code text for revoked authorization of payment, displayed in a dialog or notification as a message. -->
-    <string name="InAppPaymentErrors__StripeFailureCode__this_payment_was_revoked">예금주가 이 송금을 취소하여 처리할 수 없습니다. 요금이 청구되지 않았습니다.</string>
     <!-- Failure code text for a payment lacking an authorized mandate or incorrect mandate, displayed in a dialog or notification as a message.-->
-    <string name="InAppPaymentErrors__StripeFailureCode__an_error_occurred_while_processing_this_payment">결제를 처리하는 동안 오류가 발행했습니다. 다시 시도하세요.</string>
 
     <!-- Displayed in notification when user payment fails to process on Stripe -->
-    <string name="DonationsErrors__error_processing_payment">후원을 처리하는 중 오류가 발생했어요</string>
     <!-- Displayed on manage donations screen as a dialog message when payment method failed -->
-    <string name="DonationsErrors__try_another_payment_method">다른 결제 수단을 시도하거나 은행에 자세한 정보를 문의하세요.</string>
     <!-- Displayed on manage donations screen error dialogs as an action label -->
-    <string name="DonationsErrors__learn_more">자세히 알아보기</string>
     <!-- Displayed on "My Support" screen when user subscription payment method failed. -->
-    <string name="DonationsErrors__error_processing_payment_s">후원을 처리하는 중 오류가 발생했어요. %1$s</string>
-    <string name="DonationsErrors__your_payment">기부를 처리할 수 없어 요금이 청구되지 않았습니다. 다시 시도해 주세요.</string>
-    <string name="DonationsErrors__still_processing">아직 처리 중</string>
-    <string name="DonationsErrors__couldnt_add_badge">배지를 추가할 수 없습니다.</string>
     <!-- Displayed when backup credential could not be redeemed. Dialog or notification title -->
-    <string name="DonationsError__something_went_wrong">오류가 발생했습니다</string>
     <!-- Displayed when backup credential could not be redeemed. Dialog or notification body -->
-    <string name="DonationsError__your_backups_subscription_couldnt_be_displayed">백업 구독을 표시할 수 없습니다. 고객 지원팀에 문의하세요.</string>
     <!-- Displayed when badge credential couldn\'t be verified -->
-    <string name="DonationsErrors__failed_to_validate_badge">배지를 확인하지 못했습니다.</string>
     <!-- Displayed when badge credential couldn\'t be verified -->
-    <string name="DonationsErrors__could_not_validate">서버 응답을 확인할 수 없습니다. 고객 지원팀으로 문의해 주세요.</string>
     <!-- Displayed as title when some generic error happens during sending donation on behalf of another user -->
-    <string name="DonationsErrors__donation_failed">후원 오류 안내</string>
     <!-- Displayed as message when some generic error happens during sending donation on behalf of another user -->
-    <string name="DonationsErrors__your_payment_was_processed_but">후원금이 처리되었으나 Signal에서 후원 메시지를 보내지 못했습니다. 고객 지원팀으로 문의해 주세요.</string>
-    <string name="DonationsErrors__your_badge_could_not">배지를 계정에 추가하지 못했지만 요금이 청구됐을 수 있습니다. 고객 지원팀으로 문의해 주세요.</string>
-    <string name="DonationsErrors__your_payment_is_still">후원금을 아직 처리하는 중입니다. 연결에 따라 몇 분이 소요될 수 있습니다.</string>
-    <string name="DonationsErrors__failed_to_cancel_subscription">구독을 취소하지 못했습니다.</string>
-    <string name="DonationsErrors__subscription_cancellation_requires_an_internet_connection">구독을 취소하려면 인터넷 연결이 필요합니다.</string>
     <string name="ViewBadgeBottomSheetDialogFragment__your_device_doesn_t_support">이 기기는 앱 내 기부를 지원하지 않아 프로필 배지를 받을 수 없습니다. 대신 웹사이트에서 기부하여 Signal을 후원하는 방법도 있으니 참고해 주세요.</string>
     <string name="NetworkFailure__network_error_check_your_connection_and_try_again">네트워크 오류. 연결을 확인하고 다시 시도하세요.</string>
     <string name="NetworkFailure__retry">재시도</string>
     <!-- Displayed as a dialog title when the selected recipient for a gift doesn\'t support gifting -->
-    <string name="DonationsErrors__cannot_send_donation">후원금을 보낼 수 없습니다</string>
     <!-- Displayed as a dialog message when the selected recipient for a gift doesn\'t support gifting -->
-    <string name="DonationsErrors__this_user_cant_receive_donations_until">이 사용자는 Signal을 최신 버전으로 업그레이드해야 후원을 받을 수 있습니다.</string>
     <!-- Displayed as a dialog message when the user\'s profile could not be fetched, likely due to lack of internet -->
-    <string name="DonationsErrors__your_donation_could_not_be_sent">네트워크 오류로 인해 후원금을 보내지 못했습니다. 연결을 확인하고 다시 시도하세요.</string>
     <!-- Displayed as a dialog message when the user encounters an error during an iDEAL donation -->
-    <string name="DonationsErrors__your_ideal_wero_couldnt_be_processed">Your iDEAL | Wero donation couldn\'t be processed. Try another payment method or contact your bank for more information.</string>
 
     <!-- Gift message view title -->
-    <string name="GiftMessageView__donation_on_behalf_of_s">%1$s 님을 대신해 후원했어요</string>
     <!-- Gift message view title for incoming donations -->
-    <string name="GiftMessageView__s_donated_to_signal_on">%1$s 님이 나를 대신해 Signal을 후원했어요</string>
     <!-- Gift badge redeem action label -->
-    <string name="GiftMessageView__redeem">사용</string>
     <!-- Gift badge view action label -->
-    <string name="GiftMessageView__view">보기</string>
     <!-- Gift badge redeeming action label -->
-    <string name="GiftMessageView__redeeming">사용 중…</string>
     <!-- Gift badge redeemed label -->
-    <string name="GiftMessageView__redeemed">사용함</string>
 
 
     <!-- Stripe decline code generic_failure -->
-    <string name="DeclineCode__try_another_payment_method_or_contact_your_bank">다른 결제 수단을 시도하거나 은행에 자세한 정보를 문의하세요.</string>
     <!-- PayPal decline code for payment declined -->
-    <string name="DeclineCode__try_another_payment_method_or_contact_your_bank_for_more_information_if_this_was_a_paypal">다른 결제 방법을 시도하거나 은행에 자세한 정보를 문의해 주세요. PayPal 거래인 경우 PayPal에 문의해 주세요.</string>
     <!-- Stripe decline code verify on Google Pay and try again -->
-    <string name="DeclineCode__verify_your_payment_method_is_up_to_date_in_google_pay_and_try_again">Google Pay의 결제 수단 정보가 최신 상태인지 확인하고 다시 시도하세요.</string>
     <!-- Stripe decline code learn more action label -->
     <string name="DeclineCode__learn_more">더 알아보기</string>
     <!-- Stripe decline code contact issuer -->
-    <string name="DeclineCode__verify_your_payment_method_is_up_to_date_in_google_pay_and_try_again_if_the_problem">Google Pay의 결제 수단 정보가 최신 상태인지 확인하고 다시 시도하세요. 그래도 문제가 계속되면 은행에 문의하세요.</string>
     <!-- Stripe decline code purchase not supported -->
     <string name="DeclineCode__your_card_does_not_support_this_type_of_purchase">카드가 이 구매 유형을 지원하지 않습니다. 다른 결제 수단을 선택하세요.</string>
     <!-- Stripe decline code your card has expired -->
     <string name="DeclineCode__your_card_has_expired">카드가 만료되었습니다. Google Pay에서 결제 수단 정보를 업데이트하고 다시 시도하세요.</string>
     <!-- Stripe decline code go to google pay action label -->
-    <string name="DeclineCode__go_to_google_pay">Google Pay로 이동</string>
     <!-- Stripe decline code try credit card again action label -->
     <string name="DeclineCode__try">다시 시도해 주세요.</string>
     <!-- Stripe decline code incorrect card number -->
@@ -6534,7 +6286,6 @@
     <!-- Stripe decline code incorrect expiration year -->
     <string name="DeclineCode__the_expiration_year">결제 수단의 만료 연도가 잘못됐습니다. Google Pay에서 업데이트하고 다시 시도하세요.</string>
     <!-- Stripe decline code issuer not available -->
-    <string name="DeclineCode__try_completing_the_payment_again">기부를 다시 시도하거나 은행에 자세한 정보를 문의하세요.</string>
     <!-- Stripe decline code processing error -->
     <string name="DeclineCode__try_again">다시 시도하거나 자세한 정보를 은행에 문의하세요.</string>
 
@@ -6556,15 +6307,10 @@
 
     <!-- Stripe Failure Codes for failed bank transfers -->
     <!-- Failure code text for insufficient funds, displayed in a dialog or notification -->
-    <string name="StripeFailureCode__the_bank_account_provided">제공한 은행 계좌에 잔액이 부족하여 거래를 완료할 수 없습니다. 다시 시도하거나 은행에 문의하여 자세한 정보를 확인하세요.</string>
     <!-- Failure code text for revoked authorization of payment, displayed in a dialog or notification -->
-    <string name="StripeFailureCode__this_payment_was_revoked">예금주가 이 기부를 취소하여 처리할 수 없습니다. 요금이 청구되지 않았습니다.</string>
     <!-- Failure code text for a payment lacking an authorized mandate or incorrect mandate, displayed in a dialog or notification -->
-    <string name="StripeFailureCode__an_error_occurred_while_processing_this_payment">후원을 처리하는 중 오류가 발생했어요. 다시 시도해 주세요.</string>
     <!-- Failure code text for a closed account, deceased recipient, or one with blocked direct debits, displayed in a dialog or notification -->
-    <string name="StripeFailureCode__the_bank_details_provided_could_not_be_processed">제공한 은행 세부 정보를 처리할 수 없습니다. 자세한 내용은 은행에 문의하세요.</string>
     <!-- Failure code text for a non-existent bank branch, invalid account holder, invalid iban, generic failure, or unknown bank failure, displayed in a dialog or notification -->
-    <string name="StripeFailureCode__verify_your_bank_details_are_correct">은행 세부 정보가 올바른지 확인하고 다시 시도하세요. 문제가 계속되면 은행에 문의하세요.</string>
 
     <!-- Title of create notification profile screen -->
     <string name="EditNotificationProfileFragment__name_your_profile">프로필에 이름을 지정하세요</string>
@@ -6727,33 +6473,19 @@
     <string name="ReleaseNotes__official_only_chat">Signal이 운영하는 유일한 공식 채널</string>
 
     <!-- Donation receipts activity title -->
-    <string name="DonationReceiptListFragment__all_activity">모든 활동</string>
     <!-- Donation receipts all tab label -->
-    <string name="DonationReceiptListFragment__all">전체</string>
     <!-- Donation receipts recurring tab label -->
-    <string name="DonationReceiptListFragment__recurring">정기후원</string>
     <!-- Donation receipts one-time tab label -->
-    <string name="DonationReceiptListFragment__one_time">일회성 기부</string>
     <!-- Donation receipts gift tab -->
-    <string name="DonationReceiptListFragment__for_a_friend">친구 대신</string>
     <!-- Donation receipts gift tab label -->
-    <string name="DonationReceiptListFragment__donation_for_a_friend">친구 대신 후원</string>
     <!-- Donation receipts donation type heading -->
-    <string name="DonationReceiptDetailsFragment__donation_type">후원 종류</string>
     <!-- Donation receipts date paid heading -->
-    <string name="DonationReceiptDetailsFragment__date_paid">지불 날짜</string>
     <!-- Donation receipts share PNG -->
-    <string name="DonationReceiptDetailsFragment__share_receipt">영수증 공유</string>
     <!-- Donation receipts list end note -->
-    <string name="DonationReceiptListFragment__if_you_have">Signal을 다시 설치했다면 이전 기부 영수증은 사용할 수 없습니다.</string>
     <!-- Donation receipts document title -->
-    <string name="DonationReceiptDetailsFragment__donation_receipt">기부 영수증</string>
     <!-- Donation receipts amount title -->
-    <string name="DonationReceiptDetailsFragment__amount">금액</string>
     <!-- Donation receipts thanks -->
-    <string name="DonationReceiptDetailsFragment__thank_you_for_supporting">Signal을 지지해 주셔서 감사합니다. 회원님의 기여는 표현의 자유를 보호하고, 전 세계 수백만 사용자에게 안전한 글로벌 커뮤니케이션을 제공하는 오픈 소스 프라이버시 기술을 개발하겠다는 Signal의 사명을 실현하는 데 큰 도움이 됩니다. 미국 거주자의 경우, 세금 신고 시 사용할 수 있도록 이 영수증을 보관해 주시기 바랍니다. Signal Technology Foundation은 미국 내국세법(IRC) 제501(c)(3)조에 따라 세금 공제가 가능한 비영리 기관입니다. Signal의 연방 세금 식별 번호(Federal Tax ID)는 82–4506840입니다.</string>
     <!-- Donation reciepts screen empty state title -->
-    <string name="DonationReceiptListFragment__no_receipts">영수증 없음</string>
 
     <!-- region "Stories Tab" -->
 
@@ -7131,53 +6863,32 @@
         <item quantity="other">%1$s · %2$d일</item>
     </plurals>
     <!-- Headline text on start fragment for gifting a badge -->
-    <string name="GiftFlowStartFragment__donate_for_a_friend">친구를 대신해 후원하세요</string>
     <!-- Description text on start fragment for gifting a badge -->
     <plurals name="GiftFlowStartFragment__support_signal_by">
         <item quantity="other">Signal을 사용하는 친구나 가족을 대신해 Signal을 후원해 보세요. 해당 사용자는 %1$d일 동안 프로필에 배지를 표시할 수 있습니다.</item>
     </plurals>
     <!-- Action button label for start fragment for gifting a badge -->
-    <string name="GiftFlowStartFragment__next">다음</string>
     <!-- Title text on choose recipient page for badge gifting -->
-    <string name="GiftFlowRecipientSelectionFragment__choose_recipient">받는 사람 선택</string>
     <!-- Title text on confirm gift page -->
-    <string name="GiftFlowConfirmationFragment__confirm_donation">후원 확인 요청</string>
     <!-- Heading text specifying who the gift will be sent to -->
-    <string name="GiftFlowConfirmationFragment__send_to">받는 사람</string>
     <!-- Text explaining that gift will be sent to the chosen recipient -->
-    <string name="GiftFlowConfirmationFragment__the_recipient_will_be_notified">받는 사람에게 1대1 메시지로 후원 알림이 발송됩니다. 아래에 나만의 메시지를 추가하세요.</string>
     <!-- Text explaining that this gift is a one time donation -->
-    <string name="GiftFlowConfirmationFragment__one_time_donation">일회성 기부</string>
     <!-- Hint for add message input -->
-    <string name="GiftFlowConfirmationFragment__add_a_message">메시지 추가</string>
     <!-- Displayed in the dialog while verifying the chosen recipient -->
     <string name="GiftFlowConfirmationFragment__verifying_recipient">받는 사람 확인 중…</string>
     <!-- Title for sheet shown when opening a redeemed gift -->
-    <string name="ViewReceivedGiftBottomSheet__s_made_a_donation_for_you">%1$s 님이 나를 대신해 후원했어요</string>
     <!-- Title for sheet shown when opening a sent gift -->
-    <string name="ViewSentGiftBottomSheet__thanks_for_your_support">따뜻한 응원에 감사드려요!</string>
     <!-- Description for sheet shown when opening a redeemed gift -->
-    <string name="ViewReceivedGiftBottomSheet__s_made_a_donation_to_signal">%1$s 님이 나를 대신해 Signal을 후원했어요! Signal에 대한 응원의 마음을 프로필에 표시해 보세요.</string>
     <!-- Description for sheet shown when opening a sent gift -->
-    <string name="ViewSentGiftBottomSheet__youve_made_a_donation_to_signal">%1$s 님을 대신해 Signal에 후원금을 보냈어요. 해당 사용자는 Signal 후원 사실을 프로필 배지로 표시할 수 있어요.</string>
     <!-- Primary action for pending gift sheet to redeem badge now -->
-    <string name="ViewReceivedGiftSheet__redeem">사용</string>
     <!-- Primary action for pending gift sheet to redeem badge later -->
-    <string name="ViewReceivedGiftSheet__not_now">나중에</string>
     <!-- Dialog text while redeeming a gift -->
-    <string name="ViewReceivedGiftSheet__redeeming_badge">배지를 사용하는 중…</string>
     <!-- Description text in gift thanks sheet -->
-    <string name="GiftThanksSheet__youve_made_a_donation">%1$s 님을 대신해 Signal에 후원금을 보냈어요. 해당 사용자는 Signal 후원 사실을 프로필 배지로 표시할 수 있어요.</string>
     <!-- Expired gift sheet title -->
-    <string name="ExpiredGiftSheetConfiguration__your_badge_has_expired">배지가 만료되었습니다.</string>
     <!-- Expired gift sheet top description text -->
-    <string name="ExpiredGiftSheetConfiguration__your_badge_has_expired_and_is">배지가 만료되어 더 이상 프로필에 표시되지 않습니다.</string>
     <!-- Expired gift sheet bottom description text -->
-    <string name="ExpiredGiftSheetConfiguration__to_continue">매월 소액의 후원으로 함께해 주시면 Signal의 지속적인 운영에 큰 힘이 될 수 있어요.</string>
     <!-- Expired gift sheet make a monthly donation button -->
-    <string name="ExpiredGiftSheetConfiguration__make_a_monthly_donation">월 정기후원하기</string>
     <!-- Expired gift sheet not now button -->
-    <string name="ExpiredGiftSheetConfiguration__not_now">나중에</string>
     <!-- My Story label designating that we will only share with the selected viewers. -->
     <string name="ContactSearchItems__only_share_with">일부 사용자와만 공유</string>
     <!-- Label under name for custom stories -->
@@ -7233,7 +6944,6 @@
         <item quantity="other">%1$d분 남음</item>
     </plurals>
     <!-- Donation for a friend expiry expired -->
-    <string name="Gifts__expired">만료됨</string>
 
     <!-- Label indicating that a user can tap to advance to the next post in a story -->
     <string name="StoryFirstTimeNavigationView__tap_to_advance">탭하여 계속하기</string>
@@ -7377,128 +7087,75 @@
 
     <!-- DonateToSignalFragment -->
     <!-- Title below avatar -->
-    <string name="DonateToSignalFragment__privacy_over_profit">비영리의 원칙을 지킵니다</string>
     <!-- Continue button label -->
-    <string name="DonateToSignalFragment__continue">계속</string>
     <!-- Description below title -->
-    <string name="DonateToSignalFragment__private_messaging">후원을 통해 Signal의 개인정보 보호 메시지 서비스를 지지하고, 독립적인 운영과 광고 없는 환경을 유지할 수 있도록 힘을 보태주세요.</string>
     <!-- Dialog title when a user tries to donate while they already have a pending donation. -->
-    <string name="DonateToSignalFragment__you_have_a_donation_pending">아직 완료되지 않은 후원이 있어요</string>
     <!-- Dialog body when a user tries to donate while they already have a pending monthly donation. -->
-    <string name="DonateToSignalFragment__bank_transfers_usually_take_1_business_day_to_process_monthly">은행 송금을 처리하는 데 영업일 기준 1~14일이 걸릴 수 있습니다. 이 결제가 완료될 때까지 기다렸다가 구독을 업데이트해 주세요.</string>
     <!-- Dialog body when a user tries to donate while they already have a pending one time donation. -->
-    <string name="DonateToSignalFragment__bank_transfers_usually_take_1_business_day_to_process_onetime">은행 송금을 처리하는 데 영업일 기준 1~14일이 걸릴 수 있습니다. 완료될 때까지 기다리신 후, 추가 후원을 진행해 주세요.</string>
     <!-- Dialog body when a user tries to donate while they already have a pending monthly donation. -->
-    <string name="DonateToSignalFragment__your_payment_is_still_being_processed_monthly">아직 후원을 처리하는 중입니다. 연결 상태에 따라 몇 분이 소요될 수 있습니다. 구독을 업데이트하시려면 결제 처리가 완료되고 나서 진행해 주세요.</string>
     <!-- Dialog body when a user tries to donate while they already have a pending one time donation. -->
-    <string name="DonateToSignalFragment__your_payment_is_still_being_processed_onetime">아직 후원을 처리하는 중입니다. 연결 상태에 따라 몇 분이 소요될 수 있습니다. 추가 후원을 하시려면 결제 처리가 완료되고 나서 진행해 주세요.</string>
     <!-- Dialog body when a user opens the manage donations main screen and they have a pending iDEAL donation -->
-    <string name="DonateToSignalFragment__your_ideal_wero_payment_is_still_processing">Your iDEAL | Wero donation is still processing. Check your banking app to approve your payment before making another donation.</string>
     <!-- Dialog title shown when a user tries to donate an amount higher than is allowed for a given payment method. -->
-    <string name="DonateToSignal__donation_amount_too_high">후원금이 한도 금액을 초과했어요</string>
     <!-- Dialog body shown when a user tries to donate an amount higher than is allowed for a given payment method, place holder is the maximum -->
-    <string name="DonateToSignalFragment__you_can_send_up_to_s_via_bank_transfer">계좌 이체를 통해 보낼 수 있는 최대 금액은 %1$s입니다. 다른 금액이나 다른 결제 방법으로 시도해 주세요.</string>
 
     <!-- Donation pill toggle monthly text -->
-    <string name="DonationPillToggle__monthly">월 정기후원</string>
     <!-- Donation pill toggle one-time text -->
-    <string name="DonationPillToggle__one_time">일회성 기부</string>
 
     <!-- GatewaySelectorBottomSheet -->
     <!-- Sheet title when subscribing -->
-    <string name="GatewaySelectorBottomSheet__donate_s_month_to_signal">Signal에 매달 %1$s 후원</string>
     <!-- Sheet summary when subscribing -->
-    <string name="GatewaySelectorBottomSheet__get_a_s_badge">%1$s 배지 받기</string>
     <!-- Sheet title when giving a one-time donation -->
-    <string name="GatewaySelectorBottomSheet__donate_s_to_signal">Signal에 %1$s 후원</string>
     <!-- Sheet summary when giving a one-time donation -->
     <plurals name="GatewaySelectorBottomSheet__get_a_s_badge_for_d_days">
         <item quantity="other">%2$d일 동안 %1$s 배지 사용 가능</item>
     </plurals>
     <!-- Button label for paying with a bank transfer -->
-    <string name="GatewaySelectorBottomSheet__bank_transfer">계좌 이체</string>
     <!-- Button label for paying with a credit card -->
     <string name="GatewaySelectorBottomSheet__credit_or_debit_card">신용카드 또는 체크카드</string>
     <!-- Sheet summary when giving donating for a friend -->
-    <string name="GatewaySelectorBottomSheet__donate_for_a_friend">친구를 대신해 후원하세요</string>
     <!-- Button label for paying with iDEAL -->
-    <string name="GatewaySelectorBottomSheet__ideal_wero">iDEAL | Wero</string>
 
     <!-- Dialog title for launching external intent -->
-    <string name="ExternalNavigationHelper__leave_signal_to_confirm_payment">후원 확인을 위해 Signal에서 나가시겠어요?</string>
-    <string name="ExternalNavigationHelper__once_this_payment_is_confirmed">확인이 완료되면 Signal로 돌아와 후원을 마무리해 주세요.</string>
     <!-- Dialog message shown when leaving Signal to complete a donation in an external app. Placeholder is the resolved app name (e.g. a banking app). -->
-    <string name="ExternalNavigationHelper__once_payment_confirmed_in_app">You\'ll be sent to %1$s. When confirmed, return to Signal to finish processing your donation.</string>
 
     <!-- BankTransferMandateFragment -->
     <!-- Title of screen displaying the bank transfer mandate -->
-    <string name="BankTransferMandateFragment__bank_transfer">계좌 이체</string>
     <!-- Subtitle of screen displaying the bank transfer mandate, placeholder is \'Learn more\' -->
-    <string name="BankTransferMandateFragment__stripe_processes_donations">Signal에 대한 후원금 결제는 Stripe를 통해 처리됩니다. Signal은 개인정보를 수집하거나 저장하지 않습니다. %1$s</string>
     <!-- Subtitle learn more of screen displaying bank transfer mandate -->
-    <string name="BankTransferMandateFragment__learn_more">자세히 알아보기</string>
     <!-- Button label to continue with transfer -->
-    <string name="BankTransferMandateFragment__agree">동의</string>
     <!-- Button label to read more of the bank mandate that is currently off screen -->
-    <string name="BankTransferMandateFragment__read_more">더 보기</string>
     <!-- Text displayed when mandate load fails -->
-    <string name="BankTransferMandateFragment__failed_to_load_mandate">명령 로드 실패</string>
 
     <!-- BankTransferDetailsFragment -->
     <!-- Subtext explaining how email is used. Placeholder is \'Learn more\' -->
-    <string name="BankTransferDetailsFragment__enter_your_bank_details">은행 정보와 이메일을 입력해 주세요. Stripe에서 후원 관련 업데이트를 이메일로 보내드립니다. %1$s</string>
     <!-- Subtext learn more link text -->
-    <string name="BankTransferDetailsFragment__learn_more">자세히 알아보기</string>
     <!-- Text field label for name on bank account -->
-    <string name="BankTransferDetailsFragment__name_on_bank_account">계좌 소유자 이름</string>
     <!-- Text field label for IBAN -->
-    <string name="BankTransferDetailsFragment__iban">IBAN</string>
     <!-- Text field label for email -->
-    <string name="BankTransferDetailsFragment__email">이메일</string>
     <!-- Text label for button to show user how to find their IBAN -->
-    <string name="BankTransferDetailsFragment__find_account_info">계좌 정보 찾기</string>
     <!-- Donate button label for monthly subscription -->
-    <string name="BankTransferDetailsFragment__donate_s_month">월 %1$s 정기후원</string>
     <!-- Donate button label for one-time -->
-    <string name="BankTransferDetailsFragment__donate_s">%1$s 후원</string>
     <!-- Error label for IBAN field when number is too short -->
-    <string name="BankTransferDetailsFragment__iban_is_too_short">IBAN이 너무 짧습니다</string>
     <!-- Error label for IBAN field when number is too long -->
-    <string name="BankTransferDetailsFragment__iban_is_too_long">IBAN이 너무 깁니다</string>
     <!-- Error label for IBAN field when country is not supported -->
-    <string name="BankTransferDetailsFragment__iban_country_code_is_not_supported">IBAN 국가 코드가 지원되지 않습니다.</string>
     <!-- Error label for IBAN field when number is invalid -->
-    <string name="BankTransferDetailsFragment__invalid_iban">유효하지 않은 IBAN</string>
     <!-- Error label for name field when name is not at least three characters long (Stripe API enforced minimum) -->
-    <string name="BankTransferDetailsFragment__minimum_3_characters">최소 3자 이상을 입력해 주세요</string>
     <!-- Error label for email field when email is not valid -->
-    <string name="BankTransferDetailsFragment__invalid_email_address">잘못된 이메일 주소입니다.</string>
 
     <!-- IdealTransferDetailsFragment -->
     <!-- Title of the screen, displayed in the toolbar -->
-    <string name="IdealTransferDetailsFragment__ideal">iDEAL</string>
     <!-- Subtitle of the screen, displayed below the toolbar. Placeholder is for \'learn more\' -->
-    <string name="IdealTransferDetailsFragment__enter_your_bank">이름과 이메일을 입력하세요. Stripe에서 후원 관련 업데이트를 이메일로 보내드립니다. %1$s</string>
     <!-- Subtitle of the screen, displayed below the toolbar. Placeholder is for \'learn more\' -->
-    <string name="IdealTransferDetailsFragment__enter_your_bank_details_one_time">은행 세부 정보를 입력하세요. Signal은 개인 정보를 수집하거나 저장하지 않습니다. %1$s</string>
     <!-- Subtitle learn-more button displayed inline with the subtitle text -->
-    <string name="IdealTransferDetailsFragment__learn_more">자세히 알아보기</string>
     <!-- Hint label for text entry box for name on bank account -->
-    <string name="IdealTransferDetailsFragment__name_on_bank_account">계좌 소유자 이름</string>
     <!-- Hint label for text entry box for email -->
-    <string name="IdealTransferDetailsFragment__email">이메일</string>
     <!-- Default label for bank selection -->
-    <string name="IdealTransferDetailsFragment__choose_your_bank">은행 선택하기</string>
     <!-- Dialog title shown when using iDEAL payment for setting up a monthly donation -->
-    <string name="IdealTransferDetailsFragment__confirm_your_donation_with_ideal_wero">Confirm your donation with iDEAL | Wero</string>
     <!-- Dialog warning shown when using iDEAL payment for setting up a monthly donation. Placeholder is donation amount.Z -->
-    <string name="IdealTransferDetailsFragment__to_setup_your_recurring_donation">정기후원을 설정하려면 \'계속\'을 탭하여 은행을 통해 €0,01 청구를 확인해 주세요. 확인이 완료되면 청구 금액은 자동으로 환불되며, 내 계좌에서 월 %1$s 정기후원이 승인됩니다.</string>
     <!-- Dialog button shown when using iDEAL payment for setting up a monthly donation to continue with the donation -->
-    <string name="IdealTransferDetailsFragment__continue">계속</string>
 
     <!-- IdealTransferDetailsBankSelectionDialogFragment -->
     <!-- Title of the screen, displayed in the toolbar -->
-    <string name="IdealTransferDetailsBankSelectionDialogFragment__choose_your_bank">은행 선택하기</string>
 
     <!-- Title of bottom sheet for finding account information -->
     <string name="FindAccountInfoSheet__find_your_account_information">계좌 정보를 찾으세요</string>
@@ -7506,36 +7163,22 @@
     <string name="FindAccountInfoSheet__look_for_your_iban_at">은행 입출금 내역서 상단에 있는 IBAN을 찾으세요. IBAN은 최대 34자로 구성됩니다. 입력한 이름이 은행 계좌상의 전체 이름과 일치해야 합니다. 더 자세한 정보는 은행에 문의하세요.</string>
 
     <!-- Title of donation pending sheet displayed after making a bank transfer -->
-    <string name="DonationPendingBottomSheet__donation_pending">후원 처리 대기 중</string>
     <!-- Top text block of donation pending sheet displayed after subscribing via a bank transfer. Placeholder is the badge name. -->
-    <string name="DonationPendingBottomSheet__your_monthly_donation_is_pending">월 정기후원이 대기 중입니다. 후원이 완료되면 프로필에 %1$s 배지를 표시할 수 있습니다.</string>
     <!-- Top text block of donation pending sheet displayed after one-time donation via a bank transfer. Placeholder is the badge name. -->
-    <string name="DonationPendingBottomSheet__your_one_time_donation_is_pending">일회성 기부가 처리 대기 중입니다. 후원이 완료되면 프로필에 %1$s 배지를 표시할 수 있어요.</string>
     <!-- Bottom text block of donation pending sheet displayed after donating via a bank transfer. Placeholder is for learn more. -->
-    <string name="DonationPendingBottomSheet__bank_transfers_usually_take">계좌 이체를 처리하는 데 영업일 기준 1~14일이 걸릴 수 있습니다. %1$s</string>
     <!-- Learn more text for donation pending sheet displayed after donating via a bank transfer. -->
-    <string name="DonationPendingBottomSheet__learn_more">자세히 알아보기</string>
     <!-- Confirmation button for donation pending sheet displayed after donating via a bank transfer. -->
-    <string name="DonationPendingBottomSheet__done">확인</string>
 
     <!-- Title of donation error sheet displayed after making a bank transfer that fails -->
-    <string name="DonationErrorBottomSheet__donation_couldnt_be_processed">후원을 처리하지 못했어요</string>
     <!-- Text block of donation error sheet displayed after making a bank transfer that fails -->
-    <string name="DonationErrorBottomSheet__were_having_trouble">계좌 이체를 진행하는 중에 문제가 발생했습니다. 요금은 청구되지 않았습니다. 다른 결제 수단을 시도하거나 은행에 자세한 정보를 문의하세요.</string>
     <!-- Button label for retry button of donation error sheet displayed after making a bank transfer that fails -->
-    <string name="DonationErrorBottomSheet__try_again">다시 시도해 주세요.</string>
     <!-- Button label for not now button of donation error sheet displayed after making a bank transfer that fails -->
-    <string name="DonationErrorBottomSheet__not_now">나중에</string>
 
     <!-- Title of \'Donation Complete\' sheet displayed after a bank transfer completes and the badge is redeemed -->
-    <string name="DonationCompletedBottomSheet__donation_complete">후원 완료</string>
     <!-- Text block of \'Donation Complete\' sheet displayed after a bank transfer completes and the badge is redeemed -->
-    <string name="DonationCompleteBottomSheet__your_bank_transfer_was_received">계좌 이체가 완료되었습니다. 후원 사실을 알리고 싶다면 프로필에 이 배지를 표시해 보세요.</string>
     <!-- Button text of \'Donation Complete\' sheet displayed after a bank transfer completes and the badge is redeemed to dismiss sheet -->
-    <string name="DonationCompleteBottomSheet__done">확인</string>
 
     <!-- StripePaymentInProgressFragment -->
-    <string name="StripePaymentInProgressFragment__cancelling">취소하는 중…</string>
 
     <!-- The title of a bottom sheet dialog that tells the user we temporarily can\'t process their contacts. -->
     <string name="CdsTemporaryErrorBottomSheet_title">너무 많은 연락처를 처리했습니다.</string>
@@ -7568,7 +7211,6 @@
     <!-- YourInformationIsPrivateBottomSheet -->
     <string name="YourInformationIsPrivateBottomSheet__your_information_is_private">개인 정보는 비공개로 유지됩니다.</string>
     <string name="YourInformationIsPrivateBottomSheet__signal_does_not_collect">Signal은 후원 시 사용자의 개인정보를 수집하거나 저장하지 않습니다.</string>
-    <string name="YourInformationIsPrivateBottomSheet__we_use_stripe">후원금 결제는 Stripe를 통해 처리됩니다. Signal은 사용자가 Stripe에 제공하는 어떠한 정보에도 액세스하지 않으며, 이를 보관 또는 저장하지 않습니다.</string>
     <string name="YourInformationIsPrivateBottomSheet__signal_does_not_and_cannot">또한 후원 내역을 Signal 계정과 연결할 수 없으며, 실제로도 연결되지 않습니다.\n\n</string>
     <string name="YourInformationIsPrivateBottomSheet__thank_you">지원해 주셔서 감사합니다!</string>
 
@@ -7586,8 +7228,6 @@
     <string name="Registration_country_code_entry_hint">+0</string>
 
     <!-- PaypalCompleteOrderBottomSheet -->
-    <string name="PaypalCompleteOrderBottomSheet__donate">후원하기</string>
-    <string name="PaypalCompleteOrderBottomSheet__payment">결제</string>
 
     <!-- ChatFilter -->
     <!-- Displayed in a pill at the top of the chat list when it is filtered by unread messages -->
@@ -8080,15 +7720,10 @@
     <string name="GrantFullScreenIntentPermission_bottomsheet_step2">2. %1$s 전체 화면 알림 허용</string>
 
     <!-- Bottom sheet dialog shown when a monthly donation fails to renew, title for dialog -->
-    <string name="MonthlyDonationCanceled__title">월 정기후원이 취소되었어요</string>
     <!-- Bottom sheet dialog shown when a monthly donation fails to renew, body for dialog. First placeholder is a payment related error message. Second placeholder is \'learn more\' -->
-    <string name="MonthlyDonationCanceled__message">월 정기후원이 취소되었습니다. %1$s\n\n배지가 더는 프로필에 표시되지 않습니다. %2$s</string>
     <!-- Bottom sheet dialog shown when a monthly donation fails to renew, learn more used in placeholder for body for dialog. -->
-    <string name="MonthlyDonationCanceled__learn_more">자세히 알아보기</string>
     <!-- Bottom sheet dialog shown when a monthly donation fails to renew, primary button to renew subscription with new data -->
-    <string name="MonthlyDonationCanceled__renew_button">구독 갱신</string>
     <!-- Bottom sheet dialog shown when a monthly donation fails to renew, second button to dismiss the dialog entirely -->
-    <string name="MonthlyDonationCanceled__not_now_button">나중에</string>
 
     <!-- FindByActivity -->
     <!-- Title of activity when finding by username -->
@@ -8177,7 +7812,6 @@
 
     <!-- BackupAlertBottomSheet -->
     <!-- Sheet title when media backups have been disabled -->
-    <string name="BackupAlertBottomSheet__your_backups_subscription_expired">백업 구독 만료</string>
     <!-- Sheet body part 1 when media backups have been disabled. Placeholder is the number of days until deletion. -->
     <plurals name="BackupAlertBottomSheet__your_backup_plan_has_expired">
         <item quantity="other">현재 결제 방법으로 갱신할 수 없어 백업 플랜이 만료되었습니다. %1$d일 후 백업의 미디어가 삭제됩니다.</item>
@@ -8367,21 +8001,15 @@
     <!-- Displayed as the user\'s payment method as a label in a preference row -->
     <string name="BackupsTypeSettingsFragment__credit_or_debit_card">신용카드 또는 체크카드</string>
     <!-- Displayed as the user\'s payment method as a label in a preference row -->
-    <string name="BackupsTypeSettingsFragment__iDEAL">iDEAL</string>
     <!-- Displayed as the user\'s payment method as a label in a preference row -->
-    <string name="BackupsTypeSettingsFragment__google_pay">Google Pay</string>
     <!-- Displayed as the user\'s payment method as a label in a preference row -->
-    <string name="BackupsTypeSettingsFragment__bank_transfer">계좌 이체</string>
     <!-- Displayed as the user\'s payment method as a label in a preference row -->
-    <string name="BackupsTypeSettingsFragment__paypal">PayPal</string>
     <!-- Displayed as the user\'s payment method as a label in a preference row -->
     <string name="BackupsTypeSettingsFragment__unknown">알 수 없음</string>
     <!-- Row title for entering payment history -->
-    <string name="BackupsTypeSettingsFragment__payment_history">결제 기록</string>
     <!-- Row description detailing renewal information. First placeholder is formatted price. Second placeholder is formatted date. -->
     <string name="BackupsTypeSettingsFragment__s_month_renews_s">%1$s/월 · %2$s 갱신</string>
     <!-- Row title to change or cancel subscription -->
-    <string name="BackupsTypeSettingsFragment__change_or_cancel_subscription">구독 변경 또는 취소</string>
 
     <!-- GooglePlayServicesAvailability -->
     <!-- Dialog title when Google Play services are missing from the device -->
@@ -8528,7 +8156,6 @@
     <!-- Text shown in a popup indicating that the user needs to enter their screen lock -->
     <string name="RemoteBackupsSettingsFragment__authenticatino_required">인증 필요</string>
     <!-- Row label to launch payment history screen -->
-    <string name="RemoteBackupsSettingsFragment__payment_history">결제 기록</string>
     <!-- Section header for backup information -->
     <string name="RemoteBackupsSettingsFragment__backup_details">백업 세부 정보</string>
     <!-- Row label to allow the restoration of a backup to occur while on cellular connection -->
@@ -8961,7 +8588,6 @@
     <!-- Primary action button label when selecting paid tier when Google Play API isn\'t available -->
     <string name="MessageBackupsTypeSelectionScreen__more_about_this_plan">이 플랜에 관해 자세히 알아보기</string>
     <!-- Secondary action button label when selecting a backup tier with a current selection -->
-    <string name="MessageBackupsTypeSelectionScreen__cancel_subscription">구독 취소</string>
     <!-- MessageBackupsType block amount for free tier -->
     <string name="MessageBackupsTypeSelectionScreen__free">무료</string>
     <!-- MessageBackupsType block amount for paid tier when no pricing is available -->
@@ -9003,7 +8629,6 @@
     <!-- Action button label to cancel subscription and download later -->
     <string name="ConfirmBackupCancellationDialog__confirm_and_download_later">확인 및 나중에 다운로드</string>
     <!-- Action button label to keep current subscription -->
-    <string name="ConfirmBackupCancellationDialog__keep_subscription">구독 유지</string>
 
     <!-- Accessible content description for the reminder view, describing the icon in the view. -->
     <string name="ReminderView_icon_content_description">미리 알림 아이콘</string>

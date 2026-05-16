@@ -24,7 +24,6 @@
   <!-- Removed by excludeNonTranslatables <string name="donate_faq_url" translatable="false">https://support.signal.org/hc/articles/360031949872#donate</string> -->
 
     <!-- First placeholder is productId, second placeholder is app package -->
-    <string name="backup_subscription_management_url">https://play.google.com/store/account/subscriptions?sku=%1$s&amp;package=%2$s</string>
 
     <string name="yes">はい</string>
     <string name="no">いいえ</string>
@@ -158,7 +157,6 @@
 
     <!-- Fcm notifications -->
     <!-- Notification we show when there may be messages for you, but we cannot connect to the server to check -->
-    <string name="FcmFetchManager__you_may_have_messages">新着メッセージがあるかもしれません</string>
 
     <!-- BlockedUsersActivity -->
     <string name="BlockedUsersActivity__blocked_users">ブロック中のユーザー</string>
@@ -172,45 +170,26 @@
 
     <!-- CreditCardFragment -->
     <!-- Title of fragment -->
-    <string name="CreditCardFragment__credit_or_debit_card">クレジットカードまたはデビットカード</string>
     <!-- Explanation of how to fill in the form and a note about pii, displayed above the credit card text fields -->
-    <string name="CreditCardFragment__enter_your_card_details">以下にカード情報を入力してください。Signalがお客様の個人情報を収集したり保存したりすることはありません。</string>
     <!-- Displayed as a hint in the card number text field -->
-    <string name="CreditCardFragment__card_number">カード番号</string>
     <!-- Displayed as a hint in the card expiry text field -->
-    <string name="CreditCardFragment__mm_yy">月／年</string>
     <!-- Displayed as a hint in the card cvv text field -->
-    <string name="CreditCardFragment__cvv">CVV</string>
     <!-- Error displayed under the card number text field when there is an invalid card number entered -->
-    <string name="CreditCardFragment__invalid_card_number">無効なカード番号です</string>
     <!-- Error displayed under the card expiry text field when the card is expired -->
-    <string name="CreditCardFragment__card_has_expired">カードの有効期限が切れています</string>
     <!-- Error displayed under the card cvv text field when the cvv is too short -->
-    <string name="CreditCardFragment__code_is_too_short">セキュリティコードが短すぎます</string>
     <!-- Error displayed under the card cvv text field when the cvv is too long -->
-    <string name="CreditCardFragment__code_is_too_long">セキュリティコードが長すぎます</string>
     <!-- Error displayed under the card cvv text field when the cvv is invalid -->
-    <string name="CreditCardFragment__invalid_code">無効なセキュリティコードです</string>
     <!-- Error displayed under the card expiry text field when the expiry month is invalid -->
-    <string name="CreditCardFragment__invalid_month">無効な月です</string>
     <!-- Error displayed under the card expiry text field when the expiry is missing the year -->
-    <string name="CreditCardFragment__year_required">年の入力は必須です</string>
     <!-- Error displayed under the card expiry text field when the expiry year is invalid -->
-    <string name="CreditCardFragment__invalid_year">無効な年です</string>
     <!-- Button label to confirm credit card input and proceed with one-time payment -->
-    <string name="CreditCardFragment__donate_s">%1$s を寄付</string>
     <!-- Button label to confirm credit card input and proceed with subscription payment -->
-    <string name="CreditCardFragment__donate_s_month">%1$s／月を寄付</string>
     <!-- Button label to confirm credit card input and proceed with backups payment. Placeholder is formatted price. -->
-    <string name="CreditCardFragment__pay_s_month">%1$s／月を寄付</string>
 
     <!-- OneTimeDonationPreference -->
     <!-- Preference title with placeholder for amount. -->
-    <string name="OneTimeDonationPreference__one_time_s">今回のみ %1$s</string>
     <!-- Preference subtitle when donation is pending -->
-    <string name="OneTimeDonationPreference__donation_pending">寄付の手続き中です</string>
     <!-- Preference subtitle when donation is processing -->
-    <string name="OneTimeDonationPreference__donation_processing">寄付の処理中です</string>
 
     <!-- BlockUnblockDialog -->
     <string name="BlockUnblockDialog_block_and_leave_s">%1$s をブロックして抜けますか？</string>
@@ -4115,7 +4094,6 @@
     <string name="preferences__slow">遅い</string>
     <string name="preferences__help">ヘルプ</string>
     <string name="preferences__advanced">詳細設定</string>
-    <string name="preferences__donate_to_signal">Signalへの寄付</string>
     <!-- Preference label for making one-time donations to Signal -->
     <string name="preferences__privacy">プライバシー</string>
     <!-- Preference label for stories -->
@@ -4303,9 +4281,6 @@
 
     <!-- Payments -->
     <string name="PaymentsActivityFragment__all_activity">すべてのアクティビティ</string>
-    <string name="PaymentsAllActivityFragment__all">すべて</string>
-    <string name="PaymentsAllActivityFragment__sent">送金</string>
-    <string name="PaymentsAllActivityFragment__received">受信</string>
 
     <!-- Displayed on a welcome screen for payments -->
     <string name="PaymentsHomeFragment_introducing_payments">決済機能のご紹介</string>
@@ -4314,58 +4289,28 @@
     <string name="PaymentsHomeFragment__activating_payments">決済機能を有効化しています…</string>
     <string name="PaymentsHomeFragment__restore_payments_account">決済口座を復元</string>
     <string name="PaymentsHomeFragment__no_recent_activity_yet">最近の取引はありません</string>
-    <string name="PaymentsHomeFragment__recent_activity">最近の取引</string>
     <string name="PaymentsHomeFragment__see_all">すべて表示</string>
     <string name="PaymentsHomeFragment__add_funds">入金</string>
     <string name="PaymentsHomeFragment__send">送金</string>
-    <string name="PaymentsHomeFragment__sent_s">送金 %1$s</string>
-    <string name="PaymentsHomeFragment__received_s">着金 %1$s</string>
     <string name="PaymentsHomeFragment__transfer_to_exchange">取引所へ振替</string>
     <string name="PaymentsHomeFragment__currency_conversion">通貨換算</string>
     <string name="PaymentsHomeFragment__deactivate_payments">決済機能を停止</string>
     <string name="PaymentsHomeFragment__recovery_phrase">リカバリーフレーズ</string>
     <string name="PaymentsHomeFragment__help">ヘルプ</string>
-    <string name="PaymentsHomeFragment__coin_cleanup_fee">コインクリーンアップ手数料</string>
-    <string name="PaymentsHomeFragment__sent_payment">送金した決済</string>
-    <string name="PaymentsHomeFragment__received_payment">着金した決済</string>
-    <string name="PaymentsHomeFragment__processing_payment">決済を処理しています</string>
-    <string name="PaymentsHomeFragment__unknown_amount">---</string>
-    <string name="PaymentsHomeFragment__currency_conversion_not_available">通貨換算は利用できません</string>
-    <string name="PaymentsHomeFragment__cant_display_currency_conversion">通貨換算を表示できません。携帯電話のインターネット接続を確認して、再度試してください。</string>
-    <string name="PaymentsHomeFragment__payments_is_not_available_in_your_region">あなたの地域では決済機能は利用できません。</string>
-    <string name="PaymentsHomeFragment__could_not_enable_payments">決済機能を有効にできませんでした。あとで再度試してください。</string>
-    <string name="PaymentsHomeFragment__deactivate_payments_question">決済機能を停止しますか？</string>
-    <string name="PaymentsHomeFragment__you_will_not_be_able_to_send">決済機能を停止すると、SignalでMobileCoinを利用できなくなります。</string>
-    <string name="PaymentsHomeFragment__deactivate">停止する</string>
-    <string name="PaymentsHomeFragment__continue">続ける</string>
-    <string name="PaymentsHomeFragment__balance_is_not_currently_available">残高は現在利用できません。</string>
-    <string name="PaymentsHomeFragment__payments_deactivated">決済機能を停止しました。</string>
-    <string name="PaymentsHomeFragment__payment_failed">決済できませんでした</string>
-    <string name="PaymentsHomeFragment__details">詳細</string>
   <!-- Removed by excludeNonTranslatables <string name="PaymentsHomeFragment__learn_more__activate_payments" translatable="false">https://support.signal.org/hc/articles/360057625692#payments_activate</string> -->
     <!-- Displayed as a description in a dialog when the user tries to activate payments -->
-    <string name="PaymentsHomeFragment__you_can_use_signal_to_send_and">MobileCoinの送受信にはSignalをご利用ください。すべての決済は、MobileCoinsとMobileCoin Walletの利用規約に準じます。おこなった決済が取り消されたり、残高の回復ができないといった問題などが発生する可能性があります。 </string>
-    <string name="PaymentsHomeFragment__activate">有効にする</string>
-    <string name="PaymentsHomeFragment__view_mobile_coin_terms">MobileCoinの利用規約</string>
-    <string name="PaymentsHomeFragment__payments_not_available">Signalの決済機能は、利用できなくなりました。取引所への振替は可能ですが、送金や受け取り、入金はできません。</string>
 
   <!-- Removed by excludeNonTranslatables <string name="PaymentsHomeFragment__mobile_coin_terms_url" translatable="false">https://www.mobilecoin.com/terms-of-use.html</string> -->
     <!-- Alert dialog title which shows up after a payment to turn on payment lock -->
-    <string name="PaymentsHomeFragment__turn_on">今後の送信のために支払いのロックを有効にしますか？</string>
     <!-- Alert dialog description for why payment lock should be enabled before sending payments -->
-    <string name="PaymentsHomeFragment__add_an_additional_layer">送金の際にAndroidの画面ロックまたは指紋認証を要求することで、さらにセキュリティーを強化することができます。</string>
     <!-- Alert dialog button to enable payment lock -->
     <string name="PaymentsHomeFragment__enable">有効にする</string>
     <!-- Alert dialog button to not enable payment lock for now -->
     <string name="PaymentsHomeFragment__not_now">今はしない</string>
     <!-- Alert dialog title which shows up to update app to send payments -->
-    <string name="PaymentsHomeFragment__update_required">アップデートが必要です</string>
     <!-- Alert dialog description that app update is required to send payments-->
-    <string name="PaymentsHomeFragment__an_update_is_required">送金や受け取りを継続し、最新の決済残高を表示するためにはアップデートが必要です。</string>
     <!-- Alert dialog button to cancel -->
-    <string name="PaymentsHomeFragment__cancel">キャンセル</string>
     <!-- Alert dialog button to update now -->
-    <string name="PaymentsHomeFragment__update_now">アップデートする</string>
 
 
     <!-- PaymentsSecuritySetupFragment -->
@@ -4380,46 +4325,26 @@
     <!-- Option to cancel -->
     <string name="PaymentsSecuritySetupFragment__not_now">今はしない</string>
     <!-- Dialog title to confirm skipping the step -->
-    <string name="PaymentsSecuritySetupFragment__skip_this_step">この手順をスキップしますか?</string>
     <!-- Dialog description to let users know why payment lock is required -->
-    <string name="PaymentsSecuritySetupFragment__skipping_this_step">この手順をスキップすると、第三者があなたの携帯電話を使用して資金の送金やリカバリーフレーズを閲覧できる可能性があります。</string>
     <!-- Dialog option to cancel -->
-    <string name="PaymentsSecuritySetupFragment__cancel">キャンセル</string>
     <!-- Dialog option to skip -->
-    <string name="PaymentsSecuritySetupFragment__skip">スキップ</string>
 
     <!-- PaymentsAddMoneyFragment -->
     <string name="PaymentsAddMoneyFragment__add_funds">入金</string>
     <string name="PaymentsAddMoneyFragment__your_wallet_address">あなたのウォレットアドレス</string>
     <string name="PaymentsAddMoneyFragment__copy">コピー</string>
-    <string name="PaymentsAddMoneyFragment__copied_to_clipboard">クリップボードにコピーしました</string>
     <string name="PaymentsAddMoneyFragment__to_add_funds">入金するには、あなたのウォレットアドレスにMobileCoinを送信します。MobileCoinを扱っている取引所の、あなたの口座から取引を開始し、QRコードをスキャンするか、あなたのウォレットアドレスをコピーしてください。</string>
   <!-- Removed by excludeNonTranslatables <string name="PaymentsAddMoneyFragment__learn_more__information" translatable="false">https://support.signal.org/hc/articles/360057625692#payments_transfer_from_exchange</string> -->
 
     <!-- PaymentsDetailsFragment -->
     <string name="PaymentsDetailsFragment__details">詳細</string>
     <string name="PaymentsDetailsFragment__status">状態</string>
-    <string name="PaymentsDetailsFragment__submitting_payment">決済を送信しています…</string>
-    <string name="PaymentsDetailsFragment__processing_payment">決済を処理しています…</string>
-    <string name="PaymentsDetailsFragment__payment_complete">決済を完了しました</string>
-    <string name="PaymentsDetailsFragment__payment_failed">決済できませんでした</string>
     <string name="PaymentsDetailsFragment__network_fee">ネットワーク手数料</string>
     <string name="PaymentsDetailsFragment__sent_by">送金者</string>
-    <string name="PaymentsDetailsFragment__sent_to_s">%1$s に送金済み</string>
-    <string name="PaymentsDetailsFragment__you_on_s_at_s">あなた (%1$s %2$s)</string>
-    <string name="PaymentsDetailsFragment__s_on_s_at_s">%1$s (%2$s %3$s)</string>
     <!-- Prefix to a name to indicate who a payment was sent to -->
-    <string name="PaymentsDetailsFragment__to">送金先</string>
-    <string name="PaymentsDetailsFragment__from">送金元</string>
     <string name="PaymentsDetailsFragment__information">決済金額や決済時刻などの取引の詳細は、MobileCoin台帳に記載されます。</string>
-    <string name="PaymentsDetailsFragment__coin_cleanup_fee">コインクリーンアップ手数料</string>
-    <string name="PaymentsDetailsFragment__coin_cleanup_information">「コインクリーンアップ手数料」は、お手持ちのコインを組み合わせて取引を完了できない場合に発生します。クリーンアップすることで、送金を続けることができます。</string>
-    <string name="PaymentsDetailsFragment__no_details_available">この取引にこれ以上の情報はありません</string>
   <!-- Removed by excludeNonTranslatables <string name="PaymentsDetailsFragment__learn_more__information" translatable="false">https://support.signal.org/hc/articles/360057625692#payments_details</string> -->
   <!-- Removed by excludeNonTranslatables <string name="PaymentsDetailsFragment__learn_more__cleanup_fee" translatable="false">https://support.signal.org/hc/articles/360057625692#payments_details_fees</string> -->
-    <string name="PaymentsDetailsFragment__sent_payment">送金した決済</string>
-    <string name="PaymentsDetailsFragment__received_payment">着金した決済</string>
-    <string name="PaymentsDeatilsFragment__payment_completed_s">%1$sに決済完了</string>
     <string name="PaymentsDetailsFragment__block_number">ブロック番号</string>
 
     <!-- PaymentsTransferFragment -->
@@ -4428,13 +4353,6 @@
     <string name="PaymentsTransferFragment__to_scan_or_enter_wallet_address">振替先: スキャンするかウォレットアドレスを入力してください</string>
     <string name="PaymentsTransferFragment__you_can_transfer">MobileCoinの振替は、取引所が提供するウォレットアドレスへの送金により行います。ウォレットアドレスは、一般的にQRコードの下にある文字列です。</string>
     <string name="PaymentsTransferFragment__next">次へ</string>
-    <string name="PaymentsTransferFragment__invalid_address">無効なアドレスです</string>
-    <string name="PaymentsTransferFragment__check_the_wallet_address">振替先のウォレットアドレスを確認して、再度試してください。</string>
-    <string name="PaymentsTransferFragment__you_cant_transfer_to_your_own_signal_wallet_address">あなた自身のSignalのウォレットアドレスには振替できません。取引所のあなたの口座のウォレットアドレスを入力してください。</string>
-    <string name="PaymentsTransferFragment__to_scan_a_qr_code_signal_needs">QRコードをスキャンするには、Signalにカメラへのアクセス許可が必要です。</string>
-    <string name="PaymentsTransferFragment__signal_needs_the_camera_permission_to_capture_qr_code_go_to_settings">QRコードをスキャンするには、Signalにカメラへのアクセス許可が必要です。設定メニューの「アプリの権限」で「カメラ」を有効にしてください。</string>
-    <string name="PaymentsTransferFragment__to_scan_a_qr_code_signal_needs_access_to_the_camera">QRコードをスキャンするには、Signalにカメラへのアクセス許可が必要です。</string>
-    <string name="PaymentsTransferFragment__settings">設定</string>
 
     <!-- PaymentsTransferQrScanFragment -->
     <string name="PaymentsTransferQrScanFragment__scan_address_qr_code">アドレスQRコードのスキャン</string>
@@ -4444,7 +4362,6 @@
     <!-- Button text to request the payment from a user -->
     <string name="CreatePaymentFragment__request">請求する</string>
     <string name="CreatePaymentFragment__pay">送金</string>
-    <string name="CreatePaymentFragment__available_balance_s">利用可能残高: %1$s</string>
     <string name="CreatePaymentFragment__toggle_content_description">切り替え</string>
     <string name="CreatePaymentFragment__1">1</string>
     <string name="CreatePaymentFragment__2">2</string>
@@ -4457,10 +4374,8 @@
     <string name="CreatePaymentFragment__9">9</string>
     <string name="CreatePaymentFragment__decimal">.</string>
     <string name="CreatePaymentFragment__0">0</string>
-    <string name="CreatePaymentFragment__lt">&lt;</string>
     <string name="CreatePaymentFragment__backspace">バックスペース</string>
     <string name="CreatePaymentFragment__add_note">メモを追加</string>
-    <string name="CreatePaymentFragment__conversions_are_just_estimates">金額は概算であり、正確ではない場合があります。</string>
   <!-- Removed by excludeNonTranslatables <string name="CreatePaymentFragment__learn_more__conversions" translatable="false">https://support.signal.org/hc/articles/360057625692#payments_currency_conversion</string> -->
 
     <!-- EditNoteFragment -->
@@ -4470,26 +4385,10 @@
 
     <!-- ConfirmPaymentFragment -->
     <string name="ConfirmPayment__confirm_payment">決済を確認</string>
-    <string name="ConfirmPayment__network_fee">ネットワーク手数料</string>
-    <string name="ConfirmPayment__estimated_s">概算 %1$s</string>
     <!-- Prefix to a name to indicate who a payment will be sent to -->
-    <string name="ConfirmPayment__to">宛先</string>
-    <string name="ConfirmPayment__total_amount">合計金額</string>
-    <string name="ConfirmPayment__balance_s">残高: %1$s</string>
-    <string name="ConfirmPayment__submitting_payment">決済を送信しています…</string>
-    <string name="ConfirmPayment__processing_payment">決済を処理しています…</string>
-    <string name="ConfirmPayment__payment_complete">決済を完了しました</string>
-    <string name="ConfirmPayment__payment_failed">決済に失敗しました</string>
-    <string name="ConfirmPayment__payment_will_continue_processing">決済処理を続けます</string>
-    <string name="ConfirmPaymentFragment__invalid_recipient">無効な宛先です</string>
     <!-- Title of a dialog show when we were unable to present the user\'s screenlock before sending a payment -->
-    <string name="ConfirmPaymentFragment__failed_to_show_payment_lock">支払いのロックが表示できませんでした</string>
     <!-- Body of a dialog show when we were unable to present the user\'s screenlock before sending a payment -->
-    <string name="ConfirmPaymentFragment__you_enabled_payment_lock_in_the_settings">設定で支払いのロックを有効にしましたが、表示できません。</string>
     <!-- Button in a dialog that will take the user to the privacy settings -->
-    <string name="ConfirmPaymentFragment__go_to_settings">設定へ</string>
-    <string name="ConfirmPaymentFragment__this_person_has_not_activated_payments">この方は決済機能を有効にしていません。</string>
-    <string name="ConfirmPaymentFragment__unable_to_request_a_network_fee">ネットワーク手数料を取得できません。この決済を続けるには、OKをタップして再度試してください。</string>
 
     <!-- BiometricDeviceAuthentication -->
     <!-- Biometric/Device authentication prompt title -->
@@ -4501,7 +4400,6 @@
 
     <!-- SetCurrencyFragment -->
     <string name="SetCurrencyFragment__set_currency">通貨を設定</string>
-    <string name="SetCurrencyFragment__all_currencies">すべての通貨</string>
 
     <!-- **************************************** -->
     <!-- menus -->
@@ -5371,20 +5269,9 @@
     <!-- InfoCard -->
     <string name="payment_info_card_about_mobilecoin">MobileCoinについて</string>
     <string name="payment_info_card_mobilecoin_is_a_new_privacy_focused_digital_currency">MobileCoinは、プライバシーを重視した新しいデジタル通貨です。</string>
-    <string name="payment_info_card_adding_funds">入金</string>
-    <string name="payment_info_card_you_can_add_funds_for_use_in">ウォレットアドレスにMobileCoinを送信することで、Signalで使う口座に入金できます。</string>
-    <string name="payment_info_card_cashing_out">出金</string>
-    <string name="payment_info_card_you_can_cash_out_mobilecoin">MobileCoinを扱っている取引所では、その取引所のあなたの口座に振り込むだけで、いつでもMobileCoinを現金化することができます。</string>
     <string name="payment_info_card_hide_this_card">このカードを隠しますか？</string>
-    <string name="payment_info_card_hide">隠す</string>
     <!-- Title of save recovery phrase card -->
-    <string name="payment_info_card_save_recovery_phrase">リカバリーフレーズを保存する</string>
-    <string name="payment_info_card_your_recovery_phrase_gives_you">リカバリーフレーズは、決済口座を復元するもう一つの方法です。</string>
     <!-- Button in save recovery phrase card -->
-    <string name="payment_info_card_save_your_phrase">フレーズを保存する</string>
-    <string name="payment_info_card_update_your_pin">PINを更新してください</string>
-    <string name="payment_info_card_with_a_high_balance">残高が多い場合は、英数字のPINに更新して、口座の保護を強化するとよいでしょう。</string>
-    <string name="payment_info_card_update_pin">PINを更新</string>
 
   <!-- Removed by excludeNonTranslatables <string name="payment_info_card__learn_more__about_mobilecoin" translatable="false">https://support.signal.org/hc/articles/360057625692#payments_which_ones</string> -->
   <!-- Removed by excludeNonTranslatables <string name="payment_info_card__learn_more__adding_to_your_wallet" translatable="false">https://support.signal.org/hc/articles/360057625692#payments_transfer_from_exchange</string> -->
@@ -5396,44 +5283,28 @@
     <string name="DeactivateWalletFragment__its_recommended_that_you">決済機能を停止する前に、別のウォレットアドレスに残高を振り替えることをお勧めします。振り替えない残高は、決済機能を再開する場合、Signalにリンクされたウォレットに残ります。</string>
     <string name="DeactivateWalletFragment__transfer_remaining_balance">残高を振り替える</string>
     <string name="DeactivateWalletFragment__deactivate_without_transferring">振り替えずに停止する</string>
-    <string name="DeactivateWalletFragment__deactivate">停止する</string>
-    <string name="DeactivateWalletFragment__deactivate_without_transferring_question">振り替えずに停止しますか？</string>
-    <string name="DeactivateWalletFragment__your_balance_will_remain">残高は、決済機能を再開する場合、Signalにリンクされたウォレットに残ります。</string>
-    <string name="DeactivateWalletFragment__error_deactivating_wallet">ウォレットの停止でエラーが発生しました。</string>
   <!-- Removed by excludeNonTranslatables <string name="DeactivateWalletFragment__learn_more__we_recommend_transferring_your_funds" translatable="false">https://support.signal.org/hc/articles/360057625692#payments_deactivate</string> -->
 
     <!-- PaymentsRecoveryStartFragment -->
     <string name="PaymentsRecoveryStartFragment__recovery_phrase">リカバリーフレーズ</string>
     <string name="PaymentsRecoveryStartFragment__view_recovery_phrase">リカバリーフレーズの表示</string>
     <!-- Title in save recovery phrase screen -->
-    <string name="PaymentsRecoveryStartFragment__save_recovery_phrase">リカバリーフレーズを保存する</string>
-    <string name="PaymentsRecoveryStartFragment__enter_recovery_phrase">リカバリーフレーズの入力</string>
     <plurals name="PaymentsRecoveryStartFragment__your_balance_will_automatically_restore">
         <item quantity="other">Signalの再インストール時にSignal PINを確認すると、残高は自動で復元されます。また、あなた固有の%1$d語のリカバリーフレーズを使って、残高を復元することもできます。リカバリーフレーズは、書きとめて安全な場所に保管してください。</item>
     </plurals>
     <!-- Description in save recovery phrase screen which shows up when user has non zero balance -->
-    <string name="PaymentsRecoveryStartFragment__got_balance">残高があります！残高を復元するためのキーとなる、24単語のリカバリーフレーズを保存しましょう。</string>
     <!-- Description in save recovery phrase screen which shows up when user navigates from info card -->
-    <string name="PaymentsRecoveryStartFragment__time_to_save">24単語のリカバリーフレーズ（残高を復元するためのキー）を保存しましょう。</string>
-    <string name="PaymentsRecoveryStartFragment__your_recovery_phrase_is_a">あなたのリカバリーフレーズは%1$d語で、あなた固有のものです。口座の復元に使用してください。</string>
     <string name="PaymentsRecoveryStartFragment__start">開始する</string>
-    <string name="PaymentsRecoveryStartFragment__enter_manually">マニュアル入力</string>
     <string name="PaymentsRecoveryStartFragment__paste_from_clipboard">クリップボードから貼り付け</string>
     <!-- Alert dialog title which asks before going back if user wants to save recovery phrase -->
-    <string name="PaymentsRecoveryStartFragment__continue_without_saving">保存せずに続けますか？</string>
     <!-- Alert dialog description to let user know why recovery phrase needs to be saved -->
-    <string name="PaymentsRecoveryStartFragment__your_recovery_phrase">リカバリーフレーズがあれば、万一の時に残高を復元できます。保存することを強くお勧めします。</string>
     <!-- Alert dialog option to skip recovery phrase -->
-    <string name="PaymentsRecoveryStartFragment__skip_recovery_phrase">リカバリーフレーズをスキップする</string>
     <!-- Alert dialog option to cancel dialog-->
-    <string name="PaymentsRecoveryStartFragment__cancel">キャンセル</string>
 
     <!-- PaymentsRecoveryPasteFragment -->
     <string name="PaymentsRecoveryPasteFragment__paste_recovery_phrase">リカバリーフレーズを貼り付け</string>
     <string name="PaymentsRecoveryPasteFragment__recovery_phrase">リカバリーフレーズ</string>
     <string name="PaymentsRecoveryPasteFragment__next">次へ</string>
-    <string name="PaymentsRecoveryPasteFragment__invalid_recovery_phrase">無効なリカバリーフレーズです</string>
-    <string name="PaymentsRecoveryPasteFragment__make_sure">%1$d語を入力したか確認して、再度試してください。</string>
 
   <!-- Removed by excludeNonTranslatables <string name="PaymentsRecoveryStartFragment__learn_more__view" translatable="false">https://support.signal.org/hc/articles/360057625692#payments_wallet_view_passphrase</string> -->
   <!-- Removed by excludeNonTranslatables <string name="PaymentsRecoveryStartFragment__learn_more__restore" translatable="false">https://support.signal.org/hc/articles/360057625692#payments_wallet_restore_passphrase</string> -->
@@ -5443,38 +5314,24 @@
     <string name="PaymentsRecoveryPhraseFragment__edit">編集</string>
     <string name="PaymentsRecoveryPhraseFragment__your_recovery_phrase">あなたのリカバリーフレーズ</string>
     <string name="PaymentsRecoveryPhraseFragment__write_down_the_following_d_words">次の%1$d語を順番通り書きとめて、安全な場所に保管してください。</string>
-    <string name="PaymentsRecoveryPhraseFragment__make_sure_youve_entered">正しいフレーズを入力したか確認してください。</string>
     <string name="PaymentsRecoveryPhraseFragment__do_not_screenshot_or_send_by_email">スクリーンショットを使ったり、メールで送信しないでください。</string>
-    <string name="PaymentsRecoveryPhraseFragment__payments_account_restored">決済口座が復元されました。</string>
-    <string name="PaymentsRecoveryPhraseFragment__invalid_recovery_phrase">無効なリカバリーフレーズです</string>
-    <string name="PaymentsRecoveryPhraseFragment__make_sure_youve_entered_your_phrase_correctly_and_try_again">正しいフレーズを入力したか確認して、再度試してください。</string>
-    <string name="PaymentsRecoveryPhraseFragment__copy_to_clipboard">クリップボードにコピーしますか？</string>
-    <string name="PaymentsRecoveryPhraseFragment__if_you_choose_to_store">リカバリーフレーズを電子的に保管する場合は、信頼できる安全な場所で保管してください。</string>
     <string name="PaymentsRecoveryPhraseFragment__copy">コピー</string>
 
     <!-- PaymentsRecoveryPhraseConfirmFragment -->
     <string name="PaymentRecoveryPhraseConfirmFragment__confirm_recovery_phrase">リカバリーフレーズの確認</string>
     <string name="PaymentRecoveryPhraseConfirmFragment__enter_the_following_words">あなたのリカバリーフレーズから以下の単語を入力してください。</string>
-    <string name="PaymentRecoveryPhraseConfirmFragment__word_d">単語%1$d</string>
     <string name="PaymentRecoveryPhraseConfirmFragment__see_phrase_again">フレーズを再表示</string>
     <string name="PaymentRecoveryPhraseConfirmFragment__done">完了</string>
-    <string name="PaymentRecoveryPhraseConfirmFragment__recovery_phrase_confirmed">リカバリーフレーズを確認しました</string>
 
     <!-- PaymentsRecoveryEntryFragment -->
     <string name="PaymentsRecoveryEntryFragment__enter_recovery_phrase">リカバリーフレーズの入力</string>
-    <string name="PaymentsRecoveryEntryFragment__enter_word_d">単語%1$dを入力してください</string>
-    <string name="PaymentsRecoveryEntryFragment__word_d">単語%1$d</string>
     <string name="PaymentsRecoveryEntryFragment__next">次へ</string>
-    <string name="PaymentsRecoveryEntryFragment__invalid_word">無効な単語です</string>
 
     <!-- UnreadPayments -->
     <string name="UnreadPayments__s_sent_you_s">%1$s があなたに%2$s送金しました</string>
     <string name="UnreadPayments__d_new_payment_notifications">%1$d件の新しい決済通知</string>
 
     <!-- CanNotSendPaymentDialog -->
-    <string name="CanNotSendPaymentDialog__cant_send_payment">送金できません</string>
-    <string name="CanNotSendPaymentDialog__to_send_a_payment_to_this_user">このユーザーに送金するには、相手があなたからのメッセージ申請を受け入れる必要があります。メッセージ申請を行うため、メッセージを送信してください。</string>
-    <string name="CanNotSendPaymentDialog__send_a_message">メッセージを送信</string>
 
     <!-- GroupsInCommonMessageRequest -->
     <string name="GroupsInCommonMessageRequest__you_have_no_groups_in_common_with_this_person">この方と共通のグループがありません。望まないメッセージを避けるため、申請は慎重に確認してください。</string>
@@ -5908,13 +5765,9 @@
     <!-- ChatColorGradientTool -->
 
     <!-- Title text for prompt to donate. Shown in a popup at the bottom of the chat list. -->
-    <string name="Donate2022Q2Megaphone_donate_to_signal">Signalへの寄付</string>
     <!-- Body text for prompt to donate. Shown in a popup at the bottom of the chat list. -->
-    <string name="Donate2022Q2Megaphone_signal_is_powered_by_people_like_you">Signalはみなさんの寄付に支えられています。毎月寄付してくださる方にバッジを差し上げます。</string>
     <!-- Button label that brings a user to the donate screen. Shown in a popup at the bottom of the chat list. -->
-    <string name="Donate2022Q2Megaphone_donate">寄付する</string>
     <!-- Button label that dismissed a prompt to donate. Shown in a popup at the bottom of the chat list. -->
-    <string name="Donate2022Q2Megaphone_not_now">今はしない</string>
 
     <!-- EditReactionsFragment -->
     <string name="EditReactionsFragment__customize_reactions">リアクションのカスタマイズ</string>
@@ -5931,11 +5784,7 @@
     <string name="AddAProfilePhotoMegaphone__add_photo">画像を追加</string>
 
     <!-- BecomeASustainerMegaphone -->
-    <string name="BecomeASustainerMegaphone__become_a_sustainer">サポーターになりませんか</string>
     <!-- Displayed in the Become a Sustainer megaphone -->
-    <string name="BecomeASustainerMegaphone__signal_is_powered_by">Signalは、ユーザーの皆様によって支えられています。ぜひ寄付をして、バッジを手に入れましょう。</string>
-    <string name="BecomeASustainerMegaphone__not_now">今はしない</string>
-    <string name="BecomeASustainerMegaphone__donate">寄付する</string>
 
     <!-- KeyboardPagerFragment -->
     <string name="KeyboardPagerFragment_emoji">絵文字</string>
@@ -6276,15 +6125,9 @@
     <string name="MediaCaptureFragment_device_link_dialog_continue">続行</string>
 
 
-    <string name="BadgesOverviewFragment__my_badges">マイバッジ</string>
     <string name="BadgesOverviewFragment__featured_badge">表示するバッジ</string>
-    <string name="BadgesOverviewFragment__display_badges_on_profile">バッジをプロフィールに表示する</string>
-    <string name="BadgesOverviewFragment__failed_to_update_profile">プロフィールを更新できませんでした</string>
 
 
-    <string name="SelectFeaturedBadgeFragment__select_a_badge">バッジを選択してください</string>
-    <string name="SelectFeaturedBadgeFragment__you_must_select_a_badge">バッジを選択する必要があります</string>
-    <string name="SelectFeaturedBadgeFragment__failed_to_update_profile">プロフィールを更新できませんでした</string>
 
     <!-- Displayed on primary button in the bottom sheet as a call-to-action to launch into the donation flow -->
     <string name="ViewBadgeBottomSheetDialogFragment__donate_now">寄付する</string>
@@ -6297,29 +6140,21 @@
 
     <string name="ImageView__badge">バッジ</string>
 
-    <string name="SubscribeFragment__cancel_subscription">サブスクリプションを解除する</string>
     <string name="SubscribeFragment__confirm_cancellation">本当に解除しますか？</string>
     <string name="SubscribeFragment__you_wont_be_charged_again">再度課金されることはありません。課金期間が終了すると、バッジがプロフィールから削除されます。</string>
     <string name="SubscribeFragment__not_now">あとで</string>
     <string name="SubscribeFragment__confirm">解除する</string>
-    <string name="SubscribeFragment__update_subscription">サブスクリプションを更新する</string>
-    <string name="SubscribeFragment__your_subscription_has_been_cancelled">あなたのサブスクリプションは解除されました。</string>
-    <string name="SubscribeFragment__update_subscription_question">サブスクリプションを更新しますか？</string>
     <string name="SubscribeFragment__update">更新する</string>
     <string name="SubscribeFragment__you_will_be_charged_the_full_amount_s_of">本日、新しいサブスクリプション価格の全額 (%1$s) が請求されます。あなたのサブスクリプションは毎月更新されます。</string>
 
-    <string name="Subscription__s_per_month">%1$s/月</string>
     <!-- Shown when a subscription is active and isn\'t going to expire at the end of the term -->
-    <string name="Subscription__renews_s">更新 %1$s</string>
     <!-- Shown when a subscription is active and is going to expire at the end of the term -->
-    <string name="Subscription__expires_s">有効期限%1$s</string>
 
     <!-- Title of learn more sheet -->
     <string name="SubscribeLearnMoreBottomSheetDialogFragment__signal_is_different">Signalは、独立した非営利団体としてメッセージと通話のプライバシーを守ることに取り組んでいます。広告なし、トラッキングなし、監視なし。Signalのこの取り組みのために、ご支援をお願いします。</string>
     <!-- First small text blurb on learn more sheet -->
     <string name="SubscribeLearnMoreBottomSheetDialogFragment__private_messaging">No ads, no trackers, no surveillance. Donate today to support Signal.</string>
     <!-- Second small text blurb on learn more sheet -->
-    <string name="SubscribeLearnMoreBottomSheetDialogFragment__donate_and_get_badge">寄付をすると、プロフィールにバッジが表示（任意）されます</string>
     <!-- Third small text blurb on learn more sheet -->
     <string name="SubscribeLearnMoreBottomSheetDialogFragment__your_privacy_is_our_mission">皆さんのプライバシーを守ることが私たちの使命です</string>
     <!-- Fourth small text blurb on learn more sheet. Non-English translations should use "Signal is a nonprofit." instead, dropping the 501c3 reference. -->
@@ -6327,60 +6162,37 @@
 
     <string name="SubscribeThanksForYourSupportBottomSheetDialogFragment__thanks_for_your_support">ご支援をありがとうございます！</string>
     <!-- Subtext underneath the dialog title on the thanks sheet -->
-    <string name="SubscribeThanksForYourSupportBottomSheetDialogFragment__youve_earned_a_donor_badge">Signalからバッジを受け取りました！プロフィールに表示してSignalをサポートしていることを示しましょう。</string>
     <string name="SubscribeThanksForYourSupportBottomSheetDialogFragment__you_can_also">また、</string>
-    <string name="SubscribeThanksForYourSupportBottomSheetDialogFragment__become_a_montly_sustainer">月次サポーターになることもできます。</string>
     <string name="SubscribeThanksForYourSupportBottomSheetDialogFragment__display_on_profile">プロフィールに表示する</string>
-    <string name="SubscribeThanksForYourSupportBottomSheetDialogFragment__make_featured_badge">このバッジを表示する</string>
     <string name="SubscribeThanksForYourSupportBottomSheetDialogFragment__continue">続ける</string>
     <string name="ThanksForYourSupportBottomSheetFragment__when_you_have_more">複数のバッジを持っている場合は、自分のプロフィールに表示するバッジを選ぶことができます。</string>
 
-    <string name="BecomeASustainerFragment__get_badges">Signalをサポートして、プロフィールにバッジをつけましょう。</string>
-    <string name="BecomeASustainerFragment__signal_is_a_non_profit">Signalは広告主や投資家を持たない非営利団体で、ユーザーの皆様によって支えられています。</string>
 
     <!-- Button label for creating a donation -->
-    <string name="ManageDonationsFragment__donate_to_signal">Signalへの寄付</string>
     <!-- Heading for more area of manage subscriptions page -->
-    <string name="ManageDonationsFragment__more">その他</string>
     <!-- Heading for receipts area of manage subscriptions page -->
     <!-- Heading for my subscription area of manage subscriptions page -->
-    <string name="ManageDonationsFragment__my_support">マイサポート</string>
-    <string name="ManageDonationsFragment__manage_subscription">サブスクリプションを管理する</string>
     <!-- Label for Donation Receipts button -->
-    <string name="ManageDonationsFragment__donation_receipts">寄付の領収書</string>
-    <string name="ManageDonationsFragment__badges">バッジ</string>
     <!-- Label that externally links to Signal Donor FAQ page -->
-    <string name="ManageDonationsFragment__subscription_faq">寄付についてのよくある質問</string>
     <!-- Preference heading for other ways to donate -->
-    <string name="ManageDonationsFragment__other_ways_to_give">その他の支援の方法</string>
     <!-- Preference label to launch badge gifting -->
-    <string name="ManageDonationsFragment__donate_for_a_friend">友達に代わって寄付する</string>
     <!-- Dialog title shown when a donation requires verifying/confirmation outside of the app and the user hasn\'t done that yet -->
-    <string name="ManageDonationsFragment__couldnt_confirm_donation">寄付を確認できませんでした</string>
     <!-- Dialog message shown when a monthly donation requires verifying/confirmation outside of the app and the user hasn\'t done that yet, placeholder is money amount -->
-    <string name="ManageDonationsFragment__your_monthly_s_donation_couldnt_be_confirmed_ideal_wero">Your %1$s/month donation couldn\'t be confirmed. Check your banking app to approve your iDEAL | Wero payment.</string>
     <!-- Dialog message shown when a one-time donation requires verifying/confirmation outside of the app and the user hasn\'t done that yet, placeholder is money amount -->
-    <string name="ManageDonationsFragment__your_one_time_s_donation_couldnt_be_confirmed_ideal_wero">Your one-time %1$s donation couldn\'t be confirmed. Check your banking app to approve your iDEAL | Wero payment.</string>
 
-    <string name="Boost__enter_custom_amount">金額を入力してください</string>
     <!-- Error label when the amount is smaller than what we can accept -->
-    <string name="Boost__the_minimum_amount_you_can_donate_is_s">最小の寄付金額は%1$sです</string>
 
     <string name="MySupportPreference__s_per_month">%1$s/月</string>
     <string name="MySupportPreference__renews_s">更新 %1$s</string>
     <!-- Subtitle shown when processing a donation transaction -->
     <string name="MySupportPreference__processing_transaction">処理しています…</string>
     <!-- Displayed on "My Support" screen when user badge failed to be added to their account -->
-    <string name="MySupportPreference__couldnt_add_badge_s">バッジを追加できませんでした。%1$s</string>
     <string name="MySupportPreference__please_contact_support">サポートにお問い合わせください。</string>
     <!-- Displayed as a subtitle on a row in the Manage Donations screen when payment for a donation is pending -->
-    <string name="MySupportPreference__payment_pending">決済手続き中</string>
     <!-- Displayed as a dialog message when clicking on a donation row that is pending. Placeholder is a formatted fiat amount -->
-    <string name="MySupportPreference__your_bank_transfer_of_s">%1$sの銀行振込が手続き中です。銀行振り込みの場合、完了するまで1～14日かかる場合があります。  </string>
     <!-- Displayed in the pending help dialog, used to launch user to more details about bank transfers -->
     <string name="MySupportPreference__learn_more">詳しく見る</string>
     <!-- Displayed when a subscription refresh is being performed -->
-    <string name="MySupportPreference__checking_subscription">サブスクリプションを確認中…</string>
 
     <!-- Title of dialog telling user they need to update signal as it expired -->
     <string name="UpdateSignalExpiredDialog__title">Signalをアップデートしてください</string>
@@ -6401,126 +6213,66 @@
     <string name="ReregisterSignalDialog__cancel_action">キャンセル</string>
 
     <!-- Title of expiry sheet when boost badge falls off profile unexpectedly. -->
-    <string name="ExpiredBadgeBottomSheetDialogFragment__boost_badge_expired">ブーストバッジの有効期限が切れています</string>
     <!-- Displayed in the bottom sheet if a monthly donation badge unexpectedly falls off the user\'s profile -->
-    <string name="ExpiredBadgeBottomSheetDialogFragment__monthly_donation_cancelled">毎月の寄付がキャンセルされました</string>
     <!-- Displayed in the bottom sheet when a boost badge expires -->
-    <string name="ExpiredBadgeBottomSheetDialogFragment__your_boost_badge_has_expired_and">ブーストバッジの有効期限が切れたため、プロフィールには表示されません。</string>
-    <string name="ExpiredBadgeBottomSheetDialogFragment__you_can_reactivate">1回の寄付で、ブーストバッジを再度30日間有効にすることができます。</string>
     <!-- Displayed when we do not think the user is a subscriber when their boost expires -->
-    <string name="ExpiredBadgeBottomSheetDialogFragment__you_can_keep">Signalを使い続けることはできますが、ユーザーのために作られたテクノロジーを支援するため、毎月寄付するサステナになることを検討してください。</string>
-    <string name="ExpiredBadgeBottomSheetDialogFragment__become_a_sustainer">サポーターになりませんか</string>
-    <string name="ExpiredBadgeBottomSheetDialogFragment__add_a_boost">ブーストを追加する</string>
-    <string name="ExpiredBadgeBottomSheetDialogFragment__not_now">あとで</string>
     <!-- Copy displayed when badge expires after user inactivity -->
-    <string name="ExpiredBadgeBottomSheetDialogFragment__your_recurring_monthly_donation_was_automatically">長い間ご利用がなかったため、毎月の定期的な寄付が自動的にキャンセルされました。%1$sバッジはプロフィールに表示されなくなっています。</string>
     <!-- Copy displayed when badge expires after payment failure -->
-    <string name="ExpiredBadgeBottomSheetDialogFragment__your_recurring_monthly_donation_was_canceled">決済処理が出来なかったため、毎月の定期的な寄付は解除されました。バッジはプロフィールに表示されなくなります。</string>
     <!-- Copy displayed when badge expires after a payment failure and we have a displayable charge failure reason -->
-    <string name="ExpiredBadgeBottomSheetDialogFragment__your_recurring_monthly_donation_was_canceled_s">毎月の定期的な寄付は解除されました。 %1$s%2$sバッジはプロフィールに表示されなくなります。</string>
-    <string name="ExpiredBadgeBottomSheetDialogFragment__you_can">Signalは今後も利用できますが、アプリのサポートやバッジを再び有効にするには、今すぐ更新してください。</string>
-    <string name="ExpiredBadgeBottomSheetDialogFragment__renew_subscription">サブスクリプションを更新する</string>
     <!-- Button label to send user to Google Pay website -->
-    <string name="ExpiredBadgeBottomSheetDialogFragment__go_to_google_pay">Google Payを開く</string>
 
-    <string name="CantProcessSubscriptionPaymentBottomSheetDialogFragment__cant_process_subscription_payment">サブスクリプションの決済処理ができません</string>
-    <string name="CantProcessSubscriptionPaymentBottomSheetDialogFragment__were_having_trouble">Signalサポーターの決済処理に問題があります。あなたの決済方法が最新のものかご確認いただき、Google Payで修正ください。Signalは数日後に決済処理を再開します。</string>
-    <string name="CantProcessSubscriptionPaymentBottomSheetDialogFragment__dont_show_this_again">今後表示しない</string>
 
-    <string name="Subscription__contact_support">サポートに問い合わせる</string>
-    <string name="Subscription__get_a_s_badge">%1$sバッジを獲得しましょう</string>
 
     <!-- *PaymentInProgressFragment strings -->
-    <string name="InAppPaymentInProgressFragment__processing_donation">寄付のお手続き中です…</string>
-    <string name="InAppPaymentInProgressFragment__processing_payment">決済を処理しています…</string>
 
     <!--InAppDonations -->
     <!-- Label displayed in google play and on receipts for recurring subscriptions. Placeholder is level -->
-    <string name="InAppDonations__recurring_d">定期的な%1$d</string>
 
     <!-- InAppPaymentErrors -->
     <!-- Displayed as a title in a dialog or notification when a payment failure happens. -->
-    <string name="InAppPaymentErrors__error_processing_payment">決済の処理中にエラーが発生しました</string>
     <!-- Displayed as a message in a dialog or notification when a payment setup error happens. -->
-    <string name="InAppPaymentErrors__your_payment_couldnt_be_processed">決済処理ができず、課金されていません。再度試してください。</string>
     <!-- Displayed as a message in a dialog when we timeout waiting for a payment to be processed and token to be redeemed -->
-    <string name="InAppPaymentErrors__your_payment_is_still">あなたの決済はまだ処理が続いています。接続状況によっては数分かかる場合があります。</string>
     <!-- Displayed as a message in a dialog or notification when stripe decline code issuer not available for backup payment. -->
-    <string name="InAppPaymentErrors__StripeDeclineCode__try_completing_the_payment_again">再度、決済をお試しいただくか、取引先の銀行にお問い合わせください。</string>
     <!-- Failure code text for revoked authorization of payment, displayed in a dialog or notification as a message. -->
-    <string name="InAppPaymentErrors__StripeFailureCode__this_payment_was_revoked">このお支払いは口座名義人によって取り消されたため、処理できませんでした。課金はされていません。</string>
     <!-- Failure code text for a payment lacking an authorized mandate or incorrect mandate, displayed in a dialog or notification as a message.-->
-    <string name="InAppPaymentErrors__StripeFailureCode__an_error_occurred_while_processing_this_payment">このお支払いは処理中にエラーが発生しました。もう一度お試しください。</string>
 
     <!-- Displayed in notification when user payment fails to process on Stripe -->
-    <string name="DonationsErrors__error_processing_payment">寄付のお手続き中にエラーが発生しました</string>
     <!-- Displayed on manage donations screen as a dialog message when payment method failed -->
-    <string name="DonationsErrors__try_another_payment_method">別の決済方法をお試しいただくか、取引先の銀行にお問い合わせください。</string>
     <!-- Displayed on manage donations screen error dialogs as an action label -->
-    <string name="DonationsErrors__learn_more">詳しく見る</string>
     <!-- Displayed on "My Support" screen when user subscription payment method failed. -->
-    <string name="DonationsErrors__error_processing_payment_s">寄付のお手続き中にエラーが発生しました。%1$s</string>
-    <string name="DonationsErrors__your_payment">寄付のお手続きができずおらず、課金もされていません。もう一度お試しください。</string>
-    <string name="DonationsErrors__still_processing">処理を継続しています</string>
-    <string name="DonationsErrors__couldnt_add_badge">バッジを追加できませんでした</string>
     <!-- Displayed when backup credential could not be redeemed. Dialog or notification title -->
-    <string name="DonationsError__something_went_wrong">エラーが発生しました</string>
     <!-- Displayed when backup credential could not be redeemed. Dialog or notification body -->
-    <string name="DonationsError__your_backups_subscription_couldnt_be_displayed">バックアップサブスクリプションを表示できませんでした。サポートにお問い合わせください。</string>
     <!-- Displayed when badge credential couldn\'t be verified -->
-    <string name="DonationsErrors__failed_to_validate_badge">バッジを確認できませんでした</string>
     <!-- Displayed when badge credential couldn\'t be verified -->
-    <string name="DonationsErrors__could_not_validate">サーバーの応答を確認できませんでした。 サポートにお問い合わせください。</string>
     <!-- Displayed as title when some generic error happens during sending donation on behalf of another user -->
-    <string name="DonationsErrors__donation_failed">寄付できませんでした</string>
     <!-- Displayed as message when some generic error happens during sending donation on behalf of another user -->
-    <string name="DonationsErrors__your_payment_was_processed_but">あなたの寄付はお手続きされましたが、Signalは寄付メッセージを送信できませんでした。サポートにお問い合わせください。</string>
-    <string name="DonationsErrors__your_badge_could_not">あなたのアカウントにバッジを追加できませんでしたが、課金はされている可能性があります。サポートまでお問い合わせください。</string>
-    <string name="DonationsErrors__your_payment_is_still">寄付のお手続きは完了していません。接続状況によっては数分かかる場合があります。</string>
-    <string name="DonationsErrors__failed_to_cancel_subscription">サブスクリプションを解除できませんでした</string>
-    <string name="DonationsErrors__subscription_cancellation_requires_an_internet_connection">サブスクリプションを解除するには、インターネット接続が必要です。</string>
     <string name="ViewBadgeBottomSheetDialogFragment__your_device_doesn_t_support">お使いの端末がアプリ内での寄付に対応していないためバッジを獲得することはできませんが、当方のウェブサイトからの寄付が可能です。引き続きSignalのサポートをお願いいたします。</string>
     <string name="NetworkFailure__network_error_check_your_connection_and_try_again">ネットワークエラー。インターネット接続を確認して再度試してください。</string>
     <string name="NetworkFailure__retry">再試行</string>
     <!-- Displayed as a dialog title when the selected recipient for a gift doesn\'t support gifting -->
-    <string name="DonationsErrors__cannot_send_donation">寄付を送信できません</string>
     <!-- Displayed as a dialog message when the selected recipient for a gift doesn\'t support gifting -->
-    <string name="DonationsErrors__this_user_cant_receive_donations_until">このユーザーはSignalをアップグレードしていないため、寄付を受け取れません。</string>
     <!-- Displayed as a dialog message when the user\'s profile could not be fetched, likely due to lack of internet -->
-    <string name="DonationsErrors__your_donation_could_not_be_sent">ネットワークエラーのため寄付を送信できませんでした。インターネット接続を確認して再度試してください。</string>
     <!-- Displayed as a dialog message when the user encounters an error during an iDEAL donation -->
-    <string name="DonationsErrors__your_ideal_wero_couldnt_be_processed">Your iDEAL | Wero donation couldn\'t be processed. Try another payment method or contact your bank for more information.</string>
 
     <!-- Gift message view title -->
-    <string name="GiftMessageView__donation_on_behalf_of_s">%1$sに代わって寄付をする</string>
     <!-- Gift message view title for incoming donations -->
-    <string name="GiftMessageView__s_donated_to_signal_on">%1$s があなたに代わってSignalに寄付しました</string>
     <!-- Gift badge redeem action label -->
-    <string name="GiftMessageView__redeem">交換</string>
     <!-- Gift badge view action label -->
-    <string name="GiftMessageView__view">表示する</string>
     <!-- Gift badge redeeming action label -->
-    <string name="GiftMessageView__redeeming">交換中…</string>
     <!-- Gift badge redeemed label -->
-    <string name="GiftMessageView__redeemed">交換</string>
 
 
     <!-- Stripe decline code generic_failure -->
-    <string name="DeclineCode__try_another_payment_method_or_contact_your_bank">別の決済方法をお試しいただくか、取引先の銀行にお問い合わせください。</string>
     <!-- PayPal decline code for payment declined -->
-    <string name="DeclineCode__try_another_payment_method_or_contact_your_bank_for_more_information_if_this_was_a_paypal">別の決済方法をお試しいただくか、取引先の銀行にお問い合わせください。PayPalでの決済の場合はPayPalにお問い合わせください。</string>
     <!-- Stripe decline code verify on Google Pay and try again -->
-    <string name="DeclineCode__verify_your_payment_method_is_up_to_date_in_google_pay_and_try_again">Google Payの決済方法が最新であるか確認して、再度試してください。</string>
     <!-- Stripe decline code learn more action label -->
     <string name="DeclineCode__learn_more">さらに詳しく</string>
     <!-- Stripe decline code contact issuer -->
-    <string name="DeclineCode__verify_your_payment_method_is_up_to_date_in_google_pay_and_try_again_if_the_problem">Google Payの決済方法が最新であるか確認して、再度試してください。問題が解消されない場合は、取引先の銀行にお問い合わせください。</string>
     <!-- Stripe decline code purchase not supported -->
     <string name="DeclineCode__your_card_does_not_support_this_type_of_purchase">あなたのクレジットカードはこの支払いに対応していません。別の決済方法をお試しください。</string>
     <!-- Stripe decline code your card has expired -->
     <string name="DeclineCode__your_card_has_expired">クレジットカードが失効しています。Google Payで決済方法を更新して、再度試してください。</string>
     <!-- Stripe decline code go to google pay action label -->
-    <string name="DeclineCode__go_to_google_pay">Google Payを開く</string>
     <!-- Stripe decline code try credit card again action label -->
     <string name="DeclineCode__try">もう一度試す</string>
     <!-- Stripe decline code incorrect card number -->
@@ -6534,7 +6286,6 @@
     <!-- Stripe decline code incorrect expiration year -->
     <string name="DeclineCode__the_expiration_year">決済方法の有効期限の年が正しくありません。Google Payで更新して、再度試してください。</string>
     <!-- Stripe decline code issuer not available -->
-    <string name="DeclineCode__try_completing_the_payment_again">もう一度お試しいただくか、取引先の銀行にお問い合わせください。</string>
     <!-- Stripe decline code processing error -->
     <string name="DeclineCode__try_again">再度お試しいただくか、取引先の銀行にお問い合わせください。</string>
 
@@ -6556,15 +6307,10 @@
 
     <!-- Stripe Failure Codes for failed bank transfers -->
     <!-- Failure code text for insufficient funds, displayed in a dialog or notification -->
-    <string name="StripeFailureCode__the_bank_account_provided">指定された銀行口座には、この支払いを完了するための資金が不足しています。もう一度お試しいただくか、詳細について銀行にお問い合わせください。</string>
     <!-- Failure code text for revoked authorization of payment, displayed in a dialog or notification -->
-    <string name="StripeFailureCode__this_payment_was_revoked">この寄付は口座名義人によって取り消されたため、お手続きできませんでした。課金はされていません。</string>
     <!-- Failure code text for a payment lacking an authorized mandate or incorrect mandate, displayed in a dialog or notification -->
-    <string name="StripeFailureCode__an_error_occurred_while_processing_this_payment">寄付のお手続き中にエラーが発生しました。もう一度お試しください。</string>
     <!-- Failure code text for a closed account, deceased recipient, or one with blocked direct debits, displayed in a dialog or notification -->
-    <string name="StripeFailureCode__the_bank_details_provided_could_not_be_processed">ご提供いただいた銀行情報は処理できませんでした。詳細については、銀行にお問い合わせください。</string>
     <!-- Failure code text for a non-existent bank branch, invalid account holder, invalid iban, generic failure, or unknown bank failure, displayed in a dialog or notification -->
-    <string name="StripeFailureCode__verify_your_bank_details_are_correct">カード情報が正しいことを確認し、もう一度お試しください。問題が解決されない場合は、取引先の銀行にお問い合わせください。</string>
 
     <!-- Title of create notification profile screen -->
     <string name="EditNotificationProfileFragment__name_your_profile">プロファイル名の選択</string>
@@ -6727,33 +6473,19 @@
     <string name="ReleaseNotes__official_only_chat">公式かつ唯一のSignalのチャット</string>
 
     <!-- Donation receipts activity title -->
-    <string name="DonationReceiptListFragment__all_activity">すべての活動</string>
     <!-- Donation receipts all tab label -->
-    <string name="DonationReceiptListFragment__all">すべて</string>
     <!-- Donation receipts recurring tab label -->
-    <string name="DonationReceiptListFragment__recurring">サブスクリプション</string>
     <!-- Donation receipts one-time tab label -->
-    <string name="DonationReceiptListFragment__one_time">都度</string>
     <!-- Donation receipts gift tab -->
-    <string name="DonationReceiptListFragment__for_a_friend">友達の代わりにした寄付</string>
     <!-- Donation receipts gift tab label -->
-    <string name="DonationReceiptListFragment__donation_for_a_friend">友達に代わって寄付</string>
     <!-- Donation receipts donation type heading -->
-    <string name="DonationReceiptDetailsFragment__donation_type">寄付の種類</string>
     <!-- Donation receipts date paid heading -->
-    <string name="DonationReceiptDetailsFragment__date_paid">支払い日</string>
     <!-- Donation receipts share PNG -->
-    <string name="DonationReceiptDetailsFragment__share_receipt">領収書を共有</string>
     <!-- Donation receipts list end note -->
-    <string name="DonationReceiptListFragment__if_you_have">Signalを再インストールすると、過去にした寄付の領収書を入手できなくなります。</string>
     <!-- Donation receipts document title -->
-    <string name="DonationReceiptDetailsFragment__donation_receipt">寄付の領収書</string>
     <!-- Donation receipts amount title -->
-    <string name="DonationReceiptDetailsFragment__amount">寄付額</string>
     <!-- Donation receipts thanks -->
-    <string name="DonationReceiptDetailsFragment__thank_you_for_supporting">Signalをサポートいただき、ありがとうございます。皆様のご寄付は、表現の自由を守り、世界中の何百万人もの人々に安全なグローバルコミュニケーションを可能にするオープンソースのプライバシー技術の開発というミッションの推進に役立っています。米国にお住まいの方は、この領収書を税務記録のために保管しておいてください。Signal Technology Foundationは、米国内国歳入法第501c3条に基づく非課税の非営利団体です。連邦税IDは82-4506840です。</string>
     <!-- Donation reciepts screen empty state title -->
-    <string name="DonationReceiptListFragment__no_receipts">領収書なし</string>
 
     <!-- region "Stories Tab" -->
 
@@ -7131,53 +6863,32 @@
         <item quantity="other">%1$s・%2$d 日間</item>
     </plurals>
     <!-- Headline text on start fragment for gifting a badge -->
-    <string name="GiftFlowStartFragment__donate_for_a_friend">友達に代わって寄付する</string>
     <!-- Description text on start fragment for gifting a badge -->
     <plurals name="GiftFlowStartFragment__support_signal_by">
         <item quantity="other">Signalを利用している友人や家族の代わりに寄付をして、Signalをサポートすることができます。その人たちはバッジを受け取り、プロフィールに %1$d 日間表示されます。</item>
     </plurals>
     <!-- Action button label for start fragment for gifting a badge -->
-    <string name="GiftFlowStartFragment__next">次へ</string>
     <!-- Title text on choose recipient page for badge gifting -->
-    <string name="GiftFlowRecipientSelectionFragment__choose_recipient">送信先の選択</string>
     <!-- Title text on confirm gift page -->
-    <string name="GiftFlowConfirmationFragment__confirm_donation">寄付の確認</string>
     <!-- Heading text specifying who the gift will be sent to -->
-    <string name="GiftFlowConfirmationFragment__send_to">宛先</string>
     <!-- Text explaining that gift will be sent to the chosen recipient -->
-    <string name="GiftFlowConfirmationFragment__the_recipient_will_be_notified">受取人には、1対1のメッセージで寄付が通知されます。以下にご自身のメッセージを追加してください。</string>
     <!-- Text explaining that this gift is a one time donation -->
-    <string name="GiftFlowConfirmationFragment__one_time_donation">1回限りの寄付</string>
     <!-- Hint for add message input -->
-    <string name="GiftFlowConfirmationFragment__add_a_message">メッセージを追加してください</string>
     <!-- Displayed in the dialog while verifying the chosen recipient -->
     <string name="GiftFlowConfirmationFragment__verifying_recipient">受信者を照合中…</string>
     <!-- Title for sheet shown when opening a redeemed gift -->
-    <string name="ViewReceivedGiftBottomSheet__s_made_a_donation_for_you">%1$s があなたの代わりに寄付しました</string>
     <!-- Title for sheet shown when opening a sent gift -->
-    <string name="ViewSentGiftBottomSheet__thanks_for_your_support">ご支援をありがとうございます！</string>
     <!-- Description for sheet shown when opening a redeemed gift -->
-    <string name="ViewReceivedGiftBottomSheet__s_made_a_donation_to_signal">%1$s があなたに代わってSignalに寄付をしました！プロフィールにSignalをサポートしていることを表示しましょう。</string>
     <!-- Description for sheet shown when opening a sent gift -->
-    <string name="ViewSentGiftBottomSheet__youve_made_a_donation_to_signal">%1$s に代わってあなたがSignalに寄付しました。その人たちには、プロフィールにサポートしていることを表示するオプションが付与されます。</string>
     <!-- Primary action for pending gift sheet to redeem badge now -->
-    <string name="ViewReceivedGiftSheet__redeem">交換</string>
     <!-- Primary action for pending gift sheet to redeem badge later -->
-    <string name="ViewReceivedGiftSheet__not_now">今はしない</string>
     <!-- Dialog text while redeeming a gift -->
-    <string name="ViewReceivedGiftSheet__redeeming_badge">バッジを引き換えています…</string>
     <!-- Description text in gift thanks sheet -->
-    <string name="GiftThanksSheet__youve_made_a_donation">%1$s に代わってあなたがSignalに寄付しました。その人たちには、プロフィールにサポートしていることを表示するオプションが付与されます。</string>
     <!-- Expired gift sheet title -->
-    <string name="ExpiredGiftSheetConfiguration__your_badge_has_expired">バッジの有効期限が切れました</string>
     <!-- Expired gift sheet top description text -->
-    <string name="ExpiredGiftSheetConfiguration__your_badge_has_expired_and_is">バッジは有効期限が切れたため、プロフィールに表示されません。</string>
     <!-- Expired gift sheet bottom description text -->
-    <string name="ExpiredGiftSheetConfiguration__to_continue">あなたのために作られた技術を継続的にサポートするため、月次サポーターへの登録をご検討ください。</string>
     <!-- Expired gift sheet make a monthly donation button -->
-    <string name="ExpiredGiftSheetConfiguration__make_a_monthly_donation">月々の寄付をする</string>
     <!-- Expired gift sheet not now button -->
-    <string name="ExpiredGiftSheetConfiguration__not_now">今はしない</string>
     <!-- My Story label designating that we will only share with the selected viewers. -->
     <string name="ContactSearchItems__only_share_with">共有する人を指定</string>
     <!-- Label under name for custom stories -->
@@ -7233,7 +6944,6 @@
         <item quantity="other">残り%1$d分</item>
     </plurals>
     <!-- Donation for a friend expiry expired -->
-    <string name="Gifts__expired">期限切れ</string>
 
     <!-- Label indicating that a user can tap to advance to the next post in a story -->
     <string name="StoryFirstTimeNavigationView__tap_to_advance">タップして進む</string>
@@ -7377,128 +7087,75 @@
 
     <!-- DonateToSignalFragment -->
     <!-- Title below avatar -->
-    <string name="DonateToSignalFragment__privacy_over_profit">非営利が理念です</string>
     <!-- Continue button label -->
-    <string name="DonateToSignalFragment__continue">続ける</string>
     <!-- Description below title -->
-    <string name="DonateToSignalFragment__private_messaging">メッセージのやりとりをプライベートに保つためにご寄付をお願いします。Signalが独立性を保ち、広告なしで運営するためには皆様のご協力が必要です。</string>
     <!-- Dialog title when a user tries to donate while they already have a pending donation. -->
-    <string name="DonateToSignalFragment__you_have_a_donation_pending">1件の寄付が手続き中です</string>
     <!-- Dialog body when a user tries to donate while they already have a pending monthly donation. -->
-    <string name="DonateToSignalFragment__bank_transfers_usually_take_1_business_day_to_process_monthly">銀行振り込みの場合、処理されるまで1～14日かかる場合があります。この決済が完了してから、再度、寄付のお手続きをしてください。</string>
     <!-- Dialog body when a user tries to donate while they already have a pending one time donation. -->
-    <string name="DonateToSignalFragment__bank_transfers_usually_take_1_business_day_to_process_onetime">銀行振り込みの場合、処理されるまで1～14日かかる場合があります。この決済が完了してから、次の寄付をおこなってください。</string>
     <!-- Dialog body when a user tries to donate while they already have a pending monthly donation. -->
-    <string name="DonateToSignalFragment__your_payment_is_still_being_processed_monthly">寄付のお手続きは完了していません。接続状況によっては数分かかる場合があります。 この決済が完了してから、再度、寄付のお手続きをしてください。</string>
     <!-- Dialog body when a user tries to donate while they already have a pending one time donation. -->
-    <string name="DonateToSignalFragment__your_payment_is_still_being_processed_onetime">寄付のお手続きは完了していません。接続状況によっては数分かかる場合があります。この決済が完了してから、次の寄付をおこなってください。</string>
     <!-- Dialog body when a user opens the manage donations main screen and they have a pending iDEAL donation -->
-    <string name="DonateToSignalFragment__your_ideal_wero_payment_is_still_processing">Your iDEAL | Wero donation is still processing. Check your banking app to approve your payment before making another donation.</string>
     <!-- Dialog title shown when a user tries to donate an amount higher than is allowed for a given payment method. -->
-    <string name="DonateToSignal__donation_amount_too_high">寄付金額が高すぎます</string>
     <!-- Dialog body shown when a user tries to donate an amount higher than is allowed for a given payment method, place holder is the maximum -->
-    <string name="DonateToSignalFragment__you_can_send_up_to_s_via_bank_transfer">銀行振り込みによる寄付金額は、最大%1$sです。金額を変えるか他の決済方法をお試し下さい。</string>
 
     <!-- Donation pill toggle monthly text -->
-    <string name="DonationPillToggle__monthly">毎月</string>
     <!-- Donation pill toggle one-time text -->
-    <string name="DonationPillToggle__one_time">都度</string>
 
     <!-- GatewaySelectorBottomSheet -->
     <!-- Sheet title when subscribing -->
-    <string name="GatewaySelectorBottomSheet__donate_s_month_to_signal">Signalに %1$s円／月を寄付する</string>
     <!-- Sheet summary when subscribing -->
-    <string name="GatewaySelectorBottomSheet__get_a_s_badge">%1$sバッジを獲得しましょう</string>
     <!-- Sheet title when giving a one-time donation -->
-    <string name="GatewaySelectorBottomSheet__donate_s_to_signal">Signalに %1$s円を寄付する</string>
     <!-- Sheet summary when giving a one-time donation -->
     <plurals name="GatewaySelectorBottomSheet__get_a_s_badge_for_d_days">
         <item quantity="other">%2$d 日間%1$sバッジを獲得しましょう</item>
     </plurals>
     <!-- Button label for paying with a bank transfer -->
-    <string name="GatewaySelectorBottomSheet__bank_transfer">銀行振替</string>
     <!-- Button label for paying with a credit card -->
     <string name="GatewaySelectorBottomSheet__credit_or_debit_card">クレジットカードまたはデビットカード</string>
     <!-- Sheet summary when giving donating for a friend -->
-    <string name="GatewaySelectorBottomSheet__donate_for_a_friend">友達に代わって寄付する</string>
     <!-- Button label for paying with iDEAL -->
-    <string name="GatewaySelectorBottomSheet__ideal_wero">iDEAL | Wero</string>
 
     <!-- Dialog title for launching external intent -->
-    <string name="ExternalNavigationHelper__leave_signal_to_confirm_payment">寄付を確認するためにSignalを離れますか？</string>
-    <string name="ExternalNavigationHelper__once_this_payment_is_confirmed">寄付を確認したら、Signalに戻って寄付の手続きを完了させてください。</string>
     <!-- Dialog message shown when leaving Signal to complete a donation in an external app. Placeholder is the resolved app name (e.g. a banking app). -->
-    <string name="ExternalNavigationHelper__once_payment_confirmed_in_app">You\'ll be sent to %1$s. When confirmed, return to Signal to finish processing your donation.</string>
 
     <!-- BankTransferMandateFragment -->
     <!-- Title of screen displaying the bank transfer mandate -->
-    <string name="BankTransferMandateFragment__bank_transfer">銀行振替</string>
     <!-- Subtitle of screen displaying the bank transfer mandate, placeholder is \'Learn more\' -->
-    <string name="BankTransferMandateFragment__stripe_processes_donations">StripeがSignalへの寄付を処理します。Signalがお客様の個人情報を収集したり保存したりすることはありません。%1$s</string>
     <!-- Subtitle learn more of screen displaying bank transfer mandate -->
-    <string name="BankTransferMandateFragment__learn_more">詳しく見る</string>
     <!-- Button label to continue with transfer -->
-    <string name="BankTransferMandateFragment__agree">同意する</string>
     <!-- Button label to read more of the bank mandate that is currently off screen -->
-    <string name="BankTransferMandateFragment__read_more">続きを読む</string>
     <!-- Text displayed when mandate load fails -->
-    <string name="BankTransferMandateFragment__failed_to_load_mandate">リクエストを読み込めませんでした</string>
 
     <!-- BankTransferDetailsFragment -->
     <!-- Subtext explaining how email is used. Placeholder is \'Learn more\' -->
-    <string name="BankTransferDetailsFragment__enter_your_bank_details">銀行口座の情報、およびメールアドレスを入力してください。入力いただいたメールアドレスは、Stripeがお客様の寄付に関するお知らせをお送りするために使用されます。%1$s</string>
     <!-- Subtext learn more link text -->
-    <string name="BankTransferDetailsFragment__learn_more">詳しく見る</string>
     <!-- Text field label for name on bank account -->
-    <string name="BankTransferDetailsFragment__name_on_bank_account">銀行口座名義</string>
     <!-- Text field label for IBAN -->
-    <string name="BankTransferDetailsFragment__iban">IBAN</string>
     <!-- Text field label for email -->
-    <string name="BankTransferDetailsFragment__email">メールアドレス</string>
     <!-- Text label for button to show user how to find their IBAN -->
-    <string name="BankTransferDetailsFragment__find_account_info">アカウント情報を確認する</string>
     <!-- Donate button label for monthly subscription -->
-    <string name="BankTransferDetailsFragment__donate_s_month">%1$s／月を寄付する</string>
     <!-- Donate button label for one-time -->
-    <string name="BankTransferDetailsFragment__donate_s">%1$s を寄付する</string>
     <!-- Error label for IBAN field when number is too short -->
-    <string name="BankTransferDetailsFragment__iban_is_too_short">IBANが短すぎます</string>
     <!-- Error label for IBAN field when number is too long -->
-    <string name="BankTransferDetailsFragment__iban_is_too_long">IBANが長すぎます</string>
     <!-- Error label for IBAN field when country is not supported -->
-    <string name="BankTransferDetailsFragment__iban_country_code_is_not_supported">この国コードはIBANを採用していません</string>
     <!-- Error label for IBAN field when number is invalid -->
-    <string name="BankTransferDetailsFragment__invalid_iban">IBANが無効です</string>
     <!-- Error label for name field when name is not at least three characters long (Stripe API enforced minimum) -->
-    <string name="BankTransferDetailsFragment__minimum_3_characters">3文字以上入力</string>
     <!-- Error label for email field when email is not valid -->
-    <string name="BankTransferDetailsFragment__invalid_email_address">無効なEメールアドレスです</string>
 
     <!-- IdealTransferDetailsFragment -->
     <!-- Title of the screen, displayed in the toolbar -->
-    <string name="IdealTransferDetailsFragment__ideal">iDEAL</string>
     <!-- Subtitle of the screen, displayed below the toolbar. Placeholder is for \'learn more\' -->
-    <string name="IdealTransferDetailsFragment__enter_your_bank">お名前とメールアドレスを入力してください。入力いただいたメールアドレスは、Stripeがお客様の寄付に関するお知らせをお送りするために使用されます。%1$s</string>
     <!-- Subtitle of the screen, displayed below the toolbar. Placeholder is for \'learn more\' -->
-    <string name="IdealTransferDetailsFragment__enter_your_bank_details_one_time">口座情報を入力してください。Signalがお客様の個人情報を収集したり保存したりすることはありません。%1$s</string>
     <!-- Subtitle learn-more button displayed inline with the subtitle text -->
-    <string name="IdealTransferDetailsFragment__learn_more">詳しく見る</string>
     <!-- Hint label for text entry box for name on bank account -->
-    <string name="IdealTransferDetailsFragment__name_on_bank_account">銀行口座名義</string>
     <!-- Hint label for text entry box for email -->
-    <string name="IdealTransferDetailsFragment__email">メールアドレス</string>
     <!-- Default label for bank selection -->
-    <string name="IdealTransferDetailsFragment__choose_your_bank">銀行を選択する</string>
     <!-- Dialog title shown when using iDEAL payment for setting up a monthly donation -->
-    <string name="IdealTransferDetailsFragment__confirm_your_donation_with_ideal_wero">Confirm your donation with iDEAL | Wero</string>
     <!-- Dialog warning shown when using iDEAL payment for setting up a monthly donation. Placeholder is donation amount.Z -->
-    <string name="IdealTransferDetailsFragment__to_setup_your_recurring_donation">定期的な寄付を設定するには「続ける」をタップして、銀行で0.01ユーロの手数料がかかることをご確認ください。この手数料は自動的に返金され、毎月%1$sの寄付金がお口座から引き落とされます。</string>
     <!-- Dialog button shown when using iDEAL payment for setting up a monthly donation to continue with the donation -->
-    <string name="IdealTransferDetailsFragment__continue">続行</string>
 
     <!-- IdealTransferDetailsBankSelectionDialogFragment -->
     <!-- Title of the screen, displayed in the toolbar -->
-    <string name="IdealTransferDetailsBankSelectionDialogFragment__choose_your_bank">銀行を選択する</string>
 
     <!-- Title of bottom sheet for finding account information -->
     <string name="FindAccountInfoSheet__find_your_account_information">アカウント情報を確認する</string>
@@ -7506,36 +7163,22 @@
     <string name="FindAccountInfoSheet__look_for_your_iban_at">銀行取引明細書の上部に記載されたIBANをご確認ください。IBANは最大34文字で構成されています。銀行口座の名義と同一の氏名を入力してください。詳細については、銀行までお問い合わせください。</string>
 
     <!-- Title of donation pending sheet displayed after making a bank transfer -->
-    <string name="DonationPendingBottomSheet__donation_pending">寄付の手続き中です</string>
     <!-- Top text block of donation pending sheet displayed after subscribing via a bank transfer. Placeholder is the badge name. -->
-    <string name="DonationPendingBottomSheet__your_monthly_donation_is_pending">毎月の寄付の手続き中です。寄付が受領されると、 %1$s バッジがあなたのプロフィールに表示されます。</string>
     <!-- Top text block of donation pending sheet displayed after one-time donation via a bank transfer. Placeholder is the badge name. -->
-    <string name="DonationPendingBottomSheet__your_one_time_donation_is_pending">1回限りの寄付の手続き中です。寄付が受領されると、 %1$s バッジがあなたのプロフィールに表示されます。</string>
     <!-- Bottom text block of donation pending sheet displayed after donating via a bank transfer. Placeholder is for learn more. -->
-    <string name="DonationPendingBottomSheet__bank_transfers_usually_take">銀行振り込みの場合、処理されるまで1～14日かかる場合があります。%1$s</string>
     <!-- Learn more text for donation pending sheet displayed after donating via a bank transfer. -->
-    <string name="DonationPendingBottomSheet__learn_more">詳しく見る</string>
     <!-- Confirmation button for donation pending sheet displayed after donating via a bank transfer. -->
-    <string name="DonationPendingBottomSheet__done">完了</string>
 
     <!-- Title of donation error sheet displayed after making a bank transfer that fails -->
-    <string name="DonationErrorBottomSheet__donation_couldnt_be_processed">寄付を処理できませんでした</string>
     <!-- Text block of donation error sheet displayed after making a bank transfer that fails -->
-    <string name="DonationErrorBottomSheet__were_having_trouble">銀行振込の処理に問題が発生しています。課金はされていません。別の決済方法をお試しいただくか、取引先の銀行にお問い合わせください。</string>
     <!-- Button label for retry button of donation error sheet displayed after making a bank transfer that fails -->
-    <string name="DonationErrorBottomSheet__try_again">もう一度試す</string>
     <!-- Button label for not now button of donation error sheet displayed after making a bank transfer that fails -->
-    <string name="DonationErrorBottomSheet__not_now">今はしない</string>
 
     <!-- Title of \'Donation Complete\' sheet displayed after a bank transfer completes and the badge is redeemed -->
-    <string name="DonationCompletedBottomSheet__donation_complete">寄付が完了しました</string>
     <!-- Text block of \'Donation Complete\' sheet displayed after a bank transfer completes and the badge is redeemed -->
-    <string name="DonationCompleteBottomSheet__your_bank_transfer_was_received">銀行振り込みが受領されました。このバッジをプロフィールに表示して、サポートしていることを示すことができます。</string>
     <!-- Button text of \'Donation Complete\' sheet displayed after a bank transfer completes and the badge is redeemed to dismiss sheet -->
-    <string name="DonationCompleteBottomSheet__done">完了</string>
 
     <!-- StripePaymentInProgressFragment -->
-    <string name="StripePaymentInProgressFragment__cancelling">キャンセル中…</string>
 
     <!-- The title of a bottom sheet dialog that tells the user we temporarily can\'t process their contacts. -->
     <string name="CdsTemporaryErrorBottomSheet_title">連絡先が多すぎるため処理できません</string>
@@ -7568,7 +7211,6 @@
     <!-- YourInformationIsPrivateBottomSheet -->
     <string name="YourInformationIsPrivateBottomSheet__your_information_is_private">お客様の個人情報は保護されています</string>
     <string name="YourInformationIsPrivateBottomSheet__signal_does_not_collect">Signalは、寄付を受ける際に、お客様のいかなる個人情報も収集したり保存したりすることはありません。</string>
-    <string name="YourInformationIsPrivateBottomSheet__we_use_stripe">Signalでは寄付を受け取る決済処理にStripeを使用しています。Signalは、お客様から提供されたいかなる情報にもアクセスすることはありません。また保管・保存したりすることもありません。</string>
     <string name="YourInformationIsPrivateBottomSheet__signal_does_not_and_cannot">Signalは、寄付からお客様のSignalアカウントを特定することはありません。特定はできない仕組みになっています。</string>
     <string name="YourInformationIsPrivateBottomSheet__thank_you">ご支援ありがとうございます！</string>
 
@@ -7586,8 +7228,6 @@
     <string name="Registration_country_code_entry_hint">+0</string>
 
     <!-- PaypalCompleteOrderBottomSheet -->
-    <string name="PaypalCompleteOrderBottomSheet__donate">寄付する</string>
-    <string name="PaypalCompleteOrderBottomSheet__payment">決済</string>
 
     <!-- ChatFilter -->
     <!-- Displayed in a pill at the top of the chat list when it is filtered by unread messages -->
@@ -8080,15 +7720,10 @@
     <string name="GrantFullScreenIntentPermission_bottomsheet_step2">2. %1$s 全画面通知を許可する</string>
 
     <!-- Bottom sheet dialog shown when a monthly donation fails to renew, title for dialog -->
-    <string name="MonthlyDonationCanceled__title">毎月の寄付がキャンセルされました</string>
     <!-- Bottom sheet dialog shown when a monthly donation fails to renew, body for dialog. First placeholder is a payment related error message. Second placeholder is \'learn more\' -->
-    <string name="MonthlyDonationCanceled__message">毎月の定期的な寄付がキャンセルされました。%1$s \n\nバッジはプロフィールに表示されなくなります。%2$s</string>
     <!-- Bottom sheet dialog shown when a monthly donation fails to renew, learn more used in placeholder for body for dialog. -->
-    <string name="MonthlyDonationCanceled__learn_more">詳しく見る</string>
     <!-- Bottom sheet dialog shown when a monthly donation fails to renew, primary button to renew subscription with new data -->
-    <string name="MonthlyDonationCanceled__renew_button">サブスクリプションを更新する</string>
     <!-- Bottom sheet dialog shown when a monthly donation fails to renew, second button to dismiss the dialog entirely -->
-    <string name="MonthlyDonationCanceled__not_now_button">今はしない</string>
 
     <!-- FindByActivity -->
     <!-- Title of activity when finding by username -->
@@ -8177,7 +7812,6 @@
 
     <!-- BackupAlertBottomSheet -->
     <!-- Sheet title when media backups have been disabled -->
-    <string name="BackupAlertBottomSheet__your_backups_subscription_expired">バックアップサブスクリプションの有効期限が切れています</string>
     <!-- Sheet body part 1 when media backups have been disabled. Placeholder is the number of days until deletion. -->
     <plurals name="BackupAlertBottomSheet__your_backup_plan_has_expired">
         <item quantity="other">現在のお支払い方法で更新できなかったため、バックアッププランの有効期限が切れました。%1$d日後にバックアップ内のメディアは消去されます。</item>
@@ -8367,21 +8001,15 @@
     <!-- Displayed as the user\'s payment method as a label in a preference row -->
     <string name="BackupsTypeSettingsFragment__credit_or_debit_card">クレジットカードまたはデビットカード</string>
     <!-- Displayed as the user\'s payment method as a label in a preference row -->
-    <string name="BackupsTypeSettingsFragment__iDEAL">iDEAL</string>
     <!-- Displayed as the user\'s payment method as a label in a preference row -->
-    <string name="BackupsTypeSettingsFragment__google_pay">Google Pay</string>
     <!-- Displayed as the user\'s payment method as a label in a preference row -->
-    <string name="BackupsTypeSettingsFragment__bank_transfer">銀行振替</string>
     <!-- Displayed as the user\'s payment method as a label in a preference row -->
-    <string name="BackupsTypeSettingsFragment__paypal">PayPal</string>
     <!-- Displayed as the user\'s payment method as a label in a preference row -->
     <string name="BackupsTypeSettingsFragment__unknown">不明</string>
     <!-- Row title for entering payment history -->
-    <string name="BackupsTypeSettingsFragment__payment_history">決済履歴</string>
     <!-- Row description detailing renewal information. First placeholder is formatted price. Second placeholder is formatted date. -->
     <string name="BackupsTypeSettingsFragment__s_month_renews_s">%1$s/月 · 更新 %2$s</string>
     <!-- Row title to change or cancel subscription -->
-    <string name="BackupsTypeSettingsFragment__change_or_cancel_subscription">サブスクリプションの変更またはキャンセル</string>
 
     <!-- GooglePlayServicesAvailability -->
     <!-- Dialog title when Google Play services are missing from the device -->
@@ -8528,7 +8156,6 @@
     <!-- Text shown in a popup indicating that the user needs to enter their screen lock -->
     <string name="RemoteBackupsSettingsFragment__authenticatino_required">認証が必要です</string>
     <!-- Row label to launch payment history screen -->
-    <string name="RemoteBackupsSettingsFragment__payment_history">決済履歴</string>
     <!-- Section header for backup information -->
     <string name="RemoteBackupsSettingsFragment__backup_details">バックアップの詳細</string>
     <!-- Row label to allow the restoration of a backup to occur while on cellular connection -->
@@ -8961,7 +8588,6 @@
     <!-- Primary action button label when selecting paid tier when Google Play API isn\'t available -->
     <string name="MessageBackupsTypeSelectionScreen__more_about_this_plan">このプランの詳細</string>
     <!-- Secondary action button label when selecting a backup tier with a current selection -->
-    <string name="MessageBackupsTypeSelectionScreen__cancel_subscription">サブスクリプションを解除する</string>
     <!-- MessageBackupsType block amount for free tier -->
     <string name="MessageBackupsTypeSelectionScreen__free">無料プラン</string>
     <!-- MessageBackupsType block amount for paid tier when no pricing is available -->
@@ -9003,7 +8629,6 @@
     <!-- Action button label to cancel subscription and download later -->
     <string name="ConfirmBackupCancellationDialog__confirm_and_download_later">確認して後でダウンロードする</string>
     <!-- Action button label to keep current subscription -->
-    <string name="ConfirmBackupCancellationDialog__keep_subscription">サブスクリプションを継続する</string>
 
     <!-- Accessible content description for the reminder view, describing the icon in the view. -->
     <string name="ReminderView_icon_content_description">リマインダーアイコン</string>

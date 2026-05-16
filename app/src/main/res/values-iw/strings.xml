@@ -24,7 +24,6 @@
   <!-- Removed by excludeNonTranslatables <string name="donate_faq_url" translatable="false">https://support.signal.org/hc/articles/360031949872#donate</string> -->
 
     <!-- First placeholder is productId, second placeholder is app package -->
-    <string name="backup_subscription_management_url">https://play.google.com/store/account/subscriptions?sku=%1$s&amp;package=%2$s</string>
 
     <string name="yes">כן</string>
     <string name="no">לא</string>
@@ -158,7 +157,6 @@
 
     <!-- Fcm notifications -->
     <!-- Notification we show when there may be messages for you, but we cannot connect to the server to check -->
-    <string name="FcmFetchManager__you_may_have_messages">ייתכן שיש לך הודעות חדשות</string>
 
     <!-- BlockedUsersActivity -->
     <string name="BlockedUsersActivity__blocked_users">משתמשים חסומים</string>
@@ -172,45 +170,26 @@
 
     <!-- CreditCardFragment -->
     <!-- Title of fragment -->
-    <string name="CreditCardFragment__credit_or_debit_card">כרטיס אשראי או דביט</string>
     <!-- Explanation of how to fill in the form and a note about pii, displayed above the credit card text fields -->
-    <string name="CreditCardFragment__enter_your_card_details">יש להזין את פרטי הכרטיס שלך. Signal לא אוספת או מאחסנת את המידע האישי שלך.</string>
     <!-- Displayed as a hint in the card number text field -->
-    <string name="CreditCardFragment__card_number">מספר כרטיס</string>
     <!-- Displayed as a hint in the card expiry text field -->
-    <string name="CreditCardFragment__mm_yy">חודש/שנה</string>
     <!-- Displayed as a hint in the card cvv text field -->
-    <string name="CreditCardFragment__cvv">CVV</string>
     <!-- Error displayed under the card number text field when there is an invalid card number entered -->
-    <string name="CreditCardFragment__invalid_card_number">מספר כרטיס לא תקין</string>
     <!-- Error displayed under the card expiry text field when the card is expired -->
-    <string name="CreditCardFragment__card_has_expired">פג תוקף הכרטיס</string>
     <!-- Error displayed under the card cvv text field when the cvv is too short -->
-    <string name="CreditCardFragment__code_is_too_short">הקוד קצר מדי</string>
     <!-- Error displayed under the card cvv text field when the cvv is too long -->
-    <string name="CreditCardFragment__code_is_too_long">הקוד ארוך מדי</string>
     <!-- Error displayed under the card cvv text field when the cvv is invalid -->
-    <string name="CreditCardFragment__invalid_code">קוד לא תקין</string>
     <!-- Error displayed under the card expiry text field when the expiry month is invalid -->
-    <string name="CreditCardFragment__invalid_month">חודש לא תקין</string>
     <!-- Error displayed under the card expiry text field when the expiry is missing the year -->
-    <string name="CreditCardFragment__year_required">נדרשת שנה</string>
     <!-- Error displayed under the card expiry text field when the expiry year is invalid -->
-    <string name="CreditCardFragment__invalid_year">שנה לא תקינה</string>
     <!-- Button label to confirm credit card input and proceed with one-time payment -->
-    <string name="CreditCardFragment__donate_s">תרומה של %1$s</string>
     <!-- Button label to confirm credit card input and proceed with subscription payment -->
-    <string name="CreditCardFragment__donate_s_month">תרומה של %1$s/בחודש</string>
     <!-- Button label to confirm credit card input and proceed with backups payment. Placeholder is formatted price. -->
-    <string name="CreditCardFragment__pay_s_month">תרומה של %1$s/בחודש</string>
 
     <!-- OneTimeDonationPreference -->
     <!-- Preference title with placeholder for amount. -->
-    <string name="OneTimeDonationPreference__one_time_s">חד פעמי %1$s</string>
     <!-- Preference subtitle when donation is pending -->
-    <string name="OneTimeDonationPreference__donation_pending">תרומה ממתינה</string>
     <!-- Preference subtitle when donation is processing -->
-    <string name="OneTimeDonationPreference__donation_processing">תרומה בעיבוד</string>
 
     <!-- BlockUnblockDialog -->
     <string name="BlockUnblockDialog_block_and_leave_s">לחסום ולעזוב את %1$s?</string>
@@ -4481,7 +4460,6 @@
     <string name="preferences__slow">איטי</string>
     <string name="preferences__help">עזרה</string>
     <string name="preferences__advanced">מתקדם</string>
-    <string name="preferences__donate_to_signal">ביצוע תרומה ל–Signal</string>
     <!-- Preference label for making one-time donations to Signal -->
     <string name="preferences__privacy">פרטיות</string>
     <!-- Preference label for stories -->
@@ -4675,9 +4653,6 @@
 
     <!-- Payments -->
     <string name="PaymentsActivityFragment__all_activity">כל הפעילות</string>
-    <string name="PaymentsAllActivityFragment__all">הכול</string>
-    <string name="PaymentsAllActivityFragment__sent">נשלח</string>
-    <string name="PaymentsAllActivityFragment__received">התקבל</string>
 
     <!-- Displayed on a welcome screen for payments -->
     <string name="PaymentsHomeFragment_introducing_payments">נעים להכיר: תשלומים</string>
@@ -4686,58 +4661,28 @@
     <string name="PaymentsHomeFragment__activating_payments">מפעיל תשלומים…</string>
     <string name="PaymentsHomeFragment__restore_payments_account">שחזר חשבון תשלומים</string>
     <string name="PaymentsHomeFragment__no_recent_activity_yet">אין פעילות מהזמן האחרון עדיין</string>
-    <string name="PaymentsHomeFragment__recent_activity">פעילות מהזמן האחרון</string>
     <string name="PaymentsHomeFragment__see_all">ראה הכול</string>
     <string name="PaymentsHomeFragment__add_funds">הוסף כספים</string>
     <string name="PaymentsHomeFragment__send">שלח</string>
-    <string name="PaymentsHomeFragment__sent_s">%1$s נשלחו</string>
-    <string name="PaymentsHomeFragment__received_s">%1$s התקבלו</string>
     <string name="PaymentsHomeFragment__transfer_to_exchange">העבר אל מסחר</string>
     <string name="PaymentsHomeFragment__currency_conversion">המרת מטבע</string>
     <string name="PaymentsHomeFragment__deactivate_payments">בטל הפעלת תשלומים</string>
     <string name="PaymentsHomeFragment__recovery_phrase">משפט השבה</string>
     <string name="PaymentsHomeFragment__help">עזרה</string>
-    <string name="PaymentsHomeFragment__coin_cleanup_fee">עמלת ניקוי מטבעות</string>
-    <string name="PaymentsHomeFragment__sent_payment">תשלום נשלח</string>
-    <string name="PaymentsHomeFragment__received_payment">תשלום התקבל</string>
-    <string name="PaymentsHomeFragment__processing_payment">מעבד תשלום</string>
-    <string name="PaymentsHomeFragment__unknown_amount">---</string>
-    <string name="PaymentsHomeFragment__currency_conversion_not_available">המרת מטבע אינה זמינה</string>
-    <string name="PaymentsHomeFragment__cant_display_currency_conversion">לא ניתן להציג המרת מטבע. יש לבדוק את החיבור לרשת ולנסות שוב.</string>
-    <string name="PaymentsHomeFragment__payments_is_not_available_in_your_region">תשלומים אינם זמינים באזור שלך.</string>
-    <string name="PaymentsHomeFragment__could_not_enable_payments">לא היה ניתן לאפשר תשלומים. נסה שוב מאוחר יותר.</string>
-    <string name="PaymentsHomeFragment__deactivate_payments_question">לבטל הפעלת תשלומים?</string>
-    <string name="PaymentsHomeFragment__you_will_not_be_able_to_send">לא תוכל לשלוח או לקבל MobileCoin ב־Signal אם תבטל הפעלת תשלומים.</string>
-    <string name="PaymentsHomeFragment__deactivate">בטל הפעלה</string>
-    <string name="PaymentsHomeFragment__continue">המשך</string>
-    <string name="PaymentsHomeFragment__balance_is_not_currently_available">מאזן אינו זמין כרגע.</string>
-    <string name="PaymentsHomeFragment__payments_deactivated">הפעלת תשלומים בוטלה.</string>
-    <string name="PaymentsHomeFragment__payment_failed">תשלום נכשל</string>
-    <string name="PaymentsHomeFragment__details">פרטים</string>
   <!-- Removed by excludeNonTranslatables <string name="PaymentsHomeFragment__learn_more__activate_payments" translatable="false">https://support.signal.org/hc/articles/360057625692#payments_activate</string> -->
     <!-- Displayed as a description in a dialog when the user tries to activate payments -->
-    <string name="PaymentsHomeFragment__you_can_use_signal_to_send_and">אפשר להשתמש ב–Signal כדי לשלוח ולקבל MobileCoin. כל התשלומים כפופים לתנאי השימוש עבור MobileCoin וארנק MobileCoin. יש סיכוי להיתקל בבעיות או תשלומים/יתרות שיאבדו לך ולא יהיה ניתן לשחזר. </string>
-    <string name="PaymentsHomeFragment__activate">הפעל</string>
-    <string name="PaymentsHomeFragment__view_mobile_coin_terms">הצג תנאי MobileCoin</string>
-    <string name="PaymentsHomeFragment__payments_not_available">תשלומים ב־Signal אינם זמינים יותר. אתה עדיין יכול להעביר כספים אל מסחר אבל אתה לא יכול יותר לשלוח ולקבל תשלומים או להוסיף כספים.</string>
 
   <!-- Removed by excludeNonTranslatables <string name="PaymentsHomeFragment__mobile_coin_terms_url" translatable="false">https://www.mobilecoin.com/terms-of-use.html</string> -->
     <!-- Alert dialog title which shows up after a payment to turn on payment lock -->
-    <string name="PaymentsHomeFragment__turn_on">להפעיל נעילת אבטחה לתשלום עבור העברות עתידיות?</string>
     <!-- Alert dialog description for why payment lock should be enabled before sending payments -->
-    <string name="PaymentsHomeFragment__add_an_additional_layer">אפשר להוסיף שכבת אבטחה נוספת ולדרוש נעילת מסך או טביעת אצבע ב-Android לפני שמאפשרים העברת כספים.</string>
     <!-- Alert dialog button to enable payment lock -->
     <string name="PaymentsHomeFragment__enable">הפעלה</string>
     <!-- Alert dialog button to not enable payment lock for now -->
     <string name="PaymentsHomeFragment__not_now">לא עכשיו</string>
     <!-- Alert dialog title which shows up to update app to send payments -->
-    <string name="PaymentsHomeFragment__update_required">נדרש עדכון</string>
     <!-- Alert dialog description that app update is required to send payments-->
-    <string name="PaymentsHomeFragment__an_update_is_required">יש לעדכן את Signal כדי להמשיך לשלוח ולקבל תשלומים, ולראות את יתרת התשלומים המעודכנת שלך.</string>
     <!-- Alert dialog button to cancel -->
-    <string name="PaymentsHomeFragment__cancel">בטל</string>
     <!-- Alert dialog button to update now -->
-    <string name="PaymentsHomeFragment__update_now">עדכן עכשיו</string>
 
 
     <!-- PaymentsSecuritySetupFragment -->
@@ -4752,46 +4697,26 @@
     <!-- Option to cancel -->
     <string name="PaymentsSecuritySetupFragment__not_now">לא עכשיו</string>
     <!-- Dialog title to confirm skipping the step -->
-    <string name="PaymentsSecuritySetupFragment__skip_this_step">לדלג על שלב זה?</string>
     <!-- Dialog description to let users know why payment lock is required -->
-    <string name="PaymentsSecuritySetupFragment__skipping_this_step">דילוג על שלב זה יאפשר לכל אדם עם גישה פיזית למכשיר הטלפון שלך להעביר כספים או לצפות במשפט שחזור הסיסמה שלך.</string>
     <!-- Dialog option to cancel -->
-    <string name="PaymentsSecuritySetupFragment__cancel">בטל</string>
     <!-- Dialog option to skip -->
-    <string name="PaymentsSecuritySetupFragment__skip">דלג</string>
 
     <!-- PaymentsAddMoneyFragment -->
     <string name="PaymentsAddMoneyFragment__add_funds">הוסף כספים</string>
     <string name="PaymentsAddMoneyFragment__your_wallet_address">כתובת הארנק שלך</string>
     <string name="PaymentsAddMoneyFragment__copy">העתק</string>
-    <string name="PaymentsAddMoneyFragment__copied_to_clipboard">הועתק ללוח</string>
     <string name="PaymentsAddMoneyFragment__to_add_funds">כדי להוסיף כספים, שלח MobileCoin  אל כתובת הארנק שלך. התחל עסקה מהחשבון שלך במסחר שתומך ב־MobileCoin, ואז סרוק את קוד ה־QR או העתק את כתובת הארנק שלך.</string>
   <!-- Removed by excludeNonTranslatables <string name="PaymentsAddMoneyFragment__learn_more__information" translatable="false">https://support.signal.org/hc/articles/360057625692#payments_transfer_from_exchange</string> -->
 
     <!-- PaymentsDetailsFragment -->
     <string name="PaymentsDetailsFragment__details">פרטים</string>
     <string name="PaymentsDetailsFragment__status">מעמד</string>
-    <string name="PaymentsDetailsFragment__submitting_payment">מגיש תשלום…</string>
-    <string name="PaymentsDetailsFragment__processing_payment">מעבד תשלום…</string>
-    <string name="PaymentsDetailsFragment__payment_complete">תשלום הושלם</string>
-    <string name="PaymentsDetailsFragment__payment_failed">תשלום נכשל</string>
     <string name="PaymentsDetailsFragment__network_fee">עמלת רשת</string>
     <string name="PaymentsDetailsFragment__sent_by">נשלח ע״י</string>
-    <string name="PaymentsDetailsFragment__sent_to_s">נשלח אל %1$s</string>
-    <string name="PaymentsDetailsFragment__you_on_s_at_s">את/ה בתאריך %1$s בשעה %2$s</string>
-    <string name="PaymentsDetailsFragment__s_on_s_at_s">%1$s בתאריך %2$s בשעה %3$s</string>
     <!-- Prefix to a name to indicate who a payment was sent to -->
-    <string name="PaymentsDetailsFragment__to">אל</string>
-    <string name="PaymentsDetailsFragment__from">מאת</string>
     <string name="PaymentsDetailsFragment__information">פרטי עסקה כולל סכום התשלום וזמן העסקה הם חלק מ–MobileCoin Ledger.</string>
-    <string name="PaymentsDetailsFragment__coin_cleanup_fee">עמלת ניקוי מטבעות</string>
-    <string name="PaymentsDetailsFragment__coin_cleanup_information">\"עמלת ניקוי מטבעות\" מחויבת כאשר המטבעות בחזקתך אינם יכולים להתאחד כדי להשלים עסקה. ניקוי יתיר לך להמשיך לשלוח תשלומים.</string>
-    <string name="PaymentsDetailsFragment__no_details_available">אין פרטים נוספים זמינים עבור עסקה זו</string>
   <!-- Removed by excludeNonTranslatables <string name="PaymentsDetailsFragment__learn_more__information" translatable="false">https://support.signal.org/hc/articles/360057625692#payments_details</string> -->
   <!-- Removed by excludeNonTranslatables <string name="PaymentsDetailsFragment__learn_more__cleanup_fee" translatable="false">https://support.signal.org/hc/articles/360057625692#payments_details_fees</string> -->
-    <string name="PaymentsDetailsFragment__sent_payment">תשלום נשלח</string>
-    <string name="PaymentsDetailsFragment__received_payment">תשלום התקבל</string>
-    <string name="PaymentsDeatilsFragment__payment_completed_s">תשלום הושלם %1$s</string>
     <string name="PaymentsDetailsFragment__block_number">חסימת מספר</string>
 
     <!-- PaymentsTransferFragment -->
@@ -4800,13 +4725,6 @@
     <string name="PaymentsTransferFragment__to_scan_or_enter_wallet_address">אל: סרוק או הכנס כתובת ארנק</string>
     <string name="PaymentsTransferFragment__you_can_transfer">אתה יכול להעביר MobileCoin ע״י השלמת העברה אל כתובת הארנק שסופקה ע״י המסחר. כתובת הארנק היא המחרוזת של המספרים והאותיות שמופיעה בדרך כלל מתחת אל קוד ה־QR.</string>
     <string name="PaymentsTransferFragment__next">הבא</string>
-    <string name="PaymentsTransferFragment__invalid_address">כתובת בלתי תקפה</string>
-    <string name="PaymentsTransferFragment__check_the_wallet_address">בדוק את כתובת הארנק שאתה מנסה להעביר אליה ונסה שוב.</string>
-    <string name="PaymentsTransferFragment__you_cant_transfer_to_your_own_signal_wallet_address">אתה לא יכול להעביר אל כתובת הארנק של Signal של עצמך. הכנס את כתובת הארנק מהחשבון שלך במסחר נתמך.</string>
-    <string name="PaymentsTransferFragment__to_scan_a_qr_code_signal_needs">כדי לסרוק קוד QR, היישום Signal צריך גישה אל המצלמה.</string>
-    <string name="PaymentsTransferFragment__signal_needs_the_camera_permission_to_capture_qr_code_go_to_settings">Signal צריך את הרשאת המצלמה כדי ללכוד קוד QR. לך אל הגדרות, בחר \"הרשאות\", ואפשר את \"מצלמה\".</string>
-    <string name="PaymentsTransferFragment__to_scan_a_qr_code_signal_needs_access_to_the_camera">כדי לסרוק קוד QR, היישום Signal צריך גישה אל המצלמה.</string>
-    <string name="PaymentsTransferFragment__settings">הגדרות</string>
 
     <!-- PaymentsTransferQrScanFragment -->
     <string name="PaymentsTransferQrScanFragment__scan_address_qr_code">סרוק קוד QR של כתובת</string>
@@ -4816,7 +4734,6 @@
     <!-- Button text to request the payment from a user -->
     <string name="CreatePaymentFragment__request">בקשה</string>
     <string name="CreatePaymentFragment__pay">שלם</string>
-    <string name="CreatePaymentFragment__available_balance_s">מאזן זמין: %1$s</string>
     <string name="CreatePaymentFragment__toggle_content_description">עורר</string>
     <string name="CreatePaymentFragment__1">1</string>
     <string name="CreatePaymentFragment__2">2</string>
@@ -4829,10 +4746,8 @@
     <string name="CreatePaymentFragment__9">9</string>
     <string name="CreatePaymentFragment__decimal">.</string>
     <string name="CreatePaymentFragment__0">0</string>
-    <string name="CreatePaymentFragment__lt">&lt;</string>
     <string name="CreatePaymentFragment__backspace">מקש חזרה</string>
     <string name="CreatePaymentFragment__add_note">הוסף הערה</string>
-    <string name="CreatePaymentFragment__conversions_are_just_estimates">המרות הן רק השערות ויתכן שהן לא מדויקות.</string>
   <!-- Removed by excludeNonTranslatables <string name="CreatePaymentFragment__learn_more__conversions" translatable="false">https://support.signal.org/hc/articles/360057625692#payments_currency_conversion</string> -->
 
     <!-- EditNoteFragment -->
@@ -4842,26 +4757,10 @@
 
     <!-- ConfirmPaymentFragment -->
     <string name="ConfirmPayment__confirm_payment">אשר תשלום</string>
-    <string name="ConfirmPayment__network_fee">עמלת רשת</string>
-    <string name="ConfirmPayment__estimated_s">משוער %1$s</string>
     <!-- Prefix to a name to indicate who a payment will be sent to -->
-    <string name="ConfirmPayment__to">אל</string>
-    <string name="ConfirmPayment__total_amount">סכום כולל</string>
-    <string name="ConfirmPayment__balance_s">מאזן: %1$s</string>
-    <string name="ConfirmPayment__submitting_payment">מגיש תשלום…</string>
-    <string name="ConfirmPayment__processing_payment">מעבד תשלום…</string>
-    <string name="ConfirmPayment__payment_complete">תשלום הושלם</string>
-    <string name="ConfirmPayment__payment_failed">תשלום נכשל</string>
-    <string name="ConfirmPayment__payment_will_continue_processing">התשלום ימשיך לעבד</string>
-    <string name="ConfirmPaymentFragment__invalid_recipient">מקבל בלתי תקף</string>
     <!-- Title of a dialog show when we were unable to present the user\'s screenlock before sending a payment -->
-    <string name="ConfirmPaymentFragment__failed_to_show_payment_lock">הצגת נעילת אבטחה לתשלום נכשלה</string>
     <!-- Body of a dialog show when we were unable to present the user\'s screenlock before sending a payment -->
-    <string name="ConfirmPaymentFragment__you_enabled_payment_lock_in_the_settings">הפעלת נעילת אבטחה לתשלום בהגדרות, אבל לא ניתן להציג אותה.</string>
     <!-- Button in a dialog that will take the user to the privacy settings -->
-    <string name="ConfirmPaymentFragment__go_to_settings">מעבר להגדרות</string>
-    <string name="ConfirmPaymentFragment__this_person_has_not_activated_payments">איש זה לא הפעיל תשלומים</string>
-    <string name="ConfirmPaymentFragment__unable_to_request_a_network_fee">לא היה ניתן לבקש עמלת רשת. כדי להמשיך תשלום זה, הקש על בסדר ונסה שוב.</string>
 
     <!-- BiometricDeviceAuthentication -->
     <!-- Biometric/Device authentication prompt title -->
@@ -4873,7 +4772,6 @@
 
     <!-- SetCurrencyFragment -->
     <string name="SetCurrencyFragment__set_currency">הגדרת מטבע</string>
-    <string name="SetCurrencyFragment__all_currencies">כל המטבעות</string>
 
     <!-- **************************************** -->
     <!-- menus -->
@@ -5791,20 +5689,9 @@
     <!-- InfoCard -->
     <string name="payment_info_card_about_mobilecoin">על אודות MobileCoin</string>
     <string name="payment_info_card_mobilecoin_is_a_new_privacy_focused_digital_currency">MobileCoin הוא מטבע דיגיטלי ממוקד פרטיות חדש.</string>
-    <string name="payment_info_card_adding_funds">הוספת כספים</string>
-    <string name="payment_info_card_you_can_add_funds_for_use_in">אתה יכול להוסיף כספים לשימוש ב־Signal ע״י שליחת MobileCoin אל כתובת הארנק שלך.</string>
-    <string name="payment_info_card_cashing_out">פדיון</string>
-    <string name="payment_info_card_you_can_cash_out_mobilecoin">אתה יכול לפדות MobileCoin בכל זמן במסחר שתומך ב־MobileCoin. פשוט בצע העברה אל החשבון שלך במסחר הזה.</string>
     <string name="payment_info_card_hide_this_card">להסתיר כרטיס זה?</string>
-    <string name="payment_info_card_hide">הסתר</string>
     <!-- Title of save recovery phrase card -->
-    <string name="payment_info_card_save_recovery_phrase">שמירת משפט שחזור סיסמה</string>
-    <string name="payment_info_card_your_recovery_phrase_gives_you">משפט ההשבה שלך נותן לך דרך אחרת לשחזר את חשבון התשלומים שלך</string>
     <!-- Button in save recovery phrase card -->
-    <string name="payment_info_card_save_your_phrase">שמירת המשפט שלך</string>
-    <string name="payment_info_card_update_your_pin">עדכן את ה־PIN שלך</string>
-    <string name="payment_info_card_with_a_high_balance">עם מאזן גבוה, יתכן שתרצה לעדכן אל PIN אלפאנומרי כדי להוסיף עוד הגנה אל החשבון שלך</string>
-    <string name="payment_info_card_update_pin">עדכן PIN</string>
 
   <!-- Removed by excludeNonTranslatables <string name="payment_info_card__learn_more__about_mobilecoin" translatable="false">https://support.signal.org/hc/articles/360057625692#payments_which_ones</string> -->
   <!-- Removed by excludeNonTranslatables <string name="payment_info_card__learn_more__adding_to_your_wallet" translatable="false">https://support.signal.org/hc/articles/360057625692#payments_transfer_from_exchange</string> -->
@@ -5816,18 +5703,12 @@
     <string name="DeactivateWalletFragment__its_recommended_that_you">מומלץ להעביר את הכספים שלך לכתובת ארנק אחרת לפני ביטול ההפעלה של תשלומים. במקרה של בחירה לא להעביר את הכספים עכשיו, הם יישארו בארנק שמקושר אל Signal בעת הפעלה מחדש של תשלומים.</string>
     <string name="DeactivateWalletFragment__transfer_remaining_balance">העבר מאזן נותר</string>
     <string name="DeactivateWalletFragment__deactivate_without_transferring">בטל הפעלה בלי להעביר</string>
-    <string name="DeactivateWalletFragment__deactivate">בטל הפעלה</string>
-    <string name="DeactivateWalletFragment__deactivate_without_transferring_question">לבטל הפעלה בלי להעביר?</string>
-    <string name="DeactivateWalletFragment__your_balance_will_remain">היתרה שלך תישאר בארנק שמקושר אל Signal במקרה של בחירה להפעיל מחדש את תשלומים.</string>
-    <string name="DeactivateWalletFragment__error_deactivating_wallet">שגיאה בביטול הפעלת ארנק.</string>
   <!-- Removed by excludeNonTranslatables <string name="DeactivateWalletFragment__learn_more__we_recommend_transferring_your_funds" translatable="false">https://support.signal.org/hc/articles/360057625692#payments_deactivate</string> -->
 
     <!-- PaymentsRecoveryStartFragment -->
     <string name="PaymentsRecoveryStartFragment__recovery_phrase">משפט השבה</string>
     <string name="PaymentsRecoveryStartFragment__view_recovery_phrase">הצג משפט השבה</string>
     <!-- Title in save recovery phrase screen -->
-    <string name="PaymentsRecoveryStartFragment__save_recovery_phrase">שמירת משפט שחזור סיסמה</string>
-    <string name="PaymentsRecoveryStartFragment__enter_recovery_phrase">הכנס משפט השבה</string>
     <plurals name="PaymentsRecoveryStartFragment__your_balance_will_automatically_restore">
         <item quantity="one">היתרה שלך תשוחזר באופן אוטומטי בעת התקנה מחדש של Signal לאחר אישור קוד PIN של Signal שלך. אפשר גם לשחזר את היתרה שלך באמצעות שימוש במשפט שחזור, שהוא משפט בן מילה %1$d ייחודי לך. כדאי לכתוב אותו ולאחסן אותו במקום בטוח.</item>
         <item quantity="two">היתרה שלך תשוחזר באופן אוטומטי בעת התקנה מחדש של Signal לאחר אישור קוד PIN של Signal שלך. אפשר גם לשחזר את היתרה שלך באמצעות שימוש במשפט שחזור, שהוא משפט בן %1$d מילים ייחודי לך. כדאי לכתוב אותו ולאחסן אותו במקום בטוח.</item>
@@ -5835,28 +5716,18 @@
         <item quantity="other">היתרה שלך תשוחזר באופן אוטומטי בעת התקנה מחדש של Signal לאחר אישור קוד PIN של Signal שלך. אפשר גם לשחזר את היתרה שלך באמצעות שימוש במשפט שחזור, שהוא משפט בן %1$d מילים ייחודי לך. כדאי לכתוב אותו ולאחסן אותו במקום בטוח.</item>
     </plurals>
     <!-- Description in save recovery phrase screen which shows up when user has non zero balance -->
-    <string name="PaymentsRecoveryStartFragment__got_balance">יש לך מאזן! הגיע הזמן לשמור את משפט שחזור הסיסמה שלך—סיסמה בעלת 24 מילים שאפשר להשתמש בה כדי לשחזר את המאזן הכספי שלך.</string>
     <!-- Description in save recovery phrase screen which shows up when user navigates from info card -->
-    <string name="PaymentsRecoveryStartFragment__time_to_save">הגיע הזמן לשמור את משפט שחזור הסיסמה שלך—סיסמה בעלת 24 מילים שאפשר להשתמש בה כדי לשחזר את היתרה שלך.</string>
-    <string name="PaymentsRecoveryStartFragment__your_recovery_phrase_is_a">משפט ההשבה שלך הוא משפט בן %1$d מילים ייחודי לך. השתמש במשפט הזה כדי לשחזר את המאזן שלך.</string>
     <string name="PaymentsRecoveryStartFragment__start">התחל</string>
-    <string name="PaymentsRecoveryStartFragment__enter_manually">הכנס באופן ידני</string>
     <string name="PaymentsRecoveryStartFragment__paste_from_clipboard">הדבק מלוח הגזירה</string>
     <!-- Alert dialog title which asks before going back if user wants to save recovery phrase -->
-    <string name="PaymentsRecoveryStartFragment__continue_without_saving">להמשיך בלי לשמור?</string>
     <!-- Alert dialog description to let user know why recovery phrase needs to be saved -->
-    <string name="PaymentsRecoveryStartFragment__your_recovery_phrase">משפט שחזור הסיסמה שלך מאפשר לך לשחזר את המאזן הכספי שלך בתרחיש הגרוע ביותר. אנחנו ממליצים בחום לשמור אותו.</string>
     <!-- Alert dialog option to skip recovery phrase -->
-    <string name="PaymentsRecoveryStartFragment__skip_recovery_phrase">דילוג על משפט שחזור סיסמה</string>
     <!-- Alert dialog option to cancel dialog-->
-    <string name="PaymentsRecoveryStartFragment__cancel">בטל</string>
 
     <!-- PaymentsRecoveryPasteFragment -->
     <string name="PaymentsRecoveryPasteFragment__paste_recovery_phrase">הדבק משפט השבה</string>
     <string name="PaymentsRecoveryPasteFragment__recovery_phrase">משפט השבה</string>
     <string name="PaymentsRecoveryPasteFragment__next">הבא</string>
-    <string name="PaymentsRecoveryPasteFragment__invalid_recovery_phrase">משפט השבה בלתי תקף</string>
-    <string name="PaymentsRecoveryPasteFragment__make_sure">וודא שהכנסת %1$d מילים ונסה שוב.</string>
 
   <!-- Removed by excludeNonTranslatables <string name="PaymentsRecoveryStartFragment__learn_more__view" translatable="false">https://support.signal.org/hc/articles/360057625692#payments_wallet_view_passphrase</string> -->
   <!-- Removed by excludeNonTranslatables <string name="PaymentsRecoveryStartFragment__learn_more__restore" translatable="false">https://support.signal.org/hc/articles/360057625692#payments_wallet_restore_passphrase</string> -->
@@ -5866,38 +5737,24 @@
     <string name="PaymentsRecoveryPhraseFragment__edit">ערוך</string>
     <string name="PaymentsRecoveryPhraseFragment__your_recovery_phrase">משפט ההשבה שלך</string>
     <string name="PaymentsRecoveryPhraseFragment__write_down_the_following_d_words">כתוב את %1$d המילים הבאות לפי הסדר. אחסן את הרשימה שלך במקום מאובטח.</string>
-    <string name="PaymentsRecoveryPhraseFragment__make_sure_youve_entered">וודא שהכנסת את המשפט שלך כראוי.</string>
     <string name="PaymentsRecoveryPhraseFragment__do_not_screenshot_or_send_by_email">אל תצלם צילום מסך או תשלח בדוא״ל.</string>
-    <string name="PaymentsRecoveryPhraseFragment__payments_account_restored">חשבון תשלומים שוחזר.</string>
-    <string name="PaymentsRecoveryPhraseFragment__invalid_recovery_phrase">משפט השבה בלתי תקף</string>
-    <string name="PaymentsRecoveryPhraseFragment__make_sure_youve_entered_your_phrase_correctly_and_try_again">וודא שהכנסת את המשפט שלך כראוי ונסה שוב</string>
-    <string name="PaymentsRecoveryPhraseFragment__copy_to_clipboard">להעתיק ללוח הגזירה?</string>
-    <string name="PaymentsRecoveryPhraseFragment__if_you_choose_to_store">אם אתה בוחר לאחסן את משפט ההשבה שלך באופן דיגיטלי, הבטח שהוא מאוחסן באופן מאובטח במקום כלשהו שאתה בוטח.</string>
     <string name="PaymentsRecoveryPhraseFragment__copy">העתק</string>
 
     <!-- PaymentsRecoveryPhraseConfirmFragment -->
     <string name="PaymentRecoveryPhraseConfirmFragment__confirm_recovery_phrase">אשר משפט השבה</string>
     <string name="PaymentRecoveryPhraseConfirmFragment__enter_the_following_words">הכנס את המילים הבאות מתוך משפט ההשבה שלך.</string>
-    <string name="PaymentRecoveryPhraseConfirmFragment__word_d">מילה %1$d</string>
     <string name="PaymentRecoveryPhraseConfirmFragment__see_phrase_again">ראה משפט שוב</string>
     <string name="PaymentRecoveryPhraseConfirmFragment__done">סיים</string>
-    <string name="PaymentRecoveryPhraseConfirmFragment__recovery_phrase_confirmed">משפט השבה אושר</string>
 
     <!-- PaymentsRecoveryEntryFragment -->
     <string name="PaymentsRecoveryEntryFragment__enter_recovery_phrase">הכנס משפט השבה</string>
-    <string name="PaymentsRecoveryEntryFragment__enter_word_d">הכנס את מילה %1$d</string>
-    <string name="PaymentsRecoveryEntryFragment__word_d">מילה %1$d</string>
     <string name="PaymentsRecoveryEntryFragment__next">הבא</string>
-    <string name="PaymentsRecoveryEntryFragment__invalid_word">מילה בלתי תקפה</string>
 
     <!-- UnreadPayments -->
     <string name="UnreadPayments__s_sent_you_s">%1$s שלח/ה לך %2$s</string>
     <string name="UnreadPayments__d_new_payment_notifications">%1$d התראות תשלום חדשות</string>
 
     <!-- CanNotSendPaymentDialog -->
-    <string name="CanNotSendPaymentDialog__cant_send_payment">לא ניתן לשלוח תשלום</string>
-    <string name="CanNotSendPaymentDialog__to_send_a_payment_to_this_user">כדי לשלוח תשלום אל המשתמש הזה, הוא צריך לאשר בקשת הודעה ממך. שלח לו הודעה כדי ליצור בקשת הודעה.</string>
-    <string name="CanNotSendPaymentDialog__send_a_message">שלח הודעה</string>
 
     <!-- GroupsInCommonMessageRequest -->
     <string name="GroupsInCommonMessageRequest__you_have_no_groups_in_common_with_this_person">אין לך קבוצות משותפות עם האיש הזה. סקור בקשות בזהירות טרם אישור שלהן כדי להימנע מהודעות בלתי רצויות.</string>
@@ -6352,13 +6209,9 @@
     <!-- ChatColorGradientTool -->
 
     <!-- Title text for prompt to donate. Shown in a popup at the bottom of the chat list. -->
-    <string name="Donate2022Q2Megaphone_donate_to_signal">ביצוע תרומה ל–Signal</string>
     <!-- Body text for prompt to donate. Shown in a popup at the bottom of the chat list. -->
-    <string name="Donate2022Q2Megaphone_signal_is_powered_by_people_like_you">Signal מופעלת בעזרת אנשים כמוך. אפשר לתרום מדי חודש ולקבל תג.</string>
     <!-- Button label that brings a user to the donate screen. Shown in a popup at the bottom of the chat list. -->
-    <string name="Donate2022Q2Megaphone_donate">ביצוע תרומה</string>
     <!-- Button label that dismissed a prompt to donate. Shown in a popup at the bottom of the chat list. -->
-    <string name="Donate2022Q2Megaphone_not_now">לא עכשיו</string>
 
     <!-- EditReactionsFragment -->
     <string name="EditReactionsFragment__customize_reactions">התאמה אישית של תגובות</string>
@@ -6375,11 +6228,7 @@
     <string name="AddAProfilePhotoMegaphone__add_photo">הוסף תמונה</string>
 
     <!-- BecomeASustainerMegaphone -->
-    <string name="BecomeASustainerMegaphone__become_a_sustainer">הפוך אל מחזיק</string>
     <!-- Displayed in the Become a Sustainer megaphone -->
-    <string name="BecomeASustainerMegaphone__signal_is_powered_by">Signal מופעלת בעזרת אנשים כמוך. אפשר לתרום ולקבל תג.</string>
-    <string name="BecomeASustainerMegaphone__not_now">לא עכשיו</string>
-    <string name="BecomeASustainerMegaphone__donate">ביצוע תרומה</string>
 
     <!-- KeyboardPagerFragment -->
     <string name="KeyboardPagerFragment_emoji">אימוג’י</string>
@@ -6744,15 +6593,9 @@
     <string name="MediaCaptureFragment_device_link_dialog_continue">המשך</string>
 
 
-    <string name="BadgesOverviewFragment__my_badges">התגים שלי</string>
     <string name="BadgesOverviewFragment__featured_badge">תג פרופיל</string>
-    <string name="BadgesOverviewFragment__display_badges_on_profile">הצגת תגים בפרופיל שלי</string>
-    <string name="BadgesOverviewFragment__failed_to_update_profile">נכשל בעדכון פרופיל</string>
 
 
-    <string name="SelectFeaturedBadgeFragment__select_a_badge">בחירת תג</string>
-    <string name="SelectFeaturedBadgeFragment__you_must_select_a_badge">חובה לבחור תג</string>
-    <string name="SelectFeaturedBadgeFragment__failed_to_update_profile">נכשל בעדכון פרופיל</string>
 
     <!-- Displayed on primary button in the bottom sheet as a call-to-action to launch into the donation flow -->
     <string name="ViewBadgeBottomSheetDialogFragment__donate_now">ביצוע תרומה</string>
@@ -6765,29 +6608,21 @@
 
     <string name="ImageView__badge">תג</string>
 
-    <string name="SubscribeFragment__cancel_subscription">ביטול מנוי</string>
     <string name="SubscribeFragment__confirm_cancellation">לאשר ביטול?</string>
     <string name="SubscribeFragment__you_wont_be_charged_again">לא נחייב אותך שוב. התג שלך יוסר מהפרופיל שלך בסוף תקופת החיוב שלך.</string>
     <string name="SubscribeFragment__not_now">לא עכשיו</string>
     <string name="SubscribeFragment__confirm">אשר</string>
-    <string name="SubscribeFragment__update_subscription">עדכון מנוי</string>
-    <string name="SubscribeFragment__your_subscription_has_been_cancelled">המנוי שלך בוטל.</string>
-    <string name="SubscribeFragment__update_subscription_question">לעדכן מנוי?</string>
     <string name="SubscribeFragment__update">עדכן</string>
     <string name="SubscribeFragment__you_will_be_charged_the_full_amount_s_of">נחייב אותך בסכום המלא (%1$s) של מחיר של המנוי החדש היום. המנוי שלך מתחדש באופן חודשי.</string>
 
-    <string name="Subscription__s_per_month">%1$s/חודש</string>
     <!-- Shown when a subscription is active and isn\'t going to expire at the end of the term -->
-    <string name="Subscription__renews_s">מתחדש ב–%1$s</string>
     <!-- Shown when a subscription is active and is going to expire at the end of the term -->
-    <string name="Subscription__expires_s">תאריך תפוגה: %1$s</string>
 
     <!-- Title of learn more sheet -->
     <string name="SubscribeLearnMoreBottomSheetDialogFragment__signal_is_different">כעמותה עצמאית ללא מטרות רווח, Signal מחויבת להודעות ושיחות פרטיות. ללא פרסומות, ללא מעקב, ללא ריגול. תורמים היום ותומכים ב–Signal.</string>
     <!-- First small text blurb on learn more sheet -->
     <string name="SubscribeLearnMoreBottomSheetDialogFragment__private_messaging">No ads, no trackers, no surveillance. Donate today to support Signal.</string>
     <!-- Second small text blurb on learn more sheet -->
-    <string name="SubscribeLearnMoreBottomSheetDialogFragment__donate_and_get_badge">קבלו תג אופציונלי לפרופיל בעת תרומה</string>
     <!-- Third small text blurb on learn more sheet -->
     <string name="SubscribeLearnMoreBottomSheetDialogFragment__your_privacy_is_our_mission">הפרטיות שלך היא המשימה שלנו</string>
     <!-- Fourth small text blurb on learn more sheet. Non-English translations should use "Signal is a nonprofit." instead, dropping the 501c3 reference. -->
@@ -6795,60 +6630,37 @@
 
     <string name="SubscribeThanksForYourSupportBottomSheetDialogFragment__thanks_for_your_support">תודה על התמיכה שלך!</string>
     <!-- Subtext underneath the dialog title on the thanks sheet -->
-    <string name="SubscribeThanksForYourSupportBottomSheetDialogFragment__youve_earned_a_donor_badge">הרווחת תג תרומה מ–Signal! אפשר להציג אותו בפרופיל שלך כדי להשוויץ בתמיכה שלך.</string>
     <string name="SubscribeThanksForYourSupportBottomSheetDialogFragment__you_can_also">אתה גם יכול</string>
-    <string name="SubscribeThanksForYourSupportBottomSheetDialogFragment__become_a_montly_sustainer">הפוך אל מחזיק חודשי.</string>
     <string name="SubscribeThanksForYourSupportBottomSheetDialogFragment__display_on_profile">הצג בפרופיל</string>
-    <string name="SubscribeThanksForYourSupportBottomSheetDialogFragment__make_featured_badge">הצג תג בפרופיל</string>
     <string name="SubscribeThanksForYourSupportBottomSheetDialogFragment__continue">המשך</string>
     <string name="ThanksForYourSupportBottomSheetFragment__when_you_have_more">כשיהיה לך יותר מתג אחד, תהיה לך אפשרות לבחור אחד להציג בפרופיל כדי שאחרים יראו אותו.</string>
 
-    <string name="BecomeASustainerFragment__get_badges">משיגים תגים עבור הפרופיל שלך באמצעות תמיכה ב–Signal.</string>
-    <string name="BecomeASustainerFragment__signal_is_a_non_profit">Signal הוא ארגון ללא מטרות רווח בלי מפרסמים או משקיעים, שנתמך רק ע״י אנשים כמוך.</string>
 
     <!-- Button label for creating a donation -->
-    <string name="ManageDonationsFragment__donate_to_signal">ביצוע תרומה ל–Signal</string>
     <!-- Heading for more area of manage subscriptions page -->
-    <string name="ManageDonationsFragment__more">עוד</string>
     <!-- Heading for receipts area of manage subscriptions page -->
     <!-- Heading for my subscription area of manage subscriptions page -->
-    <string name="ManageDonationsFragment__my_support">התמיכה שלי</string>
-    <string name="ManageDonationsFragment__manage_subscription">ניהול מנוי</string>
     <!-- Label for Donation Receipts button -->
-    <string name="ManageDonationsFragment__donation_receipts">קבלות על תרומות</string>
-    <string name="ManageDonationsFragment__badges">תגים</string>
     <!-- Label that externally links to Signal Donor FAQ page -->
-    <string name="ManageDonationsFragment__subscription_faq">שאלות נפוצות של תורמים</string>
     <!-- Preference heading for other ways to donate -->
-    <string name="ManageDonationsFragment__other_ways_to_give">דרכים אחרות לתת</string>
     <!-- Preference label to launch badge gifting -->
-    <string name="ManageDonationsFragment__donate_for_a_friend">ביצוע תרומה בשביל חבר/ה</string>
     <!-- Dialog title shown when a donation requires verifying/confirmation outside of the app and the user hasn\'t done that yet -->
-    <string name="ManageDonationsFragment__couldnt_confirm_donation">לא היה ניתן לאשר את התרומה</string>
     <!-- Dialog message shown when a monthly donation requires verifying/confirmation outside of the app and the user hasn\'t done that yet, placeholder is money amount -->
-    <string name="ManageDonationsFragment__your_monthly_s_donation_couldnt_be_confirmed_ideal_wero">Your %1$s/month donation couldn\'t be confirmed. Check your banking app to approve your iDEAL | Wero payment.</string>
     <!-- Dialog message shown when a one-time donation requires verifying/confirmation outside of the app and the user hasn\'t done that yet, placeholder is money amount -->
-    <string name="ManageDonationsFragment__your_one_time_s_donation_couldnt_be_confirmed_ideal_wero">Your one-time %1$s donation couldn\'t be confirmed. Check your banking app to approve your iDEAL | Wero payment.</string>
 
-    <string name="Boost__enter_custom_amount">הכנסת סכום מותאם אישית</string>
     <!-- Error label when the amount is smaller than what we can accept -->
-    <string name="Boost__the_minimum_amount_you_can_donate_is_s">הסכום המינימלי שאפשר לתרום הוא %1$s</string>
 
     <string name="MySupportPreference__s_per_month">%1$s/חודש</string>
     <string name="MySupportPreference__renews_s">מתחדש ב–%1$s</string>
     <!-- Subtitle shown when processing a donation transaction -->
     <string name="MySupportPreference__processing_transaction">מעבד עסקה…</string>
     <!-- Displayed on "My Support" screen when user badge failed to be added to their account -->
-    <string name="MySupportPreference__couldnt_add_badge_s">לא היה ניתן להוסיף תג. %1$s</string>
     <string name="MySupportPreference__please_contact_support">אנא צור קשר עם התמיכה.</string>
     <!-- Displayed as a subtitle on a row in the Manage Donations screen when payment for a donation is pending -->
-    <string name="MySupportPreference__payment_pending">תשלום ממתין</string>
     <!-- Displayed as a dialog message when clicking on a donation row that is pending. Placeholder is a formatted fiat amount -->
-    <string name="MySupportPreference__your_bank_transfer_of_s">ההעברה הבנקאית שלך על סך %1$s ממתינה. השלמת העברות בנקאיות יכולה לקחת בין 1–14 ימי עסקים.  </string>
     <!-- Displayed in the pending help dialog, used to launch user to more details about bank transfers -->
     <string name="MySupportPreference__learn_more">למידע נוסף</string>
     <!-- Displayed when a subscription refresh is being performed -->
-    <string name="MySupportPreference__checking_subscription">מנוי בבדיקה…</string>
 
     <!-- Title of dialog telling user they need to update signal as it expired -->
     <string name="UpdateSignalExpiredDialog__title">עדכן את Signal</string>
@@ -6869,126 +6681,66 @@
     <string name="ReregisterSignalDialog__cancel_action">ביטול</string>
 
     <!-- Title of expiry sheet when boost badge falls off profile unexpectedly. -->
-    <string name="ExpiredBadgeBottomSheetDialogFragment__boost_badge_expired">פג התוקף של תג בוסט</string>
     <!-- Displayed in the bottom sheet if a monthly donation badge unexpectedly falls off the user\'s profile -->
-    <string name="ExpiredBadgeBottomSheetDialogFragment__monthly_donation_cancelled">תרומה חודשית בוטלה</string>
     <!-- Displayed in the bottom sheet when a boost badge expires -->
-    <string name="ExpiredBadgeBottomSheetDialogFragment__your_boost_badge_has_expired_and">תג התמריץ שלך פג והוא אינו גלוי יותר בפרופיל שלך.</string>
-    <string name="ExpiredBadgeBottomSheetDialogFragment__you_can_reactivate">אפשר להפעיל מחדש את תג הבוסט שלך למשך 30 ימים נוספים עם תרומה חד פעמית.</string>
     <!-- Displayed when we do not think the user is a subscriber when their boost expires -->
-    <string name="ExpiredBadgeBottomSheetDialogFragment__you_can_keep">אפשר להמשיך להשתמש ב–Signal אבל כדי לתמוך בטכנולוגיה שנבנתה עבורכם, נשמח אם תשקלו להפוך לתומכים באמצעות ביצוע תרומה חודשית.</string>
-    <string name="ExpiredBadgeBottomSheetDialogFragment__become_a_sustainer">הפוך אל מחזיק</string>
-    <string name="ExpiredBadgeBottomSheetDialogFragment__add_a_boost">הוספת בוסט</string>
-    <string name="ExpiredBadgeBottomSheetDialogFragment__not_now">לא עכשיו</string>
     <!-- Copy displayed when badge expires after user inactivity -->
-    <string name="ExpiredBadgeBottomSheetDialogFragment__your_recurring_monthly_donation_was_automatically">התרומה החודשית החוזרת שלכם בוטלה באופן אוטומטי כי לא הייתם פעילים למשך זמן רב. תג ה%1$s שלכם לא גלוי יותר בפרופיל שלך.</string>
     <!-- Copy displayed when badge expires after payment failure -->
-    <string name="ExpiredBadgeBottomSheetDialogFragment__your_recurring_monthly_donation_was_canceled">התרומה החודשית החוזרת שלך בוטלה כי לא יכולנו לעבד את התשלום שלך. התג שלך לא גלוי יותר בפרופיל שלך.</string>
     <!-- Copy displayed when badge expires after a payment failure and we have a displayable charge failure reason -->
-    <string name="ExpiredBadgeBottomSheetDialogFragment__your_recurring_monthly_donation_was_canceled_s">התרומה החודשית החוזרת שלך בוטלה. %1$s תג ה%2$s לא גלוי יותר בפרופיל שלך.</string>
-    <string name="ExpiredBadgeBottomSheetDialogFragment__you_can">אפשר להמשיך להשתמש ב–Signal אבל כדי לתמוך באפליקציה ולהפעיל מחדש את התג שלך, צריך לחדש עכשיו.</string>
-    <string name="ExpiredBadgeBottomSheetDialogFragment__renew_subscription">חידוש מנוי</string>
     <!-- Button label to send user to Google Pay website -->
-    <string name="ExpiredBadgeBottomSheetDialogFragment__go_to_google_pay">לך אל Google Pay</string>
 
-    <string name="CantProcessSubscriptionPaymentBottomSheetDialogFragment__cant_process_subscription_payment">לא ניתן לעבד תשלום מינוי</string>
-    <string name="CantProcessSubscriptionPaymentBottomSheetDialogFragment__were_having_trouble">אנחנו נתקלים בבעיה באיסוף תשלום מחזיק Signal שלך. וודא ששיטת התשלום שלך מעודכנת. אם היא לא, עדכן אותה ב־Google Pay. יישום Signal ינסה לעבד את התשלום שוב עוד מספר ימים.</string>
-    <string name="CantProcessSubscriptionPaymentBottomSheetDialogFragment__dont_show_this_again">אל תראה את זה שוב</string>
 
-    <string name="Subscription__contact_support">צור קשר עם תמיכה</string>
-    <string name="Subscription__get_a_s_badge">קבלת תג %1$s</string>
 
     <!-- *PaymentInProgressFragment strings -->
-    <string name="InAppPaymentInProgressFragment__processing_donation">תרומה בעיבוד…</string>
-    <string name="InAppPaymentInProgressFragment__processing_payment">מעבד תשלום…</string>
 
     <!--InAppDonations -->
     <!-- Label displayed in google play and on receipts for recurring subscriptions. Placeholder is level -->
-    <string name="InAppDonations__recurring_d">חוזרת %1$d</string>
 
     <!-- InAppPaymentErrors -->
     <!-- Displayed as a title in a dialog or notification when a payment failure happens. -->
-    <string name="InAppPaymentErrors__error_processing_payment">שגיאה בעיבוד תשלום</string>
     <!-- Displayed as a message in a dialog or notification when a payment setup error happens. -->
-    <string name="InAppPaymentErrors__your_payment_couldnt_be_processed">לא ניתן היה לעבד את התשלום שלך ולא חויבת. כדאי לנסות שוב.</string>
     <!-- Displayed as a message in a dialog when we timeout waiting for a payment to be processed and token to be redeemed -->
-    <string name="InAppPaymentErrors__your_payment_is_still">התשלום שלך עדין מעובד. זה יכול לקחת מספר דקות בהתאם לחיבור שלך.</string>
     <!-- Displayed as a message in a dialog or notification when stripe decline code issuer not available for backup payment. -->
-    <string name="InAppPaymentErrors__StripeDeclineCode__try_completing_the_payment_again">נסה להשלים את התשלום שוב או צור קשר עם הבנק שלך בשביל עוד מידע.</string>
     <!-- Failure code text for revoked authorization of payment, displayed in a dialog or notification as a message. -->
-    <string name="InAppPaymentErrors__StripeFailureCode__this_payment_was_revoked">התשלום הזה בוטל על ידי בעל החשבון ולא ניתן היה לעבד אותו. לא חויבת.</string>
     <!-- Failure code text for a payment lacking an authorized mandate or incorrect mandate, displayed in a dialog or notification as a message.-->
-    <string name="InAppPaymentErrors__StripeFailureCode__an_error_occurred_while_processing_this_payment">אירעה שגיאה בעת עיבוד התשלום הזה, יש לנסות שוב.</string>
 
     <!-- Displayed in notification when user payment fails to process on Stripe -->
-    <string name="DonationsErrors__error_processing_payment">שגיאה בעיבוד תרומה</string>
     <!-- Displayed on manage donations screen as a dialog message when payment method failed -->
-    <string name="DonationsErrors__try_another_payment_method">נסה שיטת תשלום אחרת או צור קשר עם הבנק שלך בשביל עוד מידע.</string>
     <!-- Displayed on manage donations screen error dialogs as an action label -->
-    <string name="DonationsErrors__learn_more">למידע נוסף</string>
     <!-- Displayed on "My Support" screen when user subscription payment method failed. -->
-    <string name="DonationsErrors__error_processing_payment_s">שגיאה בעיבוד תרומה. %1$s</string>
-    <string name="DonationsErrors__your_payment">לא היה ניתן לעבד את התרומה שלך ולא חויבת. יש לנסות שוב.</string>
-    <string name="DonationsErrors__still_processing">עדין מעבד</string>
-    <string name="DonationsErrors__couldnt_add_badge">לא הייתה אפשרות להוסיף תג</string>
     <!-- Displayed when backup credential could not be redeemed. Dialog or notification title -->
-    <string name="DonationsError__something_went_wrong">משהו השתבש</string>
     <!-- Displayed when backup credential could not be redeemed. Dialog or notification body -->
-    <string name="DonationsError__your_backups_subscription_couldnt_be_displayed">לא ניתן היה להציג את מנוי הגיבויים שלך. יש ליצור קשר עם התמיכה.</string>
     <!-- Displayed when badge credential couldn\'t be verified -->
-    <string name="DonationsErrors__failed_to_validate_badge">אימות התג נכשל</string>
     <!-- Displayed when badge credential couldn\'t be verified -->
-    <string name="DonationsErrors__could_not_validate">לא היה ניתן לבדוק תקפות תגובת שרת. אנא צור קשר עם התמיכה.</string>
     <!-- Displayed as title when some generic error happens during sending donation on behalf of another user -->
-    <string name="DonationsErrors__donation_failed">התרומה נכשלה</string>
     <!-- Displayed as message when some generic error happens during sending donation on behalf of another user -->
-    <string name="DonationsErrors__your_payment_was_processed_but">התשלום שלך עובד אבל Signal לא הצליחה לשלוח את ההודעה על התרומה. יש ליצור קשר עם התמיכה.</string>
-    <string name="DonationsErrors__your_badge_could_not">לא הייתה אפשרות להוסיף את התג שלך לחשבון שלך, אבל ייתכן שחויבת. כדאי ליצור קשר עם התמיכה.</string>
-    <string name="DonationsErrors__your_payment_is_still">התרומה שלך עדיין בתהליך עיבוד. זה יכול לקחת מספר דקות בהתאם לחיבור שלך.</string>
-    <string name="DonationsErrors__failed_to_cancel_subscription">ביטול המנוי נכשל</string>
-    <string name="DonationsErrors__subscription_cancellation_requires_an_internet_connection">ביטול מנוי דורש חיבור לאינטרנט.</string>
     <string name="ViewBadgeBottomSheetDialogFragment__your_device_doesn_t_support">המכשיר שלך לא תומך בתרומות בתוך האפליקציה, כך שאין לך אפשרות להירשם כמנוי כדי להרוויח תג. עדיין אפשר לתמוך ב–Signal באמצעות ביצוע תרומה באתר שלנו.</string>
     <string name="NetworkFailure__network_error_check_your_connection_and_try_again">שגיאת רשת. בדוק את החיבור שלך ונסה שוב.</string>
     <string name="NetworkFailure__retry">נסה שוב</string>
     <!-- Displayed as a dialog title when the selected recipient for a gift doesn\'t support gifting -->
-    <string name="DonationsErrors__cannot_send_donation">לא ניתן לשלוח תרומה</string>
     <!-- Displayed as a dialog message when the selected recipient for a gift doesn\'t support gifting -->
-    <string name="DonationsErrors__this_user_cant_receive_donations_until">משתמש זה לא יכול לקבל תרומות עד שהוא ישדרג את Signal.</string>
     <!-- Displayed as a dialog message when the user\'s profile could not be fetched, likely due to lack of internet -->
-    <string name="DonationsErrors__your_donation_could_not_be_sent">לא הצלחנו לשלוח את התרומה שלך בגלל שגיאת רשת. כדאי לבדוק את החיבור ולנסות שוב.</string>
     <!-- Displayed as a dialog message when the user encounters an error during an iDEAL donation -->
-    <string name="DonationsErrors__your_ideal_wero_couldnt_be_processed">Your iDEAL | Wero donation couldn\'t be processed. Try another payment method or contact your bank for more information.</string>
 
     <!-- Gift message view title -->
-    <string name="GiftMessageView__donation_on_behalf_of_s">תרומה בשם %1$s</string>
     <!-- Gift message view title for incoming donations -->
-    <string name="GiftMessageView__s_donated_to_signal_on">%1$s תרם/ה ל–Signal בשמך</string>
     <!-- Gift badge redeem action label -->
-    <string name="GiftMessageView__redeem">ממש</string>
     <!-- Gift badge view action label -->
-    <string name="GiftMessageView__view">הצג</string>
     <!-- Gift badge redeeming action label -->
-    <string name="GiftMessageView__redeeming">מממש…</string>
     <!-- Gift badge redeemed label -->
-    <string name="GiftMessageView__redeemed">מומש</string>
 
 
     <!-- Stripe decline code generic_failure -->
-    <string name="DeclineCode__try_another_payment_method_or_contact_your_bank">נסה שיטת תשלום אחרת או צור קשר עם הבנק שלך בשביל עוד מידע.</string>
     <!-- PayPal decline code for payment declined -->
-    <string name="DeclineCode__try_another_payment_method_or_contact_your_bank_for_more_information_if_this_was_a_paypal">יש לנסות אמצעי תשלום אחר או ליצור קשר עם הבנק שלך לקבלת מידע נוסף. אם זו הייתה עסקת PayPal, יש ליצור קשר עם PayPal.</string>
     <!-- Stripe decline code verify on Google Pay and try again -->
-    <string name="DeclineCode__verify_your_payment_method_is_up_to_date_in_google_pay_and_try_again">וודא ששיטת התשלום שלך מעודכנת ב־Google Pay ונסה שוב.</string>
     <!-- Stripe decline code learn more action label -->
     <string name="DeclineCode__learn_more">למד עוד</string>
     <!-- Stripe decline code contact issuer -->
-    <string name="DeclineCode__verify_your_payment_method_is_up_to_date_in_google_pay_and_try_again_if_the_problem">וודא ששיטת התשלום שלך מעודכנת ב־Google Pay ונסה שוב. אם הבעיה ממשיכה, צור קשר עם הבנק שלך.</string>
     <!-- Stripe decline code purchase not supported -->
     <string name="DeclineCode__your_card_does_not_support_this_type_of_purchase">הכרטיס שלך לא תומך בסוג זה של רכישה. נסה שיטת תשלום אחרת.</string>
     <!-- Stripe decline code your card has expired -->
     <string name="DeclineCode__your_card_has_expired">הכרטיס שלך פג. עדכן את שיטת התשלום שלך ב־Google Pay ונסה שוב.</string>
     <!-- Stripe decline code go to google pay action label -->
-    <string name="DeclineCode__go_to_google_pay">לך אל Google Pay</string>
     <!-- Stripe decline code try credit card again action label -->
     <string name="DeclineCode__try">נסה שוב</string>
     <!-- Stripe decline code incorrect card number -->
@@ -7002,7 +6754,6 @@
     <!-- Stripe decline code incorrect expiration year -->
     <string name="DeclineCode__the_expiration_year">שנת התפוגה בשיטת התשלום שלך שגויה. עדכן אותה ב־Google Pay ונסה שוב.</string>
     <!-- Stripe decline code issuer not available -->
-    <string name="DeclineCode__try_completing_the_payment_again">כדאי לנסות לבצע את התרומה שוב או ליצור קשר עם הבנק שלך לקבלת מידע נוסף.</string>
     <!-- Stripe decline code processing error -->
     <string name="DeclineCode__try_again">נסה שוב או צור קשר עם הבנק שלך בשביל עוד מידע.</string>
 
@@ -7024,15 +6775,10 @@
 
     <!-- Stripe Failure Codes for failed bank transfers -->
     <!-- Failure code text for insufficient funds, displayed in a dialog or notification -->
-    <string name="StripeFailureCode__the_bank_account_provided">אין מספיק כסף בחשבון הבנק שסופק כדי להשלים את הרכישה הזו, יש לנסות שוב או ליצור קשר עם הבנק למידע נוסף.</string>
     <!-- Failure code text for revoked authorization of payment, displayed in a dialog or notification -->
-    <string name="StripeFailureCode__this_payment_was_revoked">התשלום הזה בוטל על ידי בעל החשבון ולא היה ניתן לעבד אותו. לא חויבת.</string>
     <!-- Failure code text for a payment lacking an authorized mandate or incorrect mandate, displayed in a dialog or notification -->
-    <string name="StripeFailureCode__an_error_occurred_while_processing_this_payment">אירעה שגיאה בעת עיבוד התרומה הזו, יש לנסות שוב.</string>
     <!-- Failure code text for a closed account, deceased recipient, or one with blocked direct debits, displayed in a dialog or notification -->
-    <string name="StripeFailureCode__the_bank_details_provided_could_not_be_processed">לא ניתן היה לעבד את פרטי הבנק שסופקו, יש ליצור קשר עם הבנק למידע נוסף.</string>
     <!-- Failure code text for a non-existent bank branch, invalid account holder, invalid iban, generic failure, or unknown bank failure, displayed in a dialog or notification -->
-    <string name="StripeFailureCode__verify_your_bank_details_are_correct">יש לוודא שפרטי הבנק שלך נכונים ולנסות שוב. אם הבעיה נמשכת, יש ליצור קשר עם הבנק.</string>
 
     <!-- Title of create notification profile screen -->
     <string name="EditNotificationProfileFragment__name_your_profile">תן שם לפרופיל שלך</string>
@@ -7195,33 +6941,19 @@
     <string name="ReleaseNotes__official_only_chat">הצ׳אט הרשמי והיחיד של Signal</string>
 
     <!-- Donation receipts activity title -->
-    <string name="DonationReceiptListFragment__all_activity">כל הפעילות</string>
     <!-- Donation receipts all tab label -->
-    <string name="DonationReceiptListFragment__all">הכול</string>
     <!-- Donation receipts recurring tab label -->
-    <string name="DonationReceiptListFragment__recurring">חוזרת</string>
     <!-- Donation receipts one-time tab label -->
-    <string name="DonationReceiptListFragment__one_time">חד־פעמית</string>
     <!-- Donation receipts gift tab -->
-    <string name="DonationReceiptListFragment__for_a_friend">בשביל חבר/ה</string>
     <!-- Donation receipts gift tab label -->
-    <string name="DonationReceiptListFragment__donation_for_a_friend">תרומה בשביל חבר/ה</string>
     <!-- Donation receipts donation type heading -->
-    <string name="DonationReceiptDetailsFragment__donation_type">סוג תרומה</string>
     <!-- Donation receipts date paid heading -->
-    <string name="DonationReceiptDetailsFragment__date_paid">תאריך תשלום</string>
     <!-- Donation receipts share PNG -->
-    <string name="DonationReceiptDetailsFragment__share_receipt">שתף קבלה</string>
     <!-- Donation receipts list end note -->
-    <string name="DonationReceiptListFragment__if_you_have">אם התקנת מחדש את Signal, קבלות מתרומות קודמות לא יהיו זמינות.</string>
     <!-- Donation receipts document title -->
-    <string name="DonationReceiptDetailsFragment__donation_receipt">קבלה על תרומה</string>
     <!-- Donation receipts amount title -->
-    <string name="DonationReceiptDetailsFragment__amount">סכום</string>
     <!-- Donation receipts thanks -->
-    <string name="DonationReceiptDetailsFragment__thank_you_for_supporting">תודה לך על תמיכה ב־Signal. התרומה שלך עוזרת לתדלק את המשימה של פיתוח טכנולוגית פרטיות בקוד פתוח שמגינה על חופשי ביטוי ומאפשרת תקשורת עולמית מאובטחת עבור מיליוני אנשים ברחבי העולם. אם אתה תושב ארצות הברית, אנא שמור את הקבלה הזאת עבור רישומי המס שלך. הקרן של טכנולוגית Signal היא ארגון ללא מטרות רווח פטור ממס בארצות הברית תחת קטע 501c3 של קוד ההכנסה הפנימית. מספר זהות המס שלנו הוא 82–4506840.</string>
     <!-- Donation reciepts screen empty state title -->
-    <string name="DonationReceiptListFragment__no_receipts">אין קבלות</string>
 
     <!-- region "Stories Tab" -->
 
@@ -7629,7 +7361,6 @@
         <item quantity="other">%1$s · למשך %2$d ימים</item>
     </plurals>
     <!-- Headline text on start fragment for gifting a badge -->
-    <string name="GiftFlowStartFragment__donate_for_a_friend">ביצוע תרומה בשביל חבר/ה</string>
     <!-- Description text on start fragment for gifting a badge -->
     <plurals name="GiftFlowStartFragment__support_signal_by">
         <item quantity="one">אפשר לתמוך ב–Signal על ידי ביצוע תרומה בשביל חבר/ה או קרוב/ת משפחה שמשתמשים ב–Signal. הם יקבלו תג שיוכלו להציג בפרופיל שלהם ליום %1$d</item>
@@ -7638,47 +7369,27 @@
         <item quantity="other">אפשר לתמוך ב–Signal על ידי ביצוע תרומה בשביל חבר/ה או קרוב/ת משפחה שמשתמשים ב–Signal. הם יקבלו תג שיוכלו להציג בפרופיל שלהם ל–%1$d ימים</item>
     </plurals>
     <!-- Action button label for start fragment for gifting a badge -->
-    <string name="GiftFlowStartFragment__next">הבא</string>
     <!-- Title text on choose recipient page for badge gifting -->
-    <string name="GiftFlowRecipientSelectionFragment__choose_recipient">בחר מקבל</string>
     <!-- Title text on confirm gift page -->
-    <string name="GiftFlowConfirmationFragment__confirm_donation">אישור תרומה</string>
     <!-- Heading text specifying who the gift will be sent to -->
-    <string name="GiftFlowConfirmationFragment__send_to">שליחה אל</string>
     <!-- Text explaining that gift will be sent to the chosen recipient -->
-    <string name="GiftFlowConfirmationFragment__the_recipient_will_be_notified">נעדכן את הנמען/ת על התרומה בהודעת 1–על–1. אפשר להוסיף הודעה משלך למטה.</string>
     <!-- Text explaining that this gift is a one time donation -->
-    <string name="GiftFlowConfirmationFragment__one_time_donation">תרומה חד פעמית</string>
     <!-- Hint for add message input -->
-    <string name="GiftFlowConfirmationFragment__add_a_message">הוסף הודעה</string>
     <!-- Displayed in the dialog while verifying the chosen recipient -->
     <string name="GiftFlowConfirmationFragment__verifying_recipient">מוודא מקבל…</string>
     <!-- Title for sheet shown when opening a redeemed gift -->
-    <string name="ViewReceivedGiftBottomSheet__s_made_a_donation_for_you">%1$s ביצע/ה תרומה בשבילך</string>
     <!-- Title for sheet shown when opening a sent gift -->
-    <string name="ViewSentGiftBottomSheet__thanks_for_your_support">תודה על התמיכה שלך!</string>
     <!-- Description for sheet shown when opening a redeemed gift -->
-    <string name="ViewReceivedGiftBottomSheet__s_made_a_donation_to_signal">%1$s ביצע/ה תרומה ל–Signal בשמך! אפשר להשוויץ בתמיכה שלך ב–Signal בפרופיל.</string>
     <!-- Description for sheet shown when opening a sent gift -->
-    <string name="ViewSentGiftBottomSheet__youve_made_a_donation_to_signal">ביצעת תרומה ל–Signal בשם %1$s. הוא או היא יקבלו את האפשרות להשוויץ בתמיכה שלהם בפרופיל.</string>
     <!-- Primary action for pending gift sheet to redeem badge now -->
-    <string name="ViewReceivedGiftSheet__redeem">ממש</string>
     <!-- Primary action for pending gift sheet to redeem badge later -->
-    <string name="ViewReceivedGiftSheet__not_now">לא עכשיו</string>
     <!-- Dialog text while redeeming a gift -->
-    <string name="ViewReceivedGiftSheet__redeeming_badge">תג במימוש…</string>
     <!-- Description text in gift thanks sheet -->
-    <string name="GiftThanksSheet__youve_made_a_donation">ביצעת תרומה ל–Signal בשם %1$s. הוא או היא יקבלו את האפשרות להשוויץ בתמיכה שלהם בפרופיל.</string>
     <!-- Expired gift sheet title -->
-    <string name="ExpiredGiftSheetConfiguration__your_badge_has_expired">תוקף התג שלך פג</string>
     <!-- Expired gift sheet top description text -->
-    <string name="ExpiredGiftSheetConfiguration__your_badge_has_expired_and_is">תוקף התג שלך פג, והוא כבר לא מוצג לאחרים בפרופיל שלך.</string>
     <!-- Expired gift sheet bottom description text -->
-    <string name="ExpiredGiftSheetConfiguration__to_continue">כדי להמשיך לתמוך בטכנולוגיה שנבנתה עבורך, אנא שקול להפוך למחזיק חודשי.</string>
     <!-- Expired gift sheet make a monthly donation button -->
-    <string name="ExpiredGiftSheetConfiguration__make_a_monthly_donation">ביצוע תרומה חודשית</string>
     <!-- Expired gift sheet not now button -->
-    <string name="ExpiredGiftSheetConfiguration__not_now">לא עכשיו</string>
     <!-- My Story label designating that we will only share with the selected viewers. -->
     <string name="ContactSearchItems__only_share_with">שיתוף רק עם</string>
     <!-- Label under name for custom stories -->
@@ -7758,7 +7469,6 @@
         <item quantity="other">%1$d דקות נותרו</item>
     </plurals>
     <!-- Donation for a friend expiry expired -->
-    <string name="Gifts__expired">פג</string>
 
     <!-- Label indicating that a user can tap to advance to the next post in a story -->
     <string name="StoryFirstTimeNavigationView__tap_to_advance">אפשר ללחוץ כדי להתקדם</string>
@@ -7908,40 +7618,24 @@
 
     <!-- DonateToSignalFragment -->
     <!-- Title below avatar -->
-    <string name="DonateToSignalFragment__privacy_over_profit">גאים להיות עמותה ללא מטרות רווח</string>
     <!-- Continue button label -->
-    <string name="DonateToSignalFragment__continue">המשך</string>
     <!-- Description below title -->
-    <string name="DonateToSignalFragment__private_messaging">ניתן לתרום כדי לתמוך בהודעות פרטיות. כך נשמור על Signal עצמאית וללא פרסומות.</string>
     <!-- Dialog title when a user tries to donate while they already have a pending donation. -->
-    <string name="DonateToSignalFragment__you_have_a_donation_pending">יש לך תרומה בהמתנה</string>
     <!-- Dialog body when a user tries to donate while they already have a pending monthly donation. -->
-    <string name="DonateToSignalFragment__bank_transfers_usually_take_1_business_day_to_process_monthly">עיבוד העברות בנקאיות יכול לקחת בין 1–14 ימי עסקים. יש להמתין עד שתשלום זה יסתיים לפני עדכון המנוי שלך.</string>
     <!-- Dialog body when a user tries to donate while they already have a pending one time donation. -->
-    <string name="DonateToSignalFragment__bank_transfers_usually_take_1_business_day_to_process_onetime">עיבוד העברות בנקאיות יכול לקחת בין 1–14 ימי עסקים. יש להמתין עד שתשלום זה יסתיים לפני ביצוע תרומה נוספת.</string>
     <!-- Dialog body when a user tries to donate while they already have a pending monthly donation. -->
-    <string name="DonateToSignalFragment__your_payment_is_still_being_processed_monthly">התרומה שלך עדיין בתהליך עיבוד. זה יכול לקחת מספר דקות בהתאם לחיבור שלך. יש להמתין עד שתשלום זה יסתיים לפני עדכון המנוי שלך.</string>
     <!-- Dialog body when a user tries to donate while they already have a pending one time donation. -->
-    <string name="DonateToSignalFragment__your_payment_is_still_being_processed_onetime">התרומה שלך עדיין בתהליך עיבוד. זה יכול לקחת מספר דקות בהתאם לחיבור שלך. יש להמתין עד שתשלום זה יסתיים לפני ביצוע תרומה נוספת.</string>
     <!-- Dialog body when a user opens the manage donations main screen and they have a pending iDEAL donation -->
-    <string name="DonateToSignalFragment__your_ideal_wero_payment_is_still_processing">Your iDEAL | Wero donation is still processing. Check your banking app to approve your payment before making another donation.</string>
     <!-- Dialog title shown when a user tries to donate an amount higher than is allowed for a given payment method. -->
-    <string name="DonateToSignal__donation_amount_too_high">סכום תרומה גבוה מדי</string>
     <!-- Dialog body shown when a user tries to donate an amount higher than is allowed for a given payment method, place holder is the maximum -->
-    <string name="DonateToSignalFragment__you_can_send_up_to_s_via_bank_transfer">אפשר לשלוח עד %1$s באמצעות העברה בנקאית. יש לנסות סכום אחר או אמצעי תשלום אחר.</string>
 
     <!-- Donation pill toggle monthly text -->
-    <string name="DonationPillToggle__monthly">חודשית</string>
     <!-- Donation pill toggle one-time text -->
-    <string name="DonationPillToggle__one_time">חד־פעמית</string>
 
     <!-- GatewaySelectorBottomSheet -->
     <!-- Sheet title when subscribing -->
-    <string name="GatewaySelectorBottomSheet__donate_s_month_to_signal">תרומה של %1$s/בחודש ל–Signal</string>
     <!-- Sheet summary when subscribing -->
-    <string name="GatewaySelectorBottomSheet__get_a_s_badge">קבלת תג %1$s</string>
     <!-- Sheet title when giving a one-time donation -->
-    <string name="GatewaySelectorBottomSheet__donate_s_to_signal">תרומה של %1$s ל–Signal</string>
     <!-- Sheet summary when giving a one-time donation -->
     <plurals name="GatewaySelectorBottomSheet__get_a_s_badge_for_d_days">
         <item quantity="one">קבלת תג %1$s למשך יום %2$d</item>
@@ -7950,89 +7644,52 @@
         <item quantity="other">קבלת תג %1$s למשך %2$d ימים</item>
     </plurals>
     <!-- Button label for paying with a bank transfer -->
-    <string name="GatewaySelectorBottomSheet__bank_transfer">העברה בנקאית</string>
     <!-- Button label for paying with a credit card -->
     <string name="GatewaySelectorBottomSheet__credit_or_debit_card">כרטיס אשראי או דביט</string>
     <!-- Sheet summary when giving donating for a friend -->
-    <string name="GatewaySelectorBottomSheet__donate_for_a_friend">ביצוע תרומה בשביל חבר/ה</string>
     <!-- Button label for paying with iDEAL -->
-    <string name="GatewaySelectorBottomSheet__ideal_wero">iDEAL | Wero</string>
 
     <!-- Dialog title for launching external intent -->
-    <string name="ExternalNavigationHelper__leave_signal_to_confirm_payment">לעזוב את Signal כדי לאשר את התרומה?</string>
-    <string name="ExternalNavigationHelper__once_this_payment_is_confirmed">לאחר האישור, יש לחזור אל Signal כדי לסיים את עיבוד התרומה שלך.</string>
     <!-- Dialog message shown when leaving Signal to complete a donation in an external app. Placeholder is the resolved app name (e.g. a banking app). -->
-    <string name="ExternalNavigationHelper__once_payment_confirmed_in_app">You\'ll be sent to %1$s. When confirmed, return to Signal to finish processing your donation.</string>
 
     <!-- BankTransferMandateFragment -->
     <!-- Title of screen displaying the bank transfer mandate -->
-    <string name="BankTransferMandateFragment__bank_transfer">העברה בנקאית</string>
     <!-- Subtitle of screen displaying the bank transfer mandate, placeholder is \'Learn more\' -->
-    <string name="BankTransferMandateFragment__stripe_processes_donations">Stripe מעבדת תרומות שמתבצעות עבור Signal. Signal לא אוספת או מאחסנת את המידע האישי שלך. %1$s</string>
     <!-- Subtitle learn more of screen displaying bank transfer mandate -->
-    <string name="BankTransferMandateFragment__learn_more">למידע נוסף</string>
     <!-- Button label to continue with transfer -->
-    <string name="BankTransferMandateFragment__agree">הסכמה</string>
     <!-- Button label to read more of the bank mandate that is currently off screen -->
-    <string name="BankTransferMandateFragment__read_more">קרא עוד</string>
     <!-- Text displayed when mandate load fails -->
-    <string name="BankTransferMandateFragment__failed_to_load_mandate">טעינת בקשה נכשלה</string>
 
     <!-- BankTransferDetailsFragment -->
     <!-- Subtext explaining how email is used. Placeholder is \'Learn more\' -->
-    <string name="BankTransferDetailsFragment__enter_your_bank_details">יש להזין את פרטי הבנק והאימייל שלך. Stripe משתמשת באימייל שלך כדי לשלוח לך עדכונים על התרומה שלך. %1$s</string>
     <!-- Subtext learn more link text -->
-    <string name="BankTransferDetailsFragment__learn_more">למידע נוסף</string>
     <!-- Text field label for name on bank account -->
-    <string name="BankTransferDetailsFragment__name_on_bank_account">שם בעל.ת חשבון הבנק</string>
     <!-- Text field label for IBAN -->
-    <string name="BankTransferDetailsFragment__iban">IBAN</string>
     <!-- Text field label for email -->
-    <string name="BankTransferDetailsFragment__email">דוא״ל</string>
     <!-- Text label for button to show user how to find their IBAN -->
-    <string name="BankTransferDetailsFragment__find_account_info">מציאת פרטי חשבון</string>
     <!-- Donate button label for monthly subscription -->
-    <string name="BankTransferDetailsFragment__donate_s_month">תרומה של %1$s/בחודש</string>
     <!-- Donate button label for one-time -->
-    <string name="BankTransferDetailsFragment__donate_s">תרומה של %1$s</string>
     <!-- Error label for IBAN field when number is too short -->
-    <string name="BankTransferDetailsFragment__iban_is_too_short">מספר IBAN קצר מדי</string>
     <!-- Error label for IBAN field when number is too long -->
-    <string name="BankTransferDetailsFragment__iban_is_too_long">מספר IBAN ארוך מדי</string>
     <!-- Error label for IBAN field when country is not supported -->
-    <string name="BankTransferDetailsFragment__iban_country_code_is_not_supported">קוד המדינה של ה‑IBAN אינו נתמך</string>
     <!-- Error label for IBAN field when number is invalid -->
-    <string name="BankTransferDetailsFragment__invalid_iban">מספר IBAN לא תקין</string>
     <!-- Error label for name field when name is not at least three characters long (Stripe API enforced minimum) -->
-    <string name="BankTransferDetailsFragment__minimum_3_characters">מינימום 3 תווים</string>
     <!-- Error label for email field when email is not valid -->
-    <string name="BankTransferDetailsFragment__invalid_email_address">כתובת אימייל לא חוקית</string>
 
     <!-- IdealTransferDetailsFragment -->
     <!-- Title of the screen, displayed in the toolbar -->
-    <string name="IdealTransferDetailsFragment__ideal">iDEAL</string>
     <!-- Subtitle of the screen, displayed below the toolbar. Placeholder is for \'learn more\' -->
-    <string name="IdealTransferDetailsFragment__enter_your_bank">יש להזין את השם והאימייל שלך. Stripe משתמשת באימייל הזה כדי לשלוח לך עדכונים על התרומה שלך. %1$s</string>
     <!-- Subtitle of the screen, displayed below the toolbar. Placeholder is for \'learn more\' -->
-    <string name="IdealTransferDetailsFragment__enter_your_bank_details_one_time">יש להזין את פרטי הבנק שלך. Signal לא אוספת או מאחסנת את המידע האישי שלך. %1$s</string>
     <!-- Subtitle learn-more button displayed inline with the subtitle text -->
-    <string name="IdealTransferDetailsFragment__learn_more">למידע נוסף</string>
     <!-- Hint label for text entry box for name on bank account -->
-    <string name="IdealTransferDetailsFragment__name_on_bank_account">שם בעל.ת חשבון הבנק</string>
     <!-- Hint label for text entry box for email -->
-    <string name="IdealTransferDetailsFragment__email">דוא״ל</string>
     <!-- Default label for bank selection -->
-    <string name="IdealTransferDetailsFragment__choose_your_bank">בחירת הבנק שלך</string>
     <!-- Dialog title shown when using iDEAL payment for setting up a monthly donation -->
-    <string name="IdealTransferDetailsFragment__confirm_your_donation_with_ideal_wero">Confirm your donation with iDEAL | Wero</string>
     <!-- Dialog warning shown when using iDEAL payment for setting up a monthly donation. Placeholder is donation amount.Z -->
-    <string name="IdealTransferDetailsFragment__to_setup_your_recurring_donation">כדי להגדיר את התרומה החוזרת שלך, יש ללחוץ על המשך כדי לאשר חיוב של €0.01 בבנק שלך. זה יוחזר אוטומטית ויאפשר לחייב את התרומה החוזרת שלך על סך %1$s לחודש מהחשבון שלך.</string>
     <!-- Dialog button shown when using iDEAL payment for setting up a monthly donation to continue with the donation -->
-    <string name="IdealTransferDetailsFragment__continue">המשך</string>
 
     <!-- IdealTransferDetailsBankSelectionDialogFragment -->
     <!-- Title of the screen, displayed in the toolbar -->
-    <string name="IdealTransferDetailsBankSelectionDialogFragment__choose_your_bank">בחירת הבנק שלך</string>
 
     <!-- Title of bottom sheet for finding account information -->
     <string name="FindAccountInfoSheet__find_your_account_information">מציאת פרטי החשבון שלך</string>
@@ -8040,36 +7697,22 @@
     <string name="FindAccountInfoSheet__look_for_your_iban_at">יש לחפש את מספר ה–IBAN שלך בחלק העליון של דף חשבון הבנק שלך. מספרי IBAN מכילים עד 34 תווים. יש להזין שם שתואם לשם המלא שלך בחשבון הבנק שלך. למידע נוסף, יש ליצור קשר עם הבנק.</string>
 
     <!-- Title of donation pending sheet displayed after making a bank transfer -->
-    <string name="DonationPendingBottomSheet__donation_pending">תרומה ממתינה</string>
     <!-- Top text block of donation pending sheet displayed after subscribing via a bank transfer. Placeholder is the badge name. -->
-    <string name="DonationPendingBottomSheet__your_monthly_donation_is_pending">התרומה החודשית שלך ממתינה. כשהתרומה שלך תתקבל, תהיה לך אפשרות להציג את תג %1$s בפרופיל שלך.</string>
     <!-- Top text block of donation pending sheet displayed after one-time donation via a bank transfer. Placeholder is the badge name. -->
-    <string name="DonationPendingBottomSheet__your_one_time_donation_is_pending">התרומה החד פעמית שלך ממתינה. כשהתרומה שלך תתקבל, תהיה לך אפשרות להציג את תג %1$s בפרופיל שלך.</string>
     <!-- Bottom text block of donation pending sheet displayed after donating via a bank transfer. Placeholder is for learn more. -->
-    <string name="DonationPendingBottomSheet__bank_transfers_usually_take">עיבוד העברות בנקאיות יכול לקחת בין 1–14 ימי עסקים. %1$s</string>
     <!-- Learn more text for donation pending sheet displayed after donating via a bank transfer. -->
-    <string name="DonationPendingBottomSheet__learn_more">למידע נוסף</string>
     <!-- Confirmation button for donation pending sheet displayed after donating via a bank transfer. -->
-    <string name="DonationPendingBottomSheet__done">סיום</string>
 
     <!-- Title of donation error sheet displayed after making a bank transfer that fails -->
-    <string name="DonationErrorBottomSheet__donation_couldnt_be_processed">לא היה ניתן לעבד את התרומה</string>
     <!-- Text block of donation error sheet displayed after making a bank transfer that fails -->
-    <string name="DonationErrorBottomSheet__were_having_trouble">נתקלנו בבעיה בעיבוד ההעברה הבנקאית שלך. לא חויבת. יש לנסות שיטת תשלום אחרת או ליצור קשר עם הבנק שלך לקבלת מידע נוסף.</string>
     <!-- Button label for retry button of donation error sheet displayed after making a bank transfer that fails -->
-    <string name="DonationErrorBottomSheet__try_again">נסה שוב</string>
     <!-- Button label for not now button of donation error sheet displayed after making a bank transfer that fails -->
-    <string name="DonationErrorBottomSheet__not_now">לא עכשיו</string>
 
     <!-- Title of \'Donation Complete\' sheet displayed after a bank transfer completes and the badge is redeemed -->
-    <string name="DonationCompletedBottomSheet__donation_complete">תרומה הושלמה</string>
     <!-- Text block of \'Donation Complete\' sheet displayed after a bank transfer completes and the badge is redeemed -->
-    <string name="DonationCompleteBottomSheet__your_bank_transfer_was_received">ההעברה הבנקאית שלך התקבלה. אפשר לבחור להציג את התג הזה בפרופיל כדי להשוויץ בתמיכה שלך.</string>
     <!-- Button text of \'Donation Complete\' sheet displayed after a bank transfer completes and the badge is redeemed to dismiss sheet -->
-    <string name="DonationCompleteBottomSheet__done">סיום</string>
 
     <!-- StripePaymentInProgressFragment -->
-    <string name="StripePaymentInProgressFragment__cancelling">מבטלים…</string>
 
     <!-- The title of a bottom sheet dialog that tells the user we temporarily can\'t process their contacts. -->
     <string name="CdsTemporaryErrorBottomSheet_title">יותר מדי אנשי קשר עובדו</string>
@@ -8105,7 +7748,6 @@
     <!-- YourInformationIsPrivateBottomSheet -->
     <string name="YourInformationIsPrivateBottomSheet__your_information_is_private">המידע שלך פרטי</string>
     <string name="YourInformationIsPrivateBottomSheet__signal_does_not_collect">Signal לא אוספת או מאחסנת את המידע האישי שלך בעת ביצוע תרומה.</string>
-    <string name="YourInformationIsPrivateBottomSheet__we_use_stripe">אנחנו משתמשים ב–Stripe בתור מעבד התשלומים שלנו כדי לקבל את התרומות שלך. אנחנו לא ניגשים לשום מידע שהם מקבלים ממך ולא מאחסנים או שומרים אותו.</string>
     <string name="YourInformationIsPrivateBottomSheet__signal_does_not_and_cannot">Signal אינה מקשרת את התרומה שלך לחשבון Signal שלך ואין לה אפשרות לעשות זאת.</string>
     <string name="YourInformationIsPrivateBottomSheet__thank_you">תודה על התמיכה שלך!</string>
 
@@ -8123,8 +7765,6 @@
     <string name="Registration_country_code_entry_hint">+0</string>
 
     <!-- PaypalCompleteOrderBottomSheet -->
-    <string name="PaypalCompleteOrderBottomSheet__donate">ביצוע תרומה</string>
-    <string name="PaypalCompleteOrderBottomSheet__payment">תשלום</string>
 
     <!-- ChatFilter -->
     <!-- Displayed in a pill at the top of the chat list when it is filtered by unread messages -->
@@ -8632,15 +8272,10 @@
     <string name="GrantFullScreenIntentPermission_bottomsheet_step2">2. %1$s מאפשרים התראות במסך מלא</string>
 
     <!-- Bottom sheet dialog shown when a monthly donation fails to renew, title for dialog -->
-    <string name="MonthlyDonationCanceled__title">תרומה חודשית בוטלה</string>
     <!-- Bottom sheet dialog shown when a monthly donation fails to renew, body for dialog. First placeholder is a payment related error message. Second placeholder is \'learn more\' -->
-    <string name="MonthlyDonationCanceled__message">התרומה החודשית החוזרת שלך בוטלה. %1$s\n\nהתג שלך לא יהיה גלוי יותר בפרופיל שלך. %2$s</string>
     <!-- Bottom sheet dialog shown when a monthly donation fails to renew, learn more used in placeholder for body for dialog. -->
-    <string name="MonthlyDonationCanceled__learn_more">למידע נוסף</string>
     <!-- Bottom sheet dialog shown when a monthly donation fails to renew, primary button to renew subscription with new data -->
-    <string name="MonthlyDonationCanceled__renew_button">חידוש מנוי</string>
     <!-- Bottom sheet dialog shown when a monthly donation fails to renew, second button to dismiss the dialog entirely -->
-    <string name="MonthlyDonationCanceled__not_now_button">לא עכשיו</string>
 
     <!-- FindByActivity -->
     <!-- Title of activity when finding by username -->
@@ -8732,7 +8367,6 @@
 
     <!-- BackupAlertBottomSheet -->
     <!-- Sheet title when media backups have been disabled -->
-    <string name="BackupAlertBottomSheet__your_backups_subscription_expired">פג תוקף מנוי הגיבויים שלך</string>
     <!-- Sheet body part 1 when media backups have been disabled. Placeholder is the number of days until deletion. -->
     <plurals name="BackupAlertBottomSheet__your_backup_plan_has_expired">
         <item quantity="one">תכנית הגיבוי שלך פגה תוקף כי לא ניתן היה לחדש אותה באמצעות אמצעי התשלום הנוכחי שלך. לאחר יום %1$d, המדיה בגיבוי שלך תימחק.</item>
@@ -8928,21 +8562,15 @@
     <!-- Displayed as the user\'s payment method as a label in a preference row -->
     <string name="BackupsTypeSettingsFragment__credit_or_debit_card">כרטיס אשראי או דביט</string>
     <!-- Displayed as the user\'s payment method as a label in a preference row -->
-    <string name="BackupsTypeSettingsFragment__iDEAL">iDEAL</string>
     <!-- Displayed as the user\'s payment method as a label in a preference row -->
-    <string name="BackupsTypeSettingsFragment__google_pay">Google Pay</string>
     <!-- Displayed as the user\'s payment method as a label in a preference row -->
-    <string name="BackupsTypeSettingsFragment__bank_transfer">העברה בנקאית</string>
     <!-- Displayed as the user\'s payment method as a label in a preference row -->
-    <string name="BackupsTypeSettingsFragment__paypal">PayPal</string>
     <!-- Displayed as the user\'s payment method as a label in a preference row -->
     <string name="BackupsTypeSettingsFragment__unknown">בלתי ידוע</string>
     <!-- Row title for entering payment history -->
-    <string name="BackupsTypeSettingsFragment__payment_history">היסטוריית תשלומים</string>
     <!-- Row description detailing renewal information. First placeholder is formatted price. Second placeholder is formatted date. -->
     <string name="BackupsTypeSettingsFragment__s_month_renews_s">%1$s/חודש · מתחדש %2$s</string>
     <!-- Row title to change or cancel subscription -->
-    <string name="BackupsTypeSettingsFragment__change_or_cancel_subscription">שינוי או ביטול מנוי</string>
 
     <!-- GooglePlayServicesAvailability -->
     <!-- Dialog title when Google Play services are missing from the device -->
@@ -9098,7 +8726,6 @@
     <!-- Text shown in a popup indicating that the user needs to enter their screen lock -->
     <string name="RemoteBackupsSettingsFragment__authenticatino_required">נדרש אימות</string>
     <!-- Row label to launch payment history screen -->
-    <string name="RemoteBackupsSettingsFragment__payment_history">היסטוריית תשלומים</string>
     <!-- Section header for backup information -->
     <string name="RemoteBackupsSettingsFragment__backup_details">פרטי גיבוי</string>
     <!-- Row label to allow the restoration of a backup to occur while on cellular connection -->
@@ -9543,7 +9170,6 @@
     <!-- Primary action button label when selecting paid tier when Google Play API isn\'t available -->
     <string name="MessageBackupsTypeSelectionScreen__more_about_this_plan">עוד על תוכנית זו</string>
     <!-- Secondary action button label when selecting a backup tier with a current selection -->
-    <string name="MessageBackupsTypeSelectionScreen__cancel_subscription">ביטול מנוי</string>
     <!-- MessageBackupsType block amount for free tier -->
     <string name="MessageBackupsTypeSelectionScreen__free">חינם</string>
     <!-- MessageBackupsType block amount for paid tier when no pricing is available -->
@@ -9591,7 +9217,6 @@
     <!-- Action button label to cancel subscription and download later -->
     <string name="ConfirmBackupCancellationDialog__confirm_and_download_later">אישור והורדה אחר כך</string>
     <!-- Action button label to keep current subscription -->
-    <string name="ConfirmBackupCancellationDialog__keep_subscription">שמירה על מנוי</string>
 
     <!-- Accessible content description for the reminder view, describing the icon in the view. -->
     <string name="ReminderView_icon_content_description">סמל תזכורת</string>

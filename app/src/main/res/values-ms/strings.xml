@@ -24,7 +24,6 @@
   <!-- Removed by excludeNonTranslatables <string name="donate_faq_url" translatable="false">https://support.signal.org/hc/articles/360031949872#donate</string> -->
 
     <!-- First placeholder is productId, second placeholder is app package -->
-    <string name="backup_subscription_management_url">https://play.google.com/store/account/subscriptions?sku=%1$s&amp;package=%2$s</string>
 
     <string name="yes">Ya</string>
     <string name="no">Tidak</string>
@@ -158,7 +157,6 @@
 
     <!-- Fcm notifications -->
     <!-- Notification we show when there may be messages for you, but we cannot connect to the server to check -->
-    <string name="FcmFetchManager__you_may_have_messages">Anda mungkin mempunyai mesej baru</string>
 
     <!-- BlockedUsersActivity -->
     <string name="BlockedUsersActivity__blocked_users">Pengguna yang disekat</string>
@@ -172,45 +170,26 @@
 
     <!-- CreditCardFragment -->
     <!-- Title of fragment -->
-    <string name="CreditCardFragment__credit_or_debit_card">Kad kredit atau debit</string>
     <!-- Explanation of how to fill in the form and a note about pii, displayed above the credit card text fields -->
-    <string name="CreditCardFragment__enter_your_card_details">Masukkan butiran kad anda. Signal tidak mengumpul atau menyimpan maklumat peribadi anda.</string>
     <!-- Displayed as a hint in the card number text field -->
-    <string name="CreditCardFragment__card_number">Nombor kad</string>
     <!-- Displayed as a hint in the card expiry text field -->
-    <string name="CreditCardFragment__mm_yy">BB/TT</string>
     <!-- Displayed as a hint in the card cvv text field -->
-    <string name="CreditCardFragment__cvv">CVV</string>
     <!-- Error displayed under the card number text field when there is an invalid card number entered -->
-    <string name="CreditCardFragment__invalid_card_number">Nombor kad tidak sah</string>
     <!-- Error displayed under the card expiry text field when the card is expired -->
-    <string name="CreditCardFragment__card_has_expired">Kad telah tamat tempoh</string>
     <!-- Error displayed under the card cvv text field when the cvv is too short -->
-    <string name="CreditCardFragment__code_is_too_short">Kod terlalu pendek</string>
     <!-- Error displayed under the card cvv text field when the cvv is too long -->
-    <string name="CreditCardFragment__code_is_too_long">Kod terlalu panjang</string>
     <!-- Error displayed under the card cvv text field when the cvv is invalid -->
-    <string name="CreditCardFragment__invalid_code">Kod tidak sah</string>
     <!-- Error displayed under the card expiry text field when the expiry month is invalid -->
-    <string name="CreditCardFragment__invalid_month">Bulan tidak sah</string>
     <!-- Error displayed under the card expiry text field when the expiry is missing the year -->
-    <string name="CreditCardFragment__year_required">Tahun diperlukan</string>
     <!-- Error displayed under the card expiry text field when the expiry year is invalid -->
-    <string name="CreditCardFragment__invalid_year">Tahun tidak sah</string>
     <!-- Button label to confirm credit card input and proceed with one-time payment -->
-    <string name="CreditCardFragment__donate_s">Derma %1$s</string>
     <!-- Button label to confirm credit card input and proceed with subscription payment -->
-    <string name="CreditCardFragment__donate_s_month">Derma %1$s/bulan</string>
     <!-- Button label to confirm credit card input and proceed with backups payment. Placeholder is formatted price. -->
-    <string name="CreditCardFragment__pay_s_month">Derma %1$s/bulan</string>
 
     <!-- OneTimeDonationPreference -->
     <!-- Preference title with placeholder for amount. -->
-    <string name="OneTimeDonationPreference__one_time_s">Sekali %1$s</string>
     <!-- Preference subtitle when donation is pending -->
-    <string name="OneTimeDonationPreference__donation_pending">Derma belum selesai</string>
     <!-- Preference subtitle when donation is processing -->
-    <string name="OneTimeDonationPreference__donation_processing">Pemprosesan derma</string>
 
     <!-- BlockUnblockDialog -->
     <string name="BlockUnblockDialog_block_and_leave_s">Sekat dan keluar dari %1$s?</string>
@@ -4115,7 +4094,6 @@
     <string name="preferences__slow">Lambat</string>
     <string name="preferences__help">Bantu</string>
     <string name="preferences__advanced">Lanjutan</string>
-    <string name="preferences__donate_to_signal">Derma kepada Signal</string>
     <!-- Preference label for making one-time donations to Signal -->
     <string name="preferences__privacy">Privasi</string>
     <!-- Preference label for stories -->
@@ -4303,9 +4281,6 @@
 
     <!-- Payments -->
     <string name="PaymentsActivityFragment__all_activity">Semua aktiviti</string>
-    <string name="PaymentsAllActivityFragment__all">Semua</string>
-    <string name="PaymentsAllActivityFragment__sent">Dihantar</string>
-    <string name="PaymentsAllActivityFragment__received">Diterima</string>
 
     <!-- Displayed on a welcome screen for payments -->
     <string name="PaymentsHomeFragment_introducing_payments">Memperkenalkan Pembayaran</string>
@@ -4314,58 +4289,28 @@
     <string name="PaymentsHomeFragment__activating_payments">Mengaktifkan pembayaran…</string>
     <string name="PaymentsHomeFragment__restore_payments_account">Pulihkan akaun pembayaran</string>
     <string name="PaymentsHomeFragment__no_recent_activity_yet">Belum ada aktiviti terkini</string>
-    <string name="PaymentsHomeFragment__recent_activity">Aktiviti terkini</string>
     <string name="PaymentsHomeFragment__see_all">Lihat semua</string>
     <string name="PaymentsHomeFragment__add_funds">Tambah dana</string>
     <string name="PaymentsHomeFragment__send">Hantar</string>
-    <string name="PaymentsHomeFragment__sent_s">Dihantar %1$s</string>
-    <string name="PaymentsHomeFragment__received_s">Diterima %1$s</string>
     <string name="PaymentsHomeFragment__transfer_to_exchange">Pindah ke pertukaran</string>
     <string name="PaymentsHomeFragment__currency_conversion">Penukaran mata wang</string>
     <string name="PaymentsHomeFragment__deactivate_payments">Nyahaktifkan pembayaran</string>
     <string name="PaymentsHomeFragment__recovery_phrase">Frasa pemulihan</string>
     <string name="PaymentsHomeFragment__help">Bantu</string>
-    <string name="PaymentsHomeFragment__coin_cleanup_fee">Bayaran pembersihan syiling</string>
-    <string name="PaymentsHomeFragment__sent_payment">Pembayaran telah dihantar</string>
-    <string name="PaymentsHomeFragment__received_payment">Pembayaran telah diterima</string>
-    <string name="PaymentsHomeFragment__processing_payment">Memproses pembayaran</string>
-    <string name="PaymentsHomeFragment__unknown_amount">---</string>
-    <string name="PaymentsHomeFragment__currency_conversion_not_available">Penukaran mata wang tidak tersedia</string>
-    <string name="PaymentsHomeFragment__cant_display_currency_conversion">Tidak dapat memaparkan penukaran mata wang. Periksa sambungan telefon anda dan cuba lagi.</string>
-    <string name="PaymentsHomeFragment__payments_is_not_available_in_your_region">Pembayaran tidak tersedia di wilayah anda.</string>
-    <string name="PaymentsHomeFragment__could_not_enable_payments">Tidak dapat mendayakan pembayaran. Cuba sebentar lagi.</string>
-    <string name="PaymentsHomeFragment__deactivate_payments_question">Nyahaktifkan Pembayaran?</string>
-    <string name="PaymentsHomeFragment__you_will_not_be_able_to_send">Anda tidak akan dapat menghantar atau menerima MobileCoin dalam Signal jika anda menyahaktifkan pembayaran.</string>
-    <string name="PaymentsHomeFragment__deactivate">Nyahaktifkan</string>
-    <string name="PaymentsHomeFragment__continue">Teruskan</string>
-    <string name="PaymentsHomeFragment__balance_is_not_currently_available">Baki tidak tersedia buat masa ini.</string>
-    <string name="PaymentsHomeFragment__payments_deactivated">Pembayaran telah dinyahaktifkan.</string>
-    <string name="PaymentsHomeFragment__payment_failed">Pembayaran telah gagal</string>
-    <string name="PaymentsHomeFragment__details">Butiran</string>
   <!-- Removed by excludeNonTranslatables <string name="PaymentsHomeFragment__learn_more__activate_payments" translatable="false">https://support.signal.org/hc/articles/360057625692#payments_activate</string> -->
     <!-- Displayed as a description in a dialog when the user tries to activate payments -->
-    <string name="PaymentsHomeFragment__you_can_use_signal_to_send_and">Anda boleh menggunakan Signal untuk menghantar dan menerima MobileCoin. Semua pembayaran adalah tertakluk kepada Syarat Penggunaan untuk MobileCoins dan MobileCoin Wallet. Anda mungkin menghadapi beberapa isu dan pembayaran atau baki yang mungkin hilang tidak dapat dipulihkan. </string>
-    <string name="PaymentsHomeFragment__activate">Aktifkan</string>
-    <string name="PaymentsHomeFragment__view_mobile_coin_terms">Lihat terma MobileCoin</string>
-    <string name="PaymentsHomeFragment__payments_not_available">Pembayaran dalam Signal tidak lagi tersedia. Anda masih boleh memindah dana ke pertukaran tetapi anda tidak lagi dapat menghantar dan menerima pembayaran atau menambah dana.</string>
 
   <!-- Removed by excludeNonTranslatables <string name="PaymentsHomeFragment__mobile_coin_terms_url" translatable="false">https://www.mobilecoin.com/terms-of-use.html</string> -->
     <!-- Alert dialog title which shows up after a payment to turn on payment lock -->
-    <string name="PaymentsHomeFragment__turn_on">Hidupkan Kunci Pembayaran untuk penghantaran akan datang?</string>
     <!-- Alert dialog description for why payment lock should be enabled before sending payments -->
-    <string name="PaymentsHomeFragment__add_an_additional_layer">Tambahkan lapisan keselamatan dan perlukan kunci skrin Android atau cap jari untuk menderma.</string>
     <!-- Alert dialog button to enable payment lock -->
     <string name="PaymentsHomeFragment__enable">Hidupkan</string>
     <!-- Alert dialog button to not enable payment lock for now -->
     <string name="PaymentsHomeFragment__not_now">Bukan Sekarang</string>
     <!-- Alert dialog title which shows up to update app to send payments -->
-    <string name="PaymentsHomeFragment__update_required">Kemas Kini Diperlukan</string>
     <!-- Alert dialog description that app update is required to send payments-->
-    <string name="PaymentsHomeFragment__an_update_is_required">Kemas kini diperlukan untuk meneruskan penghantaran dan penerimaan pembayaran dan untuk melihat baki pembayaran anda yang terkini.</string>
     <!-- Alert dialog button to cancel -->
-    <string name="PaymentsHomeFragment__cancel">Batal</string>
     <!-- Alert dialog button to update now -->
-    <string name="PaymentsHomeFragment__update_now">Update sekarang</string>
 
 
     <!-- PaymentsSecuritySetupFragment -->
@@ -4380,46 +4325,26 @@
     <!-- Option to cancel -->
     <string name="PaymentsSecuritySetupFragment__not_now">Bukan sekarang</string>
     <!-- Dialog title to confirm skipping the step -->
-    <string name="PaymentsSecuritySetupFragment__skip_this_step">Langkau langkah ini?</string>
     <!-- Dialog description to let users know why payment lock is required -->
-    <string name="PaymentsSecuritySetupFragment__skipping_this_step">Melangkau langkah ini boleh membenarkan sesiapa sahaja yang mempunyai akses fizikal kepada telefon anda untuk memindahkan dana atau melihat frasa pemulihan anda.</string>
     <!-- Dialog option to cancel -->
-    <string name="PaymentsSecuritySetupFragment__cancel">Batal</string>
     <!-- Dialog option to skip -->
-    <string name="PaymentsSecuritySetupFragment__skip">Langkau</string>
 
     <!-- PaymentsAddMoneyFragment -->
     <string name="PaymentsAddMoneyFragment__add_funds">Tambah dana</string>
     <string name="PaymentsAddMoneyFragment__your_wallet_address">Alamat Dompet Anda</string>
     <string name="PaymentsAddMoneyFragment__copy">Salin</string>
-    <string name="PaymentsAddMoneyFragment__copied_to_clipboard">Disalin ke papan klip</string>
     <string name="PaymentsAddMoneyFragment__to_add_funds">Untuk menambah dana, hantar MobileCoin ke alamat dompet anda. Mulakan transaksi daripada akaun anda di pertukaran yang menyokong MobileCoin, kemudian imbas kod QR atau salin alamat dompet anda.</string>
   <!-- Removed by excludeNonTranslatables <string name="PaymentsAddMoneyFragment__learn_more__information" translatable="false">https://support.signal.org/hc/articles/360057625692#payments_transfer_from_exchange</string> -->
 
     <!-- PaymentsDetailsFragment -->
     <string name="PaymentsDetailsFragment__details">Butiran</string>
     <string name="PaymentsDetailsFragment__status">Status</string>
-    <string name="PaymentsDetailsFragment__submitting_payment">Menyerahkan pembayaran…</string>
-    <string name="PaymentsDetailsFragment__processing_payment">Memproses pembayaran…</string>
-    <string name="PaymentsDetailsFragment__payment_complete">Pembayaran selesai</string>
-    <string name="PaymentsDetailsFragment__payment_failed">Pembayaran gagal</string>
     <string name="PaymentsDetailsFragment__network_fee">Bayaran rangkaian</string>
     <string name="PaymentsDetailsFragment__sent_by">Dihantar oleh</string>
-    <string name="PaymentsDetailsFragment__sent_to_s">Dihantar kepada %1$s</string>
-    <string name="PaymentsDetailsFragment__you_on_s_at_s">Anda pada %1$s pada %2$s</string>
-    <string name="PaymentsDetailsFragment__s_on_s_at_s">%1$s pada %2$s pada %3$s</string>
     <!-- Prefix to a name to indicate who a payment was sent to -->
-    <string name="PaymentsDetailsFragment__to">Kepada</string>
-    <string name="PaymentsDetailsFragment__from">Daripada</string>
     <string name="PaymentsDetailsFragment__information">Butiran transaksi termasuk jumlah pembayaran dan masa transaksi merupakan sebahagian daripada MobileCoin Ledger.</string>
-    <string name="PaymentsDetailsFragment__coin_cleanup_fee">Bayaran pembersihan syiling</string>
-    <string name="PaymentsDetailsFragment__coin_cleanup_information">\"Bayaran pembersihan syiling\" dikenakan apabila duit syiling yang anda miliki tidak dapat digabungkan untuk menyelesaikan transaksi. Pembersihan akan membolehkan anda terus menghantar pembayaran.</string>
-    <string name="PaymentsDetailsFragment__no_details_available">Tidak ada butiran lebih lanjut untuk transaksi ini</string>
   <!-- Removed by excludeNonTranslatables <string name="PaymentsDetailsFragment__learn_more__information" translatable="false">https://support.signal.org/hc/articles/360057625692#payments_details</string> -->
   <!-- Removed by excludeNonTranslatables <string name="PaymentsDetailsFragment__learn_more__cleanup_fee" translatable="false">https://support.signal.org/hc/articles/360057625692#payments_details_fees</string> -->
-    <string name="PaymentsDetailsFragment__sent_payment">Pembayaran yang dihantar</string>
-    <string name="PaymentsDetailsFragment__received_payment">Pembayaran yang diterima</string>
-    <string name="PaymentsDeatilsFragment__payment_completed_s">Pembayaran telah selesai %1$s</string>
     <string name="PaymentsDetailsFragment__block_number">Nombor blok</string>
 
     <!-- PaymentsTransferFragment -->
@@ -4428,13 +4353,6 @@
     <string name="PaymentsTransferFragment__to_scan_or_enter_wallet_address">Kepada: Imbas atau masukkan alamat dompet</string>
     <string name="PaymentsTransferFragment__you_can_transfer">Anda boleh memindahkan MobileCoin dengan melengkapkan pemindahan ke alamat dompet yang disediakan oleh pertukaran. Alamat dompet merupakan rentetan nombor dan huruf yang biasanya berada di bawah kod QR.</string>
     <string name="PaymentsTransferFragment__next">Seterusnya</string>
-    <string name="PaymentsTransferFragment__invalid_address">Alamat tidak sah</string>
-    <string name="PaymentsTransferFragment__check_the_wallet_address">Periksa alamat dompet yang anda cuba pindah ke dan cuba lagi.</string>
-    <string name="PaymentsTransferFragment__you_cant_transfer_to_your_own_signal_wallet_address">Anda tidak boleh memindahkan bayaran ke alamat dompet Signal anda sendiri. Masukkan alamat dompet daripada akaun anda di pertukaran yang disokong.</string>
-    <string name="PaymentsTransferFragment__to_scan_a_qr_code_signal_needs">Untuk mengimbas kod QR, Signal memerlukan akses kepada kamera.</string>
-    <string name="PaymentsTransferFragment__signal_needs_the_camera_permission_to_capture_qr_code_go_to_settings">Signal memerlukan kebenaran Kamera untuk menangkap kod QR. Pergi ke tetapan, pilih \"Kebenaran\", dan dayakan \"Kamera\".</string>
-    <string name="PaymentsTransferFragment__to_scan_a_qr_code_signal_needs_access_to_the_camera">Untuk mengimbas kod QR, Signal memerlukan akses kepada kamera.</string>
-    <string name="PaymentsTransferFragment__settings">Tetapan</string>
 
     <!-- PaymentsTransferQrScanFragment -->
     <string name="PaymentsTransferQrScanFragment__scan_address_qr_code">Imbas Kod QR Alamat</string>
@@ -4444,7 +4362,6 @@
     <!-- Button text to request the payment from a user -->
     <string name="CreatePaymentFragment__request">Permintaan</string>
     <string name="CreatePaymentFragment__pay">Bayar</string>
-    <string name="CreatePaymentFragment__available_balance_s">Baki yang tersedia: %1$s</string>
     <string name="CreatePaymentFragment__toggle_content_description">Togol</string>
     <string name="CreatePaymentFragment__1">1</string>
     <string name="CreatePaymentFragment__2">2</string>
@@ -4457,10 +4374,8 @@
     <string name="CreatePaymentFragment__9">9</string>
     <string name="CreatePaymentFragment__decimal">.</string>
     <string name="CreatePaymentFragment__0">0</string>
-    <string name="CreatePaymentFragment__lt">&lt;</string>
     <string name="CreatePaymentFragment__backspace">Undur Ruang</string>
     <string name="CreatePaymentFragment__add_note">Tambah nota</string>
-    <string name="CreatePaymentFragment__conversions_are_just_estimates">Penukaran hanyalah anggaran dan mungkin tidak tepat.</string>
   <!-- Removed by excludeNonTranslatables <string name="CreatePaymentFragment__learn_more__conversions" translatable="false">https://support.signal.org/hc/articles/360057625692#payments_currency_conversion</string> -->
 
     <!-- EditNoteFragment -->
@@ -4470,26 +4385,10 @@
 
     <!-- ConfirmPaymentFragment -->
     <string name="ConfirmPayment__confirm_payment">Sahkan pembayaran</string>
-    <string name="ConfirmPayment__network_fee">Bayaran rangkaian</string>
-    <string name="ConfirmPayment__estimated_s">Anggaran %1$s</string>
     <!-- Prefix to a name to indicate who a payment will be sent to -->
-    <string name="ConfirmPayment__to">Kepada</string>
-    <string name="ConfirmPayment__total_amount">Jumlah keseluruhan</string>
-    <string name="ConfirmPayment__balance_s">Baki: %1$s</string>
-    <string name="ConfirmPayment__submitting_payment">Menyerahkan pembayaran…</string>
-    <string name="ConfirmPayment__processing_payment">Memproses pembayaran…</string>
-    <string name="ConfirmPayment__payment_complete">Pembayaran selesai</string>
-    <string name="ConfirmPayment__payment_failed">Pembayaran gagal</string>
-    <string name="ConfirmPayment__payment_will_continue_processing">Pembayaran akan terus diproses</string>
-    <string name="ConfirmPaymentFragment__invalid_recipient">Penerima tidak sah</string>
     <!-- Title of a dialog show when we were unable to present the user\'s screenlock before sending a payment -->
-    <string name="ConfirmPaymentFragment__failed_to_show_payment_lock">Gagal untuk menunjukkan kunci pembayaran</string>
     <!-- Body of a dialog show when we were unable to present the user\'s screenlock before sending a payment -->
-    <string name="ConfirmPaymentFragment__you_enabled_payment_lock_in_the_settings">Anda mendayakan kunci pembayaran dalam tetapan, tetapi ia tidak boleh ditunjukkan.</string>
     <!-- Button in a dialog that will take the user to the privacy settings -->
-    <string name="ConfirmPaymentFragment__go_to_settings">Pergi ke tetapan</string>
-    <string name="ConfirmPaymentFragment__this_person_has_not_activated_payments">Orang ini belum mengaktifkan pembayaran</string>
-    <string name="ConfirmPaymentFragment__unable_to_request_a_network_fee">Tidak dapat meminta bayaran rangkaian. Untuk meneruskan pembayaran ini, ketik okey untuk cuba lagi.</string>
 
     <!-- BiometricDeviceAuthentication -->
     <!-- Biometric/Device authentication prompt title -->
@@ -4501,7 +4400,6 @@
 
     <!-- SetCurrencyFragment -->
     <string name="SetCurrencyFragment__set_currency">Tetapkan Mata Wang</string>
-    <string name="SetCurrencyFragment__all_currencies">Semua Mata Wang</string>
 
     <!-- **************************************** -->
     <!-- menus -->
@@ -5371,20 +5269,9 @@
     <!-- InfoCard -->
     <string name="payment_info_card_about_mobilecoin">Mengenai MobileCoin</string>
     <string name="payment_info_card_mobilecoin_is_a_new_privacy_focused_digital_currency">MobileCoin merupakan mata wang digital yang mementingkan privasi.</string>
-    <string name="payment_info_card_adding_funds">Menambah dana</string>
-    <string name="payment_info_card_you_can_add_funds_for_use_in">Anda boleh menambah dana untuk digunakan dalam Signal dengan menghantar MobileCoin ke alamat dompet anda.</string>
-    <string name="payment_info_card_cashing_out">Mengeluarkan wang</string>
-    <string name="payment_info_card_you_can_cash_out_mobilecoin">Anda boleh mengeluarkan MobileCoin pada bila-bila sahaja di pertukaran yang menyokong MobileCoin. Hanya buat pemindahan ke akaun anda di pertukaran tersebut.</string>
     <string name="payment_info_card_hide_this_card">Sembunyikan kad ini?</string>
-    <string name="payment_info_card_hide">Sembunyikan</string>
     <!-- Title of save recovery phrase card -->
-    <string name="payment_info_card_save_recovery_phrase">Simpan frasa pemulihan</string>
-    <string name="payment_info_card_your_recovery_phrase_gives_you">Frasa pemulihan anda memberikan anda kaedah lain untuk memulihkan akaun pembayaran anda.</string>
     <!-- Button in save recovery phrase card -->
-    <string name="payment_info_card_save_your_phrase">Simpan frasa anda</string>
-    <string name="payment_info_card_update_your_pin">Kemas kini PIN anda</string>
-    <string name="payment_info_card_with_a_high_balance">Dengan baki yang tinggi, anda mungkin mahu mengemas kini PIN kepada PIN abjad angka untuk menambahkan lebih banyak perlindungan pada akaun anda.</string>
-    <string name="payment_info_card_update_pin">Kemas kini PIN</string>
 
   <!-- Removed by excludeNonTranslatables <string name="payment_info_card__learn_more__about_mobilecoin" translatable="false">https://support.signal.org/hc/articles/360057625692#payments_which_ones</string> -->
   <!-- Removed by excludeNonTranslatables <string name="payment_info_card__learn_more__adding_to_your_wallet" translatable="false">https://support.signal.org/hc/articles/360057625692#payments_transfer_from_exchange</string> -->
@@ -5396,44 +5283,28 @@
     <string name="DeactivateWalletFragment__its_recommended_that_you">Anda disyorkan agar memindahkan dana anda ke alamat dompet lain sebelum menyahaktifkan pembayaran. Jika anda memilih untuk tidak memindahkan dana anda sekarang, ia akan kekal dalam dompet anda yang dipautkan ke Signal jika anda mengaktifkan semula pembayaran.</string>
     <string name="DeactivateWalletFragment__transfer_remaining_balance">Pindah baki yang tinggal</string>
     <string name="DeactivateWalletFragment__deactivate_without_transferring">Nyahaktifkan tanpa pemindahan</string>
-    <string name="DeactivateWalletFragment__deactivate">Nyahaktifkan</string>
-    <string name="DeactivateWalletFragment__deactivate_without_transferring_question">Nyahaktifkan tanpa pemindahan?</string>
-    <string name="DeactivateWalletFragment__your_balance_will_remain">Baki anda akan kekal dalam dompet anda yang dipautkan ke Signal jika anda memilih untuk mengaktifkan semula pembayaran.</string>
-    <string name="DeactivateWalletFragment__error_deactivating_wallet">Ralat semasa menyahaktifkan dompet.</string>
   <!-- Removed by excludeNonTranslatables <string name="DeactivateWalletFragment__learn_more__we_recommend_transferring_your_funds" translatable="false">https://support.signal.org/hc/articles/360057625692#payments_deactivate</string> -->
 
     <!-- PaymentsRecoveryStartFragment -->
     <string name="PaymentsRecoveryStartFragment__recovery_phrase">Frasa pemulihan</string>
     <string name="PaymentsRecoveryStartFragment__view_recovery_phrase">Lihat frasa pemulihan</string>
     <!-- Title in save recovery phrase screen -->
-    <string name="PaymentsRecoveryStartFragment__save_recovery_phrase">Simpan frasa pemulihan</string>
-    <string name="PaymentsRecoveryStartFragment__enter_recovery_phrase">Masukkan frasa pemulihan</string>
     <plurals name="PaymentsRecoveryStartFragment__your_balance_will_automatically_restore">
         <item quantity="other">Baki anda akan dipulihkan secara automatik apabila anda memasang semula Signal dan mengesahkan PIN Signal anda. Anda juga dapat memulihkan baki anda menggunakan frasa pemulihan, yang merupakan frasa %1$d perkataan yang unik untuk anda. Catatkannya dan simpan di tempat yang selamat.</item>
     </plurals>
     <!-- Description in save recovery phrase screen which shows up when user has non zero balance -->
-    <string name="PaymentsRecoveryStartFragment__got_balance">Anda mempunyai baki! Masa untuk menyimpan frasa pemulihan anda—kunci 24 perkataan yang anda boleh gunakan untuk menyimpan baki anda.</string>
     <!-- Description in save recovery phrase screen which shows up when user navigates from info card -->
-    <string name="PaymentsRecoveryStartFragment__time_to_save">Masa untuk menyimpan frasa pemulihan anda—kunci 24 perkataan yang boleh digunakan untuk menyimpan baki anda.</string>
-    <string name="PaymentsRecoveryStartFragment__your_recovery_phrase_is_a">Frasa pemulihan anda merupakan frasa %1$d perkataan yang unik untuk anda. Gunakan frasa ini untuk memulihkan baki anda.</string>
     <string name="PaymentsRecoveryStartFragment__start">Mulakan</string>
-    <string name="PaymentsRecoveryStartFragment__enter_manually">Masukkan secara manual</string>
     <string name="PaymentsRecoveryStartFragment__paste_from_clipboard">Tampal daripada papan keratan</string>
     <!-- Alert dialog title which asks before going back if user wants to save recovery phrase -->
-    <string name="PaymentsRecoveryStartFragment__continue_without_saving">Teruskan Tanpa Menyimpan?</string>
     <!-- Alert dialog description to let user know why recovery phrase needs to be saved -->
-    <string name="PaymentsRecoveryStartFragment__your_recovery_phrase">Frasa pemulihan membolehkan anda menyimpan baki anda sekiranya perkara buruk berlaku. Kami amat mencadangkan anda menyimpannya.</string>
     <!-- Alert dialog option to skip recovery phrase -->
-    <string name="PaymentsRecoveryStartFragment__skip_recovery_phrase">Langkau Frasa Pemulihan</string>
     <!-- Alert dialog option to cancel dialog-->
-    <string name="PaymentsRecoveryStartFragment__cancel">Batal</string>
 
     <!-- PaymentsRecoveryPasteFragment -->
     <string name="PaymentsRecoveryPasteFragment__paste_recovery_phrase">Tampal frasa pemulihan</string>
     <string name="PaymentsRecoveryPasteFragment__recovery_phrase">Frasa pemulihan</string>
     <string name="PaymentsRecoveryPasteFragment__next">Seterusnya</string>
-    <string name="PaymentsRecoveryPasteFragment__invalid_recovery_phrase">Frasa pemulihan tidak sah</string>
-    <string name="PaymentsRecoveryPasteFragment__make_sure">Pastikan anda telah memasukkan %1$d perkataan dan cuba lagi.</string>
 
   <!-- Removed by excludeNonTranslatables <string name="PaymentsRecoveryStartFragment__learn_more__view" translatable="false">https://support.signal.org/hc/articles/360057625692#payments_wallet_view_passphrase</string> -->
   <!-- Removed by excludeNonTranslatables <string name="PaymentsRecoveryStartFragment__learn_more__restore" translatable="false">https://support.signal.org/hc/articles/360057625692#payments_wallet_restore_passphrase</string> -->
@@ -5443,38 +5314,24 @@
     <string name="PaymentsRecoveryPhraseFragment__edit">Edit</string>
     <string name="PaymentsRecoveryPhraseFragment__your_recovery_phrase">Frasa pemulihan anda</string>
     <string name="PaymentsRecoveryPhraseFragment__write_down_the_following_d_words">Catatkan %1$d perkataan yang berikut mengikut urutan. Simpan senarai anda di tempat yang selamat.</string>
-    <string name="PaymentsRecoveryPhraseFragment__make_sure_youve_entered">Pastikan anda telah memasukkan frasa anda dengan betul.</string>
     <string name="PaymentsRecoveryPhraseFragment__do_not_screenshot_or_send_by_email">Jangan ambil tangkapan skrin atau hantar melalui e-mel.</string>
-    <string name="PaymentsRecoveryPhraseFragment__payments_account_restored">Akaun pembayaran telah dipulihkan.</string>
-    <string name="PaymentsRecoveryPhraseFragment__invalid_recovery_phrase">Frasa pemulihan tidak sah</string>
-    <string name="PaymentsRecoveryPhraseFragment__make_sure_youve_entered_your_phrase_correctly_and_try_again">Pastikan anda telah memasukkan frasa anda dengan betul dan cuba lagi.</string>
-    <string name="PaymentsRecoveryPhraseFragment__copy_to_clipboard">Salin ke papan keratan?</string>
-    <string name="PaymentsRecoveryPhraseFragment__if_you_choose_to_store">Sekiranya anda memilih untuk menyimpan frasa pemulihan anda secara digital, pastikan frasa pemulihan anda disimpan dengan selamat di tempat yang anda percayai.</string>
     <string name="PaymentsRecoveryPhraseFragment__copy">Salin</string>
 
     <!-- PaymentsRecoveryPhraseConfirmFragment -->
     <string name="PaymentRecoveryPhraseConfirmFragment__confirm_recovery_phrase">Sahkan frasa pemulihan</string>
     <string name="PaymentRecoveryPhraseConfirmFragment__enter_the_following_words">Masukkan perkataan berikut dari frasa pemulihan anda.</string>
-    <string name="PaymentRecoveryPhraseConfirmFragment__word_d">Perkataan %1$d</string>
     <string name="PaymentRecoveryPhraseConfirmFragment__see_phrase_again">Lihat frasa lagi</string>
     <string name="PaymentRecoveryPhraseConfirmFragment__done">Selesai</string>
-    <string name="PaymentRecoveryPhraseConfirmFragment__recovery_phrase_confirmed">Frasa pemulihan disahkan</string>
 
     <!-- PaymentsRecoveryEntryFragment -->
     <string name="PaymentsRecoveryEntryFragment__enter_recovery_phrase">Masukkan frasa pemulihan</string>
-    <string name="PaymentsRecoveryEntryFragment__enter_word_d">Masukkan perkataan %1$d</string>
-    <string name="PaymentsRecoveryEntryFragment__word_d">Perkataan %1$d</string>
     <string name="PaymentsRecoveryEntryFragment__next">Seterusnya</string>
-    <string name="PaymentsRecoveryEntryFragment__invalid_word">Perkataan tidak sah</string>
 
     <!-- UnreadPayments -->
     <string name="UnreadPayments__s_sent_you_s">%1$s telah menghantar %2$s kepada anda</string>
     <string name="UnreadPayments__d_new_payment_notifications">%1$d pemberitahuan pembayaran baharu</string>
 
     <!-- CanNotSendPaymentDialog -->
-    <string name="CanNotSendPaymentDialog__cant_send_payment">Tidak dapat menghantar pembayaran</string>
-    <string name="CanNotSendPaymentDialog__to_send_a_payment_to_this_user">Untuk menghantar pembayaran kepada pengguna ini, mereka perlu menerima permintaan pesanan daripada anda. Hantar mesej kepada mereka untuk mencipta permintaan mesej.</string>
-    <string name="CanNotSendPaymentDialog__send_a_message">Hantar mesej</string>
 
     <!-- GroupsInCommonMessageRequest -->
     <string name="GroupsInCommonMessageRequest__you_have_no_groups_in_common_with_this_person">Anda tidak mempunyai kumpulan yang sama dengan orang ini. Semak permintaan dengan teliti sebelum menerima untuk mengelakkan mesej yang tidak diingini.</string>
@@ -5908,13 +5765,9 @@
     <!-- ChatColorGradientTool -->
 
     <!-- Title text for prompt to donate. Shown in a popup at the bottom of the chat list. -->
-    <string name="Donate2022Q2Megaphone_donate_to_signal">Derma kepada Signal</string>
     <!-- Body text for prompt to donate. Shown in a popup at the bottom of the chat list. -->
-    <string name="Donate2022Q2Megaphone_signal_is_powered_by_people_like_you">Signal dikuasakan oleh orang-orang seperti anda. Beri derma setiap bulan dan terima lencana.</string>
     <!-- Button label that brings a user to the donate screen. Shown in a popup at the bottom of the chat list. -->
-    <string name="Donate2022Q2Megaphone_donate">Derma</string>
     <!-- Button label that dismissed a prompt to donate. Shown in a popup at the bottom of the chat list. -->
-    <string name="Donate2022Q2Megaphone_not_now">Bukan sekarang</string>
 
     <!-- EditReactionsFragment -->
     <string name="EditReactionsFragment__customize_reactions">Sesuaikan reaksi</string>
@@ -5931,11 +5784,7 @@
     <string name="AddAProfilePhotoMegaphone__add_photo">Tambah foto</string>
 
     <!-- BecomeASustainerMegaphone -->
-    <string name="BecomeASustainerMegaphone__become_a_sustainer">Jadilah seorang Sustainer</string>
     <!-- Displayed in the Become a Sustainer megaphone -->
-    <string name="BecomeASustainerMegaphone__signal_is_powered_by">Signal dikuasakan oleh orang seperti anda. Derma dan terima lencana.</string>
-    <string name="BecomeASustainerMegaphone__not_now">Bukan sekarang</string>
-    <string name="BecomeASustainerMegaphone__donate">Derma</string>
 
     <!-- KeyboardPagerFragment -->
     <string name="KeyboardPagerFragment_emoji">Emoji</string>
@@ -6276,15 +6125,9 @@
     <string name="MediaCaptureFragment_device_link_dialog_continue">Teruskan</string>
 
 
-    <string name="BadgesOverviewFragment__my_badges">Lencana saya</string>
     <string name="BadgesOverviewFragment__featured_badge">Pemberian lencana</string>
-    <string name="BadgesOverviewFragment__display_badges_on_profile">Pamerkan lencana pada profil</string>
-    <string name="BadgesOverviewFragment__failed_to_update_profile">Gagal mengemaskini profil</string>
 
 
-    <string name="SelectFeaturedBadgeFragment__select_a_badge">Pilih satu lencana</string>
-    <string name="SelectFeaturedBadgeFragment__you_must_select_a_badge">Anda mesti pilih lencana</string>
-    <string name="SelectFeaturedBadgeFragment__failed_to_update_profile">Gagal mengemaskini profil</string>
 
     <!-- Displayed on primary button in the bottom sheet as a call-to-action to launch into the donation flow -->
     <string name="ViewBadgeBottomSheetDialogFragment__donate_now">Derma</string>
@@ -6297,29 +6140,21 @@
 
     <string name="ImageView__badge">Lencana</string>
 
-    <string name="SubscribeFragment__cancel_subscription">Batal Langganan</string>
     <string name="SubscribeFragment__confirm_cancellation">Sahkan Pembatalan?</string>
     <string name="SubscribeFragment__you_wont_be_charged_again">Anda tidak akan dicaj lagi. Lencana anda akan dibuang daripada profil anda pada penghujung tempoh pengebilan anda.</string>
     <string name="SubscribeFragment__not_now">Bukan sekarang</string>
     <string name="SubscribeFragment__confirm">Sahkan</string>
-    <string name="SubscribeFragment__update_subscription">Kemas Kini Langganan</string>
-    <string name="SubscribeFragment__your_subscription_has_been_cancelled">Langganan anda telah dibatalkan.</string>
-    <string name="SubscribeFragment__update_subscription_question">Kemas kini langganan?</string>
     <string name="SubscribeFragment__update">Kemas Kini</string>
     <string name="SubscribeFragment__you_will_be_charged_the_full_amount_s_of">Anda akan dikenakan jumlah penuh (%1$s) daripada harga langganan baharu hari ini. Langganan anda akan diperbaharui setiap bulan.</string>
 
-    <string name="Subscription__s_per_month">%1$s/bulan</string>
     <!-- Shown when a subscription is active and isn\'t going to expire at the end of the term -->
-    <string name="Subscription__renews_s">Memperbaharui %1$s</string>
     <!-- Shown when a subscription is active and is going to expire at the end of the term -->
-    <string name="Subscription__expires_s">Tamat tempoh pada %1$s</string>
 
     <!-- Title of learn more sheet -->
     <string name="SubscribeLearnMoreBottomSheetDialogFragment__signal_is_different">Sebagai organisasi bukan untung bebas, Signal komited terhadap pemesejan dan panggilan peribadi. Tiada iklan, tiada penjejak, tiada pengawasan. Derma hari ini untuk menyokong Signal.</string>
     <!-- First small text blurb on learn more sheet -->
     <string name="SubscribeLearnMoreBottomSheetDialogFragment__private_messaging">No ads, no trackers, no surveillance. Donate today to support Signal.</string>
     <!-- Second small text blurb on learn more sheet -->
-    <string name="SubscribeLearnMoreBottomSheetDialogFragment__donate_and_get_badge">Dapatkan lencana pilihan pada profil anda apabila anda menderma</string>
     <!-- Third small text blurb on learn more sheet -->
     <string name="SubscribeLearnMoreBottomSheetDialogFragment__your_privacy_is_our_mission">Privasi anda adalah misi kami</string>
     <!-- Fourth small text blurb on learn more sheet. Non-English translations should use "Signal is a nonprofit." instead, dropping the 501c3 reference. -->
@@ -6327,60 +6162,37 @@
 
     <string name="SubscribeThanksForYourSupportBottomSheetDialogFragment__thanks_for_your_support">Terima kasih atas Sokongan anda!</string>
     <!-- Subtext underneath the dialog title on the thanks sheet -->
-    <string name="SubscribeThanksForYourSupportBottomSheetDialogFragment__youve_earned_a_donor_badge">Anda telah memperoleh lencana penderma daripada Signal! Paparkan pada profil anda untuk menunjukkan sokongan anda.</string>
     <string name="SubscribeThanksForYourSupportBottomSheetDialogFragment__you_can_also">Anda juga boleh</string>
-    <string name="SubscribeThanksForYourSupportBottomSheetDialogFragment__become_a_montly_sustainer">jadilah Sustainer bulanan.</string>
     <string name="SubscribeThanksForYourSupportBottomSheetDialogFragment__display_on_profile">Pamerkan di Profil</string>
-    <string name="SubscribeThanksForYourSupportBottomSheetDialogFragment__make_featured_badge">Buat lencana untuk ditampilkan</string>
     <string name="SubscribeThanksForYourSupportBottomSheetDialogFragment__continue">Teruskan</string>
     <string name="ThanksForYourSupportBottomSheetFragment__when_you_have_more">Apabila anda memiliki lebih daripada satu lencana, anda boleh memilih satu untuk dipamerkan agar dapat dilihat oleh orang lain di profil anda.</string>
 
-    <string name="BecomeASustainerFragment__get_badges">Dapatkan lencana untuk profil anda dengan menyokong Signal.</string>
-    <string name="BecomeASustainerFragment__signal_is_a_non_profit">Signal adalah organisasi bukan untung tanpa pengiklan atau pelabur, hanya disokong oleh orang ramai seperti anda.</string>
 
     <!-- Button label for creating a donation -->
-    <string name="ManageDonationsFragment__donate_to_signal">Derma kepada Signal</string>
     <!-- Heading for more area of manage subscriptions page -->
-    <string name="ManageDonationsFragment__more">Lagi</string>
     <!-- Heading for receipts area of manage subscriptions page -->
     <!-- Heading for my subscription area of manage subscriptions page -->
-    <string name="ManageDonationsFragment__my_support">Sokongan saya</string>
-    <string name="ManageDonationsFragment__manage_subscription">Urus langganan</string>
     <!-- Label for Donation Receipts button -->
-    <string name="ManageDonationsFragment__donation_receipts">Resit Derma</string>
-    <string name="ManageDonationsFragment__badges">Lencana</string>
     <!-- Label that externally links to Signal Donor FAQ page -->
-    <string name="ManageDonationsFragment__subscription_faq">Soalan Lazim Penderma</string>
     <!-- Preference heading for other ways to donate -->
-    <string name="ManageDonationsFragment__other_ways_to_give">Cara lain untuk derma</string>
     <!-- Preference label to launch badge gifting -->
-    <string name="ManageDonationsFragment__donate_for_a_friend">Derma untuk rakan</string>
     <!-- Dialog title shown when a donation requires verifying/confirmation outside of the app and the user hasn\'t done that yet -->
-    <string name="ManageDonationsFragment__couldnt_confirm_donation">Tidak dapat mengesahkan derma</string>
     <!-- Dialog message shown when a monthly donation requires verifying/confirmation outside of the app and the user hasn\'t done that yet, placeholder is money amount -->
-    <string name="ManageDonationsFragment__your_monthly_s_donation_couldnt_be_confirmed_ideal_wero">Your %1$s/month donation couldn\'t be confirmed. Check your banking app to approve your iDEAL | Wero payment.</string>
     <!-- Dialog message shown when a one-time donation requires verifying/confirmation outside of the app and the user hasn\'t done that yet, placeholder is money amount -->
-    <string name="ManageDonationsFragment__your_one_time_s_donation_couldnt_be_confirmed_ideal_wero">Your one-time %1$s donation couldn\'t be confirmed. Check your banking app to approve your iDEAL | Wero payment.</string>
 
-    <string name="Boost__enter_custom_amount">Masukkan Jumlah Tersuai</string>
     <!-- Error label when the amount is smaller than what we can accept -->
-    <string name="Boost__the_minimum_amount_you_can_donate_is_s">Jumlah minimum yang anda boleh dermakan ialah %1$s</string>
 
     <string name="MySupportPreference__s_per_month">%1$s/bulan</string>
     <string name="MySupportPreference__renews_s">Memperbaharui %1$s</string>
     <!-- Subtitle shown when processing a donation transaction -->
     <string name="MySupportPreference__processing_transaction">Memproses transaksi…</string>
     <!-- Displayed on "My Support" screen when user badge failed to be added to their account -->
-    <string name="MySupportPreference__couldnt_add_badge_s">Tidak dapat menambah lencana. %1$s</string>
     <string name="MySupportPreference__please_contact_support">Sila hubungi pusat bantuan.</string>
     <!-- Displayed as a subtitle on a row in the Manage Donations screen when payment for a donation is pending -->
-    <string name="MySupportPreference__payment_pending">Pembayaran belum selesai</string>
     <!-- Displayed as a dialog message when clicking on a donation row that is pending. Placeholder is a formatted fiat amount -->
-    <string name="MySupportPreference__your_bank_transfer_of_s">Pindahan bank anda sebanyak %1$s belum selesai. Pindahan bank boleh mengambil masa 1 hingga 14 hari perniagaan untuk diselesaikan.  </string>
     <!-- Displayed in the pending help dialog, used to launch user to more details about bank transfers -->
     <string name="MySupportPreference__learn_more">Ketahui lebih lanjut</string>
     <!-- Displayed when a subscription refresh is being performed -->
-    <string name="MySupportPreference__checking_subscription">Menyemak langganan…</string>
 
     <!-- Title of dialog telling user they need to update signal as it expired -->
     <string name="UpdateSignalExpiredDialog__title">Kemas Kini Signal</string>
@@ -6401,126 +6213,66 @@
     <string name="ReregisterSignalDialog__cancel_action">Batal</string>
 
     <!-- Title of expiry sheet when boost badge falls off profile unexpectedly. -->
-    <string name="ExpiredBadgeBottomSheetDialogFragment__boost_badge_expired">Lencana Boost Tamat Tempoh</string>
     <!-- Displayed in the bottom sheet if a monthly donation badge unexpectedly falls off the user\'s profile -->
-    <string name="ExpiredBadgeBottomSheetDialogFragment__monthly_donation_cancelled">Derma Bulanan Dibatalkan</string>
     <!-- Displayed in the bottom sheet when a boost badge expires -->
-    <string name="ExpiredBadgeBottomSheetDialogFragment__your_boost_badge_has_expired_and">Lencana Boost anda telah tamat tempoh dan tidak lagi kelihatan pada profil anda.</string>
-    <string name="ExpiredBadgeBottomSheetDialogFragment__you_can_reactivate">Anda boleh mengaktifkan semula lencana Boost anda selama 30 hari lagi dengan satu derma.</string>
     <!-- Displayed when we do not think the user is a subscriber when their boost expires -->
-    <string name="ExpiredBadgeBottomSheetDialogFragment__you_can_keep">Anda masih boleh menggunakan Signal untuk menyokong teknologi yang dibina untuk anda, pertimbangkan untuk menjadi penderma dengan membuat derma bulanan.</string>
-    <string name="ExpiredBadgeBottomSheetDialogFragment__become_a_sustainer">Menjadi Sustainer</string>
-    <string name="ExpiredBadgeBottomSheetDialogFragment__add_a_boost">Tambah Boost</string>
-    <string name="ExpiredBadgeBottomSheetDialogFragment__not_now">Bukan sekarang</string>
     <!-- Copy displayed when badge expires after user inactivity -->
-    <string name="ExpiredBadgeBottomSheetDialogFragment__your_recurring_monthly_donation_was_automatically">Derma bulanan berulang anda dibatalkan secara automatik kerana anda tidak aktif untuk masa yang terlalu lama. Lencana %1$s anda tidak lagi kelihatan pada profil anda.</string>
     <!-- Copy displayed when badge expires after payment failure -->
-    <string name="ExpiredBadgeBottomSheetDialogFragment__your_recurring_monthly_donation_was_canceled">Derma bulanan berulang anda telah dibatalkan kerana kami tidak boleh memproses pembayaran anda. Lencana anda tidak lagi kelihatan pada profil anda.</string>
     <!-- Copy displayed when badge expires after a payment failure and we have a displayable charge failure reason -->
-    <string name="ExpiredBadgeBottomSheetDialogFragment__your_recurring_monthly_donation_was_canceled_s">Derma bulanan berulang anda telah dibatalkan. %1$s Lencana %2$s anda tidak lagi kelihatan pada profil anda.</string>
-    <string name="ExpiredBadgeBottomSheetDialogFragment__you_can">Anda boleh terus menggunakan Signal untuk menyokong aplikasi dan mengaktifkan semula lencana anda, sila perbaharui sekarang.</string>
-    <string name="ExpiredBadgeBottomSheetDialogFragment__renew_subscription">Perbaharui langganan</string>
     <!-- Button label to send user to Google Pay website -->
-    <string name="ExpiredBadgeBottomSheetDialogFragment__go_to_google_pay">Pergi ke Google Pay</string>
 
-    <string name="CantProcessSubscriptionPaymentBottomSheetDialogFragment__cant_process_subscription_payment">Tidak boleh memproses pembayaran langganan</string>
-    <string name="CantProcessSubscriptionPaymentBottomSheetDialogFragment__were_having_trouble">Kami mengalami masalah mengumpul pembayaran Penderma Signal anda. Pastikan kaedah pembayaran anda adalah terkini. Jika tidak, kemas kini dalam Google Pay. Signal akan cuba memproses pembayaran lagi dalam beberapa hari.</string>
-    <string name="CantProcessSubscriptionPaymentBottomSheetDialogFragment__dont_show_this_again">Jangan tunjukkan ini lagi</string>
 
-    <string name="Subscription__contact_support">Hubungi Sokongan</string>
-    <string name="Subscription__get_a_s_badge">Dapatkan lencana %1$s</string>
 
     <!-- *PaymentInProgressFragment strings -->
-    <string name="InAppPaymentInProgressFragment__processing_donation">Memproses derma…</string>
-    <string name="InAppPaymentInProgressFragment__processing_payment">Memproses pembayaran…</string>
 
     <!--InAppDonations -->
     <!-- Label displayed in google play and on receipts for recurring subscriptions. Placeholder is level -->
-    <string name="InAppDonations__recurring_d">Berulang %1$d</string>
 
     <!-- InAppPaymentErrors -->
     <!-- Displayed as a title in a dialog or notification when a payment failure happens. -->
-    <string name="InAppPaymentErrors__error_processing_payment">Ralat memproses pembayaran</string>
     <!-- Displayed as a message in a dialog or notification when a payment setup error happens. -->
-    <string name="InAppPaymentErrors__your_payment_couldnt_be_processed">Pembayaran anda tidak dapat diproses dan anda belum dicaj. Sila cuba lagi.</string>
     <!-- Displayed as a message in a dialog when we timeout waiting for a payment to be processed and token to be redeemed -->
-    <string name="InAppPaymentErrors__your_payment_is_still">Bayaran anda masih diproses. Ini boleh mengambil masa beberapa minit bergantung kepada sambungan anda.</string>
     <!-- Displayed as a message in a dialog or notification when stripe decline code issuer not available for backup payment. -->
-    <string name="InAppPaymentErrors__StripeDeclineCode__try_completing_the_payment_again">Cuba selesaikan pembayaran lagi atau hubungi bank anda untuk maklumat lebih lanjut.</string>
     <!-- Failure code text for revoked authorization of payment, displayed in a dialog or notification as a message. -->
-    <string name="InAppPaymentErrors__StripeFailureCode__this_payment_was_revoked">Pembayaran ini telah dibatalkan oleh pemegang akaun dan tidak dapat diproses. Anda belum dicaj.</string>
     <!-- Failure code text for a payment lacking an authorized mandate or incorrect mandate, displayed in a dialog or notification as a message.-->
-    <string name="InAppPaymentErrors__StripeFailureCode__an_error_occurred_while_processing_this_payment">Ralat berlaku semasa memproses pembayaran ini, sila cuba lagi.</string>
 
     <!-- Displayed in notification when user payment fails to process on Stripe -->
-    <string name="DonationsErrors__error_processing_payment">Ralat memproses derma</string>
     <!-- Displayed on manage donations screen as a dialog message when payment method failed -->
-    <string name="DonationsErrors__try_another_payment_method">Cuba kaedah pembayaran lain atau hubungi bank anda untuk maklumat lebih lanjut.</string>
     <!-- Displayed on manage donations screen error dialogs as an action label -->
-    <string name="DonationsErrors__learn_more">Ketahui lebih lanjut</string>
     <!-- Displayed on "My Support" screen when user subscription payment method failed. -->
-    <string name="DonationsErrors__error_processing_payment_s">Ralat memproses derma. %1$s</string>
-    <string name="DonationsErrors__your_payment">Pembayaran anda tidak dapat diproses dan anda belum dicaj. Sila cuba lagi.</string>
-    <string name="DonationsErrors__still_processing">Masih sedang diproses</string>
-    <string name="DonationsErrors__couldnt_add_badge">Tidak dapat menambah lencana</string>
     <!-- Displayed when backup credential could not be redeemed. Dialog or notification title -->
-    <string name="DonationsError__something_went_wrong">Ada yang tidak kena</string>
     <!-- Displayed when backup credential could not be redeemed. Dialog or notification body -->
-    <string name="DonationsError__your_backups_subscription_couldnt_be_displayed">Langganan sandaran anda tidak dapat dipaparkan. Sila hubungi sokongan.</string>
     <!-- Displayed when badge credential couldn\'t be verified -->
-    <string name="DonationsErrors__failed_to_validate_badge">Gagal mengesahkan lencana</string>
     <!-- Displayed when badge credential couldn\'t be verified -->
-    <string name="DonationsErrors__could_not_validate">Tidak boleh mengesahkan respons pelayan. Sila hubungi sokongan.</string>
     <!-- Displayed as title when some generic error happens during sending donation on behalf of another user -->
-    <string name="DonationsErrors__donation_failed">Derma gagal</string>
     <!-- Displayed as message when some generic error happens during sending donation on behalf of another user -->
-    <string name="DonationsErrors__your_payment_was_processed_but">Derma anda telah diproses tetapi Signal tidak boleh menghantar mesej derma anda. Sila hubungi sokongan.</string>
-    <string name="DonationsErrors__your_badge_could_not">Lencana anda tidak dapat ditambahkan ke akaun anda, tetapi anda mungkin telah dikenakan bayaran. Sila hubungi sokongan.</string>
-    <string name="DonationsErrors__your_payment_is_still">Derma anda sedang diproses. Ini boleh mengambil masa beberapa minit bergantung pada sambungan anda.</string>
-    <string name="DonationsErrors__failed_to_cancel_subscription">Gagal membatalkan langganan</string>
-    <string name="DonationsErrors__subscription_cancellation_requires_an_internet_connection">Pembatalan langganan memerlukan sambungan internet.</string>
     <string name="ViewBadgeBottomSheetDialogFragment__your_device_doesn_t_support">Peranti anda tidak menyokong derma dalam aplikasi, jadi anda tidak boleh melanggan untuk mendapatkan lencana. Anda masih boleh menyokong Signal dengan menderma di laman web kami.</string>
     <string name="NetworkFailure__network_error_check_your_connection_and_try_again">Ralat rangkaian. Periksa sambungan anda dan cuba lagi.</string>
     <string name="NetworkFailure__retry">Cuba Semula</string>
     <!-- Displayed as a dialog title when the selected recipient for a gift doesn\'t support gifting -->
-    <string name="DonationsErrors__cannot_send_donation">Tidak boleh menghantar derma</string>
     <!-- Displayed as a dialog message when the selected recipient for a gift doesn\'t support gifting -->
-    <string name="DonationsErrors__this_user_cant_receive_donations_until">Pengguna ini tidak boleh menerima derma sehingga mereka menaik taraf Signal.</string>
     <!-- Displayed as a dialog message when the user\'s profile could not be fetched, likely due to lack of internet -->
-    <string name="DonationsErrors__your_donation_could_not_be_sent">Derma anda tidak boleh dihantar kerana ralat rangkaian. Periksa sambungan anda dan cuba lagi.</string>
     <!-- Displayed as a dialog message when the user encounters an error during an iDEAL donation -->
-    <string name="DonationsErrors__your_ideal_wero_couldnt_be_processed">Your iDEAL | Wero donation couldn\'t be processed. Try another payment method or contact your bank for more information.</string>
 
     <!-- Gift message view title -->
-    <string name="GiftMessageView__donation_on_behalf_of_s">Derma bagi pihak %1$s</string>
     <!-- Gift message view title for incoming donations -->
-    <string name="GiftMessageView__s_donated_to_signal_on">%1$s menderma kepada Signal bagi pihak anda</string>
     <!-- Gift badge redeem action label -->
-    <string name="GiftMessageView__redeem">Tebus</string>
     <!-- Gift badge view action label -->
-    <string name="GiftMessageView__view">Lihat</string>
     <!-- Gift badge redeeming action label -->
-    <string name="GiftMessageView__redeeming">Menebus…</string>
     <!-- Gift badge redeemed label -->
-    <string name="GiftMessageView__redeemed">Ditebus</string>
 
 
     <!-- Stripe decline code generic_failure -->
-    <string name="DeclineCode__try_another_payment_method_or_contact_your_bank">Cuba kaedah pembayaran lain atau hubungi bank anda untuk maklumat lebih lanjut.</string>
     <!-- PayPal decline code for payment declined -->
-    <string name="DeclineCode__try_another_payment_method_or_contact_your_bank_for_more_information_if_this_was_a_paypal">Cuba kaedah pembayaran lain atau hubungi bank anda untuk maklumat lanjut. Jika ini adalah transaksi PayPal, hubungi PayPal.</string>
     <!-- Stripe decline code verify on Google Pay and try again -->
-    <string name="DeclineCode__verify_your_payment_method_is_up_to_date_in_google_pay_and_try_again">Sahkan kaedah pembayaran anda terkini dalam Google Pay dan cuba lagi.</string>
     <!-- Stripe decline code learn more action label -->
     <string name="DeclineCode__learn_more">Ketahui lebih lanjut</string>
     <!-- Stripe decline code contact issuer -->
-    <string name="DeclineCode__verify_your_payment_method_is_up_to_date_in_google_pay_and_try_again_if_the_problem">Sahkan kaedah pembayaran anda terkini dalam Google Pay dan cuba lagi. Jika masalah masih berterusan, hubungi bank anda.</string>
     <!-- Stripe decline code purchase not supported -->
     <string name="DeclineCode__your_card_does_not_support_this_type_of_purchase">Kad anda tidak menyokong pembelian jenis ini. Cuba kaedah pembayaran lain.</string>
     <!-- Stripe decline code your card has expired -->
     <string name="DeclineCode__your_card_has_expired">Kad anda telah tamat tempoh. Kemas kini kaedah pembayaran dalam Google Pay dan cuba lagi.</string>
     <!-- Stripe decline code go to google pay action label -->
-    <string name="DeclineCode__go_to_google_pay">Pergi ke Google Pay</string>
     <!-- Stripe decline code try credit card again action label -->
     <string name="DeclineCode__try">Cuba lagi</string>
     <!-- Stripe decline code incorrect card number -->
@@ -6534,7 +6286,6 @@
     <!-- Stripe decline code incorrect expiration year -->
     <string name="DeclineCode__the_expiration_year">Tahun tamat tempoh pada kaedah pembayaran anda tidak betul. Kemas kini dalam Google Pay dan cuba lagi.</string>
     <!-- Stripe decline code issuer not available -->
-    <string name="DeclineCode__try_completing_the_payment_again">Cuba selesaikan pembayaran lagi atau hubungi bank anda untuk maklumat lebih lanjut.</string>
     <!-- Stripe decline code processing error -->
     <string name="DeclineCode__try_again">Cuba lagi atau hubungi bank anda untuk maklumat lanjut.</string>
 
@@ -6556,15 +6307,10 @@
 
     <!-- Stripe Failure Codes for failed bank transfers -->
     <!-- Failure code text for insufficient funds, displayed in a dialog or notification -->
-    <string name="StripeFailureCode__the_bank_account_provided">Akaun bank yang diberikan tidak mempunyai baki mencukupi untuk melengkapkan pembelian ini, cuba lagi atau hubungi bank anda untuk mendapatkan maklumat lanjut.</string>
     <!-- Failure code text for revoked authorization of payment, displayed in a dialog or notification -->
-    <string name="StripeFailureCode__this_payment_was_revoked">Pembayaran ini telah dibatalkan oleh pemegang akaun dan tidak dapat diproses. Anda belum dicaj.</string>
     <!-- Failure code text for a payment lacking an authorized mandate or incorrect mandate, displayed in a dialog or notification -->
-    <string name="StripeFailureCode__an_error_occurred_while_processing_this_payment">Ralat berlaku semasa memproses derma ini, sila cuba lagi.</string>
     <!-- Failure code text for a closed account, deceased recipient, or one with blocked direct debits, displayed in a dialog or notification -->
-    <string name="StripeFailureCode__the_bank_details_provided_could_not_be_processed">Butiran bank yang diberikan tidak dapat diproses, hubungi bank anda untuk mendapatkan maklumat lanjut.</string>
     <!-- Failure code text for a non-existent bank branch, invalid account holder, invalid iban, generic failure, or unknown bank failure, displayed in a dialog or notification -->
-    <string name="StripeFailureCode__verify_your_bank_details_are_correct">Sahkan butiran bank anda adalah betul dan cuba lagi. Jika masalah masih berterusan, hubungi bank anda.</string>
 
     <!-- Title of create notification profile screen -->
     <string name="EditNotificationProfileFragment__name_your_profile">Namakan profil anda</string>
@@ -6727,33 +6473,19 @@
     <string name="ReleaseNotes__official_only_chat">Satu-satunya sembang rasmi Signal</string>
 
     <!-- Donation receipts activity title -->
-    <string name="DonationReceiptListFragment__all_activity">Semua aktiviti</string>
     <!-- Donation receipts all tab label -->
-    <string name="DonationReceiptListFragment__all">Semua</string>
     <!-- Donation receipts recurring tab label -->
-    <string name="DonationReceiptListFragment__recurring">Berulang</string>
     <!-- Donation receipts one-time tab label -->
-    <string name="DonationReceiptListFragment__one_time">Sekali</string>
     <!-- Donation receipts gift tab -->
-    <string name="DonationReceiptListFragment__for_a_friend">Untuk rakan</string>
     <!-- Donation receipts gift tab label -->
-    <string name="DonationReceiptListFragment__donation_for_a_friend">Derma untuk rakan</string>
     <!-- Donation receipts donation type heading -->
-    <string name="DonationReceiptDetailsFragment__donation_type">Jenis derma</string>
     <!-- Donation receipts date paid heading -->
-    <string name="DonationReceiptDetailsFragment__date_paid">Tarikh bayar</string>
     <!-- Donation receipts share PNG -->
-    <string name="DonationReceiptDetailsFragment__share_receipt">Kongsi resit</string>
     <!-- Donation receipts list end note -->
-    <string name="DonationReceiptListFragment__if_you_have">Jika anda memasang semula Signal, resit daripada derma terdahulu tidak akan tersedia.</string>
     <!-- Donation receipts document title -->
-    <string name="DonationReceiptDetailsFragment__donation_receipt">Resit derma</string>
     <!-- Donation receipts amount title -->
-    <string name="DonationReceiptDetailsFragment__amount">Jumlah</string>
     <!-- Donation receipts thanks -->
-    <string name="DonationReceiptDetailsFragment__thank_you_for_supporting">Terima kasih kerana menyokong Signal. Sumbangan anda membantu menampung misi membina teknologi privasi sumber terbuka yang melindungi pernyataan bebas dan membolehkan komunikasi global yang selamat untuk berjuta orang di seluruh dunia. Jika anda penduduk Amerika Syarikat, sila simpan resit ini untuk rekod cukai anda. Signal Technology Foundation merupakan organisasi bukan untung yang dikecualikan cukai di Amerika Syarikat di bawah seksyen 501c3 Kod Hasil dalam Negeri. ID Cukai Persekutuan kami ialah 82-4506840.</string>
     <!-- Donation reciepts screen empty state title -->
-    <string name="DonationReceiptListFragment__no_receipts">Tiada resit</string>
 
     <!-- region "Stories Tab" -->
 
@@ -7131,53 +6863,32 @@
         <item quantity="other">%1$s · durasi %2$d hari</item>
     </plurals>
     <!-- Headline text on start fragment for gifting a badge -->
-    <string name="GiftFlowStartFragment__donate_for_a_friend">Menderma untuk Rakan</string>
     <!-- Description text on start fragment for gifting a badge -->
     <plurals name="GiftFlowStartFragment__support_signal_by">
         <item quantity="other">Sokong Signal dengan membuat derma untuk rakan atau ahli keluarga yang menggunakan Signal. Mereka akan menerima lencana untuk dipaparkan pada profil mereka selama %1$d hari</item>
     </plurals>
     <!-- Action button label for start fragment for gifting a badge -->
-    <string name="GiftFlowStartFragment__next">Seterusnya</string>
     <!-- Title text on choose recipient page for badge gifting -->
-    <string name="GiftFlowRecipientSelectionFragment__choose_recipient">Pilih penerima</string>
     <!-- Title text on confirm gift page -->
-    <string name="GiftFlowConfirmationFragment__confirm_donation">Sahkan derma</string>
     <!-- Heading text specifying who the gift will be sent to -->
-    <string name="GiftFlowConfirmationFragment__send_to">Hantar kepada</string>
     <!-- Text explaining that gift will be sent to the chosen recipient -->
-    <string name="GiftFlowConfirmationFragment__the_recipient_will_be_notified">Penerima akan dimaklumkan secara terus melalui mesej tentang derma tersebut. Tambah mesej anda sendiri di bawah.</string>
     <!-- Text explaining that this gift is a one time donation -->
-    <string name="GiftFlowConfirmationFragment__one_time_donation">Derma sekali</string>
     <!-- Hint for add message input -->
-    <string name="GiftFlowConfirmationFragment__add_a_message">Tambah mesej</string>
     <!-- Displayed in the dialog while verifying the chosen recipient -->
     <string name="GiftFlowConfirmationFragment__verifying_recipient">Mengesahkan penerima…</string>
     <!-- Title for sheet shown when opening a redeemed gift -->
-    <string name="ViewReceivedGiftBottomSheet__s_made_a_donation_for_you">%1$s membuat derma untuk anda</string>
     <!-- Title for sheet shown when opening a sent gift -->
-    <string name="ViewSentGiftBottomSheet__thanks_for_your_support">Terima kasih di atas sokongan anda!</string>
     <!-- Description for sheet shown when opening a redeemed gift -->
-    <string name="ViewReceivedGiftBottomSheet__s_made_a_donation_to_signal">%1$s membuat derma kepada Signal bagi pihak anda! Tunjukkan sokongan anda untuk Signal pada profil anda.</string>
     <!-- Description for sheet shown when opening a sent gift -->
-    <string name="ViewSentGiftBottomSheet__youve_made_a_donation_to_signal">Anda telah membuat derma kepada Signal bagi pihak %1$s . Mereka akan diberi pilihan untuk menunjukkan sokongan mereka pada profil mereka.</string>
     <!-- Primary action for pending gift sheet to redeem badge now -->
-    <string name="ViewReceivedGiftSheet__redeem">Tebus</string>
     <!-- Primary action for pending gift sheet to redeem badge later -->
-    <string name="ViewReceivedGiftSheet__not_now">Bukan sekarang</string>
     <!-- Dialog text while redeeming a gift -->
-    <string name="ViewReceivedGiftSheet__redeeming_badge">Menebus lencana…</string>
     <!-- Description text in gift thanks sheet -->
-    <string name="GiftThanksSheet__youve_made_a_donation">Anda telah membuat derma kepada Signal bagi pihak %1$s . Mereka akan diberi pilihan untuk menunjukkan sokongan mereka pada profil mereka.</string>
     <!-- Expired gift sheet title -->
-    <string name="ExpiredGiftSheetConfiguration__your_badge_has_expired">Lencana anda telah tamat tempoh</string>
     <!-- Expired gift sheet top description text -->
-    <string name="ExpiredGiftSheetConfiguration__your_badge_has_expired_and_is">Lencana anda telah tamat tempoh, dan tidak lagi kelihatan pada orang lain di profil anda.</string>
     <!-- Expired gift sheet bottom description text -->
-    <string name="ExpiredGiftSheetConfiguration__to_continue">Untuk terus menyokong teknologi yang dibina untuk anda, sila pertimbangkan untuk menjadi Sustainer bulanan.</string>
     <!-- Expired gift sheet make a monthly donation button -->
-    <string name="ExpiredGiftSheetConfiguration__make_a_monthly_donation">Buat derma bulanan</string>
     <!-- Expired gift sheet not now button -->
-    <string name="ExpiredGiftSheetConfiguration__not_now">Bukan sekarang</string>
     <!-- My Story label designating that we will only share with the selected viewers. -->
     <string name="ContactSearchItems__only_share_with">Hanya kongsi dengan</string>
     <!-- Label under name for custom stories -->
@@ -7233,7 +6944,6 @@
         <item quantity="other">%1$d minit lagi</item>
     </plurals>
     <!-- Donation for a friend expiry expired -->
-    <string name="Gifts__expired">Tamat tempoh</string>
 
     <!-- Label indicating that a user can tap to advance to the next post in a story -->
     <string name="StoryFirstTimeNavigationView__tap_to_advance">Ketik untuk maju</string>
@@ -7377,128 +7087,75 @@
 
     <!-- DonateToSignalFragment -->
     <!-- Title below avatar -->
-    <string name="DonateToSignalFragment__privacy_over_profit">Bangga Sebagai Organisasi Bukan Untung</string>
     <!-- Continue button label -->
-    <string name="DonateToSignalFragment__continue">Teruskan</string>
     <!-- Description below title -->
-    <string name="DonateToSignalFragment__private_messaging">Derma untuk menyokong pemesejan peribadi. Pastikan Signal bebas dan tanpa iklan.</string>
     <!-- Dialog title when a user tries to donate while they already have a pending donation. -->
-    <string name="DonateToSignalFragment__you_have_a_donation_pending">Anda mempunyai derma yang belum selesai</string>
     <!-- Dialog body when a user tries to donate while they already have a pending monthly donation. -->
-    <string name="DonateToSignalFragment__bank_transfers_usually_take_1_business_day_to_process_monthly">Pindahan bank boleh mengambil masa 1 hingga 14 hari perniagaan untuk diproses. Sila tunggu sehingga pembayaran ini selesai sebelum mengemas kini langganan anda.</string>
     <!-- Dialog body when a user tries to donate while they already have a pending one time donation. -->
-    <string name="DonateToSignalFragment__bank_transfers_usually_take_1_business_day_to_process_onetime">Pindahan bank boleh mengambil masa 1 hingga 14 hari perniagaan untuk diproses. Sila tunggu sehingga pembayaran ini selesai sebelum membuat derma lain.</string>
     <!-- Dialog body when a user tries to donate while they already have a pending monthly donation. -->
-    <string name="DonateToSignalFragment__your_payment_is_still_being_processed_monthly">Derma anda sedang diproses. Ini boleh mengambil masa beberapa minit bergantung pada sambungan anda. Sila tunggu sehingga pembayaran ini selesai sebelum mengemas kini langganan anda.</string>
     <!-- Dialog body when a user tries to donate while they already have a pending one time donation. -->
-    <string name="DonateToSignalFragment__your_payment_is_still_being_processed_onetime">Derma anda sedang diproses. Ini boleh mengambil masa beberapa minit bergantung pada sambungan anda. Sila tunggu sehingga pembayaran ini selesai sebelum membuat derma lain.</string>
     <!-- Dialog body when a user opens the manage donations main screen and they have a pending iDEAL donation -->
-    <string name="DonateToSignalFragment__your_ideal_wero_payment_is_still_processing">Your iDEAL | Wero donation is still processing. Check your banking app to approve your payment before making another donation.</string>
     <!-- Dialog title shown when a user tries to donate an amount higher than is allowed for a given payment method. -->
-    <string name="DonateToSignal__donation_amount_too_high">Jumlah derma terlalu tinggi</string>
     <!-- Dialog body shown when a user tries to donate an amount higher than is allowed for a given payment method, place holder is the maximum -->
-    <string name="DonateToSignalFragment__you_can_send_up_to_s_via_bank_transfer">Anda boleh menghantar sehingga %1$s melalui pindahan bank. Cuba jumlah lain atau kaedah pembayaran yang berbeza.</string>
 
     <!-- Donation pill toggle monthly text -->
-    <string name="DonationPillToggle__monthly">Bulanan</string>
     <!-- Donation pill toggle one-time text -->
-    <string name="DonationPillToggle__one_time">Sekali</string>
 
     <!-- GatewaySelectorBottomSheet -->
     <!-- Sheet title when subscribing -->
-    <string name="GatewaySelectorBottomSheet__donate_s_month_to_signal">Derma %1$s/bulan kepada Signal</string>
     <!-- Sheet summary when subscribing -->
-    <string name="GatewaySelectorBottomSheet__get_a_s_badge">Dapatkan lencana %1$s</string>
     <!-- Sheet title when giving a one-time donation -->
-    <string name="GatewaySelectorBottomSheet__donate_s_to_signal">Derma %1$s kepada Signal</string>
     <!-- Sheet summary when giving a one-time donation -->
     <plurals name="GatewaySelectorBottomSheet__get_a_s_badge_for_d_days">
         <item quantity="other">Dapatkan lencana %1$s selama %2$d hari</item>
     </plurals>
     <!-- Button label for paying with a bank transfer -->
-    <string name="GatewaySelectorBottomSheet__bank_transfer">Pemindahan bank</string>
     <!-- Button label for paying with a credit card -->
     <string name="GatewaySelectorBottomSheet__credit_or_debit_card">Kad kredit atau debit</string>
     <!-- Sheet summary when giving donating for a friend -->
-    <string name="GatewaySelectorBottomSheet__donate_for_a_friend">Derma untuk rakan</string>
     <!-- Button label for paying with iDEAL -->
-    <string name="GatewaySelectorBottomSheet__ideal_wero">iDEAL | Wero</string>
 
     <!-- Dialog title for launching external intent -->
-    <string name="ExternalNavigationHelper__leave_signal_to_confirm_payment">Keluar Signal untuk mengesahkan pembayaran?</string>
-    <string name="ExternalNavigationHelper__once_this_payment_is_confirmed">Setelah disahkan, kembali ke Signal untuk menyelesaikan proses derma anda.</string>
     <!-- Dialog message shown when leaving Signal to complete a donation in an external app. Placeholder is the resolved app name (e.g. a banking app). -->
-    <string name="ExternalNavigationHelper__once_payment_confirmed_in_app">You\'ll be sent to %1$s. When confirmed, return to Signal to finish processing your donation.</string>
 
     <!-- BankTransferMandateFragment -->
     <!-- Title of screen displaying the bank transfer mandate -->
-    <string name="BankTransferMandateFragment__bank_transfer">Pemindahan bank</string>
     <!-- Subtitle of screen displaying the bank transfer mandate, placeholder is \'Learn more\' -->
-    <string name="BankTransferMandateFragment__stripe_processes_donations">Stripe memproses derma yang dibuat kepada Signal. Signal tidak mengumpul atau menyimpan maklumat peribadi anda. %1$s</string>
     <!-- Subtitle learn more of screen displaying bank transfer mandate -->
-    <string name="BankTransferMandateFragment__learn_more">Ketahui lebih lanjut</string>
     <!-- Button label to continue with transfer -->
-    <string name="BankTransferMandateFragment__agree">Setuju</string>
     <!-- Button label to read more of the bank mandate that is currently off screen -->
-    <string name="BankTransferMandateFragment__read_more">Baca lagi</string>
     <!-- Text displayed when mandate load fails -->
-    <string name="BankTransferMandateFragment__failed_to_load_mandate">Gagal memuatkan mandat</string>
 
     <!-- BankTransferDetailsFragment -->
     <!-- Subtext explaining how email is used. Placeholder is \'Learn more\' -->
-    <string name="BankTransferDetailsFragment__enter_your_bank_details">Masukkan butiran bank dan e-mel anda. Stripe menggunakan e-mel ini untuk menghantar kemas kini tentang derma anda. %1$s</string>
     <!-- Subtext learn more link text -->
-    <string name="BankTransferDetailsFragment__learn_more">Ketahui lebih lanjut</string>
     <!-- Text field label for name on bank account -->
-    <string name="BankTransferDetailsFragment__name_on_bank_account">Nama pada akaun bank</string>
     <!-- Text field label for IBAN -->
-    <string name="BankTransferDetailsFragment__iban">IBAN</string>
     <!-- Text field label for email -->
-    <string name="BankTransferDetailsFragment__email">E-mel</string>
     <!-- Text label for button to show user how to find their IBAN -->
-    <string name="BankTransferDetailsFragment__find_account_info">Cari maklumat akaun</string>
     <!-- Donate button label for monthly subscription -->
-    <string name="BankTransferDetailsFragment__donate_s_month">Derma %1$s/bulan</string>
     <!-- Donate button label for one-time -->
-    <string name="BankTransferDetailsFragment__donate_s">Derma %1$s</string>
     <!-- Error label for IBAN field when number is too short -->
-    <string name="BankTransferDetailsFragment__iban_is_too_short">IBAN terlalu pendek</string>
     <!-- Error label for IBAN field when number is too long -->
-    <string name="BankTransferDetailsFragment__iban_is_too_long">IBAN terlalu panjang</string>
     <!-- Error label for IBAN field when country is not supported -->
-    <string name="BankTransferDetailsFragment__iban_country_code_is_not_supported">Kod negara IBAN tidak disokong</string>
     <!-- Error label for IBAN field when number is invalid -->
-    <string name="BankTransferDetailsFragment__invalid_iban">IBAN tidak sah</string>
     <!-- Error label for name field when name is not at least three characters long (Stripe API enforced minimum) -->
-    <string name="BankTransferDetailsFragment__minimum_3_characters">Minimum 3 aksara</string>
     <!-- Error label for email field when email is not valid -->
-    <string name="BankTransferDetailsFragment__invalid_email_address">Alamat e-mel tidak sah</string>
 
     <!-- IdealTransferDetailsFragment -->
     <!-- Title of the screen, displayed in the toolbar -->
-    <string name="IdealTransferDetailsFragment__ideal">iDEAL</string>
     <!-- Subtitle of the screen, displayed below the toolbar. Placeholder is for \'learn more\' -->
-    <string name="IdealTransferDetailsFragment__enter_your_bank">Masukkan nama dan e-mel anda. Stripe menggunakan e-mel ini untuk menghantar kemas kini tentang derma anda. %1$s</string>
     <!-- Subtitle of the screen, displayed below the toolbar. Placeholder is for \'learn more\' -->
-    <string name="IdealTransferDetailsFragment__enter_your_bank_details_one_time">Masukkan butiran bank anda. Signal tidak mengumpul atau menyimpan maklumat peribadi anda. %1$s</string>
     <!-- Subtitle learn-more button displayed inline with the subtitle text -->
-    <string name="IdealTransferDetailsFragment__learn_more">Ketahui lebih lanjut</string>
     <!-- Hint label for text entry box for name on bank account -->
-    <string name="IdealTransferDetailsFragment__name_on_bank_account">Nama pada akaun bank</string>
     <!-- Hint label for text entry box for email -->
-    <string name="IdealTransferDetailsFragment__email">E-mel</string>
     <!-- Default label for bank selection -->
-    <string name="IdealTransferDetailsFragment__choose_your_bank">Pilih bank anda</string>
     <!-- Dialog title shown when using iDEAL payment for setting up a monthly donation -->
-    <string name="IdealTransferDetailsFragment__confirm_your_donation_with_ideal_wero">Confirm your donation with iDEAL | Wero</string>
     <!-- Dialog warning shown when using iDEAL payment for setting up a monthly donation. Placeholder is donation amount.Z -->
-    <string name="IdealTransferDetailsFragment__to_setup_your_recurring_donation">Untuk buat derma berulang, ketik teruskan untuk mengesahkan caj €0,01 dengan bank anda. Ini akan dibayar balik secara automatik dan membolehkan derma %1$s/bulan anda didebitkan daripada akaun anda.</string>
     <!-- Dialog button shown when using iDEAL payment for setting up a monthly donation to continue with the donation -->
-    <string name="IdealTransferDetailsFragment__continue">Teruskan</string>
 
     <!-- IdealTransferDetailsBankSelectionDialogFragment -->
     <!-- Title of the screen, displayed in the toolbar -->
-    <string name="IdealTransferDetailsBankSelectionDialogFragment__choose_your_bank">Pilih bank anda</string>
 
     <!-- Title of bottom sheet for finding account information -->
     <string name="FindAccountInfoSheet__find_your_account_information">Cari maklumat akaun anda</string>
@@ -7506,36 +7163,22 @@
     <string name="FindAccountInfoSheet__look_for_your_iban_at">Cari IBAN anda di bahagian atas penyata bank anda. IBAN mengandungi sehingga 34 aksara. Nama yang anda masukkan mestilah sepadan dengan nama penuh anda pada akaun bank anda. Hubungi bank anda untuk maklumat lanjut.</string>
 
     <!-- Title of donation pending sheet displayed after making a bank transfer -->
-    <string name="DonationPendingBottomSheet__donation_pending">Derma belum selesai</string>
     <!-- Top text block of donation pending sheet displayed after subscribing via a bank transfer. Placeholder is the badge name. -->
-    <string name="DonationPendingBottomSheet__your_monthly_donation_is_pending">Derma bulanan anda belum selesai. Anda akan dapat memaparkan lencana %1$s pada profil anda apabila derma anda diterima.</string>
     <!-- Top text block of donation pending sheet displayed after one-time donation via a bank transfer. Placeholder is the badge name. -->
-    <string name="DonationPendingBottomSheet__your_one_time_donation_is_pending">Derma sekali anda belum selesai. Anda akan dapat memaparkan lencana %1$s pada profil anda apabila derma anda diterima.</string>
     <!-- Bottom text block of donation pending sheet displayed after donating via a bank transfer. Placeholder is for learn more. -->
-    <string name="DonationPendingBottomSheet__bank_transfers_usually_take">Pindahan bank boleh mengambil masa 1 hingga 14 hari perniagaan untuk diproses. %1$s</string>
     <!-- Learn more text for donation pending sheet displayed after donating via a bank transfer. -->
-    <string name="DonationPendingBottomSheet__learn_more">Ketahui lebih lanjut</string>
     <!-- Confirmation button for donation pending sheet displayed after donating via a bank transfer. -->
-    <string name="DonationPendingBottomSheet__done">Selesai</string>
 
     <!-- Title of donation error sheet displayed after making a bank transfer that fails -->
-    <string name="DonationErrorBottomSheet__donation_couldnt_be_processed">Derma tidak dapat diproses</string>
     <!-- Text block of donation error sheet displayed after making a bank transfer that fails -->
-    <string name="DonationErrorBottomSheet__were_having_trouble">Kami menghadapi masalah memproses pindahan bank anda. Anda belum dicaj. Cuba kaedah pembayaran lain atau hubungi bank anda untuk maklumat lanjut.</string>
     <!-- Button label for retry button of donation error sheet displayed after making a bank transfer that fails -->
-    <string name="DonationErrorBottomSheet__try_again">Cuba lagi</string>
     <!-- Button label for not now button of donation error sheet displayed after making a bank transfer that fails -->
-    <string name="DonationErrorBottomSheet__not_now">Bukan sekarang</string>
 
     <!-- Title of \'Donation Complete\' sheet displayed after a bank transfer completes and the badge is redeemed -->
-    <string name="DonationCompletedBottomSheet__donation_complete">Derma Selesai</string>
     <!-- Text block of \'Donation Complete\' sheet displayed after a bank transfer completes and the badge is redeemed -->
-    <string name="DonationCompleteBottomSheet__your_bank_transfer_was_received">Pindahan bank anda telah diterima. Anda boleh memilih untuk memaparkan lencana ini pada profil anda untuk menunjukkan sokongan anda.</string>
     <!-- Button text of \'Donation Complete\' sheet displayed after a bank transfer completes and the badge is redeemed to dismiss sheet -->
-    <string name="DonationCompleteBottomSheet__done">Selesai</string>
 
     <!-- StripePaymentInProgressFragment -->
-    <string name="StripePaymentInProgressFragment__cancelling">Membatalkan…</string>
 
     <!-- The title of a bottom sheet dialog that tells the user we temporarily can\'t process their contacts. -->
     <string name="CdsTemporaryErrorBottomSheet_title">Terlalu banyak kenalan telah diproses</string>
@@ -7568,7 +7211,6 @@
     <!-- YourInformationIsPrivateBottomSheet -->
     <string name="YourInformationIsPrivateBottomSheet__your_information_is_private">Maklumat anda adalah peribadi</string>
     <string name="YourInformationIsPrivateBottomSheet__signal_does_not_collect">Signal tidak mengumpul atau menyimpan sebarang maklumat peribadi anda semasa anda menderma.</string>
-    <string name="YourInformationIsPrivateBottomSheet__we_use_stripe">Kami menggunakan Stripe sebagai pemproses pembayaran kami untuk menerima derma anda. Kami tidak mengakses atau menyimpan sebarang maklumat yang anda berikan kepada mereka.</string>
     <string name="YourInformationIsPrivateBottomSheet__signal_does_not_and_cannot">Signal tidak dan tidak boleh menyambung derma anda kepada akaun Signal anda.</string>
     <string name="YourInformationIsPrivateBottomSheet__thank_you">Terima kasih atas sokongan anda!</string>
 
@@ -7586,8 +7228,6 @@
     <string name="Registration_country_code_entry_hint">+0</string>
 
     <!-- PaypalCompleteOrderBottomSheet -->
-    <string name="PaypalCompleteOrderBottomSheet__donate">Derma</string>
-    <string name="PaypalCompleteOrderBottomSheet__payment">Pembayaran</string>
 
     <!-- ChatFilter -->
     <!-- Displayed in a pill at the top of the chat list when it is filtered by unread messages -->
@@ -8080,15 +7720,10 @@
     <string name="GrantFullScreenIntentPermission_bottomsheet_step2">2. %1$s Benarkan pemberitahuan skrin penuh</string>
 
     <!-- Bottom sheet dialog shown when a monthly donation fails to renew, title for dialog -->
-    <string name="MonthlyDonationCanceled__title">Derma bulanan dibatalkan</string>
     <!-- Bottom sheet dialog shown when a monthly donation fails to renew, body for dialog. First placeholder is a payment related error message. Second placeholder is \'learn more\' -->
-    <string name="MonthlyDonationCanceled__message">Derma bulanan berulang anda telah dibatalkan. %1$s\n\nLencana anda tidak akan kelihatan pada profil anda lagi. %2$s</string>
     <!-- Bottom sheet dialog shown when a monthly donation fails to renew, learn more used in placeholder for body for dialog. -->
-    <string name="MonthlyDonationCanceled__learn_more">Ketahui lebih lanjut</string>
     <!-- Bottom sheet dialog shown when a monthly donation fails to renew, primary button to renew subscription with new data -->
-    <string name="MonthlyDonationCanceled__renew_button">Perbaharui langganan</string>
     <!-- Bottom sheet dialog shown when a monthly donation fails to renew, second button to dismiss the dialog entirely -->
-    <string name="MonthlyDonationCanceled__not_now_button">Bukan sekarang</string>
 
     <!-- FindByActivity -->
     <!-- Title of activity when finding by username -->
@@ -8177,7 +7812,6 @@
 
     <!-- BackupAlertBottomSheet -->
     <!-- Sheet title when media backups have been disabled -->
-    <string name="BackupAlertBottomSheet__your_backups_subscription_expired">Langganan sandaran anda telah tamat tempoh</string>
     <!-- Sheet body part 1 when media backups have been disabled. Placeholder is the number of days until deletion. -->
     <plurals name="BackupAlertBottomSheet__your_backup_plan_has_expired">
         <item quantity="other">Pelan sandaran anda telah tamat tempoh kerana ia tidak dapat diperbaharui dengan kaedah pembayaran semasa anda. Selepas %1$d hari, media dalam sandaran anda akan dipadam.</item>
@@ -8367,21 +8001,15 @@
     <!-- Displayed as the user\'s payment method as a label in a preference row -->
     <string name="BackupsTypeSettingsFragment__credit_or_debit_card">Kad kredit atau debit</string>
     <!-- Displayed as the user\'s payment method as a label in a preference row -->
-    <string name="BackupsTypeSettingsFragment__iDEAL">iDEAL</string>
     <!-- Displayed as the user\'s payment method as a label in a preference row -->
-    <string name="BackupsTypeSettingsFragment__google_pay">Google Pay</string>
     <!-- Displayed as the user\'s payment method as a label in a preference row -->
-    <string name="BackupsTypeSettingsFragment__bank_transfer">Pemindahan bank</string>
     <!-- Displayed as the user\'s payment method as a label in a preference row -->
-    <string name="BackupsTypeSettingsFragment__paypal">PayPal</string>
     <!-- Displayed as the user\'s payment method as a label in a preference row -->
     <string name="BackupsTypeSettingsFragment__unknown">Tidak diketahui</string>
     <!-- Row title for entering payment history -->
-    <string name="BackupsTypeSettingsFragment__payment_history">Sejarah pembayaran</string>
     <!-- Row description detailing renewal information. First placeholder is formatted price. Second placeholder is formatted date. -->
     <string name="BackupsTypeSettingsFragment__s_month_renews_s">%1$s/bulan · Perbaharui semula %2$s</string>
     <!-- Row title to change or cancel subscription -->
-    <string name="BackupsTypeSettingsFragment__change_or_cancel_subscription">Tukar atau batalkan langganan</string>
 
     <!-- GooglePlayServicesAvailability -->
     <!-- Dialog title when Google Play services are missing from the device -->
@@ -8528,7 +8156,6 @@
     <!-- Text shown in a popup indicating that the user needs to enter their screen lock -->
     <string name="RemoteBackupsSettingsFragment__authenticatino_required">Pengesahan diperlukan</string>
     <!-- Row label to launch payment history screen -->
-    <string name="RemoteBackupsSettingsFragment__payment_history">Sejarah pembayaran</string>
     <!-- Section header for backup information -->
     <string name="RemoteBackupsSettingsFragment__backup_details">Butiran sandaran</string>
     <!-- Row label to allow the restoration of a backup to occur while on cellular connection -->
@@ -8961,7 +8588,6 @@
     <!-- Primary action button label when selecting paid tier when Google Play API isn\'t available -->
     <string name="MessageBackupsTypeSelectionScreen__more_about_this_plan">Maklumat lanjut mengenai pelan ini</string>
     <!-- Secondary action button label when selecting a backup tier with a current selection -->
-    <string name="MessageBackupsTypeSelectionScreen__cancel_subscription">Batal Langganan</string>
     <!-- MessageBackupsType block amount for free tier -->
     <string name="MessageBackupsTypeSelectionScreen__free">Percuma</string>
     <!-- MessageBackupsType block amount for paid tier when no pricing is available -->
@@ -9003,7 +8629,6 @@
     <!-- Action button label to cancel subscription and download later -->
     <string name="ConfirmBackupCancellationDialog__confirm_and_download_later">Sahkan dan muat turun kemudian</string>
     <!-- Action button label to keep current subscription -->
-    <string name="ConfirmBackupCancellationDialog__keep_subscription">Teruskan langganan</string>
 
     <!-- Accessible content description for the reminder view, describing the icon in the view. -->
     <string name="ReminderView_icon_content_description">Ikon peringatan</string>

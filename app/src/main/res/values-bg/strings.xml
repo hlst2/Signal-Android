@@ -24,7 +24,6 @@
   <!-- Removed by excludeNonTranslatables <string name="donate_faq_url" translatable="false">https://support.signal.org/hc/articles/360031949872#donate</string> -->
 
     <!-- First placeholder is productId, second placeholder is app package -->
-    <string name="backup_subscription_management_url">https://play.google.com/store/account/subscriptions?sku=%1$s&amp;package=%2$s</string>
 
     <string name="yes">Да</string>
     <string name="no">Не</string>
@@ -158,7 +157,6 @@
 
     <!-- Fcm notifications -->
     <!-- Notification we show when there may be messages for you, but we cannot connect to the server to check -->
-    <string name="FcmFetchManager__you_may_have_messages">Вие може да имате нови съобщения</string>
 
     <!-- BlockedUsersActivity -->
     <string name="BlockedUsersActivity__blocked_users">Блокирани потребители</string>
@@ -172,45 +170,26 @@
 
     <!-- CreditCardFragment -->
     <!-- Title of fragment -->
-    <string name="CreditCardFragment__credit_or_debit_card">Кредитна или дебитна карта</string>
     <!-- Explanation of how to fill in the form and a note about pii, displayed above the credit card text fields -->
-    <string name="CreditCardFragment__enter_your_card_details">Въведете информацията за вашата карта. Signal не събира и не съхранява личната ви информация.</string>
     <!-- Displayed as a hint in the card number text field -->
-    <string name="CreditCardFragment__card_number">Номер на карта</string>
     <!-- Displayed as a hint in the card expiry text field -->
-    <string name="CreditCardFragment__mm_yy">ММ/ГГ</string>
     <!-- Displayed as a hint in the card cvv text field -->
-    <string name="CreditCardFragment__cvv">CVV</string>
     <!-- Error displayed under the card number text field when there is an invalid card number entered -->
-    <string name="CreditCardFragment__invalid_card_number">Невалиден номер на карта</string>
     <!-- Error displayed under the card expiry text field when the card is expired -->
-    <string name="CreditCardFragment__card_has_expired">Картата е изтекла</string>
     <!-- Error displayed under the card cvv text field when the cvv is too short -->
-    <string name="CreditCardFragment__code_is_too_short">Кодът е прекалено кратък</string>
     <!-- Error displayed under the card cvv text field when the cvv is too long -->
-    <string name="CreditCardFragment__code_is_too_long">Кодът е прекалено дълъг</string>
     <!-- Error displayed under the card cvv text field when the cvv is invalid -->
-    <string name="CreditCardFragment__invalid_code">Невалиден код</string>
     <!-- Error displayed under the card expiry text field when the expiry month is invalid -->
-    <string name="CreditCardFragment__invalid_month">Невалиден месец</string>
     <!-- Error displayed under the card expiry text field when the expiry is missing the year -->
-    <string name="CreditCardFragment__year_required">Годината е задължителна</string>
     <!-- Error displayed under the card expiry text field when the expiry year is invalid -->
-    <string name="CreditCardFragment__invalid_year">Невалидна година</string>
     <!-- Button label to confirm credit card input and proceed with one-time payment -->
-    <string name="CreditCardFragment__donate_s">Дарете %1$s</string>
     <!-- Button label to confirm credit card input and proceed with subscription payment -->
-    <string name="CreditCardFragment__donate_s_month">Дарявайте %1$s/месец</string>
     <!-- Button label to confirm credit card input and proceed with backups payment. Placeholder is formatted price. -->
-    <string name="CreditCardFragment__pay_s_month">Дарявайте %1$s/месец</string>
 
     <!-- OneTimeDonationPreference -->
     <!-- Preference title with placeholder for amount. -->
-    <string name="OneTimeDonationPreference__one_time_s">Еднократно %1$s</string>
     <!-- Preference subtitle when donation is pending -->
-    <string name="OneTimeDonationPreference__donation_pending">Дарението е в изчакване</string>
     <!-- Preference subtitle when donation is processing -->
-    <string name="OneTimeDonationPreference__donation_processing">Обработване на дарението</string>
 
     <!-- BlockUnblockDialog -->
     <string name="BlockUnblockDialog_block_and_leave_s">Блокиране и напускане на %1$s?</string>
@@ -4237,7 +4216,6 @@
     <string name="preferences__slow">Бавно</string>
     <string name="preferences__help">Помощ</string>
     <string name="preferences__advanced">Допълнителни</string>
-    <string name="preferences__donate_to_signal">Дарете на Signal</string>
     <!-- Preference label for making one-time donations to Signal -->
     <string name="preferences__privacy">Поверителност</string>
     <!-- Preference label for stories -->
@@ -4427,9 +4405,6 @@
 
     <!-- Payments -->
     <string name="PaymentsActivityFragment__all_activity">Всички дейности</string>
-    <string name="PaymentsAllActivityFragment__all">Всички</string>
-    <string name="PaymentsAllActivityFragment__sent">Изпратен</string>
-    <string name="PaymentsAllActivityFragment__received">Получен</string>
 
     <!-- Displayed on a welcome screen for payments -->
     <string name="PaymentsHomeFragment_introducing_payments">Представяме плащания</string>
@@ -4438,58 +4413,28 @@
     <string name="PaymentsHomeFragment__activating_payments">Включване на плащания…</string>
     <string name="PaymentsHomeFragment__restore_payments_account">Възтановете акаунт за плащания</string>
     <string name="PaymentsHomeFragment__no_recent_activity_yet">Все още няма скорошна активност</string>
-    <string name="PaymentsHomeFragment__recent_activity">Скорошна активност</string>
     <string name="PaymentsHomeFragment__see_all">Виж всички</string>
     <string name="PaymentsHomeFragment__add_funds">Добавяне на средства</string>
     <string name="PaymentsHomeFragment__send">Изпращане</string>
-    <string name="PaymentsHomeFragment__sent_s">%1$s бяха изпратени</string>
-    <string name="PaymentsHomeFragment__received_s">%1$s бяха получени</string>
     <string name="PaymentsHomeFragment__transfer_to_exchange">Прехвърляне към борса</string>
     <string name="PaymentsHomeFragment__currency_conversion">Обмен на валути</string>
     <string name="PaymentsHomeFragment__deactivate_payments">Изключете плащания</string>
     <string name="PaymentsHomeFragment__recovery_phrase">Фраза за възстановяване</string>
     <string name="PaymentsHomeFragment__help">Помощ</string>
-    <string name="PaymentsHomeFragment__coin_cleanup_fee">Такса за почистване на монети</string>
-    <string name="PaymentsHomeFragment__sent_payment">Плащането беше изпратено</string>
-    <string name="PaymentsHomeFragment__received_payment">Плащането беше получено</string>
-    <string name="PaymentsHomeFragment__processing_payment">Обработване на плащането</string>
-    <string name="PaymentsHomeFragment__unknown_amount">---</string>
-    <string name="PaymentsHomeFragment__currency_conversion_not_available">Валутен обмен не е наличен</string>
-    <string name="PaymentsHomeFragment__cant_display_currency_conversion">Не можахме да покажем валутния обмен. Проверете връзката на телефона си и опитайте пак.</string>
-    <string name="PaymentsHomeFragment__payments_is_not_available_in_your_region">Плащания не са налични във вашия регион.</string>
-    <string name="PaymentsHomeFragment__could_not_enable_payments">Не успяхме да включим плащания. Опитайте пак по-късно.</string>
-    <string name="PaymentsHomeFragment__deactivate_payments_question">Да изключим плащания?</string>
-    <string name="PaymentsHomeFragment__you_will_not_be_able_to_send">Няма да можете да изпращате или получавате MobileCoin в Signal ако изключите плащания.</string>
-    <string name="PaymentsHomeFragment__deactivate">Изключи</string>
-    <string name="PaymentsHomeFragment__continue">Продължи</string>
-    <string name="PaymentsHomeFragment__balance_is_not_currently_available">В момента балансът не е достъпен.</string>
-    <string name="PaymentsHomeFragment__payments_deactivated">Плащанията бяха изключени.</string>
-    <string name="PaymentsHomeFragment__payment_failed">Грешка при плащане</string>
-    <string name="PaymentsHomeFragment__details">Подробности</string>
   <!-- Removed by excludeNonTranslatables <string name="PaymentsHomeFragment__learn_more__activate_payments" translatable="false">https://support.signal.org/hc/articles/360057625692#payments_activate</string> -->
     <!-- Displayed as a description in a dialog when the user tries to activate payments -->
-    <string name="PaymentsHomeFragment__you_can_use_signal_to_send_and">Можете да използвате Signal за изпращане и получаване на MobileCoin. Всички плащания се ръководят от Условията за употреба на MobileCoins и Портфейла за MobileCoin. Може да срещнете проблеми и плащанията или балансите, които евентуално изгубите, няма да могат да бъдат възстановени. </string>
-    <string name="PaymentsHomeFragment__activate">Включи</string>
-    <string name="PaymentsHomeFragment__view_mobile_coin_terms">Вижте условията на MobileCoin</string>
-    <string name="PaymentsHomeFragment__payments_not_available">Функцията за плащания в Signal вече не е налична. Пак можете да прехвърляте средства към борса, но вече не можете да изпращате и получавате плащания или да добавяте средства.</string>
 
   <!-- Removed by excludeNonTranslatables <string name="PaymentsHomeFragment__mobile_coin_terms_url" translatable="false">https://www.mobilecoin.com/terms-of-use.html</string> -->
     <!-- Alert dialog title which shows up after a payment to turn on payment lock -->
-    <string name="PaymentsHomeFragment__turn_on">Включете Заключване на плащанията за бъдещи изпращания?</string>
     <!-- Alert dialog description for why payment lock should be enabled before sending payments -->
-    <string name="PaymentsHomeFragment__add_an_additional_layer">Добавете допълнително ниво на сигурност и изисквайте Android заключване на екрана или пръстов отпечатък, за да изпращате средства.</string>
     <!-- Alert dialog button to enable payment lock -->
     <string name="PaymentsHomeFragment__enable">Включване</string>
     <!-- Alert dialog button to not enable payment lock for now -->
     <string name="PaymentsHomeFragment__not_now">Не сега</string>
     <!-- Alert dialog title which shows up to update app to send payments -->
-    <string name="PaymentsHomeFragment__update_required">Необходима е актуализация</string>
     <!-- Alert dialog description that app update is required to send payments-->
-    <string name="PaymentsHomeFragment__an_update_is_required">Необходима е актуализация, за да продължите да изпращате и получавате плащания и да виждате актуалния си платежен баланс.</string>
     <!-- Alert dialog button to cancel -->
-    <string name="PaymentsHomeFragment__cancel">Отказ</string>
     <!-- Alert dialog button to update now -->
-    <string name="PaymentsHomeFragment__update_now">Обнови сега</string>
 
 
     <!-- PaymentsSecuritySetupFragment -->
@@ -4504,46 +4449,26 @@
     <!-- Option to cancel -->
     <string name="PaymentsSecuritySetupFragment__not_now">Не сега</string>
     <!-- Dialog title to confirm skipping the step -->
-    <string name="PaymentsSecuritySetupFragment__skip_this_step">Пропуснете тази стъпка?</string>
     <!-- Dialog description to let users know why payment lock is required -->
-    <string name="PaymentsSecuritySetupFragment__skipping_this_step">Пропускането на тази стъпка може да позволи на всеки, който има физически достъп до телефона ви, да прехвърли средства или да види вашата фраза за възстановяване.</string>
     <!-- Dialog option to cancel -->
-    <string name="PaymentsSecuritySetupFragment__cancel">Отказ</string>
     <!-- Dialog option to skip -->
-    <string name="PaymentsSecuritySetupFragment__skip">Пропусни</string>
 
     <!-- PaymentsAddMoneyFragment -->
     <string name="PaymentsAddMoneyFragment__add_funds">Добавяне на средства</string>
     <string name="PaymentsAddMoneyFragment__your_wallet_address">Адресът на вашия портфейл</string>
     <string name="PaymentsAddMoneyFragment__copy">Копирай</string>
-    <string name="PaymentsAddMoneyFragment__copied_to_clipboard">Копирано</string>
     <string name="PaymentsAddMoneyFragment__to_add_funds">За да добавите средства, изпратете MobileCoin до адреса на своя портфейл. Започнете трансакция от акаунта си или от борса, която поддържа MobileCoin, след което сканирайте QR кода или копирайте адреса на портфейла си.</string>
   <!-- Removed by excludeNonTranslatables <string name="PaymentsAddMoneyFragment__learn_more__information" translatable="false">https://support.signal.org/hc/articles/360057625692#payments_transfer_from_exchange</string> -->
 
     <!-- PaymentsDetailsFragment -->
     <string name="PaymentsDetailsFragment__details">Подробности</string>
     <string name="PaymentsDetailsFragment__status">Статус</string>
-    <string name="PaymentsDetailsFragment__submitting_payment">Изпращане на плащането…</string>
-    <string name="PaymentsDetailsFragment__processing_payment">Обработка на плащането…</string>
-    <string name="PaymentsDetailsFragment__payment_complete">Плащането е завършено</string>
-    <string name="PaymentsDetailsFragment__payment_failed">Грешка при плащане</string>
     <string name="PaymentsDetailsFragment__network_fee">Мрежова такса</string>
     <string name="PaymentsDetailsFragment__sent_by">Изпратено от</string>
-    <string name="PaymentsDetailsFragment__sent_to_s">Изпратено на %1$s</string>
-    <string name="PaymentsDetailsFragment__you_on_s_at_s">От вас на %1$s в %2$s</string>
-    <string name="PaymentsDetailsFragment__s_on_s_at_s">От %1$s на %2$s в %3$s</string>
     <!-- Prefix to a name to indicate who a payment was sent to -->
-    <string name="PaymentsDetailsFragment__to">До</string>
-    <string name="PaymentsDetailsFragment__from">От</string>
     <string name="PaymentsDetailsFragment__information">Данните за трансакцията, включително сумата на плащането и часът на трансакцията, са част от Счетоводната книга на MobileCoin.</string>
-    <string name="PaymentsDetailsFragment__coin_cleanup_fee">Такса за почистване на монети</string>
-    <string name="PaymentsDetailsFragment__coin_cleanup_information">„Такса за почистване на монети“ се начислява, когато монетите във ваше притежание не могат да се комбинират за завършване на трансакция. Почистването ще ви позволи да продължите да изпращате плащания.</string>
-    <string name="PaymentsDetailsFragment__no_details_available">Не са налични други данни за тази трансакция</string>
   <!-- Removed by excludeNonTranslatables <string name="PaymentsDetailsFragment__learn_more__information" translatable="false">https://support.signal.org/hc/articles/360057625692#payments_details</string> -->
   <!-- Removed by excludeNonTranslatables <string name="PaymentsDetailsFragment__learn_more__cleanup_fee" translatable="false">https://support.signal.org/hc/articles/360057625692#payments_details_fees</string> -->
-    <string name="PaymentsDetailsFragment__sent_payment">Плащането беше изпратено</string>
-    <string name="PaymentsDetailsFragment__received_payment">Плащането беше получено</string>
-    <string name="PaymentsDeatilsFragment__payment_completed_s">Плащането е завършено %1$s</string>
     <string name="PaymentsDetailsFragment__block_number">Блокиране на номер</string>
 
     <!-- PaymentsTransferFragment -->
@@ -4552,13 +4477,6 @@
     <string name="PaymentsTransferFragment__to_scan_or_enter_wallet_address">До: Сканирайте или въведете адрес на портфейл</string>
     <string name="PaymentsTransferFragment__you_can_transfer">Можете да прехвърляте MobileCoin, като извършите прехвърляне до адреса на портфейл, предоставен от борсата. Адресът на портфейла е низът от числа и букви и най-често се намира под QR кода.</string>
     <string name="PaymentsTransferFragment__next">Напред</string>
-    <string name="PaymentsTransferFragment__invalid_address">Невалиден адрес</string>
-    <string name="PaymentsTransferFragment__check_the_wallet_address">Проверете адреса на портфейла, до който се опитвате да прехвърлите, и опитайте отново.</string>
-    <string name="PaymentsTransferFragment__you_cant_transfer_to_your_own_signal_wallet_address">Не можете да прехвърлите към адреса на своя собствен портфейл в Signal. Въведете адреса на портфейл от акаунта си в поддържана борса.</string>
-    <string name="PaymentsTransferFragment__to_scan_a_qr_code_signal_needs">За да сканира QR код, Signal има нужда от достъп до камерата.</string>
-    <string name="PaymentsTransferFragment__signal_needs_the_camera_permission_to_capture_qr_code_go_to_settings">Signal се нуждае от разрешението за „Камера“, за да улови QR код. Отидете в настройките, изберете „Разрешения“ и активирайте „Камера“.</string>
-    <string name="PaymentsTransferFragment__to_scan_a_qr_code_signal_needs_access_to_the_camera">За да сканира QR код, Signal има нужда от достъп до камерата.</string>
-    <string name="PaymentsTransferFragment__settings">Настройки</string>
 
     <!-- PaymentsTransferQrScanFragment -->
     <string name="PaymentsTransferQrScanFragment__scan_address_qr_code">Сканиране на QR код с адрес</string>
@@ -4568,7 +4486,6 @@
     <!-- Button text to request the payment from a user -->
     <string name="CreatePaymentFragment__request">Поискай</string>
     <string name="CreatePaymentFragment__pay">Плати</string>
-    <string name="CreatePaymentFragment__available_balance_s">Наличен баланс: %1$s</string>
     <string name="CreatePaymentFragment__toggle_content_description">Превключване</string>
     <string name="CreatePaymentFragment__1">1</string>
     <string name="CreatePaymentFragment__2">2</string>
@@ -4581,10 +4498,8 @@
     <string name="CreatePaymentFragment__9">9</string>
     <string name="CreatePaymentFragment__decimal">.</string>
     <string name="CreatePaymentFragment__0">0</string>
-    <string name="CreatePaymentFragment__lt">&lt;</string>
     <string name="CreatePaymentFragment__backspace">Backspace</string>
     <string name="CreatePaymentFragment__add_note">Добавяне на бележка</string>
-    <string name="CreatePaymentFragment__conversions_are_just_estimates">Конверсиите са прогнозни и може да не са точни.</string>
   <!-- Removed by excludeNonTranslatables <string name="CreatePaymentFragment__learn_more__conversions" translatable="false">https://support.signal.org/hc/articles/360057625692#payments_currency_conversion</string> -->
 
     <!-- EditNoteFragment -->
@@ -4594,26 +4509,10 @@
 
     <!-- ConfirmPaymentFragment -->
     <string name="ConfirmPayment__confirm_payment">Потвърди плащане</string>
-    <string name="ConfirmPayment__network_fee">Мрежова такса</string>
-    <string name="ConfirmPayment__estimated_s">Очаквано %1$s</string>
     <!-- Prefix to a name to indicate who a payment will be sent to -->
-    <string name="ConfirmPayment__to">До</string>
-    <string name="ConfirmPayment__total_amount">Обща сума</string>
-    <string name="ConfirmPayment__balance_s">Баланс: %1$s</string>
-    <string name="ConfirmPayment__submitting_payment">Изпращане на плащането…</string>
-    <string name="ConfirmPayment__processing_payment">Обработка на плащането…</string>
-    <string name="ConfirmPayment__payment_complete">Плащането е завършено</string>
-    <string name="ConfirmPayment__payment_failed">Грешка при плащане</string>
-    <string name="ConfirmPayment__payment_will_continue_processing">Плащането ще продължи да се обработва</string>
-    <string name="ConfirmPaymentFragment__invalid_recipient">Невалиден получател</string>
     <!-- Title of a dialog show when we were unable to present the user\'s screenlock before sending a payment -->
-    <string name="ConfirmPaymentFragment__failed_to_show_payment_lock">Неуспешно показване на заключване на плащания</string>
     <!-- Body of a dialog show when we were unable to present the user\'s screenlock before sending a payment -->
-    <string name="ConfirmPaymentFragment__you_enabled_payment_lock_in_the_settings">Вие активирахте заключване на плащания в настройките, но не може да бъде показано.</string>
     <!-- Button in a dialog that will take the user to the privacy settings -->
-    <string name="ConfirmPaymentFragment__go_to_settings">Отидете на настройки</string>
-    <string name="ConfirmPaymentFragment__this_person_has_not_activated_payments">Този човек не е активирал плащания</string>
-    <string name="ConfirmPaymentFragment__unable_to_request_a_network_fee">Неуспешна заявка за мрежова такса. За да продължите с това плащане, докоснете „окей“, за да опитате отново.</string>
 
     <!-- BiometricDeviceAuthentication -->
     <!-- Biometric/Device authentication prompt title -->
@@ -4625,7 +4524,6 @@
 
     <!-- SetCurrencyFragment -->
     <string name="SetCurrencyFragment__set_currency">Задаване на валута</string>
-    <string name="SetCurrencyFragment__all_currencies">Всички валути</string>
 
     <!-- **************************************** -->
     <!-- menus -->
@@ -5511,20 +5409,9 @@
     <!-- InfoCard -->
     <string name="payment_info_card_about_mobilecoin">За MobileCoin</string>
     <string name="payment_info_card_mobilecoin_is_a_new_privacy_focused_digital_currency">MobileCoin е нова дигитална валута, фокусирана върху поверителността.</string>
-    <string name="payment_info_card_adding_funds">Добавяне на средства</string>
-    <string name="payment_info_card_you_can_add_funds_for_use_in">Можете да добавите средства за използване в Signal, като изпратите MobileCoin на адреса на портфейла си.</string>
-    <string name="payment_info_card_cashing_out">Кешаут</string>
-    <string name="payment_info_card_you_can_cash_out_mobilecoin">Можете да затворите залог с MobileCoin по всяко време на борса, която поддържа MobileCoin. Просто направете трансфер към акаунта си във въпросната борса.</string>
     <string name="payment_info_card_hide_this_card">Скрий тази карта?</string>
-    <string name="payment_info_card_hide">Скрий</string>
     <!-- Title of save recovery phrase card -->
-    <string name="payment_info_card_save_recovery_phrase">Запазване на фраза за възстановяване</string>
-    <string name="payment_info_card_your_recovery_phrase_gives_you">Вашата фраза за възстановяване ви дава още един начин да възстановите акаунта си за плащания.</string>
     <!-- Button in save recovery phrase card -->
-    <string name="payment_info_card_save_your_phrase">Запазете фразата си</string>
-    <string name="payment_info_card_update_your_pin">Обновете своя ПИН</string>
-    <string name="payment_info_card_with_a_high_balance">При висок баланс е препоръчително да въведете буквено-цифров PIN код, за да защитите акаунта си по-добре.</string>
-    <string name="payment_info_card_update_pin">Актуализирайте ПИН</string>
 
   <!-- Removed by excludeNonTranslatables <string name="payment_info_card__learn_more__about_mobilecoin" translatable="false">https://support.signal.org/hc/articles/360057625692#payments_which_ones</string> -->
   <!-- Removed by excludeNonTranslatables <string name="payment_info_card__learn_more__adding_to_your_wallet" translatable="false">https://support.signal.org/hc/articles/360057625692#payments_transfer_from_exchange</string> -->
@@ -5536,45 +5423,29 @@
     <string name="DeactivateWalletFragment__its_recommended_that_you">Препоръчително е да прехвърлите средствата си на друг адрес на портфейл, преди да деактивирате плащанията. Ако решите да не прехвърляте средствата си сега, те ще останат в портфейла ви, свързан със Signal, ако активирате плащанията отново.</string>
     <string name="DeactivateWalletFragment__transfer_remaining_balance">Прехвърлете оставащия баланс</string>
     <string name="DeactivateWalletFragment__deactivate_without_transferring">Деактивиране без прехвърляне</string>
-    <string name="DeactivateWalletFragment__deactivate">Изключи</string>
-    <string name="DeactivateWalletFragment__deactivate_without_transferring_question">Деактивиране без прехвърляне?</string>
-    <string name="DeactivateWalletFragment__your_balance_will_remain">Вашият баланс ще остане в портфейла ви, свързан със Signal, ако решите да активирате плащанията отново.</string>
-    <string name="DeactivateWalletFragment__error_deactivating_wallet">Грешка при деактивирането на портфейла.</string>
   <!-- Removed by excludeNonTranslatables <string name="DeactivateWalletFragment__learn_more__we_recommend_transferring_your_funds" translatable="false">https://support.signal.org/hc/articles/360057625692#payments_deactivate</string> -->
 
     <!-- PaymentsRecoveryStartFragment -->
     <string name="PaymentsRecoveryStartFragment__recovery_phrase">Фраза за възстановяване</string>
     <string name="PaymentsRecoveryStartFragment__view_recovery_phrase">Преглед на фразата за възстановяване</string>
     <!-- Title in save recovery phrase screen -->
-    <string name="PaymentsRecoveryStartFragment__save_recovery_phrase">Запазване на фраза за възстановяване</string>
-    <string name="PaymentsRecoveryStartFragment__enter_recovery_phrase">Въвеждане на фразата за възстановяване</string>
     <plurals name="PaymentsRecoveryStartFragment__your_balance_will_automatically_restore">
         <item quantity="one">Балансът ви ще се възстанови автоматично при преинсталиране на Signal, ако потвърдите PIN кода на Signal. Също така можете да възстановите баланса си с помощта на фраза за възстановяване, която представлява уникална за вас фраза от %1$d дума. Запишете я и я съхранявайте на сигурно място.</item>
         <item quantity="other">Балансът ви ще се възстанови автоматично при преинсталиране на Signal, ако потвърдите PIN кода на Signal. Също така можете да възстановите баланса си с помощта на фраза за възстановяване, която представлява уникална за вас фраза от %1$d думи. Запишете я и я съхранявайте на сигурно място.</item>
     </plurals>
     <!-- Description in save recovery phrase screen which shows up when user has non zero balance -->
-    <string name="PaymentsRecoveryStartFragment__got_balance">Имате баланс! Време е да запазите своята фраза за възстановяване. Тя представлява ключ от 24 думи, който можете да използвате, за да възстановите баланса си.</string>
     <!-- Description in save recovery phrase screen which shows up when user navigates from info card -->
-    <string name="PaymentsRecoveryStartFragment__time_to_save">Време е да запазите своята фраза за възстановяване. Тя представлява ключ от 24 думи, който можете да използвате, за да възстановите баланса си.</string>
-    <string name="PaymentsRecoveryStartFragment__your_recovery_phrase_is_a">Вашата фраза за възстановяване е уникална за вас фраза от %1$d думи. Използвайте я, за да възстановите баланса си.</string>
     <string name="PaymentsRecoveryStartFragment__start">Начало</string>
-    <string name="PaymentsRecoveryStartFragment__enter_manually">Въведете ръчно</string>
     <string name="PaymentsRecoveryStartFragment__paste_from_clipboard">Поставяне от клипборда</string>
     <!-- Alert dialog title which asks before going back if user wants to save recovery phrase -->
-    <string name="PaymentsRecoveryStartFragment__continue_without_saving">Продължаване без запазване?</string>
     <!-- Alert dialog description to let user know why recovery phrase needs to be saved -->
-    <string name="PaymentsRecoveryStartFragment__your_recovery_phrase">Вашата фраза за възстановяване ви позволява да възстановите баланса си в неприятни ситуации. Силно ви препоръчваме да я запазите.</string>
     <!-- Alert dialog option to skip recovery phrase -->
-    <string name="PaymentsRecoveryStartFragment__skip_recovery_phrase">Пропускане на фраза за възстановяване</string>
     <!-- Alert dialog option to cancel dialog-->
-    <string name="PaymentsRecoveryStartFragment__cancel">Отказ</string>
 
     <!-- PaymentsRecoveryPasteFragment -->
     <string name="PaymentsRecoveryPasteFragment__paste_recovery_phrase">Поставяне на фразата за възстановяване</string>
     <string name="PaymentsRecoveryPasteFragment__recovery_phrase">Фраза за възстановяване</string>
     <string name="PaymentsRecoveryPasteFragment__next">Напред</string>
-    <string name="PaymentsRecoveryPasteFragment__invalid_recovery_phrase">Невалидна фраза за възстановяване</string>
-    <string name="PaymentsRecoveryPasteFragment__make_sure">Уверете се, че сте въвели %1$d думи, и опитайте отново.</string>
 
   <!-- Removed by excludeNonTranslatables <string name="PaymentsRecoveryStartFragment__learn_more__view" translatable="false">https://support.signal.org/hc/articles/360057625692#payments_wallet_view_passphrase</string> -->
   <!-- Removed by excludeNonTranslatables <string name="PaymentsRecoveryStartFragment__learn_more__restore" translatable="false">https://support.signal.org/hc/articles/360057625692#payments_wallet_restore_passphrase</string> -->
@@ -5584,38 +5455,24 @@
     <string name="PaymentsRecoveryPhraseFragment__edit">Редакция</string>
     <string name="PaymentsRecoveryPhraseFragment__your_recovery_phrase">Вашата фраза за възстановяване</string>
     <string name="PaymentsRecoveryPhraseFragment__write_down_the_following_d_words">Запишете следните %1$d думи в следния ред. Складирайте списъка на безопасно място.</string>
-    <string name="PaymentsRecoveryPhraseFragment__make_sure_youve_entered">Уверете се, че сте въвели правилно фразата си.</string>
     <string name="PaymentsRecoveryPhraseFragment__do_not_screenshot_or_send_by_email">Не правете екранни снимки и не я изпращайте по имейл.</string>
-    <string name="PaymentsRecoveryPhraseFragment__payments_account_restored">Акаунт за плащания възстановен.</string>
-    <string name="PaymentsRecoveryPhraseFragment__invalid_recovery_phrase">Невалидна фраза за възстановяване</string>
-    <string name="PaymentsRecoveryPhraseFragment__make_sure_youve_entered_your_phrase_correctly_and_try_again">Уверете се, че сте въвели фразата правилно, и опитайте отново.</string>
-    <string name="PaymentsRecoveryPhraseFragment__copy_to_clipboard">Копиране в клипборда?</string>
-    <string name="PaymentsRecoveryPhraseFragment__if_you_choose_to_store">Ако решите да съхранявате фразата си за възстановяване в цифров вид, уверете се, че е съхранена по сигурен начин и на доверено място.</string>
     <string name="PaymentsRecoveryPhraseFragment__copy">Копирай</string>
 
     <!-- PaymentsRecoveryPhraseConfirmFragment -->
     <string name="PaymentRecoveryPhraseConfirmFragment__confirm_recovery_phrase">Потвърдете фразата за възстановяване</string>
     <string name="PaymentRecoveryPhraseConfirmFragment__enter_the_following_words">Въведете следните думи от фразата за възстановяване.</string>
-    <string name="PaymentRecoveryPhraseConfirmFragment__word_d">Дума %1$d</string>
     <string name="PaymentRecoveryPhraseConfirmFragment__see_phrase_again">Вижте фразата отново</string>
     <string name="PaymentRecoveryPhraseConfirmFragment__done">Готово</string>
-    <string name="PaymentRecoveryPhraseConfirmFragment__recovery_phrase_confirmed">Фразата за възстановяване е потвърдена</string>
 
     <!-- PaymentsRecoveryEntryFragment -->
     <string name="PaymentsRecoveryEntryFragment__enter_recovery_phrase">Въведете фразата за възстановяване</string>
-    <string name="PaymentsRecoveryEntryFragment__enter_word_d">Въведете дума %1$d</string>
-    <string name="PaymentsRecoveryEntryFragment__word_d">Дума %1$d</string>
     <string name="PaymentsRecoveryEntryFragment__next">Напред</string>
-    <string name="PaymentsRecoveryEntryFragment__invalid_word">Грешна дума</string>
 
     <!-- UnreadPayments -->
     <string name="UnreadPayments__s_sent_you_s">%1$s ви изпрати %2$s</string>
     <string name="UnreadPayments__d_new_payment_notifications">%1$d нови известия за плащания</string>
 
     <!-- CanNotSendPaymentDialog -->
-    <string name="CanNotSendPaymentDialog__cant_send_payment">Грешка при изпращането на плащане</string>
-    <string name="CanNotSendPaymentDialog__to_send_a_payment_to_this_user">За да изпратим плащане към този потребител, те трябва да приемат заявка за съобщение от вас. Изпратете им съобщение, за да направите заявка за съобщение.</string>
-    <string name="CanNotSendPaymentDialog__send_a_message">Изпрати съобщение</string>
 
     <!-- GroupsInCommonMessageRequest -->
     <string name="GroupsInCommonMessageRequest__you_have_no_groups_in_common_with_this_person">Нямате общи групи с това лице. Прегледайте заявките внимателно преди да приемете, за да избегнете нежелани съобщения.</string>
@@ -6056,13 +5913,9 @@
     <!-- ChatColorGradientTool -->
 
     <!-- Title text for prompt to donate. Shown in a popup at the bottom of the chat list. -->
-    <string name="Donate2022Q2Megaphone_donate_to_signal">Дарете на Signal</string>
     <!-- Body text for prompt to donate. Shown in a popup at the bottom of the chat list. -->
-    <string name="Donate2022Q2Megaphone_signal_is_powered_by_people_like_you">Signal се движи от хора като вас. Дарявайте всеки месец, за да получите значка.</string>
     <!-- Button label that brings a user to the donate screen. Shown in a popup at the bottom of the chat list. -->
-    <string name="Donate2022Q2Megaphone_donate">Дарете</string>
     <!-- Button label that dismissed a prompt to donate. Shown in a popup at the bottom of the chat list. -->
-    <string name="Donate2022Q2Megaphone_not_now">Не сега</string>
 
     <!-- EditReactionsFragment -->
     <string name="EditReactionsFragment__customize_reactions">Персонализирайте реакциите</string>
@@ -6079,11 +5932,7 @@
     <string name="AddAProfilePhotoMegaphone__add_photo">Добави снимка</string>
 
     <!-- BecomeASustainerMegaphone -->
-    <string name="BecomeASustainerMegaphone__become_a_sustainer">Станете поддръжник</string>
     <!-- Displayed in the Become a Sustainer megaphone -->
-    <string name="BecomeASustainerMegaphone__signal_is_powered_by">Signal съществува благодарение на хора като вас. Дарете и получете значка.</string>
-    <string name="BecomeASustainerMegaphone__not_now">Не сега</string>
-    <string name="BecomeASustainerMegaphone__donate">Дарете</string>
 
     <!-- KeyboardPagerFragment -->
     <string name="KeyboardPagerFragment_emoji">Емоджи</string>
@@ -6432,15 +6281,9 @@
     <string name="MediaCaptureFragment_device_link_dialog_continue">Продължете</string>
 
 
-    <string name="BadgesOverviewFragment__my_badges">Моите значки</string>
     <string name="BadgesOverviewFragment__featured_badge">Представена значка</string>
-    <string name="BadgesOverviewFragment__display_badges_on_profile">Показване на значки в профила</string>
-    <string name="BadgesOverviewFragment__failed_to_update_profile">Неуспешно актуализиране на профила</string>
 
 
-    <string name="SelectFeaturedBadgeFragment__select_a_badge">Изберете значка</string>
-    <string name="SelectFeaturedBadgeFragment__you_must_select_a_badge">Трябва да изберете значка</string>
-    <string name="SelectFeaturedBadgeFragment__failed_to_update_profile">Неуспешно актуализиране на профила</string>
 
     <!-- Displayed on primary button in the bottom sheet as a call-to-action to launch into the donation flow -->
     <string name="ViewBadgeBottomSheetDialogFragment__donate_now">Дарете</string>
@@ -6453,29 +6296,21 @@
 
     <string name="ImageView__badge">Значка</string>
 
-    <string name="SubscribeFragment__cancel_subscription">Отмяна на абонамента</string>
     <string name="SubscribeFragment__confirm_cancellation">Потвърждаване на отмяната?</string>
     <string name="SubscribeFragment__you_wont_be_charged_again">Повече няма да бъдете таксувани. Значката ще бъде премахната от профила ви в края на периода на таксуване.</string>
     <string name="SubscribeFragment__not_now">Не сега</string>
     <string name="SubscribeFragment__confirm">Потвърждение</string>
-    <string name="SubscribeFragment__update_subscription">Актуализиране на абонамента</string>
-    <string name="SubscribeFragment__your_subscription_has_been_cancelled">Абонаментът ви е отменен.</string>
-    <string name="SubscribeFragment__update_subscription_question">Актуализиране на абонамента?</string>
     <string name="SubscribeFragment__update">Обновяване</string>
     <string name="SubscribeFragment__you_will_be_charged_the_full_amount_s_of">Днес ще ви бъде начислена цялата сума (%1$s) за новата цена на абонамента. Абонаментът ви ще се подновява ежемесечно.</string>
 
-    <string name="Subscription__s_per_month">%1$s/месец</string>
     <!-- Shown when a subscription is active and isn\'t going to expire at the end of the term -->
-    <string name="Subscription__renews_s">Подновява се на %1$s</string>
     <!-- Shown when a subscription is active and is going to expire at the end of the term -->
-    <string name="Subscription__expires_s">Изтича на %1$s</string>
 
     <!-- Title of learn more sheet -->
     <string name="SubscribeLearnMoreBottomSheetDialogFragment__signal_is_different">Като независима организация с нестопанска цел, Signal се ангажира да предоставя поверителни съобщения и разговори. Без реклами, без тракери, без следене. Дарете днес, за да подкрепите Signal.</string>
     <!-- First small text blurb on learn more sheet -->
     <string name="SubscribeLearnMoreBottomSheetDialogFragment__private_messaging">No ads, no trackers, no surveillance. Donate today to support Signal.</string>
     <!-- Second small text blurb on learn more sheet -->
-    <string name="SubscribeLearnMoreBottomSheetDialogFragment__donate_and_get_badge">Получете значка, която може да се показва на профила ви по желание, когато дарите</string>
     <!-- Third small text blurb on learn more sheet -->
     <string name="SubscribeLearnMoreBottomSheetDialogFragment__your_privacy_is_our_mission">Вашата поверителност е нашата мисия</string>
     <!-- Fourth small text blurb on learn more sheet. Non-English translations should use "Signal is a nonprofit." instead, dropping the 501c3 reference. -->
@@ -6483,60 +6318,37 @@
 
     <string name="SubscribeThanksForYourSupportBottomSheetDialogFragment__thanks_for_your_support">Благодарим ви за подкрепата!</string>
     <!-- Subtext underneath the dialog title on the thanks sheet -->
-    <string name="SubscribeThanksForYourSupportBottomSheetDialogFragment__youve_earned_a_donor_badge">Спечелихте значка за дарител от Signal! Покажете в профила си, за да демонстрирате своята подкрепа.</string>
     <string name="SubscribeThanksForYourSupportBottomSheetDialogFragment__you_can_also">Можете също така да</string>
-    <string name="SubscribeThanksForYourSupportBottomSheetDialogFragment__become_a_montly_sustainer">станете ежемесечен поддръжник.</string>
     <string name="SubscribeThanksForYourSupportBottomSheetDialogFragment__display_on_profile">Показване на профила</string>
-    <string name="SubscribeThanksForYourSupportBottomSheetDialogFragment__make_featured_badge">Направете представена значка</string>
     <string name="SubscribeThanksForYourSupportBottomSheetDialogFragment__continue">Продължи</string>
     <string name="ThanksForYourSupportBottomSheetFragment__when_you_have_more">Когато имате повече от една значка, можете да изберете една от тях, която да бъде представена в профила ви, за да я виждат другите.</string>
 
-    <string name="BecomeASustainerFragment__get_badges">Получете значки за профила си, като подкрепяте Signal.</string>
-    <string name="BecomeASustainerFragment__signal_is_a_non_profit">Signal е организация с нестопанска цел, без рекламодатели или инвеститори, подкрепяна само от хора като вас.</string>
 
     <!-- Button label for creating a donation -->
-    <string name="ManageDonationsFragment__donate_to_signal">Дарете на Signal</string>
     <!-- Heading for more area of manage subscriptions page -->
-    <string name="ManageDonationsFragment__more">Още</string>
     <!-- Heading for receipts area of manage subscriptions page -->
     <!-- Heading for my subscription area of manage subscriptions page -->
-    <string name="ManageDonationsFragment__my_support">My Support</string>
-    <string name="ManageDonationsFragment__manage_subscription">Управление на абонамента</string>
     <!-- Label for Donation Receipts button -->
-    <string name="ManageDonationsFragment__donation_receipts">Разписки за дарения</string>
-    <string name="ManageDonationsFragment__badges">Значки</string>
     <!-- Label that externally links to Signal Donor FAQ page -->
-    <string name="ManageDonationsFragment__subscription_faq">ЧЗВ за дарители</string>
     <!-- Preference heading for other ways to donate -->
-    <string name="ManageDonationsFragment__other_ways_to_give">Други начини за даряване</string>
     <!-- Preference label to launch badge gifting -->
-    <string name="ManageDonationsFragment__donate_for_a_friend">Дарете за приятел</string>
     <!-- Dialog title shown when a donation requires verifying/confirmation outside of the app and the user hasn\'t done that yet -->
-    <string name="ManageDonationsFragment__couldnt_confirm_donation">Дарението не можа да бъде потвърдено</string>
     <!-- Dialog message shown when a monthly donation requires verifying/confirmation outside of the app and the user hasn\'t done that yet, placeholder is money amount -->
-    <string name="ManageDonationsFragment__your_monthly_s_donation_couldnt_be_confirmed_ideal_wero">Your %1$s/month donation couldn\'t be confirmed. Check your banking app to approve your iDEAL | Wero payment.</string>
     <!-- Dialog message shown when a one-time donation requires verifying/confirmation outside of the app and the user hasn\'t done that yet, placeholder is money amount -->
-    <string name="ManageDonationsFragment__your_one_time_s_donation_couldnt_be_confirmed_ideal_wero">Your one-time %1$s donation couldn\'t be confirmed. Check your banking app to approve your iDEAL | Wero payment.</string>
 
-    <string name="Boost__enter_custom_amount">Въведете индивидуална сума</string>
     <!-- Error label when the amount is smaller than what we can accept -->
-    <string name="Boost__the_minimum_amount_you_can_donate_is_s">Минималната сума, която можете да дарите, е %1$s</string>
 
     <string name="MySupportPreference__s_per_month">%1$s/месец</string>
     <string name="MySupportPreference__renews_s">Подновява се на %1$s</string>
     <!-- Subtitle shown when processing a donation transaction -->
     <string name="MySupportPreference__processing_transaction">Обработка на трансакцията…</string>
     <!-- Displayed on "My Support" screen when user badge failed to be added to their account -->
-    <string name="MySupportPreference__couldnt_add_badge_s">Неуспешно добавяне на значката. %1$s</string>
     <string name="MySupportPreference__please_contact_support">Моля, свържете се с поддръжката.</string>
     <!-- Displayed as a subtitle on a row in the Manage Donations screen when payment for a donation is pending -->
-    <string name="MySupportPreference__payment_pending">Плащане в изчакване</string>
     <!-- Displayed as a dialog message when clicking on a donation row that is pending. Placeholder is a formatted fiat amount -->
-    <string name="MySupportPreference__your_bank_transfer_of_s">Вашият банков превод за %1$s е в изчакване. Обработката на банковите преводи може да отнеме от 1 до 14 работни дни.  </string>
     <!-- Displayed in the pending help dialog, used to launch user to more details about bank transfers -->
     <string name="MySupportPreference__learn_more">Научете повече</string>
     <!-- Displayed when a subscription refresh is being performed -->
-    <string name="MySupportPreference__checking_subscription">Проверка на абонамента…</string>
 
     <!-- Title of dialog telling user they need to update signal as it expired -->
     <string name="UpdateSignalExpiredDialog__title">Обновяване на Signal</string>
@@ -6557,126 +6369,66 @@
     <string name="ReregisterSignalDialog__cancel_action">Отказ</string>
 
     <!-- Title of expiry sheet when boost badge falls off profile unexpectedly. -->
-    <string name="ExpiredBadgeBottomSheetDialogFragment__boost_badge_expired">Срокът на значката „Подсилване“ е изтекъл</string>
     <!-- Displayed in the bottom sheet if a monthly donation badge unexpectedly falls off the user\'s profile -->
-    <string name="ExpiredBadgeBottomSheetDialogFragment__monthly_donation_cancelled">Месечното дарение е отменено</string>
     <!-- Displayed in the bottom sheet when a boost badge expires -->
-    <string name="ExpiredBadgeBottomSheetDialogFragment__your_boost_badge_has_expired_and">Срокът на валидност на значката „Подсилване“ е изтекъл и тя вече не се вижда на профила ви.</string>
-    <string name="ExpiredBadgeBottomSheetDialogFragment__you_can_reactivate">Можете да активирате значката си за подсилване за още 30 дни с еднократно дарение.</string>
     <!-- Displayed when we do not think the user is a subscriber when their boost expires -->
-    <string name="ExpiredBadgeBottomSheetDialogFragment__you_can_keep">Можете да продължите да използвате Signal, но за да подкрепите технологията, която е създадена за вас, помислете дали да не станете поддръжник чрез ежемесечни дарения.</string>
-    <string name="ExpiredBadgeBottomSheetDialogFragment__become_a_sustainer">Станете поддръжник</string>
-    <string name="ExpiredBadgeBottomSheetDialogFragment__add_a_boost">Добавяне на подсилване</string>
-    <string name="ExpiredBadgeBottomSheetDialogFragment__not_now">Не сега</string>
     <!-- Copy displayed when badge expires after user inactivity -->
-    <string name="ExpiredBadgeBottomSheetDialogFragment__your_recurring_monthly_donation_was_automatically">Периодичното ви месечно дарение е отменено автоматично, защото сте били неактивни твърде дълго време. Значката ви за %1$s вече не се вижда на профила ви.</string>
     <!-- Copy displayed when badge expires after payment failure -->
-    <string name="ExpiredBadgeBottomSheetDialogFragment__your_recurring_monthly_donation_was_canceled">Вашето периодично месечно дарение е отменено, защото не можахме да обработим плащането ви. Значката ви вече не се вижда на профила ви.</string>
     <!-- Copy displayed when badge expires after a payment failure and we have a displayable charge failure reason -->
-    <string name="ExpiredBadgeBottomSheetDialogFragment__your_recurring_monthly_donation_was_canceled_s">Вашето периодично месечно дарение беше отменено. %1$s Значката ви за %2$s вече не се вижда на профила ви.</string>
-    <string name="ExpiredBadgeBottomSheetDialogFragment__you_can">Можете да продължите да използвате Signal, но за да подкрепите приложението и да активирате отново значката си, подновете сега.</string>
-    <string name="ExpiredBadgeBottomSheetDialogFragment__renew_subscription">Подновяване на абонамента</string>
     <!-- Button label to send user to Google Pay website -->
-    <string name="ExpiredBadgeBottomSheetDialogFragment__go_to_google_pay">Към Google Pay</string>
 
-    <string name="CantProcessSubscriptionPaymentBottomSheetDialogFragment__cant_process_subscription_payment">Неуспешно обработване на плащането за абонамент</string>
-    <string name="CantProcessSubscriptionPaymentBottomSheetDialogFragment__were_having_trouble">Имаме затруднение със събирането на плащането ви като поддръжник на Signal. Уверете се, че начинът ви на плащане е актуален. Ако не е, актуализирайте го в Google Pay. Signal ще се опита да обработи плащането отново след няколко дни.</string>
-    <string name="CantProcessSubscriptionPaymentBottomSheetDialogFragment__dont_show_this_again">Не показвай това отново</string>
 
-    <string name="Subscription__contact_support">Връзка с отдела за поддръжка</string>
-    <string name="Subscription__get_a_s_badge">Вземете значка %1$s</string>
 
     <!-- *PaymentInProgressFragment strings -->
-    <string name="InAppPaymentInProgressFragment__processing_donation">Дарението се обработва…</string>
-    <string name="InAppPaymentInProgressFragment__processing_payment">Обработка на плащането…</string>
 
     <!--InAppDonations -->
     <!-- Label displayed in google play and on receipts for recurring subscriptions. Placeholder is level -->
-    <string name="InAppDonations__recurring_d">Регулярно %1$d</string>
 
     <!-- InAppPaymentErrors -->
     <!-- Displayed as a title in a dialog or notification when a payment failure happens. -->
-    <string name="InAppPaymentErrors__error_processing_payment">Грешка при обработване на плащането</string>
     <!-- Displayed as a message in a dialog or notification when a payment setup error happens. -->
-    <string name="InAppPaymentErrors__your_payment_couldnt_be_processed">Плащането ви не можа да бъде обработено и не сте таксувани. Моля, опитайте отново.</string>
     <!-- Displayed as a message in a dialog when we timeout waiting for a payment to be processed and token to be redeemed -->
-    <string name="InAppPaymentErrors__your_payment_is_still">Плащането ви все още се обработва. Това може да отнеме няколко минути в зависимост от връзката ви.</string>
     <!-- Displayed as a message in a dialog or notification when stripe decline code issuer not available for backup payment. -->
-    <string name="InAppPaymentErrors__StripeDeclineCode__try_completing_the_payment_again">Опитайте да извършите плащането отново или се свържете с банката си за повече информация.</string>
     <!-- Failure code text for revoked authorization of payment, displayed in a dialog or notification as a message. -->
-    <string name="InAppPaymentErrors__StripeFailureCode__this_payment_was_revoked">Това плащане беше отменено от титуляра на сметката и не можа да бъде обработено. Не сте били таксувани.</string>
     <!-- Failure code text for a payment lacking an authorized mandate or incorrect mandate, displayed in a dialog or notification as a message.-->
-    <string name="InAppPaymentErrors__StripeFailureCode__an_error_occurred_while_processing_this_payment">Възникна грешка при обработката на това плащане, моля, опитайте отново.</string>
 
     <!-- Displayed in notification when user payment fails to process on Stripe -->
-    <string name="DonationsErrors__error_processing_payment">Грешка при обработката на дарението</string>
     <!-- Displayed on manage donations screen as a dialog message when payment method failed -->
-    <string name="DonationsErrors__try_another_payment_method">Опитайте с друг начин на плащане или се свържете с банката си за повече информация.</string>
     <!-- Displayed on manage donations screen error dialogs as an action label -->
-    <string name="DonationsErrors__learn_more">Научете повече</string>
     <!-- Displayed on "My Support" screen when user subscription payment method failed. -->
-    <string name="DonationsErrors__error_processing_payment_s">Грешка при обработката на дарението. %1$s</string>
-    <string name="DonationsErrors__your_payment">Дарението ви не можа да бъде обработено и не сте таксувани. Моля, опитайте отново.</string>
-    <string name="DonationsErrors__still_processing">Все още се обработва</string>
-    <string name="DonationsErrors__couldnt_add_badge">Неуспешно добавяне на значка</string>
     <!-- Displayed when backup credential could not be redeemed. Dialog or notification title -->
-    <string name="DonationsError__something_went_wrong">Нещо се обърка</string>
     <!-- Displayed when backup credential could not be redeemed. Dialog or notification body -->
-    <string name="DonationsError__your_backups_subscription_couldnt_be_displayed">Вашият абонамент за резервни копия не можа да бъде показан. Моля, свържете се с поддръжката.</string>
     <!-- Displayed when badge credential couldn\'t be verified -->
-    <string name="DonationsErrors__failed_to_validate_badge">Неуспешно валидиране на значка</string>
     <!-- Displayed when badge credential couldn\'t be verified -->
-    <string name="DonationsErrors__could_not_validate">Отговорът на сървъра не можа да бъде валидиран. Моля, свържете се с поддръжката.</string>
     <!-- Displayed as title when some generic error happens during sending donation on behalf of another user -->
-    <string name="DonationsErrors__donation_failed">Дарението не беше успешно</string>
     <!-- Displayed as message when some generic error happens during sending donation on behalf of another user -->
-    <string name="DonationsErrors__your_payment_was_processed_but">Вашето дарение беше обработено, но Signal не можа да изпрати вашето съобщение за дарение. Моля, свържете се с поддръжката.</string>
-    <string name="DonationsErrors__your_badge_could_not">Значката ви не можа да бъде добавена към акаунта ви, но е възможно да сте били таксувани. Моля, свържете се с поддръжката.</string>
-    <string name="DonationsErrors__your_payment_is_still">Дарението ви все още се обработва. Това може да отнеме няколко минути в зависимост от връзката ви.</string>
-    <string name="DonationsErrors__failed_to_cancel_subscription">Неуспешно анулиране на абонамент</string>
-    <string name="DonationsErrors__subscription_cancellation_requires_an_internet_connection">Анулирането на абонамент изисква връзка с интернет.</string>
     <string name="ViewBadgeBottomSheetDialogFragment__your_device_doesn_t_support">Вашето устройство не поддържа дарения в приложението, така че не можете да се абонирате и да получите значка. Все още можете да подкрепите Signal, като направите дарение на нашия уебсайт.</string>
     <string name="NetworkFailure__network_error_check_your_connection_and_try_again">Грешка в мрежата. Проверете връзката си и опитайте отново.</string>
     <string name="NetworkFailure__retry">Опитай отново</string>
     <!-- Displayed as a dialog title when the selected recipient for a gift doesn\'t support gifting -->
-    <string name="DonationsErrors__cannot_send_donation">Не може да се изпрати дарение</string>
     <!-- Displayed as a dialog message when the selected recipient for a gift doesn\'t support gifting -->
-    <string name="DonationsErrors__this_user_cant_receive_donations_until">Този потребител не може да получава дарения, докато не надгради Signal.</string>
     <!-- Displayed as a dialog message when the user\'s profile could not be fetched, likely due to lack of internet -->
-    <string name="DonationsErrors__your_donation_could_not_be_sent">Вашето дарение не беше изпратено заради мрежова грешка. Проверете връзката си и опитайте отново.</string>
     <!-- Displayed as a dialog message when the user encounters an error during an iDEAL donation -->
-    <string name="DonationsErrors__your_ideal_wero_couldnt_be_processed">Your iDEAL | Wero donation couldn\'t be processed. Try another payment method or contact your bank for more information.</string>
 
     <!-- Gift message view title -->
-    <string name="GiftMessageView__donation_on_behalf_of_s">Дарение от името на %1$s</string>
     <!-- Gift message view title for incoming donations -->
-    <string name="GiftMessageView__s_donated_to_signal_on">%1$s дари на Signal от ваше име</string>
     <!-- Gift badge redeem action label -->
-    <string name="GiftMessageView__redeem">Осребряване</string>
     <!-- Gift badge view action label -->
-    <string name="GiftMessageView__view">Преглед</string>
     <!-- Gift badge redeeming action label -->
-    <string name="GiftMessageView__redeeming">Осребряване…</string>
     <!-- Gift badge redeemed label -->
-    <string name="GiftMessageView__redeemed">Осребрено</string>
 
 
     <!-- Stripe decline code generic_failure -->
-    <string name="DeclineCode__try_another_payment_method_or_contact_your_bank">Опитайте с друг начин на плащане или се свържете с банката си за повече информация.</string>
     <!-- PayPal decline code for payment declined -->
-    <string name="DeclineCode__try_another_payment_method_or_contact_your_bank_for_more_information_if_this_was_a_paypal">Опитайте с друг начин на плащане или се свържете с банката си за повече информация. Ако това е трансакция с PayPal, се свържете с PayPal.</string>
     <!-- Stripe decline code verify on Google Pay and try again -->
-    <string name="DeclineCode__verify_your_payment_method_is_up_to_date_in_google_pay_and_try_again">Проверете дали начинът ви на плащане е актуален в Google Pay и опитайте отново.</string>
     <!-- Stripe decline code learn more action label -->
     <string name="DeclineCode__learn_more">Научете повече</string>
     <!-- Stripe decline code contact issuer -->
-    <string name="DeclineCode__verify_your_payment_method_is_up_to_date_in_google_pay_and_try_again_if_the_problem">Проверете дали начинът ви на плащане е актуален в Google Pay и опитайте отново. Ако проблемът продължава, свържете се с банката си.</string>
     <!-- Stripe decline code purchase not supported -->
     <string name="DeclineCode__your_card_does_not_support_this_type_of_purchase">Картата ви не поддържа този тип покупки. Опитайте с друг начин на плащане.</string>
     <!-- Stripe decline code your card has expired -->
     <string name="DeclineCode__your_card_has_expired">Картата ви е изтекла. Актуализирайте начина си на плащане в Google Pay и опитайте отново.</string>
     <!-- Stripe decline code go to google pay action label -->
-    <string name="DeclineCode__go_to_google_pay">Към Google Pay</string>
     <!-- Stripe decline code try credit card again action label -->
     <string name="DeclineCode__try">Опитай отново</string>
     <!-- Stripe decline code incorrect card number -->
@@ -6690,7 +6442,6 @@
     <!-- Stripe decline code incorrect expiration year -->
     <string name="DeclineCode__the_expiration_year">Годината на изтичане на срока на валидност на вашия начин на плащане е неправилна. Актуализирайте я в Google Pay и опитайте отново.</string>
     <!-- Stripe decline code issuer not available -->
-    <string name="DeclineCode__try_completing_the_payment_again">Опитайте да извършите дарението отново или се свържете с банката си за повече информация.</string>
     <!-- Stripe decline code processing error -->
     <string name="DeclineCode__try_again">Опитайте отново или се свържете с банката си за повече информация.</string>
 
@@ -6712,15 +6463,10 @@
 
     <!-- Stripe Failure Codes for failed bank transfers -->
     <!-- Failure code text for insufficient funds, displayed in a dialog or notification -->
-    <string name="StripeFailureCode__the_bank_account_provided">Предоставената банкова сметка няма достатъчно средства за извършване на тази покупка, опитайте отново или се свържете с вашата банка за повече информация.</string>
     <!-- Failure code text for revoked authorization of payment, displayed in a dialog or notification -->
-    <string name="StripeFailureCode__this_payment_was_revoked">Това дарение беше отменено от титуляра на сметката и не можа да бъде обработено. Не сте били таксувани.</string>
     <!-- Failure code text for a payment lacking an authorized mandate or incorrect mandate, displayed in a dialog or notification -->
-    <string name="StripeFailureCode__an_error_occurred_while_processing_this_payment">Възникна грешка при обработката на дарението, моля, опитайте отново.</string>
     <!-- Failure code text for a closed account, deceased recipient, or one with blocked direct debits, displayed in a dialog or notification -->
-    <string name="StripeFailureCode__the_bank_details_provided_could_not_be_processed">Предоставените банкови данни не можаха да бъдат обработени, свържете се с вашата банка за повече информация.</string>
     <!-- Failure code text for a non-existent bank branch, invalid account holder, invalid iban, generic failure, or unknown bank failure, displayed in a dialog or notification -->
-    <string name="StripeFailureCode__verify_your_bank_details_are_correct">Проверете дали банковите ви данни са правилни и опитайте отново. Ако проблемът продължава, свържете се с банката си.</string>
 
     <!-- Title of create notification profile screen -->
     <string name="EditNotificationProfileFragment__name_your_profile">Дайте име на профила си</string>
@@ -6883,33 +6629,19 @@
     <string name="ReleaseNotes__official_only_chat">Официален и единствен чат на Signal</string>
 
     <!-- Donation receipts activity title -->
-    <string name="DonationReceiptListFragment__all_activity">Всички дейности</string>
     <!-- Donation receipts all tab label -->
-    <string name="DonationReceiptListFragment__all">Всички</string>
     <!-- Donation receipts recurring tab label -->
-    <string name="DonationReceiptListFragment__recurring">Регулярно</string>
     <!-- Donation receipts one-time tab label -->
-    <string name="DonationReceiptListFragment__one_time">Еднократно</string>
     <!-- Donation receipts gift tab -->
-    <string name="DonationReceiptListFragment__for_a_friend">За приятел</string>
     <!-- Donation receipts gift tab label -->
-    <string name="DonationReceiptListFragment__donation_for_a_friend">Дарение за приятел</string>
     <!-- Donation receipts donation type heading -->
-    <string name="DonationReceiptDetailsFragment__donation_type">Вид на дарението</string>
     <!-- Donation receipts date paid heading -->
-    <string name="DonationReceiptDetailsFragment__date_paid">Дата на плащане</string>
     <!-- Donation receipts share PNG -->
-    <string name="DonationReceiptDetailsFragment__share_receipt">Споделяне на разписка</string>
     <!-- Donation receipts list end note -->
-    <string name="DonationReceiptListFragment__if_you_have">Ако сте преинсталирали Signal, разписките за предишни дарения няма да бъдат налични.</string>
     <!-- Donation receipts document title -->
-    <string name="DonationReceiptDetailsFragment__donation_receipt">Разписка за дарение</string>
     <!-- Donation receipts amount title -->
-    <string name="DonationReceiptDetailsFragment__amount">Сума</string>
     <!-- Donation receipts thanks -->
-    <string name="DonationReceiptDetailsFragment__thank_you_for_supporting">Благодарим ви, че подкрепяте Signal. Вашият принос помага за изпълнението на мисията за разработване на технология за поверителност с отворен код, която защитава свободата на изразяване и позволява сигурна глобална комуникация на милиони хора по света. Ако сте жител на Съединените щати, моля, запазете тази разписка за данъчните си документи. Фондация Signal Technology Foundation е освободена от данъци организация с нестопанска цел в САЩ съгласно член 501c3 от Данъчния кодекс на САЩ. Нашият федерален данъчен номер е 82-4506840.</string>
     <!-- Donation reciepts screen empty state title -->
-    <string name="DonationReceiptListFragment__no_receipts">Няма разписки</string>
 
     <!-- region "Stories Tab" -->
 
@@ -7297,54 +7029,33 @@
         <item quantity="other">%1$s · %2$d дни времетраене</item>
     </plurals>
     <!-- Headline text on start fragment for gifting a badge -->
-    <string name="GiftFlowStartFragment__donate_for_a_friend">Дарете за приятел</string>
     <!-- Description text on start fragment for gifting a badge -->
     <plurals name="GiftFlowStartFragment__support_signal_by">
         <item quantity="one">Подкрепете Signal, като направите дарение за приятел или член на семейството, който използва Signal. Те ще получат значка, която да показват в профила си за %1$d ден</item>
         <item quantity="other">Подкрепете Signal, като направите дарение за приятел или член на семейството, който използва Signal. Те ще получат значка, която да показват в профила си за %1$d дни</item>
     </plurals>
     <!-- Action button label for start fragment for gifting a badge -->
-    <string name="GiftFlowStartFragment__next">Напред</string>
     <!-- Title text on choose recipient page for badge gifting -->
-    <string name="GiftFlowRecipientSelectionFragment__choose_recipient">Изберете получател</string>
     <!-- Title text on confirm gift page -->
-    <string name="GiftFlowConfirmationFragment__confirm_donation">Потвърдете дарението</string>
     <!-- Heading text specifying who the gift will be sent to -->
-    <string name="GiftFlowConfirmationFragment__send_to">Изпращане до</string>
     <!-- Text explaining that gift will be sent to the chosen recipient -->
-    <string name="GiftFlowConfirmationFragment__the_recipient_will_be_notified">Получателят ще бъде уведомен за дарението в лично съобщение. Добавете собственото си съобщение по-долу.</string>
     <!-- Text explaining that this gift is a one time donation -->
-    <string name="GiftFlowConfirmationFragment__one_time_donation">Еднократно дарение</string>
     <!-- Hint for add message input -->
-    <string name="GiftFlowConfirmationFragment__add_a_message">Добави съобщение</string>
     <!-- Displayed in the dialog while verifying the chosen recipient -->
     <string name="GiftFlowConfirmationFragment__verifying_recipient">Проверка на получателя…</string>
     <!-- Title for sheet shown when opening a redeemed gift -->
-    <string name="ViewReceivedGiftBottomSheet__s_made_a_donation_for_you">%1$s направи дарение за вас</string>
     <!-- Title for sheet shown when opening a sent gift -->
-    <string name="ViewSentGiftBottomSheet__thanks_for_your_support">Благодарим ви за подкрепата!</string>
     <!-- Description for sheet shown when opening a redeemed gift -->
-    <string name="ViewReceivedGiftBottomSheet__s_made_a_donation_to_signal">%1$s направи дарение за Signal от ваше име! Покажете подкрепата си за Signal във вашия профил.</string>
     <!-- Description for sheet shown when opening a sent gift -->
-    <string name="ViewSentGiftBottomSheet__youve_made_a_donation_to_signal">Направихте дарение за Signal от името на %1$s. Ще им бъде дадена опцията да покажат своята подкрепа в профила си.</string>
     <!-- Primary action for pending gift sheet to redeem badge now -->
-    <string name="ViewReceivedGiftSheet__redeem">Осребряване</string>
     <!-- Primary action for pending gift sheet to redeem badge later -->
-    <string name="ViewReceivedGiftSheet__not_now">Не сега</string>
     <!-- Dialog text while redeeming a gift -->
-    <string name="ViewReceivedGiftSheet__redeeming_badge">Осребряване на значка…</string>
     <!-- Description text in gift thanks sheet -->
-    <string name="GiftThanksSheet__youve_made_a_donation">Направихте дарение за Signal от името на %1$s. Ще им бъде дадена опцията да покажат своята подкрепа в профила си.</string>
     <!-- Expired gift sheet title -->
-    <string name="ExpiredGiftSheetConfiguration__your_badge_has_expired">Вашата значка е изтекла</string>
     <!-- Expired gift sheet top description text -->
-    <string name="ExpiredGiftSheetConfiguration__your_badge_has_expired_and_is">Срокът на вашата значка е изтекъл и тя вече не се вижда на профила ви.</string>
     <!-- Expired gift sheet bottom description text -->
-    <string name="ExpiredGiftSheetConfiguration__to_continue">За да продължите да подкрепяте технология, която е създадена за вас, моля, помислете дали да не станете месечен поддръжник.</string>
     <!-- Expired gift sheet make a monthly donation button -->
-    <string name="ExpiredGiftSheetConfiguration__make_a_monthly_donation">Направете месечно дарение</string>
     <!-- Expired gift sheet not now button -->
-    <string name="ExpiredGiftSheetConfiguration__not_now">Не сега</string>
     <!-- My Story label designating that we will only share with the selected viewers. -->
     <string name="ContactSearchItems__only_share_with">Сподели само с</string>
     <!-- Label under name for custom stories -->
@@ -7408,7 +7119,6 @@
         <item quantity="other">Остават %1$d минути</item>
     </plurals>
     <!-- Donation for a friend expiry expired -->
-    <string name="Gifts__expired">Изтекъл</string>
 
     <!-- Label indicating that a user can tap to advance to the next post in a story -->
     <string name="StoryFirstTimeNavigationView__tap_to_advance">Докоснете за придвижване напред</string>
@@ -7554,129 +7264,76 @@
 
     <!-- DonateToSignalFragment -->
     <!-- Title below avatar -->
-    <string name="DonateToSignalFragment__privacy_over_profit">Гордеем се, че сме организация с нестопанска цел</string>
     <!-- Continue button label -->
-    <string name="DonateToSignalFragment__continue">Продължи</string>
     <!-- Description below title -->
-    <string name="DonateToSignalFragment__private_messaging">Дарете на Signal, за да подкрепите поверителните съобщения. Поддържайте приложението Signal независимо и без реклами.</string>
     <!-- Dialog title when a user tries to donate while they already have a pending donation. -->
-    <string name="DonateToSignalFragment__you_have_a_donation_pending">Имате изчакващо дарение</string>
     <!-- Dialog body when a user tries to donate while they already have a pending monthly donation. -->
-    <string name="DonateToSignalFragment__bank_transfers_usually_take_1_business_day_to_process_monthly">Обработката на банковите преводи може да отнеме от 1 до 14 работни дни. Моля, изчакайте плащането да приключи, преди да актуализирате абонамента си.</string>
     <!-- Dialog body when a user tries to donate while they already have a pending one time donation. -->
-    <string name="DonateToSignalFragment__bank_transfers_usually_take_1_business_day_to_process_onetime">Обработката на банковите преводи може да отнеме от 1 до 14 работни дни. Моля, изчакайте плащането да приключи, преди да направите друго дарение.</string>
     <!-- Dialog body when a user tries to donate while they already have a pending monthly donation. -->
-    <string name="DonateToSignalFragment__your_payment_is_still_being_processed_monthly">Дарението ви все още се обработва. Това може да отнеме няколко минути в зависимост от връзката ви. Моля, изчакайте плащането да приключи, преди да актуализирате абонамента си.</string>
     <!-- Dialog body when a user tries to donate while they already have a pending one time donation. -->
-    <string name="DonateToSignalFragment__your_payment_is_still_being_processed_onetime">Дарението ви все още се обработва. Това може да отнеме няколко минути в зависимост от връзката ви. Моля, изчакайте плащането да приключи, преди да направите друго дарение.</string>
     <!-- Dialog body when a user opens the manage donations main screen and they have a pending iDEAL donation -->
-    <string name="DonateToSignalFragment__your_ideal_wero_payment_is_still_processing">Your iDEAL | Wero donation is still processing. Check your banking app to approve your payment before making another donation.</string>
     <!-- Dialog title shown when a user tries to donate an amount higher than is allowed for a given payment method. -->
-    <string name="DonateToSignal__donation_amount_too_high">Размерът на дарението е прекалено голям</string>
     <!-- Dialog body shown when a user tries to donate an amount higher than is allowed for a given payment method, place holder is the maximum -->
-    <string name="DonateToSignalFragment__you_can_send_up_to_s_via_bank_transfer">Можете да изпратите до %1$s чрез банков превод. Опитайте с различна сума или различен начин на плащане.</string>
 
     <!-- Donation pill toggle monthly text -->
-    <string name="DonationPillToggle__monthly">Ежемесечно</string>
     <!-- Donation pill toggle one-time text -->
-    <string name="DonationPillToggle__one_time">Еднократно</string>
 
     <!-- GatewaySelectorBottomSheet -->
     <!-- Sheet title when subscribing -->
-    <string name="GatewaySelectorBottomSheet__donate_s_month_to_signal">Дарявайте %1$s/месец на Signal</string>
     <!-- Sheet summary when subscribing -->
-    <string name="GatewaySelectorBottomSheet__get_a_s_badge">Вземете значка %1$s</string>
     <!-- Sheet title when giving a one-time donation -->
-    <string name="GatewaySelectorBottomSheet__donate_s_to_signal">Дарете %1$s на Signal</string>
     <!-- Sheet summary when giving a one-time donation -->
     <plurals name="GatewaySelectorBottomSheet__get_a_s_badge_for_d_days">
         <item quantity="one">Получете значка „%1$s“ за %2$d ден</item>
         <item quantity="other">Получете значка „%1$s“ за %2$d дни</item>
     </plurals>
     <!-- Button label for paying with a bank transfer -->
-    <string name="GatewaySelectorBottomSheet__bank_transfer">Банков превод</string>
     <!-- Button label for paying with a credit card -->
     <string name="GatewaySelectorBottomSheet__credit_or_debit_card">Кредитна или дебитна карта</string>
     <!-- Sheet summary when giving donating for a friend -->
-    <string name="GatewaySelectorBottomSheet__donate_for_a_friend">Дарете за приятел</string>
     <!-- Button label for paying with iDEAL -->
-    <string name="GatewaySelectorBottomSheet__ideal_wero">iDEAL | Wero</string>
 
     <!-- Dialog title for launching external intent -->
-    <string name="ExternalNavigationHelper__leave_signal_to_confirm_payment">Излизате ли от Signal, за да потвърдите дарението?</string>
-    <string name="ExternalNavigationHelper__once_this_payment_is_confirmed">След потвърждението се върнете в Signal, за да завършите обработката на дарението ви.</string>
     <!-- Dialog message shown when leaving Signal to complete a donation in an external app. Placeholder is the resolved app name (e.g. a banking app). -->
-    <string name="ExternalNavigationHelper__once_payment_confirmed_in_app">You\'ll be sent to %1$s. When confirmed, return to Signal to finish processing your donation.</string>
 
     <!-- BankTransferMandateFragment -->
     <!-- Title of screen displaying the bank transfer mandate -->
-    <string name="BankTransferMandateFragment__bank_transfer">Банков превод</string>
     <!-- Subtitle of screen displaying the bank transfer mandate, placeholder is \'Learn more\' -->
-    <string name="BankTransferMandateFragment__stripe_processes_donations">Stripe обработва даренията, направени за Signal. Signal не събира и не съхранява личната ви информация. %1$s</string>
     <!-- Subtitle learn more of screen displaying bank transfer mandate -->
-    <string name="BankTransferMandateFragment__learn_more">Научете повече</string>
     <!-- Button label to continue with transfer -->
-    <string name="BankTransferMandateFragment__agree">Приемам</string>
     <!-- Button label to read more of the bank mandate that is currently off screen -->
-    <string name="BankTransferMandateFragment__read_more">Прочети повече</string>
     <!-- Text displayed when mandate load fails -->
-    <string name="BankTransferMandateFragment__failed_to_load_mandate">Неуспешно зареждане на заявката</string>
 
     <!-- BankTransferDetailsFragment -->
     <!-- Subtext explaining how email is used. Placeholder is \'Learn more\' -->
-    <string name="BankTransferDetailsFragment__enter_your_bank_details">Въведете своите банкови данни и имейл. Stripe използва този имейл, за да ви изпраща актуализации за вашето дарение. %1$s</string>
     <!-- Subtext learn more link text -->
-    <string name="BankTransferDetailsFragment__learn_more">Научете повече</string>
     <!-- Text field label for name on bank account -->
-    <string name="BankTransferDetailsFragment__name_on_bank_account">Име на банковата сметка</string>
     <!-- Text field label for IBAN -->
-    <string name="BankTransferDetailsFragment__iban">IBAN</string>
     <!-- Text field label for email -->
-    <string name="BankTransferDetailsFragment__email">Имейл</string>
     <!-- Text label for button to show user how to find their IBAN -->
-    <string name="BankTransferDetailsFragment__find_account_info">Намерете информация за акаунта</string>
     <!-- Donate button label for monthly subscription -->
-    <string name="BankTransferDetailsFragment__donate_s_month">Дарявайте %1$s/месец</string>
     <!-- Donate button label for one-time -->
-    <string name="BankTransferDetailsFragment__donate_s">Дарете %1$s</string>
     <!-- Error label for IBAN field when number is too short -->
-    <string name="BankTransferDetailsFragment__iban_is_too_short">IBAN номерът е твърде кратък</string>
     <!-- Error label for IBAN field when number is too long -->
-    <string name="BankTransferDetailsFragment__iban_is_too_long">IBAN номерът е твърде дълъг</string>
     <!-- Error label for IBAN field when country is not supported -->
-    <string name="BankTransferDetailsFragment__iban_country_code_is_not_supported">Кодът на държавата в този IBAN не се поддържа</string>
     <!-- Error label for IBAN field when number is invalid -->
-    <string name="BankTransferDetailsFragment__invalid_iban">Невалиден IBAN</string>
     <!-- Error label for name field when name is not at least three characters long (Stripe API enforced minimum) -->
-    <string name="BankTransferDetailsFragment__minimum_3_characters">Минимум 3 знака</string>
     <!-- Error label for email field when email is not valid -->
-    <string name="BankTransferDetailsFragment__invalid_email_address">Невалиден имейл адрес</string>
 
     <!-- IdealTransferDetailsFragment -->
     <!-- Title of the screen, displayed in the toolbar -->
-    <string name="IdealTransferDetailsFragment__ideal">iDEAL</string>
     <!-- Subtitle of the screen, displayed below the toolbar. Placeholder is for \'learn more\' -->
-    <string name="IdealTransferDetailsFragment__enter_your_bank">Въведете вашите име и имейл адрес. Stripe използва този имейл адрес, за да ви изпраща новини относно вашето дарение. %1$s</string>
     <!-- Subtitle of the screen, displayed below the toolbar. Placeholder is for \'learn more\' -->
-    <string name="IdealTransferDetailsFragment__enter_your_bank_details_one_time">Въведете своите банкови данни. Signal не събира и не съхранява личната ви информация. %1$s</string>
     <!-- Subtitle learn-more button displayed inline with the subtitle text -->
-    <string name="IdealTransferDetailsFragment__learn_more">Научете повече</string>
     <!-- Hint label for text entry box for name on bank account -->
-    <string name="IdealTransferDetailsFragment__name_on_bank_account">Име на банковата сметка</string>
     <!-- Hint label for text entry box for email -->
-    <string name="IdealTransferDetailsFragment__email">Имейл</string>
     <!-- Default label for bank selection -->
-    <string name="IdealTransferDetailsFragment__choose_your_bank">Изберете вашата банка</string>
     <!-- Dialog title shown when using iDEAL payment for setting up a monthly donation -->
-    <string name="IdealTransferDetailsFragment__confirm_your_donation_with_ideal_wero">Confirm your donation with iDEAL | Wero</string>
     <!-- Dialog warning shown when using iDEAL payment for setting up a monthly donation. Placeholder is donation amount.Z -->
-    <string name="IdealTransferDetailsFragment__to_setup_your_recurring_donation">За да настроите своето редовно дарение, докоснете, за да потвърдите заплащането на 0,01 € от вашата банка. Сумата ще бъде възстановена автоматично и позволява дебитирането на вашето плащане от %1$s/месец от сметката ви.</string>
     <!-- Dialog button shown when using iDEAL payment for setting up a monthly donation to continue with the donation -->
-    <string name="IdealTransferDetailsFragment__continue">Продължете</string>
 
     <!-- IdealTransferDetailsBankSelectionDialogFragment -->
     <!-- Title of the screen, displayed in the toolbar -->
-    <string name="IdealTransferDetailsBankSelectionDialogFragment__choose_your_bank">Изберете вашата банка</string>
 
     <!-- Title of bottom sheet for finding account information -->
     <string name="FindAccountInfoSheet__find_your_account_information">Намерете информацията за вашия акаунт</string>
@@ -7684,36 +7341,22 @@
     <string name="FindAccountInfoSheet__look_for_your_iban_at">Потърсете IBAN номера си в горната част на вашето банково извлечение. IBAN номерата съдържат до 34 знака. Въведеното име трябва да съвпада с цялото име на титуляра на банковата сметка. Свържете се с банката си за повече информация.</string>
 
     <!-- Title of donation pending sheet displayed after making a bank transfer -->
-    <string name="DonationPendingBottomSheet__donation_pending">Дарението е в изчакване</string>
     <!-- Top text block of donation pending sheet displayed after subscribing via a bank transfer. Placeholder is the badge name. -->
-    <string name="DonationPendingBottomSheet__your_monthly_donation_is_pending">Вашето месечно дарение е в изчакване. Ще можете да покажете значката %1$s в профила си, щом дарението ви бъде получено.</string>
     <!-- Top text block of donation pending sheet displayed after one-time donation via a bank transfer. Placeholder is the badge name. -->
-    <string name="DonationPendingBottomSheet__your_one_time_donation_is_pending">Вашето еднократно дарение е в изчакване. Ще можете да покажете значката %1$s в профила си, щом дарението ви бъде получено.</string>
     <!-- Bottom text block of donation pending sheet displayed after donating via a bank transfer. Placeholder is for learn more. -->
-    <string name="DonationPendingBottomSheet__bank_transfers_usually_take">Обработката на банковите преводи може да отнеме от 1 до 14 работни дни. %1$s</string>
     <!-- Learn more text for donation pending sheet displayed after donating via a bank transfer. -->
-    <string name="DonationPendingBottomSheet__learn_more">Научете повече</string>
     <!-- Confirmation button for donation pending sheet displayed after donating via a bank transfer. -->
-    <string name="DonationPendingBottomSheet__done">Готово</string>
 
     <!-- Title of donation error sheet displayed after making a bank transfer that fails -->
-    <string name="DonationErrorBottomSheet__donation_couldnt_be_processed">Дарението не можа да бъде обработено</string>
     <!-- Text block of donation error sheet displayed after making a bank transfer that fails -->
-    <string name="DonationErrorBottomSheet__were_having_trouble">Имаме затруднение с обработването на банковия ви превод. Не сте били таксувани. Опитайте с друг начин на плащане или се свържете с банката си за повече информация.</string>
     <!-- Button label for retry button of donation error sheet displayed after making a bank transfer that fails -->
-    <string name="DonationErrorBottomSheet__try_again">Опитай отново</string>
     <!-- Button label for not now button of donation error sheet displayed after making a bank transfer that fails -->
-    <string name="DonationErrorBottomSheet__not_now">Не сега</string>
 
     <!-- Title of \'Donation Complete\' sheet displayed after a bank transfer completes and the badge is redeemed -->
-    <string name="DonationCompletedBottomSheet__donation_complete">Дарението е завършено</string>
     <!-- Text block of \'Donation Complete\' sheet displayed after a bank transfer completes and the badge is redeemed -->
-    <string name="DonationCompleteBottomSheet__your_bank_transfer_was_received">Вашият банков превод е получен. Можете да изберете да показвате тази значка в своя профил, за да демонстрирате подкрепата си.</string>
     <!-- Button text of \'Donation Complete\' sheet displayed after a bank transfer completes and the badge is redeemed to dismiss sheet -->
-    <string name="DonationCompleteBottomSheet__done">Готово</string>
 
     <!-- StripePaymentInProgressFragment -->
-    <string name="StripePaymentInProgressFragment__cancelling">Анулиране…</string>
 
     <!-- The title of a bottom sheet dialog that tells the user we temporarily can\'t process their contacts. -->
     <string name="CdsTemporaryErrorBottomSheet_title">Обработени са твърде много контакти</string>
@@ -7747,7 +7390,6 @@
     <!-- YourInformationIsPrivateBottomSheet -->
     <string name="YourInformationIsPrivateBottomSheet__your_information_is_private">Вашата информация е частна</string>
     <string name="YourInformationIsPrivateBottomSheet__signal_does_not_collect">Signal не събира и не съхранява никаква ваша лична информация, когато направите дарение.</string>
-    <string name="YourInformationIsPrivateBottomSheet__we_use_stripe">Ние използваме Stripe за обработване на плащанията и за да получим вашите дарения. Ние не упражняваме достъп до, не съхраняваме и не запазваме никаква информация, която им предоставите.</string>
     <string name="YourInformationIsPrivateBottomSheet__signal_does_not_and_cannot">Signal не свързва и не може да свърже вашето дарение с акаунта ви в Signal.</string>
     <string name="YourInformationIsPrivateBottomSheet__thank_you">Благодарим ви за подкрепата!</string>
 
@@ -7765,8 +7407,6 @@
     <string name="Registration_country_code_entry_hint">+0</string>
 
     <!-- PaypalCompleteOrderBottomSheet -->
-    <string name="PaypalCompleteOrderBottomSheet__donate">Дарете</string>
-    <string name="PaypalCompleteOrderBottomSheet__payment">Плащане</string>
 
     <!-- ChatFilter -->
     <!-- Displayed in a pill at the top of the chat list when it is filtered by unread messages -->
@@ -8264,15 +7904,10 @@
     <string name="GrantFullScreenIntentPermission_bottomsheet_step2">2. %1$s Разрешаване на известия на цял екран</string>
 
     <!-- Bottom sheet dialog shown when a monthly donation fails to renew, title for dialog -->
-    <string name="MonthlyDonationCanceled__title">Месечното дарение е отменено</string>
     <!-- Bottom sheet dialog shown when a monthly donation fails to renew, body for dialog. First placeholder is a payment related error message. Second placeholder is \'learn more\' -->
-    <string name="MonthlyDonationCanceled__message">Вашето периодично месечно дарение беше отменено. %1$s\n\nЗначката ви вече няма да се вижда на профила ви. %2$s</string>
     <!-- Bottom sheet dialog shown when a monthly donation fails to renew, learn more used in placeholder for body for dialog. -->
-    <string name="MonthlyDonationCanceled__learn_more">Научете повече</string>
     <!-- Bottom sheet dialog shown when a monthly donation fails to renew, primary button to renew subscription with new data -->
-    <string name="MonthlyDonationCanceled__renew_button">Подновяване на абонамента</string>
     <!-- Bottom sheet dialog shown when a monthly donation fails to renew, second button to dismiss the dialog entirely -->
-    <string name="MonthlyDonationCanceled__not_now_button">Не сега</string>
 
     <!-- FindByActivity -->
     <!-- Title of activity when finding by username -->
@@ -8362,7 +7997,6 @@
 
     <!-- BackupAlertBottomSheet -->
     <!-- Sheet title when media backups have been disabled -->
-    <string name="BackupAlertBottomSheet__your_backups_subscription_expired">Вашият абонамент за резервни копия е изтекъл</string>
     <!-- Sheet body part 1 when media backups have been disabled. Placeholder is the number of days until deletion. -->
     <plurals name="BackupAlertBottomSheet__your_backup_plan_has_expired">
         <item quantity="one">Вашият план за резервно копиране е изтекъл, защото не можахме да го подновим с текущия ви начин на плащане. След %1$d ден мултимедията, съхранена във вашето резервно копие, ще бъде изтрита.</item>
@@ -8554,21 +8188,15 @@
     <!-- Displayed as the user\'s payment method as a label in a preference row -->
     <string name="BackupsTypeSettingsFragment__credit_or_debit_card">Кредитна или дебитна карта</string>
     <!-- Displayed as the user\'s payment method as a label in a preference row -->
-    <string name="BackupsTypeSettingsFragment__iDEAL">iDEAL</string>
     <!-- Displayed as the user\'s payment method as a label in a preference row -->
-    <string name="BackupsTypeSettingsFragment__google_pay">Google Pay</string>
     <!-- Displayed as the user\'s payment method as a label in a preference row -->
-    <string name="BackupsTypeSettingsFragment__bank_transfer">Банков превод</string>
     <!-- Displayed as the user\'s payment method as a label in a preference row -->
-    <string name="BackupsTypeSettingsFragment__paypal">PayPal</string>
     <!-- Displayed as the user\'s payment method as a label in a preference row -->
     <string name="BackupsTypeSettingsFragment__unknown">Непознат</string>
     <!-- Row title for entering payment history -->
-    <string name="BackupsTypeSettingsFragment__payment_history">История на плащанията</string>
     <!-- Row description detailing renewal information. First placeholder is formatted price. Second placeholder is formatted date. -->
     <string name="BackupsTypeSettingsFragment__s_month_renews_s">%1$s/месец · Подновява се на %2$s</string>
     <!-- Row title to change or cancel subscription -->
-    <string name="BackupsTypeSettingsFragment__change_or_cancel_subscription">Промяна или анулиране на абонамента</string>
 
     <!-- GooglePlayServicesAvailability -->
     <!-- Dialog title when Google Play services are missing from the device -->
@@ -8718,7 +8346,6 @@
     <!-- Text shown in a popup indicating that the user needs to enter their screen lock -->
     <string name="RemoteBackupsSettingsFragment__authenticatino_required">Изисква се автентикация</string>
     <!-- Row label to launch payment history screen -->
-    <string name="RemoteBackupsSettingsFragment__payment_history">История на плащанията</string>
     <!-- Section header for backup information -->
     <string name="RemoteBackupsSettingsFragment__backup_details">Подробности за резервно копие</string>
     <!-- Row label to allow the restoration of a backup to occur while on cellular connection -->
@@ -9155,7 +8782,6 @@
     <!-- Primary action button label when selecting paid tier when Google Play API isn\'t available -->
     <string name="MessageBackupsTypeSelectionScreen__more_about_this_plan">Повече за този план</string>
     <!-- Secondary action button label when selecting a backup tier with a current selection -->
-    <string name="MessageBackupsTypeSelectionScreen__cancel_subscription">Отмяна на абонамента</string>
     <!-- MessageBackupsType block amount for free tier -->
     <string name="MessageBackupsTypeSelectionScreen__free">Безплатно</string>
     <!-- MessageBackupsType block amount for paid tier when no pricing is available -->
@@ -9199,7 +8825,6 @@
     <!-- Action button label to cancel subscription and download later -->
     <string name="ConfirmBackupCancellationDialog__confirm_and_download_later">Потвърждаване и изтегляне по-късно</string>
     <!-- Action button label to keep current subscription -->
-    <string name="ConfirmBackupCancellationDialog__keep_subscription">Запазване на абонамента</string>
 
     <!-- Accessible content description for the reminder view, describing the icon in the view. -->
     <string name="ReminderView_icon_content_description">Икона за напомняне</string>

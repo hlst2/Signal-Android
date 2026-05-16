@@ -24,7 +24,6 @@
   <!-- Removed by excludeNonTranslatables <string name="donate_faq_url" translatable="false">https://support.signal.org/hc/articles/360031949872#donate</string> -->
 
     <!-- First placeholder is productId, second placeholder is app package -->
-    <string name="backup_subscription_management_url">https://play.google.com/store/account/subscriptions?sku=%1$s&amp;package=%2$s</string>
 
     <string name="yes">ဟုတ်ကဲ့</string>
     <string name="no">မလုပ်ပါ</string>
@@ -158,7 +157,6 @@
 
     <!-- Fcm notifications -->
     <!-- Notification we show when there may be messages for you, but we cannot connect to the server to check -->
-    <string name="FcmFetchManager__you_may_have_messages">သင့်တွင် မက်ဆေ့ချ်အသစ်များ ရောက်ရှိနေပါသည်</string>
 
     <!-- BlockedUsersActivity -->
     <string name="BlockedUsersActivity__blocked_users">ဘလော့ခ်ထားသော သုံးစွဲသူများ</string>
@@ -172,45 +170,26 @@
 
     <!-- CreditCardFragment -->
     <!-- Title of fragment -->
-    <string name="CreditCardFragment__credit_or_debit_card">ခရက်ဒစ် သို့မဟုတ် ဒက်ဘစ်ကတ်</string>
     <!-- Explanation of how to fill in the form and a note about pii, displayed above the credit card text fields -->
-    <string name="CreditCardFragment__enter_your_card_details">သင့်ကတ်အချက်အလက် အသေးစိတ်ကို ဖြည့်ပါ။ Signal သည် သင်၏ ကိုယ်ရေးအချက်အလက်များကို စုဆောင်းခြင်း သို့မဟုတ် သိုလှောင်ခြင်းများ မလုပ်ပါ။</string>
     <!-- Displayed as a hint in the card number text field -->
-    <string name="CreditCardFragment__card_number">ကတ်နံပါတ်</string>
     <!-- Displayed as a hint in the card expiry text field -->
-    <string name="CreditCardFragment__mm_yy">MM/YY</string>
     <!-- Displayed as a hint in the card cvv text field -->
-    <string name="CreditCardFragment__cvv">CVV</string>
     <!-- Error displayed under the card number text field when there is an invalid card number entered -->
-    <string name="CreditCardFragment__invalid_card_number">ကတ်နံပါတ် မမှန်ကန်ပါ</string>
     <!-- Error displayed under the card expiry text field when the card is expired -->
-    <string name="CreditCardFragment__card_has_expired">ကတ်သက်တမ်း ကုန်သွားပါပြီ</string>
     <!-- Error displayed under the card cvv text field when the cvv is too short -->
-    <string name="CreditCardFragment__code_is_too_short">ကုဒ်တိုလွန်းပါသည်</string>
     <!-- Error displayed under the card cvv text field when the cvv is too long -->
-    <string name="CreditCardFragment__code_is_too_long">ကုဒ်ရှည်လွန်းပါသည်</string>
     <!-- Error displayed under the card cvv text field when the cvv is invalid -->
-    <string name="CreditCardFragment__invalid_code">ကုဒ် မမှန်ကန်ပါ</string>
     <!-- Error displayed under the card expiry text field when the expiry month is invalid -->
-    <string name="CreditCardFragment__invalid_month">လ မမှန်ကန်ပါ</string>
     <!-- Error displayed under the card expiry text field when the expiry is missing the year -->
-    <string name="CreditCardFragment__year_required">နှစ် လိုအပ်ပါသည်</string>
     <!-- Error displayed under the card expiry text field when the expiry year is invalid -->
-    <string name="CreditCardFragment__invalid_year">နှစ် မမှန်ကန်ပါ</string>
     <!-- Button label to confirm credit card input and proceed with one-time payment -->
-    <string name="CreditCardFragment__donate_s">%1$s လှူရန်</string>
     <!-- Button label to confirm credit card input and proceed with subscription payment -->
-    <string name="CreditCardFragment__donate_s_month">တစ်လလျှင် %1$s လှူရန်</string>
     <!-- Button label to confirm credit card input and proceed with backups payment. Placeholder is formatted price. -->
-    <string name="CreditCardFragment__pay_s_month">တစ်လလျှင် %1$s လှူရန်</string>
 
     <!-- OneTimeDonationPreference -->
     <!-- Preference title with placeholder for amount. -->
-    <string name="OneTimeDonationPreference__one_time_s">%1$s တစ်ကြိမ်လှူရန်</string>
     <!-- Preference subtitle when donation is pending -->
-    <string name="OneTimeDonationPreference__donation_pending">လှူဒါန်းမှု လုပ်ဆောင်နေဆဲ</string>
     <!-- Preference subtitle when donation is processing -->
-    <string name="OneTimeDonationPreference__donation_processing">လှူဒါန်းမှု စီမံဆောင်ရွက်နေဆဲ</string>
 
     <!-- BlockUnblockDialog -->
     <string name="BlockUnblockDialog_block_and_leave_s">%1$s ကို ဘလော့ခ်ပြီး ထွက်မည်လား။</string>
@@ -4115,7 +4094,6 @@
     <string name="preferences__slow">အနှေး</string>
     <string name="preferences__help">အကူအညီ</string>
     <string name="preferences__advanced">အဆင့်မြင့်</string>
-    <string name="preferences__donate_to_signal">Signal ကို လှူဒါန်းရန်</string>
     <!-- Preference label for making one-time donations to Signal -->
     <string name="preferences__privacy">ကိုယ်ရေးအချက်အလက်များ လုံခြုံမှု</string>
     <!-- Preference label for stories -->
@@ -4303,9 +4281,6 @@
 
     <!-- Payments -->
     <string name="PaymentsActivityFragment__all_activity">လှုပ်ရှားမှုများအားလုံး</string>
-    <string name="PaymentsAllActivityFragment__all">အားလုံး</string>
-    <string name="PaymentsAllActivityFragment__sent">ပို့ပြီးပြီ</string>
-    <string name="PaymentsAllActivityFragment__received">လက်ခံရရှိပြီး</string>
 
     <!-- Displayed on a welcome screen for payments -->
     <string name="PaymentsHomeFragment_introducing_payments">ငွေပေးချေမှုများကို မိတ်ဆက်ခြင်း</string>
@@ -4314,58 +4289,28 @@
     <string name="PaymentsHomeFragment__activating_payments">ငွေပေးချေမှုများ ဖွင့်နေသည်…</string>
     <string name="PaymentsHomeFragment__restore_payments_account">ငွေပေးချမှုလုပ်သည့် အကောင့် ပြန်ရယူမယ်</string>
     <string name="PaymentsHomeFragment__no_recent_activity_yet">လတ်တလောလှုပ်ရှားမှုများ မရှိသေးပါ</string>
-    <string name="PaymentsHomeFragment__recent_activity">လတ်တလောလှုပ်ရှားမှု</string>
     <string name="PaymentsHomeFragment__see_all">အားလုံးကြည့်မည်</string>
     <string name="PaymentsHomeFragment__add_funds">ငွေဖြည့်မယ်</string>
     <string name="PaymentsHomeFragment__send">ပေးပို့မည်</string>
-    <string name="PaymentsHomeFragment__sent_s">ပို့ပြီး %1$s</string>
-    <string name="PaymentsHomeFragment__received_s">လက်ခံရယူပြီး %1$s</string>
     <string name="PaymentsHomeFragment__transfer_to_exchange">လဲလှယ်ရန် လွှဲပြောင်းပါ</string>
     <string name="PaymentsHomeFragment__currency_conversion">ငွေကြေးလဲလှယ်မှု</string>
     <string name="PaymentsHomeFragment__deactivate_payments">ငွေပေးချေမှုများ ပိတ်မယ်</string>
     <string name="PaymentsHomeFragment__recovery_phrase">ပြန်လည်ရယူရန် စာပုဒ်တို</string>
     <string name="PaymentsHomeFragment__help">အကူအညီ</string>
-    <string name="PaymentsHomeFragment__coin_cleanup_fee">အကြွေစေ့ရှင်းရေးအခကြေး</string>
-    <string name="PaymentsHomeFragment__sent_payment">ငွေပေးချေပြီး</string>
-    <string name="PaymentsHomeFragment__received_payment">ငွေပေးချေမှုလက်ခံရယူပြီး</string>
-    <string name="PaymentsHomeFragment__processing_payment">ငွေပေးချေမှု လုပ်ဆောင်နေသည်</string>
-    <string name="PaymentsHomeFragment__unknown_amount">---</string>
-    <string name="PaymentsHomeFragment__currency_conversion_not_available">ငွေကြေးလဲလှယ်မှု မရနိုင်ပါ</string>
-    <string name="PaymentsHomeFragment__cant_display_currency_conversion">ငွေကြေးလဲလှယ်ခြင်းကို မပြနိုင်ပါ။ သင့် ဖုန်းချိတ်ဆက်မှုကို စစ်၍ ပြန်စမ်းကြည့်ပေးပါ။</string>
-    <string name="PaymentsHomeFragment__payments_is_not_available_in_your_region">သင့်ဒေသတွင်း ငွေပေးချေမှုများ မရရှိနိုင်ပါ။</string>
-    <string name="PaymentsHomeFragment__could_not_enable_payments">ငွေပေးချေမှုများ မလုပ်ဆောင်နိုင်ပါ။ နောက်မှ ပြန်စမ်းကြည့်ပေးပါ။</string>
-    <string name="PaymentsHomeFragment__deactivate_payments_question">ငွေပေးချေမှုများကို ပိတ်မည်လား?</string>
-    <string name="PaymentsHomeFragment__you_will_not_be_able_to_send">သင်မှ ငွေပေးချေမှုများ ပိတ်ထားလျှင် Signal ထဲတွင် သင်မှ MobileCoin ပေးပို့လက်ခံရန် မရနိုင်ပါ။</string>
-    <string name="PaymentsHomeFragment__deactivate">ပိတ်မယ်</string>
-    <string name="PaymentsHomeFragment__continue">ဆက်လုပ်ရန်</string>
-    <string name="PaymentsHomeFragment__balance_is_not_currently_available">လက်ကျန်ငွေ လက်ရှိမရနိုင်ပါ။</string>
-    <string name="PaymentsHomeFragment__payments_deactivated">ငွေပေးချေမှုများ ပိတ်ပြီး</string>
-    <string name="PaymentsHomeFragment__payment_failed">ငွေပေးချေမှု မအောင်မြင်ပါ</string>
-    <string name="PaymentsHomeFragment__details">အသေးစိတ်အချက်အလက်များ</string>
   <!-- Removed by excludeNonTranslatables <string name="PaymentsHomeFragment__learn_more__activate_payments" translatable="false">https://support.signal.org/hc/articles/360057625692#payments_activate</string> -->
     <!-- Displayed as a description in a dialog when the user tries to activate payments -->
-    <string name="PaymentsHomeFragment__you_can_use_signal_to_send_and">MobileCoin ပေးပို့ရန်နှင့် လက်ခံရန် Signal ကို သင် သုံးနိုင်ပါသည်။ ငွေပေးချေမှုများအားလုံးသည် MobileCoins နှင့် MobileCoin Wallet အတွက် အသုံးပြုမှုစည်းကမ်းချက်များကို လိုက်နာရပါမည်။ ပြဿနာအချို့ကို သင် ကြုံတွေ့ရနိုင်ပြီး သင် ဆုံးရှုံးသွားသော ငွေပေးချေမှုများ သို့မဟုတ် လက်ကျန်ငွေများကို ပြန်လည်ရယူ၍မရနိုင်ပါ။ </string>
-    <string name="PaymentsHomeFragment__activate">ဖွင့်မယ်</string>
-    <string name="PaymentsHomeFragment__view_mobile_coin_terms">MobileCoin ၏သတ်မှတ်ချက်များ ကြည့်ရှုမယ်</string>
-    <string name="PaymentsHomeFragment__payments_not_available">Signal ထဲတွင် ငွေပေးချေမှုများ မလုပ်ဆောင်နိုင်တော့ပါ။ ငွေလဲလှယ်မှုတစ်ခုသို့ ငွေများလွှဲနိုင်ပါသည်၊ သို့သော် သင်မှ ငွေပေးချေမှုများ ပေးပို့လက်ခံလို့မရတော့ပါ၊​ ငွေလည်း ထည့်ပေါင်းလို့မရတော့ပါ။</string>
 
   <!-- Removed by excludeNonTranslatables <string name="PaymentsHomeFragment__mobile_coin_terms_url" translatable="false">https://www.mobilecoin.com/terms-of-use.html</string> -->
     <!-- Alert dialog title which shows up after a payment to turn on payment lock -->
-    <string name="PaymentsHomeFragment__turn_on">နောင်လာမည့် ပေးပို့မှုများအတွက် ငွေပေးချေမှုလော့ခ်ကို ဖွင့်မည်လား။</string>
     <!-- Alert dialog description for why payment lock should be enabled before sending payments -->
-    <string name="PaymentsHomeFragment__add_an_additional_layer">လုံခြုံရေးအတွက် အပိုလွှာတစ်ခုကို ပေါင်းထည့်ပေးထားပြီး ငွေလွှဲပြောင်းရန် Android စခရင်လော့ခ် သို့မဟုတ် လက်ဗွေရာ လိုအပ်ပါသည်။</string>
     <!-- Alert dialog button to enable payment lock -->
     <string name="PaymentsHomeFragment__enable">ဖွင့်ရန်</string>
     <!-- Alert dialog button to not enable payment lock for now -->
     <string name="PaymentsHomeFragment__not_now">ယခု မလုပ်ပါ</string>
     <!-- Alert dialog title which shows up to update app to send payments -->
-    <string name="PaymentsHomeFragment__update_required">အပ်ဒိတ် လိုအပ်ပါသည်</string>
     <!-- Alert dialog description that app update is required to send payments-->
-    <string name="PaymentsHomeFragment__an_update_is_required">ငွေပေးချေမှုများ ပို့ရန် သို့မဟုတ် လက်ခံရန်အတွက် ဆက်လက်လုပ်ဆောင်ရန်နှင့် သင်၏ ငွေပေးချေမှု လက်ကျန်ငွေကို ကြည့်ရန် အပ်ဒိတ်လိုအပ်ပါသည်။</string>
     <!-- Alert dialog button to cancel -->
-    <string name="PaymentsHomeFragment__cancel">မလုပ်တော့ပါ</string>
     <!-- Alert dialog button to update now -->
-    <string name="PaymentsHomeFragment__update_now">ယခု Update လုပ်ပါ။</string>
 
 
     <!-- PaymentsSecuritySetupFragment -->
@@ -4380,46 +4325,26 @@
     <!-- Option to cancel -->
     <string name="PaymentsSecuritySetupFragment__not_now">ယခု မလုပ်ဆောင်သေးပါ။</string>
     <!-- Dialog title to confirm skipping the step -->
-    <string name="PaymentsSecuritySetupFragment__skip_this_step">ဤအဆင့်ကို ကျော်မည်လား။</string>
     <!-- Dialog description to let users know why payment lock is required -->
-    <string name="PaymentsSecuritySetupFragment__skipping_this_step">ဤအဆင့်ကို ကျော်လိုက်ခြင်းဖြင့် သင့်ဖုန်းကို ဝင်ရောက်ကြည့်ရှုခွင့်ရှိသည့် မည်သူမဆိုအား ငွေလွှဲရန် သို့မဟုတ် သင်၏ ပြန်လည်ရယူရေး စကားစုကို ကြည့်ရန် ခွင့်ပြုပေးပါသည်။</string>
     <!-- Dialog option to cancel -->
-    <string name="PaymentsSecuritySetupFragment__cancel">မလုပ်တော့ပါ</string>
     <!-- Dialog option to skip -->
-    <string name="PaymentsSecuritySetupFragment__skip">ကျော်ပါ။</string>
 
     <!-- PaymentsAddMoneyFragment -->
     <string name="PaymentsAddMoneyFragment__add_funds">ငွေဖြည့်မယ်</string>
     <string name="PaymentsAddMoneyFragment__your_wallet_address">သင့် ပိုက်ဆံအိတ် Wallet လိပ်စာ</string>
     <string name="PaymentsAddMoneyFragment__copy">ကူးမည်</string>
-    <string name="PaymentsAddMoneyFragment__copied_to_clipboard">ကလစ်ဘုတ်သို့ကူးယူပြီး</string>
     <string name="PaymentsAddMoneyFragment__to_add_funds">ငွေဖြည့်ရန် သင့် ပိုက်ဆံအိတ် Wallet လိပ်စာသို့ MobileCoin ပို့ပါ။ သင့် အကောင့်မှ MobileCoin ပံ့ပိုးသော လွှဲပြောင်းမှုနှင့် ငွေပေးငွေယူမှုတစ်ကြောင်းလုပ်ဆောင်ပါ၊ ပြီးလျှင် QR ကုဒ်စကင်ဖတ်ပါ သို့မဟုတ် သင့် ပိုက်ဆံအိတ် Wallet လိပ်စာ ကော်ပီကူးပါ။</string>
   <!-- Removed by excludeNonTranslatables <string name="PaymentsAddMoneyFragment__learn_more__information" translatable="false">https://support.signal.org/hc/articles/360057625692#payments_transfer_from_exchange</string> -->
 
     <!-- PaymentsDetailsFragment -->
     <string name="PaymentsDetailsFragment__details">အသေးစိတ်အချက်အလက်များ</string>
     <string name="PaymentsDetailsFragment__status">အခြေအနေ</string>
-    <string name="PaymentsDetailsFragment__submitting_payment">ငွေပေးချေမှု တင်သွင်းနေသည်…</string>
-    <string name="PaymentsDetailsFragment__processing_payment">ငွေပေးချေမှု လုပ်ဆောင်နေသည်…</string>
-    <string name="PaymentsDetailsFragment__payment_complete">ငွေပေးချေမှု အောင်မြင်ပါပြီ</string>
-    <string name="PaymentsDetailsFragment__payment_failed">ငွေပေးချေမှု မအောင်မြင်ပါ</string>
     <string name="PaymentsDetailsFragment__network_fee">ကွန်ယက်အခကြေးငွေ</string>
     <string name="PaymentsDetailsFragment__sent_by">မှပေးပို့သည်</string>
-    <string name="PaymentsDetailsFragment__sent_to_s">%1$s သို့ပေးပို့ခဲ့ပြီး</string>
-    <string name="PaymentsDetailsFragment__you_on_s_at_s">သင့်ကို %1$s ၊ %2$s အချိန်တွင်</string>
-    <string name="PaymentsDetailsFragment__s_on_s_at_s">%1$s ကို %2$s ၊ %3$s အချိန်တွင်</string>
     <!-- Prefix to a name to indicate who a payment was sent to -->
-    <string name="PaymentsDetailsFragment__to">သို့</string>
-    <string name="PaymentsDetailsFragment__from">မှ</string>
     <string name="PaymentsDetailsFragment__information">ငွေပေးချေမှု ငွေပမာဏနှင့် လုပ်ဆောင်သည့်အချိန် အပါအဝင် ငွေပေးငွေယူသည့် အသေးစိတ်အချက်အလက်များသည် MobileCoin စာအုပ်စာရင်း၏ အစိတ်အပိုင်းတစ်ခု ဖြစ်ပါသည်။</string>
-    <string name="PaymentsDetailsFragment__coin_cleanup_fee">အကြွေစေ့ရှင်းရေးအခကြေး</string>
-    <string name="PaymentsDetailsFragment__coin_cleanup_information">ငွေပေးချေမှု လုပ်ဆောင်ရန် သင့်လက်ထဲတွင်ရှိသော အကြွေစေ့များကိုပေါင်းစပ်သော်လည်း မလုံလောက်မှုဖြစ်ခဲ့လျှင် \"အကြွေစေ့ရှင်းရေးအခကြေး\" ကို ကောက်ခံယူပါမည်။ ရှင်းခြင်းဖြင့် ငွေပေးချေမှုများ ဆက်လက် ပေးပို့နိုင်ပါမည်။</string>
-    <string name="PaymentsDetailsFragment__no_details_available">၎င်းငွေပေးချေမှုအတွက် အခြားအချက်အလက်များ မရရှိနိုင်ပါ</string>
   <!-- Removed by excludeNonTranslatables <string name="PaymentsDetailsFragment__learn_more__information" translatable="false">https://support.signal.org/hc/articles/360057625692#payments_details</string> -->
   <!-- Removed by excludeNonTranslatables <string name="PaymentsDetailsFragment__learn_more__cleanup_fee" translatable="false">https://support.signal.org/hc/articles/360057625692#payments_details_fees</string> -->
-    <string name="PaymentsDetailsFragment__sent_payment">ငွေပေးချေပြီး</string>
-    <string name="PaymentsDetailsFragment__received_payment">ငွေပေးချေမှုလက်ခံရယူပြီး</string>
-    <string name="PaymentsDeatilsFragment__payment_completed_s">ငွေပေးချေမှု အောင်မြင်ပြီး %1$s</string>
     <string name="PaymentsDetailsFragment__block_number">ဖုန်းနံပါတ် ဘလော့ခ်ရန်</string>
 
     <!-- PaymentsTransferFragment -->
@@ -4428,13 +4353,6 @@
     <string name="PaymentsTransferFragment__to_scan_or_enter_wallet_address">သို့ - စကင်ဖတ်ပါ သို့မဟုတ် ပိုက်ဆံအိတ် wallet လိပ်စာ ရိုက်ထည့်ပါ</string>
     <string name="PaymentsTransferFragment__you_can_transfer">သင်မှ MobileCoin လွှဲရန် ငွေလဲလှယ်မှုတစ်ခုမှ ပေးသော ပိုက်ဆံအိတ် wallet လိပ်စာသို့ လွှဲပြောင်းမှုတစ်ခု ပြီးစီးစေလိုပါသည်။ ပိုက်ဆံအိတ် wallet လိပ်စာသည် QR ကုဒ်အောက်တွင် ပုံမှန်အားဖြင့်တွေ့နိုင်သော နံပါတ်များနှင့် အက္ခရာများဖြစ်ပါသည်။</string>
     <string name="PaymentsTransferFragment__next">နောက်ထက်</string>
-    <string name="PaymentsTransferFragment__invalid_address">အကြုံးမဝင်သော လိပ်စာ</string>
-    <string name="PaymentsTransferFragment__check_the_wallet_address">သင်လွှဲပြောင်းရန် ကြိုးစားနေသည့် ပိုက်ဆံအိတ် wallet လိပ်စာ ကိုစစ်ပြီး ပြန်စမ်းကြည့်ပေးပါ။</string>
-    <string name="PaymentsTransferFragment__you_cant_transfer_to_your_own_signal_wallet_address">သင့်ပိုက်ဆံအိတ် wallet လိပ်စာသို့ သင်ကိုယ်တိုင် လွှဲလို့မရပါ။ သင့်အကောင့်မှ ပိုက်ဆံအိတ် wallet လိပ်စာ ကို ပံ့ပိုးသော ငွေလဲလှယ်မှုတစ်နေရာတွင် ရိုက်ထည့်ပေးပါ။</string>
-    <string name="PaymentsTransferFragment__to_scan_a_qr_code_signal_needs">QR ကုဒ်ကို စကင်ဖတ်ရန် Signal မှ သင့် ကင်မရာသုံးခွင့် လိုအပ်ပါသည်။</string>
-    <string name="PaymentsTransferFragment__signal_needs_the_camera_permission_to_capture_qr_code_go_to_settings">QR ကုဒ်ဖတ်ရန် Signal မှ သင့်ကင်မရာသုံးခွင့် လိုအပ်ပါသည်။ အပြင်အဆင်များ သို့သွား၍ \"ခွင့်ပြုချက်များ\" ကိုရွေးပါ၊ ပြီးလျှင် \"ကင်မရာ\" ကို ဖွင့်ပါ။</string>
-    <string name="PaymentsTransferFragment__to_scan_a_qr_code_signal_needs_access_to_the_camera">QR ကုဒ်ကို စကင်ဖတ်ရန် Signal မှ သင့် ကင်မရာသုံးခွင့် လိုအပ်ပါသည်။</string>
-    <string name="PaymentsTransferFragment__settings">အပြင်အဆင်များ</string>
 
     <!-- PaymentsTransferQrScanFragment -->
     <string name="PaymentsTransferQrScanFragment__scan_address_qr_code">QR ကုဒ် လိပ်စာ စကင်ဖတ်မယ်</string>
@@ -4444,7 +4362,6 @@
     <!-- Button text to request the payment from a user -->
     <string name="CreatePaymentFragment__request">တောင်းခံ</string>
     <string name="CreatePaymentFragment__pay">ပေးဆောင်ပါ</string>
-    <string name="CreatePaymentFragment__available_balance_s">ရရှိနိုင်သော လက်ကျန်ငွေ - %1$s</string>
     <string name="CreatePaymentFragment__toggle_content_description">ပုံစံပြောင်းရန်</string>
     <string name="CreatePaymentFragment__1">၁</string>
     <string name="CreatePaymentFragment__2">၂</string>
@@ -4457,10 +4374,8 @@
     <string name="CreatePaymentFragment__9">၉</string>
     <string name="CreatePaymentFragment__decimal">.</string>
     <string name="CreatePaymentFragment__0">၀</string>
-    <string name="CreatePaymentFragment__lt">&lt;</string>
     <string name="CreatePaymentFragment__backspace">Backspace</string>
     <string name="CreatePaymentFragment__add_note">မှတ်ချက်ထည့်မယ်</string>
-    <string name="CreatePaymentFragment__conversions_are_just_estimates">ငွေပြောင်းလဲခြင်းများသည် ခန့်မှန်းတွက်ချက်မှုများသာ ဖြစ်ပြီး မတိကျနိုင်ပါ။</string>
   <!-- Removed by excludeNonTranslatables <string name="CreatePaymentFragment__learn_more__conversions" translatable="false">https://support.signal.org/hc/articles/360057625692#payments_currency_conversion</string> -->
 
     <!-- EditNoteFragment -->
@@ -4470,26 +4385,10 @@
 
     <!-- ConfirmPaymentFragment -->
     <string name="ConfirmPayment__confirm_payment">ငွေပေးချေမှု အတည်ပြုမယ်</string>
-    <string name="ConfirmPayment__network_fee">ကွန်ယက်အခကြေးငွေ</string>
-    <string name="ConfirmPayment__estimated_s">ခန့်မှန်းထားသည် %1$s</string>
     <!-- Prefix to a name to indicate who a payment will be sent to -->
-    <string name="ConfirmPayment__to">သို့</string>
-    <string name="ConfirmPayment__total_amount">စုစုပေါင်း ပမာဏ</string>
-    <string name="ConfirmPayment__balance_s">လက်ကျန်ငွေ - %1$s</string>
-    <string name="ConfirmPayment__submitting_payment">ငွေပေးချေမှု တင်သွင်းနေသည်…</string>
-    <string name="ConfirmPayment__processing_payment">ငွေပေးချေမှု လုပ်ဆောင်နေသည်…</string>
-    <string name="ConfirmPayment__payment_complete">ငွေပေးချေမှု အောင်မြင်ပါပြီ</string>
-    <string name="ConfirmPayment__payment_failed">ငွေပေးချေမှု မအောင်မြင်ပါ</string>
-    <string name="ConfirmPayment__payment_will_continue_processing">ငွေပေးချေမှုကို ဆက်လက်လုပ်ဆောင်ပါမည်</string>
-    <string name="ConfirmPaymentFragment__invalid_recipient">လက်ခံသူ မမှန်ကန်ပါ</string>
     <!-- Title of a dialog show when we were unable to present the user\'s screenlock before sending a payment -->
-    <string name="ConfirmPaymentFragment__failed_to_show_payment_lock">ငွေပေးချေမှုလော့ခ်ကို ပြသရန် မအောင်မြင်ခဲ့ပါ။</string>
     <!-- Body of a dialog show when we were unable to present the user\'s screenlock before sending a payment -->
-    <string name="ConfirmPaymentFragment__you_enabled_payment_lock_in_the_settings">ဆက်တင်တွင် ငွေပေးချေမှုလော့ခ်ကို ဖွင့်ထားသော်လည်း ၎င်းကို မပြသနိုင်ပါ။</string>
     <!-- Button in a dialog that will take the user to the privacy settings -->
-    <string name="ConfirmPaymentFragment__go_to_settings">ဆက်တင်သို့ သွားရန်</string>
-    <string name="ConfirmPaymentFragment__this_person_has_not_activated_payments">၎င်း ပုဂ္ဂိုလ်မှ ငွေပေးချေမှုများ ဖွင့်ထားခြင်းမရှိပါ</string>
-    <string name="ConfirmPaymentFragment__unable_to_request_a_network_fee">ကွန်ယက်အခကြေး တောင်းဆိုရန်မရပါ။ ၎င်းငွေပေးချေမှု ဆက်လက်လုပ်ဆောင်ရန် အိုကေနှိပ်၍ ပြန်စမ်းကြည့်ပါ။</string>
 
     <!-- BiometricDeviceAuthentication -->
     <!-- Biometric/Device authentication prompt title -->
@@ -4501,7 +4400,6 @@
 
     <!-- SetCurrencyFragment -->
     <string name="SetCurrencyFragment__set_currency">ငွေကြေး သတ်မှတ်ရန်</string>
-    <string name="SetCurrencyFragment__all_currencies">ငွေကြေးများ အားလုံး</string>
 
     <!-- **************************************** -->
     <!-- menus -->
@@ -5371,20 +5269,9 @@
     <!-- InfoCard -->
     <string name="payment_info_card_about_mobilecoin">MobileCoin အကြောင်း</string>
     <string name="payment_info_card_mobilecoin_is_a_new_privacy_focused_digital_currency">MobileCoin သည် လုံခြုံရေးအလေးပေး ဒစ်ဂျစ်တယ်ငွေကြေးအသစ် ဖြစ်ပါသည်။</string>
-    <string name="payment_info_card_adding_funds">ငွေဖြည့်နေသည်</string>
-    <string name="payment_info_card_you_can_add_funds_for_use_in">သင့် ပိုက်ဆံအိတ် wallet လိပ်စာသို့ MobileCoin ပို့၍ Signal တွင် သုံးရန် ငွေဖြည့်နိုင်ပါသည်။</string>
-    <string name="payment_info_card_cashing_out">ငွေထုတ်ယူခြင်း</string>
-    <string name="payment_info_card_you_can_cash_out_mobilecoin">မည်သည့်အချိတ်မဆို MobileCoin ပံ့ပိုးသော ငွေလဲလှယ်သည့်နေရာတွင် MobileCoin ငွေထုတ်ယူလို့ရပါသည်။ ၎င်းငွေလဲလှယ်သည့်နေရာတွင် သင့်အကောင့်သို့ လွှဲလိုက်ပါ။</string>
     <string name="payment_info_card_hide_this_card">၎င်းကဒ်ကို ပုန်းမည်လား?</string>
-    <string name="payment_info_card_hide">ဝှက်ပါ</string>
     <!-- Title of save recovery phrase card -->
-    <string name="payment_info_card_save_recovery_phrase">ပြန်လည်ရယူရေး စကားစုကို သိမ်းရန်</string>
-    <string name="payment_info_card_your_recovery_phrase_gives_you">ပြန်လည်ရယူရန် စာပုဒ်တိုသည် သင့် ငွေပေးချေမှုအကောင့်ကို ပြန်လည်ရယူရန် နည်းတစ်နည်းဖြစ်ပါသည်။</string>
     <!-- Button in save recovery phrase card -->
-    <string name="payment_info_card_save_your_phrase">သင်၏ စကားစုကို သိမ်းရန်</string>
-    <string name="payment_info_card_update_your_pin">သင့် ပင်နံပါတ်ကို အပ်ဒိတ်ပြုလုပ်မယ်</string>
-    <string name="payment_info_card_with_a_high_balance">လက်ကျန်ငွေများလျှင် သင့်အကောင့်ကို ပိုမိုလုံခြုံမှုရှိစေရန် အက္ခရာနံပါတ်ပါသော ပင်နံပါတ်သို့ အပ်ဒိတ်ပြုလုပ်ပြီး သင့်အကောင့်ကို ကာကွယ်နိုင်ပါသည်။</string>
-    <string name="payment_info_card_update_pin">ပင်နံပါတ်ကို အပ်ဒိတ်ပြုလုပ်မယ်</string>
 
   <!-- Removed by excludeNonTranslatables <string name="payment_info_card__learn_more__about_mobilecoin" translatable="false">https://support.signal.org/hc/articles/360057625692#payments_which_ones</string> -->
   <!-- Removed by excludeNonTranslatables <string name="payment_info_card__learn_more__adding_to_your_wallet" translatable="false">https://support.signal.org/hc/articles/360057625692#payments_transfer_from_exchange</string> -->
@@ -5396,44 +5283,28 @@
     <string name="DeactivateWalletFragment__its_recommended_that_you">ပိုက်ဆံအိတ် Wallet ကို မပိတ်မီ အခြား ပိုက်ဆံအိတ် Wallet သို့ သင့်ငွေများကို လွှဲထားရန် အကြံပြုပါသည်။ ယခု မလွှဲထားလျှင် သင်မှ ငွေပေးချေမှုများ ပြန်ဖွင်ခဲ့သည့်အချိန်တွင် ၎င်းငွေများသည် Signal နှင့်ချိတ်ထားသော ပိုက်ဆံအိတ် Wallet တွင်ကျန်ရှိနေပါမည်။</string>
     <string name="DeactivateWalletFragment__transfer_remaining_balance">ကျန်ရှိသောလက်ကျန်ငွေကို လွှဲပြောင်းမယ်</string>
     <string name="DeactivateWalletFragment__deactivate_without_transferring">မလွှဲဘဲ ပိတ်ပါမယ်</string>
-    <string name="DeactivateWalletFragment__deactivate">ပိတ်မယ်</string>
-    <string name="DeactivateWalletFragment__deactivate_without_transferring_question">မလွှဲဘဲ ပိတ်မည်လား?</string>
-    <string name="DeactivateWalletFragment__your_balance_will_remain">သင်မှ ငွေပေးချေမှုများကို ပြန်ဖွင့်ခဲ့လျှင် သင့် လက်ကျန်ငွေသည် Signal နှင့် ချိတ်ထားသော သင့်ပိုက်ဆံအိတ် wallet ထဲတွင် ကျန်ရှိနေပါမည်။</string>
-    <string name="DeactivateWalletFragment__error_deactivating_wallet">ပိုက်ဆံအိတ် wallet ပိတ်ခြင်းတွင် ပျက်ကွက်မှုဖြစ်</string>
   <!-- Removed by excludeNonTranslatables <string name="DeactivateWalletFragment__learn_more__we_recommend_transferring_your_funds" translatable="false">https://support.signal.org/hc/articles/360057625692#payments_deactivate</string> -->
 
     <!-- PaymentsRecoveryStartFragment -->
     <string name="PaymentsRecoveryStartFragment__recovery_phrase">ပြန်လည်ရယူရန် စာပုဒ်တို</string>
     <string name="PaymentsRecoveryStartFragment__view_recovery_phrase">ပြန်လည်ရယူရန် စာပုဒ်တိုကို ကြည့်ရှုမယ်</string>
     <!-- Title in save recovery phrase screen -->
-    <string name="PaymentsRecoveryStartFragment__save_recovery_phrase">ပြန်လည်ရယူရေး စကားစုကို သိမ်းရန်</string>
-    <string name="PaymentsRecoveryStartFragment__enter_recovery_phrase">ပြန်လည်ရယူ စာပုဒ်တိုကို ရိုက်ထည့်ပါ</string>
     <plurals name="PaymentsRecoveryStartFragment__your_balance_will_automatically_restore">
         <item quantity="other">Signal ပြန်တင်သွင်းသည့်အချိန်တွင် သင့် Signal PIN ကို အတည်ပြုခဲ့လျှင် သင့် လက်ကျန်ငွေကို အလိုအလျောက်ပြန်လည် ရရှိပါမည်။ ပြန်လည်ရယူရန် စာပုဒ်တိုဖြင့်လည်း သင့်လက်ကျန်ငွေကို ပြန်ရယူနိုင်ပါသည်။ ၎င်းသည် သင့်အတွက်ထူးခြားသော စကားလုံး %1$d လုံးရှိသော စာပုဒ်တိုဖြစ်ပါသည်။ ရေးမှတ်ထားပြီး လုံခြုံသောတစ်နေရာတွင် သိမ်းထားပါ။</item>
     </plurals>
     <!-- Description in save recovery phrase screen which shows up when user has non zero balance -->
-    <string name="PaymentsRecoveryStartFragment__got_balance">လက်ကျန်ငွေ ရရှိထားပါသည်။ သင်၏ လက်ကျန်ငွေကို ပြန်လည်ရယူရန် သုံးနိုင်သည့် ပြန်လည်ရယူရေး စကားစု—စာလုံး 24 လုံးပါ ကီး ကို သိမ်းရန် အချိန်ကျပါပြီ။</string>
     <!-- Description in save recovery phrase screen which shows up when user navigates from info card -->
-    <string name="PaymentsRecoveryStartFragment__time_to_save">သင်၏ လက်ကျန်ငွေကို ပြန်လည်ရယူရန် သုံးနိုင်သည့် ပြန်လည်ရယူရေး စကားစု—စာလုံး 24 လုံးပါ ကီးကို သိမ်းရန် အချိန်ကျပါပြီ။</string>
-    <string name="PaymentsRecoveryStartFragment__your_recovery_phrase_is_a">သင်၏ ပြန်လည်ရယူရန် စာပုဒ်တိုသည် သင့်အတွက်သာ ထူးခြားသော စကားလုံး %1$d လုံးရှိသော စာပုဒ်တိုဖြစ်ပါသည်။ ၎င်းစာပုဒ်တိုကိုသုံး၍ သင့် လက်ကျန်ငွေ ပြန်ရယူလိုက်ပါ။</string>
     <string name="PaymentsRecoveryStartFragment__start">စမယ်</string>
-    <string name="PaymentsRecoveryStartFragment__enter_manually">ကိုယ်တိုင်ရိုက်ထည့်ပါ</string>
     <string name="PaymentsRecoveryStartFragment__paste_from_clipboard">ကလစ်ဘုတ်မှ​ ကူးရေးမယ်</string>
     <!-- Alert dialog title which asks before going back if user wants to save recovery phrase -->
-    <string name="PaymentsRecoveryStartFragment__continue_without_saving">မသိမ်းဘဲ ဆက်လုပ်မည်လား။</string>
     <!-- Alert dialog description to let user know why recovery phrase needs to be saved -->
-    <string name="PaymentsRecoveryStartFragment__your_recovery_phrase">သင်၏ ပြန်လည်ရယူရေး စကားစုသည် အဆိုးဆုံး အခြေအနေတွင် သင်၏ လက်ကျန်ငွေကို ပြန်လည်ရယူနိုင်စေပါသည်။ ၎င်းကို သိမ်းထားရန် အလေးအနက် အကြံပြုပါသည်။</string>
     <!-- Alert dialog option to skip recovery phrase -->
-    <string name="PaymentsRecoveryStartFragment__skip_recovery_phrase">ပြန်လည်ရယူရေး စကားစုကို ကျော်ရန်</string>
     <!-- Alert dialog option to cancel dialog-->
-    <string name="PaymentsRecoveryStartFragment__cancel">မလုပ်တော့ပါ</string>
 
     <!-- PaymentsRecoveryPasteFragment -->
     <string name="PaymentsRecoveryPasteFragment__paste_recovery_phrase">ပြန်လည်ရယူရန် စာပုဒ်တိုကို ကူးရေးမယ်</string>
     <string name="PaymentsRecoveryPasteFragment__recovery_phrase">ပြန်လည်ရယူရန် စာပုဒ်တို</string>
     <string name="PaymentsRecoveryPasteFragment__next">နောက်ထက်</string>
-    <string name="PaymentsRecoveryPasteFragment__invalid_recovery_phrase">ပြန်လည်ရယူရန် စာပုဒ်တိုသည် မမှန်ကန်ပါ</string>
-    <string name="PaymentsRecoveryPasteFragment__make_sure">သင်မှ စကားလုံး %1$d လုံးကို ရိုက်ထည့်ထားသည်ကို သေချာစေပြီး ပြန်စမ်းကြည့်ပေးပါ။</string>
 
   <!-- Removed by excludeNonTranslatables <string name="PaymentsRecoveryStartFragment__learn_more__view" translatable="false">https://support.signal.org/hc/articles/360057625692#payments_wallet_view_passphrase</string> -->
   <!-- Removed by excludeNonTranslatables <string name="PaymentsRecoveryStartFragment__learn_more__restore" translatable="false">https://support.signal.org/hc/articles/360057625692#payments_wallet_restore_passphrase</string> -->
@@ -5443,38 +5314,24 @@
     <string name="PaymentsRecoveryPhraseFragment__edit">ပြင်ရန်</string>
     <string name="PaymentsRecoveryPhraseFragment__your_recovery_phrase">သင်၏ ပြန်လည်ရယူရန် စာပုဒ်တို</string>
     <string name="PaymentsRecoveryPhraseFragment__write_down_the_following_d_words">အောက်ပါ စကားလုံး %1$d လုံးကို အစီစဥ်လိုက် ရေးသားမှတ်ထားပါ။ လုံခြုံသောနေရာတွင် ၎င်းစာတွဲများကို သိမ်းထားပါ။</string>
-    <string name="PaymentsRecoveryPhraseFragment__make_sure_youve_entered">သင်ရိုက်ထည့်ထားသော စာပုဒ်တိုကို သေချာစေပါ။</string>
     <string name="PaymentsRecoveryPhraseFragment__do_not_screenshot_or_send_by_email">စကင်ရှော့မရိုက်ပါနှင့် သို့မဟုတ် အီးမေးလ် မပို့ပါနှင့်။</string>
-    <string name="PaymentsRecoveryPhraseFragment__payments_account_restored">ငွေပေးချေမှု အကောင့်ကို ပြန်ရယူနိုင်ခဲ့ပါသည်။</string>
-    <string name="PaymentsRecoveryPhraseFragment__invalid_recovery_phrase">ပြန်လည်ရယူရန် စာပုဒ်တိုသည် မမှန်ကန်ပါ</string>
-    <string name="PaymentsRecoveryPhraseFragment__make_sure_youve_entered_your_phrase_correctly_and_try_again">သင်ရိုက်ထည့်ထားသော စာပုဒ်တိုကို သေချာစေပါ၊ ပြီးလျှင် ပြန်စမ်းကြည့်ပါ။</string>
-    <string name="PaymentsRecoveryPhraseFragment__copy_to_clipboard">ကလစ်ဘုတ် ပေါ်သို့ ကူးယူမည်လား?</string>
-    <string name="PaymentsRecoveryPhraseFragment__if_you_choose_to_store">ဒီဂျစ်တယ်စနစ်ဖြင့် သင့် ပြန်လည်ရယူ စာပုဒ်တိုကို သိမ်းဆည်းမည်ဆိုလျှင် သင်ယုံကြည်ပြီး လုံခြုံသောတစ်နေရာတွင် သိမ်းထားရန် စေလိုပါသည်။</string>
     <string name="PaymentsRecoveryPhraseFragment__copy">ကူးမည်</string>
 
     <!-- PaymentsRecoveryPhraseConfirmFragment -->
     <string name="PaymentRecoveryPhraseConfirmFragment__confirm_recovery_phrase">ပြန်လည်ရယူ စာပုဒ်တိုကို အတည်ပြုပါ</string>
     <string name="PaymentRecoveryPhraseConfirmFragment__enter_the_following_words">သင့် ပြန်လည်ရယူ စာပုဒ်တိုမှ အောက်ပါ စကားလုံးများကို ရိုက်ထည့်ပါ။</string>
-    <string name="PaymentRecoveryPhraseConfirmFragment__word_d">စာလုံး %1$d</string>
     <string name="PaymentRecoveryPhraseConfirmFragment__see_phrase_again">စာပုဒ်တိုကို ပြန်ကြည့်ပါမည်</string>
     <string name="PaymentRecoveryPhraseConfirmFragment__done">ပြီးပါပြီ</string>
-    <string name="PaymentRecoveryPhraseConfirmFragment__recovery_phrase_confirmed">ပြန်လည်ရယူ စာပုဒ်တိုကို အတည်ပြုပြီး</string>
 
     <!-- PaymentsRecoveryEntryFragment -->
     <string name="PaymentsRecoveryEntryFragment__enter_recovery_phrase">ပြန်လည်ရယူ စာပုဒ်တိုကို ရိုက်ထည့်ပါ</string>
-    <string name="PaymentsRecoveryEntryFragment__enter_word_d">%1$d စကားလုံး ရိုက်ထည့်ပါ</string>
-    <string name="PaymentsRecoveryEntryFragment__word_d">စာလုံး %1$d</string>
     <string name="PaymentsRecoveryEntryFragment__next">နောက်ထက်</string>
-    <string name="PaymentsRecoveryEntryFragment__invalid_word">စာလုံး မမှန်ကန်ပါ</string>
 
     <!-- UnreadPayments -->
     <string name="UnreadPayments__s_sent_you_s">%1$s သည် သင့်ကို %2$s ပေးပို့ခဲ့ပါသည်</string>
     <string name="UnreadPayments__d_new_payment_notifications">ငွေပေးချေမှု သတိပေးချက်အသစ်များ %1$d ခု</string>
 
     <!-- CanNotSendPaymentDialog -->
-    <string name="CanNotSendPaymentDialog__cant_send_payment">ငွေပေးချေမှုကို မပို့နိုင်ပါ</string>
-    <string name="CanNotSendPaymentDialog__to_send_a_payment_to_this_user">၎င်းသုံးသူသို့ ငွေပေးချေမှုပေးရန် ၎င်းတို့သည် သင့်ထံမှ မက်ဆေ့ချ်တောင်းဆိုမှု ကို လက်ခံရန်လိုပါမည်။ ၎င်းသုံးသူသို့ မက်ဆေ့ပို့၍ တောင်းဆိုလိုက်ပါ။</string>
-    <string name="CanNotSendPaymentDialog__send_a_message">မက်ဆေ့ချ်ပို့မယ်</string>
 
     <!-- GroupsInCommonMessageRequest -->
     <string name="GroupsInCommonMessageRequest__you_have_no_groups_in_common_with_this_person">၎င်းပုဂ္ဂိုလ်နှင့် သင့်ထံ တူညီသော အဖွဲ့များ မရှိပါ။ အလိုမရှိသော မက်ဆေ့ချ်များကို မလက်ခံမီ တောင်းခံချက်များကို သေချာစွာ သုံးသပ်ပါ။</string>
@@ -5908,13 +5765,9 @@
     <!-- ChatColorGradientTool -->
 
     <!-- Title text for prompt to donate. Shown in a popup at the bottom of the chat list. -->
-    <string name="Donate2022Q2Megaphone_donate_to_signal">Signal ကို လှူဒါန်းရန်</string>
     <!-- Body text for prompt to donate. Shown in a popup at the bottom of the chat list. -->
-    <string name="Donate2022Q2Megaphone_signal_is_powered_by_people_like_you">Signal ကိုသင့်လိုသူများက အားဖြည့်ကူညီပေးထားပါသည်။ လစဉ်လှူဒါန်းပြီး ဘဲ့ဂျ်တစ်ခု ရယူလိုက်ပါ။</string>
     <!-- Button label that brings a user to the donate screen. Shown in a popup at the bottom of the chat list. -->
-    <string name="Donate2022Q2Megaphone_donate">လှူဒါန်းရန်</string>
     <!-- Button label that dismissed a prompt to donate. Shown in a popup at the bottom of the chat list. -->
-    <string name="Donate2022Q2Megaphone_not_now">ယခု မလုပ်ဆောင်သေးပါ။</string>
 
     <!-- EditReactionsFragment -->
     <string name="EditReactionsFragment__customize_reactions">တုံ့ပြန်မှုများကို စိတ်ကြိုက်ပြင်ရန်</string>
@@ -5931,11 +5784,7 @@
     <string name="AddAProfilePhotoMegaphone__add_photo">ဓာတ်ပုံ ပေါင်းထည့်ရန်</string>
 
     <!-- BecomeASustainerMegaphone -->
-    <string name="BecomeASustainerMegaphone__become_a_sustainer">ပါဝင်အားဖြည့်သူ ဖြစ်စေရန်</string>
     <!-- Displayed in the Become a Sustainer megaphone -->
-    <string name="BecomeASustainerMegaphone__signal_is_powered_by">Signal ကိုသင့်လိုသူများက အားဖြည့်ကူညီပေးထားပါသည်။ လှူဒါန်းပြီး ဘဲ့ဂျ်တစ်ခု ရယူလိုက်ပါ။</string>
-    <string name="BecomeASustainerMegaphone__not_now">ယခု မလုပ်ဆောင်သေးပါ။</string>
-    <string name="BecomeASustainerMegaphone__donate">လှူဒါန်းရန်</string>
 
     <!-- KeyboardPagerFragment -->
     <string name="KeyboardPagerFragment_emoji">အီမိုဂျိ</string>
@@ -6276,15 +6125,9 @@
     <string name="MediaCaptureFragment_device_link_dialog_continue">ဆက်လုပ်ရန်</string>
 
 
-    <string name="BadgesOverviewFragment__my_badges">ကျွန်ုပ်၏ ဘဲ့ဂျ်များ</string>
     <string name="BadgesOverviewFragment__featured_badge">အသားပေးထားသည့် ဘဲ့ဂျ်</string>
-    <string name="BadgesOverviewFragment__display_badges_on_profile">ပရိုဖိုင်တွင် ဘဲ့ဂျ်များ ပြသရန်</string>
-    <string name="BadgesOverviewFragment__failed_to_update_profile">ပရိုဖိုင် အပ်ဒိတ်လုပ်ရန် မအောင်မြင်ခဲ့ပါ</string>
 
 
-    <string name="SelectFeaturedBadgeFragment__select_a_badge">ဘဲ့ဂျ်တစ်ခု ရွေးချယ်ရန်</string>
-    <string name="SelectFeaturedBadgeFragment__you_must_select_a_badge">ဘဲ့ဂျ်တစ်ခု ရွေးချယ်ရပါမည်</string>
-    <string name="SelectFeaturedBadgeFragment__failed_to_update_profile">ပရိုဖိုင် အပ်ဒိတ်လုပ်ရန် မအောင်မြင်ခဲ့ပါ</string>
 
     <!-- Displayed on primary button in the bottom sheet as a call-to-action to launch into the donation flow -->
     <string name="ViewBadgeBottomSheetDialogFragment__donate_now">လှူဒါန်းရန်</string>
@@ -6297,29 +6140,21 @@
 
     <string name="ImageView__badge">ဘဲ့ဂျ်</string>
 
-    <string name="SubscribeFragment__cancel_subscription">ပုံမှန်လှူဒါန်းငွေကို ပယ်ဖျက်ရန်</string>
     <string name="SubscribeFragment__confirm_cancellation">ပယ်ဖျက်မှုကို အတည်ပြုမည်လား။</string>
     <string name="SubscribeFragment__you_wont_be_charged_again">သင့်ထံမှ ထပ်မံ၍ ငွေတောင်းခံတော့မည် မဟုတ်ပါ။ သင်၏ ကျသင့်ငွေတောင်းခံကာလအဆုံးတွင် သင့်ဘဲ့ဂျ်ကို သင့်ပရိုဖိုင်မှ ဖယ်ရှားသွားပါမည်။</string>
     <string name="SubscribeFragment__not_now">ယခု မလုပ်ဆောင်သေးပါ။</string>
     <string name="SubscribeFragment__confirm">အတည်ပြုသည်</string>
-    <string name="SubscribeFragment__update_subscription">ပုံမှန်လှူဒါန်းငွေကို အပ်ဒိတ်လုပ်ရန်</string>
-    <string name="SubscribeFragment__your_subscription_has_been_cancelled">သင်၏ ပုံမှန်လှူဒါန်းငွေကို ပယ်ဖျက်ပြီးပါပြီ။</string>
-    <string name="SubscribeFragment__update_subscription_question">ပုံမှန်လှူဒါန်းငွေကို အပ်ဒိတ်လုပ်မည်လား။</string>
     <string name="SubscribeFragment__update">အပ်ဒိတ်မယ်</string>
     <string name="SubscribeFragment__you_will_be_charged_the_full_amount_s_of">ယနေ့တွင် ပုံမှန်လှူဒါန်းငွေ နှုန်းထားအသစ်၏ ပမာဏအပြည့် (%1$s) ကို သင့်ထံမှ ဖြတ်တောက်သွားပါမည်။ သင်၏ ပုံမှန်လှူဒါန်းငွေကို လစဉ် သက်တမ်းတိုးသွားပါမည်။</string>
 
-    <string name="Subscription__s_per_month">တစ်လလျှင် %1$s</string>
     <!-- Shown when a subscription is active and isn\'t going to expire at the end of the term -->
-    <string name="Subscription__renews_s">%1$s တွင် သက်တမ်းတိုးသည်</string>
     <!-- Shown when a subscription is active and is going to expire at the end of the term -->
-    <string name="Subscription__expires_s">· %1$s သက်တမ်းကုန်ပါမည်</string>
 
     <!-- Title of learn more sheet -->
     <string name="SubscribeLearnMoreBottomSheetDialogFragment__signal_is_different">မှီခိုမှုကင်းသည့် အကျိုးအမြတ်မယူသော အဖွဲ့အစည်းတစ်ခုအနေဖြင့် Signal သည် သီးသန့်မက်ဆေ့ချ်ပေးပို့ခြင်းနှင့် ဖုန်းခေါ်ဆိုမှုများကို အလေးအနက်ထားပါသည်။ ကြော်ငြာများ မရှိ၊ ခြေရာခံခြင်း မရှိ၊ စောင့်ကြည့်ခြင်း မရှိ။ Signal ကို ပံ့ပိုးရန် ယနေ့ပင် လှူဒါန်းလိုက်ပါ။</string>
     <!-- First small text blurb on learn more sheet -->
     <string name="SubscribeLearnMoreBottomSheetDialogFragment__private_messaging">No ads, no trackers, no surveillance. Donate today to support Signal.</string>
     <!-- Second small text blurb on learn more sheet -->
-    <string name="SubscribeLearnMoreBottomSheetDialogFragment__donate_and_get_badge">လှူဒါန်းသည့်အခါ သင့်ပရိုဖိုင်တွင် ဘဲ့ဂျ်တစ်ခုရယူရန် ရွေးချယ်နိုင်သည်</string>
     <!-- Third small text blurb on learn more sheet -->
     <string name="SubscribeLearnMoreBottomSheetDialogFragment__your_privacy_is_our_mission">သင့် ကိုယ််ရေးလုံခြုံမှုသည် ကျွန်ုပ်တို့၏ ရည်မှန်းချက်ဖြစ်ပါသည်</string>
     <!-- Fourth small text blurb on learn more sheet. Non-English translations should use "Signal is a nonprofit." instead, dropping the 501c3 reference. -->
@@ -6327,60 +6162,37 @@
 
     <string name="SubscribeThanksForYourSupportBottomSheetDialogFragment__thanks_for_your_support">သင့်ပံ့ပိုးကူညီမှုအတွက် ကျေးဇူးတင်ပါသည်။</string>
     <!-- Subtext underneath the dialog title on the thanks sheet -->
-    <string name="SubscribeThanksForYourSupportBottomSheetDialogFragment__youve_earned_a_donor_badge">Signal ထံမှ လှူဒါန်းသူ ဘဲ့ဂျ် ရထားပြီးပါပြီ။ သင်၏ ပံ့ပိုးမှုကို ပြသရန် သင့်ပရိုဖိုင်တွင် ဖော်ပြပေးပါ။</string>
     <string name="SubscribeThanksForYourSupportBottomSheetDialogFragment__you_can_also">သင်သည်လည်း</string>
-    <string name="SubscribeThanksForYourSupportBottomSheetDialogFragment__become_a_montly_sustainer">လစဉ် ပါဝင်အားဖြည့်သူ ဖြစ်နိုင်ပါသည်။</string>
     <string name="SubscribeThanksForYourSupportBottomSheetDialogFragment__display_on_profile">ပရိုဖိုင်တွင် ပြသရန်</string>
-    <string name="SubscribeThanksForYourSupportBottomSheetDialogFragment__make_featured_badge">အသားပေးထားသည့် ဘဲ့ဂျ် ပြုလုပ်ရန်</string>
     <string name="SubscribeThanksForYourSupportBottomSheetDialogFragment__continue">ဆက်လုပ်ရန်</string>
     <string name="ThanksForYourSupportBottomSheetFragment__when_you_have_more">သင့်တွင် ဘဲ့ဂျ်တစ်ခုထက် ပိုရှိပါက သင့်ပရိုဖိုင်တွင် အခြားသူများ မြင်နိုင်မည့် အသားပေးဖော်ပြလိုသော ဘဲ့ဂျ်ကို ရွေးနိုင်ပါသည်။</string>
 
-    <string name="BecomeASustainerFragment__get_badges">Signal ကို ပံ့ပိုးခြင်းဖြင့် သင့်ပရိုဖိုင်အတွက် ဘဲ့ဂျ်များကို ရယူပါ။</string>
-    <string name="BecomeASustainerFragment__signal_is_a_non_profit">Signal သည် ကြော်ငြာသူများ သို့မဟုတ် ရင်းနှီးမြှုပ်နှံသူများ မရှိဘဲ သင်ကဲ့သို့သော သူများနှင့်သာ ပံ့ပိုးလုပ်ဆောင်သည့် အကျိုးအမြတ်မယူသော အဖွဲ့အစည်းဖြစ်ပါသည်။</string>
 
     <!-- Button label for creating a donation -->
-    <string name="ManageDonationsFragment__donate_to_signal">Signal ကို လှူဒါန်းရန်</string>
     <!-- Heading for more area of manage subscriptions page -->
-    <string name="ManageDonationsFragment__more">နောက်ထပ်</string>
     <!-- Heading for receipts area of manage subscriptions page -->
     <!-- Heading for my subscription area of manage subscriptions page -->
-    <string name="ManageDonationsFragment__my_support">My Support</string>
-    <string name="ManageDonationsFragment__manage_subscription">ပုံမှန်လှူဒါန်းငွေကို စီမံရန်</string>
     <!-- Label for Donation Receipts button -->
-    <string name="ManageDonationsFragment__donation_receipts">လှူဒါန်းမှု ပြေစာများ</string>
-    <string name="ManageDonationsFragment__badges">ဘဲ့ဂျ်များ</string>
     <!-- Label that externally links to Signal Donor FAQ page -->
-    <string name="ManageDonationsFragment__subscription_faq">လှူဒါန်းသူ မေးဖြေများ</string>
     <!-- Preference heading for other ways to donate -->
-    <string name="ManageDonationsFragment__other_ways_to_give">အခြားလှူဒါန်းမှုနည်းလမ်းများ</string>
     <!-- Preference label to launch badge gifting -->
-    <string name="ManageDonationsFragment__donate_for_a_friend">မိတ်ဆွေတစ်ယောက်အတွက် လှူရန်</string>
     <!-- Dialog title shown when a donation requires verifying/confirmation outside of the app and the user hasn\'t done that yet -->
-    <string name="ManageDonationsFragment__couldnt_confirm_donation">လှူဒါန်းမှုကို အတည်ပြုနိုင်ခြင်းမရှိပါ</string>
     <!-- Dialog message shown when a monthly donation requires verifying/confirmation outside of the app and the user hasn\'t done that yet, placeholder is money amount -->
-    <string name="ManageDonationsFragment__your_monthly_s_donation_couldnt_be_confirmed_ideal_wero">Your %1$s/month donation couldn\'t be confirmed. Check your banking app to approve your iDEAL | Wero payment.</string>
     <!-- Dialog message shown when a one-time donation requires verifying/confirmation outside of the app and the user hasn\'t done that yet, placeholder is money amount -->
-    <string name="ManageDonationsFragment__your_one_time_s_donation_couldnt_be_confirmed_ideal_wero">Your one-time %1$s donation couldn\'t be confirmed. Check your banking app to approve your iDEAL | Wero payment.</string>
 
-    <string name="Boost__enter_custom_amount">စိတ်ကြိုက်ပမာဏကို ရိုက်ထည့်ပါ</string>
     <!-- Error label when the amount is smaller than what we can accept -->
-    <string name="Boost__the_minimum_amount_you_can_donate_is_s">သင်လှူဒါန်းနိုင်သည့် အနည်းဆုံးပမာဏမှာ %1$s ဖြစ်ပါသည်</string>
 
     <string name="MySupportPreference__s_per_month">တစ်လလျှင် %1$s</string>
     <string name="MySupportPreference__renews_s">%1$s တွင် သက်တမ်းတိုးသည်</string>
     <!-- Subtitle shown when processing a donation transaction -->
     <string name="MySupportPreference__processing_transaction">ငွေအလွှဲအပြောင်း စီမံလုပ်ဆောင်နေဆဲ…</string>
     <!-- Displayed on "My Support" screen when user badge failed to be added to their account -->
-    <string name="MySupportPreference__couldnt_add_badge_s">ဘဲ့ဂျ်ကို ပေါင်းထည့်၍မရပါ။ %1$s</string>
     <string name="MySupportPreference__please_contact_support">အကူအညီရယူရန် ဆက်သွယ်ပါ။</string>
     <!-- Displayed as a subtitle on a row in the Manage Donations screen when payment for a donation is pending -->
-    <string name="MySupportPreference__payment_pending">ငွေပေးချေမှုကို လုပ်ဆောင်နေဆဲ</string>
     <!-- Displayed as a dialog message when clicking on a donation row that is pending. Placeholder is a formatted fiat amount -->
-    <string name="MySupportPreference__your_bank_transfer_of_s">သင်၏ %1$s ဘဏ်ငွေလွှဲပြောင်းမှုကို လုပ်ဆောင်ဆဲဖြစ်ပါသည်။ ဘဏ်ငွေလွှဲပြောင်းမှုများ ပြီးစီးရန် ရုံးဖွင့်ရက် 1 ရက်မှ 14 ရက်အထိ ကြာနိုင်ပါသည်။  </string>
     <!-- Displayed in the pending help dialog, used to launch user to more details about bank transfers -->
     <string name="MySupportPreference__learn_more">ပိုမိုလေ့လာရန်</string>
     <!-- Displayed when a subscription refresh is being performed -->
-    <string name="MySupportPreference__checking_subscription">ပုံမှန်လှူဒါန်းငွေ စစ်ဆေးနေသည်…</string>
 
     <!-- Title of dialog telling user they need to update signal as it expired -->
     <string name="UpdateSignalExpiredDialog__title">Signal ကို အပ်ဒိတ်လုပ်ပါ။</string>
@@ -6401,126 +6213,66 @@
     <string name="ReregisterSignalDialog__cancel_action">မလုပ်တော့ပါ</string>
 
     <!-- Title of expiry sheet when boost badge falls off profile unexpectedly. -->
-    <string name="ExpiredBadgeBottomSheetDialogFragment__boost_badge_expired">Boost ဘဲ့ဂျ် သက်တမ်းကုန်ပါပြီ</string>
     <!-- Displayed in the bottom sheet if a monthly donation badge unexpectedly falls off the user\'s profile -->
-    <string name="ExpiredBadgeBottomSheetDialogFragment__monthly_donation_cancelled">လစဉ် လှူဒါန်းမှု ပယ်ဖျက်ထားသည်</string>
     <!-- Displayed in the bottom sheet when a boost badge expires -->
-    <string name="ExpiredBadgeBottomSheetDialogFragment__your_boost_badge_has_expired_and">သင့် Boost ဘဲ့ဂျ် သက်တမ်းကုန်ပြီဖြစ်၍ သင့်ပရိုဖိုင်တွင် မမြင်နိုင်တော့ပါ။</string>
-    <string name="ExpiredBadgeBottomSheetDialogFragment__you_can_reactivate">တစ်ကြိမ်စာ လှူဒါန်းမှုဖြင့် သင့် Boost ဘဲ့ဂျ်ကို နောက်ထပ် ရက် ၃၀ စာ ပြန်လည်သက်ဝင်အောင် လုပ်ဆောင်နိုင်ပါသည်။</string>
     <!-- Displayed when we do not think the user is a subscriber when their boost expires -->
-    <string name="ExpiredBadgeBottomSheetDialogFragment__you_can_keep">Signal ကို ဆက်သုံးနိုင်သော်လည်း သင့်အတွက် ဖန်တီးထားသော နည်းပညာကို ပံ့ပိုးရန် လစဉ် လှူဒါန်းမှုပြုလုပ်ခြင်းဖြင့် ပါဝင်အားဖြည့်သူ ဖြစ်စေရန် စဉ်းစားပေးပါ။</string>
-    <string name="ExpiredBadgeBottomSheetDialogFragment__become_a_sustainer">ပါဝင်အားဖြည့်သူ ဖြစ်စေရန်</string>
-    <string name="ExpiredBadgeBottomSheetDialogFragment__add_a_boost">Boost ပေါင်းထည့်ရန်</string>
-    <string name="ExpiredBadgeBottomSheetDialogFragment__not_now">ယခု မလုပ်ဆောင်သေးပါ။</string>
     <!-- Copy displayed when badge expires after user inactivity -->
-    <string name="ExpiredBadgeBottomSheetDialogFragment__your_recurring_monthly_donation_was_automatically">သင်သည် အချိန်ကြာမြင့်စွာ အသုံးမပြုခဲ့သဖြင့် သင်၏ လစဉ် ထပ်တလဲလဲ လှူဒါန်းမှုကို အော်တို ပယ်ဖျက်ခဲ့ပါသည်။ သင်၏ %1$s ဘဲ့ဂျ်ကို သင့်ပရိုဖိုင်တွင် မြင်ရတော့မည် မဟုတ်ပါ။</string>
     <!-- Copy displayed when badge expires after payment failure -->
-    <string name="ExpiredBadgeBottomSheetDialogFragment__your_recurring_monthly_donation_was_canceled">သင်၏ ငွေပေးချေမှုကို ကျွန်ုပ်တို့ဘက်မှ စီမံလုပ်ဆောင်နိုင်ခြင်းမရှိသောကြောင့် သင်၏ လစဉ် ထပ်တလဲလဲ လှူဒါန်းမှုကို ပယ်ဖျက်ခဲ့ပါသည်။ သင်၏ ဘဲ့ဂျ်ကို သင့်ပရိုဖိုင်တွင် မြင်ရတော့မည် မဟုတ်ပါ။</string>
     <!-- Copy displayed when badge expires after a payment failure and we have a displayable charge failure reason -->
-    <string name="ExpiredBadgeBottomSheetDialogFragment__your_recurring_monthly_donation_was_canceled_s">သင်၏ လစဉ် ထပ်တလဲလဲ လှူဒါန်းမှုကို ပယ်ဖျက်ခဲ့ပါသည်။ %1$s သင်၏ %2$s ဘဲ့ဂျ်ကို သင့်ပရိုဖိုင်တွင် မြင်ရတော့မည် မဟုတ်ပါ။</string>
-    <string name="ExpiredBadgeBottomSheetDialogFragment__you_can">Signal ကို ဆက်သုံးနိုင်သော်လည်း အက်ပ်ကို ပံ့ပိုးရန်နှင့် သင့်ဘဲ့ဂျ်ကို ပြန်လည်သက်ဝင်အောင် လုပ်ဆောင်ရန် ယခု သက်တမ်းတိုးပါ။</string>
-    <string name="ExpiredBadgeBottomSheetDialogFragment__renew_subscription">ပုံမှန်လှူဒါန်းငွေကို သက်တမ်းတိုးရန်</string>
     <!-- Button label to send user to Google Pay website -->
-    <string name="ExpiredBadgeBottomSheetDialogFragment__go_to_google_pay">Google Pay သို့ သွားရန်</string>
 
-    <string name="CantProcessSubscriptionPaymentBottomSheetDialogFragment__cant_process_subscription_payment">ပုံမှန်လှူဒါန်းငွေ ပေးချေမှုကို စီမံလုပ်ဆောင်၍ မရပါ</string>
-    <string name="CantProcessSubscriptionPaymentBottomSheetDialogFragment__were_having_trouble">သင်၏ Signal ပါဝင်အားဖြည့်သူ ငွေပေးချေမှု ကောက်ခံခြင်းအတွက် ပြဿနာရှိနေပါသည်။ သင်၏ ငွေပေးချေမှုနည်းလမ်းသည် အပ်ဒိတ်ဖြစ်ကြောင်း သေချာပါစေ။ မဖြစ်ပါက Google Pay တွင် အပ်ဒိတ်လုပ်ပါ။ Signal က ရက်အနည်းငယ်အကြာတွင် ငွေပေးချေမှုကို ထပ်မံစီမံလုပ်ဆောင်ရန် ကြိုးစားပါမည်။</string>
-    <string name="CantProcessSubscriptionPaymentBottomSheetDialogFragment__dont_show_this_again">ထပ်မပြပါနှင့်</string>
 
-    <string name="Subscription__contact_support">ပံ့ပိုးမှုစင်တာသို့ ဆက်သွယ်ပါ</string>
-    <string name="Subscription__get_a_s_badge">%1$s ဘဲ့ဂျ် ရယူရန်</string>
 
     <!-- *PaymentInProgressFragment strings -->
-    <string name="InAppPaymentInProgressFragment__processing_donation">လှူဒါန်းမှုကို စီမံလုပ်ဆောင်နေဆဲ…</string>
-    <string name="InAppPaymentInProgressFragment__processing_payment">ငွေပေးချေမှု လုပ်ဆောင်နေသည်…</string>
 
     <!--InAppDonations -->
     <!-- Label displayed in google play and on receipts for recurring subscriptions. Placeholder is level -->
-    <string name="InAppDonations__recurring_d">ထပ်တလဲလဲ လှူဒါန်းမှု %1$d</string>
 
     <!-- InAppPaymentErrors -->
     <!-- Displayed as a title in a dialog or notification when a payment failure happens. -->
-    <string name="InAppPaymentErrors__error_processing_payment">ငွေပေးချေမှု စီမံလုပ်ဆောင်ခြင်းဆိုင်ရာ ချို့ယွင်းချက်</string>
     <!-- Displayed as a message in a dialog or notification when a payment setup error happens. -->
-    <string name="InAppPaymentErrors__your_payment_couldnt_be_processed">သင့်ငွေပေးချေမှုကို စီမံလုပ်ဆောင်၍ မရနိုင်ပါ၊ သင့်အား ငွေကောက်ခံထားခြင်း မရှိပါ။ ထပ်ကြိုးစားကြည့်ပါ။</string>
     <!-- Displayed as a message in a dialog when we timeout waiting for a payment to be processed and token to be redeemed -->
-    <string name="InAppPaymentErrors__your_payment_is_still">သင့်ငွေပေးချေမှုကို စီမံလုပ်ဆောင်နေဆဲ ဖြစ်ပါသည်။ သင့်ချိတ်ဆက်မှုပေါ်မူတည်၍ မိနစ်အနည်းငယ် ကြာနိုင်ပါသည်။</string>
     <!-- Displayed as a message in a dialog or notification when stripe decline code issuer not available for backup payment. -->
-    <string name="InAppPaymentErrors__StripeDeclineCode__try_completing_the_payment_again">ငွေပေးချေမှု ပြီးမြောက်စေရန် ထပ်ကြိုးစားပါ သို့မဟုတ် နောက်ထပ်အချက်အလက်အတွက် သင့်ဘဏ်ကို ဆက်သွယ်ပါ။</string>
     <!-- Failure code text for revoked authorization of payment, displayed in a dialog or notification as a message. -->
-    <string name="InAppPaymentErrors__StripeFailureCode__this_payment_was_revoked">ဤငွေပေးချေမှုကို အကောင့်ပိုင်ရှင်က ရုပ်သိမ်းလိုက်ပြီး ဆောင်ရွက်၍မရနိုင်ပါ။ သင့်ထံမှ ငွေကောက်ခံခြင်း မရှိခဲ့ပါ။</string>
     <!-- Failure code text for a payment lacking an authorized mandate or incorrect mandate, displayed in a dialog or notification as a message.-->
-    <string name="InAppPaymentErrors__StripeFailureCode__an_error_occurred_while_processing_this_payment">ဤငွေပေးချေမှုကို စီမံဆောင်ရွက်နေစဉ် ချို့ယွင်းချက်တစ်ခု ဖြစ်သွားပါသည်၊ ထပ်မံကြိုးစားပေးပါ။</string>
 
     <!-- Displayed in notification when user payment fails to process on Stripe -->
-    <string name="DonationsErrors__error_processing_payment">လှူဒါန်းမှု စီမံလုပ်ဆောင်ရာတွင် ချို့ယွင်းချက်ရှိသည်</string>
     <!-- Displayed on manage donations screen as a dialog message when payment method failed -->
-    <string name="DonationsErrors__try_another_payment_method">အခြားသော ငွေပေးချေနည်းကို သုံးကြည့်ပါ သို့မဟုတ် နောက်ထပ်အချက်အလက်များအတွက် သင့်ဘဏ်ကို ဆက်သွယ်ပါ။</string>
     <!-- Displayed on manage donations screen error dialogs as an action label -->
-    <string name="DonationsErrors__learn_more">ပိုမိုလေ့လာရန်</string>
     <!-- Displayed on "My Support" screen when user subscription payment method failed. -->
-    <string name="DonationsErrors__error_processing_payment_s">လှူဒါန်းမှု စီမံလုပ်ဆောင်ရာတွင် ချို့ယွင်းချက်ရှိသည်။ %1$s</string>
-    <string name="DonationsErrors__your_payment">သင့်လှူဒါန်းမှုကို စီမံလုပ်ဆောင်နိုင်ခြင်း မရှိခဲ့ဘဲ သင့်ထံမှ ငွေကောက်ခံခဲ့ခြင်းမရှိပါ။ ထပ်ကြိုးစားကြည့်ပါ။</string>
-    <string name="DonationsErrors__still_processing">စီမံလုပ်ဆောင်နေဆဲ</string>
-    <string name="DonationsErrors__couldnt_add_badge">ဘဲ့ဂျ် ပေါင်းထည့်၍ မရနိုင်ပါ</string>
     <!-- Displayed when backup credential could not be redeemed. Dialog or notification title -->
-    <string name="DonationsError__something_went_wrong">တစ်ခုခုမှားယွင်းနေသည်</string>
     <!-- Displayed when backup credential could not be redeemed. Dialog or notification body -->
-    <string name="DonationsError__your_backups_subscription_couldnt_be_displayed">သင်၏ ဘက်ခ်အပ် ပုံမှန်လှူဒါန်းငွေကို ပြသ၍မရပါ။ အကူအညီရယူရန် ဆက်သွယ်ပါ။</string>
     <!-- Displayed when badge credential couldn\'t be verified -->
-    <string name="DonationsErrors__failed_to_validate_badge">ဘဲ့ဂျ်ကို တရားဝင်အောင်ပြုလုပ်ရန် မအောင်မြင်ပါ</string>
     <!-- Displayed when badge credential couldn\'t be verified -->
-    <string name="DonationsErrors__could_not_validate">ဆာဗာ တုံ့ပြန်မှုကို အတည်ပြု၍ မရနိုင်ပါ။ အကူအညီရယူရန် ဆက်သွယ်ပါ။</string>
     <!-- Displayed as title when some generic error happens during sending donation on behalf of another user -->
-    <string name="DonationsErrors__donation_failed">လှူဒါန်းမှု မအောင်မြင်ပါ</string>
     <!-- Displayed as message when some generic error happens during sending donation on behalf of another user -->
-    <string name="DonationsErrors__your_payment_was_processed_but">သင့်လှူဒါန်းမှုကို စီမံလုပ်ဆောင်ပြီးသော်လည်း Signal သည် သင့်လှူဒါန်းမှု မက်ဆေ့ချ်ကို မပေးပို့နိုင်ခဲ့ပါ။ အကူအညီရယူရန် ဆက်သွယ်ပါ။</string>
-    <string name="DonationsErrors__your_badge_could_not">သင့်ဘဲ့ဂျ်ကို သင့်အကောင့်တွင် ပေါင်းထည့်၍ မရနိုင်ခဲ့သော်လည်း သင့်ထံမှ ငွေဖြတ်တောက်သွားနိုင်ပါသည်။ အကူအညီရယူရန် ဆက်သွယ်ပါ။</string>
-    <string name="DonationsErrors__your_payment_is_still">သင့်လှူဒါန်းမှုကို လုပ်ဆောင်နေဆဲ ဖြစ်ပါသည်။ သင့်ချိတ်ဆက်မှုအပေါ် မူတည်၍ မိနစ်အနည်းငယ် ကြာနိုင်ပါသည်။</string>
-    <string name="DonationsErrors__failed_to_cancel_subscription">ပုံမှန်လှူဒါန်းငွေကို ပယ်ဖျက်ရန် မအောင်မြင်ပါ</string>
-    <string name="DonationsErrors__subscription_cancellation_requires_an_internet_connection">ပုံမှန်လှူဒါန်းငွေ ပယ်ဖျက်မှုသည် အင်တာနက် ချိတ်ဆက်မှု လိုအပ်ပါသည်။</string>
     <string name="ViewBadgeBottomSheetDialogFragment__your_device_doesn_t_support">သင့်စက်သည် အက်ပ်အတွင်း လှူဒါန်းမှုများကို မပံ့ပိုးသောကြောင့် ဘဲ့ဂျ်ရရှိရန် လှူဒါန်း၍ မရနိုင်ပါ။ ကျွန်ုပ်တို့၏ ဝက်ဘ်ဆိုက်တွင် လှူဒါန်းမှု ပြုလုပ်ခြင်းဖြင့် Signal ကို ဆက်လက် ပံ့ပိုးကူညီနိုင်ပါသည်။</string>
     <string name="NetworkFailure__network_error_check_your_connection_and_try_again">ကွန်ရက် ချို့ယွင်းချက်။ သင့်ချိတ်ဆက်မှုကို စစ်ဆေးပြီး ထပ်ကြိုးစားပါ။</string>
     <string name="NetworkFailure__retry">ထပ်ကြိုးစားပါ</string>
     <!-- Displayed as a dialog title when the selected recipient for a gift doesn\'t support gifting -->
-    <string name="DonationsErrors__cannot_send_donation">လှူဒါန်းမှုကို ပေးပို့၍ မရနိုင်ပါ</string>
     <!-- Displayed as a dialog message when the selected recipient for a gift doesn\'t support gifting -->
-    <string name="DonationsErrors__this_user_cant_receive_donations_until">Signal ကို အဆင့်မြှင့်တင်မှု မလုပ်မချင်း ဤသုံးစွဲသူသည် လှူဒါန်းမှုများကို လက်ခံရရှိနိုင်မည် မဟုတ်ပါ။</string>
     <!-- Displayed as a dialog message when the user\'s profile could not be fetched, likely due to lack of internet -->
-    <string name="DonationsErrors__your_donation_could_not_be_sent">ကွန်ရက်ချို့ယွင်းချက်ကြောင့် သင့်လှူဒါန်းမှုကို မပေးပို့နိုင်ပါ။ ချိတ်ဆက်မှုစစ်ဆေးပြီး ထပ်ကြိုးစားကြည့်ပါ။</string>
     <!-- Displayed as a dialog message when the user encounters an error during an iDEAL donation -->
-    <string name="DonationsErrors__your_ideal_wero_couldnt_be_processed">Your iDEAL | Wero donation couldn\'t be processed. Try another payment method or contact your bank for more information.</string>
 
     <!-- Gift message view title -->
-    <string name="GiftMessageView__donation_on_behalf_of_s">%1$s ကိုယ်စား လှူဒါန်းမှု</string>
     <!-- Gift message view title for incoming donations -->
-    <string name="GiftMessageView__s_donated_to_signal_on">%1$s သည် သင့်ကိုယ်စား Signal သို့ လှူဒါန်းထားပါသည်</string>
     <!-- Gift badge redeem action label -->
-    <string name="GiftMessageView__redeem">လဲလှယ်ရန်</string>
     <!-- Gift badge view action label -->
-    <string name="GiftMessageView__view">ကြည့်မယ်</string>
     <!-- Gift badge redeeming action label -->
-    <string name="GiftMessageView__redeeming">လဲလှယ်နေဆဲ…</string>
     <!-- Gift badge redeemed label -->
-    <string name="GiftMessageView__redeemed">လဲလှယ်ပြီး</string>
 
 
     <!-- Stripe decline code generic_failure -->
-    <string name="DeclineCode__try_another_payment_method_or_contact_your_bank">အခြားသော ငွေပေးချေနည်းကို သုံးကြည့်ပါ သို့မဟုတ် နောက်ထပ်အချက်အလက်များအတွက် သင့်ဘဏ်ကို ဆက်သွယ်ပါ။</string>
     <!-- PayPal decline code for payment declined -->
-    <string name="DeclineCode__try_another_payment_method_or_contact_your_bank_for_more_information_if_this_was_a_paypal">အခြားသော ငွေပေးချေမှုနည်းလမ်းကို သုံးကြည့်ပါ သို့မဟုတ် နောက်ထပ်အချက်အလက်များအတွက် သင့်ဘဏ်သို့ ဆက်သွယ်ပါ။ ဤသည်မှာ PayPal ငွေလွှဲပြောင်းမှုတစ်ခု ဖြစ်ပါက PayPal သို့ ဆက်သွယ်ပါ။</string>
     <!-- Stripe decline code verify on Google Pay and try again -->
-    <string name="DeclineCode__verify_your_payment_method_is_up_to_date_in_google_pay_and_try_again">Google Pay တွင် သင့်ငွေပေးချေမှု နည်းလမ်းသည် အပ်ဒိတ်ဖြစ်ကြောင်း အတည်ပြုပြီး ထပ်ကြိုးစားပါ။</string>
     <!-- Stripe decline code learn more action label -->
     <string name="DeclineCode__learn_more">ထပ်မံလေ့လာရန်</string>
     <!-- Stripe decline code contact issuer -->
-    <string name="DeclineCode__verify_your_payment_method_is_up_to_date_in_google_pay_and_try_again_if_the_problem">Google Pay တွင် သင့်ငွေပေးချေမှု နည်းလမ်းသည် အပ်ဒိတ်ဖြစ်ကြောင်း အတည်ပြုပြီး ထပ်ကြိုးစားပါ။ ပြဿနာရှိနေသေးပါက သင့်ဘဏ်ကို ဆက်သွယ်ပါ။</string>
     <!-- Stripe decline code purchase not supported -->
     <string name="DeclineCode__your_card_does_not_support_this_type_of_purchase">သင့်ကတ်သည် ဤဝယ်ယူမှု အမျိုးအစားကို မပံ့ပိုးပေးပါ။ အခြားငွေပေးချေမှု နည်းလမ်းကို ကြိုးစားပါ။</string>
     <!-- Stripe decline code your card has expired -->
     <string name="DeclineCode__your_card_has_expired">သင့်ကတ် သက်တမ်းကုန်သွားပါပြီ။ Google Pay တွင် သင့်ငွေပေးချေမှု နည်းလမ်းကို အပ်ဒိတ်လုပ်ပြီး ထပ်ကြိုးစားပါ။</string>
     <!-- Stripe decline code go to google pay action label -->
-    <string name="DeclineCode__go_to_google_pay">Google Pay သို့ သွားရန်</string>
     <!-- Stripe decline code try credit card again action label -->
     <string name="DeclineCode__try">ထပ်မံကြိုးစားမည်</string>
     <!-- Stripe decline code incorrect card number -->
@@ -6534,7 +6286,6 @@
     <!-- Stripe decline code incorrect expiration year -->
     <string name="DeclineCode__the_expiration_year">သင့်ငွေပေးချေမှု နည်းလမ်းရှိ သက်တမ်းကုန်ဆုံးမည့်နှစ်သည် မမှန်ကန်ပါ။ Google Pay တွင် အပ်ဒိတ်လုပ်ပြီး ထပ်ကြိုးစားပါ။</string>
     <!-- Stripe decline code issuer not available -->
-    <string name="DeclineCode__try_completing_the_payment_again">လှူဒါန်းမှု ပြီးမြောက်စေရန် ထပ်ကြိုးစားပါ သို့မဟုတ် နောက်ထပ်အချက်အလက်အတွက် သင့်ဘဏ်ကို ဆက်သွယ်ပါ။</string>
     <!-- Stripe decline code processing error -->
     <string name="DeclineCode__try_again">ထပ်ကြိုးစားပါ သို့မဟုတ် နောက်ထပ်အချက်အလက်အတွက် သင့်ဘဏ်ကို ဆက်သွယ်ပါ။</string>
 
@@ -6556,15 +6307,10 @@
 
     <!-- Stripe Failure Codes for failed bank transfers -->
     <!-- Failure code text for insufficient funds, displayed in a dialog or notification -->
-    <string name="StripeFailureCode__the_bank_account_provided">ပေးထားသော ဘဏ်အကောင့်တွင် ဤဝယ်ယူမှုကို အပြီးသတ်ရန် ငွေအလုံအလောက်မရှိပါ၊ ထပ်မံကြိုးစားပါ သို့မဟုတ် နောက်ထပ်အချက်အလက်များအတွက် သင့်ဘဏ်သို့ ဆက်သွယ်ပါ။</string>
     <!-- Failure code text for revoked authorization of payment, displayed in a dialog or notification -->
-    <string name="StripeFailureCode__this_payment_was_revoked">ဤလှူဒါန်းမှုကို အကောင့်ပိုင်ရှင်က ရုပ်သိမ်းလိုက်၍ ဆောင်ရွက်၍မရနိုင်ပါ။ သင့်ထံမှ ငွေကောက်ခံခြင်း မရှိခဲ့ပါ။</string>
     <!-- Failure code text for a payment lacking an authorized mandate or incorrect mandate, displayed in a dialog or notification -->
-    <string name="StripeFailureCode__an_error_occurred_while_processing_this_payment">ဤလှူဒါန်းမှုကို စီမံလုပ်ဆောင်နေစဉ် အမှားအယွင်းတစ်ခု ဖြစ်သွားပါသည်၊ ထပ်မံကြိုးစားပေးပါ။</string>
     <!-- Failure code text for a closed account, deceased recipient, or one with blocked direct debits, displayed in a dialog or notification -->
-    <string name="StripeFailureCode__the_bank_details_provided_could_not_be_processed">ပေးထားသော ဘဏ်အသေးစိတ်အချက်များဖြင့် ဆောင်ရွက်၍မရနိုင်ပါ၊ နောက်ထပ်အချက်အလက်များအတွက် သင့်ဘဏ်သို့ ဆက်သွယ်ပါ။</string>
     <!-- Failure code text for a non-existent bank branch, invalid account holder, invalid iban, generic failure, or unknown bank failure, displayed in a dialog or notification -->
-    <string name="StripeFailureCode__verify_your_bank_details_are_correct">သင့်ဘဏ်အသေးစိတ် အချက်အလက်များ မှန်ကန်ကြောင်း စိစစ်အတည်ပြုပြီး ထပ်ကြိုးစားကြည့်ပါ။ ပြဿနာ ဆက်ရှိနေပါက သင့်ဘဏ်သို့ ဆက်သွယ်ပါ။</string>
 
     <!-- Title of create notification profile screen -->
     <string name="EditNotificationProfileFragment__name_your_profile">သင့်ပရိုဖိုင်ကို အမည်ပေးရန်</string>
@@ -6727,33 +6473,19 @@
     <string name="ReleaseNotes__official_only_chat">Signal ၏ တစ်ခုတည်းသော တရားဝင်ချက်(တ်)</string>
 
     <!-- Donation receipts activity title -->
-    <string name="DonationReceiptListFragment__all_activity">လှုပ်ရှားမှုများအားလုံး</string>
     <!-- Donation receipts all tab label -->
-    <string name="DonationReceiptListFragment__all">အားလုံး</string>
     <!-- Donation receipts recurring tab label -->
-    <string name="DonationReceiptListFragment__recurring">ထပ်ထလဲလဲ လှူခြင်း</string>
     <!-- Donation receipts one-time tab label -->
-    <string name="DonationReceiptListFragment__one_time">တစ်ကြိမ်</string>
     <!-- Donation receipts gift tab -->
-    <string name="DonationReceiptListFragment__for_a_friend">မိတ်ဆွေတစ်ဦးအတွက်</string>
     <!-- Donation receipts gift tab label -->
-    <string name="DonationReceiptListFragment__donation_for_a_friend">မိတ်ဆွေတစ်ယောက်အတွက် လှူဒါန်းမှု</string>
     <!-- Donation receipts donation type heading -->
-    <string name="DonationReceiptDetailsFragment__donation_type">လှူဒါန်းမှု အမျိုးအစား</string>
     <!-- Donation receipts date paid heading -->
-    <string name="DonationReceiptDetailsFragment__date_paid">ပေးချေသည့် ရက်စွဲ</string>
     <!-- Donation receipts share PNG -->
-    <string name="DonationReceiptDetailsFragment__share_receipt">ပြေစာကို မျှဝေရန်</string>
     <!-- Donation receipts list end note -->
-    <string name="DonationReceiptListFragment__if_you_have">Signal ကို ပြန်လည်ထည့်သွင်းထားခြင်းဖြစ်ပါက ယခင် လှူဒါန်းမှုများမှ ပြေစာများကို ရရှိမည် မဟုတ်ပါ။</string>
     <!-- Donation receipts document title -->
-    <string name="DonationReceiptDetailsFragment__donation_receipt">လှူဒါန်းမှု ပြေစာ</string>
     <!-- Donation receipts amount title -->
-    <string name="DonationReceiptDetailsFragment__amount">ပမာဏ</string>
     <!-- Donation receipts thanks -->
-    <string name="DonationReceiptDetailsFragment__thank_you_for_supporting">Signal ကို ပံ့ပိုးကူညီသည့်အတွက် ကျေးဇူးတင်ပါသည်။ သင်၏ ကူညီထောက်ပံ့မှုသည် ကမ္ဘာအနှံ့ရှိ သုံးစွဲသူသန်းပေါင်းများစွာအတွက် ကမ္ဘာအနှံ့ ဆက်သွယ်နိုင်မှုကို လုံခြုံစိတ်ချရစေပြီး လွတ်လပ်စွာ ထုတ်ဖော်ခွင့်ကို ကာကွယ်ပေးသည့် ဖွံ့ဖြိုးဆဲ Open Source Privacy နည်းပညာ၏ မစ်ရှင်ကို အားဖြည့်ပေးပါသည်။ သင်သည် အမေရိကန်ပြည်ထောင်စုတွင် နေထိုင်သူ ဖြစ်ပါက သင်၏ အခွန်မှတ်တမ်းများအတွက် ဤပြေစာကို ထိန်းသိမ်းထားပေးပါ။ Signal Technology Foundation သည် ပြည်တွင်းအခွန်ဥပဒေ၏ ပုဒ်မ 501c3 အရ အမေရိကန်ပြည်ထောင်စုရှိ အခွန်ကင်းလွတ်ခွင့်ရသော အကျိုးအမြတ်မယူသည့် အဖွဲ့အစည်း ဖြစ်ပါသည်။ ကျွန်ုပ်တို့၏ ဖက်ဒရယ် အခွန် ID မှာ 2–4506840 ဖြစ်ပါသည်။</string>
     <!-- Donation reciepts screen empty state title -->
-    <string name="DonationReceiptListFragment__no_receipts">ပြေစာများ မရှိပါ</string>
 
     <!-- region "Stories Tab" -->
 
@@ -7131,53 +6863,32 @@
         <item quantity="other">%1$s · %2$d ရက်တာကာလ</item>
     </plurals>
     <!-- Headline text on start fragment for gifting a badge -->
-    <string name="GiftFlowStartFragment__donate_for_a_friend">မိတ်ဆွေတစ်ယောက်အတွက် လှူရန်</string>
     <!-- Description text on start fragment for gifting a badge -->
     <plurals name="GiftFlowStartFragment__support_signal_by">
         <item quantity="other">Signal သုံးသည့် မိတ်ဆွေ သို့မဟုတ် မိသားစုဝင်အစား လှူဒါန်းမှု ပြုလုပ်၍ Signal အား ပံ့ပိုးပေးပါ။ ၎င်းတို့၏ ပရိုဖိုင်းတွင် %1$d ရက်ကြာ ပြသနိုင်မည့် ဘဲ့ဂျ်တစ်ခုကို ၎င်းတို့ လက်ခံရရှိပါမည်</item>
     </plurals>
     <!-- Action button label for start fragment for gifting a badge -->
-    <string name="GiftFlowStartFragment__next">နောက်ထက်</string>
     <!-- Title text on choose recipient page for badge gifting -->
-    <string name="GiftFlowRecipientSelectionFragment__choose_recipient">လက်ခံသူ ရွေးရန်</string>
     <!-- Title text on confirm gift page -->
-    <string name="GiftFlowConfirmationFragment__confirm_donation">လှူဒါန်းမှုကို အတည်ပြုရန်</string>
     <!-- Heading text specifying who the gift will be sent to -->
-    <string name="GiftFlowConfirmationFragment__send_to">ဖော်ပြပါသို့ ပို့ရန်</string>
     <!-- Text explaining that gift will be sent to the chosen recipient -->
-    <string name="GiftFlowConfirmationFragment__the_recipient_will_be_notified">လက်ခံရရှိမည့် ပုဂ္ဂိုလ်အား လှူဒါန်းမှုအကြောင်းကို တစ်ဦးချင်း 1-1 မက်ဆေ့ချ်တွင် အသိပေးအကြောင်းကြားပါမည်။ အောက်တွင် သင့်ကိုယ်ပိုင်မက့်ဆေ့ချ်ကို ထည့်ပါ။</string>
     <!-- Text explaining that this gift is a one time donation -->
-    <string name="GiftFlowConfirmationFragment__one_time_donation">တစ်ကြိမ်စာ လှူဒါန်းမှု</string>
     <!-- Hint for add message input -->
-    <string name="GiftFlowConfirmationFragment__add_a_message">မက်ဆေ့ချ် ပေါင်းထည့်ရန်</string>
     <!-- Displayed in the dialog while verifying the chosen recipient -->
     <string name="GiftFlowConfirmationFragment__verifying_recipient">လက်ခံသူ အတည်ပြုနေဆဲ…</string>
     <!-- Title for sheet shown when opening a redeemed gift -->
-    <string name="ViewReceivedGiftBottomSheet__s_made_a_donation_for_you">%1$s သည် သင့်အတွက် လှူဒါန်းထားပါသည်</string>
     <!-- Title for sheet shown when opening a sent gift -->
-    <string name="ViewSentGiftBottomSheet__thanks_for_your_support">သင့်ပံ့ပိုးကူညီမှုအတွက် ကျေးဇူးတင်ပါသည်။</string>
     <!-- Description for sheet shown when opening a redeemed gift -->
-    <string name="ViewReceivedGiftBottomSheet__s_made_a_donation_to_signal">%1$s သည် သင့်ကိုယ်စား Signal သို့ လှူဒါန်းထားသည်။ သင့်ပရိုဖိုင်းတွင် Signal အတွက် သင့်ပံ့ပိုးမှုကို ပြသပါ။</string>
     <!-- Description for sheet shown when opening a sent gift -->
-    <string name="ViewSentGiftBottomSheet__youve_made_a_donation_to_signal">သင်သည် %1$s ကိုယ်စား Signal သို့ လှူဒါန်းထားပါသည်။ ၎င်းတို့၏ ပရိုဖိုင်းတွင် ၎င်းတို့၏ ပံ့ပိုးမှုကို ပြသရန်အတွက် ၎င်းတို့အား ရွေးချယ်ခွင့် ပေးပါမည်။</string>
     <!-- Primary action for pending gift sheet to redeem badge now -->
-    <string name="ViewReceivedGiftSheet__redeem">လဲလှယ်ရန်</string>
     <!-- Primary action for pending gift sheet to redeem badge later -->
-    <string name="ViewReceivedGiftSheet__not_now">ယခု မလုပ်ဆောင်သေးပါ။</string>
     <!-- Dialog text while redeeming a gift -->
-    <string name="ViewReceivedGiftSheet__redeeming_badge">ဘဲ့ဂျ် လဲလှယ်ရယူနေသည်…</string>
     <!-- Description text in gift thanks sheet -->
-    <string name="GiftThanksSheet__youve_made_a_donation">သင်သည် %1$s ကိုယ်စား Signal သို့ လှူဒါန်းထားပါသည်။ ၎င်းတို့အား ပရိုဖိုင်းတွင် ၎င်းတို့၏ ပံ့ပိုးမှုကို ပြသရန် ရွေးချယ်ခွင့် ပေးပါမည်။</string>
     <!-- Expired gift sheet title -->
-    <string name="ExpiredGiftSheetConfiguration__your_badge_has_expired">သင့်ဘဲ့ဂျ်သည် သက်တမ်းကုန်သွားပါပြီ</string>
     <!-- Expired gift sheet top description text -->
-    <string name="ExpiredGiftSheetConfiguration__your_badge_has_expired_and_is">သင့်ဘဲ့ဂျ်သည် သက်တမ်းကုန်သွားပါပြီ၊ သင့်ပရိုဖိုင်းတွင် ၎င်းကို အခြားသူများအား ပြနိုင်တော့မည် မဟုတ်ပါ။</string>
     <!-- Expired gift sheet bottom description text -->
-    <string name="ExpiredGiftSheetConfiguration__to_continue">သင့်အတွက် ဖန်တီးထားသော နည်းပညာကို ဆက်လက်ပံ့ပိုးကူညီနိုင်ရန် လစဉ် ပါဝင်အားဖြည့်သူ လုပ်ရန် စဉ်းစားပေးပါ။</string>
     <!-- Expired gift sheet make a monthly donation button -->
-    <string name="ExpiredGiftSheetConfiguration__make_a_monthly_donation">လစဉ် လှူဒါန်းမှု ပြုလုပ်ရန်</string>
     <!-- Expired gift sheet not now button -->
-    <string name="ExpiredGiftSheetConfiguration__not_now">ယခု မလုပ်ဆောင်သေးပါ။</string>
     <!-- My Story label designating that we will only share with the selected viewers. -->
     <string name="ContactSearchItems__only_share_with">ဖော်ပြပါထံသာဝေမျှရန်</string>
     <!-- Label under name for custom stories -->
@@ -7233,7 +6944,6 @@
         <item quantity="other">%1$d မိနစ် ကျန်ပါသည်</item>
     </plurals>
     <!-- Donation for a friend expiry expired -->
-    <string name="Gifts__expired">သက်တမ်းကုန်ပြီး</string>
 
     <!-- Label indicating that a user can tap to advance to the next post in a story -->
     <string name="StoryFirstTimeNavigationView__tap_to_advance">ရှေ့ဆက်ရန် နှိပ်ပါ</string>
@@ -7377,128 +7087,75 @@
 
     <!-- DonateToSignalFragment -->
     <!-- Title below avatar -->
-    <string name="DonateToSignalFragment__privacy_over_profit">ဂုဏ်ယူစွာဖြင့် အကျိုးအမြတ်မယူသောအဖွဲ့</string>
     <!-- Continue button label -->
-    <string name="DonateToSignalFragment__continue">ဆက်လုပ်ရန်</string>
     <!-- Description below title -->
-    <string name="DonateToSignalFragment__private_messaging">သီးသန့်မက်ဆေ့ချ်ပေးပို့ခြင်းကို ပံ့ပိုးရန် လှူဒါန်းပါ။ Signal ကို အမှီအခိုနှင့် ကြော်ငြာကင်းစင်စွာထားပါ။</string>
     <!-- Dialog title when a user tries to donate while they already have a pending donation. -->
-    <string name="DonateToSignalFragment__you_have_a_donation_pending">သင့်တွင် လုပ်ဆောင်နေဆဲ လှူဒါန်းမှုတစ်ခု ရှိပါသည်</string>
     <!-- Dialog body when a user tries to donate while they already have a pending monthly donation. -->
-    <string name="DonateToSignalFragment__bank_transfers_usually_take_1_business_day_to_process_monthly">ဘဏ်ငွေလွှဲပြောင်းမှုများကို ဆောင်ရွက်ရန် ရုံးဖွင့်ရက် 1 ရက်မှ 14 ရက်အထိ ကြာနိုင်ပါသည်။ သင့်ပုံမှန်လှူဒါန်းငွေကို အပ်ဒိတ်မလုပ်မီ ထိုငွေပေးချေမှု ပြီးစီးသည်အထိ စောင့်ဆိုင်းပေးပါ။</string>
     <!-- Dialog body when a user tries to donate while they already have a pending one time donation. -->
-    <string name="DonateToSignalFragment__bank_transfers_usually_take_1_business_day_to_process_onetime">ဘဏ်ငွေလွှဲပြောင်းမှုများကို ဆောင်ရွက်ရန် ရုံးဖွင့်ရက် 1 ရက်မှ 14 ရက်အထိ ကြာနိုင်ပါသည်။ နောက်ထပ်လှူဒါန်းမှု မပြုလုပ်မီ ထိုငွေပေးချေမှု ပြီးစီးသည်အထိ စောင့်ဆိုင်းပေးပါ။</string>
     <!-- Dialog body when a user tries to donate while they already have a pending monthly donation. -->
-    <string name="DonateToSignalFragment__your_payment_is_still_being_processed_monthly">သင့်လှူဒါန်းမှုကို လုပ်ဆောင်နေဆဲ ဖြစ်ပါသည်။ သင့်ချိတ်ဆက်မှုအပေါ် မူတည်၍ မိနစ်အနည်းငယ် ကြာနိုင်ပါသည်။ သင့်ပုံမှန်လှူဒါန်းငွေကို အပ်ဒိတ်မလုပ်မီ ထိုငွေပေးချေမှု ပြီးစီးသည်အထိ စောင့်ဆိုင်းပေးပါ။</string>
     <!-- Dialog body when a user tries to donate while they already have a pending one time donation. -->
-    <string name="DonateToSignalFragment__your_payment_is_still_being_processed_onetime">သင့်လှူဒါန်းမှုကို လုပ်ဆောင်နေဆဲ ဖြစ်ပါသည်။ သင့်ချိတ်ဆက်မှုအပေါ် မူတည်၍ မိနစ်အနည်းငယ် ကြာနိုင်ပါသည်။ နောက်ထပ်လှူဒါန်းမှု မပြုလုပ်မီ ထိုငွေပေးချေမှု ပြီးစီးသည်အထိ စောင့်ဆိုင်းပေးပါ။</string>
     <!-- Dialog body when a user opens the manage donations main screen and they have a pending iDEAL donation -->
-    <string name="DonateToSignalFragment__your_ideal_wero_payment_is_still_processing">Your iDEAL | Wero donation is still processing. Check your banking app to approve your payment before making another donation.</string>
     <!-- Dialog title shown when a user tries to donate an amount higher than is allowed for a given payment method. -->
-    <string name="DonateToSignal__donation_amount_too_high">လှူဒါန်းမည့်ပမာဏ များလွန်းနေပါသည်</string>
     <!-- Dialog body shown when a user tries to donate an amount higher than is allowed for a given payment method, place holder is the maximum -->
-    <string name="DonateToSignalFragment__you_can_send_up_to_s_via_bank_transfer">ဘဏ်ငွေလွှဲပြောင်းမှုဖြင့် %1$s အထိ ပေးပို့နိုင်ပါသည်။ မတူညီသောပမာဏ သို့မဟုတ် မတူညီသော ငွေပေးချေမှုနည်းလမ်းကို စမ်းကြည့်ပါ။</string>
 
     <!-- Donation pill toggle monthly text -->
-    <string name="DonationPillToggle__monthly">လစဉ်</string>
     <!-- Donation pill toggle one-time text -->
-    <string name="DonationPillToggle__one_time">တစ်ကြိမ်</string>
 
     <!-- GatewaySelectorBottomSheet -->
     <!-- Sheet title when subscribing -->
-    <string name="GatewaySelectorBottomSheet__donate_s_month_to_signal">Signal သို့ တစ်လလျှင် %1$s လှူဒါန်းရန်</string>
     <!-- Sheet summary when subscribing -->
-    <string name="GatewaySelectorBottomSheet__get_a_s_badge">%1$s ဘဲ့ဂျ် ရယူရန်</string>
     <!-- Sheet title when giving a one-time donation -->
-    <string name="GatewaySelectorBottomSheet__donate_s_to_signal">Signal သို့ %1$s လှူဒါန်းရန်</string>
     <!-- Sheet summary when giving a one-time donation -->
     <plurals name="GatewaySelectorBottomSheet__get_a_s_badge_for_d_days">
         <item quantity="other">%1$s ဘဲ့ဂျ်ကို %2$d ရက်စာ ရယူပါ</item>
     </plurals>
     <!-- Button label for paying with a bank transfer -->
-    <string name="GatewaySelectorBottomSheet__bank_transfer">ဘဏ်ငွေလွှဲခြင်း</string>
     <!-- Button label for paying with a credit card -->
     <string name="GatewaySelectorBottomSheet__credit_or_debit_card">ခရက်ဒစ် သို့မဟုတ် ဒက်ဘစ်ကတ်</string>
     <!-- Sheet summary when giving donating for a friend -->
-    <string name="GatewaySelectorBottomSheet__donate_for_a_friend">မိတ်ဆွေတစ်ယောက်အတွက် လှူရန်</string>
     <!-- Button label for paying with iDEAL -->
-    <string name="GatewaySelectorBottomSheet__ideal_wero">iDEAL | Wero</string>
 
     <!-- Dialog title for launching external intent -->
-    <string name="ExternalNavigationHelper__leave_signal_to_confirm_payment">လှူဒါန်းမှုကို အတည်ပြုရန် Signal မှ ထွက်ပါမည်လား။</string>
-    <string name="ExternalNavigationHelper__once_this_payment_is_confirmed">အတည်ပြုပြီးသောအခါ သင်၏လှူဒါန်းမှုကို အပြီးသတ်ဆောင်ရွက်ရန် Signal သို့ ပြန်သွားပါ။</string>
     <!-- Dialog message shown when leaving Signal to complete a donation in an external app. Placeholder is the resolved app name (e.g. a banking app). -->
-    <string name="ExternalNavigationHelper__once_payment_confirmed_in_app">You\'ll be sent to %1$s. When confirmed, return to Signal to finish processing your donation.</string>
 
     <!-- BankTransferMandateFragment -->
     <!-- Title of screen displaying the bank transfer mandate -->
-    <string name="BankTransferMandateFragment__bank_transfer">ဘဏ်ငွေလွှဲခြင်း</string>
     <!-- Subtitle of screen displaying the bank transfer mandate, placeholder is \'Learn more\' -->
-    <string name="BankTransferMandateFragment__stripe_processes_donations">Stripe သည် Signal သို့ပြုလုပ်သော လှူဒါန်းမှုများကို စီမံဆောင်ရွက်ပါသည်။ Signal သည် သင်၏ ကိုယ်ရေးအချက်အလက်များကို စုဆောင်းခြင်း သို့မဟုတ် သိမ်းဆည်းခြင်း မပြုပါ။ %1$s</string>
     <!-- Subtitle learn more of screen displaying bank transfer mandate -->
-    <string name="BankTransferMandateFragment__learn_more">ပိုမိုလေ့လာရန်</string>
     <!-- Button label to continue with transfer -->
-    <string name="BankTransferMandateFragment__agree">သဘောတူပါသည်</string>
     <!-- Button label to read more of the bank mandate that is currently off screen -->
-    <string name="BankTransferMandateFragment__read_more">ပိုမိုဖတ်ရှုရန်</string>
     <!-- Text displayed when mandate load fails -->
-    <string name="BankTransferMandateFragment__failed_to_load_mandate">ညွှန်ကြားမှုကို ဖွင့်၍မရပါ</string>
 
     <!-- BankTransferDetailsFragment -->
     <!-- Subtext explaining how email is used. Placeholder is \'Learn more\' -->
-    <string name="BankTransferDetailsFragment__enter_your_bank_details">သင်၏ ဘဏ်အသေးစိတ်အချက်များနှင့် အီးမေးလ်ကို ထည့်သွင်းပါ။ Stripe သည် သင့်လှူဒါန်းမှုနှင့်ပတ်သက်၍ အပ်ဒိတ်များ ပေးပို့ရန် ထိုအီးမေးလ်ကို အသုံးပြုပါသည်။ %1$s</string>
     <!-- Subtext learn more link text -->
-    <string name="BankTransferDetailsFragment__learn_more">ပိုမိုလေ့လာရန်</string>
     <!-- Text field label for name on bank account -->
-    <string name="BankTransferDetailsFragment__name_on_bank_account">ဘဏ်အကောင့်ပေါ်ရှိ အမည်</string>
     <!-- Text field label for IBAN -->
-    <string name="BankTransferDetailsFragment__iban">IBAN</string>
     <!-- Text field label for email -->
-    <string name="BankTransferDetailsFragment__email">အီးမေးလ်</string>
     <!-- Text label for button to show user how to find their IBAN -->
-    <string name="BankTransferDetailsFragment__find_account_info">အကောင့်အချက်အလက် ရှာဖွေရန်</string>
     <!-- Donate button label for monthly subscription -->
-    <string name="BankTransferDetailsFragment__donate_s_month">တစ်လလျှင် %1$s လှူရန်</string>
     <!-- Donate button label for one-time -->
-    <string name="BankTransferDetailsFragment__donate_s">%1$s လှူရန်</string>
     <!-- Error label for IBAN field when number is too short -->
-    <string name="BankTransferDetailsFragment__iban_is_too_short">IBAN တိုလွန်းပါသည်</string>
     <!-- Error label for IBAN field when number is too long -->
-    <string name="BankTransferDetailsFragment__iban_is_too_long">IBAN ရှည်လွန်းပါသည်</string>
     <!-- Error label for IBAN field when country is not supported -->
-    <string name="BankTransferDetailsFragment__iban_country_code_is_not_supported">IBAN နိုင်ငံကုဒ်ကို ပံ့ပိုးပေးခြင်းမရှိပါ</string>
     <!-- Error label for IBAN field when number is invalid -->
-    <string name="BankTransferDetailsFragment__invalid_iban">IBAN မမှန်ကန်ပါ</string>
     <!-- Error label for name field when name is not at least three characters long (Stripe API enforced minimum) -->
-    <string name="BankTransferDetailsFragment__minimum_3_characters">အနည်းဆုံး စာလုံး ၃ လုံး</string>
     <!-- Error label for email field when email is not valid -->
-    <string name="BankTransferDetailsFragment__invalid_email_address">အီးမေးလ်လိပ်စာ မမှန်ကန်ပါ</string>
 
     <!-- IdealTransferDetailsFragment -->
     <!-- Title of the screen, displayed in the toolbar -->
-    <string name="IdealTransferDetailsFragment__ideal">iDEAL</string>
     <!-- Subtitle of the screen, displayed below the toolbar. Placeholder is for \'learn more\' -->
-    <string name="IdealTransferDetailsFragment__enter_your_bank">သင့်အမည်နှင့် အီးမေးလ်ကို ထည့်သွင်းပါ။ Stripe သည် သင့်လှူဒါန်းမှုနှင့်ပတ်သက်၍ အပ်ဒိတ်များပေးပို့ရန် ဤအီးမေးလ်ကို အသုံးပြုပါသည်။ %1$s</string>
     <!-- Subtitle of the screen, displayed below the toolbar. Placeholder is for \'learn more\' -->
-    <string name="IdealTransferDetailsFragment__enter_your_bank_details_one_time">သင့်ဘဏ်အချက်အလက် အသေးစိတ်ကို ဖြည့်ပါ။ Signal သည် သင်၏ ကိုယ်ရေးအချက်အလက်များကို စုဆောင်းခြင်း သို့မဟုတ် သိမ်းဆည်းခြင်း မပြုပါ။ %1$s</string>
     <!-- Subtitle learn-more button displayed inline with the subtitle text -->
-    <string name="IdealTransferDetailsFragment__learn_more">ပိုမိုလေ့လာရန်</string>
     <!-- Hint label for text entry box for name on bank account -->
-    <string name="IdealTransferDetailsFragment__name_on_bank_account">ဘဏ်အကောင့်ပေါ်ရှိ အမည်</string>
     <!-- Hint label for text entry box for email -->
-    <string name="IdealTransferDetailsFragment__email">အီးမေးလ်</string>
     <!-- Default label for bank selection -->
-    <string name="IdealTransferDetailsFragment__choose_your_bank">သင့်ဘဏ်ကို ရွေးချယ်ပါ</string>
     <!-- Dialog title shown when using iDEAL payment for setting up a monthly donation -->
-    <string name="IdealTransferDetailsFragment__confirm_your_donation_with_ideal_wero">Confirm your donation with iDEAL | Wero</string>
     <!-- Dialog warning shown when using iDEAL payment for setting up a monthly donation. Placeholder is donation amount.Z -->
-    <string name="IdealTransferDetailsFragment__to_setup_your_recurring_donation">သင်၏ ထပ်တလဲလဲလှူဒါန်းမှုကို သတ်မှတ်ရန်အတွက် သင့်ဘဏ်တွင် €0,01 ကောက်ခံမှုကို အတည်ပြုရန် ဆက်လုပ်မည်ကို နှိပ်ပါ။ ၎င်းသည် အလိုအလျောက် ပြန်အမ်းပေးမည်ဖြစ်ပြီး သင်၏ တစ်လလျှင် %1$s လှူဒါန်းမှုကို သင့်အကောင့်မှ ငွေထုတ်ခွင့်ပြုပါမည်။</string>
     <!-- Dialog button shown when using iDEAL payment for setting up a monthly donation to continue with the donation -->
-    <string name="IdealTransferDetailsFragment__continue">ဆက်လုပ်ရန်</string>
 
     <!-- IdealTransferDetailsBankSelectionDialogFragment -->
     <!-- Title of the screen, displayed in the toolbar -->
-    <string name="IdealTransferDetailsBankSelectionDialogFragment__choose_your_bank">သင့်ဘဏ်ကို ရွေးချယ်ပါ</string>
 
     <!-- Title of bottom sheet for finding account information -->
     <string name="FindAccountInfoSheet__find_your_account_information">သင့်အကောင့်အချက်အလက်ကို ရှာဖွေခြင်း</string>
@@ -7506,36 +7163,22 @@
     <string name="FindAccountInfoSheet__look_for_your_iban_at">သင်၏ ဘဏ်စာရင်းရှင်းတမ်း ထိပ်ဆုံးတွင် သင့် IBAN ကို ရှာဖွေပါ။ IBAN များတွင် စာလုံး 34 လုံးအထိ ပါဝင်ပါသည်။ သင် ရိုက်ထည့်လိုက်သော အမည်သည် သင့်ဘဏ်အကောင့်ရှိ အမည်အပြည့်အစုံနှင့် ကိုက်ညီသင့်ပါသည်။ နောက်ထပ်အချက်အလက်များအတွက် သင်၏ဘဏ်သို့ ဆက်သွယ်ပါ။</string>
 
     <!-- Title of donation pending sheet displayed after making a bank transfer -->
-    <string name="DonationPendingBottomSheet__donation_pending">လှူဒါန်းမှု လုပ်ဆောင်နေဆဲ</string>
     <!-- Top text block of donation pending sheet displayed after subscribing via a bank transfer. Placeholder is the badge name. -->
-    <string name="DonationPendingBottomSheet__your_monthly_donation_is_pending">သင်၏ လစဉ်လှူဒါန်းမှုကို လုပ်ဆောင်နေဆဲဖြစ်ပါသည်။ သင့်လှူဒါန်းမှုကို လက်ခံရရှိသောအခါ သင့်ပရိုဖိုင်တွင် %1$s ဘဲ့ဂျ်ကို ပြသနိုင်ပါမည်။</string>
     <!-- Top text block of donation pending sheet displayed after one-time donation via a bank transfer. Placeholder is the badge name. -->
-    <string name="DonationPendingBottomSheet__your_one_time_donation_is_pending">သင်၏ တစ်ကြိမ်စာ လှူဒါန်းမှုကို လုပ်ဆောင်နေဆဲဖြစ်ပါသည်။ သင့်လှူဒါန်းမှုကို လက်ခံရရှိသောအခါ သင့်ပရိုဖိုင်တွင် %1$s ဘဲ့ဂျ်ကို ပြသနိုင်ပါမည်။</string>
     <!-- Bottom text block of donation pending sheet displayed after donating via a bank transfer. Placeholder is for learn more. -->
-    <string name="DonationPendingBottomSheet__bank_transfers_usually_take">ဘဏ်ငွေလွှဲပြောင်းမှုများကို ဆောင်ရွက်ရန် ရုံးဖွင့်ရက် 1 ရက်မှ 14 ရက်အထိ ကြာနိုင်ပါသည်။ %1$s</string>
     <!-- Learn more text for donation pending sheet displayed after donating via a bank transfer. -->
-    <string name="DonationPendingBottomSheet__learn_more">ပိုမိုလေ့လာရန်</string>
     <!-- Confirmation button for donation pending sheet displayed after donating via a bank transfer. -->
-    <string name="DonationPendingBottomSheet__done">ပြီးပါပြီ</string>
 
     <!-- Title of donation error sheet displayed after making a bank transfer that fails -->
-    <string name="DonationErrorBottomSheet__donation_couldnt_be_processed">လှူဒါန်းမှုကို စီမံဆောင်ရွက်၍မရနိုင်ပါ</string>
     <!-- Text block of donation error sheet displayed after making a bank transfer that fails -->
-    <string name="DonationErrorBottomSheet__were_having_trouble">သင်၏ ဘဏ်ငွေလွှဲပြောင်းမှုကို စီမံဆောင်ရွက်ရာတွင် ပြဿနာရှိနေပါသည်။ သင့်ထံမှ ငွေကောက်ခံခြင်း မရှိခဲ့ပါ။ အခြားသော ငွေပေးချေနည်းကို သုံးကြည့်ပါ သို့မဟုတ် နောက်ထပ်အချက်အလက်များအတွက် သင့်ဘဏ်ကို ဆက်သွယ်ပါ။</string>
     <!-- Button label for retry button of donation error sheet displayed after making a bank transfer that fails -->
-    <string name="DonationErrorBottomSheet__try_again">ထပ်မံကြိုးစားမည်</string>
     <!-- Button label for not now button of donation error sheet displayed after making a bank transfer that fails -->
-    <string name="DonationErrorBottomSheet__not_now">ယခု မလုပ်သေးပါ</string>
 
     <!-- Title of \'Donation Complete\' sheet displayed after a bank transfer completes and the badge is redeemed -->
-    <string name="DonationCompletedBottomSheet__donation_complete">လှူဒါန်းမှု ပြီးစီးပါပြီ</string>
     <!-- Text block of \'Donation Complete\' sheet displayed after a bank transfer completes and the badge is redeemed -->
-    <string name="DonationCompleteBottomSheet__your_bank_transfer_was_received">သင်၏ ဘဏ်ငွေလွှဲပြောင်းမှုကို လက်ခံရရှိပါပြီ။ သင်၏ ကူညီပံ့ပိုးမှုကို ပြသရန်အတွက် သင့်ပရိုဖိုင်တွင် ဤဘဲ့ဂျ်ကို ဖော်ပြရန် ရွေးချယ်နိုင်ပါသည်။</string>
     <!-- Button text of \'Donation Complete\' sheet displayed after a bank transfer completes and the badge is redeemed to dismiss sheet -->
-    <string name="DonationCompleteBottomSheet__done">ပြီးပါပြီ</string>
 
     <!-- StripePaymentInProgressFragment -->
-    <string name="StripePaymentInProgressFragment__cancelling">ပယ်ဖျက်နေဆဲ…</string>
 
     <!-- The title of a bottom sheet dialog that tells the user we temporarily can\'t process their contacts. -->
     <string name="CdsTemporaryErrorBottomSheet_title">အဆက်အသွယ်များစွာကို စီမံလုပ်ဆောင်ပြီးပါပြီ</string>
@@ -7568,7 +7211,6 @@
     <!-- YourInformationIsPrivateBottomSheet -->
     <string name="YourInformationIsPrivateBottomSheet__your_information_is_private">သင့်အချက်အလက်ကို လျှို့ဝှက်ထားပါသည်</string>
     <string name="YourInformationIsPrivateBottomSheet__signal_does_not_collect">သင် လှူဒါန်းသည့်အခါ Signal သည် သင့်ကိုယ်ရေးအချက်အလက်များကို စုဆောင်းခြင်း သို့မဟုတ် သိုလှောင်ခြင်းများ မပြုလုပ်ပါ။</string>
-    <string name="YourInformationIsPrivateBottomSheet__we_use_stripe">သင်၏ လှူဒါန်းမှုများကို လက်ခံရန်အတွက် ငွေပေးချေမှု စီမံလုပ်ဆောင်ရေးအဖြစ် Stripe ကို သုံးပါသည်။ ၎င်းတို့ထံ သင်ပေးထားသည့် အချက်အလက်များကို ရယူသုံးစွဲခြင်း၊ သိုလှောင်ခြင်း သို့မဟုတ် သိမ်းဆည်းခြင်း မပြုပါ။</string>
     <string name="YourInformationIsPrivateBottomSheet__signal_does_not_and_cannot">Signal သည် သင့်လှူဒါန်းမှုကို သင်၏ Signal အကောင့်နှင့် ချိတ်ဆက်မည် မဟုတ်သည့်အပြင် မချိတ်ဆက်နိုင်ပါ။</string>
     <string name="YourInformationIsPrivateBottomSheet__thank_you">သင်၏ ပံ့ပိုးကူညီမှုအတွက် ကျေးဇူးတင်ပါသည်။</string>
 
@@ -7586,8 +7228,6 @@
     <string name="Registration_country_code_entry_hint">+0</string>
 
     <!-- PaypalCompleteOrderBottomSheet -->
-    <string name="PaypalCompleteOrderBottomSheet__donate">လှူဒါန်းရန်</string>
-    <string name="PaypalCompleteOrderBottomSheet__payment">ငွေပေးချေမှု</string>
 
     <!-- ChatFilter -->
     <!-- Displayed in a pill at the top of the chat list when it is filtered by unread messages -->
@@ -8080,15 +7720,10 @@
     <string name="GrantFullScreenIntentPermission_bottomsheet_step2">2. %1$s မျက်နှာပြင်အပြည့် အသိပေးချက်များကို ခွင့်ပြုပါ</string>
 
     <!-- Bottom sheet dialog shown when a monthly donation fails to renew, title for dialog -->
-    <string name="MonthlyDonationCanceled__title">လစဉ် လှူဒါန်းမှု ပယ်ဖျက်လိုက်ပါပြီ</string>
     <!-- Bottom sheet dialog shown when a monthly donation fails to renew, body for dialog. First placeholder is a payment related error message. Second placeholder is \'learn more\' -->
-    <string name="MonthlyDonationCanceled__message">သင်၏ လစဉ် ပုံမှန်လှူဒါန်းမှုကို ပယ်ဖျက်လိုက်ပါပြီ။ %1$s\n\nသင့်ဘဲ့ဂျ်ကို သင့်ပရိုဖိုင်တွင် မြင်တွေ့ရတော့မည်မဟုတ်ပါ။ %2$s</string>
     <!-- Bottom sheet dialog shown when a monthly donation fails to renew, learn more used in placeholder for body for dialog. -->
-    <string name="MonthlyDonationCanceled__learn_more">ပိုမိုလေ့လာရန်</string>
     <!-- Bottom sheet dialog shown when a monthly donation fails to renew, primary button to renew subscription with new data -->
-    <string name="MonthlyDonationCanceled__renew_button">ပုံမှန်လှူဒါန်းငွေကို သက်တမ်းတိုးရန်</string>
     <!-- Bottom sheet dialog shown when a monthly donation fails to renew, second button to dismiss the dialog entirely -->
-    <string name="MonthlyDonationCanceled__not_now_button">ယခု မလုပ်သေးပါ</string>
 
     <!-- FindByActivity -->
     <!-- Title of activity when finding by username -->
@@ -8177,7 +7812,6 @@
 
     <!-- BackupAlertBottomSheet -->
     <!-- Sheet title when media backups have been disabled -->
-    <string name="BackupAlertBottomSheet__your_backups_subscription_expired">သင့်ပုံမှန်လှူဒါန်းမှု သက်တမ်းကုန်သွားပါပြီ</string>
     <!-- Sheet body part 1 when media backups have been disabled. Placeholder is the number of days until deletion. -->
     <plurals name="BackupAlertBottomSheet__your_backup_plan_has_expired">
         <item quantity="other">သင်၏ လက်ရှိငွေပေးချေမှုနည်းလမ်းဖြင့် သက်တမ်းတိုးမရနိုင်သောကြောင့် သင်၏ ဘက်ခ်အပ်အစီအစဉ် သက်တမ်းကုန်သွားပါပြီ။ %1$d ရက်အကြာတွင် သင် ဘက်ခ်အပ်လုပ်ထားသော မီဒီယာကို ဖျက်လိုက်ပါမည်။</item>
@@ -8367,21 +8001,15 @@
     <!-- Displayed as the user\'s payment method as a label in a preference row -->
     <string name="BackupsTypeSettingsFragment__credit_or_debit_card">ခရက်ဒစ် သို့မဟုတ် ဒက်ဘစ်ကတ်</string>
     <!-- Displayed as the user\'s payment method as a label in a preference row -->
-    <string name="BackupsTypeSettingsFragment__iDEAL">iDEAL</string>
     <!-- Displayed as the user\'s payment method as a label in a preference row -->
-    <string name="BackupsTypeSettingsFragment__google_pay">Google Pay</string>
     <!-- Displayed as the user\'s payment method as a label in a preference row -->
-    <string name="BackupsTypeSettingsFragment__bank_transfer">ဘဏ်ငွေလွှဲခြင်း</string>
     <!-- Displayed as the user\'s payment method as a label in a preference row -->
-    <string name="BackupsTypeSettingsFragment__paypal">PayPal</string>
     <!-- Displayed as the user\'s payment method as a label in a preference row -->
     <string name="BackupsTypeSettingsFragment__unknown">မသိရှိ</string>
     <!-- Row title for entering payment history -->
-    <string name="BackupsTypeSettingsFragment__payment_history">ငွေပေးချေမှုမှတ်တမ်း</string>
     <!-- Row description detailing renewal information. First placeholder is formatted price. Second placeholder is formatted date. -->
     <string name="BackupsTypeSettingsFragment__s_month_renews_s">တစ်လလျှင် %1$s · %2$s တွင် သက်တမ်းတိုးမည်</string>
     <!-- Row title to change or cancel subscription -->
-    <string name="BackupsTypeSettingsFragment__change_or_cancel_subscription">ပုံမှန်လှူဒါန်းငွေကို ပြောင်းရန် သို့မဟုတ် ပယ်ဖျက်ရန်</string>
 
     <!-- GooglePlayServicesAvailability -->
     <!-- Dialog title when Google Play services are missing from the device -->
@@ -8528,7 +8156,6 @@
     <!-- Text shown in a popup indicating that the user needs to enter their screen lock -->
     <string name="RemoteBackupsSettingsFragment__authenticatino_required">စစ်မှန်ကြောင်းအတည်ပြုချက် လိုအပ်သည်</string>
     <!-- Row label to launch payment history screen -->
-    <string name="RemoteBackupsSettingsFragment__payment_history">ငွေပေးချေမှုမှတ်တမ်း</string>
     <!-- Section header for backup information -->
     <string name="RemoteBackupsSettingsFragment__backup_details">ဘက်ခ်အပ် အသေးစိတ်</string>
     <!-- Row label to allow the restoration of a backup to occur while on cellular connection -->
@@ -8961,7 +8588,6 @@
     <!-- Primary action button label when selecting paid tier when Google Play API isn\'t available -->
     <string name="MessageBackupsTypeSelectionScreen__more_about_this_plan">ဤအစီအစဉ်အကြောင်း နောက်ထပ်အချက်အလက်များ</string>
     <!-- Secondary action button label when selecting a backup tier with a current selection -->
-    <string name="MessageBackupsTypeSelectionScreen__cancel_subscription">ပုံမှန်လှူဒါန်းငွေကို ပယ်ဖျက်ရန်</string>
     <!-- MessageBackupsType block amount for free tier -->
     <string name="MessageBackupsTypeSelectionScreen__free">အခမဲ့</string>
     <!-- MessageBackupsType block amount for paid tier when no pricing is available -->
@@ -9003,7 +8629,6 @@
     <!-- Action button label to cancel subscription and download later -->
     <string name="ConfirmBackupCancellationDialog__confirm_and_download_later">အတည်ပြုပြီး နောက်မှဒေါင်းလုဒ်လုပ်မည်</string>
     <!-- Action button label to keep current subscription -->
-    <string name="ConfirmBackupCancellationDialog__keep_subscription">ပုံမှန်ငွေလှူဒါန်းမှုကို ဆက်လက်ပြုလုပ်မည်</string>
 
     <!-- Accessible content description for the reminder view, describing the icon in the view. -->
     <string name="ReminderView_icon_content_description">သတိပေးချက် သင်္ကေတ</string>

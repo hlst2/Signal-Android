@@ -24,7 +24,6 @@
   <!-- Removed by excludeNonTranslatables <string name="donate_faq_url" translatable="false">https://support.signal.org/hc/articles/360031949872#donate</string> -->
 
     <!-- First placeholder is productId, second placeholder is app package -->
-    <string name="backup_subscription_management_url">https://play.google.com/store/account/subscriptions?sku=%1$s&amp;package=%2$s</string>
 
     <string name="yes">جی ہاں</string>
     <string name="no">جی نہیں</string>
@@ -158,7 +157,6 @@
 
     <!-- Fcm notifications -->
     <!-- Notification we show when there may be messages for you, but we cannot connect to the server to check -->
-    <string name="FcmFetchManager__you_may_have_messages">آپ کے نئے پیغامات ہو سکتے ہیں</string>
 
     <!-- BlockedUsersActivity -->
     <string name="BlockedUsersActivity__blocked_users">بلاک کردہ یوزرز</string>
@@ -172,45 +170,26 @@
 
     <!-- CreditCardFragment -->
     <!-- Title of fragment -->
-    <string name="CreditCardFragment__credit_or_debit_card">کریڈٹ یا ڈیبٹ کارڈ</string>
     <!-- Explanation of how to fill in the form and a note about pii, displayed above the credit card text fields -->
-    <string name="CreditCardFragment__enter_your_card_details">اپنے کارڈ کی تفصیلات درج کریں۔ Signal آپ کی ذاتی معلومات جمع یا اسٹور نہیں کرتا۔</string>
     <!-- Displayed as a hint in the card number text field -->
-    <string name="CreditCardFragment__card_number">کارڈ نمبر</string>
     <!-- Displayed as a hint in the card expiry text field -->
-    <string name="CreditCardFragment__mm_yy">MM/YY</string>
     <!-- Displayed as a hint in the card cvv text field -->
-    <string name="CreditCardFragment__cvv">CVV</string>
     <!-- Error displayed under the card number text field when there is an invalid card number entered -->
-    <string name="CreditCardFragment__invalid_card_number">کارڈ نمبر غلط ہے</string>
     <!-- Error displayed under the card expiry text field when the card is expired -->
-    <string name="CreditCardFragment__card_has_expired">کارڈ زائد المیعاد ہو گیا ہے</string>
     <!-- Error displayed under the card cvv text field when the cvv is too short -->
-    <string name="CreditCardFragment__code_is_too_short">کوڈ بہت چھوٹا ہے</string>
     <!-- Error displayed under the card cvv text field when the cvv is too long -->
-    <string name="CreditCardFragment__code_is_too_long">کوڈ بہت طویل ہے</string>
     <!-- Error displayed under the card cvv text field when the cvv is invalid -->
-    <string name="CreditCardFragment__invalid_code">کوڈ غلط ہے</string>
     <!-- Error displayed under the card expiry text field when the expiry month is invalid -->
-    <string name="CreditCardFragment__invalid_month">مہینہ غلط ہے</string>
     <!-- Error displayed under the card expiry text field when the expiry is missing the year -->
-    <string name="CreditCardFragment__year_required">سال درکار ہے</string>
     <!-- Error displayed under the card expiry text field when the expiry year is invalid -->
-    <string name="CreditCardFragment__invalid_year">سال غلط ہے</string>
     <!-- Button label to confirm credit card input and proceed with one-time payment -->
-    <string name="CreditCardFragment__donate_s">%1$s عطیہ کریں</string>
     <!-- Button label to confirm credit card input and proceed with subscription payment -->
-    <string name="CreditCardFragment__donate_s_month">%1$s/ماہ عطیہ کریں</string>
     <!-- Button label to confirm credit card input and proceed with backups payment. Placeholder is formatted price. -->
-    <string name="CreditCardFragment__pay_s_month">%1$s/ماہ عطیہ کریں</string>
 
     <!-- OneTimeDonationPreference -->
     <!-- Preference title with placeholder for amount. -->
-    <string name="OneTimeDonationPreference__one_time_s">ایک وقتی %1$s</string>
     <!-- Preference subtitle when donation is pending -->
-    <string name="OneTimeDonationPreference__donation_pending">عطیہ زیر التواء ہے</string>
     <!-- Preference subtitle when donation is processing -->
-    <string name="OneTimeDonationPreference__donation_processing">عطیہ پرعمل کاری</string>
 
     <!-- BlockUnblockDialog -->
     <string name="BlockUnblockDialog_block_and_leave_s">%1$s کو بلاک کریں اور چھوڑ دیں؟</string>
@@ -4237,7 +4216,6 @@
     <string name="preferences__slow">آہستہ</string>
     <string name="preferences__help">مدد کریں</string>
     <string name="preferences__advanced">اعلی\' درجے کی</string>
-    <string name="preferences__donate_to_signal">Signal کے لیے عطیہ کریں</string>
     <!-- Preference label for making one-time donations to Signal -->
     <string name="preferences__privacy">رازداری</string>
     <!-- Preference label for stories -->
@@ -4427,9 +4405,6 @@
 
     <!-- Payments -->
     <string name="PaymentsActivityFragment__all_activity">تمام سرگرمی</string>
-    <string name="PaymentsAllActivityFragment__all">تمام</string>
-    <string name="PaymentsAllActivityFragment__sent">بھیجا گیا</string>
-    <string name="PaymentsAllActivityFragment__received">وصول ہو گیا ہے</string>
 
     <!-- Displayed on a welcome screen for payments -->
     <string name="PaymentsHomeFragment_introducing_payments">پیش خدمت ہے پیمنٹس</string>
@@ -4438,58 +4413,28 @@
     <string name="PaymentsHomeFragment__activating_payments">فعال ادائیگی…</string>
     <string name="PaymentsHomeFragment__restore_payments_account">ادائیگیوں کا اکاؤنٹ بحال کریں</string>
     <string name="PaymentsHomeFragment__no_recent_activity_yet">ابھی کوئی حالیہ سرگرمی نہیں ہے</string>
-    <string name="PaymentsHomeFragment__recent_activity">حالیہ سرگرمی</string>
     <string name="PaymentsHomeFragment__see_all">تمام دیکھیں</string>
     <string name="PaymentsHomeFragment__add_funds">فنڈز شامل کریں</string>
     <string name="PaymentsHomeFragment__send">بھیجیں</string>
-    <string name="PaymentsHomeFragment__sent_s">%1$s بھیجا</string>
-    <string name="PaymentsHomeFragment__received_s">%1$s موصول ہوئے</string>
     <string name="PaymentsHomeFragment__transfer_to_exchange">تبادلے میں تبادلہ کریں</string>
     <string name="PaymentsHomeFragment__currency_conversion">کرنسی کا تبادلہ</string>
     <string name="PaymentsHomeFragment__deactivate_payments">ادائیگی غیر فعال کریں</string>
     <string name="PaymentsHomeFragment__recovery_phrase">بازیافت جملہ</string>
     <string name="PaymentsHomeFragment__help">مدد کریں</string>
-    <string name="PaymentsHomeFragment__coin_cleanup_fee">Coin cleanup فیس</string>
-    <string name="PaymentsHomeFragment__sent_payment">ادائیگی بھیجی گئی</string>
-    <string name="PaymentsHomeFragment__received_payment">ادائیگی موصول ہوئی</string>
-    <string name="PaymentsHomeFragment__processing_payment">ادائیگی پر کارروائی</string>
-    <string name="PaymentsHomeFragment__unknown_amount">---</string>
-    <string name="PaymentsHomeFragment__currency_conversion_not_available">کرنسی کا تبادلہ دستیاب نہیں ہے</string>
-    <string name="PaymentsHomeFragment__cant_display_currency_conversion">کرنسی کے تبادلوں کو ظاہر نہیں کر سکتے۔ اپنے فون کا کنکشن چیک کریں اور دوبارہ کوشش کریں۔</string>
-    <string name="PaymentsHomeFragment__payments_is_not_available_in_your_region">آپ کے علاقے میں ادائیگی دستیاب نہیں ہے۔</string>
-    <string name="PaymentsHomeFragment__could_not_enable_payments">ادائیگیوں کو اہل نہیں کرسکے۔ بعد میں دوبارہ کوشش کریں۔</string>
-    <string name="PaymentsHomeFragment__deactivate_payments_question">ادائیگیوں کو غیر فعال کریں؟</string>
-    <string name="PaymentsHomeFragment__you_will_not_be_able_to_send">اگر آپ ادائیگی غیر فعال کردیتے ہیں تو آپ Signal میں موبائل کوائن بھیجنے یا وصول کرنے کے اہل نہیں ہوں گے۔</string>
-    <string name="PaymentsHomeFragment__deactivate">غیر فعال کریں</string>
-    <string name="PaymentsHomeFragment__continue">جاری رکھیں</string>
-    <string name="PaymentsHomeFragment__balance_is_not_currently_available">بیلنس فی الحال دستیاب نہیں ہے۔</string>
-    <string name="PaymentsHomeFragment__payments_deactivated">ادائیگی غیر فعال ہوگئی۔</string>
-    <string name="PaymentsHomeFragment__payment_failed">ادائیگی ناکام ہوگئی</string>
-    <string name="PaymentsHomeFragment__details">تفصیلات</string>
   <!-- Removed by excludeNonTranslatables <string name="PaymentsHomeFragment__learn_more__activate_payments" translatable="false">https://support.signal.org/hc/articles/360057625692#payments_activate</string> -->
     <!-- Displayed as a description in a dialog when the user tries to activate payments -->
-    <string name="PaymentsHomeFragment__you_can_use_signal_to_send_and">آپ MobileCoin بھیجنے اور وصول کرنے کے لیے Signal استعمال کر سکتے ہیں۔ تمام پیمنٹس MobileCoins اور MobileCoin والیٹ کی استعمال کی شرائط سے مشروط ہیں۔ آپ کو کچھ مسائل کا سامنا ہو سکتا ہے اور آپ جن پیمنٹس یا بیلنسز سے محروم ہو سکتے ہیں انہیں بحال نہیں کیا جا سکتا۔ </string>
-    <string name="PaymentsHomeFragment__activate">فعال</string>
-    <string name="PaymentsHomeFragment__view_mobile_coin_terms">موبائل کوائن کی شرائط دیکھیں</string>
-    <string name="PaymentsHomeFragment__payments_not_available">Signal میں ادائیگی اب دستیاب نہیں ہے۔ آپ اب بھی ایکسچینج میں فنڈز کی منتقلی کرسکتے ہیں لیکن آپ اب ادائیگی بھیجنے اور وصول کرنے یا فنڈز شامل نہیں کرسکتے ہیں۔</string>
 
   <!-- Removed by excludeNonTranslatables <string name="PaymentsHomeFragment__mobile_coin_terms_url" translatable="false">https://www.mobilecoin.com/terms-of-use.html</string> -->
     <!-- Alert dialog title which shows up after a payment to turn on payment lock -->
-    <string name="PaymentsHomeFragment__turn_on">مستقبل میں بھیجنے کے لیے پیمنٹ لاک آن کریں؟</string>
     <!-- Alert dialog description for why payment lock should be enabled before sending payments -->
-    <string name="PaymentsHomeFragment__add_an_additional_layer">سکیورٹی کی ایک اضافی تہہ شامل کریں اور فنڈز ٹرانسفر کرنے کے لیے Android اسکرین لاک یا فنگر پرنٹ درکار ہوتا ہے۔</string>
     <!-- Alert dialog button to enable payment lock -->
     <string name="PaymentsHomeFragment__enable">آن کریں</string>
     <!-- Alert dialog button to not enable payment lock for now -->
     <string name="PaymentsHomeFragment__not_now">ابھی نہیں</string>
     <!-- Alert dialog title which shows up to update app to send payments -->
-    <string name="PaymentsHomeFragment__update_required">اپ ڈیٹ درکار ہے</string>
     <!-- Alert dialog description that app update is required to send payments-->
-    <string name="PaymentsHomeFragment__an_update_is_required">پیمنٹس بھیجنا اور وصول کرنا جاری رکھنے کے لیے، اور اپنا اپ ٹو ڈیٹ پیمنٹ بیلنس دیکھنے کے لیے اپ ڈیٹ درکار ہوتی ہے۔</string>
     <!-- Alert dialog button to cancel -->
-    <string name="PaymentsHomeFragment__cancel">منسوخ کریں</string>
     <!-- Alert dialog button to update now -->
-    <string name="PaymentsHomeFragment__update_now">تازہ ترین کریں.</string>
 
 
     <!-- PaymentsSecuritySetupFragment -->
@@ -4504,46 +4449,26 @@
     <!-- Option to cancel -->
     <string name="PaymentsSecuritySetupFragment__not_now">ابھی نہیں</string>
     <!-- Dialog title to confirm skipping the step -->
-    <string name="PaymentsSecuritySetupFragment__skip_this_step">اس اقدام کو موخر کریں؟</string>
     <!-- Dialog description to let users know why payment lock is required -->
-    <string name="PaymentsSecuritySetupFragment__skipping_this_step">اس اقدام کو موخر کرنا آپ کے فون تک طبعی رسائی رکھنے والے کسی بھی فرد کو فنڈز ٹرانسفر کرنے یا اہنی بحالی کی عبارت ملاحظہ کرنے کی اجازت دے سکتا ہے۔</string>
     <!-- Dialog option to cancel -->
-    <string name="PaymentsSecuritySetupFragment__cancel">منسوخ کریں</string>
     <!-- Dialog option to skip -->
-    <string name="PaymentsSecuritySetupFragment__skip">چھوڑ دو</string>
 
     <!-- PaymentsAddMoneyFragment -->
     <string name="PaymentsAddMoneyFragment__add_funds">فنڈز شامل کریں</string>
     <string name="PaymentsAddMoneyFragment__your_wallet_address">آپ کا Wallet کا پتہ</string>
     <string name="PaymentsAddMoneyFragment__copy">کاپی کریں</string>
-    <string name="PaymentsAddMoneyFragment__copied_to_clipboard">کلپ بورڈ کو کاپی کریں</string>
     <string name="PaymentsAddMoneyFragment__to_add_funds">فنڈز شامل کرنے کے لئے ، اپنے Wallet کے پتے پر موبائل کوائن بھیجیں۔ اپنے تبادلے سے اپنے اکاؤنٹ سے لین دین شروع کریں جو موبائل کوائن کو سپورٹ کرتا ہے ، پھر کیو آر کوڈ اسکین کریں یا اپنے Wallet کے پتے کو کاپی کریں۔</string>
   <!-- Removed by excludeNonTranslatables <string name="PaymentsAddMoneyFragment__learn_more__information" translatable="false">https://support.signal.org/hc/articles/360057625692#payments_transfer_from_exchange</string> -->
 
     <!-- PaymentsDetailsFragment -->
     <string name="PaymentsDetailsFragment__details">تفصیلات</string>
     <string name="PaymentsDetailsFragment__status">صورتحال</string>
-    <string name="PaymentsDetailsFragment__submitting_payment">ادائیگی جمع کرائی جارہی ہے…</string>
-    <string name="PaymentsDetailsFragment__processing_payment">ادائیگی پر کارروائی ہو رہی ہے…</string>
-    <string name="PaymentsDetailsFragment__payment_complete">ادائیگی مکمل</string>
-    <string name="PaymentsDetailsFragment__payment_failed">ادائیگی ناکام ہوگئی</string>
     <string name="PaymentsDetailsFragment__network_fee">نیٹ ورک کی فیس</string>
     <string name="PaymentsDetailsFragment__sent_by">کی طرف سے بھیجا</string>
-    <string name="PaymentsDetailsFragment__sent_to_s">%1$s کو بھیجا</string>
-    <string name="PaymentsDetailsFragment__you_on_s_at_s">آپ پر %1$s پر%2$s</string>
-    <string name="PaymentsDetailsFragment__s_on_s_at_s">%1$sپر%2$sپر%3$s</string>
     <!-- Prefix to a name to indicate who a payment was sent to -->
-    <string name="PaymentsDetailsFragment__to">کے لئے</string>
-    <string name="PaymentsDetailsFragment__from">کی طرف سے</string>
     <string name="PaymentsDetailsFragment__information">ٹرانزیکشن کی تفصیلات بشمول پیمنٹ کی رقم اور لین دین کا وقت، موبائل کوائن لیجر کا حصہ ہیں۔</string>
-    <string name="PaymentsDetailsFragment__coin_cleanup_fee">Coin Cleanup فیس</string>
-    <string name="PaymentsDetailsFragment__coin_cleanup_information">جب آپ کے پاس موجود سکے کو ٹرانزیکشن کو مکمل کرنے کے لئے جوڑ نہیں کیا جاسکتا ہے تو \"Coin cleanup fee\" وصول کی جاتی ہے۔ Cleanup آپ کو ادائیگی بھیجنا جاری رکھنے کی اجازت دے گی۔</string>
-    <string name="PaymentsDetailsFragment__no_details_available">اس لین دین کے لئے مزید کوئی تفصیلات دستیاب نہیں ہیں</string>
   <!-- Removed by excludeNonTranslatables <string name="PaymentsDetailsFragment__learn_more__information" translatable="false">https://support.signal.org/hc/articles/360057625692#payments_details</string> -->
   <!-- Removed by excludeNonTranslatables <string name="PaymentsDetailsFragment__learn_more__cleanup_fee" translatable="false">https://support.signal.org/hc/articles/360057625692#payments_details_fees</string> -->
-    <string name="PaymentsDetailsFragment__sent_payment">ادائیگی بھیجی گئی</string>
-    <string name="PaymentsDetailsFragment__received_payment">ادائیگی موصول ہوئی</string>
-    <string name="PaymentsDeatilsFragment__payment_completed_s">ادائیگی مکمل ہوگئی%1$s</string>
     <string name="PaymentsDetailsFragment__block_number">نمبر بلاک کریں</string>
 
     <!-- PaymentsTransferFragment -->
@@ -4552,13 +4477,6 @@
     <string name="PaymentsTransferFragment__to_scan_or_enter_wallet_address">To: Wallet کا پتہ سکین کریں یا درج کریں</string>
     <string name="PaymentsTransferFragment__you_can_transfer">آپ ایکسچینج کے ذریعہ فراہم کردہ پرس ایڈریس پر منتقلی مکمل کرکے موبائل کوائن منتقل کرسکتے ہیں۔ Wallet کا پتہ QR کوڈ کے نیچے عام طور پر نمبروں اور حروف کی تار ہوتا ہے۔</string>
     <string name="PaymentsTransferFragment__next">اگلا</string>
-    <string name="PaymentsTransferFragment__invalid_address">غلط پتہ</string>
-    <string name="PaymentsTransferFragment__check_the_wallet_address">وہ پرس پتہ چیک کریں جس کی منتقلی کرنے کی آپ کوشش کر رہے ہیں اور دوبارہ کوشش کریں</string>
-    <string name="PaymentsTransferFragment__you_cant_transfer_to_your_own_signal_wallet_address">آپ اپنے Signal Wallet ایڈریس پر منتقل نہیں کرسکتے ہیں۔ معاون تبادلے میں اپنے اکاؤنٹ سے Wallet کا پتہ درج کریں۔</string>
-    <string name="PaymentsTransferFragment__to_scan_a_qr_code_signal_needs">QR کوڈ اسکین کرنے کے لئے ، Signal کو کیمرہ تک رسائی کی ضرورت ہے۔</string>
-    <string name="PaymentsTransferFragment__signal_needs_the_camera_permission_to_capture_qr_code_go_to_settings">Signal کو QR کوڈ پر قبضہ کرنے کے لئے کیمرے کی اجازت کی ضرورت ہے۔ ترتیبات پر جائیں ، \"اجازت\" کو منتخب کریں ، اور \"کیمرہ\" کو فعال کریں۔</string>
-    <string name="PaymentsTransferFragment__to_scan_a_qr_code_signal_needs_access_to_the_camera">QR کوڈ اسکین کرنے کے لئے ، Signal کو کیمرہ تک رسائی کی ضرورت ہے۔</string>
-    <string name="PaymentsTransferFragment__settings">ترتیبات</string>
 
     <!-- PaymentsTransferQrScanFragment -->
     <string name="PaymentsTransferQrScanFragment__scan_address_qr_code">ایڈریس QR کوڈ کو اسکین کریں</string>
@@ -4568,7 +4486,6 @@
     <!-- Button text to request the payment from a user -->
     <string name="CreatePaymentFragment__request">درخواست</string>
     <string name="CreatePaymentFragment__pay">ادا کرنا</string>
-    <string name="CreatePaymentFragment__available_balance_s">دستیاب بیلنس: %1$s</string>
     <string name="CreatePaymentFragment__toggle_content_description">ٹوگل کریں</string>
     <string name="CreatePaymentFragment__1">1</string>
     <string name="CreatePaymentFragment__2">2</string>
@@ -4581,10 +4498,8 @@
     <string name="CreatePaymentFragment__9">9</string>
     <string name="CreatePaymentFragment__decimal">.</string>
     <string name="CreatePaymentFragment__0">0</string>
-    <string name="CreatePaymentFragment__lt">&lt;</string>
     <string name="CreatePaymentFragment__backspace">بیک اسپیس</string>
     <string name="CreatePaymentFragment__add_note">نوٹ شامل کریں</string>
-    <string name="CreatePaymentFragment__conversions_are_just_estimates">تبادلوں کا صرف اندازہ ہے اور ہوسکتا ہے کہ یہ درست نہ ہوں۔</string>
   <!-- Removed by excludeNonTranslatables <string name="CreatePaymentFragment__learn_more__conversions" translatable="false">https://support.signal.org/hc/articles/360057625692#payments_currency_conversion</string> -->
 
     <!-- EditNoteFragment -->
@@ -4594,26 +4509,10 @@
 
     <!-- ConfirmPaymentFragment -->
     <string name="ConfirmPayment__confirm_payment">ادائیگی کی تصدیق کریں</string>
-    <string name="ConfirmPayment__network_fee">نیٹ ورک کی فیس</string>
-    <string name="ConfirmPayment__estimated_s">تخمینہ %1$s</string>
     <!-- Prefix to a name to indicate who a payment will be sent to -->
-    <string name="ConfirmPayment__to">کے لئے</string>
-    <string name="ConfirmPayment__total_amount">کل رقم</string>
-    <string name="ConfirmPayment__balance_s">بقیہ: %1$s</string>
-    <string name="ConfirmPayment__submitting_payment">ادائیگی جمع کرائی جارہی ہے…</string>
-    <string name="ConfirmPayment__processing_payment">ادائیگی پر کارروائی ہو رہی ہے…</string>
-    <string name="ConfirmPayment__payment_complete">ادائیگی مکمل</string>
-    <string name="ConfirmPayment__payment_failed">ادائیگی ناکام ہوگئی</string>
-    <string name="ConfirmPayment__payment_will_continue_processing">ادائیگی پر کارروائی جاری رہے گی</string>
-    <string name="ConfirmPaymentFragment__invalid_recipient">غلط وصول کنندہ</string>
     <!-- Title of a dialog show when we were unable to present the user\'s screenlock before sending a payment -->
-    <string name="ConfirmPaymentFragment__failed_to_show_payment_lock">پیمنٹ لاک دکھانے میں ناکامی ہوئی</string>
     <!-- Body of a dialog show when we were unable to present the user\'s screenlock before sending a payment -->
-    <string name="ConfirmPaymentFragment__you_enabled_payment_lock_in_the_settings">آپ نے سیٹنگز میں پیمنٹ لاک فعال کر دیا ہے، لیکن اسے دکھایا نہیں جا سکتا۔</string>
     <!-- Button in a dialog that will take the user to the privacy settings -->
-    <string name="ConfirmPaymentFragment__go_to_settings">سیٹنگز پر جائیں</string>
-    <string name="ConfirmPaymentFragment__this_person_has_not_activated_payments">اس شخص نے ادائیگی فعال نہیں کی ہے</string>
-    <string name="ConfirmPaymentFragment__unable_to_request_a_network_fee">نیٹ ورک فیس کی درخواست کرنے سے قاصر۔ اس ادائیگی کو جاری رکھنے کے لئے دوبارہ کوشش کرنے کے لئے ٹھیک ہے پر ٹیپ کریں۔</string>
 
     <!-- BiometricDeviceAuthentication -->
     <!-- Biometric/Device authentication prompt title -->
@@ -4625,7 +4524,6 @@
 
     <!-- SetCurrencyFragment -->
     <string name="SetCurrencyFragment__set_currency">کرنسی مقرر کریں</string>
-    <string name="SetCurrencyFragment__all_currencies">تمام کرنسیوں</string>
 
     <!-- **************************************** -->
     <!-- menus -->
@@ -5511,20 +5409,9 @@
     <!-- InfoCard -->
     <string name="payment_info_card_about_mobilecoin">موبائل کوائن کے بارے میں</string>
     <string name="payment_info_card_mobilecoin_is_a_new_privacy_focused_digital_currency">MobileCoin پرائیویسی پر مرتکز نئی ڈیجیٹل کرنسی ہے۔</string>
-    <string name="payment_info_card_adding_funds">فنڈز کا اضافہ</string>
-    <string name="payment_info_card_you_can_add_funds_for_use_in">آپ اپنے Wallet کے پتے پر موبائل کوائن بھیج کر Signal میں استعمال کے لئے فنڈز شامل کرسکتے ہیں۔</string>
-    <string name="payment_info_card_cashing_out">کیش آؤٹ</string>
-    <string name="payment_info_card_you_can_cash_out_mobilecoin">آپ کبھی بھی ایسے تبادلے پر موبائل کوائن کیش کر سکتے ہیں جو موبائل کوائن کو سپورٹ کرتا ہے۔ اس تبادلے میں صرف اپنے اکاؤنٹ میں ٹرانسفر کریں۔</string>
     <string name="payment_info_card_hide_this_card">یہ کارڈ چھپائیں؟</string>
-    <string name="payment_info_card_hide">پوشیدہ کریں</string>
     <!-- Title of save recovery phrase card -->
-    <string name="payment_info_card_save_recovery_phrase">ریکوری کی عبارت محفوظ کریں</string>
-    <string name="payment_info_card_your_recovery_phrase_gives_you">آپ کی بازیابی کا جملہ آپ کو اپنے ادائیگیوں کے اکاؤنٹ کو بحال کرنے کا ایک اور طریقہ فراہم کرتا ہے۔</string>
     <!-- Button in save recovery phrase card -->
-    <string name="payment_info_card_save_your_phrase">اپنی عبارت محفوظ کریں</string>
-    <string name="payment_info_card_update_your_pin">اپنا پن اپ ڈیٹ کریں</string>
-    <string name="payment_info_card_with_a_high_balance">اعلی بیلنس کے ساتھ ، آپ اپنے اکاؤنٹ میں مزید تحفظ شامل کرنے کے لئے کسی حرفی نمبر کو اپ ڈیٹ کرنا چاہتے ہو۔</string>
-    <string name="payment_info_card_update_pin">پن کو اپ ڈیٹ کریں</string>
 
   <!-- Removed by excludeNonTranslatables <string name="payment_info_card__learn_more__about_mobilecoin" translatable="false">https://support.signal.org/hc/articles/360057625692#payments_which_ones</string> -->
   <!-- Removed by excludeNonTranslatables <string name="payment_info_card__learn_more__adding_to_your_wallet" translatable="false">https://support.signal.org/hc/articles/360057625692#payments_transfer_from_exchange</string> -->
@@ -5536,45 +5423,29 @@
     <string name="DeactivateWalletFragment__its_recommended_that_you">یہ تجویز پیش کی جاتی ہے کہ پیمنٹس کو غیر فعال کرنے سے قبل آپ اپنے فنڈز کو کسی دوسرے والیٹ ایڈریس پر ٹرانسفر کریں۔ اگر آپ فی الحال اپنے فنڈز کو ٹرانسفر کرنے کا انتخاب نہیں کرنا چاہتے، تو آپ کی جانب سے پیمنٹس کو دوبارہ فعال کرنے کی صورت میں یہ Signal سے لنک کردہ آپ کے والیٹ میں موجود رہیں گے۔</string>
     <string name="DeactivateWalletFragment__transfer_remaining_balance">باقی بیلنس منتقل کریں</string>
     <string name="DeactivateWalletFragment__deactivate_without_transferring">منتقلی کے بغیر غیر فعال کریں</string>
-    <string name="DeactivateWalletFragment__deactivate">غیر فعال کریں</string>
-    <string name="DeactivateWalletFragment__deactivate_without_transferring_question">منتقلی کے بغیر غیر فعال کریں؟</string>
-    <string name="DeactivateWalletFragment__your_balance_will_remain">اگر آپ پیمنٹس کو دوبارہ فعال کرنے کا انتخاب کرتے ہیں تو آپ کا بیلنس Signal سے لنک کردہ آپ کے والیٹ میں موجود رہے گا۔</string>
-    <string name="DeactivateWalletFragment__error_deactivating_wallet">Wallet کو غیر فعال کرنے میں خرابی۔</string>
   <!-- Removed by excludeNonTranslatables <string name="DeactivateWalletFragment__learn_more__we_recommend_transferring_your_funds" translatable="false">https://support.signal.org/hc/articles/360057625692#payments_deactivate</string> -->
 
     <!-- PaymentsRecoveryStartFragment -->
     <string name="PaymentsRecoveryStartFragment__recovery_phrase">بازیافت جملہ</string>
     <string name="PaymentsRecoveryStartFragment__view_recovery_phrase">بازیابی کا جملہ دیکھیں</string>
     <!-- Title in save recovery phrase screen -->
-    <string name="PaymentsRecoveryStartFragment__save_recovery_phrase">ریکوری کی عبارت محفوظ کریں</string>
-    <string name="PaymentsRecoveryStartFragment__enter_recovery_phrase">بازیابی کا جملہ درج کریں</string>
     <plurals name="PaymentsRecoveryStartFragment__your_balance_will_automatically_restore">
         <item quantity="one">جب آپ اپنے Signal کے پن کی تصدیق کرتے ہیں تو Signal کو دوبارہ انسٹال کرتے وقت آپ کا بیلنس خود بخود بحال ہو جائے گا۔ آپ بحالی کی عبارت کا استعمال کرتے ہوئے اپنے بیلنس کو بھی بحال کر سکتے ہیں، جو آپ کے لیے منفرد ایک %1$d لفظی جملہ ہے۔ اسے لکھ کر محفوظ جگہ پر اسٹور کریں۔</item>
         <item quantity="other">جب آپ اپنے Signal پن کی تصدیق کرتے ہیں تو آپ Signal کو دوبارہ انسٹال کرتے وقت آپ کا بیلنس خود بخود بحال ہو جائے گا۔ آپ بحالی کی عبارت کا استعمال کرتے ہوئے اپنے بیلنس کو بھی بحال کر سکتے ہیں، جو آپ کے لیے ایک %1$d لفظی جملہ ہے۔ اسے لکھ کر محفوظ جگہ پر اسٹور کریں۔</item>
     </plurals>
     <!-- Description in save recovery phrase screen which shows up when user has non zero balance -->
-    <string name="PaymentsRecoveryStartFragment__got_balance">آپ کے پاس بیلنس موجود ہے! اپنی ریکوری کی عبارت محفوظ کرنے کا وقت ہے—24 الفاظ پر مشتمل کیی جو آپ اپنا بیلنس ریکور کرنے کے لیے استعمال کر سکتے ہیں۔</string>
     <!-- Description in save recovery phrase screen which shows up when user navigates from info card -->
-    <string name="PaymentsRecoveryStartFragment__time_to_save">اپنا بحالی کا فقرہ محفوظ کرنے کرنے کا وقت ہے—24 الفاظ پر مشتمل کلید جو آپ اپنا بیلنس ری اسٹور کرنے کے لیے استعمال کر سکتے ہیں۔</string>
-    <string name="PaymentsRecoveryStartFragment__your_recovery_phrase_is_a">آپ کی بازیابی کا جملہ آپ کے لئے انوکھا %1$dجملہ ہے۔ اپنا بیلنس بحال کرنے کے لئے اس جملے کا استعمال کریں۔</string>
     <string name="PaymentsRecoveryStartFragment__start">شروع کریں</string>
-    <string name="PaymentsRecoveryStartFragment__enter_manually">دستی طور پر داخل کریں</string>
     <string name="PaymentsRecoveryStartFragment__paste_from_clipboard">کلپ بورڈ سے پیسٹ کریں</string>
     <!-- Alert dialog title which asks before going back if user wants to save recovery phrase -->
-    <string name="PaymentsRecoveryStartFragment__continue_without_saving">بغیر محفوظ کیے جاری رکھیں؟</string>
     <!-- Alert dialog description to let user know why recovery phrase needs to be saved -->
-    <string name="PaymentsRecoveryStartFragment__your_recovery_phrase">آپ کی ریکوری کی عبارت آپ کو مشکل ترین صورتحال میں اپنا بیلنس بحال کرنے کی اجازت دیتی ہے۔ ہمارا مشورہ ہے کہ اسے محفوظ کر لیں۔</string>
     <!-- Alert dialog option to skip recovery phrase -->
-    <string name="PaymentsRecoveryStartFragment__skip_recovery_phrase">ریکوری کی عبارت موخر کریں</string>
     <!-- Alert dialog option to cancel dialog-->
-    <string name="PaymentsRecoveryStartFragment__cancel">منسوخ کریں</string>
 
     <!-- PaymentsRecoveryPasteFragment -->
     <string name="PaymentsRecoveryPasteFragment__paste_recovery_phrase">بازیابی کا جملہ پیسٹ کریں</string>
     <string name="PaymentsRecoveryPasteFragment__recovery_phrase">بازیافت جملہ</string>
     <string name="PaymentsRecoveryPasteFragment__next">اگلا</string>
-    <string name="PaymentsRecoveryPasteFragment__invalid_recovery_phrase">بازیافت کا غلط جملہ</string>
-    <string name="PaymentsRecoveryPasteFragment__make_sure">یقینی بنائیں کہ آپ نے %1$d الفاظ داخل کیے ہیں اور دوبارہ کوشش کریں۔</string>
 
   <!-- Removed by excludeNonTranslatables <string name="PaymentsRecoveryStartFragment__learn_more__view" translatable="false">https://support.signal.org/hc/articles/360057625692#payments_wallet_view_passphrase</string> -->
   <!-- Removed by excludeNonTranslatables <string name="PaymentsRecoveryStartFragment__learn_more__restore" translatable="false">https://support.signal.org/hc/articles/360057625692#payments_wallet_restore_passphrase</string> -->
@@ -5584,38 +5455,24 @@
     <string name="PaymentsRecoveryPhraseFragment__edit">ترتیب دیں</string>
     <string name="PaymentsRecoveryPhraseFragment__your_recovery_phrase">آپ کی بازیابی کا جملہ</string>
     <string name="PaymentsRecoveryPhraseFragment__write_down_the_following_d_words">ترتیب میں درج ذیل %1$d الفاظ لکھیں۔ اپنی فہرست کو محفوظ جگہ پر اسٹور کریں۔</string>
-    <string name="PaymentsRecoveryPhraseFragment__make_sure_youve_entered">یقینی بنائیں کہ آپ نے اپنے جملے کو صحیح طریقے سے داخل کیا ہے۔</string>
     <string name="PaymentsRecoveryPhraseFragment__do_not_screenshot_or_send_by_email">اسکرین شاٹ نہ ای میل کے ذریعے بھیجیں۔</string>
-    <string name="PaymentsRecoveryPhraseFragment__payments_account_restored">ادائیگیوں کا اکاؤنٹ بحال ہوگیا۔</string>
-    <string name="PaymentsRecoveryPhraseFragment__invalid_recovery_phrase">بازیافت کا غلط جملہ</string>
-    <string name="PaymentsRecoveryPhraseFragment__make_sure_youve_entered_your_phrase_correctly_and_try_again">یقینی بنائیں کہ آپ نے اپنے جملے کو صحیح طریقے سے داخل کیا ہے اور دوبارہ کوشش کریں۔</string>
-    <string name="PaymentsRecoveryPhraseFragment__copy_to_clipboard">کلپ بورڈ میں کاپی کریں؟</string>
-    <string name="PaymentsRecoveryPhraseFragment__if_you_choose_to_store">اگر آپ اپنے بازیافت کے فقرے کو ڈیجیٹل طور پر ذخیرہ کرنے کا انتخاب کرتے ہیں تو ، یقینی بنائیں کہ یہ آپ کے اعتماد کے مقام پر محفوظ طریقے سے محفوظ ہے۔</string>
     <string name="PaymentsRecoveryPhraseFragment__copy">کاپی کریں</string>
 
     <!-- PaymentsRecoveryPhraseConfirmFragment -->
     <string name="PaymentRecoveryPhraseConfirmFragment__confirm_recovery_phrase">بازیابی کے فقرے کی تصدیق کریں</string>
     <string name="PaymentRecoveryPhraseConfirmFragment__enter_the_following_words">اپنے بازیافت کے فقرے سے درج ذیل الفاظ درج کریں۔</string>
-    <string name="PaymentRecoveryPhraseConfirmFragment__word_d">لفظ%1$d</string>
     <string name="PaymentRecoveryPhraseConfirmFragment__see_phrase_again">ایک بار پھر جملہ ملاحظہ کریں</string>
     <string name="PaymentRecoveryPhraseConfirmFragment__done">ہو گیا</string>
-    <string name="PaymentRecoveryPhraseConfirmFragment__recovery_phrase_confirmed">بازیابی کے فقرے کی تصدیق ہوگئی</string>
 
     <!-- PaymentsRecoveryEntryFragment -->
     <string name="PaymentsRecoveryEntryFragment__enter_recovery_phrase">بازیابی کا جملہ درج کریں</string>
-    <string name="PaymentsRecoveryEntryFragment__enter_word_d">لفظ داخل کریں%1$d</string>
-    <string name="PaymentsRecoveryEntryFragment__word_d">لفظ%1$d</string>
     <string name="PaymentsRecoveryEntryFragment__next">اگلا</string>
-    <string name="PaymentsRecoveryEntryFragment__invalid_word">غلط لفظ</string>
 
     <!-- UnreadPayments -->
     <string name="UnreadPayments__s_sent_you_s">%1$s نے آپ کو %2$s بھیجا</string>
     <string name="UnreadPayments__d_new_payment_notifications">ادائیگی کی %1$d نئی اطلاعات</string>
 
     <!-- CanNotSendPaymentDialog -->
-    <string name="CanNotSendPaymentDialog__cant_send_payment">ادائیگی نہیں بھیج سکتے</string>
-    <string name="CanNotSendPaymentDialog__to_send_a_payment_to_this_user">اس صارف کو ادائیگی بھیجنے کے لئے انہیں آپ کی طرف سے میسج کی درخواست قبول کرنے کی ضرورت ہے۔ میسج ریکوئسٹ بنانے کیلئے انہیں میسج بھیجیں۔</string>
-    <string name="CanNotSendPaymentDialog__send_a_message">پیغام بھیجیں</string>
 
     <!-- GroupsInCommonMessageRequest -->
     <string name="GroupsInCommonMessageRequest__you_have_no_groups_in_common_with_this_person">اس شخص کے ساتھ آپ کے کوئی گروپ مشترک نہیں ہیں۔ ناپسندیدہ پیغامات سے بچنے کے لئے قبول کرنے سے پہلے درخواستوں کا بغور جائزہ لیں۔</string>
@@ -6056,13 +5913,9 @@
     <!-- ChatColorGradientTool -->
 
     <!-- Title text for prompt to donate. Shown in a popup at the bottom of the chat list. -->
-    <string name="Donate2022Q2Megaphone_donate_to_signal">Signal کے لیے عطیہ کریں</string>
     <!-- Body text for prompt to donate. Shown in a popup at the bottom of the chat list. -->
-    <string name="Donate2022Q2Megaphone_signal_is_powered_by_people_like_you">Signal آپ جیسے لوگوں کی مدد سے ہی چلتا ہے۔ ہر ماہ عطیہ کریں اور ایک بیج موصول کریں۔</string>
     <!-- Button label that brings a user to the donate screen. Shown in a popup at the bottom of the chat list. -->
-    <string name="Donate2022Q2Megaphone_donate">عطیہ کریں</string>
     <!-- Button label that dismissed a prompt to donate. Shown in a popup at the bottom of the chat list. -->
-    <string name="Donate2022Q2Megaphone_not_now">ابھی نہیں</string>
 
     <!-- EditReactionsFragment -->
     <string name="EditReactionsFragment__customize_reactions">ری ایکشنز کو حسبِ ضرورت بنائیں</string>
@@ -6079,11 +5932,7 @@
     <string name="AddAProfilePhotoMegaphone__add_photo">تصویر لگاو</string>
 
     <!-- BecomeASustainerMegaphone -->
-    <string name="BecomeASustainerMegaphone__become_a_sustainer">عطیہ گزار بنیں</string>
     <!-- Displayed in the Become a Sustainer megaphone -->
-    <string name="BecomeASustainerMegaphone__signal_is_powered_by">Signal آپ جیسے لوگوں کی مدد سے چلتا ہے۔ عطیہ کریں اور بیج حاصل کریں۔</string>
-    <string name="BecomeASustainerMegaphone__not_now">ابھی نہیں</string>
-    <string name="BecomeASustainerMegaphone__donate">عطیہ کریں</string>
 
     <!-- KeyboardPagerFragment -->
     <string name="KeyboardPagerFragment_emoji">ایموجی</string>
@@ -6432,15 +6281,9 @@
     <string name="MediaCaptureFragment_device_link_dialog_continue">جاری رکھیں</string>
 
 
-    <string name="BadgesOverviewFragment__my_badges">میرے بیجز</string>
     <string name="BadgesOverviewFragment__featured_badge">خصوصی بیج</string>
-    <string name="BadgesOverviewFragment__display_badges_on_profile">پروفائل پر بیجز ڈسپلے کریں</string>
-    <string name="BadgesOverviewFragment__failed_to_update_profile">پروفائل اپ ڈیٹ کرنے میں ناکامی ہوئی</string>
 
 
-    <string name="SelectFeaturedBadgeFragment__select_a_badge">بیج منتخب کریں</string>
-    <string name="SelectFeaturedBadgeFragment__you_must_select_a_badge">بیج منتخب کرنا لازمی ہے</string>
-    <string name="SelectFeaturedBadgeFragment__failed_to_update_profile">پروفائل اپ ڈیٹ کرنے میں ناکامی ہوئی</string>
 
     <!-- Displayed on primary button in the bottom sheet as a call-to-action to launch into the donation flow -->
     <string name="ViewBadgeBottomSheetDialogFragment__donate_now">عطیہ کریں</string>
@@ -6453,29 +6296,21 @@
 
     <string name="ImageView__badge">بیج</string>
 
-    <string name="SubscribeFragment__cancel_subscription">سبسکرپشن منسوخ کریں</string>
     <string name="SubscribeFragment__confirm_cancellation">منسوخی کی تصدیق کریں؟</string>
     <string name="SubscribeFragment__you_wont_be_charged_again">آپ کو دوبارہ چارج نہیں کیا جائے گا۔ آپ کی بلنگ کی مدت کے اختتام پر آپ کی پروفائل سے آپ کا بیج ہٹا دیا جائے گا۔</string>
     <string name="SubscribeFragment__not_now">ابھی نہیں</string>
     <string name="SubscribeFragment__confirm">تصدیق</string>
-    <string name="SubscribeFragment__update_subscription">سبسکرپشن اپ ڈیٹ کریں</string>
-    <string name="SubscribeFragment__your_subscription_has_been_cancelled">آپ کی سبسکرپشن منسوخ ہو گئی ہے۔</string>
-    <string name="SubscribeFragment__update_subscription_question">سبسکرپشن اپ ڈیٹ کریں؟</string>
     <string name="SubscribeFragment__update">اَپ ڈیٹ</string>
     <string name="SubscribeFragment__you_will_be_charged_the_full_amount_s_of">آپ سے آج نئی سبسکرپشن کی مکمل رقم (%1$s) چارج کی جائے گی۔ آپ کی سبسکرپشن کی تجدید ماہانہ ہو گی۔</string>
 
-    <string name="Subscription__s_per_month">%1$s/ماہ</string>
     <!-- Shown when a subscription is active and isn\'t going to expire at the end of the term -->
-    <string name="Subscription__renews_s">%1$s کی تجدید کرتا ہے</string>
     <!-- Shown when a subscription is active and is going to expire at the end of the term -->
-    <string name="Subscription__expires_s">%1$s پر زائد المیعاد ہے</string>
 
     <!-- Title of learn more sheet -->
     <string name="SubscribeLearnMoreBottomSheetDialogFragment__signal_is_different">ایک خود مختار غیر منافع بخش ایپ کے طور پر، Signal نجی میسجنگ اور کالز کی فراہمی کے لیے پُرعزم ہے۔ کوئی اشتہارات، کوئی ٹریکرز، کوئی نگرانی نہیں۔ Signal کو سپورٹ کرنے کے لیے ابھی عطیہ کریں۔</string>
     <!-- First small text blurb on learn more sheet -->
     <string name="SubscribeLearnMoreBottomSheetDialogFragment__private_messaging">No ads, no trackers, no surveillance. Donate today to support Signal.</string>
     <!-- Second small text blurb on learn more sheet -->
-    <string name="SubscribeLearnMoreBottomSheetDialogFragment__donate_and_get_badge">عطیہ کرنے پر اپنی پروفائل پر ایک اختیاری بیج حاصل کریں</string>
     <!-- Third small text blurb on learn more sheet -->
     <string name="SubscribeLearnMoreBottomSheetDialogFragment__your_privacy_is_our_mission">آپ کی پرائیویسی ہمارا مشن ہے</string>
     <!-- Fourth small text blurb on learn more sheet. Non-English translations should use "Signal is a nonprofit." instead, dropping the 501c3 reference. -->
@@ -6483,60 +6318,37 @@
 
     <string name="SubscribeThanksForYourSupportBottomSheetDialogFragment__thanks_for_your_support">آپ کی معاونت کے لیے آپ کا شکریہ!</string>
     <!-- Subtext underneath the dialog title on the thanks sheet -->
-    <string name="SubscribeThanksForYourSupportBottomSheetDialogFragment__youve_earned_a_donor_badge">آپ نے سگنل سے ڈونر بیج حاصل کیا ہے! اپنا تعاون ظاہر کرنے کے لیے اسے اپنے پروفائل پر دکھائیں۔</string>
     <string name="SubscribeThanksForYourSupportBottomSheetDialogFragment__you_can_also">اس کے علاوہ آپ</string>
-    <string name="SubscribeThanksForYourSupportBottomSheetDialogFragment__become_a_montly_sustainer">ماہانہ عطیہ گزار بن سکتے ہیں۔</string>
     <string name="SubscribeThanksForYourSupportBottomSheetDialogFragment__display_on_profile">پروفائل پر ڈسپلے کریں</string>
-    <string name="SubscribeThanksForYourSupportBottomSheetDialogFragment__make_featured_badge">خصوصی بیج بنائیں</string>
     <string name="SubscribeThanksForYourSupportBottomSheetDialogFragment__continue">جاری رکھیں</string>
     <string name="ThanksForYourSupportBottomSheetFragment__when_you_have_more">جب آپ کے پاس ایک سے زیادہ بیج ہوں، تو آپ اپنی پروفائل پر دوسروں کے دیکھنے کے لیے ایک کو خصوصی بنانے کا انتخاب کر سکتے ہیں۔</string>
 
-    <string name="BecomeASustainerFragment__get_badges">Signal کی سپورٹ کے ذریعے اپنی پروفائل کے لیے بیجز حاصل کریں۔</string>
-    <string name="BecomeASustainerFragment__signal_is_a_non_profit">Signal کسی مشتہرین یا سرمایہ کاران کے بغیر ایک غیر منافع بخش تنظیم ہے، جس کی معاونت صرف آپ جیسے افراد کرتے ہیں۔</string>
 
     <!-- Button label for creating a donation -->
-    <string name="ManageDonationsFragment__donate_to_signal">Signal کے لیے عطیہ کریں</string>
     <!-- Heading for more area of manage subscriptions page -->
-    <string name="ManageDonationsFragment__more">مزید</string>
     <!-- Heading for receipts area of manage subscriptions page -->
     <!-- Heading for my subscription area of manage subscriptions page -->
-    <string name="ManageDonationsFragment__my_support">میری معاونت</string>
-    <string name="ManageDonationsFragment__manage_subscription">سبسکرپشن کا نظم کریں</string>
     <!-- Label for Donation Receipts button -->
-    <string name="ManageDonationsFragment__donation_receipts">عطیے کی رسیدیں</string>
-    <string name="ManageDonationsFragment__badges">بیجز</string>
     <!-- Label that externally links to Signal Donor FAQ page -->
-    <string name="ManageDonationsFragment__subscription_faq">ڈونر کے عمومی سوال</string>
     <!-- Preference heading for other ways to donate -->
-    <string name="ManageDonationsFragment__other_ways_to_give">دینے کے دیگر طریقے</string>
     <!-- Preference label to launch badge gifting -->
-    <string name="ManageDonationsFragment__donate_for_a_friend">دوست کے لیے عطیہ کریں</string>
     <!-- Dialog title shown when a donation requires verifying/confirmation outside of the app and the user hasn\'t done that yet -->
-    <string name="ManageDonationsFragment__couldnt_confirm_donation">عطیے کی تصدیق نہیں کی جا سکی</string>
     <!-- Dialog message shown when a monthly donation requires verifying/confirmation outside of the app and the user hasn\'t done that yet, placeholder is money amount -->
-    <string name="ManageDonationsFragment__your_monthly_s_donation_couldnt_be_confirmed_ideal_wero">Your %1$s/month donation couldn\'t be confirmed. Check your banking app to approve your iDEAL | Wero payment.</string>
     <!-- Dialog message shown when a one-time donation requires verifying/confirmation outside of the app and the user hasn\'t done that yet, placeholder is money amount -->
-    <string name="ManageDonationsFragment__your_one_time_s_donation_couldnt_be_confirmed_ideal_wero">Your one-time %1$s donation couldn\'t be confirmed. Check your banking app to approve your iDEAL | Wero payment.</string>
 
-    <string name="Boost__enter_custom_amount">اپنی مرضی کی رقم درج کریں</string>
     <!-- Error label when the amount is smaller than what we can accept -->
-    <string name="Boost__the_minimum_amount_you_can_donate_is_s">کم سے کم رقم جو آپ عطیہ کر سکتے ہیں وہ %1$s ہے</string>
 
     <string name="MySupportPreference__s_per_month">%1$s/ماہ</string>
     <string name="MySupportPreference__renews_s">%1$s کی تجدید کرتا ہے</string>
     <!-- Subtitle shown when processing a donation transaction -->
     <string name="MySupportPreference__processing_transaction">ٹرانزیکشن پر عمل کاری…</string>
     <!-- Displayed on "My Support" screen when user badge failed to be added to their account -->
-    <string name="MySupportPreference__couldnt_add_badge_s">بیج شامل نہیں کر سکے۔ %1$s</string>
     <string name="MySupportPreference__please_contact_support">براہ کرم معاونت سے رابطہ کریں۔</string>
     <!-- Displayed as a subtitle on a row in the Manage Donations screen when payment for a donation is pending -->
-    <string name="MySupportPreference__payment_pending">پیمنٹ زیر التواء ہے</string>
     <!-- Displayed as a dialog message when clicking on a donation row that is pending. Placeholder is a formatted fiat amount -->
-    <string name="MySupportPreference__your_bank_transfer_of_s">آپ کی %1$s کی بینک ٹرانسفر زیر التواء ہے۔ بینک ٹرانسفرز کو مکمل ہونے میں 1 سے 14 کاروباری ایام لگ سکتے ہیں۔  </string>
     <!-- Displayed in the pending help dialog, used to launch user to more details about bank transfers -->
     <string name="MySupportPreference__learn_more">مزید جانیں</string>
     <!-- Displayed when a subscription refresh is being performed -->
-    <string name="MySupportPreference__checking_subscription">سبسکرپشن چیک کی جا رہی ہے…</string>
 
     <!-- Title of dialog telling user they need to update signal as it expired -->
     <string name="UpdateSignalExpiredDialog__title">Signal اپ ڈیٹ کریں</string>
@@ -6557,126 +6369,66 @@
     <string name="ReregisterSignalDialog__cancel_action">منسوخ کریں</string>
 
     <!-- Title of expiry sheet when boost badge falls off profile unexpectedly. -->
-    <string name="ExpiredBadgeBottomSheetDialogFragment__boost_badge_expired">بوسٹ بیج زائد المیعاد ہو گیا</string>
     <!-- Displayed in the bottom sheet if a monthly donation badge unexpectedly falls off the user\'s profile -->
-    <string name="ExpiredBadgeBottomSheetDialogFragment__monthly_donation_cancelled">ماہانہ عطیہ منسوخ ہو گیا</string>
     <!-- Displayed in the bottom sheet when a boost badge expires -->
-    <string name="ExpiredBadgeBottomSheetDialogFragment__your_boost_badge_has_expired_and">آپ کا بوسٹ بیج زائد المیعاد ہو گیا ہے اور آپ کی پروفائل پر مزید دکھائی نہیں دیتا۔</string>
-    <string name="ExpiredBadgeBottomSheetDialogFragment__you_can_reactivate">آپ ایک وقتی تعاون کے ساتھ آئندہ 30 دنوں کے لیے اپنا بوسٹ بیج دوبارہ فعال کر سکتے ہیں۔</string>
     <!-- Displayed when we do not think the user is a subscriber when their boost expires -->
-    <string name="ExpiredBadgeBottomSheetDialogFragment__you_can_keep">آپ Signal استعمال کرنا جاری رکھ سکتے ہیں لیکن اپنے لیے بنائی گئی ٹیکنالوجی کی سپورٹ کے لیے، ماہانہ عطیہ دینے کے ذریعے عطیہ دینے والا بننے کو زیر غور لائیں۔</string>
-    <string name="ExpiredBadgeBottomSheetDialogFragment__become_a_sustainer">عطیہ گزار بنیں</string>
-    <string name="ExpiredBadgeBottomSheetDialogFragment__add_a_boost">بوسٹ شامل کریں</string>
-    <string name="ExpiredBadgeBottomSheetDialogFragment__not_now">ابھی نہیں</string>
     <!-- Copy displayed when badge expires after user inactivity -->
-    <string name="ExpiredBadgeBottomSheetDialogFragment__your_recurring_monthly_donation_was_automatically">آپ کا ماہانہ متواتر عطیہ خود کار طور پر منسوخ ہو گیا تھا کیونکہ آپ طویل عرصے سے غیر فعال تھے۔ آپ کا %1$s بیج آپ کی پروفائل پر مزید دکھائی نہیں دیتا۔</string>
     <!-- Copy displayed when badge expires after payment failure -->
-    <string name="ExpiredBadgeBottomSheetDialogFragment__your_recurring_monthly_donation_was_canceled">آپ کا ماہانہ متواتر عطیہ منسوخ ہو گیا تھا کیونکہ ہم آپ کی پیمنٹ پر عمل کاری نہیں کر سکے۔ آپ کا بیج آپ کی پروفائل پر مزید دکھائی نہیں دیتا۔</string>
     <!-- Copy displayed when badge expires after a payment failure and we have a displayable charge failure reason -->
-    <string name="ExpiredBadgeBottomSheetDialogFragment__your_recurring_monthly_donation_was_canceled_s">آپ کا متواتر ماہانہ عطیہ منسوخ کر دیا گیا تھا۔ %1$s آپ کا %2$s بیج آپ کی پروفائل پر مزید دکھائی نہیں دیتا۔</string>
-    <string name="ExpiredBadgeBottomSheetDialogFragment__you_can">آپ Signal استعمال کرنا جاری رکھ سکتے ہیں مگر صرف ایپ کو سپورٹ کرنے اور اپنے بیج کو دوبارہ فعال کرنے کے لیے، ابھی تجدید کریں۔</string>
-    <string name="ExpiredBadgeBottomSheetDialogFragment__renew_subscription">سبسکرپشن کی تجدید کریں</string>
     <!-- Button label to send user to Google Pay website -->
-    <string name="ExpiredBadgeBottomSheetDialogFragment__go_to_google_pay">Google Pay پر جائیں</string>
 
-    <string name="CantProcessSubscriptionPaymentBottomSheetDialogFragment__cant_process_subscription_payment">سبسکرپشن کی پیمنٹ پر عمل کاری نہیں کر سکتے</string>
-    <string name="CantProcessSubscriptionPaymentBottomSheetDialogFragment__were_having_trouble">ہمیں آپ کی Signal عطیہ گزار کی ادائیگی جمع کرتے ہوئے مشکل کا سامنا ہے۔ یقینی بنائیں کہ آپ کا ادائیگی کا طریقہ اپ ٹو ڈیٹ ہے۔ اگر ایسا نہیں ہے، تو Google Pay میں اپ ڈیٹ کریں۔ Signal اگلے کچھ دنوں میں ادائیگی پر عمل کاری کرنے کی کوشش کرے گا۔</string>
-    <string name="CantProcessSubscriptionPaymentBottomSheetDialogFragment__dont_show_this_again">یہ دوبارہ نہ دکھائیں</string>
 
-    <string name="Subscription__contact_support">سپورٹ سے رابطہ کریں</string>
-    <string name="Subscription__get_a_s_badge">%1$s بیج حاصل کریں</string>
 
     <!-- *PaymentInProgressFragment strings -->
-    <string name="InAppPaymentInProgressFragment__processing_donation">عطیے پر عمل کاری ہو رہی ہے…</string>
-    <string name="InAppPaymentInProgressFragment__processing_payment">ادائیگی پر کارروائی ہو رہی ہے…</string>
 
     <!--InAppDonations -->
     <!-- Label displayed in google play and on receipts for recurring subscriptions. Placeholder is level -->
-    <string name="InAppDonations__recurring_d">متواتر %1$d</string>
 
     <!-- InAppPaymentErrors -->
     <!-- Displayed as a title in a dialog or notification when a payment failure happens. -->
-    <string name="InAppPaymentErrors__error_processing_payment">ادائیگی پر عمل کاری میں نقص</string>
     <!-- Displayed as a message in a dialog or notification when a payment setup error happens. -->
-    <string name="InAppPaymentErrors__your_payment_couldnt_be_processed">آپ کی پیمنٹ پر عمل نہیں ہو سکا اور آپ کو چارج نہیں کیا گیا ہے۔ براہ کرم دوبارہ کوشش کریں۔</string>
     <!-- Displayed as a message in a dialog when we timeout waiting for a payment to be processed and token to be redeemed -->
-    <string name="InAppPaymentErrors__your_payment_is_still">آپ کی ادائیگی تاحال زیر عمل ہے۔ اس میں آپ کے کنکشن کی بنیاد پر کچھ منٹ لگ سکتے ہیں۔</string>
     <!-- Displayed as a message in a dialog or notification when stripe decline code issuer not available for backup payment. -->
-    <string name="InAppPaymentErrors__StripeDeclineCode__try_completing_the_payment_again">ادائیگی مکمل کرنے کی دوبارہ کوشش کریں یا مزید معلومات کے لیے اپنے بینک سے رابطہ کریں۔</string>
     <!-- Failure code text for revoked authorization of payment, displayed in a dialog or notification as a message. -->
-    <string name="InAppPaymentErrors__StripeFailureCode__this_payment_was_revoked">یہ پیمنٹ اکاؤنٹ ہولڈر کی جانب سے منسوخ کر دی گئی تھی لہٰذا اس پر کارروائی نہیں کی جا سکی تھی۔ آپ پر چارجز عائد نہیں کیے گئے۔</string>
     <!-- Failure code text for a payment lacking an authorized mandate or incorrect mandate, displayed in a dialog or notification as a message.-->
-    <string name="InAppPaymentErrors__StripeFailureCode__an_error_occurred_while_processing_this_payment">اس پیمنٹ پر کارروائی کرتے وقت ایک نقص واقع ہو گیا تھا، براہ کرم دوبارہ کوشش کریں۔</string>
 
     <!-- Displayed in notification when user payment fails to process on Stripe -->
-    <string name="DonationsErrors__error_processing_payment">عطیے کی عمل کاری میں نقص پیش آیا</string>
     <!-- Displayed on manage donations screen as a dialog message when payment method failed -->
-    <string name="DonationsErrors__try_another_payment_method">ادائیگی کا ایک دوسرا طریقہ آزمائیں یا مزید معلومات کے لیے اپنے بینک سے رابطہ کریں۔</string>
     <!-- Displayed on manage donations screen error dialogs as an action label -->
-    <string name="DonationsErrors__learn_more">مزید جانیں</string>
     <!-- Displayed on "My Support" screen when user subscription payment method failed. -->
-    <string name="DonationsErrors__error_processing_payment_s">عطیے کی عمل کاری میں نقص پیش آیا۔ %1$s</string>
-    <string name="DonationsErrors__your_payment">آپ کے عطیے کو زیر عمل نہیں لایا جا سکا اور آپ کو چارج نہیں کیا گیا۔ براہ کرم دوبارہ کوشش کریں۔</string>
-    <string name="DonationsErrors__still_processing">تاحال زیر عمل ہے</string>
-    <string name="DonationsErrors__couldnt_add_badge">بیج شامل نہیں کر سکے</string>
     <!-- Displayed when backup credential could not be redeemed. Dialog or notification title -->
-    <string name="DonationsError__something_went_wrong">کچھ غلط ہو گیا</string>
     <!-- Displayed when backup credential could not be redeemed. Dialog or notification body -->
-    <string name="DonationsError__your_backups_subscription_couldnt_be_displayed">آپ کی بیک اپس کی سبسکرپشن کو ڈسپلے نہیں کیا جا سکا۔ براہ کرم سپورٹ سے رابطہ کریں۔</string>
     <!-- Displayed when badge credential couldn\'t be verified -->
-    <string name="DonationsErrors__failed_to_validate_badge">بیج کی تصدیق میں ناکامی ہوئی</string>
     <!-- Displayed when badge credential couldn\'t be verified -->
-    <string name="DonationsErrors__could_not_validate">سرور کے جواب کی تصدیق نہیں کر سکے۔ براہ کرم معاونت سے رابطہ کریں۔</string>
     <!-- Displayed as title when some generic error happens during sending donation on behalf of another user -->
-    <string name="DonationsErrors__donation_failed">عطیہ ناکام ہو گیا</string>
     <!-- Displayed as message when some generic error happens during sending donation on behalf of another user -->
-    <string name="DonationsErrors__your_payment_was_processed_but">آپ کے عطیے کو زیر عمل لا دیا گیا تھا تاہم Signal آپ کے عطیہ کا میسج ارسال کرنے سے قاصر رہا۔ براہ کرم سپورٹ سے رابطہ کریں۔</string>
-    <string name="DonationsErrors__your_badge_could_not">آپ کا بیج آپ کے اکاؤنٹ میں شامل نہیں کیا جا سکا، لیکن آپ کو چارج کیا گیا ہو گا۔ براہ کرم سپورٹ سے رابطہ کریں۔</string>
-    <string name="DonationsErrors__your_payment_is_still">آپ کا عطیہ اب بھی زیر عمل ہے۔ اس پر چند منٹ لگ سکتے ہیں جس کا انحصار آپ کے کنکشن پر ہے۔</string>
-    <string name="DonationsErrors__failed_to_cancel_subscription">سبسکرپشن منسوخ کرنے میں ناکامی ہوئی</string>
-    <string name="DonationsErrors__subscription_cancellation_requires_an_internet_connection">سبسکرپشن منسوخ کرنے کے لیے انٹرنیٹ کنکشن کی ضرورت ہے۔</string>
     <string name="ViewBadgeBottomSheetDialogFragment__your_device_doesn_t_support">آپ کی ڈیوائس درون ایپ عطیات کو سپورٹ نہیں کرتی، اس لیے آپ بیج حاصل کرنے کے لیے سبسکرائب نہیں کر سکتے۔ آپ پھر بھی ہماری ویب سائٹ پر عطیہ دے کر Signal کو سپورٹ کر سکتے ہیں۔</string>
     <string name="NetworkFailure__network_error_check_your_connection_and_try_again">نیٹ ورک کا نقص۔ اپنا کنکشن چیک کریں اور دوبارہ کوشش کریں۔</string>
     <string name="NetworkFailure__retry">دوبارہ کوشش کریں</string>
     <!-- Displayed as a dialog title when the selected recipient for a gift doesn\'t support gifting -->
-    <string name="DonationsErrors__cannot_send_donation">عطیہ نہیں بھیج سکتے</string>
     <!-- Displayed as a dialog message when the selected recipient for a gift doesn\'t support gifting -->
-    <string name="DonationsErrors__this_user_cant_receive_donations_until">Signal کو اپ گریڈ کرنے تک یہ یوزر عطیات وصول کرنے سے قاصر ہے۔</string>
     <!-- Displayed as a dialog message when the user\'s profile could not be fetched, likely due to lack of internet -->
-    <string name="DonationsErrors__your_donation_could_not_be_sent">نیٹ ورک کی خرابی کے باعث آپ کا عطیہ بھیجا نہیں جا سکا۔ اپنا کنکشن چیک کریں اور دوبارہ کوشش کریں۔</string>
     <!-- Displayed as a dialog message when the user encounters an error during an iDEAL donation -->
-    <string name="DonationsErrors__your_ideal_wero_couldnt_be_processed">Your iDEAL | Wero donation couldn\'t be processed. Try another payment method or contact your bank for more information.</string>
 
     <!-- Gift message view title -->
-    <string name="GiftMessageView__donation_on_behalf_of_s">%1$s کی جانب سے عطیہ</string>
     <!-- Gift message view title for incoming donations -->
-    <string name="GiftMessageView__s_donated_to_signal_on">%1$s نے آپ کی جانب سے Signal کو عطیہ کیا</string>
     <!-- Gift badge redeem action label -->
-    <string name="GiftMessageView__redeem">ریڈیم کرنا</string>
     <!-- Gift badge view action label -->
-    <string name="GiftMessageView__view">دیکھیں</string>
     <!-- Gift badge redeeming action label -->
-    <string name="GiftMessageView__redeeming">ریڈیم کیا جا رہا ہے…</string>
     <!-- Gift badge redeemed label -->
-    <string name="GiftMessageView__redeemed">ریڈیم کر دیا گیا</string>
 
 
     <!-- Stripe decline code generic_failure -->
-    <string name="DeclineCode__try_another_payment_method_or_contact_your_bank">ادائیگی کا ایک دوسرا طریقہ آزمائیں یا مزید معلومات کے لیے اپنے بینک سے رابطہ کریں۔</string>
     <!-- PayPal decline code for payment declined -->
-    <string name="DeclineCode__try_another_payment_method_or_contact_your_bank_for_more_information_if_this_was_a_paypal">ادائیگی کا ایک دوسرا طریقہ آزمائیں یا مزید معلومات کے لیے اپنے بینک سے رابطہ کریں۔ اگر یہ ٹرانزیکشن PayPal کے ذریعے کی گئی تھی تو PayPal سے رابطہ کریں۔</string>
     <!-- Stripe decline code verify on Google Pay and try again -->
-    <string name="DeclineCode__verify_your_payment_method_is_up_to_date_in_google_pay_and_try_again">تصدیق کریں کہ Google Pay میں آپ کا ادائیگی کا طریقہ اپ ٹو ڈیٹ ہے اور دوبارہ کوشش کریں۔</string>
     <!-- Stripe decline code learn more action label -->
     <string name="DeclineCode__learn_more">مزید پڑھیں</string>
     <!-- Stripe decline code contact issuer -->
-    <string name="DeclineCode__verify_your_payment_method_is_up_to_date_in_google_pay_and_try_again_if_the_problem">تصدیق کریں کہ Google Pay میں آپ کا ادائیگی کا طریقہ اپ ٹو ڈیٹ ہے اور دوبارہ کوشش کریں۔ اگر مسئلہ برقرار رہے، تو اپنے بینک سے رابطہ کریں۔</string>
     <!-- Stripe decline code purchase not supported -->
     <string name="DeclineCode__your_card_does_not_support_this_type_of_purchase">آپ کا کارڈ اس قسم کی خریداری کی معاونت نہیں کرتا۔ ادائیگی کا کوئی دوسرا طریقہ آزمائیں۔</string>
     <!-- Stripe decline code your card has expired -->
     <string name="DeclineCode__your_card_has_expired">آپ کا کارڈ زائد المیعاد ہو گیا ہے۔ Google Pay میں اپنا ادائیگی کا طریقہ اپ ڈیٹ کریں اور دوبارہ کوشش کریں۔</string>
     <!-- Stripe decline code go to google pay action label -->
-    <string name="DeclineCode__go_to_google_pay">Google Pay پر جائیں</string>
     <!-- Stripe decline code try credit card again action label -->
     <string name="DeclineCode__try">دوبارہ کوشش کریں</string>
     <!-- Stripe decline code incorrect card number -->
@@ -6690,7 +6442,6 @@
     <!-- Stripe decline code incorrect expiration year -->
     <string name="DeclineCode__the_expiration_year">آپ کی ادائیگی کے طریقے پر میعاد پوری ہونے کا سال درست نہیں۔ Google Pay میں اسے اپ ڈیٹ کریں اور دوبارہ کوشش کریں۔</string>
     <!-- Stripe decline code issuer not available -->
-    <string name="DeclineCode__try_completing_the_payment_again">عطیہ مکمل کرنے کی دوبارہ کوشش کریں یا مزید معلومات کے لیے اپنے بینک سے رابطہ کریں۔</string>
     <!-- Stripe decline code processing error -->
     <string name="DeclineCode__try_again">دوبارہ کوشش کریں یا مزید معلومات کے لیے اپنے بینک سے رابطہ کریں۔</string>
 
@@ -6712,15 +6463,10 @@
 
     <!-- Stripe Failure Codes for failed bank transfers -->
     <!-- Failure code text for insufficient funds, displayed in a dialog or notification -->
-    <string name="StripeFailureCode__the_bank_account_provided">فراہم کردہ بینک اکاؤنٹ میں اس خریداری کو پورا کرنے کے لیے مطلوبہ فنڈز کی کمی ہے، دوبارہ کوشش کریں یا مزید معلومات کے لیے اپنے بینک سے رابطہ کریں۔</string>
     <!-- Failure code text for revoked authorization of payment, displayed in a dialog or notification -->
-    <string name="StripeFailureCode__this_payment_was_revoked">یہ عطیہ اکاؤنٹ ہولڈر کی جانب سے منسوخ کر دیا گیا تھا اور اس کو زیر عمل نہیں لایا جا سکا۔ آپ پر چارجز عائد نہیں کیے گئے۔</string>
     <!-- Failure code text for a payment lacking an authorized mandate or incorrect mandate, displayed in a dialog or notification -->
-    <string name="StripeFailureCode__an_error_occurred_while_processing_this_payment">اس عطیے کو زیر عمل لاتے وقت ایک نقص پیش آ گیا تھا، براہ کرم دوبارہ کوشش کریں۔</string>
     <!-- Failure code text for a closed account, deceased recipient, or one with blocked direct debits, displayed in a dialog or notification -->
-    <string name="StripeFailureCode__the_bank_details_provided_could_not_be_processed">فراہم کردہ بینک کی تفصیلات پر کارروائی نہیں کی جا سکی، مزید معلومات کے لیے اپنے بینک سے رابطہ کریں۔</string>
     <!-- Failure code text for a non-existent bank branch, invalid account holder, invalid iban, generic failure, or unknown bank failure, displayed in a dialog or notification -->
-    <string name="StripeFailureCode__verify_your_bank_details_are_correct">تصدیق کریں کہ آپ کے بینک کی تفصیلات درست ہیں اور دوبارہ کوشش کریں۔ اگر مسئلہ جاری رہتا ہے، تو اپنے بینک سے رابطہ کریں۔</string>
 
     <!-- Title of create notification profile screen -->
     <string name="EditNotificationProfileFragment__name_your_profile">اپنی پروفائل کو نام دیں</string>
@@ -6883,33 +6629,19 @@
     <string name="ReleaseNotes__official_only_chat">آفیشل اور واحد Signal چیٹ</string>
 
     <!-- Donation receipts activity title -->
-    <string name="DonationReceiptListFragment__all_activity">تمام سرگرمی</string>
     <!-- Donation receipts all tab label -->
-    <string name="DonationReceiptListFragment__all">تمام</string>
     <!-- Donation receipts recurring tab label -->
-    <string name="DonationReceiptListFragment__recurring">متواتر</string>
     <!-- Donation receipts one-time tab label -->
-    <string name="DonationReceiptListFragment__one_time">ایک وقتی</string>
     <!-- Donation receipts gift tab -->
-    <string name="DonationReceiptListFragment__for_a_friend">ایک دوست کے لیے</string>
     <!-- Donation receipts gift tab label -->
-    <string name="DonationReceiptListFragment__donation_for_a_friend">دوست کی طرف سے عطیہ</string>
     <!-- Donation receipts donation type heading -->
-    <string name="DonationReceiptDetailsFragment__donation_type">عطیے کی قسم</string>
     <!-- Donation receipts date paid heading -->
-    <string name="DonationReceiptDetailsFragment__date_paid">ادا کیے جانے کی تاریخ</string>
     <!-- Donation receipts share PNG -->
-    <string name="DonationReceiptDetailsFragment__share_receipt">رسید شیئر کریں</string>
     <!-- Donation receipts list end note -->
-    <string name="DonationReceiptListFragment__if_you_have">اگر آپ نے Signal دوبارہ انسٹال کیا ہے، تو گزشتہ عطیات کی رسیدیں دستیاب نہیں ہوں گی۔</string>
     <!-- Donation receipts document title -->
-    <string name="DonationReceiptDetailsFragment__donation_receipt">عطیے کی رسید</string>
     <!-- Donation receipts amount title -->
-    <string name="DonationReceiptDetailsFragment__amount">رقم</string>
     <!-- Donation receipts thanks -->
-    <string name="DonationReceiptDetailsFragment__thank_you_for_supporting">Signal کی معاونت کرنے کے لیے آپ کا شکریہ۔ آپ کا تعاون اوپن سورس رازداری کی ٹیکالوجی تیار کرنے کے مشن کو تقویت فراہم کرنے میں مدد کرتا ہے جو آزادی اظہار کے تاثرات کی حفاظت کرتا ہے اور دنیا بھر میں لاکھوں افراد کے لیے محفوظ عالمی مواصلت کو فعال بناتا ہے۔ اگر آپ ریاست ہائے متحدہ امریکہ کے رہائشی ہیں، تو براہ کرم اپنے ٹیکس ریکارڈز کے لیے اس رسید کو برقرار رکھیں۔ Signal ٹیکنالوجی فاؤنڈیشن ریاست ہائے متحدہ امریکہ میں اندرونی ریوینیو کوڈ کے سیکشن 501c3 کے تحت ٹیکس سے مستثنیٰ ایک غیر منافع بخش تنظیم ہے۔ ہماری وفاقی ٹیکس ID 82-4506840 ہے۔</string>
     <!-- Donation reciepts screen empty state title -->
-    <string name="DonationReceiptListFragment__no_receipts">کوئی رسیدیں نہیں</string>
 
     <!-- region "Stories Tab" -->
 
@@ -7297,54 +7029,33 @@
         <item quantity="other">%1$s · %2$d دن کا دورانیہ</item>
     </plurals>
     <!-- Headline text on start fragment for gifting a badge -->
-    <string name="GiftFlowStartFragment__donate_for_a_friend">دوست کی طرف سے عطیہ کریں</string>
     <!-- Description text on start fragment for gifting a badge -->
     <plurals name="GiftFlowStartFragment__support_signal_by">
         <item quantity="one">Signal استعمال کرنے والے دوست یا فیملی ممبر کی خاطر عطیہ کر کے Signal کو سپورٹ کریں۔ انہیں %1$d دن کے لیے اپنی پروفائل پر ڈسپلے کرنے کے لیے ایک بیج موصول ہو گا</item>
         <item quantity="other">Signal استعمال کرنے والے دوست یا فیملی ممبر کی خاطر عطیہ کر کے Signal کو سپورٹ کریں۔ انہیں %1$d دنوں کے لیے اپنی پروفائل پر ڈسپلے کرنے کے لیے ایک بیج موصول ہو گا</item>
     </plurals>
     <!-- Action button label for start fragment for gifting a badge -->
-    <string name="GiftFlowStartFragment__next">اگلا</string>
     <!-- Title text on choose recipient page for badge gifting -->
-    <string name="GiftFlowRecipientSelectionFragment__choose_recipient">وصول کنندہ منتخب کریں</string>
     <!-- Title text on confirm gift page -->
-    <string name="GiftFlowConfirmationFragment__confirm_donation">عطیہ کی تصدیق کریں</string>
     <!-- Heading text specifying who the gift will be sent to -->
-    <string name="GiftFlowConfirmationFragment__send_to">بھیجیں بنام</string>
     <!-- Text explaining that gift will be sent to the chosen recipient -->
-    <string name="GiftFlowConfirmationFragment__the_recipient_will_be_notified">وصول کنندہ کو عطیہ کے حوالے سے ایک 1 پر 1 پیغام ارسال کر کے مطلع کیا جائے گا۔ ذیل میں اپنا ذاتی پیغام شامل کریں۔</string>
     <!-- Text explaining that this gift is a one time donation -->
-    <string name="GiftFlowConfirmationFragment__one_time_donation">ایک وقتی عطیہ</string>
     <!-- Hint for add message input -->
-    <string name="GiftFlowConfirmationFragment__add_a_message">پیغام شامل کریں</string>
     <!-- Displayed in the dialog while verifying the chosen recipient -->
     <string name="GiftFlowConfirmationFragment__verifying_recipient">وصول کنندہ کی تصدیق کی جا رہی ہے…</string>
     <!-- Title for sheet shown when opening a redeemed gift -->
-    <string name="ViewReceivedGiftBottomSheet__s_made_a_donation_for_you">%1$s نے آپ کے لیے عطیہ کیا ہے</string>
     <!-- Title for sheet shown when opening a sent gift -->
-    <string name="ViewSentGiftBottomSheet__thanks_for_your_support">آپ کی حمایت کا شکریہ</string>
     <!-- Description for sheet shown when opening a redeemed gift -->
-    <string name="ViewReceivedGiftBottomSheet__s_made_a_donation_to_signal">%1$s نے آپ کی جانب سے Signal کو عطیہ کیا ہے! اپنی پروفائل پر Signal کے لیے سپورٹ ظاہر کریں۔</string>
     <!-- Description for sheet shown when opening a sent gift -->
-    <string name="ViewSentGiftBottomSheet__youve_made_a_donation_to_signal">آپ نے %1$s کی جانب سے Signal کو عطیہ کیا ہے۔ انہیں اپنی پروفائل پر سپورٹ ظاہر کرنے کا آپشن دیا جائے گا۔</string>
     <!-- Primary action for pending gift sheet to redeem badge now -->
-    <string name="ViewReceivedGiftSheet__redeem">ریڈیم کرنا</string>
     <!-- Primary action for pending gift sheet to redeem badge later -->
-    <string name="ViewReceivedGiftSheet__not_now">ابھی نہیں</string>
     <!-- Dialog text while redeeming a gift -->
-    <string name="ViewReceivedGiftSheet__redeeming_badge">بیج ری ڈیم ہو رہا ہے…</string>
     <!-- Description text in gift thanks sheet -->
-    <string name="GiftThanksSheet__youve_made_a_donation">آپ نے %1$s کی جانب سے Signal کو عطیہ کیا ہے۔ انہیں اپنی پروفائل پر سپورٹ ظاہر کرنے کا آپشن دیا جائے گا۔</string>
     <!-- Expired gift sheet title -->
-    <string name="ExpiredGiftSheetConfiguration__your_badge_has_expired">آپ کا بیج زائد المیعاد ہو گیا ہے</string>
     <!-- Expired gift sheet top description text -->
-    <string name="ExpiredGiftSheetConfiguration__your_badge_has_expired_and_is">آپ کا بیج زائد المیعاد ہو گیا ہے، اور اب آپ کی پروفائل پر دوسرے افراد کو نظر نہیں آئے گا۔</string>
     <!-- Expired gift sheet bottom description text -->
-    <string name="ExpiredGiftSheetConfiguration__to_continue">اپنے لیے بنائی گئی ٹیکنالوجی کی معاونت جاری رکھنے کے لیے، براہ کرم ماہانہ عطیہ گزار بننے کو زیر غور لائیں۔</string>
     <!-- Expired gift sheet make a monthly donation button -->
-    <string name="ExpiredGiftSheetConfiguration__make_a_monthly_donation">ماہانہ عطیہ دیں</string>
     <!-- Expired gift sheet not now button -->
-    <string name="ExpiredGiftSheetConfiguration__not_now">ابھی نہیں</string>
     <!-- My Story label designating that we will only share with the selected viewers. -->
     <string name="ContactSearchItems__only_share_with">صرف ان سے شیئر کریں</string>
     <!-- Label under name for custom stories -->
@@ -7408,7 +7119,6 @@
         <item quantity="other">%1$d منٹ بقایا ہیں</item>
     </plurals>
     <!-- Donation for a friend expiry expired -->
-    <string name="Gifts__expired">زائد المیعاد</string>
 
     <!-- Label indicating that a user can tap to advance to the next post in a story -->
     <string name="StoryFirstTimeNavigationView__tap_to_advance">آگے بڑھنے کے لیے ٹیپ کریں</string>
@@ -7554,129 +7264,76 @@
 
     <!-- DonateToSignalFragment -->
     <!-- Title below avatar -->
-    <string name="DonateToSignalFragment__privacy_over_profit">فخر کے ساتھ غیر منافع بخش</string>
     <!-- Continue button label -->
-    <string name="DonateToSignalFragment__continue">جاری رکھیں</string>
     <!-- Description below title -->
-    <string name="DonateToSignalFragment__private_messaging">نجی میسجنگ کو سپورٹ کرنے کے لیے عطیہ کریں۔ Signal کو خود مختار اور اشتہارات سے پاک رکھیں۔</string>
     <!-- Dialog title when a user tries to donate while they already have a pending donation. -->
-    <string name="DonateToSignalFragment__you_have_a_donation_pending">آپ کا ایک عطیہ زیر التوا ہے</string>
     <!-- Dialog body when a user tries to donate while they already have a pending monthly donation. -->
-    <string name="DonateToSignalFragment__bank_transfers_usually_take_1_business_day_to_process_monthly">بینک ٹرانسفرز کو زیر عمل لانے میں 1 سے 14 کاروباری ایام لگ سکتے ہیں۔ براہ کرم اپنی سبسکرپشن اپ ڈیٹ کرنے سے پہلے اس پیمنٹ کے مکمل ہونے کا انتظار کریں۔</string>
     <!-- Dialog body when a user tries to donate while they already have a pending one time donation. -->
-    <string name="DonateToSignalFragment__bank_transfers_usually_take_1_business_day_to_process_onetime">بینک ٹرانسفرز کو زیر عمل لانے میں 1 سے 14 کاروباری ایام لگ سکتے ہیں۔ براہ کرم ایک اور عطیہ دینے سے پہلے اس پیمنٹ کے مکمل ہونے کا انتظار کریں۔</string>
     <!-- Dialog body when a user tries to donate while they already have a pending monthly donation. -->
-    <string name="DonateToSignalFragment__your_payment_is_still_being_processed_monthly">آپ کا عطیہ اب بھی زیر عمل ہے۔ اس پر چند منٹ لگ سکتے ہیں جس کا انحصار آپ کے کنکشن پر ہے۔ براہ کرم اپنی سبسکرپشن اپ ڈیٹ کرنے سے پہلے اس پیمنٹ کے مکمل ہونے کا انتظار کریں۔</string>
     <!-- Dialog body when a user tries to donate while they already have a pending one time donation. -->
-    <string name="DonateToSignalFragment__your_payment_is_still_being_processed_onetime">آپ کا عطیہ اب بھی زیر عمل ہے۔ اس پر چند منٹ لگ سکتے ہیں جس کا انحصار آپ کے کنکشن پر ہے۔ براہ کرم ایک اور عطیہ دینے سے پہلے اس پیمنٹ کے مکمل ہونے کا انتظار کریں۔</string>
     <!-- Dialog body when a user opens the manage donations main screen and they have a pending iDEAL donation -->
-    <string name="DonateToSignalFragment__your_ideal_wero_payment_is_still_processing">Your iDEAL | Wero donation is still processing. Check your banking app to approve your payment before making another donation.</string>
     <!-- Dialog title shown when a user tries to donate an amount higher than is allowed for a given payment method. -->
-    <string name="DonateToSignal__donation_amount_too_high">عطیے کی رقم بہت زیادہ ہے</string>
     <!-- Dialog body shown when a user tries to donate an amount higher than is allowed for a given payment method, place holder is the maximum -->
-    <string name="DonateToSignalFragment__you_can_send_up_to_s_via_bank_transfer">آپ بذریعہ بینک ٹرانسفر %1$s تک بھیج سکتے ہیں۔ کوئی اور رقم یا پیمنٹ کا کوئی مختلف طریقہ آزمائیں۔</string>
 
     <!-- Donation pill toggle monthly text -->
-    <string name="DonationPillToggle__monthly">ماہانہ</string>
     <!-- Donation pill toggle one-time text -->
-    <string name="DonationPillToggle__one_time">ایک وقتی</string>
 
     <!-- GatewaySelectorBottomSheet -->
     <!-- Sheet title when subscribing -->
-    <string name="GatewaySelectorBottomSheet__donate_s_month_to_signal">Signal کو %1$s/فی ماہ عطیہ کریں</string>
     <!-- Sheet summary when subscribing -->
-    <string name="GatewaySelectorBottomSheet__get_a_s_badge">%1$s بیج حاصل کریں</string>
     <!-- Sheet title when giving a one-time donation -->
-    <string name="GatewaySelectorBottomSheet__donate_s_to_signal">Signal کو %1$s عطیہ کریں</string>
     <!-- Sheet summary when giving a one-time donation -->
     <plurals name="GatewaySelectorBottomSheet__get_a_s_badge_for_d_days">
         <item quantity="one">%2$d دن کے لیے %1$s بیج حاصل کریں</item>
         <item quantity="other">%2$d دنوں کے لیے %1$s بیج حاصل کریں</item>
     </plurals>
     <!-- Button label for paying with a bank transfer -->
-    <string name="GatewaySelectorBottomSheet__bank_transfer">بینک ٹرانسفر</string>
     <!-- Button label for paying with a credit card -->
     <string name="GatewaySelectorBottomSheet__credit_or_debit_card">کریڈٹ یا ڈیبٹ کارڈ</string>
     <!-- Sheet summary when giving donating for a friend -->
-    <string name="GatewaySelectorBottomSheet__donate_for_a_friend">دوست کے لیے عطیہ کریں</string>
     <!-- Button label for paying with iDEAL -->
-    <string name="GatewaySelectorBottomSheet__ideal_wero">iDEAL | Wero</string>
 
     <!-- Dialog title for launching external intent -->
-    <string name="ExternalNavigationHelper__leave_signal_to_confirm_payment">عطیے کی تصدیق کرنے کے لیے Signal سے نکل جائیں؟</string>
-    <string name="ExternalNavigationHelper__once_this_payment_is_confirmed">جب تصدیق ہو جائے، تو اپنے عطیے کی عمل کاری کو مکمل کرنے کے لیے Signal پر واپس آئیں۔</string>
     <!-- Dialog message shown when leaving Signal to complete a donation in an external app. Placeholder is the resolved app name (e.g. a banking app). -->
-    <string name="ExternalNavigationHelper__once_payment_confirmed_in_app">You\'ll be sent to %1$s. When confirmed, return to Signal to finish processing your donation.</string>
 
     <!-- BankTransferMandateFragment -->
     <!-- Title of screen displaying the bank transfer mandate -->
-    <string name="BankTransferMandateFragment__bank_transfer">بینک ٹرانسفر</string>
     <!-- Subtitle of screen displaying the bank transfer mandate, placeholder is \'Learn more\' -->
-    <string name="BankTransferMandateFragment__stripe_processes_donations">Signal کو کیے گئے عطیات پر Stripe کی جانب سے کارروائی کی جاتی ہے۔ Signal آپ کی ذاتی معلومات جمع یا اسٹور نہیں کرتا۔ %1$s</string>
     <!-- Subtitle learn more of screen displaying bank transfer mandate -->
-    <string name="BankTransferMandateFragment__learn_more">مزید جانیں</string>
     <!-- Button label to continue with transfer -->
-    <string name="BankTransferMandateFragment__agree">متفق ہوں</string>
     <!-- Button label to read more of the bank mandate that is currently off screen -->
-    <string name="BankTransferMandateFragment__read_more">مزید پڑھیں</string>
     <!-- Text displayed when mandate load fails -->
-    <string name="BankTransferMandateFragment__failed_to_load_mandate">مینڈیٹ کو لوڈ کرنے میں ناکامی</string>
 
     <!-- BankTransferDetailsFragment -->
     <!-- Subtext explaining how email is used. Placeholder is \'Learn more\' -->
-    <string name="BankTransferDetailsFragment__enter_your_bank_details">اپنی بینک کی تفصیلات اور ای میل درج کریں۔ آپ کے عطیے کے حوالے سے آپ کو اپ ڈیٹس بھیجنے کے لیے Stripe یہ ای میل استعمال کرتی ہے۔ %1$s</string>
     <!-- Subtext learn more link text -->
-    <string name="BankTransferDetailsFragment__learn_more">مزید جانیں</string>
     <!-- Text field label for name on bank account -->
-    <string name="BankTransferDetailsFragment__name_on_bank_account">بینک اکاؤنٹ پر نام</string>
     <!-- Text field label for IBAN -->
-    <string name="BankTransferDetailsFragment__iban">IBAN</string>
     <!-- Text field label for email -->
-    <string name="BankTransferDetailsFragment__email">ای میل</string>
     <!-- Text label for button to show user how to find their IBAN -->
-    <string name="BankTransferDetailsFragment__find_account_info">اکاؤنٹ کی معلومات تلاش کریں</string>
     <!-- Donate button label for monthly subscription -->
-    <string name="BankTransferDetailsFragment__donate_s_month">%1$s/ماہ عطیہ کریں</string>
     <!-- Donate button label for one-time -->
-    <string name="BankTransferDetailsFragment__donate_s">%1$s عطیہ کریں</string>
     <!-- Error label for IBAN field when number is too short -->
-    <string name="BankTransferDetailsFragment__iban_is_too_short">IBAN کافی مختصر ہے</string>
     <!-- Error label for IBAN field when number is too long -->
-    <string name="BankTransferDetailsFragment__iban_is_too_long">IBAN کافی طویل ہے</string>
     <!-- Error label for IBAN field when country is not supported -->
-    <string name="BankTransferDetailsFragment__iban_country_code_is_not_supported">IBAN ملکی کوڈ سپورٹ کردہ نہیں ہے</string>
     <!-- Error label for IBAN field when number is invalid -->
-    <string name="BankTransferDetailsFragment__invalid_iban">غلط IBAN</string>
     <!-- Error label for name field when name is not at least three characters long (Stripe API enforced minimum) -->
-    <string name="BankTransferDetailsFragment__minimum_3_characters">کم از کم 3 حروف</string>
     <!-- Error label for email field when email is not valid -->
-    <string name="BankTransferDetailsFragment__invalid_email_address">غیر مستند ای میل ایڈریس</string>
 
     <!-- IdealTransferDetailsFragment -->
     <!-- Title of the screen, displayed in the toolbar -->
-    <string name="IdealTransferDetailsFragment__ideal">iDEAL</string>
     <!-- Subtitle of the screen, displayed below the toolbar. Placeholder is for \'learn more\' -->
-    <string name="IdealTransferDetailsFragment__enter_your_bank">اپنا نام اور ای میل درج کریں۔ Stripe آپ کو آپ کے عطیات کے بارے میں اپ ڈیٹس بھیجنے کے لیے اس ای میل کو استعمال کرتا ہے۔ %1$s</string>
     <!-- Subtitle of the screen, displayed below the toolbar. Placeholder is for \'learn more\' -->
-    <string name="IdealTransferDetailsFragment__enter_your_bank_details_one_time">اپنی بینک کی تفصیلات درج کریں۔ Signal آپ کی ذاتی معلومات جمع یا اسٹور نہیں کرتا۔ %1$s</string>
     <!-- Subtitle learn-more button displayed inline with the subtitle text -->
-    <string name="IdealTransferDetailsFragment__learn_more">مزید جانیں</string>
     <!-- Hint label for text entry box for name on bank account -->
-    <string name="IdealTransferDetailsFragment__name_on_bank_account">بینک اکاؤنٹ پر نام</string>
     <!-- Hint label for text entry box for email -->
-    <string name="IdealTransferDetailsFragment__email">ای میل</string>
     <!-- Default label for bank selection -->
-    <string name="IdealTransferDetailsFragment__choose_your_bank">اپنا بینک منتخب کریں</string>
     <!-- Dialog title shown when using iDEAL payment for setting up a monthly donation -->
-    <string name="IdealTransferDetailsFragment__confirm_your_donation_with_ideal_wero">Confirm your donation with iDEAL | Wero</string>
     <!-- Dialog warning shown when using iDEAL payment for setting up a monthly donation. Placeholder is donation amount.Z -->
-    <string name="IdealTransferDetailsFragment__to_setup_your_recurring_donation">اپنے مکرر عطیے کو ترتیب دینے کے لیے جاری رکھیں پر ٹیپ کریں تاکہ بینک کی جانب سے 0,01€ چارج کی تصدیق کی جا سکے۔ یہ آپ کے%1$s/ماہانہ ڈونیشن کو آپ کے اکاؤنٹ سے ڈیبٹ کرنے کی اجازت دیتا ہے اور خود کار طور پر ری فنڈ ہو جائے گا۔</string>
     <!-- Dialog button shown when using iDEAL payment for setting up a monthly donation to continue with the donation -->
-    <string name="IdealTransferDetailsFragment__continue">جاری رکھیں</string>
 
     <!-- IdealTransferDetailsBankSelectionDialogFragment -->
     <!-- Title of the screen, displayed in the toolbar -->
-    <string name="IdealTransferDetailsBankSelectionDialogFragment__choose_your_bank">اپنا بینک منتخب کریں</string>
 
     <!-- Title of bottom sheet for finding account information -->
     <string name="FindAccountInfoSheet__find_your_account_information">اپنے اکاؤنٹ کی معلومات تلاش کریں</string>
@@ -7684,36 +7341,22 @@
     <string name="FindAccountInfoSheet__look_for_your_iban_at">اپنی بینک اسٹیٹمنٹ کی بالائی سطح پر اپنا IBAN تلاش کریں۔ IBANs زیادہ سے زیادہ 34 حروف پر مشتمل ہوتے ہیں۔ آپ جو نام درج کرتے ہیں وہ بینک اکاؤنٹ پر موجود آپ کے مکمل نام سے مماثل ہونا چاہیئے۔ مزید معلومات کے لیے اپنے بینک سے رابطہ کریں۔</string>
 
     <!-- Title of donation pending sheet displayed after making a bank transfer -->
-    <string name="DonationPendingBottomSheet__donation_pending">عطیہ زیر التواء ہے</string>
     <!-- Top text block of donation pending sheet displayed after subscribing via a bank transfer. Placeholder is the badge name. -->
-    <string name="DonationPendingBottomSheet__your_monthly_donation_is_pending">آپ کا ماہانہ عطیہ زیر التواء ہے۔ جب آپ کا عطیہ موصول ہو جائے گا تو آپ اپنے پروفائل پر %1$s بیج ڈسپلے کر سکیں گے۔</string>
     <!-- Top text block of donation pending sheet displayed after one-time donation via a bank transfer. Placeholder is the badge name. -->
-    <string name="DonationPendingBottomSheet__your_one_time_donation_is_pending">آپ کا ایک وقتی عطیہ زیر التواء ہے۔ جب آپ کا عطیہ موصول ہو جائے گا تو آپ اپنے پروفائل پر %1$s بیج ڈسپلے کر سکیں گے۔</string>
     <!-- Bottom text block of donation pending sheet displayed after donating via a bank transfer. Placeholder is for learn more. -->
-    <string name="DonationPendingBottomSheet__bank_transfers_usually_take">بینک ٹرانسفرز کو زیر عمل لانے میں 1 سے 14 کاروباری ایام لگ سکتے ہیں۔ %1$s</string>
     <!-- Learn more text for donation pending sheet displayed after donating via a bank transfer. -->
-    <string name="DonationPendingBottomSheet__learn_more">مزید جانیں</string>
     <!-- Confirmation button for donation pending sheet displayed after donating via a bank transfer. -->
-    <string name="DonationPendingBottomSheet__done">ہو گیا</string>
 
     <!-- Title of donation error sheet displayed after making a bank transfer that fails -->
-    <string name="DonationErrorBottomSheet__donation_couldnt_be_processed">عطیہ پر کارروائی نہیں کی جا سکی</string>
     <!-- Text block of donation error sheet displayed after making a bank transfer that fails -->
-    <string name="DonationErrorBottomSheet__were_having_trouble">ہمیں آپ کے بینک ٹرانسفر پر کارروائی کرنے میں مشکلات کا سامنا ہے۔ آپ پر چارجز عائد نہیں کیے گئے۔ پیمنٹ کا کوئی دوسرا طریقہ آزمائیں یا مزید معلومات کے لیے اپنے بینک سے رابطہ کریں۔</string>
     <!-- Button label for retry button of donation error sheet displayed after making a bank transfer that fails -->
-    <string name="DonationErrorBottomSheet__try_again">دوبارہ کوشش کریں</string>
     <!-- Button label for not now button of donation error sheet displayed after making a bank transfer that fails -->
-    <string name="DonationErrorBottomSheet__not_now">ابھی نہیں</string>
 
     <!-- Title of \'Donation Complete\' sheet displayed after a bank transfer completes and the badge is redeemed -->
-    <string name="DonationCompletedBottomSheet__donation_complete">عطیہ مکمل ہوا</string>
     <!-- Text block of \'Donation Complete\' sheet displayed after a bank transfer completes and the badge is redeemed -->
-    <string name="DonationCompleteBottomSheet__your_bank_transfer_was_received">آپ کا بینک ٹرانسفر موصول ہو گیا تھا۔ اپنی سپورٹ کا مظاہرہ کرنے کے لیے، آپ اس بیج کو اپنے پروفائل پر ڈسپلے کرنے کا انتخاب کر سکتے ہیں۔</string>
     <!-- Button text of \'Donation Complete\' sheet displayed after a bank transfer completes and the badge is redeemed to dismiss sheet -->
-    <string name="DonationCompleteBottomSheet__done">ہو گیا</string>
 
     <!-- StripePaymentInProgressFragment -->
-    <string name="StripePaymentInProgressFragment__cancelling">منسوخ کیا جا رہا ہے…</string>
 
     <!-- The title of a bottom sheet dialog that tells the user we temporarily can\'t process their contacts. -->
     <string name="CdsTemporaryErrorBottomSheet_title">بہت سارے روابط پر عمل کاری ہو گئی ہے</string>
@@ -7747,7 +7390,6 @@
     <!-- YourInformationIsPrivateBottomSheet -->
     <string name="YourInformationIsPrivateBottomSheet__your_information_is_private">آپ کی معلومات پرائیویٹ ہے</string>
     <string name="YourInformationIsPrivateBottomSheet__signal_does_not_collect">Signal آپ کی جانب سے عطیہ کرنے پر آپ کی کوئی ذاتی معلومات جمع یا اسٹور نہیں کرتا۔</string>
-    <string name="YourInformationIsPrivateBottomSheet__we_use_stripe">ہم آپ کے عطیات وصول کرنے کے لیے Stripe کو اپنے ادائیگی کے پروسیسر کے طور پر استعمال کرتے ہیں۔ آپ انہیں جو معلومات فراہم کرتے ہیں ہم اس تک رسائی، اسے اسٹور، یا محفوظ نہیں کرتے۔</string>
     <string name="YourInformationIsPrivateBottomSheet__signal_does_not_and_cannot">Signal آپ کے عطیے کو آپ کے Signal اکاؤنٹ کے ساتھ مربوط نہیں کرتا اور نہ کر سکتا ہے۔</string>
     <string name="YourInformationIsPrivateBottomSheet__thank_you">آپ کی حمایت کا شکریہ!</string>
 
@@ -7765,8 +7407,6 @@
     <string name="Registration_country_code_entry_hint">+0</string>
 
     <!-- PaypalCompleteOrderBottomSheet -->
-    <string name="PaypalCompleteOrderBottomSheet__donate">عطیہ کریں</string>
-    <string name="PaypalCompleteOrderBottomSheet__payment">پیمنٹ</string>
 
     <!-- ChatFilter -->
     <!-- Displayed in a pill at the top of the chat list when it is filtered by unread messages -->
@@ -8264,15 +7904,10 @@
     <string name="GrantFullScreenIntentPermission_bottomsheet_step2">2. %1$s پوری اسکرین کی اطلاعات کو فعال کریں</string>
 
     <!-- Bottom sheet dialog shown when a monthly donation fails to renew, title for dialog -->
-    <string name="MonthlyDonationCanceled__title">ماہانہ عطیہ منسوخ ہو گیا</string>
     <!-- Bottom sheet dialog shown when a monthly donation fails to renew, body for dialog. First placeholder is a payment related error message. Second placeholder is \'learn more\' -->
-    <string name="MonthlyDonationCanceled__message">آپ کا مکرر ماہانہ عطیہ منسوخ ہو گیا تھا۔ %1$s\n\nآپ کا بیج آپ کی پروفائل پر مزید نظر نہیں آئے گا۔ %2$s</string>
     <!-- Bottom sheet dialog shown when a monthly donation fails to renew, learn more used in placeholder for body for dialog. -->
-    <string name="MonthlyDonationCanceled__learn_more">مزید جانیں</string>
     <!-- Bottom sheet dialog shown when a monthly donation fails to renew, primary button to renew subscription with new data -->
-    <string name="MonthlyDonationCanceled__renew_button">سبسکرپشن کی تجدید کریں</string>
     <!-- Bottom sheet dialog shown when a monthly donation fails to renew, second button to dismiss the dialog entirely -->
-    <string name="MonthlyDonationCanceled__not_now_button">ابھی نہیں</string>
 
     <!-- FindByActivity -->
     <!-- Title of activity when finding by username -->
@@ -8362,7 +7997,6 @@
 
     <!-- BackupAlertBottomSheet -->
     <!-- Sheet title when media backups have been disabled -->
-    <string name="BackupAlertBottomSheet__your_backups_subscription_expired">آپ کے بیک اپس کی سبسکرپشن کی زائد المیعاد ہو گئی ہے</string>
     <!-- Sheet body part 1 when media backups have been disabled. Placeholder is the number of days until deletion. -->
     <plurals name="BackupAlertBottomSheet__your_backup_plan_has_expired">
         <item quantity="one">آپ کا بیک اپ پلان زائد المیعاد ہو چکا ہے کیونکہ آپ کے موجودہ پیمنٹ کے طریقے سے اس کی تجدید نہیں کی جا سکی۔ %1$d دن کے بعد، آپ کے بیک اپ میں موجود میڈیا حذف کر دیا جائے گا۔</item>
@@ -8554,21 +8188,15 @@
     <!-- Displayed as the user\'s payment method as a label in a preference row -->
     <string name="BackupsTypeSettingsFragment__credit_or_debit_card">کریڈٹ یا ڈیبٹ کارڈ</string>
     <!-- Displayed as the user\'s payment method as a label in a preference row -->
-    <string name="BackupsTypeSettingsFragment__iDEAL">iDEAL</string>
     <!-- Displayed as the user\'s payment method as a label in a preference row -->
-    <string name="BackupsTypeSettingsFragment__google_pay">Google Pay</string>
     <!-- Displayed as the user\'s payment method as a label in a preference row -->
-    <string name="BackupsTypeSettingsFragment__bank_transfer">بینک ٹرانسفر</string>
     <!-- Displayed as the user\'s payment method as a label in a preference row -->
-    <string name="BackupsTypeSettingsFragment__paypal">PayPal</string>
     <!-- Displayed as the user\'s payment method as a label in a preference row -->
     <string name="BackupsTypeSettingsFragment__unknown">نامعلوم</string>
     <!-- Row title for entering payment history -->
-    <string name="BackupsTypeSettingsFragment__payment_history">پیمنٹ ہسٹری</string>
     <!-- Row description detailing renewal information. First placeholder is formatted price. Second placeholder is formatted date. -->
     <string name="BackupsTypeSettingsFragment__s_month_renews_s">%1$s/ماہ…%2$s میں تجدید ہوتی ہے</string>
     <!-- Row title to change or cancel subscription -->
-    <string name="BackupsTypeSettingsFragment__change_or_cancel_subscription">سبسکرپشن کو تبدیل یا منسوخ کریں</string>
 
     <!-- GooglePlayServicesAvailability -->
     <!-- Dialog title when Google Play services are missing from the device -->
@@ -8718,7 +8346,6 @@
     <!-- Text shown in a popup indicating that the user needs to enter their screen lock -->
     <string name="RemoteBackupsSettingsFragment__authenticatino_required">تصدیق درکار ہے</string>
     <!-- Row label to launch payment history screen -->
-    <string name="RemoteBackupsSettingsFragment__payment_history">پیمنٹ ہسٹری</string>
     <!-- Section header for backup information -->
     <string name="RemoteBackupsSettingsFragment__backup_details">بیک اپ کی تفصیلات</string>
     <!-- Row label to allow the restoration of a backup to occur while on cellular connection -->
@@ -9155,7 +8782,6 @@
     <!-- Primary action button label when selecting paid tier when Google Play API isn\'t available -->
     <string name="MessageBackupsTypeSelectionScreen__more_about_this_plan">اس پلان کے متعلق مزید</string>
     <!-- Secondary action button label when selecting a backup tier with a current selection -->
-    <string name="MessageBackupsTypeSelectionScreen__cancel_subscription">سبسکرپشن منسوخ کریں</string>
     <!-- MessageBackupsType block amount for free tier -->
     <string name="MessageBackupsTypeSelectionScreen__free">مفت</string>
     <!-- MessageBackupsType block amount for paid tier when no pricing is available -->
@@ -9199,7 +8825,6 @@
     <!-- Action button label to cancel subscription and download later -->
     <string name="ConfirmBackupCancellationDialog__confirm_and_download_later">تصدیق کریں اور بعد میں ڈاؤن لوڈ کریں</string>
     <!-- Action button label to keep current subscription -->
-    <string name="ConfirmBackupCancellationDialog__keep_subscription">سبسکرپشن رکھیں</string>
 
     <!-- Accessible content description for the reminder view, describing the icon in the view. -->
     <string name="ReminderView_icon_content_description">یاد دہانی کا آئیکن</string>

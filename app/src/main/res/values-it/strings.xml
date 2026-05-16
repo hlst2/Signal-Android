@@ -24,7 +24,6 @@
   <!-- Removed by excludeNonTranslatables <string name="donate_faq_url" translatable="false">https://support.signal.org/hc/articles/360031949872#donate</string> -->
 
     <!-- First placeholder is productId, second placeholder is app package -->
-    <string name="backup_subscription_management_url">https://play.google.com/store/account/subscriptions?sku=%1$s&amp;package=%2$s</string>
 
     <string name="yes">Sì</string>
     <string name="no">No</string>
@@ -158,7 +157,6 @@
 
     <!-- Fcm notifications -->
     <!-- Notification we show when there may be messages for you, but we cannot connect to the server to check -->
-    <string name="FcmFetchManager__you_may_have_messages">Potresti avere nuovi messaggi</string>
 
     <!-- BlockedUsersActivity -->
     <string name="BlockedUsersActivity__blocked_users">Utenti bloccati</string>
@@ -172,45 +170,26 @@
 
     <!-- CreditCardFragment -->
     <!-- Title of fragment -->
-    <string name="CreditCardFragment__credit_or_debit_card">Carta di credito o di debito</string>
     <!-- Explanation of how to fill in the form and a note about pii, displayed above the credit card text fields -->
-    <string name="CreditCardFragment__enter_your_card_details">Inserisci i dettagli della tua carta. Signal non archivia né salva le tue informazioni personali.</string>
     <!-- Displayed as a hint in the card number text field -->
-    <string name="CreditCardFragment__card_number">Numero della carta</string>
     <!-- Displayed as a hint in the card expiry text field -->
-    <string name="CreditCardFragment__mm_yy">MM/AA</string>
     <!-- Displayed as a hint in the card cvv text field -->
-    <string name="CreditCardFragment__cvv">CVV</string>
     <!-- Error displayed under the card number text field when there is an invalid card number entered -->
-    <string name="CreditCardFragment__invalid_card_number">Numero carta non valido</string>
     <!-- Error displayed under the card expiry text field when the card is expired -->
-    <string name="CreditCardFragment__card_has_expired">La carta è scaduta</string>
     <!-- Error displayed under the card cvv text field when the cvv is too short -->
-    <string name="CreditCardFragment__code_is_too_short">Il codice è troppo corto</string>
     <!-- Error displayed under the card cvv text field when the cvv is too long -->
-    <string name="CreditCardFragment__code_is_too_long">Il codice è troppo lungo</string>
     <!-- Error displayed under the card cvv text field when the cvv is invalid -->
-    <string name="CreditCardFragment__invalid_code">Il codice non è valido</string>
     <!-- Error displayed under the card expiry text field when the expiry month is invalid -->
-    <string name="CreditCardFragment__invalid_month">Il mese non è valido</string>
     <!-- Error displayed under the card expiry text field when the expiry is missing the year -->
-    <string name="CreditCardFragment__year_required">È necessario inserire l\'anno</string>
     <!-- Error displayed under the card expiry text field when the expiry year is invalid -->
-    <string name="CreditCardFragment__invalid_year">L\'anno non è valido</string>
     <!-- Button label to confirm credit card input and proceed with one-time payment -->
-    <string name="CreditCardFragment__donate_s">Dona %1$s</string>
     <!-- Button label to confirm credit card input and proceed with subscription payment -->
-    <string name="CreditCardFragment__donate_s_month">Dona %1$s al mese</string>
     <!-- Button label to confirm credit card input and proceed with backups payment. Placeholder is formatted price. -->
-    <string name="CreditCardFragment__pay_s_month">Dona %1$s al mese</string>
 
     <!-- OneTimeDonationPreference -->
     <!-- Preference title with placeholder for amount. -->
-    <string name="OneTimeDonationPreference__one_time_s">Donazione singola %1$s</string>
     <!-- Preference subtitle when donation is pending -->
-    <string name="OneTimeDonationPreference__donation_pending">Donazione in sospeso</string>
     <!-- Preference subtitle when donation is processing -->
-    <string name="OneTimeDonationPreference__donation_processing">Donazione in elaborazione</string>
 
     <!-- BlockUnblockDialog -->
     <string name="BlockUnblockDialog_block_and_leave_s">Vuoi bloccare e abbandonare %1$s?</string>
@@ -4237,7 +4216,6 @@
     <string name="preferences__slow">Lento</string>
     <string name="preferences__help">Aiuto</string>
     <string name="preferences__advanced">Avanzate</string>
-    <string name="preferences__donate_to_signal">Dona a Signal</string>
     <!-- Preference label for making one-time donations to Signal -->
     <string name="preferences__privacy">Privacy</string>
     <!-- Preference label for stories -->
@@ -4427,9 +4405,6 @@
 
     <!-- Payments -->
     <string name="PaymentsActivityFragment__all_activity">Tutte le attività</string>
-    <string name="PaymentsAllActivityFragment__all">Tutti</string>
-    <string name="PaymentsAllActivityFragment__sent">Inviati</string>
-    <string name="PaymentsAllActivityFragment__received">Ricevuti</string>
 
     <!-- Displayed on a welcome screen for payments -->
     <string name="PaymentsHomeFragment_introducing_payments">Ecco i pagamenti su Signal</string>
@@ -4438,58 +4413,28 @@
     <string name="PaymentsHomeFragment__activating_payments">Attivazione pagamenti…</string>
     <string name="PaymentsHomeFragment__restore_payments_account">Ripristina account pagamenti</string>
     <string name="PaymentsHomeFragment__no_recent_activity_yet">Nessuna attività recente ancora</string>
-    <string name="PaymentsHomeFragment__recent_activity">Attività recenti</string>
     <string name="PaymentsHomeFragment__see_all">Vedi tutti</string>
     <string name="PaymentsHomeFragment__add_funds">Aggiungi fondi</string>
     <string name="PaymentsHomeFragment__send">Invia</string>
-    <string name="PaymentsHomeFragment__sent_s">Inviati %1$s</string>
-    <string name="PaymentsHomeFragment__received_s">Ricevuti %1$s</string>
     <string name="PaymentsHomeFragment__transfer_to_exchange">Trasferisci all\'exchange</string>
     <string name="PaymentsHomeFragment__currency_conversion">Conversione valuta</string>
     <string name="PaymentsHomeFragment__deactivate_payments">Disattiva pagamenti</string>
     <string name="PaymentsHomeFragment__recovery_phrase">Frase di recupero</string>
     <string name="PaymentsHomeFragment__help">Aiuto</string>
-    <string name="PaymentsHomeFragment__coin_cleanup_fee">Commissione per la pulizia delle monete</string>
-    <string name="PaymentsHomeFragment__sent_payment">Pagamento inviato</string>
-    <string name="PaymentsHomeFragment__received_payment">Pagamento ricevuto</string>
-    <string name="PaymentsHomeFragment__processing_payment">Pagamento in elaborazione</string>
-    <string name="PaymentsHomeFragment__unknown_amount">---</string>
-    <string name="PaymentsHomeFragment__currency_conversion_not_available">Conversione valuta non disponibile</string>
-    <string name="PaymentsHomeFragment__cant_display_currency_conversion">Impossibile visualizzare la conversione della valuta. Controlla la connessione del tuo telefono e riprova.</string>
-    <string name="PaymentsHomeFragment__payments_is_not_available_in_your_region">I pagamenti non sono disponibili nella tua regione.</string>
-    <string name="PaymentsHomeFragment__could_not_enable_payments">Impossibile abilitare i pagamenti. Riprova più tardi.</string>
-    <string name="PaymentsHomeFragment__deactivate_payments_question">Disattivare pagamenti?</string>
-    <string name="PaymentsHomeFragment__you_will_not_be_able_to_send">Non sarai in grado di inviare o ricevere MobileCoin in Signal se disattivi i pagamenti.</string>
-    <string name="PaymentsHomeFragment__deactivate">Disattiva</string>
-    <string name="PaymentsHomeFragment__continue">Continua</string>
-    <string name="PaymentsHomeFragment__balance_is_not_currently_available">Il saldo non è attualmente disponibile.</string>
-    <string name="PaymentsHomeFragment__payments_deactivated">Pagamenti disattivati.</string>
-    <string name="PaymentsHomeFragment__payment_failed">Pagamento fallito</string>
-    <string name="PaymentsHomeFragment__details">Dettagli</string>
   <!-- Removed by excludeNonTranslatables <string name="PaymentsHomeFragment__learn_more__activate_payments" translatable="false">https://support.signal.org/hc/articles/360057625692#payments_activate</string> -->
     <!-- Displayed as a description in a dialog when the user tries to activate payments -->
-    <string name="PaymentsHomeFragment__you_can_use_signal_to_send_and">Puoi usare Signal per inviare e ricevere i MobileCoin. Tutti i pagamenti sono soggetti ai Termini di Utilizzo dei MobileCoin e del MobileCoin Wallet. Ricorda che potresti riscontrare alcuni problemi. Inoltre, in caso di perdite nei pagamenti o nei saldi dei Wallet, potrebbe non essere possibile recuperare la somma persa. </string>
-    <string name="PaymentsHomeFragment__activate">Attiva</string>
-    <string name="PaymentsHomeFragment__view_mobile_coin_terms">Visualizza i termini di MobileCoin</string>
-    <string name="PaymentsHomeFragment__payments_not_available">I pagamenti in Signal non sono più disponibili. Puoi ancora trasferire i fondi a un exchange ma non puoi più inviare e ricevere pagamenti o aggiungere fondi.</string>
 
   <!-- Removed by excludeNonTranslatables <string name="PaymentsHomeFragment__mobile_coin_terms_url" translatable="false">https://www.mobilecoin.com/terms-of-use.html</string> -->
     <!-- Alert dialog title which shows up after a payment to turn on payment lock -->
-    <string name="PaymentsHomeFragment__turn_on">Vuoi attivare la funzione Pagamento sicuro?</string>
     <!-- Alert dialog description for why payment lock should be enabled before sending payments -->
-    <string name="PaymentsHomeFragment__add_an_additional_layer">Aggiungi un ulteriore livello di sicurezza: Android ti chiederà lo sblocco dello schermo oppure l\'impronta digitale prima di fare un pagamento.</string>
     <!-- Alert dialog button to enable payment lock -->
     <string name="PaymentsHomeFragment__enable">Attiva</string>
     <!-- Alert dialog button to not enable payment lock for now -->
     <string name="PaymentsHomeFragment__not_now">Non ora</string>
     <!-- Alert dialog title which shows up to update app to send payments -->
-    <string name="PaymentsHomeFragment__update_required">Aggiornamento necessario</string>
     <!-- Alert dialog description that app update is required to send payments-->
-    <string name="PaymentsHomeFragment__an_update_is_required">Devi effettuare un aggiornamento per continuare a inviare e ricevere pagamenti, ma anche per vedere il tuo saldo aggiornato.</string>
     <!-- Alert dialog button to cancel -->
-    <string name="PaymentsHomeFragment__cancel">Annulla</string>
     <!-- Alert dialog button to update now -->
-    <string name="PaymentsHomeFragment__update_now">Aggiorna ora</string>
 
 
     <!-- PaymentsSecuritySetupFragment -->
@@ -4504,46 +4449,26 @@
     <!-- Option to cancel -->
     <string name="PaymentsSecuritySetupFragment__not_now">Non ora</string>
     <!-- Dialog title to confirm skipping the step -->
-    <string name="PaymentsSecuritySetupFragment__skip_this_step">Vuoi saltare questo passaggio?</string>
     <!-- Dialog description to let users know why payment lock is required -->
-    <string name="PaymentsSecuritySetupFragment__skipping_this_step">Se ignori questo passaggio, chiunque abbia accesso al tuo telefono potrebbe trasferire eventuali fondi presenti o vedere la tua frase segreta di recupero.</string>
     <!-- Dialog option to cancel -->
-    <string name="PaymentsSecuritySetupFragment__cancel">Annulla</string>
     <!-- Dialog option to skip -->
-    <string name="PaymentsSecuritySetupFragment__skip">Salta</string>
 
     <!-- PaymentsAddMoneyFragment -->
     <string name="PaymentsAddMoneyFragment__add_funds">Aggiungi fondi</string>
     <string name="PaymentsAddMoneyFragment__your_wallet_address">L\'indirizzo del tuo portafoglio</string>
     <string name="PaymentsAddMoneyFragment__copy">Copia</string>
-    <string name="PaymentsAddMoneyFragment__copied_to_clipboard">Copiato negli appunti</string>
     <string name="PaymentsAddMoneyFragment__to_add_funds">Per aggiungere fondi, invia MobileCoin all\'indirizzo del tuo portafoglio. Avvia una transazione dal tuo account su un exchange che supporta MobileCoin, quindi scansiona il codice QR o copia l\'indirizzo del tuo portafoglio.</string>
   <!-- Removed by excludeNonTranslatables <string name="PaymentsAddMoneyFragment__learn_more__information" translatable="false">https://support.signal.org/hc/articles/360057625692#payments_transfer_from_exchange</string> -->
 
     <!-- PaymentsDetailsFragment -->
     <string name="PaymentsDetailsFragment__details">Dettagli</string>
     <string name="PaymentsDetailsFragment__status">Stato</string>
-    <string name="PaymentsDetailsFragment__submitting_payment">Invio pagamento in corso…</string>
-    <string name="PaymentsDetailsFragment__processing_payment">Pagamento in elaborazione…</string>
-    <string name="PaymentsDetailsFragment__payment_complete">Pagamento completato</string>
-    <string name="PaymentsDetailsFragment__payment_failed">Pagamento fallito</string>
     <string name="PaymentsDetailsFragment__network_fee">Commissione rete</string>
     <string name="PaymentsDetailsFragment__sent_by">Inviato da</string>
-    <string name="PaymentsDetailsFragment__sent_to_s">Inviato a %1$s</string>
-    <string name="PaymentsDetailsFragment__you_on_s_at_s">You il %1$s alle %2$s</string>
-    <string name="PaymentsDetailsFragment__s_on_s_at_s">%1$s il %2$s alle %3$s</string>
     <!-- Prefix to a name to indicate who a payment was sent to -->
-    <string name="PaymentsDetailsFragment__to">A</string>
-    <string name="PaymentsDetailsFragment__from">Da</string>
     <string name="PaymentsDetailsFragment__information">I dettagli della transazione, compreso l\'importo del pagamento e l\'ora della transazione, fanno parte del MobileCoin Ledger.</string>
-    <string name="PaymentsDetailsFragment__coin_cleanup_fee">Commissione per la pulizia delle monete</string>
-    <string name="PaymentsDetailsFragment__coin_cleanup_information">Una \"commissione per la pulizia delle monete\" viene addebitata quando le monete in tuo possesso non possono essere combinate per completare una transazione. La pulizia ti consentirà di continuare a inviare pagamenti.</string>
-    <string name="PaymentsDetailsFragment__no_details_available">Non sono disponibili ulteriori dettagli per questa transazione</string>
   <!-- Removed by excludeNonTranslatables <string name="PaymentsDetailsFragment__learn_more__information" translatable="false">https://support.signal.org/hc/articles/360057625692#payments_details</string> -->
   <!-- Removed by excludeNonTranslatables <string name="PaymentsDetailsFragment__learn_more__cleanup_fee" translatable="false">https://support.signal.org/hc/articles/360057625692#payments_details_fees</string> -->
-    <string name="PaymentsDetailsFragment__sent_payment">Pagamento inviato</string>
-    <string name="PaymentsDetailsFragment__received_payment">Pagamento ricevuto</string>
-    <string name="PaymentsDeatilsFragment__payment_completed_s">Pagamento completato %1$s</string>
     <string name="PaymentsDetailsFragment__block_number">Blocca numero</string>
 
     <!-- PaymentsTransferFragment -->
@@ -4552,13 +4477,6 @@
     <string name="PaymentsTransferFragment__to_scan_or_enter_wallet_address">A: Scansiona o inserisci l\'indirizzo del portafoglio</string>
     <string name="PaymentsTransferFragment__you_can_transfer">Puoi trasferire MobileCoin completando un trasferimento all\'indirizzo del portafoglio fornito dall\'exchange. L\'indirizzo del portafoglio è la stringa di numeri e lettere più comunemente sotto il codice QR.</string>
     <string name="PaymentsTransferFragment__next">Avanti</string>
-    <string name="PaymentsTransferFragment__invalid_address">Indirizzo non valido</string>
-    <string name="PaymentsTransferFragment__check_the_wallet_address">Controlla l\'indirizzo del portafoglio a cui stai tentando di trasferire e riprova.</string>
-    <string name="PaymentsTransferFragment__you_cant_transfer_to_your_own_signal_wallet_address">Non puoi trasferire all\'indirizzo del tuo portafoglio Signal. Inserisci l\'indirizzo del portafoglio dal tuo account in uno exchange supportato.</string>
-    <string name="PaymentsTransferFragment__to_scan_a_qr_code_signal_needs">Per scansionare un codice QR, Signal deve accedere alla fotocamera.</string>
-    <string name="PaymentsTransferFragment__signal_needs_the_camera_permission_to_capture_qr_code_go_to_settings">Signal richiede l\'autorizzazione all\'uso della fotocamera per acquisire un codice QR. Vai nelle impostazioni, selezionare \"Autorizzazioni\" e abilita \"Fotocamera\".</string>
-    <string name="PaymentsTransferFragment__to_scan_a_qr_code_signal_needs_access_to_the_camera">Per scansionare un codice QR, Signal deve accedere alla fotocamera.</string>
-    <string name="PaymentsTransferFragment__settings">Impostazioni</string>
 
     <!-- PaymentsTransferQrScanFragment -->
     <string name="PaymentsTransferQrScanFragment__scan_address_qr_code">Scansiona codice QR dell\'indirizzo</string>
@@ -4568,7 +4486,6 @@
     <!-- Button text to request the payment from a user -->
     <string name="CreatePaymentFragment__request">Richiedi</string>
     <string name="CreatePaymentFragment__pay">Paga</string>
-    <string name="CreatePaymentFragment__available_balance_s">Saldo disponibile: %1$s</string>
     <string name="CreatePaymentFragment__toggle_content_description">Aziona</string>
     <string name="CreatePaymentFragment__1">1</string>
     <string name="CreatePaymentFragment__2">2</string>
@@ -4581,10 +4498,8 @@
     <string name="CreatePaymentFragment__9">9</string>
     <string name="CreatePaymentFragment__decimal">.</string>
     <string name="CreatePaymentFragment__0">0</string>
-    <string name="CreatePaymentFragment__lt">&lt;</string>
     <string name="CreatePaymentFragment__backspace">Cancella</string>
     <string name="CreatePaymentFragment__add_note">Aggiungi nota</string>
-    <string name="CreatePaymentFragment__conversions_are_just_estimates">Le conversioni sono solo stime e potrebbero non essere accurate.</string>
   <!-- Removed by excludeNonTranslatables <string name="CreatePaymentFragment__learn_more__conversions" translatable="false">https://support.signal.org/hc/articles/360057625692#payments_currency_conversion</string> -->
 
     <!-- EditNoteFragment -->
@@ -4594,26 +4509,10 @@
 
     <!-- ConfirmPaymentFragment -->
     <string name="ConfirmPayment__confirm_payment">Conferma pagamento</string>
-    <string name="ConfirmPayment__network_fee">Commissione rete</string>
-    <string name="ConfirmPayment__estimated_s">Stimati %1$s</string>
     <!-- Prefix to a name to indicate who a payment will be sent to -->
-    <string name="ConfirmPayment__to">A</string>
-    <string name="ConfirmPayment__total_amount">Importo totale</string>
-    <string name="ConfirmPayment__balance_s">Saldo: %1$s</string>
-    <string name="ConfirmPayment__submitting_payment">Invio pagamento in corso…</string>
-    <string name="ConfirmPayment__processing_payment">Pagamento in elaborazione…</string>
-    <string name="ConfirmPayment__payment_complete">Pagamento completato</string>
-    <string name="ConfirmPayment__payment_failed">Pagamento fallito</string>
-    <string name="ConfirmPayment__payment_will_continue_processing">Il pagamento continuerà a essere elaborato</string>
-    <string name="ConfirmPaymentFragment__invalid_recipient">Destinatario non valido</string>
     <!-- Title of a dialog show when we were unable to present the user\'s screenlock before sending a payment -->
-    <string name="ConfirmPaymentFragment__failed_to_show_payment_lock">Impossibile mostrare la schermata per il Pagamento sicuro</string>
     <!-- Body of a dialog show when we were unable to present the user\'s screenlock before sending a payment -->
-    <string name="ConfirmPaymentFragment__you_enabled_payment_lock_in_the_settings">Hai attivato la funzione Pagamento sicuro nelle Impostazioni, ma non è possibile mostrarla al momento.</string>
     <!-- Button in a dialog that will take the user to the privacy settings -->
-    <string name="ConfirmPaymentFragment__go_to_settings">Vai alle Impostazioni</string>
-    <string name="ConfirmPaymentFragment__this_person_has_not_activated_payments">Questa persona non ha attivato i pagamenti</string>
-    <string name="ConfirmPaymentFragment__unable_to_request_a_network_fee">Impossibile richiedere una commissione di rete. Per continuare questo pagamento, tocca OK per riprovare.</string>
 
     <!-- BiometricDeviceAuthentication -->
     <!-- Biometric/Device authentication prompt title -->
@@ -4625,7 +4524,6 @@
 
     <!-- SetCurrencyFragment -->
     <string name="SetCurrencyFragment__set_currency">Imposta valuta</string>
-    <string name="SetCurrencyFragment__all_currencies">Tutte le valute</string>
 
     <!-- **************************************** -->
     <!-- menus -->
@@ -5511,20 +5409,9 @@
     <!-- InfoCard -->
     <string name="payment_info_card_about_mobilecoin">Informazioni su MobileCoin</string>
     <string name="payment_info_card_mobilecoin_is_a_new_privacy_focused_digital_currency">MobileCoin è una nuova valuta digitale incentrata sulla privacy.</string>
-    <string name="payment_info_card_adding_funds">Aggiungere fondi</string>
-    <string name="payment_info_card_you_can_add_funds_for_use_in">Puoi aggiungere fondi da utilizzare in Signal inviando MobileCoin all\'indirizzo del tuo portafoglio.</string>
-    <string name="payment_info_card_cashing_out">Incassare</string>
-    <string name="payment_info_card_you_can_cash_out_mobilecoin">Puoi incassare i MobileCoin in qualsiasi momento su un exchange che supporta MobileCoin. Effettua un trasferimento sul tuo account in quel exchange.</string>
     <string name="payment_info_card_hide_this_card">Nascondere questa scheda?</string>
-    <string name="payment_info_card_hide">Nascondi</string>
     <!-- Title of save recovery phrase card -->
-    <string name="payment_info_card_save_recovery_phrase">Salva la frase di recupero</string>
-    <string name="payment_info_card_your_recovery_phrase_gives_you">La tua frase di recupero ti offre un altro modo per ripristinare il tuo account pagamenti.</string>
     <!-- Button in save recovery phrase card -->
-    <string name="payment_info_card_save_your_phrase">Salva la tua frase</string>
-    <string name="payment_info_card_update_your_pin">Aggiorna il tuo PIN</string>
-    <string name="payment_info_card_with_a_high_balance">Con un saldo elevato, potresti voler eseguire l\'aggiornamento a un PIN alfanumerico per aggiungere maggiore protezione al tuo account.</string>
-    <string name="payment_info_card_update_pin">Aggiorna PIN</string>
 
   <!-- Removed by excludeNonTranslatables <string name="payment_info_card__learn_more__about_mobilecoin" translatable="false">https://support.signal.org/hc/articles/360057625692#payments_which_ones</string> -->
   <!-- Removed by excludeNonTranslatables <string name="payment_info_card__learn_more__adding_to_your_wallet" translatable="false">https://support.signal.org/hc/articles/360057625692#payments_transfer_from_exchange</string> -->
@@ -5536,45 +5423,29 @@
     <string name="DeactivateWalletFragment__its_recommended_that_you">Ti consigliamo di trasferire i fondi su un altro indirizzo del wallet prima di disattivare i pagamenti. Se scegli di non trasferirli ora, i tuoi fondi rimarranno nel tuo wallet collegato a Signal se riattivi i pagamenti.</string>
     <string name="DeactivateWalletFragment__transfer_remaining_balance">Trasferisci il saldo rimanente</string>
     <string name="DeactivateWalletFragment__deactivate_without_transferring">Disattiva senza trasferire</string>
-    <string name="DeactivateWalletFragment__deactivate">Disattiva</string>
-    <string name="DeactivateWalletFragment__deactivate_without_transferring_question">Disattivare senza trasferire?</string>
-    <string name="DeactivateWalletFragment__your_balance_will_remain">Il tuo saldo rimarrà nel tuo wallet collegato a Signal se scegli di riattivare i pagamenti.</string>
-    <string name="DeactivateWalletFragment__error_deactivating_wallet">Errore durante la disattivazione del portafoglio.</string>
   <!-- Removed by excludeNonTranslatables <string name="DeactivateWalletFragment__learn_more__we_recommend_transferring_your_funds" translatable="false">https://support.signal.org/hc/articles/360057625692#payments_deactivate</string> -->
 
     <!-- PaymentsRecoveryStartFragment -->
     <string name="PaymentsRecoveryStartFragment__recovery_phrase">Frase di recupero</string>
     <string name="PaymentsRecoveryStartFragment__view_recovery_phrase">Visualizza la frase di recupero</string>
     <!-- Title in save recovery phrase screen -->
-    <string name="PaymentsRecoveryStartFragment__save_recovery_phrase">Salva la frase di recupero</string>
-    <string name="PaymentsRecoveryStartFragment__enter_recovery_phrase">Inserisci la frase di recupero</string>
     <plurals name="PaymentsRecoveryStartFragment__your_balance_will_automatically_restore">
         <item quantity="one">Il tuo saldo verrà ripristinato automaticamente quando reinstalli Signal se confermi il tuo PIN di Signal. Puoi anche ripristinare il tuo saldo usando una frase di recupero, che è una frase composta da %1$d parola, che hai solo tu. Scrivila e conservala in un luogo sicuro.</item>
         <item quantity="other">Il tuo saldo verrà ripristinato automaticamente quando reinstalli Signal se confermi il tuo PIN di Signal. Puoi anche ripristinare il tuo saldo usando una frase di recupero, che è una frase di %1$d parole, che hai solo tu. Scrivila e conservala in un luogo sicuro.</item>
     </plurals>
     <!-- Description in save recovery phrase screen which shows up when user has non zero balance -->
-    <string name="PaymentsRecoveryStartFragment__got_balance">Hai un saldo! Ora devi salvare la tua frase di recupero: una chiave di sicurezza lunga 24 parole per ripristinare il tuo saldo.</string>
     <!-- Description in save recovery phrase screen which shows up when user navigates from info card -->
-    <string name="PaymentsRecoveryStartFragment__time_to_save">Ora devi salvare la tua frase di recupero: una chiave di sicurezza lunga 24 parole per ripristinare il tuo saldo.</string>
-    <string name="PaymentsRecoveryStartFragment__your_recovery_phrase_is_a">La tua frase di recupero è una frase di %1$d parole unica per te. Usa questa frase per ripristinare il tuo saldo.</string>
     <string name="PaymentsRecoveryStartFragment__start">Inizia</string>
-    <string name="PaymentsRecoveryStartFragment__enter_manually">Inserisci manualmente</string>
     <string name="PaymentsRecoveryStartFragment__paste_from_clipboard">Incolla dagli appunti</string>
     <!-- Alert dialog title which asks before going back if user wants to save recovery phrase -->
-    <string name="PaymentsRecoveryStartFragment__continue_without_saving">Vuoi continuare senza salvare?</string>
     <!-- Alert dialog description to let user know why recovery phrase needs to be saved -->
-    <string name="PaymentsRecoveryStartFragment__your_recovery_phrase">La frase di recupero ti permette di ripristinare il tuo saldo in caso qualcosa andasse storto. Ti consigliamo di salvarla.</string>
     <!-- Alert dialog option to skip recovery phrase -->
-    <string name="PaymentsRecoveryStartFragment__skip_recovery_phrase">Salta l\'impostazione della frase di recupero</string>
     <!-- Alert dialog option to cancel dialog-->
-    <string name="PaymentsRecoveryStartFragment__cancel">Annulla</string>
 
     <!-- PaymentsRecoveryPasteFragment -->
     <string name="PaymentsRecoveryPasteFragment__paste_recovery_phrase">Incolla frase di recupero</string>
     <string name="PaymentsRecoveryPasteFragment__recovery_phrase">Frase di recupero</string>
     <string name="PaymentsRecoveryPasteFragment__next">Avanti</string>
-    <string name="PaymentsRecoveryPasteFragment__invalid_recovery_phrase">Frase di recupero non valida</string>
-    <string name="PaymentsRecoveryPasteFragment__make_sure">Assicurati di aver inserito %1$d parole e riprova.</string>
 
   <!-- Removed by excludeNonTranslatables <string name="PaymentsRecoveryStartFragment__learn_more__view" translatable="false">https://support.signal.org/hc/articles/360057625692#payments_wallet_view_passphrase</string> -->
   <!-- Removed by excludeNonTranslatables <string name="PaymentsRecoveryStartFragment__learn_more__restore" translatable="false">https://support.signal.org/hc/articles/360057625692#payments_wallet_restore_passphrase</string> -->
@@ -5584,38 +5455,24 @@
     <string name="PaymentsRecoveryPhraseFragment__edit">Modifica</string>
     <string name="PaymentsRecoveryPhraseFragment__your_recovery_phrase">La tua frase di recupero</string>
     <string name="PaymentsRecoveryPhraseFragment__write_down_the_following_d_words">Annota le seguenti %1$d parole in ordine. Conserva la tua lista in un luogo sicuro.</string>
-    <string name="PaymentsRecoveryPhraseFragment__make_sure_youve_entered">Assicurati di aver inserito correttamente la tua frase.</string>
     <string name="PaymentsRecoveryPhraseFragment__do_not_screenshot_or_send_by_email">Non fare screenshot o inviare tramite e-mail.</string>
-    <string name="PaymentsRecoveryPhraseFragment__payments_account_restored">Account pagamenti ripristinato.</string>
-    <string name="PaymentsRecoveryPhraseFragment__invalid_recovery_phrase">Frase di recupero non valida</string>
-    <string name="PaymentsRecoveryPhraseFragment__make_sure_youve_entered_your_phrase_correctly_and_try_again">Assicurati di aver inserito correttamente la tua frase e riprova.</string>
-    <string name="PaymentsRecoveryPhraseFragment__copy_to_clipboard">Copiare negli appunti?</string>
-    <string name="PaymentsRecoveryPhraseFragment__if_you_choose_to_store">Se scegli di memorizzare la frase di recupero in formato digitale, assicurati che sia archiviata in modo sicuro in un luogo di cui ti fidi.</string>
     <string name="PaymentsRecoveryPhraseFragment__copy">Copia</string>
 
     <!-- PaymentsRecoveryPhraseConfirmFragment -->
     <string name="PaymentRecoveryPhraseConfirmFragment__confirm_recovery_phrase">Conferma frase di recupero</string>
     <string name="PaymentRecoveryPhraseConfirmFragment__enter_the_following_words">Inserisci le seguenti parole dalla tua frase di recupero.</string>
-    <string name="PaymentRecoveryPhraseConfirmFragment__word_d">Parola %1$d</string>
     <string name="PaymentRecoveryPhraseConfirmFragment__see_phrase_again">Vedi di nuovo la frase</string>
     <string name="PaymentRecoveryPhraseConfirmFragment__done">Fatto</string>
-    <string name="PaymentRecoveryPhraseConfirmFragment__recovery_phrase_confirmed">Frase di recupero confermata</string>
 
     <!-- PaymentsRecoveryEntryFragment -->
     <string name="PaymentsRecoveryEntryFragment__enter_recovery_phrase">Inserisci la frase di recupero</string>
-    <string name="PaymentsRecoveryEntryFragment__enter_word_d">Inserisci parola %1$d</string>
-    <string name="PaymentsRecoveryEntryFragment__word_d">Parola %1$d</string>
     <string name="PaymentsRecoveryEntryFragment__next">Avanti</string>
-    <string name="PaymentsRecoveryEntryFragment__invalid_word">Parola non valida</string>
 
     <!-- UnreadPayments -->
     <string name="UnreadPayments__s_sent_you_s">%1$s ti ha inviato %2$s</string>
     <string name="UnreadPayments__d_new_payment_notifications">%1$d nuove notifiche di pagamento</string>
 
     <!-- CanNotSendPaymentDialog -->
-    <string name="CanNotSendPaymentDialog__cant_send_payment">Impossibile inviare il pagamento</string>
-    <string name="CanNotSendPaymentDialog__to_send_a_payment_to_this_user">Per inviare un pagamento a questo utente, deve accettare una richiesta di messaggio da te. Invia loro un messaggio per creare una richiesta di messaggio.</string>
-    <string name="CanNotSendPaymentDialog__send_a_message">Invia un messaggio</string>
 
     <!-- GroupsInCommonMessageRequest -->
     <string name="GroupsInCommonMessageRequest__you_have_no_groups_in_common_with_this_person">Non hai nessun gruppo in comune con questa persona. Controlla attentamente le richieste prima di accettarle per evitare messaggi indesiderati.</string>
@@ -6056,13 +5913,9 @@
     <!-- ChatColorGradientTool -->
 
     <!-- Title text for prompt to donate. Shown in a popup at the bottom of the chat list. -->
-    <string name="Donate2022Q2Megaphone_donate_to_signal">Dona a Signal</string>
     <!-- Body text for prompt to donate. Shown in a popup at the bottom of the chat list. -->
-    <string name="Donate2022Q2Megaphone_signal_is_powered_by_people_like_you">Signal è sostenuto da persone come te. Dona mensilmente e ricevi un badge.</string>
     <!-- Button label that brings a user to the donate screen. Shown in a popup at the bottom of the chat list. -->
-    <string name="Donate2022Q2Megaphone_donate">Dona</string>
     <!-- Button label that dismissed a prompt to donate. Shown in a popup at the bottom of the chat list. -->
-    <string name="Donate2022Q2Megaphone_not_now">Non ora</string>
 
     <!-- EditReactionsFragment -->
     <string name="EditReactionsFragment__customize_reactions">Personalizza le reazioni</string>
@@ -6079,11 +5932,7 @@
     <string name="AddAProfilePhotoMegaphone__add_photo">Aggiungi foto</string>
 
     <!-- BecomeASustainerMegaphone -->
-    <string name="BecomeASustainerMegaphone__become_a_sustainer">Diventa un sostenitore</string>
     <!-- Displayed in the Become a Sustainer megaphone -->
-    <string name="BecomeASustainerMegaphone__signal_is_powered_by">Signal è sostenuto da persone come te. Dona e ricevi un badge.</string>
-    <string name="BecomeASustainerMegaphone__not_now">Non ora</string>
-    <string name="BecomeASustainerMegaphone__donate">Dona</string>
 
     <!-- KeyboardPagerFragment -->
     <string name="KeyboardPagerFragment_emoji">Emoji</string>
@@ -6432,15 +6281,9 @@
     <string name="MediaCaptureFragment_device_link_dialog_continue">Continua</string>
 
 
-    <string name="BadgesOverviewFragment__my_badges">I miei badge</string>
     <string name="BadgesOverviewFragment__featured_badge">Badge in evidenza</string>
-    <string name="BadgesOverviewFragment__display_badges_on_profile">Mostra badge sul profilo</string>
-    <string name="BadgesOverviewFragment__failed_to_update_profile">Impossibile aggiornare il profilo</string>
 
 
-    <string name="SelectFeaturedBadgeFragment__select_a_badge">Seleziona un badge</string>
-    <string name="SelectFeaturedBadgeFragment__you_must_select_a_badge">Devi selezionare un badge</string>
-    <string name="SelectFeaturedBadgeFragment__failed_to_update_profile">Impossibile aggiornare il profilo</string>
 
     <!-- Displayed on primary button in the bottom sheet as a call-to-action to launch into the donation flow -->
     <string name="ViewBadgeBottomSheetDialogFragment__donate_now">Dona</string>
@@ -6453,29 +6296,21 @@
 
     <string name="ImageView__badge">Badge</string>
 
-    <string name="SubscribeFragment__cancel_subscription">Annulla contributo</string>
     <string name="SubscribeFragment__confirm_cancellation">Confermare la cancellazione?</string>
     <string name="SubscribeFragment__you_wont_be_charged_again">I tuoi addebiti verranno interrotti. Il badge sarà rimosso dal tuo profilo alla fine del periodo di fatturazione.</string>
     <string name="SubscribeFragment__not_now">Non ora</string>
     <string name="SubscribeFragment__confirm">Conferma</string>
-    <string name="SubscribeFragment__update_subscription">Aggiorna contributo</string>
-    <string name="SubscribeFragment__your_subscription_has_been_cancelled">Il tuo contributo è stato cancellato.</string>
-    <string name="SubscribeFragment__update_subscription_question">Vuoi aggiornare il contributo?</string>
     <string name="SubscribeFragment__update">Aggiorna</string>
     <string name="SubscribeFragment__you_will_be_charged_the_full_amount_s_of">Ti verrà addebitato l\'intero importo (%1$s) del nuovo prezzo del contributo oggi. Il tuo contributo si rinnoverà mensilmente.</string>
 
-    <string name="Subscription__s_per_month">%1$s/mese</string>
     <!-- Shown when a subscription is active and isn\'t going to expire at the end of the term -->
-    <string name="Subscription__renews_s">Rinnovo %1$s</string>
     <!-- Shown when a subscription is active and is going to expire at the end of the term -->
-    <string name="Subscription__expires_s">Scade in data: %1$s</string>
 
     <!-- Title of learn more sheet -->
     <string name="SubscribeLearnMoreBottomSheetDialogFragment__signal_is_different">In quanto non-profit indipendente, Signal supporta la privacy per le comunicazioni, dalle chiamate ai messaggi di testo. Niente pubblicità, cookie o tracciamenti. Dona ora per supportare il lavoro di Signal.</string>
     <!-- First small text blurb on learn more sheet -->
     <string name="SubscribeLearnMoreBottomSheetDialogFragment__private_messaging">No ads, no trackers, no surveillance. Donate today to support Signal.</string>
     <!-- Second small text blurb on learn more sheet -->
-    <string name="SubscribeLearnMoreBottomSheetDialogFragment__donate_and_get_badge">Dona e ricevi un badge aggiuntivo opzionale per il tuo profilo</string>
     <!-- Third small text blurb on learn more sheet -->
     <string name="SubscribeLearnMoreBottomSheetDialogFragment__your_privacy_is_our_mission">La tua privacy, la nostra missione</string>
     <!-- Fourth small text blurb on learn more sheet. Non-English translations should use "Signal is a nonprofit." instead, dropping the 501c3 reference. -->
@@ -6483,60 +6318,37 @@
 
     <string name="SubscribeThanksForYourSupportBottomSheetDialogFragment__thanks_for_your_support">Grazie per il tuo supporto!</string>
     <!-- Subtext underneath the dialog title on the thanks sheet -->
-    <string name="SubscribeThanksForYourSupportBottomSheetDialogFragment__youve_earned_a_donor_badge">Hai ricevuto un Badge Signal per la tua donazione! Mostralo sul tuo profilo per far vedere che anche tu supporti Signal.</string>
     <string name="SubscribeThanksForYourSupportBottomSheetDialogFragment__you_can_also">Puoi anche</string>
-    <string name="SubscribeThanksForYourSupportBottomSheetDialogFragment__become_a_montly_sustainer">diventare un sostenitore mensile.</string>
     <string name="SubscribeThanksForYourSupportBottomSheetDialogFragment__display_on_profile">Mostra sul profilo</string>
-    <string name="SubscribeThanksForYourSupportBottomSheetDialogFragment__make_featured_badge">Metti il badge in evidenza</string>
     <string name="SubscribeThanksForYourSupportBottomSheetDialogFragment__continue">Continua</string>
     <string name="ThanksForYourSupportBottomSheetFragment__when_you_have_more">Quando hai più di un badge, puoi sceglierne uno da mostrare agli altri sul tuo profilo.</string>
 
-    <string name="BecomeASustainerFragment__get_badges">Ottieni i badge per il tuo profilo supportando Signal.</string>
-    <string name="BecomeASustainerFragment__signal_is_a_non_profit">Signal è una non-profit senza inserzionisti o investitori, sostenuta solo da persone come te.</string>
 
     <!-- Button label for creating a donation -->
-    <string name="ManageDonationsFragment__donate_to_signal">Dona a Signal</string>
     <!-- Heading for more area of manage subscriptions page -->
-    <string name="ManageDonationsFragment__more">Altro</string>
     <!-- Heading for receipts area of manage subscriptions page -->
     <!-- Heading for my subscription area of manage subscriptions page -->
-    <string name="ManageDonationsFragment__my_support">Il mio supporto</string>
-    <string name="ManageDonationsFragment__manage_subscription">Gestisci contributo</string>
     <!-- Label for Donation Receipts button -->
-    <string name="ManageDonationsFragment__donation_receipts">Ricevute delle donazioni</string>
-    <string name="ManageDonationsFragment__badges">Badge</string>
     <!-- Label that externally links to Signal Donor FAQ page -->
-    <string name="ManageDonationsFragment__subscription_faq">FAQ sulle donazioni</string>
     <!-- Preference heading for other ways to donate -->
-    <string name="ManageDonationsFragment__other_ways_to_give">Altri modi per donare</string>
     <!-- Preference label to launch badge gifting -->
-    <string name="ManageDonationsFragment__donate_for_a_friend">Fai una donazione per un\'altra persona</string>
     <!-- Dialog title shown when a donation requires verifying/confirmation outside of the app and the user hasn\'t done that yet -->
-    <string name="ManageDonationsFragment__couldnt_confirm_donation">Impossibile confermare la donazione</string>
     <!-- Dialog message shown when a monthly donation requires verifying/confirmation outside of the app and the user hasn\'t done that yet, placeholder is money amount -->
-    <string name="ManageDonationsFragment__your_monthly_s_donation_couldnt_be_confirmed_ideal_wero">Your %1$s/month donation couldn\'t be confirmed. Check your banking app to approve your iDEAL | Wero payment.</string>
     <!-- Dialog message shown when a one-time donation requires verifying/confirmation outside of the app and the user hasn\'t done that yet, placeholder is money amount -->
-    <string name="ManageDonationsFragment__your_one_time_s_donation_couldnt_be_confirmed_ideal_wero">Your one-time %1$s donation couldn\'t be confirmed. Check your banking app to approve your iDEAL | Wero payment.</string>
 
-    <string name="Boost__enter_custom_amount">Inserisci un importo personalizzato</string>
     <!-- Error label when the amount is smaller than what we can accept -->
-    <string name="Boost__the_minimum_amount_you_can_donate_is_s">L\'importo minimo che puoi donare è %1$s</string>
 
     <string name="MySupportPreference__s_per_month">%1$s/mese</string>
     <string name="MySupportPreference__renews_s">Rinnovo %1$s</string>
     <!-- Subtitle shown when processing a donation transaction -->
     <string name="MySupportPreference__processing_transaction">Elaborazione della transazione…</string>
     <!-- Displayed on "My Support" screen when user badge failed to be added to their account -->
-    <string name="MySupportPreference__couldnt_add_badge_s">Non è stato possibile aggiungere il badge. %1$s</string>
     <string name="MySupportPreference__please_contact_support">Contatta l\'assistenza.</string>
     <!-- Displayed as a subtitle on a row in the Manage Donations screen when payment for a donation is pending -->
-    <string name="MySupportPreference__payment_pending">Pagamento in sospeso</string>
     <!-- Displayed as a dialog message when clicking on a donation row that is pending. Placeholder is a formatted fiat amount -->
-    <string name="MySupportPreference__your_bank_transfer_of_s">Il tuo bonifico bancario di %1$s è in sospeso. L\'elaborazione dei bonifici bancari di solito richiede da 1 a 14 giorni lavorativi.  </string>
     <!-- Displayed in the pending help dialog, used to launch user to more details about bank transfers -->
     <string name="MySupportPreference__learn_more">Scopri di più</string>
     <!-- Displayed when a subscription refresh is being performed -->
-    <string name="MySupportPreference__checking_subscription">Controllo dell\'abbonamento in corso…</string>
 
     <!-- Title of dialog telling user they need to update signal as it expired -->
     <string name="UpdateSignalExpiredDialog__title">Aggiorna Signal</string>
@@ -6557,126 +6369,66 @@
     <string name="ReregisterSignalDialog__cancel_action">Annulla</string>
 
     <!-- Title of expiry sheet when boost badge falls off profile unexpectedly. -->
-    <string name="ExpiredBadgeBottomSheetDialogFragment__boost_badge_expired">Badge Boost scaduto</string>
     <!-- Displayed in the bottom sheet if a monthly donation badge unexpectedly falls off the user\'s profile -->
-    <string name="ExpiredBadgeBottomSheetDialogFragment__monthly_donation_cancelled">Donazione mensile cancellata</string>
     <!-- Displayed in the bottom sheet when a boost badge expires -->
-    <string name="ExpiredBadgeBottomSheetDialogFragment__your_boost_badge_has_expired_and">Il tuo badge Boost è scaduto e non è più visibile sul tuo profilo.</string>
-    <string name="ExpiredBadgeBottomSheetDialogFragment__you_can_reactivate">Puoi riattivare il tuo Badge Signal - Boost per altri 30 giorni con una donazione singola.</string>
     <!-- Displayed when we do not think the user is a subscriber when their boost expires -->
-    <string name="ExpiredBadgeBottomSheetDialogFragment__you_can_keep">Puoi continuare a usare Signal, ma puoi scegliere di effettuare una donazione mensile per sostenere una tecnologia costruita per te.</string>
-    <string name="ExpiredBadgeBottomSheetDialogFragment__become_a_sustainer">Diventa un sostenitore</string>
-    <string name="ExpiredBadgeBottomSheetDialogFragment__add_a_boost">Aggiungi un Boost</string>
-    <string name="ExpiredBadgeBottomSheetDialogFragment__not_now">Non ora</string>
     <!-- Copy displayed when badge expires after user inactivity -->
-    <string name="ExpiredBadgeBottomSheetDialogFragment__your_recurring_monthly_donation_was_automatically">La tua donazione mensile ricorrente è stata cancellata automaticamente perché il tuo profilo è risultato inattivo per troppo tempo. Il tuo badge %1$s non è più visibile sul tuo profilo.</string>
     <!-- Copy displayed when badge expires after payment failure -->
-    <string name="ExpiredBadgeBottomSheetDialogFragment__your_recurring_monthly_donation_was_canceled">La tua donazione mensile ricorrente è stata cancellata perché non abbiamo potuto elaborare il tuo pagamento. Il tuo badge non è più visibile sul tuo profilo.</string>
     <!-- Copy displayed when badge expires after a payment failure and we have a displayable charge failure reason -->
-    <string name="ExpiredBadgeBottomSheetDialogFragment__your_recurring_monthly_donation_was_canceled_s">La tua donazione mensile ricorrente è stata annullata. %1$s Il tuo badge %2$s non è più visibile sul tuo profilo.</string>
-    <string name="ExpiredBadgeBottomSheetDialogFragment__you_can">Puoi continuare a usare Signal ma, se vuoi, puoi rinnovare la tua donazione per sostenere l\'app e riattivare il tuo badge.</string>
-    <string name="ExpiredBadgeBottomSheetDialogFragment__renew_subscription">Rinnova contributo</string>
     <!-- Button label to send user to Google Pay website -->
-    <string name="ExpiredBadgeBottomSheetDialogFragment__go_to_google_pay">Vai a Google Pay</string>
 
-    <string name="CantProcessSubscriptionPaymentBottomSheetDialogFragment__cant_process_subscription_payment">Impossibile elaborare il pagamento del contributo</string>
-    <string name="CantProcessSubscriptionPaymentBottomSheetDialogFragment__were_having_trouble">Abbiamo problemi a incassare il tuo pagamento da contributore di Signal. Assicurati che il tuo metodo di pagamento sia aggiornato. Se non lo è, aggiornalo in Google Pay. Signal cercherà di elaborare nuovamente il pagamento tra qualche giorno.</string>
-    <string name="CantProcessSubscriptionPaymentBottomSheetDialogFragment__dont_show_this_again">Non mostrare più</string>
 
-    <string name="Subscription__contact_support">Contatta l\'assistenza</string>
-    <string name="Subscription__get_a_s_badge">Ottieni un %1$s</string>
 
     <!-- *PaymentInProgressFragment strings -->
-    <string name="InAppPaymentInProgressFragment__processing_donation">Donazione in elaborazione…</string>
-    <string name="InAppPaymentInProgressFragment__processing_payment">Pagamento in elaborazione…</string>
 
     <!--InAppDonations -->
     <!-- Label displayed in google play and on receipts for recurring subscriptions. Placeholder is level -->
-    <string name="InAppDonations__recurring_d">Ricorrente %1$d</string>
 
     <!-- InAppPaymentErrors -->
     <!-- Displayed as a title in a dialog or notification when a payment failure happens. -->
-    <string name="InAppPaymentErrors__error_processing_payment">Errore nell\'elaborazione del pagamento</string>
     <!-- Displayed as a message in a dialog or notification when a payment setup error happens. -->
-    <string name="InAppPaymentErrors__your_payment_couldnt_be_processed">Non è stato possibile elaborare il pagamento e l\'importo non ti è stato addebitato. Prova di nuovo.</string>
     <!-- Displayed as a message in a dialog when we timeout waiting for a payment to be processed and token to be redeemed -->
-    <string name="InAppPaymentErrors__your_payment_is_still">Il tuo pagamento è ancora in fase di elaborazione. L\'operazione può richiedere alcuni minuti a seconda della tua connessione.</string>
     <!-- Displayed as a message in a dialog or notification when stripe decline code issuer not available for backup payment. -->
-    <string name="InAppPaymentErrors__StripeDeclineCode__try_completing_the_payment_again">Prova a completare il pagamento di nuovo o contatta la tua banca per maggiori informazioni.</string>
     <!-- Failure code text for revoked authorization of payment, displayed in a dialog or notification as a message. -->
-    <string name="InAppPaymentErrors__StripeFailureCode__this_payment_was_revoked">Questo pagamento è stato annullato dall\'intestatario del conto e non può essere elaborato. Non ti è stato addebitato alcun importo.</string>
     <!-- Failure code text for a payment lacking an authorized mandate or incorrect mandate, displayed in a dialog or notification as a message.-->
-    <string name="InAppPaymentErrors__StripeFailureCode__an_error_occurred_while_processing_this_payment">Si è verificato un errore durante l\'elaborazione del pagamento. Riprova più tardi.</string>
 
     <!-- Displayed in notification when user payment fails to process on Stripe -->
-    <string name="DonationsErrors__error_processing_payment">Errore nell\'elaborazione della donazione</string>
     <!-- Displayed on manage donations screen as a dialog message when payment method failed -->
-    <string name="DonationsErrors__try_another_payment_method">Prova un altro metodo di pagamento o contatta la tua banca per maggiori informazioni.</string>
     <!-- Displayed on manage donations screen error dialogs as an action label -->
-    <string name="DonationsErrors__learn_more">Scopri di più</string>
     <!-- Displayed on "My Support" screen when user subscription payment method failed. -->
-    <string name="DonationsErrors__error_processing_payment_s">Errore nell\'elaborazione della donazione. %1$s</string>
-    <string name="DonationsErrors__your_payment">Non è stato possibile elaborare la tua donazione, pertanto l\'importo non ti è stato addebitato. Riprova.</string>
-    <string name="DonationsErrors__still_processing">Ancora in fase di elaborazione</string>
-    <string name="DonationsErrors__couldnt_add_badge">Non è stato possibile aggiungere il badge</string>
     <!-- Displayed when backup credential could not be redeemed. Dialog or notification title -->
-    <string name="DonationsError__something_went_wrong">Qualcosa non ha funzionato!</string>
     <!-- Displayed when backup credential could not be redeemed. Dialog or notification body -->
-    <string name="DonationsError__your_backups_subscription_couldnt_be_displayed">Non è stato possibile mostrare il tuo tipo di abbonamento. Ti consigliamo di contattare l\'assistenza.</string>
     <!-- Displayed when badge credential couldn\'t be verified -->
-    <string name="DonationsErrors__failed_to_validate_badge">Validazione del badge non riuscita</string>
     <!-- Displayed when badge credential couldn\'t be verified -->
-    <string name="DonationsErrors__could_not_validate">Impossibile validare la risposta del server. Si prega di contattare il supporto.</string>
     <!-- Displayed as title when some generic error happens during sending donation on behalf of another user -->
-    <string name="DonationsErrors__donation_failed">Donazione non riuscita</string>
     <!-- Displayed as message when some generic error happens during sending donation on behalf of another user -->
-    <string name="DonationsErrors__your_payment_was_processed_but">Il tuo pagamento è stato elaborato correttamente, ma Signal non è riuscito a inviare il messaggio relativo alla tua donazione. Ti consigliamo di contattare l\'assistenza.</string>
-    <string name="DonationsErrors__your_badge_could_not">Il badge non può essere aggiunto al tuo account, ma potresti aver ricevuto l\'addebito. Contatta l\'assistenza.</string>
-    <string name="DonationsErrors__your_payment_is_still">La tua donazione è ancora in fase di elaborazione. Questo processo può richiedere qualche minuto in base alla tua connessione.</string>
-    <string name="DonationsErrors__failed_to_cancel_subscription">Impossibile annullare il contributo</string>
-    <string name="DonationsErrors__subscription_cancellation_requires_an_internet_connection">L\'annullamento del contributo richiede una connessione a Internet.</string>
     <string name="ViewBadgeBottomSheetDialogFragment__your_device_doesn_t_support">Il tuo dispositivo non supporta le donazioni in-app, quindi non puoi effettuare un abbonamento alle donazioni e, di conseguenza, ricevere il badge. Puoi comunque sostenere Signal facendo una donazione sul nostro sito web.</string>
     <string name="NetworkFailure__network_error_check_your_connection_and_try_again">Errore di rete. Controlla la tua connessione e riprova.</string>
     <string name="NetworkFailure__retry">Riprova</string>
     <!-- Displayed as a dialog title when the selected recipient for a gift doesn\'t support gifting -->
-    <string name="DonationsErrors__cannot_send_donation">Impossibile inviare la donazione</string>
     <!-- Displayed as a dialog message when the selected recipient for a gift doesn\'t support gifting -->
-    <string name="DonationsErrors__this_user_cant_receive_donations_until">Questa persona non può ricevere una donazione perché deve prima aggiornare Signal.</string>
     <!-- Displayed as a dialog message when the user\'s profile could not be fetched, likely due to lack of internet -->
-    <string name="DonationsErrors__your_donation_could_not_be_sent">Impossibile inviare la tua donazione per via di un errore di rete. Controlla la tua connessione e riprova.</string>
     <!-- Displayed as a dialog message when the user encounters an error during an iDEAL donation -->
-    <string name="DonationsErrors__your_ideal_wero_couldnt_be_processed">Your iDEAL | Wero donation couldn\'t be processed. Try another payment method or contact your bank for more information.</string>
 
     <!-- Gift message view title -->
-    <string name="GiftMessageView__donation_on_behalf_of_s">Donazione per conto di %1$s</string>
     <!-- Gift message view title for incoming donations -->
-    <string name="GiftMessageView__s_donated_to_signal_on">%1$s ha fatto una donazione a Signal per conto tuo</string>
     <!-- Gift badge redeem action label -->
-    <string name="GiftMessageView__redeem">Riscatta</string>
     <!-- Gift badge view action label -->
-    <string name="GiftMessageView__view">Mostra</string>
     <!-- Gift badge redeeming action label -->
-    <string name="GiftMessageView__redeeming">Riscattando…</string>
     <!-- Gift badge redeemed label -->
-    <string name="GiftMessageView__redeemed">Riscattato</string>
 
 
     <!-- Stripe decline code generic_failure -->
-    <string name="DeclineCode__try_another_payment_method_or_contact_your_bank">Prova un altro metodo di pagamento o contatta la tua banca per maggiori informazioni.</string>
     <!-- PayPal decline code for payment declined -->
-    <string name="DeclineCode__try_another_payment_method_or_contact_your_bank_for_more_information_if_this_was_a_paypal">Prova un altro metodo di pagamento o contatta la tua banca per maggiori informazioni. Se invece si tratta di una transazione PayPal, ti invitiamo a contattare PayPal.</string>
     <!-- Stripe decline code verify on Google Pay and try again -->
-    <string name="DeclineCode__verify_your_payment_method_is_up_to_date_in_google_pay_and_try_again">Verifica che il tuo metodo di pagamento sia aggiornato in Google Pay e riprova.</string>
     <!-- Stripe decline code learn more action label -->
     <string name="DeclineCode__learn_more">Scopri di più</string>
     <!-- Stripe decline code contact issuer -->
-    <string name="DeclineCode__verify_your_payment_method_is_up_to_date_in_google_pay_and_try_again_if_the_problem">Verifica che il tuo metodo di pagamento sia aggiornato in Google Pay e riprova. Se il problema continua, contatta la tua banca.</string>
     <!-- Stripe decline code purchase not supported -->
     <string name="DeclineCode__your_card_does_not_support_this_type_of_purchase">La tua carta non supporta questo tipo di acquisto. Prova un altro metodo di pagamento.</string>
     <!-- Stripe decline code your card has expired -->
     <string name="DeclineCode__your_card_has_expired">La tua carta è scaduta. Aggiorna il tuo metodo di pagamento in Google Pay e riprova.</string>
     <!-- Stripe decline code go to google pay action label -->
-    <string name="DeclineCode__go_to_google_pay">Vai a Google Pay</string>
     <!-- Stripe decline code try credit card again action label -->
     <string name="DeclineCode__try">Riprova</string>
     <!-- Stripe decline code incorrect card number -->
@@ -6690,7 +6442,6 @@
     <!-- Stripe decline code incorrect expiration year -->
     <string name="DeclineCode__the_expiration_year">L\'anno di scadenza del tuo metodo di pagamento non è corretto. Aggiornalo in Google Pay e riprova.</string>
     <!-- Stripe decline code issuer not available -->
-    <string name="DeclineCode__try_completing_the_payment_again">Riprova a completare la donazione o contatta la tua banca per maggiori informazioni.</string>
     <!-- Stripe decline code processing error -->
     <string name="DeclineCode__try_again">Riprova o contatta la tua banca per maggiori informazioni.</string>
 
@@ -6712,15 +6463,10 @@
 
     <!-- Stripe Failure Codes for failed bank transfers -->
     <!-- Failure code text for insufficient funds, displayed in a dialog or notification -->
-    <string name="StripeFailureCode__the_bank_account_provided">Il conto corrente fornito non dispone di fondi sufficienti per completare l\'acquisto. Prova di nuovo o contatta la tua banca per maggiori informazioni.</string>
     <!-- Failure code text for revoked authorization of payment, displayed in a dialog or notification -->
-    <string name="StripeFailureCode__this_payment_was_revoked">Questo pagamento è stato annullato dall\'intestatario del conto e non può essere elaborato. Non ti è stato addebitato alcun importo.</string>
     <!-- Failure code text for a payment lacking an authorized mandate or incorrect mandate, displayed in a dialog or notification -->
-    <string name="StripeFailureCode__an_error_occurred_while_processing_this_payment">Si è verificato un errore durante l\'elaborazione della donazione. Riprova più tardi.</string>
     <!-- Failure code text for a closed account, deceased recipient, or one with blocked direct debits, displayed in a dialog or notification -->
-    <string name="StripeFailureCode__the_bank_details_provided_could_not_be_processed">Non è stato possibile elaborare i dettagli del conto corrente che ci hai fornito. Contatta la tua banca per maggiori informazioni.</string>
     <!-- Failure code text for a non-existent bank branch, invalid account holder, invalid iban, generic failure, or unknown bank failure, displayed in a dialog or notification -->
-    <string name="StripeFailureCode__verify_your_bank_details_are_correct">Assicurati che i dati del tuo conto corrente siano corretti e riprova. Se il problema persiste, contatta la tua banca.</string>
 
     <!-- Title of create notification profile screen -->
     <string name="EditNotificationProfileFragment__name_your_profile">Dai un nome al tuo profilo</string>
@@ -6883,33 +6629,19 @@
     <string name="ReleaseNotes__official_only_chat">Unica chat ufficiale con Signal</string>
 
     <!-- Donation receipts activity title -->
-    <string name="DonationReceiptListFragment__all_activity">Tutte le attività</string>
     <!-- Donation receipts all tab label -->
-    <string name="DonationReceiptListFragment__all">Tutti</string>
     <!-- Donation receipts recurring tab label -->
-    <string name="DonationReceiptListFragment__recurring">Ricorrente</string>
     <!-- Donation receipts one-time tab label -->
-    <string name="DonationReceiptListFragment__one_time">Una volta</string>
     <!-- Donation receipts gift tab -->
-    <string name="DonationReceiptListFragment__for_a_friend">Per un\'altra persona</string>
     <!-- Donation receipts gift tab label -->
-    <string name="DonationReceiptListFragment__donation_for_a_friend">Donazione per un\'altra persona</string>
     <!-- Donation receipts donation type heading -->
-    <string name="DonationReceiptDetailsFragment__donation_type">Tipo donazione</string>
     <!-- Donation receipts date paid heading -->
-    <string name="DonationReceiptDetailsFragment__date_paid">Data pagamento</string>
     <!-- Donation receipts share PNG -->
-    <string name="DonationReceiptDetailsFragment__share_receipt">Condividi ricevuta</string>
     <!-- Donation receipts list end note -->
-    <string name="DonationReceiptListFragment__if_you_have">Se hai reinstallato Signal, le ricevute delle donazioni precedenti non saranno disponibili.</string>
     <!-- Donation receipts document title -->
-    <string name="DonationReceiptDetailsFragment__donation_receipt">Ricevuta donazione</string>
     <!-- Donation receipts amount title -->
-    <string name="DonationReceiptDetailsFragment__amount">Importo</string>
     <!-- Donation receipts thanks -->
-    <string name="DonationReceiptDetailsFragment__thank_you_for_supporting">Grazie per sostenere Signal. Il tuo contributo aiuta ad alimentare la missione di sviluppare una tecnologia open source per la privacy che protegge la libera espressione e consente una comunicazione globale sicura per milioni di persone in tutto il mondo. Se sei residente negli Stati Uniti, conserva questa ricevuta per la tua documentazione fiscale. Signal Technology Foundation è un\'organizzazione no-profit esente da tasse negli Stati Uniti ai sensi della sezione 501c3 dell\'Internal Revenue Code. Il nostro Federal Tax ID è 82-4506840.</string>
     <!-- Donation reciepts screen empty state title -->
-    <string name="DonationReceiptListFragment__no_receipts">Nessun destinatario</string>
 
     <!-- region "Stories Tab" -->
 
@@ -7297,54 +7029,33 @@
         <item quantity="other">%1$s · durata di %2$d giorni</item>
     </plurals>
     <!-- Headline text on start fragment for gifting a badge -->
-    <string name="GiftFlowStartFragment__donate_for_a_friend">Fai una donazione per un\'altra persona</string>
     <!-- Description text on start fragment for gifting a badge -->
     <plurals name="GiftFlowStartFragment__support_signal_by">
         <item quantity="one">Supporta Signal facendo una donazione per conto di una persona che già usa il servizio. L\'altra persona riceverà un Badge Signal che potrà mostrare sul proprio profilo per %1$d giorno.</item>
         <item quantity="other">Supporta Signal facendo una donazione per conto di una persona che già usa il servizio. L\'altra persona riceverà un Badge Signal che potrà mostrare sul proprio profilo per %1$d giorni.</item>
     </plurals>
     <!-- Action button label for start fragment for gifting a badge -->
-    <string name="GiftFlowStartFragment__next">Avanti</string>
     <!-- Title text on choose recipient page for badge gifting -->
-    <string name="GiftFlowRecipientSelectionFragment__choose_recipient">Scegli destinatario</string>
     <!-- Title text on confirm gift page -->
-    <string name="GiftFlowConfirmationFragment__confirm_donation">Conferma la donazione</string>
     <!-- Heading text specifying who the gift will be sent to -->
-    <string name="GiftFlowConfirmationFragment__send_to">Invia a</string>
     <!-- Text explaining that gift will be sent to the chosen recipient -->
-    <string name="GiftFlowConfirmationFragment__the_recipient_will_be_notified">La persona destinataria verrà notificata della donazione in un messaggio privato. Aggiungi di seguito il messaggio che vuoi inviare.</string>
     <!-- Text explaining that this gift is a one time donation -->
-    <string name="GiftFlowConfirmationFragment__one_time_donation">Donazione unica</string>
     <!-- Hint for add message input -->
-    <string name="GiftFlowConfirmationFragment__add_a_message">Aggiungi un messaggio</string>
     <!-- Displayed in the dialog while verifying the chosen recipient -->
     <string name="GiftFlowConfirmationFragment__verifying_recipient">Verifica destinatario…</string>
     <!-- Title for sheet shown when opening a redeemed gift -->
-    <string name="ViewReceivedGiftBottomSheet__s_made_a_donation_for_you">%1$s ha fatto una donazione per conto tuo!</string>
     <!-- Title for sheet shown when opening a sent gift -->
-    <string name="ViewSentGiftBottomSheet__thanks_for_your_support">Grazie per il tuo supporto!</string>
     <!-- Description for sheet shown when opening a redeemed gift -->
-    <string name="ViewReceivedGiftBottomSheet__s_made_a_donation_to_signal">%1$s ha fatto una donazione a Signal per conto tuo! Mostra il tuo supporto a Signal con un badge sul tuo profilo.</string>
     <!-- Description for sheet shown when opening a sent gift -->
-    <string name="ViewSentGiftBottomSheet__youve_made_a_donation_to_signal">Hai fatto una donazione a Signal per conto di %1$s! Da ora, potrà scegliere se mostrare un badge per supportare Signal sul proprio profilo.</string>
     <!-- Primary action for pending gift sheet to redeem badge now -->
-    <string name="ViewReceivedGiftSheet__redeem">Riscatta</string>
     <!-- Primary action for pending gift sheet to redeem badge later -->
-    <string name="ViewReceivedGiftSheet__not_now">Non ora</string>
     <!-- Dialog text while redeeming a gift -->
-    <string name="ViewReceivedGiftSheet__redeeming_badge">Riscatto badge in corso…</string>
     <!-- Description text in gift thanks sheet -->
-    <string name="GiftThanksSheet__youve_made_a_donation">Hai fatto una donazione a Signal per conto di %1$s! Da ora, potrà scegliere se mostrare un badge per supportare Signal sul proprio profilo.</string>
     <!-- Expired gift sheet title -->
-    <string name="ExpiredGiftSheetConfiguration__your_badge_has_expired">Il tuo Badge Signal è scaduto</string>
     <!-- Expired gift sheet top description text -->
-    <string name="ExpiredGiftSheetConfiguration__your_badge_has_expired_and_is">Il tuo Badge Signal è scaduto e non è più visibile sul tuo profilo.</string>
     <!-- Expired gift sheet bottom description text -->
-    <string name="ExpiredGiftSheetConfiguration__to_continue">Per continuare a sostenere la tecnologia che è costruita per te, considera di diventare un contributore mensile.</string>
     <!-- Expired gift sheet make a monthly donation button -->
-    <string name="ExpiredGiftSheetConfiguration__make_a_monthly_donation">Fai una donazione mensile</string>
     <!-- Expired gift sheet not now button -->
-    <string name="ExpiredGiftSheetConfiguration__not_now">Non ora</string>
     <!-- My Story label designating that we will only share with the selected viewers. -->
     <string name="ContactSearchItems__only_share_with">Condividi solo con…</string>
     <!-- Label under name for custom stories -->
@@ -7408,7 +7119,6 @@
         <item quantity="other">%1$d minuti rimanenti</item>
     </plurals>
     <!-- Donation for a friend expiry expired -->
-    <string name="Gifts__expired">Scaduto</string>
 
     <!-- Label indicating that a user can tap to advance to the next post in a story -->
     <string name="StoryFirstTimeNavigationView__tap_to_advance">Tocca per proseguire</string>
@@ -7554,129 +7264,76 @@
 
     <!-- DonateToSignalFragment -->
     <!-- Title below avatar -->
-    <string name="DonateToSignalFragment__privacy_over_profit">Non-profit per scelta</string>
     <!-- Continue button label -->
-    <string name="DonateToSignalFragment__continue">Continua</string>
     <!-- Description below title -->
-    <string name="DonateToSignalFragment__private_messaging">Fai una donazione per supportare la privacy delle comunicazioni. Aiutaci a tenere Signal indipendente e senza pubblicità.</string>
     <!-- Dialog title when a user tries to donate while they already have a pending donation. -->
-    <string name="DonateToSignalFragment__you_have_a_donation_pending">Hai una donazione in sospeso</string>
     <!-- Dialog body when a user tries to donate while they already have a pending monthly donation. -->
-    <string name="DonateToSignalFragment__bank_transfers_usually_take_1_business_day_to_process_monthly">L\'elaborazione dei bonifici bancari di solito richiede da 1 a 14 giorni lavorativi. Attendi il completamento di questa transazione prima di aggiornare/cambiare il tuo abbonamento.</string>
     <!-- Dialog body when a user tries to donate while they already have a pending one time donation. -->
-    <string name="DonateToSignalFragment__bank_transfers_usually_take_1_business_day_to_process_onetime">L\'elaborazione dei bonifici bancari di solito richiede da 1 a 14 giorni lavorativi. Attendi il completamento di questa transazione prima di effettuare un\'altra donazione.</string>
     <!-- Dialog body when a user tries to donate while they already have a pending monthly donation. -->
-    <string name="DonateToSignalFragment__your_payment_is_still_being_processed_monthly">La tua donazione è ancora in fase di elaborazione. Questo processo può richiedere qualche minuto in base alla tua connessione. Attendi il completamento di questa transazione prima di aggiornare/cambiare il tuo abbonamento.</string>
     <!-- Dialog body when a user tries to donate while they already have a pending one time donation. -->
-    <string name="DonateToSignalFragment__your_payment_is_still_being_processed_onetime">La tua donazione è ancora in fase di elaborazione. Questo processo può richiedere qualche minuto in base alla tua connessione. Attendi il completamento di questa transazione prima di effettuare un\'altra donazione.</string>
     <!-- Dialog body when a user opens the manage donations main screen and they have a pending iDEAL donation -->
-    <string name="DonateToSignalFragment__your_ideal_wero_payment_is_still_processing">Your iDEAL | Wero donation is still processing. Check your banking app to approve your payment before making another donation.</string>
     <!-- Dialog title shown when a user tries to donate an amount higher than is allowed for a given payment method. -->
-    <string name="DonateToSignal__donation_amount_too_high">Importo della donazione troppo alto</string>
     <!-- Dialog body shown when a user tries to donate an amount higher than is allowed for a given payment method, place holder is the maximum -->
-    <string name="DonateToSignalFragment__you_can_send_up_to_s_via_bank_transfer">Puoi inviare fino a %1$s tramite bonifico bancario. Prova a inserire un\'altra cifra o a usare un metodo di pagamento diverso.</string>
 
     <!-- Donation pill toggle monthly text -->
-    <string name="DonationPillToggle__monthly">Mensile</string>
     <!-- Donation pill toggle one-time text -->
-    <string name="DonationPillToggle__one_time">Una volta</string>
 
     <!-- GatewaySelectorBottomSheet -->
     <!-- Sheet title when subscribing -->
-    <string name="GatewaySelectorBottomSheet__donate_s_month_to_signal">Dona %1$s al mese a Signal</string>
     <!-- Sheet summary when subscribing -->
-    <string name="GatewaySelectorBottomSheet__get_a_s_badge">Ottieni un %1$s</string>
     <!-- Sheet title when giving a one-time donation -->
-    <string name="GatewaySelectorBottomSheet__donate_s_to_signal">Dona %1$s a Signal</string>
     <!-- Sheet summary when giving a one-time donation -->
     <plurals name="GatewaySelectorBottomSheet__get_a_s_badge_for_d_days">
         <item quantity="one">Ricevi un badge %1$s per %2$d giorno</item>
         <item quantity="other">Ricevi un badge %1$s per %2$d giorni</item>
     </plurals>
     <!-- Button label for paying with a bank transfer -->
-    <string name="GatewaySelectorBottomSheet__bank_transfer">Bonifico bancario</string>
     <!-- Button label for paying with a credit card -->
     <string name="GatewaySelectorBottomSheet__credit_or_debit_card">Carta di credito o di debito</string>
     <!-- Sheet summary when giving donating for a friend -->
-    <string name="GatewaySelectorBottomSheet__donate_for_a_friend">Fai una donazione per un\'altra persona</string>
     <!-- Button label for paying with iDEAL -->
-    <string name="GatewaySelectorBottomSheet__ideal_wero">iDEAL | Wero</string>
 
     <!-- Dialog title for launching external intent -->
-    <string name="ExternalNavigationHelper__leave_signal_to_confirm_payment">Uscire da Signal per confermare la donazione?</string>
-    <string name="ExternalNavigationHelper__once_this_payment_is_confirmed">Dopo aver confermato, ritorna su Signal per completare l\'elaborazione della tua donazione.</string>
     <!-- Dialog message shown when leaving Signal to complete a donation in an external app. Placeholder is the resolved app name (e.g. a banking app). -->
-    <string name="ExternalNavigationHelper__once_payment_confirmed_in_app">You\'ll be sent to %1$s. When confirmed, return to Signal to finish processing your donation.</string>
 
     <!-- BankTransferMandateFragment -->
     <!-- Title of screen displaying the bank transfer mandate -->
-    <string name="BankTransferMandateFragment__bank_transfer">Bonifico bancario</string>
     <!-- Subtitle of screen displaying the bank transfer mandate, placeholder is \'Learn more\' -->
-    <string name="BankTransferMandateFragment__stripe_processes_donations">Stripe si occupa di elaborare le donazioni a Signal. Signal non raccoglie e non conserva le tue informazioni personali. %1$s</string>
     <!-- Subtitle learn more of screen displaying bank transfer mandate -->
-    <string name="BankTransferMandateFragment__learn_more">Scopri di più</string>
     <!-- Button label to continue with transfer -->
-    <string name="BankTransferMandateFragment__agree">Accetta</string>
     <!-- Button label to read more of the bank mandate that is currently off screen -->
-    <string name="BankTransferMandateFragment__read_more">Leggi tutto</string>
     <!-- Text displayed when mandate load fails -->
-    <string name="BankTransferMandateFragment__failed_to_load_mandate">Impossibile caricare la richiesta</string>
 
     <!-- BankTransferDetailsFragment -->
     <!-- Subtext explaining how email is used. Placeholder is \'Learn more\' -->
-    <string name="BankTransferDetailsFragment__enter_your_bank_details">Inserisci i dettagli del tuo conto corrente e la tua email. Stripe utilizzerà il tuo indirizzo email per inviarti aggiornamenti relativi alla donazione. %1$s</string>
     <!-- Subtext learn more link text -->
-    <string name="BankTransferDetailsFragment__learn_more">Scopri di più</string>
     <!-- Text field label for name on bank account -->
-    <string name="BankTransferDetailsFragment__name_on_bank_account">Nome del titolare del conto</string>
     <!-- Text field label for IBAN -->
-    <string name="BankTransferDetailsFragment__iban">IBAN</string>
     <!-- Text field label for email -->
-    <string name="BankTransferDetailsFragment__email">Email</string>
     <!-- Text label for button to show user how to find their IBAN -->
-    <string name="BankTransferDetailsFragment__find_account_info">Trova le info del tuo conto</string>
     <!-- Donate button label for monthly subscription -->
-    <string name="BankTransferDetailsFragment__donate_s_month">Dona %1$s al mese</string>
     <!-- Donate button label for one-time -->
-    <string name="BankTransferDetailsFragment__donate_s">Dona %1$s</string>
     <!-- Error label for IBAN field when number is too short -->
-    <string name="BankTransferDetailsFragment__iban_is_too_short">IBAN troppo corto</string>
     <!-- Error label for IBAN field when number is too long -->
-    <string name="BankTransferDetailsFragment__iban_is_too_long">IBAN troppo lungo</string>
     <!-- Error label for IBAN field when country is not supported -->
-    <string name="BankTransferDetailsFragment__iban_country_code_is_not_supported">Codice identificazione Paese dell\'IBAN non supportato</string>
     <!-- Error label for IBAN field when number is invalid -->
-    <string name="BankTransferDetailsFragment__invalid_iban">IBAN non valido</string>
     <!-- Error label for name field when name is not at least three characters long (Stripe API enforced minimum) -->
-    <string name="BankTransferDetailsFragment__minimum_3_characters">Minimo 3 caratteri</string>
     <!-- Error label for email field when email is not valid -->
-    <string name="BankTransferDetailsFragment__invalid_email_address">Indirizzo email non valido</string>
 
     <!-- IdealTransferDetailsFragment -->
     <!-- Title of the screen, displayed in the toolbar -->
-    <string name="IdealTransferDetailsFragment__ideal">iDEAL</string>
     <!-- Subtitle of the screen, displayed below the toolbar. Placeholder is for \'learn more\' -->
-    <string name="IdealTransferDetailsFragment__enter_your_bank">Inserisci il tuo nome ed email. Stripe utilizzerà il tuo indirizzo email per inviarti aggiornamenti relativi alla donazione. %1$s</string>
     <!-- Subtitle of the screen, displayed below the toolbar. Placeholder is for \'learn more\' -->
-    <string name="IdealTransferDetailsFragment__enter_your_bank_details_one_time">Inserisci i dettagli del tuo conto. Signal non raccoglie e non conserva le tue informazioni personali. %1$s</string>
     <!-- Subtitle learn-more button displayed inline with the subtitle text -->
-    <string name="IdealTransferDetailsFragment__learn_more">Scopri di più</string>
     <!-- Hint label for text entry box for name on bank account -->
-    <string name="IdealTransferDetailsFragment__name_on_bank_account">Nome del titolare del conto</string>
     <!-- Hint label for text entry box for email -->
-    <string name="IdealTransferDetailsFragment__email">Email</string>
     <!-- Default label for bank selection -->
-    <string name="IdealTransferDetailsFragment__choose_your_bank">Scegli la tua banca</string>
     <!-- Dialog title shown when using iDEAL payment for setting up a monthly donation -->
-    <string name="IdealTransferDetailsFragment__confirm_your_donation_with_ideal_wero">Confirm your donation with iDEAL | Wero</string>
     <!-- Dialog warning shown when using iDEAL payment for setting up a monthly donation. Placeholder is donation amount.Z -->
-    <string name="IdealTransferDetailsFragment__to_setup_your_recurring_donation">Per impostare la tua donazione ricorrente, tocca su Continua per confermare un addebito di 0,01€ sulla tua carta o sul tuo conto. Questa transazione sarà rimborsata automaticamente e ci consentirà di addebitarti la tua donazione di %1$s al mese.</string>
     <!-- Dialog button shown when using iDEAL payment for setting up a monthly donation to continue with the donation -->
-    <string name="IdealTransferDetailsFragment__continue">Continua</string>
 
     <!-- IdealTransferDetailsBankSelectionDialogFragment -->
     <!-- Title of the screen, displayed in the toolbar -->
-    <string name="IdealTransferDetailsBankSelectionDialogFragment__choose_your_bank">Scegli la tua banca</string>
 
     <!-- Title of bottom sheet for finding account information -->
     <string name="FindAccountInfoSheet__find_your_account_information">Trova i dettagli del tuo conto</string>
@@ -7684,36 +7341,22 @@
     <string name="FindAccountInfoSheet__look_for_your_iban_at">Cerca il tuo IBAN nell\'home banking o su un estratto conto. L\'IBAN contiene fino a 34 caratteri. Il nome che inserisci deve corrispondere al nome presente sul tuo conto bancario. Contatta la tua banca per maggiori informazioni.</string>
 
     <!-- Title of donation pending sheet displayed after making a bank transfer -->
-    <string name="DonationPendingBottomSheet__donation_pending">Donazione in sospeso</string>
     <!-- Top text block of donation pending sheet displayed after subscribing via a bank transfer. Placeholder is the badge name. -->
-    <string name="DonationPendingBottomSheet__your_monthly_donation_is_pending">La tua donazione mensile è in sospeso. Potrai mostrare il Badge %1$s sul tuo profilo quando la donazione verrà ricevuta.</string>
     <!-- Top text block of donation pending sheet displayed after one-time donation via a bank transfer. Placeholder is the badge name. -->
-    <string name="DonationPendingBottomSheet__your_one_time_donation_is_pending">La tua donazione singola è in sospeso. Potrai mostrare il Badge %1$s sul tuo profilo quando la donazione verrà ricevuta.</string>
     <!-- Bottom text block of donation pending sheet displayed after donating via a bank transfer. Placeholder is for learn more. -->
-    <string name="DonationPendingBottomSheet__bank_transfers_usually_take">L\'elaborazione dei bonifici bancari di solito richiede da 1 a 14 giorni lavorativi. %1$s</string>
     <!-- Learn more text for donation pending sheet displayed after donating via a bank transfer. -->
-    <string name="DonationPendingBottomSheet__learn_more">Scopri di più</string>
     <!-- Confirmation button for donation pending sheet displayed after donating via a bank transfer. -->
-    <string name="DonationPendingBottomSheet__done">Fatto</string>
 
     <!-- Title of donation error sheet displayed after making a bank transfer that fails -->
-    <string name="DonationErrorBottomSheet__donation_couldnt_be_processed">Impossibile elaborare la donazione</string>
     <!-- Text block of donation error sheet displayed after making a bank transfer that fails -->
-    <string name="DonationErrorBottomSheet__were_having_trouble">Stiamo riscontrando dei problemi nell\'elaborazione del tuo bonifico. Non ti è stato addebitato alcun importo. Prova un altro metodo di pagamento o contatta la tua banca per maggiori informazioni.</string>
     <!-- Button label for retry button of donation error sheet displayed after making a bank transfer that fails -->
-    <string name="DonationErrorBottomSheet__try_again">Riprova</string>
     <!-- Button label for not now button of donation error sheet displayed after making a bank transfer that fails -->
-    <string name="DonationErrorBottomSheet__not_now">Non ora</string>
 
     <!-- Title of \'Donation Complete\' sheet displayed after a bank transfer completes and the badge is redeemed -->
-    <string name="DonationCompletedBottomSheet__donation_complete">Donazione completata</string>
     <!-- Text block of \'Donation Complete\' sheet displayed after a bank transfer completes and the badge is redeemed -->
-    <string name="DonationCompleteBottomSheet__your_bank_transfer_was_received">Abbiamo ricevuto il tuo bonifico bancario. Puoi scegliere di mostrare questo badge sul tuo profilo per far sapere a tutti che sostieni Signal.</string>
     <!-- Button text of \'Donation Complete\' sheet displayed after a bank transfer completes and the badge is redeemed to dismiss sheet -->
-    <string name="DonationCompleteBottomSheet__done">Fatto</string>
 
     <!-- StripePaymentInProgressFragment -->
-    <string name="StripePaymentInProgressFragment__cancelling">Annullamento in corso…</string>
 
     <!-- The title of a bottom sheet dialog that tells the user we temporarily can\'t process their contacts. -->
     <string name="CdsTemporaryErrorBottomSheet_title">Sono stati elaborati troppi contatti</string>
@@ -7747,7 +7390,6 @@
     <!-- YourInformationIsPrivateBottomSheet -->
     <string name="YourInformationIsPrivateBottomSheet__your_information_is_private">Le tue informazioni rimangono sempre private</string>
     <string name="YourInformationIsPrivateBottomSheet__signal_does_not_collect">Signal non archivia né salva le tue informazioni personali quando fai una donazione.</string>
-    <string name="YourInformationIsPrivateBottomSheet__we_use_stripe">Usiamo Stripe per elaborare i pagamenti e ricevere le tue donazioni. Non abbiamo accesso, né archiviamo o salviamo le informazioni che fornisci a Stripe per le transazioni.</string>
     <string name="YourInformationIsPrivateBottomSheet__signal_does_not_and_cannot">Signal non collegherà mai (né è in grado di farlo) le informazioni legate alla donazione al tuo account su Signal.</string>
     <string name="YourInformationIsPrivateBottomSheet__thank_you">Grazie per il tuo supporto!</string>
 
@@ -7765,8 +7407,6 @@
     <string name="Registration_country_code_entry_hint">+0</string>
 
     <!-- PaypalCompleteOrderBottomSheet -->
-    <string name="PaypalCompleteOrderBottomSheet__donate">Dona</string>
-    <string name="PaypalCompleteOrderBottomSheet__payment">Pagamento</string>
 
     <!-- ChatFilter -->
     <!-- Displayed in a pill at the top of the chat list when it is filtered by unread messages -->
@@ -8264,15 +7904,10 @@
     <string name="GrantFullScreenIntentPermission_bottomsheet_step2">2. %1$s Consenti notifiche a schermo intero</string>
 
     <!-- Bottom sheet dialog shown when a monthly donation fails to renew, title for dialog -->
-    <string name="MonthlyDonationCanceled__title">Donazione mensile annullata</string>
     <!-- Bottom sheet dialog shown when a monthly donation fails to renew, body for dialog. First placeholder is a payment related error message. Second placeholder is \'learn more\' -->
-    <string name="MonthlyDonationCanceled__message">La tua donazione mensile ricorrente è stata annullata. %1$s\n\nIl tuo badge non verrà più mostrato sul tuo profilo. %2$s</string>
     <!-- Bottom sheet dialog shown when a monthly donation fails to renew, learn more used in placeholder for body for dialog. -->
-    <string name="MonthlyDonationCanceled__learn_more">Scopri di più</string>
     <!-- Bottom sheet dialog shown when a monthly donation fails to renew, primary button to renew subscription with new data -->
-    <string name="MonthlyDonationCanceled__renew_button">Rinnova contributo</string>
     <!-- Bottom sheet dialog shown when a monthly donation fails to renew, second button to dismiss the dialog entirely -->
-    <string name="MonthlyDonationCanceled__not_now_button">Non ora</string>
 
     <!-- FindByActivity -->
     <!-- Title of activity when finding by username -->
@@ -8362,7 +7997,6 @@
 
     <!-- BackupAlertBottomSheet -->
     <!-- Sheet title when media backups have been disabled -->
-    <string name="BackupAlertBottomSheet__your_backups_subscription_expired">Il tuo piano per i backup è scaduto</string>
     <!-- Sheet body part 1 when media backups have been disabled. Placeholder is the number of days until deletion. -->
     <plurals name="BackupAlertBottomSheet__your_backup_plan_has_expired">
         <item quantity="one">Il tuo abbonamento per i backup è terminato perché non siamo riusciti a rinnovarlo usando il tuo metodo di pagamento attuale. Tra %1$d giorno, tutti i media nel tuo backup verranno eliminati.</item>
@@ -8554,21 +8188,15 @@
     <!-- Displayed as the user\'s payment method as a label in a preference row -->
     <string name="BackupsTypeSettingsFragment__credit_or_debit_card">Carta di credito o di debito</string>
     <!-- Displayed as the user\'s payment method as a label in a preference row -->
-    <string name="BackupsTypeSettingsFragment__iDEAL">iDEAL</string>
     <!-- Displayed as the user\'s payment method as a label in a preference row -->
-    <string name="BackupsTypeSettingsFragment__google_pay">Google Pay</string>
     <!-- Displayed as the user\'s payment method as a label in a preference row -->
-    <string name="BackupsTypeSettingsFragment__bank_transfer">Bonifico bancario</string>
     <!-- Displayed as the user\'s payment method as a label in a preference row -->
-    <string name="BackupsTypeSettingsFragment__paypal">PayPal</string>
     <!-- Displayed as the user\'s payment method as a label in a preference row -->
     <string name="BackupsTypeSettingsFragment__unknown">Sconosciuto</string>
     <!-- Row title for entering payment history -->
-    <string name="BackupsTypeSettingsFragment__payment_history">Cronologia dei pagamenti</string>
     <!-- Row description detailing renewal information. First placeholder is formatted price. Second placeholder is formatted date. -->
     <string name="BackupsTypeSettingsFragment__s_month_renews_s">%1$s/mese · Rinnovo %2$s</string>
     <!-- Row title to change or cancel subscription -->
-    <string name="BackupsTypeSettingsFragment__change_or_cancel_subscription">Cambia o annulla il piano</string>
 
     <!-- GooglePlayServicesAvailability -->
     <!-- Dialog title when Google Play services are missing from the device -->
@@ -8718,7 +8346,6 @@
     <!-- Text shown in a popup indicating that the user needs to enter their screen lock -->
     <string name="RemoteBackupsSettingsFragment__authenticatino_required">Autenticazione richiesta</string>
     <!-- Row label to launch payment history screen -->
-    <string name="RemoteBackupsSettingsFragment__payment_history">Cronologia dei pagamenti</string>
     <!-- Section header for backup information -->
     <string name="RemoteBackupsSettingsFragment__backup_details">Dettagli sul backup</string>
     <!-- Row label to allow the restoration of a backup to occur while on cellular connection -->
@@ -9155,7 +8782,6 @@
     <!-- Primary action button label when selecting paid tier when Google Play API isn\'t available -->
     <string name="MessageBackupsTypeSelectionScreen__more_about_this_plan">Più info su questo piano</string>
     <!-- Secondary action button label when selecting a backup tier with a current selection -->
-    <string name="MessageBackupsTypeSelectionScreen__cancel_subscription">Annulla contributo</string>
     <!-- MessageBackupsType block amount for free tier -->
     <string name="MessageBackupsTypeSelectionScreen__free">Gratis</string>
     <!-- MessageBackupsType block amount for paid tier when no pricing is available -->
@@ -9199,7 +8825,6 @@
     <!-- Action button label to cancel subscription and download later -->
     <string name="ConfirmBackupCancellationDialog__confirm_and_download_later">Conferma e scarica dopo</string>
     <!-- Action button label to keep current subscription -->
-    <string name="ConfirmBackupCancellationDialog__keep_subscription">Mantieni l\'abbonamento</string>
 
     <!-- Accessible content description for the reminder view, describing the icon in the view. -->
     <string name="ReminderView_icon_content_description">Icona del promemoria</string>

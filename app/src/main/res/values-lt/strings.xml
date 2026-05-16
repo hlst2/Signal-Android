@@ -24,7 +24,6 @@
   <!-- Removed by excludeNonTranslatables <string name="donate_faq_url" translatable="false">https://support.signal.org/hc/articles/360031949872#donate</string> -->
 
     <!-- First placeholder is productId, second placeholder is app package -->
-    <string name="backup_subscription_management_url">https://play.google.com/store/account/subscriptions?sku=%1$s&amp;package=%2$s</string>
 
     <string name="yes">Taip</string>
     <string name="no">Ne</string>
@@ -158,7 +157,6 @@
 
     <!-- Fcm notifications -->
     <!-- Notification we show when there may be messages for you, but we cannot connect to the server to check -->
-    <string name="FcmFetchManager__you_may_have_messages">Gali būti, kad gavote naujų žinučių</string>
 
     <!-- BlockedUsersActivity -->
     <string name="BlockedUsersActivity__blocked_users">Užblokuoti naudotojai</string>
@@ -172,45 +170,26 @@
 
     <!-- CreditCardFragment -->
     <!-- Title of fragment -->
-    <string name="CreditCardFragment__credit_or_debit_card">Kredito arba debeto kortelė</string>
     <!-- Explanation of how to fill in the form and a note about pii, displayed above the credit card text fields -->
-    <string name="CreditCardFragment__enter_your_card_details">Įvesk savo kortelės duomenis. „Signal“ nerenka ir nekaupia tavo asmeninės informacijos.</string>
     <!-- Displayed as a hint in the card number text field -->
-    <string name="CreditCardFragment__card_number">Kortelės numeris</string>
     <!-- Displayed as a hint in the card expiry text field -->
-    <string name="CreditCardFragment__mm_yy">MM/YY</string>
     <!-- Displayed as a hint in the card cvv text field -->
-    <string name="CreditCardFragment__cvv">CVV</string>
     <!-- Error displayed under the card number text field when there is an invalid card number entered -->
-    <string name="CreditCardFragment__invalid_card_number">Neteisingas kortelės numeris</string>
     <!-- Error displayed under the card expiry text field when the card is expired -->
-    <string name="CreditCardFragment__card_has_expired">Kortelė nebegalioja</string>
     <!-- Error displayed under the card cvv text field when the cvv is too short -->
-    <string name="CreditCardFragment__code_is_too_short">Per trumpas kodas</string>
     <!-- Error displayed under the card cvv text field when the cvv is too long -->
-    <string name="CreditCardFragment__code_is_too_long">Per ilgas kodas</string>
     <!-- Error displayed under the card cvv text field when the cvv is invalid -->
-    <string name="CreditCardFragment__invalid_code">Neteisingas kodas</string>
     <!-- Error displayed under the card expiry text field when the expiry month is invalid -->
-    <string name="CreditCardFragment__invalid_month">Neteisingas mėnuo</string>
     <!-- Error displayed under the card expiry text field when the expiry is missing the year -->
-    <string name="CreditCardFragment__year_required">Reikalingi metai</string>
     <!-- Error displayed under the card expiry text field when the expiry year is invalid -->
-    <string name="CreditCardFragment__invalid_year">Neteisingi metai</string>
     <!-- Button label to confirm credit card input and proceed with one-time payment -->
-    <string name="CreditCardFragment__donate_s">Skirti %1$s paramą</string>
     <!-- Button label to confirm credit card input and proceed with subscription payment -->
-    <string name="CreditCardFragment__donate_s_month">Skirti %1$s per mėnesį</string>
     <!-- Button label to confirm credit card input and proceed with backups payment. Placeholder is formatted price. -->
-    <string name="CreditCardFragment__pay_s_month">Skirti %1$s per mėnesį</string>
 
     <!-- OneTimeDonationPreference -->
     <!-- Preference title with placeholder for amount. -->
-    <string name="OneTimeDonationPreference__one_time_s">Vienkartinė %1$s</string>
     <!-- Preference subtitle when donation is pending -->
-    <string name="OneTimeDonationPreference__donation_pending">Laukiama paramos</string>
     <!-- Preference subtitle when donation is processing -->
-    <string name="OneTimeDonationPreference__donation_processing">Parama apdorojama</string>
 
     <!-- BlockUnblockDialog -->
     <string name="BlockUnblockDialog_block_and_leave_s">Užblokuoti ir išeiti iš %1$s?</string>
@@ -4481,7 +4460,6 @@
     <string name="preferences__slow">Lėtas</string>
     <string name="preferences__help">Pagalba</string>
     <string name="preferences__advanced">Išplėstiniai</string>
-    <string name="preferences__donate_to_signal">Paremk „Signal“</string>
     <!-- Preference label for making one-time donations to Signal -->
     <string name="preferences__privacy">Privatumas</string>
     <!-- Preference label for stories -->
@@ -4675,9 +4653,6 @@
 
     <!-- Payments -->
     <string name="PaymentsActivityFragment__all_activity">Visa veikla</string>
-    <string name="PaymentsAllActivityFragment__all">Visi</string>
-    <string name="PaymentsAllActivityFragment__sent">Išsiųsta</string>
-    <string name="PaymentsAllActivityFragment__received">Gauta</string>
 
     <!-- Displayed on a welcome screen for payments -->
     <string name="PaymentsHomeFragment_introducing_payments">Pristatome: mokėjimai</string>
@@ -4686,58 +4661,28 @@
     <string name="PaymentsHomeFragment__activating_payments">Aktyvuojami mokėjimai…</string>
     <string name="PaymentsHomeFragment__restore_payments_account">Atkurti mokėjimų paskyrą</string>
     <string name="PaymentsHomeFragment__no_recent_activity_yet">Kol kas nėra paskiausios veiklos</string>
-    <string name="PaymentsHomeFragment__recent_activity">Paskiausia veikla</string>
     <string name="PaymentsHomeFragment__see_all">Rodyti visus</string>
     <string name="PaymentsHomeFragment__add_funds">Pridėti lėšų</string>
     <string name="PaymentsHomeFragment__send">Siųsti</string>
-    <string name="PaymentsHomeFragment__sent_s">Išsiųsta %1$s</string>
-    <string name="PaymentsHomeFragment__received_s">Gauta %1$s</string>
     <string name="PaymentsHomeFragment__transfer_to_exchange">Pervesti į valiutos keitimo punktą</string>
     <string name="PaymentsHomeFragment__currency_conversion">Valiutos konvertavimas</string>
     <string name="PaymentsHomeFragment__deactivate_payments">Pasyvinti mokėjimus</string>
     <string name="PaymentsHomeFragment__recovery_phrase">Atkūrimo frazė</string>
     <string name="PaymentsHomeFragment__help">Pagalba</string>
-    <string name="PaymentsHomeFragment__coin_cleanup_fee">Monetų išvalymo mokestis</string>
-    <string name="PaymentsHomeFragment__sent_payment">Išsiųstas mokėjimas</string>
-    <string name="PaymentsHomeFragment__received_payment">Gautas mokėjimas</string>
-    <string name="PaymentsHomeFragment__processing_payment">Apdorojamas mokėjimas</string>
-    <string name="PaymentsHomeFragment__unknown_amount">---</string>
-    <string name="PaymentsHomeFragment__currency_conversion_not_available">Valiutos konvertavimas negalimas</string>
-    <string name="PaymentsHomeFragment__cant_display_currency_conversion">Nepavyksta rodyti valiutos konvertavimo. Patikrink telefono ryšį ir bandyk dar kartą.</string>
-    <string name="PaymentsHomeFragment__payments_is_not_available_in_your_region">Mokėjimai yra neprieinami jūsų regione.</string>
-    <string name="PaymentsHomeFragment__could_not_enable_payments">Nepavyko įjungti mokėjimų. Vėliau bandykite dar kartą.</string>
-    <string name="PaymentsHomeFragment__deactivate_payments_question">Pasyvinti mokėjimus?</string>
-    <string name="PaymentsHomeFragment__you_will_not_be_able_to_send">Pasyvinę mokėjimus, negalėsite Signal programėlėje siųsti ar gauti „MobileCoin“ valiutą.</string>
-    <string name="PaymentsHomeFragment__deactivate">Pasyvinti</string>
-    <string name="PaymentsHomeFragment__continue">Tęsti</string>
-    <string name="PaymentsHomeFragment__balance_is_not_currently_available">Šiuo metu likutis neprieinamas.</string>
-    <string name="PaymentsHomeFragment__payments_deactivated">Mokėjimai yra pasyvinti.</string>
-    <string name="PaymentsHomeFragment__payment_failed">Mokėjimas patyrė nesėkmę</string>
-    <string name="PaymentsHomeFragment__details">Išsamesnė informacija</string>
   <!-- Removed by excludeNonTranslatables <string name="PaymentsHomeFragment__learn_more__activate_payments" translatable="false">https://support.signal.org/hc/articles/360057625692#payments_activate</string> -->
     <!-- Displayed as a description in a dialog when the user tries to activate payments -->
-    <string name="PaymentsHomeFragment__you_can_use_signal_to_send_and">Naudojant „Signal“ galima siųsti ir gauti „Mobile Coin“. Visiems mokėjimams taikomos „Mobile Coin“ ir „Mobile Coin Wallet“ naudojimo sąlygos. Gali būti, kad susidursi su tam tikromis problemomis, ir mokėjimai ar likučiai, kuriuos galbūt prarasi, nebus atkurti. </string>
-    <string name="PaymentsHomeFragment__activate">Aktyvuoti</string>
-    <string name="PaymentsHomeFragment__view_mobile_coin_terms">Rodyti „MobileCoin“ sąlygas</string>
-    <string name="PaymentsHomeFragment__payments_not_available">Mokėjimai Signal programėlėje daugiau nebeprieinami. Jūs vis dar galite pervesti lėšas į valiutos keitimo punktą, bet nebegalite siųsti ir gauti mokėjimų ar pridėti lėšų.</string>
 
   <!-- Removed by excludeNonTranslatables <string name="PaymentsHomeFragment__mobile_coin_terms_url" translatable="false">https://www.mobilecoin.com/terms-of-use.html</string> -->
     <!-- Alert dialog title which shows up after a payment to turn on payment lock -->
-    <string name="PaymentsHomeFragment__turn_on">Įjungti Mokėjimo užraktą būsimiems siuntimams?</string>
     <!-- Alert dialog description for why payment lock should be enabled before sending payments -->
-    <string name="PaymentsHomeFragment__add_an_additional_layer">Pridėk papildomą saugumo lygmenį – „Android“ ekrano užrakto ar piršto atspaudo reikalavimą pervedant pinigus.</string>
     <!-- Alert dialog button to enable payment lock -->
     <string name="PaymentsHomeFragment__enable">Įjungti</string>
     <!-- Alert dialog button to not enable payment lock for now -->
     <string name="PaymentsHomeFragment__not_now">Ne dabar</string>
     <!-- Alert dialog title which shows up to update app to send payments -->
-    <string name="PaymentsHomeFragment__update_required">Reikia atnaujinimo</string>
     <!-- Alert dialog description that app update is required to send payments-->
-    <string name="PaymentsHomeFragment__an_update_is_required">Jei nori toliau siųsti ir gauti mokėjimus bei peržiūrėti esamą mokėjimų likutį, reikia atnaujinimo.</string>
     <!-- Alert dialog button to cancel -->
-    <string name="PaymentsHomeFragment__cancel">Atsisakyti</string>
     <!-- Alert dialog button to update now -->
-    <string name="PaymentsHomeFragment__update_now">Atnaujinti dabar</string>
 
 
     <!-- PaymentsSecuritySetupFragment -->
@@ -4752,46 +4697,26 @@
     <!-- Option to cancel -->
     <string name="PaymentsSecuritySetupFragment__not_now">Ne dabar</string>
     <!-- Dialog title to confirm skipping the step -->
-    <string name="PaymentsSecuritySetupFragment__skip_this_step">Praleisti šį žingsnį?</string>
     <!-- Dialog description to let users know why payment lock is required -->
-    <string name="PaymentsSecuritySetupFragment__skipping_this_step">Praleidus šį žingsnį yra rizika, kad kitas žmogus, turėdamas tavo telefoną, galės pervesti pinigus ar pažiūrėti tavo atkūrimo frazę.</string>
     <!-- Dialog option to cancel -->
-    <string name="PaymentsSecuritySetupFragment__cancel">Atsisakyti</string>
     <!-- Dialog option to skip -->
-    <string name="PaymentsSecuritySetupFragment__skip">Praleisti</string>
 
     <!-- PaymentsAddMoneyFragment -->
     <string name="PaymentsAddMoneyFragment__add_funds">Pridėti lėšų</string>
     <string name="PaymentsAddMoneyFragment__your_wallet_address">Jūsų piniginės adresas</string>
     <string name="PaymentsAddMoneyFragment__copy">Kopijuoti</string>
-    <string name="PaymentsAddMoneyFragment__copied_to_clipboard">Nukopijuota į iškarpinę</string>
     <string name="PaymentsAddMoneyFragment__to_add_funds">Norėdami pridėti lėšas, siųskite „MobileCoin“ valiutą į savo piniginės adresą. Pradėkite operaciją savo paskyroje, „MobileCoin“ palaikančiame valiutos keitimo punkte, o tuomet nuskenuokite QR kodą arba nukopijuokite savo piniginės adresą.</string>
   <!-- Removed by excludeNonTranslatables <string name="PaymentsAddMoneyFragment__learn_more__information" translatable="false">https://support.signal.org/hc/articles/360057625692#payments_transfer_from_exchange</string> -->
 
     <!-- PaymentsDetailsFragment -->
     <string name="PaymentsDetailsFragment__details">Išsamesnė informacija</string>
     <string name="PaymentsDetailsFragment__status">Būsena</string>
-    <string name="PaymentsDetailsFragment__submitting_payment">Pateikiamas mokėjimas…</string>
-    <string name="PaymentsDetailsFragment__processing_payment">Apdorojamas mokėjimas…</string>
-    <string name="PaymentsDetailsFragment__payment_complete">Mokėjimas užbaigtas</string>
-    <string name="PaymentsDetailsFragment__payment_failed">Mokėjimas patyrė nesėkmę</string>
     <string name="PaymentsDetailsFragment__network_fee">Tinklo mokestis</string>
     <string name="PaymentsDetailsFragment__sent_by">Išsiuntė</string>
-    <string name="PaymentsDetailsFragment__sent_to_s">Kam išsiųsta: %1$s</string>
-    <string name="PaymentsDetailsFragment__you_on_s_at_s">Jūs ties %1$s, %2$s</string>
-    <string name="PaymentsDetailsFragment__s_on_s_at_s">%1$s ties %2$s, %3$s</string>
     <!-- Prefix to a name to indicate who a payment was sent to -->
-    <string name="PaymentsDetailsFragment__to">Skirta</string>
-    <string name="PaymentsDetailsFragment__from">Nuo</string>
     <string name="PaymentsDetailsFragment__information">Išsami operacijos informacija, įskaitant mokėjimo sumą ir operacijos laiką, yra „MobileCoin Ledger“ dalis.</string>
-    <string name="PaymentsDetailsFragment__coin_cleanup_fee">Monetų išvalymo mokestis</string>
-    <string name="PaymentsDetailsFragment__coin_cleanup_information">„Monetų išvalymo mokesčiu“ yra apmokestinama tuomet, kai jūsų turimos monetos negali būti sujungtos operacijos užbaigimui. Išvalymas leis jums ir toliau siųsti mokėjimus.</string>
-    <string name="PaymentsDetailsFragment__no_details_available">Nėra išsamesnės informacijos apie šią operaciją</string>
   <!-- Removed by excludeNonTranslatables <string name="PaymentsDetailsFragment__learn_more__information" translatable="false">https://support.signal.org/hc/articles/360057625692#payments_details</string> -->
   <!-- Removed by excludeNonTranslatables <string name="PaymentsDetailsFragment__learn_more__cleanup_fee" translatable="false">https://support.signal.org/hc/articles/360057625692#payments_details_fees</string> -->
-    <string name="PaymentsDetailsFragment__sent_payment">Išsiųstas mokėjimas</string>
-    <string name="PaymentsDetailsFragment__received_payment">Gautas mokėjimas</string>
-    <string name="PaymentsDeatilsFragment__payment_completed_s">Mokėjimas užbaigtas %1$s</string>
     <string name="PaymentsDetailsFragment__block_number">Užblokuoti numerį</string>
 
     <!-- PaymentsTransferFragment -->
@@ -4800,13 +4725,6 @@
     <string name="PaymentsTransferFragment__to_scan_or_enter_wallet_address">Kam: Nuskenuokite ar įveskite piniginės adresą</string>
     <string name="PaymentsTransferFragment__you_can_transfer">Galite pervesti „MobileCoin“ valiutą, užbaigdami pervedimą į valiutos keitimo punkto pateiktą piniginės adresą. Piniginės adresas yra skaitmenų ir raidžių eilutė, kuri, įprastai, būna po QR kodu.</string>
     <string name="PaymentsTransferFragment__next">Kitas</string>
-    <string name="PaymentsTransferFragment__invalid_address">Neteisingas adresas</string>
-    <string name="PaymentsTransferFragment__check_the_wallet_address">Patikrinkite piniginės, į kurią bandote pervesti, adresą ir bandykite dar kartą.</string>
-    <string name="PaymentsTransferFragment__you_cant_transfer_to_your_own_signal_wallet_address">Negalite pervesti į savo asmeninės Signal piniginės adresą. Įveskite piniginės adresą iš paskyros, kuri yra palaikomame valiutos keitimo punkte.</string>
-    <string name="PaymentsTransferFragment__to_scan_a_qr_code_signal_needs">Norint nuskenuoti QR kodą, Signal reikia prieigos prie kameros.</string>
-    <string name="PaymentsTransferFragment__signal_needs_the_camera_permission_to_capture_qr_code_go_to_settings">Norint nuskenuoti QR kodą, Signal reikia kameros leidimo. Pereikite į Nustatymus, pasirinkite „Leidimai“ ir įjunkite „Kamerą“.</string>
-    <string name="PaymentsTransferFragment__to_scan_a_qr_code_signal_needs_access_to_the_camera">Norint nuskenuoti QR kodą, Signal reikia prieigos prie kameros.</string>
-    <string name="PaymentsTransferFragment__settings">Nustatymai</string>
 
     <!-- PaymentsTransferQrScanFragment -->
     <string name="PaymentsTransferQrScanFragment__scan_address_qr_code">Skenuoti adreso QR kodą</string>
@@ -4816,7 +4734,6 @@
     <!-- Button text to request the payment from a user -->
     <string name="CreatePaymentFragment__request">Prašyti</string>
     <string name="CreatePaymentFragment__pay">Mokėti</string>
-    <string name="CreatePaymentFragment__available_balance_s">Prieinamas likutis: %1$s</string>
     <string name="CreatePaymentFragment__toggle_content_description">Perjungti</string>
     <string name="CreatePaymentFragment__1">1</string>
     <string name="CreatePaymentFragment__2">2</string>
@@ -4829,10 +4746,8 @@
     <string name="CreatePaymentFragment__9">9</string>
     <string name="CreatePaymentFragment__decimal">.</string>
     <string name="CreatePaymentFragment__0">0</string>
-    <string name="CreatePaymentFragment__lt">&lt;</string>
     <string name="CreatePaymentFragment__backspace">Naikinimas</string>
     <string name="CreatePaymentFragment__add_note">Pridėti pastabą</string>
-    <string name="CreatePaymentFragment__conversions_are_just_estimates">Konvertavimai yra apytiksliai ir gali būti netikslūs.</string>
   <!-- Removed by excludeNonTranslatables <string name="CreatePaymentFragment__learn_more__conversions" translatable="false">https://support.signal.org/hc/articles/360057625692#payments_currency_conversion</string> -->
 
     <!-- EditNoteFragment -->
@@ -4842,26 +4757,10 @@
 
     <!-- ConfirmPaymentFragment -->
     <string name="ConfirmPayment__confirm_payment">Patvirtinti mokėjimą</string>
-    <string name="ConfirmPayment__network_fee">Tinklo mokestis</string>
-    <string name="ConfirmPayment__estimated_s">Apskaičiuota %1$s suma</string>
     <!-- Prefix to a name to indicate who a payment will be sent to -->
-    <string name="ConfirmPayment__to">Kam</string>
-    <string name="ConfirmPayment__total_amount">Iš viso</string>
-    <string name="ConfirmPayment__balance_s">Likutis: %1$s</string>
-    <string name="ConfirmPayment__submitting_payment">Pateikiamas mokėjimas…</string>
-    <string name="ConfirmPayment__processing_payment">Apdorojamas mokėjimas…</string>
-    <string name="ConfirmPayment__payment_complete">Mokėjimas užbaigtas</string>
-    <string name="ConfirmPayment__payment_failed">Mokėjimas patyrė nesėkmę</string>
-    <string name="ConfirmPayment__payment_will_continue_processing">Mokėjimas ir toliau bus apdorojamas</string>
-    <string name="ConfirmPaymentFragment__invalid_recipient">Neteisingas gavėjas</string>
     <!-- Title of a dialog show when we were unable to present the user\'s screenlock before sending a payment -->
-    <string name="ConfirmPaymentFragment__failed_to_show_payment_lock">Nepavyko parodyti mokėjimo užrakto</string>
     <!-- Body of a dialog show when we were unable to present the user\'s screenlock before sending a payment -->
-    <string name="ConfirmPaymentFragment__you_enabled_payment_lock_in_the_settings">Tu įjungei mokėjimo užraktą nustatymuose, bet negalime jo parodyti.</string>
     <!-- Button in a dialog that will take the user to the privacy settings -->
-    <string name="ConfirmPaymentFragment__go_to_settings">Eiti į nustatymus</string>
-    <string name="ConfirmPaymentFragment__this_person_has_not_activated_payments">Šis žmogus nėra aktyvavęs mokėjimų</string>
-    <string name="ConfirmPaymentFragment__unable_to_request_a_network_fee">Nepavyko užklausti tinklo mokesčio. Norėdami tęsti šį mokėjimą, bakstelėkite „Gerai“, kad būtų bandoma dar kartą.</string>
 
     <!-- BiometricDeviceAuthentication -->
     <!-- Biometric/Device authentication prompt title -->
@@ -4873,7 +4772,6 @@
 
     <!-- SetCurrencyFragment -->
     <string name="SetCurrencyFragment__set_currency">Nustatyti valiutą</string>
-    <string name="SetCurrencyFragment__all_currencies">Visos valiutos</string>
 
     <!-- **************************************** -->
     <!-- menus -->
@@ -5791,20 +5689,9 @@
     <!-- InfoCard -->
     <string name="payment_info_card_about_mobilecoin">Apie „MobileCoin“</string>
     <string name="payment_info_card_mobilecoin_is_a_new_privacy_focused_digital_currency">„MobileCoin“ yra nauja į privatumą orientuota skaitmeninė valiuta.</string>
-    <string name="payment_info_card_adding_funds">Lėšų pridėjimas</string>
-    <string name="payment_info_card_you_can_add_funds_for_use_in">Galite pridėti lėšas, skirtas naudoti Signal programėlėje, išsiųsdami „MobileCoin“ valiutą į savo piniginės adresą.</string>
-    <string name="payment_info_card_cashing_out">Pinigų išgryninimas</string>
-    <string name="payment_info_card_you_can_cash_out_mobilecoin">„MobileCoin“ valiutą bet kuriuo metu galite išgryninti valiutos keitimo punktuose, kurie palaiko „MobileCoin“. Tiesiog, atlikite pervedimą į savo sąskaitą tame valiutos keitimo punkte.</string>
     <string name="payment_info_card_hide_this_card">Slėpti šią kortelę?</string>
-    <string name="payment_info_card_hide">Slėpti</string>
     <!-- Title of save recovery phrase card -->
-    <string name="payment_info_card_save_recovery_phrase">Išsaugoti atkūrimo frazę</string>
-    <string name="payment_info_card_your_recovery_phrase_gives_you">Atkūrimo frazė suteikia jums kitą būdą atkurti savo mokėjimų paskyrą.</string>
     <!-- Button in save recovery phrase card -->
-    <string name="payment_info_card_save_your_phrase">Išsaugoti savo frazę</string>
-    <string name="payment_info_card_update_your_pin">Atnaujinti savo PIN kodą</string>
-    <string name="payment_info_card_with_a_high_balance">Turėdami didelį likutį, galite pageidauti atnaujinti savo PIN kodą į tekstinį, kad stipriau apsaugotumėte savo paskyrą.</string>
-    <string name="payment_info_card_update_pin">Atnaujinti PIN kodą</string>
 
   <!-- Removed by excludeNonTranslatables <string name="payment_info_card__learn_more__about_mobilecoin" translatable="false">https://support.signal.org/hc/articles/360057625692#payments_which_ones</string> -->
   <!-- Removed by excludeNonTranslatables <string name="payment_info_card__learn_more__adding_to_your_wallet" translatable="false">https://support.signal.org/hc/articles/360057625692#payments_transfer_from_exchange</string> -->
@@ -5816,18 +5703,12 @@
     <string name="DeactivateWalletFragment__its_recommended_that_you">Prieš deaktyvinant mokėjimus rekomenduojama pervesti savo lėšas į kitos piniginės adresą. Jei dabar pasirinksi nepervesti savo lėšų, jos liks su „Signal“ susietoje tavo piniginėje, jei iš naujo aktyvinsi mokėjimus.</string>
     <string name="DeactivateWalletFragment__transfer_remaining_balance">Pervesti likusį likutį</string>
     <string name="DeactivateWalletFragment__deactivate_without_transferring">Pasyvinti be pervedimo</string>
-    <string name="DeactivateWalletFragment__deactivate">Pasyvinti</string>
-    <string name="DeactivateWalletFragment__deactivate_without_transferring_question">Pasyvinti be pervedimo?</string>
-    <string name="DeactivateWalletFragment__your_balance_will_remain">Tavo likutis liks su „Signal“ susietoje tavo piniginėje, jei pasirinksi iš naujo aktyvinti mokėjimus.</string>
-    <string name="DeactivateWalletFragment__error_deactivating_wallet">Klaida pasyvinant piniginę.</string>
   <!-- Removed by excludeNonTranslatables <string name="DeactivateWalletFragment__learn_more__we_recommend_transferring_your_funds" translatable="false">https://support.signal.org/hc/articles/360057625692#payments_deactivate</string> -->
 
     <!-- PaymentsRecoveryStartFragment -->
     <string name="PaymentsRecoveryStartFragment__recovery_phrase">Atkūrimo frazė</string>
     <string name="PaymentsRecoveryStartFragment__view_recovery_phrase">Rodyti atkūrimo frazę</string>
     <!-- Title in save recovery phrase screen -->
-    <string name="PaymentsRecoveryStartFragment__save_recovery_phrase">Išsaugoti atkūrimo frazę</string>
-    <string name="PaymentsRecoveryStartFragment__enter_recovery_phrase">Įvesti atkūrimo frazę</string>
     <plurals name="PaymentsRecoveryStartFragment__your_balance_will_automatically_restore">
         <item quantity="one">Įdiegus „Signal“ iš naujo, likutis bus automatiškai atkurtas tau patvirtinus savo „Signal“ PIN kodą. Taip pat galima atkurti savo likutį naudojant atkūrimo frazę – unikalią %1$d žodžio frazę. Užsirašyk ją ir laikyk saugioje vietoje.</item>
         <item quantity="few">Įdiegus „Signal“ iš naujo, likutis bus automatiškai atkurtas tau patvirtinus savo „Signal“ PIN kodą. Taip pat galima atkurti savo likutį naudojant atkūrimo frazę – unikalią %1$d žodžių frazę. Užsirašyk ją ir laikyk saugioje vietoje.</item>
@@ -5835,28 +5716,18 @@
         <item quantity="other">Įdiegus „Signal“ iš naujo, likutis bus automatiškai atkurtas tau patvirtinus savo „Signal“ PIN kodą. Taip pat galima atkurti savo likutį naudojant atkūrimo frazę – unikalią %1$d žodžių frazę. Užsirašyk ją ir laikyk saugioje vietoje.</item>
     </plurals>
     <!-- Description in save recovery phrase screen which shows up when user has non zero balance -->
-    <string name="PaymentsRecoveryStartFragment__got_balance">Turi likutį! Laikas išsaugoti atkūrimo frazę – 24 žodžių raktą, kurį galėsi panaudoti savo likučiui atkurti.</string>
     <!-- Description in save recovery phrase screen which shows up when user navigates from info card -->
-    <string name="PaymentsRecoveryStartFragment__time_to_save">Laikas išsaugoti atkūrimo frazę – 24 žodžių raktą, kurį galėsi panaudoti savo likučiui atkurti.</string>
-    <string name="PaymentsRecoveryStartFragment__your_recovery_phrase_is_a">Atkūrimo frazė yra jūsų unikali %1$d žodžių frazė. Naudokite šią frazę, norėdami atkurti savo likutį.</string>
     <string name="PaymentsRecoveryStartFragment__start">Pradėti</string>
-    <string name="PaymentsRecoveryStartFragment__enter_manually">Įvesti rankiniu būdu</string>
     <string name="PaymentsRecoveryStartFragment__paste_from_clipboard">Įdėti iš iškarpinės</string>
     <!-- Alert dialog title which asks before going back if user wants to save recovery phrase -->
-    <string name="PaymentsRecoveryStartFragment__continue_without_saving">Tęsti neišsaugojus?</string>
     <!-- Alert dialog description to let user know why recovery phrase needs to be saved -->
-    <string name="PaymentsRecoveryStartFragment__your_recovery_phrase">Tavo atkūrimo frazė leidžia atkurti likutį, jei kas nutiktų. Primygtinai rekomenduojame ją išsaugoti.</string>
     <!-- Alert dialog option to skip recovery phrase -->
-    <string name="PaymentsRecoveryStartFragment__skip_recovery_phrase">Praleisti atkūrimo frazę</string>
     <!-- Alert dialog option to cancel dialog-->
-    <string name="PaymentsRecoveryStartFragment__cancel">Atsisakyti</string>
 
     <!-- PaymentsRecoveryPasteFragment -->
     <string name="PaymentsRecoveryPasteFragment__paste_recovery_phrase">Įdėti atkūrimo frazę</string>
     <string name="PaymentsRecoveryPasteFragment__recovery_phrase">Atkūrimo frazė</string>
     <string name="PaymentsRecoveryPasteFragment__next">Kitas</string>
-    <string name="PaymentsRecoveryPasteFragment__invalid_recovery_phrase">Neteisinga atkūrimo frazė</string>
-    <string name="PaymentsRecoveryPasteFragment__make_sure">Įsitikinkite, kad įvedėte %1$d žodžius ir bandykite dar kartą.</string>
 
   <!-- Removed by excludeNonTranslatables <string name="PaymentsRecoveryStartFragment__learn_more__view" translatable="false">https://support.signal.org/hc/articles/360057625692#payments_wallet_view_passphrase</string> -->
   <!-- Removed by excludeNonTranslatables <string name="PaymentsRecoveryStartFragment__learn_more__restore" translatable="false">https://support.signal.org/hc/articles/360057625692#payments_wallet_restore_passphrase</string> -->
@@ -5866,38 +5737,24 @@
     <string name="PaymentsRecoveryPhraseFragment__edit">Taisyti</string>
     <string name="PaymentsRecoveryPhraseFragment__your_recovery_phrase">Jūsų atkūrimo frazė</string>
     <string name="PaymentsRecoveryPhraseFragment__write_down_the_following_d_words">Užsirašykite šiuos %1$d žodžius eilės tvarka. Saugokite sąrašą saugioje vietoje.</string>
-    <string name="PaymentsRecoveryPhraseFragment__make_sure_youve_entered">Įsitikinkite, kad teisingai įvedėte frazę.</string>
     <string name="PaymentsRecoveryPhraseFragment__do_not_screenshot_or_send_by_email">Nedarykite ekrano kopijų ir nesiųskite el. paštu.</string>
-    <string name="PaymentsRecoveryPhraseFragment__payments_account_restored">Mokėjimų paskyra atkurta.</string>
-    <string name="PaymentsRecoveryPhraseFragment__invalid_recovery_phrase">Neteisinga atkūrimo frazė</string>
-    <string name="PaymentsRecoveryPhraseFragment__make_sure_youve_entered_your_phrase_correctly_and_try_again">Įsitikinkite, kad teisingai įvedėte frazę ir bandykite dar kartą.</string>
-    <string name="PaymentsRecoveryPhraseFragment__copy_to_clipboard">Kopijuoti į iškarpinę?</string>
-    <string name="PaymentsRecoveryPhraseFragment__if_you_choose_to_store">Jei pasirinksite saugoti savo atkūrimo frazę skaitmeniniu pavidalu, užtikrinkite, kad ji bus saugiai laikoma patikimoje vietoje.</string>
     <string name="PaymentsRecoveryPhraseFragment__copy">Kopijuoti</string>
 
     <!-- PaymentsRecoveryPhraseConfirmFragment -->
     <string name="PaymentRecoveryPhraseConfirmFragment__confirm_recovery_phrase">Patvirtinkite atkūrimo frazę</string>
     <string name="PaymentRecoveryPhraseConfirmFragment__enter_the_following_words">Įveskite sekančius žodžius iš savo atkūrimo frazės.</string>
-    <string name="PaymentRecoveryPhraseConfirmFragment__word_d">%1$d žodis</string>
     <string name="PaymentRecoveryPhraseConfirmFragment__see_phrase_again">Rodyti frazę dar kartą</string>
     <string name="PaymentRecoveryPhraseConfirmFragment__done">Atlikta</string>
-    <string name="PaymentRecoveryPhraseConfirmFragment__recovery_phrase_confirmed">Atkūrimo frazė patvirtinta</string>
 
     <!-- PaymentsRecoveryEntryFragment -->
     <string name="PaymentsRecoveryEntryFragment__enter_recovery_phrase">Įvesti atkūrimo frazę</string>
-    <string name="PaymentsRecoveryEntryFragment__enter_word_d">Įveskite %1$d žodį</string>
-    <string name="PaymentsRecoveryEntryFragment__word_d">%1$d žodis</string>
     <string name="PaymentsRecoveryEntryFragment__next">Kitas</string>
-    <string name="PaymentsRecoveryEntryFragment__invalid_word">Neteisingas žodis</string>
 
     <!-- UnreadPayments -->
     <string name="UnreadPayments__s_sent_you_s">%1$s išsiuntė jums %2$s</string>
     <string name="UnreadPayments__d_new_payment_notifications">Naujų pranešimų apie mokėjimus: %1$d</string>
 
     <!-- CanNotSendPaymentDialog -->
-    <string name="CanNotSendPaymentDialog__cant_send_payment">Nepavyksta siųsti mokėjimo</string>
-    <string name="CanNotSendPaymentDialog__to_send_a_payment_to_this_user">Norint siųsti mokėjimą šiam naudotojui, jis privalo priimti iš jūsų žinutės užklausą. Išsiųskite naudotojui žinutę, kad sukurtumėte žinutės užklausą.</string>
-    <string name="CanNotSendPaymentDialog__send_a_message">Siųsti žinutę</string>
 
     <!-- GroupsInCommonMessageRequest -->
     <string name="GroupsInCommonMessageRequest__you_have_no_groups_in_common_with_this_person">Jūs su šiuo žmogumi neturite jokių bendrų grupių. Prieš priimdami, atidžiai peržiūrėkite prašymus, kad išvengtumėte nepageidaujamų žinučių.</string>
@@ -6352,13 +6209,9 @@
     <!-- ChatColorGradientTool -->
 
     <!-- Title text for prompt to donate. Shown in a popup at the bottom of the chat list. -->
-    <string name="Donate2022Q2Megaphone_donate_to_signal">Paremk „Signal“</string>
     <!-- Body text for prompt to donate. Shown in a popup at the bottom of the chat list. -->
-    <string name="Donate2022Q2Megaphone_signal_is_powered_by_people_like_you">„Signal“ variklis yra tokie žmonės kaip tu. Skirk kasmėnesinę paramą ir gauk ženklelį.</string>
     <!-- Button label that brings a user to the donate screen. Shown in a popup at the bottom of the chat list. -->
-    <string name="Donate2022Q2Megaphone_donate">Paremti</string>
     <!-- Button label that dismissed a prompt to donate. Shown in a popup at the bottom of the chat list. -->
-    <string name="Donate2022Q2Megaphone_not_now">Ne dabar</string>
 
     <!-- EditReactionsFragment -->
     <string name="EditReactionsFragment__customize_reactions">Tinkinti reakcijas</string>
@@ -6375,11 +6228,7 @@
     <string name="AddAProfilePhotoMegaphone__add_photo">Pridėti nuotrauką</string>
 
     <!-- BecomeASustainerMegaphone -->
-    <string name="BecomeASustainerMegaphone__become_a_sustainer">Tapkite rėmėju</string>
     <!-- Displayed in the Become a Sustainer megaphone -->
-    <string name="BecomeASustainerMegaphone__signal_is_powered_by">„Signal“ variklis yra tokie žmonės kaip tu. Skirk paramą ir gauk ženklelį.</string>
-    <string name="BecomeASustainerMegaphone__not_now">Ne dabar</string>
-    <string name="BecomeASustainerMegaphone__donate">Paremti</string>
 
     <!-- KeyboardPagerFragment -->
     <string name="KeyboardPagerFragment_emoji">Šypsenėlės</string>
@@ -6744,15 +6593,9 @@
     <string name="MediaCaptureFragment_device_link_dialog_continue">Tęsti</string>
 
 
-    <string name="BadgesOverviewFragment__my_badges">Mano ženkleliai</string>
     <string name="BadgesOverviewFragment__featured_badge">Pagrindinis ženklelis</string>
-    <string name="BadgesOverviewFragment__display_badges_on_profile">Rodyti ženklelius profilyje</string>
-    <string name="BadgesOverviewFragment__failed_to_update_profile">Nepavyko atnaujinti profilio</string>
 
 
-    <string name="SelectFeaturedBadgeFragment__select_a_badge">Pasirinkti ženklelį</string>
-    <string name="SelectFeaturedBadgeFragment__you_must_select_a_badge">Privaloma pasirinkti ženklelį</string>
-    <string name="SelectFeaturedBadgeFragment__failed_to_update_profile">Nepavyko atnaujinti profilio</string>
 
     <!-- Displayed on primary button in the bottom sheet as a call-to-action to launch into the donation flow -->
     <string name="ViewBadgeBottomSheetDialogFragment__donate_now">Paremti</string>
@@ -6765,29 +6608,21 @@
 
     <string name="ImageView__badge">Ženklelis</string>
 
-    <string name="SubscribeFragment__cancel_subscription">Nutraukti prenumeratą</string>
     <string name="SubscribeFragment__confirm_cancellation">Patvirtinti nutraukimą?</string>
     <string name="SubscribeFragment__you_wont_be_charged_again">Mokestis nebebus nuskaičiuojamas. Tavo ženklelis bus pašalintas iš profilio pasibaigus apmokėtam laikotarpiui.</string>
     <string name="SubscribeFragment__not_now">Ne dabar</string>
     <string name="SubscribeFragment__confirm">Patvirtinkite</string>
-    <string name="SubscribeFragment__update_subscription">Atnaujinti prenumeratą</string>
-    <string name="SubscribeFragment__your_subscription_has_been_cancelled">Tavo prenumerata nutraukta.</string>
-    <string name="SubscribeFragment__update_subscription_question">Atnaujinti prenumeratą?</string>
     <string name="SubscribeFragment__update">Atnaujinti</string>
     <string name="SubscribeFragment__you_will_be_charged_the_full_amount_s_of">Šiandien bus nuskaičiuota visa naujos prenumeratos kaina (%1$s). Tavo prenumerata bus pratęsiama kas mėnesį.</string>
 
-    <string name="Subscription__s_per_month">%1$s/mėnesį</string>
     <!-- Shown when a subscription is active and isn\'t going to expire at the end of the term -->
-    <string name="Subscription__renews_s">Atnaujinama %1$s</string>
     <!-- Shown when a subscription is active and is going to expire at the end of the term -->
-    <string name="Subscription__expires_s">Baigia galioti %1$s</string>
 
     <!-- Title of learn more sheet -->
     <string name="SubscribeLearnMoreBottomSheetDialogFragment__signal_is_different">Kaip nepriklausoma ne pelno organizacija „Signal“ yra įsipareigojusi užtikrinti žinučių ir skambučių privatumą. Nebrukame reklamų, nesekame ir nestebime. Skirkite paramą šiandien ir palaikykite „Signal“.</string>
     <!-- First small text blurb on learn more sheet -->
     <string name="SubscribeLearnMoreBottomSheetDialogFragment__private_messaging">No ads, no trackers, no surveillance. Donate today to support Signal.</string>
     <!-- Second small text blurb on learn more sheet -->
-    <string name="SubscribeLearnMoreBottomSheetDialogFragment__donate_and_get_badge">Parėmę galite pasirinkti, kad jūsų profilyje būtų rodomas ženklelis</string>
     <!-- Third small text blurb on learn more sheet -->
     <string name="SubscribeLearnMoreBottomSheetDialogFragment__your_privacy_is_our_mission">Jūsų privatumas – mūsų misija</string>
     <!-- Fourth small text blurb on learn more sheet. Non-English translations should use "Signal is a nonprofit." instead, dropping the 501c3 reference. -->
@@ -6795,60 +6630,37 @@
 
     <string name="SubscribeThanksForYourSupportBottomSheetDialogFragment__thanks_for_your_support">Dėkojame už jūsų palaikymą!</string>
     <!-- Subtext underneath the dialog title on the thanks sheet -->
-    <string name="SubscribeThanksForYourSupportBottomSheetDialogFragment__youve_earned_a_donor_badge">Tu pelnei „Signal“ rėmėjo ženklelį! Užsidėk jį ant savo profilio ir parodyk palaikymą.</string>
     <string name="SubscribeThanksForYourSupportBottomSheetDialogFragment__you_can_also">Be to, galite</string>
-    <string name="SubscribeThanksForYourSupportBottomSheetDialogFragment__become_a_montly_sustainer">tapti rėmėju ir remti kas mėnesį.</string>
     <string name="SubscribeThanksForYourSupportBottomSheetDialogFragment__display_on_profile">Rodyti profilyje</string>
-    <string name="SubscribeThanksForYourSupportBottomSheetDialogFragment__make_featured_badge">Padaryti pagrindiniu ženkleliu</string>
     <string name="SubscribeThanksForYourSupportBottomSheetDialogFragment__continue">Tęsti</string>
     <string name="ThanksForYourSupportBottomSheetFragment__when_you_have_more">Jei turi daugiau nei vieną ženklelį, gali kurį nors pasirinkti kaip pagrindinį, matomą kitiems tavo profilyje.</string>
 
-    <string name="BecomeASustainerFragment__get_badges">Gauk ženklelių savo profiliui už paramą „Signal“.</string>
-    <string name="BecomeASustainerFragment__signal_is_a_non_profit">Signal yra pelno nesiekianti organizacija, kuri neturi reklamuotojų ar investuotojų ir, kuri yra palaikoma tik tokių žmonių, kaip jūs.</string>
 
     <!-- Button label for creating a donation -->
-    <string name="ManageDonationsFragment__donate_to_signal">Paremk „Signal“</string>
     <!-- Heading for more area of manage subscriptions page -->
-    <string name="ManageDonationsFragment__more">Daugiau</string>
     <!-- Heading for receipts area of manage subscriptions page -->
     <!-- Heading for my subscription area of manage subscriptions page -->
-    <string name="ManageDonationsFragment__my_support">Mano palaikymas</string>
-    <string name="ManageDonationsFragment__manage_subscription">Tvarkyti prenumeratą</string>
     <!-- Label for Donation Receipts button -->
-    <string name="ManageDonationsFragment__donation_receipts">Paramos kvitai</string>
-    <string name="ManageDonationsFragment__badges">Ženkleliai</string>
     <!-- Label that externally links to Signal Donor FAQ page -->
-    <string name="ManageDonationsFragment__subscription_faq">Rėmėjų DUK</string>
     <!-- Preference heading for other ways to donate -->
-    <string name="ManageDonationsFragment__other_ways_to_give">Kiti aukojimo būdai</string>
     <!-- Preference label to launch badge gifting -->
-    <string name="ManageDonationsFragment__donate_for_a_friend">Skirk paramą draugo vardu</string>
     <!-- Dialog title shown when a donation requires verifying/confirmation outside of the app and the user hasn\'t done that yet -->
-    <string name="ManageDonationsFragment__couldnt_confirm_donation">Nepavyko patvirtinti paramos</string>
     <!-- Dialog message shown when a monthly donation requires verifying/confirmation outside of the app and the user hasn\'t done that yet, placeholder is money amount -->
-    <string name="ManageDonationsFragment__your_monthly_s_donation_couldnt_be_confirmed_ideal_wero">Your %1$s/month donation couldn\'t be confirmed. Check your banking app to approve your iDEAL | Wero payment.</string>
     <!-- Dialog message shown when a one-time donation requires verifying/confirmation outside of the app and the user hasn\'t done that yet, placeholder is money amount -->
-    <string name="ManageDonationsFragment__your_one_time_s_donation_couldnt_be_confirmed_ideal_wero">Your one-time %1$s donation couldn\'t be confirmed. Check your banking app to approve your iDEAL | Wero payment.</string>
 
-    <string name="Boost__enter_custom_amount">Įvesk pasirinktą sumą</string>
     <!-- Error label when the amount is smaller than what we can accept -->
-    <string name="Boost__the_minimum_amount_you_can_donate_is_s">Mažiausia paramos suma, kurią gali skirti: %1$s</string>
 
     <string name="MySupportPreference__s_per_month">%1$s/mėnesį</string>
     <string name="MySupportPreference__renews_s">Atnaujinama %1$s</string>
     <!-- Subtitle shown when processing a donation transaction -->
     <string name="MySupportPreference__processing_transaction">Apdorojama operacija…</string>
     <!-- Displayed on "My Support" screen when user badge failed to be added to their account -->
-    <string name="MySupportPreference__couldnt_add_badge_s">Nepavyko pridėti ženklelio. %1$s</string>
     <string name="MySupportPreference__please_contact_support">Susisiekite su palaikymu.</string>
     <!-- Displayed as a subtitle on a row in the Manage Donations screen when payment for a donation is pending -->
-    <string name="MySupportPreference__payment_pending">Laukiama mokėjimo</string>
     <!-- Displayed as a dialog message when clicking on a donation row that is pending. Placeholder is a formatted fiat amount -->
-    <string name="MySupportPreference__your_bank_transfer_of_s">Laukiama jūsų %1$s bankinio pavedimo. Bankiniai pavedimai atliekami per 1–14 darbo dienų.  </string>
     <!-- Displayed in the pending help dialog, used to launch user to more details about bank transfers -->
     <string name="MySupportPreference__learn_more">Sužinoti daugiau</string>
     <!-- Displayed when a subscription refresh is being performed -->
-    <string name="MySupportPreference__checking_subscription">Tikrinama prenumerata…</string>
 
     <!-- Title of dialog telling user they need to update signal as it expired -->
     <string name="UpdateSignalExpiredDialog__title">Atnaujinti Signal</string>
@@ -6869,126 +6681,66 @@
     <string name="ReregisterSignalDialog__cancel_action">Atšaukti</string>
 
     <!-- Title of expiry sheet when boost badge falls off profile unexpectedly. -->
-    <string name="ExpiredBadgeBottomSheetDialogFragment__boost_badge_expired">Rėmėjo ženklelis nebegalioja</string>
     <!-- Displayed in the bottom sheet if a monthly donation badge unexpectedly falls off the user\'s profile -->
-    <string name="ExpiredBadgeBottomSheetDialogFragment__monthly_donation_cancelled">Kasmėnesinė parama nutraukta</string>
     <!-- Displayed in the bottom sheet when a boost badge expires -->
-    <string name="ExpiredBadgeBottomSheetDialogFragment__your_boost_badge_has_expired_and">Tavo rėmėjo ženklelis nebegalioja ir nebėra matomas tavo profilyje.</string>
-    <string name="ExpiredBadgeBottomSheetDialogFragment__you_can_reactivate">Gali pratęsti savo rėmėjo ženklelį dar 30-čiai dienų, jei skirsi vienkartinę paramą.</string>
     <!-- Displayed when we do not think the user is a subscriber when their boost expires -->
-    <string name="ExpiredBadgeBottomSheetDialogFragment__you_can_keep">Gali ir toliau naudoti „Signal“, bet jei nori palaikyti tau kuriamą technologiją, apsvarstyk galimybę tapti rėmėju ir skirti kasmėnesinę paramą.</string>
-    <string name="ExpiredBadgeBottomSheetDialogFragment__become_a_sustainer">Tapti rėmėju</string>
-    <string name="ExpiredBadgeBottomSheetDialogFragment__add_a_boost">Pridėti paramą</string>
-    <string name="ExpiredBadgeBottomSheetDialogFragment__not_now">Ne dabar</string>
     <!-- Copy displayed when badge expires after user inactivity -->
-    <string name="ExpiredBadgeBottomSheetDialogFragment__your_recurring_monthly_donation_was_automatically">Tavo kasmėnesinė parama buvo automatiškai nutraukta, nes per ilgai buvai neaktyvus (-i). %1$s ženklelis nebėra matomas tavo profilyje.</string>
     <!-- Copy displayed when badge expires after payment failure -->
-    <string name="ExpiredBadgeBottomSheetDialogFragment__your_recurring_monthly_donation_was_canceled">Tavo kasmėnesinė parama buvo nutraukta, nes mums nepavyko apdoroti mokėjimo. Tavo ženklelis nebėra matomas profilyje.</string>
     <!-- Copy displayed when badge expires after a payment failure and we have a displayable charge failure reason -->
-    <string name="ExpiredBadgeBottomSheetDialogFragment__your_recurring_monthly_donation_was_canceled_s">Tavo kas mėnesį skiriama parama buvo nutraukta. %1$s Tavo %2$s ženklelis nebėra matomas profilyje.</string>
-    <string name="ExpiredBadgeBottomSheetDialogFragment__you_can">Gali ir toliau naudoti „Signal“, bet jei nori palaikyti programėlę ir vėl gauti ženklelį, atnaujink prenumeratą dabar.</string>
-    <string name="ExpiredBadgeBottomSheetDialogFragment__renew_subscription">Atnaujinti prenumeratą</string>
     <!-- Button label to send user to Google Pay website -->
-    <string name="ExpiredBadgeBottomSheetDialogFragment__go_to_google_pay">Pereiti į „Google Pay“</string>
 
-    <string name="CantProcessSubscriptionPaymentBottomSheetDialogFragment__cant_process_subscription_payment">Nepavyksta apdoroti prenumeratos mokėjimo</string>
-    <string name="CantProcessSubscriptionPaymentBottomSheetDialogFragment__were_having_trouble">Mums iškilo sunkumų atsiimant jūsų Signal rėmėjo mokėjimą. Įsitikinkite, kad jūsų mokėjimo būdas yra atnaujintas, o jeigu jis pasenęs, atnaujinkite jį „Google Pay“ sistemoje. Po kelių dienų Signal vėl pabandys apdoroti mokėjimą.</string>
-    <string name="CantProcessSubscriptionPaymentBottomSheetDialogFragment__dont_show_this_again">Daugiau neberodyti</string>
 
-    <string name="Subscription__contact_support">Susisiekti su palaikymu</string>
-    <string name="Subscription__get_a_s_badge">Gauk %1$s ženklelį</string>
 
     <!-- *PaymentInProgressFragment strings -->
-    <string name="InAppPaymentInProgressFragment__processing_donation">Parama apdorojama…</string>
-    <string name="InAppPaymentInProgressFragment__processing_payment">Apdorojamas mokėjimas…</string>
 
     <!--InAppDonations -->
     <!-- Label displayed in google play and on receipts for recurring subscriptions. Placeholder is level -->
-    <string name="InAppDonations__recurring_d">Pasikartojantys %1$d</string>
 
     <!-- InAppPaymentErrors -->
     <!-- Displayed as a title in a dialog or notification when a payment failure happens. -->
-    <string name="InAppPaymentErrors__error_processing_payment">Klaida apdorojant mokėjimą</string>
     <!-- Displayed as a message in a dialog or notification when a payment setup error happens. -->
-    <string name="InAppPaymentErrors__your_payment_couldnt_be_processed">Nepavyko apdoroti tavo mokėjimo, pinigai nenuskaityti. Bandyk dar kartą.</string>
     <!-- Displayed as a message in a dialog when we timeout waiting for a payment to be processed and token to be redeemed -->
-    <string name="InAppPaymentErrors__your_payment_is_still">Jūsų mokėjimas yra vis dar apdorojamas. Tai gali užimti kelias minutes, priklausomai nuo jūsų interneto ryšio.</string>
     <!-- Displayed as a message in a dialog or notification when stripe decline code issuer not available for backup payment. -->
-    <string name="InAppPaymentErrors__StripeDeclineCode__try_completing_the_payment_again">Bandykite užbaigti pirkimą dar kartą arba susisiekite su savo banku dėl išsamesnės informacijos.</string>
     <!-- Failure code text for revoked authorization of payment, displayed in a dialog or notification as a message. -->
-    <string name="InAppPaymentErrors__StripeFailureCode__this_payment_was_revoked">Šį mokėjimą atšaukė sąskaitos savininkas, todėl jo nepavyko atlikti. Pinigai nenuskaičiuoti.</string>
     <!-- Failure code text for a payment lacking an authorized mandate or incorrect mandate, displayed in a dialog or notification as a message.-->
-    <string name="InAppPaymentErrors__StripeFailureCode__an_error_occurred_while_processing_this_payment">Apdorojant šį mokėjimą įvyko klaida, bandyk dar kartą.</string>
 
     <!-- Displayed in notification when user payment fails to process on Stripe -->
-    <string name="DonationsErrors__error_processing_payment">Apdorojant paramą įvyko klaida</string>
     <!-- Displayed on manage donations screen as a dialog message when payment method failed -->
-    <string name="DonationsErrors__try_another_payment_method">Pabandykite naudoti kitą mokėjimo būdą arba susisiekite su savo banku dėl išsamesnės informacijos.</string>
     <!-- Displayed on manage donations screen error dialogs as an action label -->
-    <string name="DonationsErrors__learn_more">Sužinoti daugiau</string>
     <!-- Displayed on "My Support" screen when user subscription payment method failed. -->
-    <string name="DonationsErrors__error_processing_payment_s">Apdorojant paramą įvyko klaida. %1$s</string>
-    <string name="DonationsErrors__your_payment">Nepavyko apdoroti tavo paramos, pinigai nenuskaityti. Bandyk dar kartą.</string>
-    <string name="DonationsErrors__still_processing">Vis dar apdorojama</string>
-    <string name="DonationsErrors__couldnt_add_badge">Nepavyko pridėti ženklelio</string>
     <!-- Displayed when backup credential could not be redeemed. Dialog or notification title -->
-    <string name="DonationsError__something_went_wrong">Kažkas nutiko</string>
     <!-- Displayed when backup credential could not be redeemed. Dialog or notification body -->
-    <string name="DonationsError__your_backups_subscription_couldnt_be_displayed">Nepavyko parodyti jūsų atsarginių kopijų prenumeratos. Susisiekite su aptarnavimo komanda.</string>
     <!-- Displayed when badge credential couldn\'t be verified -->
-    <string name="DonationsErrors__failed_to_validate_badge">Nepavyko patikrinti ženklelio</string>
     <!-- Displayed when badge credential couldn\'t be verified -->
-    <string name="DonationsErrors__could_not_validate">Nepavyko patikrinti serverio atsakymo. Susisiekite su palaikymu.</string>
     <!-- Displayed as title when some generic error happens during sending donation on behalf of another user -->
-    <string name="DonationsErrors__donation_failed">Skirti paramos nepavyko</string>
     <!-- Displayed as message when some generic error happens during sending donation on behalf of another user -->
-    <string name="DonationsErrors__your_payment_was_processed_but">Tavo parama apdorota, bet „Signal“ nepavyko nusiųsti žinutės apie paramą. Susisiek su aptarnavimo komanda.</string>
-    <string name="DonationsErrors__your_badge_could_not">Nepavyko pridėti ženkelio prie tavo paskyros, bet gali būti, kad mokėjimas nuskaitytas. Susisiek su mūsų komanda.</string>
-    <string name="DonationsErrors__your_payment_is_still">Tavo parama vis dar apdorojama. Tai gali užtrukti kelias minutes, priklausomai nuo interneto ryšio.</string>
-    <string name="DonationsErrors__failed_to_cancel_subscription">Nepavyko nutraukti prenumeratos</string>
-    <string name="DonationsErrors__subscription_cancellation_requires_an_internet_connection">Prenumeratos nutraukimui reikia interneto ryšio.</string>
     <string name="ViewBadgeBottomSheetDialogFragment__your_device_doesn_t_support">Jūsų įrenginys nepalaiko paramos programėlėje, todėl negalite prenumeruoti ir gauti ženklelio. Tačiau galite palaikyti „Signal“ ir skirti paramą mūsų interneto svetainėje.</string>
     <string name="NetworkFailure__network_error_check_your_connection_and_try_again">Tinklo klaida. Patikrinkite interneto ryšį ir bandykite dar kartą.</string>
     <string name="NetworkFailure__retry">Bandyti dar kartą</string>
     <!-- Displayed as a dialog title when the selected recipient for a gift doesn\'t support gifting -->
-    <string name="DonationsErrors__cannot_send_donation">Paramos siuntimas negalimas</string>
     <!-- Displayed as a dialog message when the selected recipient for a gift doesn\'t support gifting -->
-    <string name="DonationsErrors__this_user_cant_receive_donations_until">Šis naudotojas negali priimti paramos, kol neatnaujins „Signal“.</string>
     <!-- Displayed as a dialog message when the user\'s profile could not be fetched, likely due to lack of internet -->
-    <string name="DonationsErrors__your_donation_could_not_be_sent">Tinklo klaida sutrukdė nusiųsti tavo paramą. Patikrink interneto ryšį ir bandyk dar kartą.</string>
     <!-- Displayed as a dialog message when the user encounters an error during an iDEAL donation -->
-    <string name="DonationsErrors__your_ideal_wero_couldnt_be_processed">Your iDEAL | Wero donation couldn\'t be processed. Try another payment method or contact your bank for more information.</string>
 
     <!-- Gift message view title -->
-    <string name="GiftMessageView__donation_on_behalf_of_s">Parama %1$s vardu</string>
     <!-- Gift message view title for incoming donations -->
-    <string name="GiftMessageView__s_donated_to_signal_on">%1$s skyrė „Signal“ paramą tavo vardu</string>
     <!-- Gift badge redeem action label -->
-    <string name="GiftMessageView__redeem">Atsiimti</string>
     <!-- Gift badge view action label -->
-    <string name="GiftMessageView__view">Rodyti</string>
     <!-- Gift badge redeeming action label -->
-    <string name="GiftMessageView__redeeming">Atsiimama…</string>
     <!-- Gift badge redeemed label -->
-    <string name="GiftMessageView__redeemed">Atsiimtas</string>
 
 
     <!-- Stripe decline code generic_failure -->
-    <string name="DeclineCode__try_another_payment_method_or_contact_your_bank">Pabandykite naudoti kitą mokėjimo būdą arba susisiekite su savo banku dėl išsamesnės informacijos.</string>
     <!-- PayPal decline code for payment declined -->
-    <string name="DeclineCode__try_another_payment_method_or_contact_your_bank_for_more_information_if_this_was_a_paypal">Pabandyk kitą mokėjimo būdą arba kreipkis į savo banką išsamesnės informacijos. Jei tai buvo „PayPal“ pavedimas, susisiek su „PayPal“.</string>
     <!-- Stripe decline code verify on Google Pay and try again -->
-    <string name="DeclineCode__verify_your_payment_method_is_up_to_date_in_google_pay_and_try_again">Patikrinkite, ar jūsų mokėjimo būdas „Google Pay“ sistemoje yra atnaujintas ir bandykite dar kartą.</string>
     <!-- Stripe decline code learn more action label -->
     <string name="DeclineCode__learn_more">Sužinoti daugiau</string>
     <!-- Stripe decline code contact issuer -->
-    <string name="DeclineCode__verify_your_payment_method_is_up_to_date_in_google_pay_and_try_again_if_the_problem">Patikrinkite, ar jūsų mokėjimo būdas „Google Pay“ sistemoje yra atnaujintas ir bandykite dar kartą. Jei problema išlieka, susisiekite su savo banku.</string>
     <!-- Stripe decline code purchase not supported -->
     <string name="DeclineCode__your_card_does_not_support_this_type_of_purchase">Jūsų kortelė nepalaiko šio pirkimo tipo. Pabandykite naudoti kitą mokėjimo būdą.</string>
     <!-- Stripe decline code your card has expired -->
     <string name="DeclineCode__your_card_has_expired">Jūsų kortelė nebegalioja. Atnaujinkite mokėjimo būdą „Google Pay“ sistemoje ir bandykite dar kartą.</string>
     <!-- Stripe decline code go to google pay action label -->
-    <string name="DeclineCode__go_to_google_pay">Pereiti į „Google Pay“</string>
     <!-- Stripe decline code try credit card again action label -->
     <string name="DeclineCode__try">Bandykite dar kartą</string>
     <!-- Stripe decline code incorrect card number -->
@@ -7002,7 +6754,6 @@
     <!-- Stripe decline code incorrect expiration year -->
     <string name="DeclineCode__the_expiration_year">Galiojimo pabaigos metai ant jūsų mokėjimo būdo yra neteisingi. Atnaujinkite juos „Google Pay“ sistemoje ir bandykite dar kartą.</string>
     <!-- Stripe decline code issuer not available -->
-    <string name="DeclineCode__try_completing_the_payment_again">Bandyk atlikti pirkimą dar kartą arba kreipkis į savo banką, jei reikia daugiau informacijos.</string>
     <!-- Stripe decline code processing error -->
     <string name="DeclineCode__try_again">Bandykite dar kartą arba susisiekite su savo banku dėl išsamesnės informacijos.</string>
 
@@ -7024,15 +6775,10 @@
 
     <!-- Stripe Failure Codes for failed bank transfers -->
     <!-- Failure code text for insufficient funds, displayed in a dialog or notification -->
-    <string name="StripeFailureCode__the_bank_account_provided">Pateiktoje banko sąskaitoje nepakanka lėšų šiam pirkimui atlikti, bandyk dar kartą arba kreipkis į savo banką, jei reikia daugiau informacijos.</string>
     <!-- Failure code text for revoked authorization of payment, displayed in a dialog or notification -->
-    <string name="StripeFailureCode__this_payment_was_revoked">Šią paramą atšaukė sąskaitos savininkas, todėl jos nepavyko apdoroti. Pinigai nenuskaičiuoti.</string>
     <!-- Failure code text for a payment lacking an authorized mandate or incorrect mandate, displayed in a dialog or notification -->
-    <string name="StripeFailureCode__an_error_occurred_while_processing_this_payment">Apdorojant šią paramą įvyko klaida, bandyk dar kartą.</string>
     <!-- Failure code text for a closed account, deceased recipient, or one with blocked direct debits, displayed in a dialog or notification -->
-    <string name="StripeFailureCode__the_bank_details_provided_could_not_be_processed">Nepavyko apdoroti pateiktų banko duomenų, kreipkis į savo banką, jei reikia daugiau informacijos.</string>
     <!-- Failure code text for a non-existent bank branch, invalid account holder, invalid iban, generic failure, or unknown bank failure, displayed in a dialog or notification -->
-    <string name="StripeFailureCode__verify_your_bank_details_are_correct">Patikrink, ar tavo banko duomenys teisingi, ir bandyk dar kartą. Jei problema išlieka, kreipkis į savo banką.</string>
 
     <!-- Title of create notification profile screen -->
     <string name="EditNotificationProfileFragment__name_your_profile">Suteikite profiliui pavadinimą</string>
@@ -7195,33 +6941,19 @@
     <string name="ReleaseNotes__official_only_chat">Oficialus ir vienintelis pokalbis su „Signal“</string>
 
     <!-- Donation receipts activity title -->
-    <string name="DonationReceiptListFragment__all_activity">Visa veikla</string>
     <!-- Donation receipts all tab label -->
-    <string name="DonationReceiptListFragment__all">Visi</string>
     <!-- Donation receipts recurring tab label -->
-    <string name="DonationReceiptListFragment__recurring">Pasikartojantys</string>
     <!-- Donation receipts one-time tab label -->
-    <string name="DonationReceiptListFragment__one_time">Vienkartiniai</string>
     <!-- Donation receipts gift tab -->
-    <string name="DonationReceiptListFragment__for_a_friend">Draugo vardu</string>
     <!-- Donation receipts gift tab label -->
-    <string name="DonationReceiptListFragment__donation_for_a_friend">Parama draugo vardu</string>
     <!-- Donation receipts donation type heading -->
-    <string name="DonationReceiptDetailsFragment__donation_type">Paramos tipas</string>
     <!-- Donation receipts date paid heading -->
-    <string name="DonationReceiptDetailsFragment__date_paid">Mokėjimo data</string>
     <!-- Donation receipts share PNG -->
-    <string name="DonationReceiptDetailsFragment__share_receipt">Bendrinti kvitą</string>
     <!-- Donation receipts list end note -->
-    <string name="DonationReceiptListFragment__if_you_have">Jei įdiegei „Signal“ iš naujo, anksčiau skirtos paramos kvitai nebus prieinami.</string>
     <!-- Donation receipts document title -->
-    <string name="DonationReceiptDetailsFragment__donation_receipt">Paramos kvitas</string>
     <!-- Donation receipts amount title -->
-    <string name="DonationReceiptDetailsFragment__amount">Suma</string>
     <!-- Donation receipts thanks -->
-    <string name="DonationReceiptDetailsFragment__thank_you_for_supporting">Dėkojame, kad remiate Signal. Jūsų įnašas padės skatinti misiją kurti atvirojo kodo privatumo technologiją, kuri apsaugo žodžio laisvę ir įgalina saugų bendravimą milijonams žmonių visame pasaulyje. Jei gyvenate Jungtinėse Valstijose, išsaugokite šį kvitą, kad turėtumėte jį savo mokestinių duomenų reikmėms. Signal technologijų fondas yra Jungtinėse Valstijose įsteigta, pagal vidaus mokesčių kodekso 501c3 sekciją neapmokestinama, pelno nesiekianti organizacija. Mūsų federalinis mokesčių ID yra 82–4506840.</string>
     <!-- Donation reciepts screen empty state title -->
-    <string name="DonationReceiptListFragment__no_receipts">Nėra kvitų</string>
 
     <!-- region "Stories Tab" -->
 
@@ -7629,7 +7361,6 @@
         <item quantity="other">%1$s · trukmė %2$d d.</item>
     </plurals>
     <!-- Headline text on start fragment for gifting a badge -->
-    <string name="GiftFlowStartFragment__donate_for_a_friend">Skirk paramą draugo vardu</string>
     <!-- Description text on start fragment for gifting a badge -->
     <plurals name="GiftFlowStartFragment__support_signal_by">
         <item quantity="one">Palaikyk „Signal“ – skirk paramą draugo ar šeimos nario, naudojančio šią programėlę, vardu. Šis žmogus gaus ženklelį, kurį galės rodyti savo profilyje %1$d dieną</item>
@@ -7638,47 +7369,27 @@
         <item quantity="other">Palaikyk „Signal“ – skirk paramą draugo ar šeimos nario, naudojančio šią programėlę, vardu. Šis žmogus gaus ženklelį, kurį galės rodyti savo profilyje %1$d dienų</item>
     </plurals>
     <!-- Action button label for start fragment for gifting a badge -->
-    <string name="GiftFlowStartFragment__next">Kitas</string>
     <!-- Title text on choose recipient page for badge gifting -->
-    <string name="GiftFlowRecipientSelectionFragment__choose_recipient">Pasirinkite gavėją</string>
     <!-- Title text on confirm gift page -->
-    <string name="GiftFlowConfirmationFragment__confirm_donation">Patvirtinti paramą</string>
     <!-- Heading text specifying who the gift will be sent to -->
-    <string name="GiftFlowConfirmationFragment__send_to">Kam siųsti</string>
     <!-- Text explaining that gift will be sent to the chosen recipient -->
-    <string name="GiftFlowConfirmationFragment__the_recipient_will_be_notified">Gavėjas bus informuotas apie paramą asmenine žinute. Toliau gali pridėti savo žinutę.</string>
     <!-- Text explaining that this gift is a one time donation -->
-    <string name="GiftFlowConfirmationFragment__one_time_donation">Vienkartinė parama</string>
     <!-- Hint for add message input -->
-    <string name="GiftFlowConfirmationFragment__add_a_message">Pridėti žinutę</string>
     <!-- Displayed in the dialog while verifying the chosen recipient -->
     <string name="GiftFlowConfirmationFragment__verifying_recipient">Tikrinamas gavėjas…</string>
     <!-- Title for sheet shown when opening a redeemed gift -->
-    <string name="ViewReceivedGiftBottomSheet__s_made_a_donation_for_you">%1$s skyrė paramą tavo vardu</string>
     <!-- Title for sheet shown when opening a sent gift -->
-    <string name="ViewSentGiftBottomSheet__thanks_for_your_support">Ačiū už jūsų palaikymą!</string>
     <!-- Description for sheet shown when opening a redeemed gift -->
-    <string name="ViewReceivedGiftBottomSheet__s_made_a_donation_to_signal">%1$s skyrė „Signal“ paramą tavo vardu! Parodyk, kad palaikai programėlę „Signal“ savo profilyje.</string>
     <!-- Description for sheet shown when opening a sent gift -->
-    <string name="ViewSentGiftBottomSheet__youve_made_a_donation_to_signal">Tu skyrei „Signal“ paramą %1$s vardu. Šis žmogus turės galimybę parodyti palaikymą savo profilyje.</string>
     <!-- Primary action for pending gift sheet to redeem badge now -->
-    <string name="ViewReceivedGiftSheet__redeem">Atsiimti</string>
     <!-- Primary action for pending gift sheet to redeem badge later -->
-    <string name="ViewReceivedGiftSheet__not_now">Ne dabar</string>
     <!-- Dialog text while redeeming a gift -->
-    <string name="ViewReceivedGiftSheet__redeeming_badge">Pasiimamas ženklelis…</string>
     <!-- Description text in gift thanks sheet -->
-    <string name="GiftThanksSheet__youve_made_a_donation">Tu skyrei „Signal“ paramą %1$s vardu. Šis žmogus turės galimybę parodyti palaikymą savo profilyje.</string>
     <!-- Expired gift sheet title -->
-    <string name="ExpiredGiftSheetConfiguration__your_badge_has_expired">Tavo ženklelis nebegalioja</string>
     <!-- Expired gift sheet top description text -->
-    <string name="ExpiredGiftSheetConfiguration__your_badge_has_expired_and_is">Tavo ženklelis nebegalioja ir nebėra matomas kitiems tavo profilyje.</string>
     <!-- Expired gift sheet bottom description text -->
-    <string name="ExpiredGiftSheetConfiguration__to_continue">Norėdami palaikyti jums kuriamą technologiją, apsvarstykite galimybę tapti rėmėju ir remti kas mėnesį.</string>
     <!-- Expired gift sheet make a monthly donation button -->
-    <string name="ExpiredGiftSheetConfiguration__make_a_monthly_donation">Skirk kasmėnesinę paramą</string>
     <!-- Expired gift sheet not now button -->
-    <string name="ExpiredGiftSheetConfiguration__not_now">Ne dabar</string>
     <!-- My Story label designating that we will only share with the selected viewers. -->
     <string name="ContactSearchItems__only_share_with">Bendrinti tik su</string>
     <!-- Label under name for custom stories -->
@@ -7758,7 +7469,6 @@
         <item quantity="other">Liko %1$d minutė</item>
     </plurals>
     <!-- Donation for a friend expiry expired -->
-    <string name="Gifts__expired">Nebegalioja</string>
 
     <!-- Label indicating that a user can tap to advance to the next post in a story -->
     <string name="StoryFirstTimeNavigationView__tap_to_advance">Bakstelėkite, jei nori tęsti</string>
@@ -7908,40 +7618,24 @@
 
     <!-- DonateToSignalFragment -->
     <!-- Title below avatar -->
-    <string name="DonateToSignalFragment__privacy_over_profit">Didžiuojamės būdami ne pelno organizacija</string>
     <!-- Continue button label -->
-    <string name="DonateToSignalFragment__continue">Tęsti</string>
     <!-- Description below title -->
-    <string name="DonateToSignalFragment__private_messaging">Paremkite privačių žinučių programėlę. Kad „Signal“ išliktų nepriklausoma ir be reklamų.</string>
     <!-- Dialog title when a user tries to donate while they already have a pending donation. -->
-    <string name="DonateToSignalFragment__you_have_a_donation_pending">Tu jau turi laukiančią paramą</string>
     <!-- Dialog body when a user tries to donate while they already have a pending monthly donation. -->
-    <string name="DonateToSignalFragment__bank_transfers_usually_take_1_business_day_to_process_monthly">Bankiniai pavedimai atliekami per 1–14 darbo dienų. Prieš atnaujinant prenumeratą prašome palaukti, kol šis mokėjimas bus užbaigtas.</string>
     <!-- Dialog body when a user tries to donate while they already have a pending one time donation. -->
-    <string name="DonateToSignalFragment__bank_transfers_usually_take_1_business_day_to_process_onetime">Bankiniai pavedimai atliekami per 1–14 darbo dienų. Prieš skiriant kitą paramą prašome palaukti, kol šis mokėjimas bus užbaigtas.</string>
     <!-- Dialog body when a user tries to donate while they already have a pending monthly donation. -->
-    <string name="DonateToSignalFragment__your_payment_is_still_being_processed_monthly">Tavo parama vis dar apdorojama. Tai gali užtrukti kelias minutes, priklausomai nuo interneto ryšio. Prieš atnaujinant prenumeratą prašome palaukti, kol šis mokėjimas bus užbaigtas.</string>
     <!-- Dialog body when a user tries to donate while they already have a pending one time donation. -->
-    <string name="DonateToSignalFragment__your_payment_is_still_being_processed_onetime">Tavo parama vis dar apdorojama. Tai gali užtrukti kelias minutes, priklausomai nuo interneto ryšio. Prieš skiriant kitą paramą prašome palaukti, kol šis mokėjimas bus užbaigtas.</string>
     <!-- Dialog body when a user opens the manage donations main screen and they have a pending iDEAL donation -->
-    <string name="DonateToSignalFragment__your_ideal_wero_payment_is_still_processing">Your iDEAL | Wero donation is still processing. Check your banking app to approve your payment before making another donation.</string>
     <!-- Dialog title shown when a user tries to donate an amount higher than is allowed for a given payment method. -->
-    <string name="DonateToSignal__donation_amount_too_high">Paramos suma per didelė</string>
     <!-- Dialog body shown when a user tries to donate an amount higher than is allowed for a given payment method, place holder is the maximum -->
-    <string name="DonateToSignalFragment__you_can_send_up_to_s_via_bank_transfer">Banko pervedimu galima siųsti iki %1$s. Bandykite pasirinkti kitą sumą arba kitą mokėjimo būdą.</string>
 
     <!-- Donation pill toggle monthly text -->
-    <string name="DonationPillToggle__monthly">Kas mėnesį</string>
     <!-- Donation pill toggle one-time text -->
-    <string name="DonationPillToggle__one_time">Vienkartiniai</string>
 
     <!-- GatewaySelectorBottomSheet -->
     <!-- Sheet title when subscribing -->
-    <string name="GatewaySelectorBottomSheet__donate_s_month_to_signal">Skirti %1$s per mėn. paramą „Signal“</string>
     <!-- Sheet summary when subscribing -->
-    <string name="GatewaySelectorBottomSheet__get_a_s_badge">Gauk %1$s ženklelį</string>
     <!-- Sheet title when giving a one-time donation -->
-    <string name="GatewaySelectorBottomSheet__donate_s_to_signal">Skirti „Signal“ %1$s paramą</string>
     <!-- Sheet summary when giving a one-time donation -->
     <plurals name="GatewaySelectorBottomSheet__get_a_s_badge_for_d_days">
         <item quantity="one">Gauti %1$s ženklelį %2$d d.</item>
@@ -7950,89 +7644,52 @@
         <item quantity="other">Gauti %1$s ženklelių %2$d d.</item>
     </plurals>
     <!-- Button label for paying with a bank transfer -->
-    <string name="GatewaySelectorBottomSheet__bank_transfer">Banko pavedimas</string>
     <!-- Button label for paying with a credit card -->
     <string name="GatewaySelectorBottomSheet__credit_or_debit_card">Kredito arba debeto kortelė</string>
     <!-- Sheet summary when giving donating for a friend -->
-    <string name="GatewaySelectorBottomSheet__donate_for_a_friend">Skirk paramą draugo vardu</string>
     <!-- Button label for paying with iDEAL -->
-    <string name="GatewaySelectorBottomSheet__ideal_wero">iDEAL | Wero</string>
 
     <!-- Dialog title for launching external intent -->
-    <string name="ExternalNavigationHelper__leave_signal_to_confirm_payment">Išeiti iš „Signal“ paramos patvirtinimui?</string>
-    <string name="ExternalNavigationHelper__once_this_payment_is_confirmed">Kai ji bus patvirtinta, grįžk į „Signal“ užbaigti paramos apdorojimo.</string>
     <!-- Dialog message shown when leaving Signal to complete a donation in an external app. Placeholder is the resolved app name (e.g. a banking app). -->
-    <string name="ExternalNavigationHelper__once_payment_confirmed_in_app">You\'ll be sent to %1$s. When confirmed, return to Signal to finish processing your donation.</string>
 
     <!-- BankTransferMandateFragment -->
     <!-- Title of screen displaying the bank transfer mandate -->
-    <string name="BankTransferMandateFragment__bank_transfer">Banko pavedimas</string>
     <!-- Subtitle of screen displaying the bank transfer mandate, placeholder is \'Learn more\' -->
-    <string name="BankTransferMandateFragment__stripe_processes_donations">„Stripe“ tvarko „Signal“ skirtą paramą. „Signal“ nerenka ir nekaupia tavo asmeninės informacijos. %1$s</string>
     <!-- Subtitle learn more of screen displaying bank transfer mandate -->
-    <string name="BankTransferMandateFragment__learn_more">Sužinoti daugiau</string>
     <!-- Button label to continue with transfer -->
-    <string name="BankTransferMandateFragment__agree">Sutinku</string>
     <!-- Button label to read more of the bank mandate that is currently off screen -->
-    <string name="BankTransferMandateFragment__read_more">Skaityti daugiau</string>
     <!-- Text displayed when mandate load fails -->
-    <string name="BankTransferMandateFragment__failed_to_load_mandate">Nepavyko įkelti nurodymo</string>
 
     <!-- BankTransferDetailsFragment -->
     <!-- Subtext explaining how email is used. Placeholder is \'Learn more\' -->
-    <string name="BankTransferDetailsFragment__enter_your_bank_details">Įvesk savo banko duomenis ir el. paštą. „Stripe“ šiuo el. pašto adresu siųs naujienas apie skirtą paramą. %1$s</string>
     <!-- Subtext learn more link text -->
-    <string name="BankTransferDetailsFragment__learn_more">Sužinoti daugiau</string>
     <!-- Text field label for name on bank account -->
-    <string name="BankTransferDetailsFragment__name_on_bank_account">Banko sąskaitos savininko vardas</string>
     <!-- Text field label for IBAN -->
-    <string name="BankTransferDetailsFragment__iban">IBAN</string>
     <!-- Text field label for email -->
-    <string name="BankTransferDetailsFragment__email">El. paštas</string>
     <!-- Text label for button to show user how to find their IBAN -->
-    <string name="BankTransferDetailsFragment__find_account_info">Surasti paskyros informaciją</string>
     <!-- Donate button label for monthly subscription -->
-    <string name="BankTransferDetailsFragment__donate_s_month">Skirti %1$s per mėnesį</string>
     <!-- Donate button label for one-time -->
-    <string name="BankTransferDetailsFragment__donate_s">Skirti %1$s paramą</string>
     <!-- Error label for IBAN field when number is too short -->
-    <string name="BankTransferDetailsFragment__iban_is_too_short">IBAN per trumpas</string>
     <!-- Error label for IBAN field when number is too long -->
-    <string name="BankTransferDetailsFragment__iban_is_too_long">IBAN per ilgas</string>
     <!-- Error label for IBAN field when country is not supported -->
-    <string name="BankTransferDetailsFragment__iban_country_code_is_not_supported">IBAN šalies kodas nepalaikomas</string>
     <!-- Error label for IBAN field when number is invalid -->
-    <string name="BankTransferDetailsFragment__invalid_iban">Neteisingas IBAN</string>
     <!-- Error label for name field when name is not at least three characters long (Stripe API enforced minimum) -->
-    <string name="BankTransferDetailsFragment__minimum_3_characters">Reikia bent 3 simbolių</string>
     <!-- Error label for email field when email is not valid -->
-    <string name="BankTransferDetailsFragment__invalid_email_address">Netinkamas el. pašto adresas</string>
 
     <!-- IdealTransferDetailsFragment -->
     <!-- Title of the screen, displayed in the toolbar -->
-    <string name="IdealTransferDetailsFragment__ideal">iDEAL</string>
     <!-- Subtitle of the screen, displayed below the toolbar. Placeholder is for \'learn more\' -->
-    <string name="IdealTransferDetailsFragment__enter_your_bank">Įveskite savo vardą, pavardę ir el. pašto adresą. „Stripe“ šiuo el. pašto adresu siųs naujienas apie skirtą paramą. %1$s</string>
     <!-- Subtitle of the screen, displayed below the toolbar. Placeholder is for \'learn more\' -->
-    <string name="IdealTransferDetailsFragment__enter_your_bank_details_one_time">Įveskite savo banko duomenis. Jūsų asmeninės informacijos „Signal“ nerenka ir nekaupia. %1$s</string>
     <!-- Subtitle learn-more button displayed inline with the subtitle text -->
-    <string name="IdealTransferDetailsFragment__learn_more">Sužinoti daugiau</string>
     <!-- Hint label for text entry box for name on bank account -->
-    <string name="IdealTransferDetailsFragment__name_on_bank_account">Banko sąskaitos savininko vardas</string>
     <!-- Hint label for text entry box for email -->
-    <string name="IdealTransferDetailsFragment__email">El. paštas</string>
     <!-- Default label for bank selection -->
-    <string name="IdealTransferDetailsFragment__choose_your_bank">Pasirink savo banką</string>
     <!-- Dialog title shown when using iDEAL payment for setting up a monthly donation -->
-    <string name="IdealTransferDetailsFragment__confirm_your_donation_with_ideal_wero">Confirm your donation with iDEAL | Wero</string>
     <!-- Dialog warning shown when using iDEAL payment for setting up a monthly donation. Placeholder is donation amount.Z -->
-    <string name="IdealTransferDetailsFragment__to_setup_your_recurring_donation">Jei norite nustatyti pasikartojančią paramą, bakstelėkite „Tęsti“, kad patvirtintumėte 0,01 € mokestį iš savo banko. Ši suma bus automatiškai grąžinta ir galėsime iš jūsų sąskaitos nurašyti po %1$s paramą kas mėnesį.</string>
     <!-- Dialog button shown when using iDEAL payment for setting up a monthly donation to continue with the donation -->
-    <string name="IdealTransferDetailsFragment__continue">Tęsti</string>
 
     <!-- IdealTransferDetailsBankSelectionDialogFragment -->
     <!-- Title of the screen, displayed in the toolbar -->
-    <string name="IdealTransferDetailsBankSelectionDialogFragment__choose_your_bank">Pasirink savo banką</string>
 
     <!-- Title of bottom sheet for finding account information -->
     <string name="FindAccountInfoSheet__find_your_account_information">Rask savo paskyros informaciją</string>
@@ -8040,36 +7697,22 @@
     <string name="FindAccountInfoSheet__look_for_your_iban_at">Ieškok savo IBAN numerio banko ataskaitos viršuje. IBAN numerį sudaro iki 34 simbolių. Įvestas vardas turi sutapti su tavo banko sąskaitoje nurodytu vardu ir pavarde. Kreipkis į savo banką, jei reikia daugiau informacijos.</string>
 
     <!-- Title of donation pending sheet displayed after making a bank transfer -->
-    <string name="DonationPendingBottomSheet__donation_pending">Laukiama paramos</string>
     <!-- Top text block of donation pending sheet displayed after subscribing via a bank transfer. Placeholder is the badge name. -->
-    <string name="DonationPendingBottomSheet__your_monthly_donation_is_pending">Laukiama tavo kasmėnesinės paramos. Kai tavo parama mus pasieks, savo profilyje galėsi rodyti %1$s ženklelį.</string>
     <!-- Top text block of donation pending sheet displayed after one-time donation via a bank transfer. Placeholder is the badge name. -->
-    <string name="DonationPendingBottomSheet__your_one_time_donation_is_pending">Laukiama tavo vienkartinės paramos. Kai tavo parama mus pasieks, savo profilyje galėsi rodyti %1$s ženklelį.</string>
     <!-- Bottom text block of donation pending sheet displayed after donating via a bank transfer. Placeholder is for learn more. -->
-    <string name="DonationPendingBottomSheet__bank_transfers_usually_take">Bankiniai pavedimai apdorojami per 1–14 darbo dienų. %1$s</string>
     <!-- Learn more text for donation pending sheet displayed after donating via a bank transfer. -->
-    <string name="DonationPendingBottomSheet__learn_more">Sužinoti daugiau</string>
     <!-- Confirmation button for donation pending sheet displayed after donating via a bank transfer. -->
-    <string name="DonationPendingBottomSheet__done">Atlikta</string>
 
     <!-- Title of donation error sheet displayed after making a bank transfer that fails -->
-    <string name="DonationErrorBottomSheet__donation_couldnt_be_processed">Nepavyko apdoroti paramos</string>
     <!-- Text block of donation error sheet displayed after making a bank transfer that fails -->
-    <string name="DonationErrorBottomSheet__were_having_trouble">Iškilo problemų apdorojant tavo banko pavedimą. Pinigai nenuskaičiuoti. Pabandyk naudoti kitą mokėjimo būdą arba kreipkis į savo banką, jei reikia daugiau informacijos.</string>
     <!-- Button label for retry button of donation error sheet displayed after making a bank transfer that fails -->
-    <string name="DonationErrorBottomSheet__try_again">Bandykite dar kartą</string>
     <!-- Button label for not now button of donation error sheet displayed after making a bank transfer that fails -->
-    <string name="DonationErrorBottomSheet__not_now">Ne dabar</string>
 
     <!-- Title of \'Donation Complete\' sheet displayed after a bank transfer completes and the badge is redeemed -->
-    <string name="DonationCompletedBottomSheet__donation_complete">Parama pervesta</string>
     <!-- Text block of \'Donation Complete\' sheet displayed after a bank transfer completes and the badge is redeemed -->
-    <string name="DonationCompleteBottomSheet__your_bank_transfer_was_received">Tavo pavedimas gautas. Jei nori, gali šį ženklelį rodyti savo profilyje ir taip išreikšti palaikymą.</string>
     <!-- Button text of \'Donation Complete\' sheet displayed after a bank transfer completes and the badge is redeemed to dismiss sheet -->
-    <string name="DonationCompleteBottomSheet__done">Atlikta</string>
 
     <!-- StripePaymentInProgressFragment -->
-    <string name="StripePaymentInProgressFragment__cancelling">Atšaukiama…</string>
 
     <!-- The title of a bottom sheet dialog that tells the user we temporarily can\'t process their contacts. -->
     <string name="CdsTemporaryErrorBottomSheet_title">Apdorota per daug adresatų</string>
@@ -8105,7 +7748,6 @@
     <!-- YourInformationIsPrivateBottomSheet -->
     <string name="YourInformationIsPrivateBottomSheet__your_information_is_private">Tavo informacija yra privati</string>
     <string name="YourInformationIsPrivateBottomSheet__signal_does_not_collect">„Signal“ nerenka ir nekaupia jokios tavo asmeninės informacijos, kai skiri mums paramą.</string>
-    <string name="YourInformationIsPrivateBottomSheet__we_use_stripe">Naudojame „Stripe“ mokėjimams apdoroti, kad parama mus pasiektų. Nesiekiame rinkti, nekaupiame ir nesaugome jokios informacijos, kurią tu jiems pateiki.</string>
     <string name="YourInformationIsPrivateBottomSheet__signal_does_not_and_cannot">„Signal“ nebando ir negali susieti tavo paramos su tavo „Signal“ paskyra.</string>
     <string name="YourInformationIsPrivateBottomSheet__thank_you">Dėkojame tau už paramą!</string>
 
@@ -8123,8 +7765,6 @@
     <string name="Registration_country_code_entry_hint">+0</string>
 
     <!-- PaypalCompleteOrderBottomSheet -->
-    <string name="PaypalCompleteOrderBottomSheet__donate">Paremti</string>
-    <string name="PaypalCompleteOrderBottomSheet__payment">Mokėjimas</string>
 
     <!-- ChatFilter -->
     <!-- Displayed in a pill at the top of the chat list when it is filtered by unread messages -->
@@ -8632,15 +8272,10 @@
     <string name="GrantFullScreenIntentPermission_bottomsheet_step2">2. %1$s Įjunk viso ekrano pranešimus</string>
 
     <!-- Bottom sheet dialog shown when a monthly donation fails to renew, title for dialog -->
-    <string name="MonthlyDonationCanceled__title">Kasmėnesinė parama nutraukta</string>
     <!-- Bottom sheet dialog shown when a monthly donation fails to renew, body for dialog. First placeholder is a payment related error message. Second placeholder is \'learn more\' -->
-    <string name="MonthlyDonationCanceled__message">Jūsų kas mėnesį skiriama parama nutraukta. %1$s\n\nŽenklelio profilyje nebeliks. %2$s</string>
     <!-- Bottom sheet dialog shown when a monthly donation fails to renew, learn more used in placeholder for body for dialog. -->
-    <string name="MonthlyDonationCanceled__learn_more">Sužinoti daugiau</string>
     <!-- Bottom sheet dialog shown when a monthly donation fails to renew, primary button to renew subscription with new data -->
-    <string name="MonthlyDonationCanceled__renew_button">Atnaujinti prenumeratą</string>
     <!-- Bottom sheet dialog shown when a monthly donation fails to renew, second button to dismiss the dialog entirely -->
-    <string name="MonthlyDonationCanceled__not_now_button">Ne dabar</string>
 
     <!-- FindByActivity -->
     <!-- Title of activity when finding by username -->
@@ -8732,7 +8367,6 @@
 
     <!-- BackupAlertBottomSheet -->
     <!-- Sheet title when media backups have been disabled -->
-    <string name="BackupAlertBottomSheet__your_backups_subscription_expired">Baigėsi atsarginių kopijų prenumeratos galiojimas</string>
     <!-- Sheet body part 1 when media backups have been disabled. Placeholder is the number of days until deletion. -->
     <plurals name="BackupAlertBottomSheet__your_backup_plan_has_expired">
         <item quantity="one">Baigėsi atsarginės kopijos plano galiojimo laikas, nes jo nepavyko atnaujinti naudojant dabartinį mokėjimo būdą. Po %1$d d. įrašai iš atsarginių kopijų bus ištrinti.</item>
@@ -8928,21 +8562,15 @@
     <!-- Displayed as the user\'s payment method as a label in a preference row -->
     <string name="BackupsTypeSettingsFragment__credit_or_debit_card">Kredito arba debeto kortelė</string>
     <!-- Displayed as the user\'s payment method as a label in a preference row -->
-    <string name="BackupsTypeSettingsFragment__iDEAL">iDEAL</string>
     <!-- Displayed as the user\'s payment method as a label in a preference row -->
-    <string name="BackupsTypeSettingsFragment__google_pay">Google Pay</string>
     <!-- Displayed as the user\'s payment method as a label in a preference row -->
-    <string name="BackupsTypeSettingsFragment__bank_transfer">Banko pavedimas</string>
     <!-- Displayed as the user\'s payment method as a label in a preference row -->
-    <string name="BackupsTypeSettingsFragment__paypal">PayPal</string>
     <!-- Displayed as the user\'s payment method as a label in a preference row -->
     <string name="BackupsTypeSettingsFragment__unknown">Nežinoma</string>
     <!-- Row title for entering payment history -->
-    <string name="BackupsTypeSettingsFragment__payment_history">Mokėjimų istorija</string>
     <!-- Row description detailing renewal information. First placeholder is formatted price. Second placeholder is formatted date. -->
     <string name="BackupsTypeSettingsFragment__s_month_renews_s">%1$s/mėnesį · Atsinaujina %2$s</string>
     <!-- Row title to change or cancel subscription -->
-    <string name="BackupsTypeSettingsFragment__change_or_cancel_subscription">Pakeisti arba nutraukti prenumeratą</string>
 
     <!-- GooglePlayServicesAvailability -->
     <!-- Dialog title when Google Play services are missing from the device -->
@@ -9098,7 +8726,6 @@
     <!-- Text shown in a popup indicating that the user needs to enter their screen lock -->
     <string name="RemoteBackupsSettingsFragment__authenticatino_required">Reikalingas autentifikavimas</string>
     <!-- Row label to launch payment history screen -->
-    <string name="RemoteBackupsSettingsFragment__payment_history">Mokėjimų istorija</string>
     <!-- Section header for backup information -->
     <string name="RemoteBackupsSettingsFragment__backup_details">Informacija apie atsarginę kopiją</string>
     <!-- Row label to allow the restoration of a backup to occur while on cellular connection -->
@@ -9543,7 +9170,6 @@
     <!-- Primary action button label when selecting paid tier when Google Play API isn\'t available -->
     <string name="MessageBackupsTypeSelectionScreen__more_about_this_plan">Daugiau apie šį planą</string>
     <!-- Secondary action button label when selecting a backup tier with a current selection -->
-    <string name="MessageBackupsTypeSelectionScreen__cancel_subscription">Nutraukti prenumeratą</string>
     <!-- MessageBackupsType block amount for free tier -->
     <string name="MessageBackupsTypeSelectionScreen__free">Nemokamas</string>
     <!-- MessageBackupsType block amount for paid tier when no pricing is available -->
@@ -9591,7 +9217,6 @@
     <!-- Action button label to cancel subscription and download later -->
     <string name="ConfirmBackupCancellationDialog__confirm_and_download_later">Patvirtinti ir atsisiųsti vėliau</string>
     <!-- Action button label to keep current subscription -->
-    <string name="ConfirmBackupCancellationDialog__keep_subscription">Išsaugoti prenumeratą</string>
 
     <!-- Accessible content description for the reminder view, describing the icon in the view. -->
     <string name="ReminderView_icon_content_description">Priminimo piktograma</string>

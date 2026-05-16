@@ -24,7 +24,6 @@
   <!-- Removed by excludeNonTranslatables <string name="donate_faq_url" translatable="false">https://support.signal.org/hc/articles/360031949872#donate</string> -->
 
     <!-- First placeholder is productId, second placeholder is app package -->
-    <string name="backup_subscription_management_url">https://play.google.com/store/account/subscriptions?sku=%1$s&amp;package=%2$s</string>
 
     <string name="yes">Áno</string>
     <string name="no">Nie</string>
@@ -158,7 +157,6 @@
 
     <!-- Fcm notifications -->
     <!-- Notification we show when there may be messages for you, but we cannot connect to the server to check -->
-    <string name="FcmFetchManager__you_may_have_messages">Pravdepodobne máte nové správy</string>
 
     <!-- BlockedUsersActivity -->
     <string name="BlockedUsersActivity__blocked_users">Blokovaní používatelia</string>
@@ -172,45 +170,26 @@
 
     <!-- CreditCardFragment -->
     <!-- Title of fragment -->
-    <string name="CreditCardFragment__credit_or_debit_card">Kreditná alebo debetná karta</string>
     <!-- Explanation of how to fill in the form and a note about pii, displayed above the credit card text fields -->
-    <string name="CreditCardFragment__enter_your_card_details">Zadajte údaje z platobnej karty. Signal nezhromažďuje ani neukladá vaše osobné údaje.</string>
     <!-- Displayed as a hint in the card number text field -->
-    <string name="CreditCardFragment__card_number">Číslo karty</string>
     <!-- Displayed as a hint in the card expiry text field -->
-    <string name="CreditCardFragment__mm_yy">MM/RR</string>
     <!-- Displayed as a hint in the card cvv text field -->
-    <string name="CreditCardFragment__cvv">CVV</string>
     <!-- Error displayed under the card number text field when there is an invalid card number entered -->
-    <string name="CreditCardFragment__invalid_card_number">Neplatné číslo karty</string>
     <!-- Error displayed under the card expiry text field when the card is expired -->
-    <string name="CreditCardFragment__card_has_expired">Platnosť karty vypršala</string>
     <!-- Error displayed under the card cvv text field when the cvv is too short -->
-    <string name="CreditCardFragment__code_is_too_short">Kód je príliš krátky</string>
     <!-- Error displayed under the card cvv text field when the cvv is too long -->
-    <string name="CreditCardFragment__code_is_too_long">Kód je príliš dlhý</string>
     <!-- Error displayed under the card cvv text field when the cvv is invalid -->
-    <string name="CreditCardFragment__invalid_code">Neplatný kód</string>
     <!-- Error displayed under the card expiry text field when the expiry month is invalid -->
-    <string name="CreditCardFragment__invalid_month">Neplatný mesiac</string>
     <!-- Error displayed under the card expiry text field when the expiry is missing the year -->
-    <string name="CreditCardFragment__year_required">Vyžaduje sa rok</string>
     <!-- Error displayed under the card expiry text field when the expiry year is invalid -->
-    <string name="CreditCardFragment__invalid_year">Neplatný rok</string>
     <!-- Button label to confirm credit card input and proceed with one-time payment -->
-    <string name="CreditCardFragment__donate_s">Prispieť %1$s</string>
     <!-- Button label to confirm credit card input and proceed with subscription payment -->
-    <string name="CreditCardFragment__donate_s_month">Prispieť %1$s/mesačne</string>
     <!-- Button label to confirm credit card input and proceed with backups payment. Placeholder is formatted price. -->
-    <string name="CreditCardFragment__pay_s_month">Prispieť %1$s/mesačne</string>
 
     <!-- OneTimeDonationPreference -->
     <!-- Preference title with placeholder for amount. -->
-    <string name="OneTimeDonationPreference__one_time_s">Jednorazovo %1$s</string>
     <!-- Preference subtitle when donation is pending -->
-    <string name="OneTimeDonationPreference__donation_pending">Čaká sa na príspevok</string>
     <!-- Preference subtitle when donation is processing -->
-    <string name="OneTimeDonationPreference__donation_processing">Príspevok sa spracováva</string>
 
     <!-- BlockUnblockDialog -->
     <string name="BlockUnblockDialog_block_and_leave_s">Blokovať a opustiť %1$s?</string>
@@ -4481,7 +4460,6 @@
     <string name="preferences__slow">Pomaly</string>
     <string name="preferences__help">Pomocník</string>
     <string name="preferences__advanced">Rozšírené</string>
-    <string name="preferences__donate_to_signal">Prispieť na Signal</string>
     <!-- Preference label for making one-time donations to Signal -->
     <string name="preferences__privacy">Súkromie</string>
     <!-- Preference label for stories -->
@@ -4675,9 +4653,6 @@
 
     <!-- Payments -->
     <string name="PaymentsActivityFragment__all_activity">Všetky aktivity</string>
-    <string name="PaymentsAllActivityFragment__all">Všetko</string>
-    <string name="PaymentsAllActivityFragment__sent">Odoslaná</string>
-    <string name="PaymentsAllActivityFragment__received">Prijatá</string>
 
     <!-- Displayed on a welcome screen for payments -->
     <string name="PaymentsHomeFragment_introducing_payments">Predstavujeme platby</string>
@@ -4686,58 +4661,28 @@
     <string name="PaymentsHomeFragment__activating_payments">Aktivujú sa platby…</string>
     <string name="PaymentsHomeFragment__restore_payments_account">Obnovte platobný účet</string>
     <string name="PaymentsHomeFragment__no_recent_activity_yet">Zatiaľ žiadna nedávna aktivita</string>
-    <string name="PaymentsHomeFragment__recent_activity">Posledná aktivita</string>
     <string name="PaymentsHomeFragment__see_all">Pozrieť všetky</string>
     <string name="PaymentsHomeFragment__add_funds">Pridať prostriedky</string>
     <string name="PaymentsHomeFragment__send">Poslať</string>
-    <string name="PaymentsHomeFragment__sent_s">Odoslané %1$s</string>
-    <string name="PaymentsHomeFragment__received_s">Prijaté %1$s</string>
     <string name="PaymentsHomeFragment__transfer_to_exchange">Prevod na výmenu</string>
     <string name="PaymentsHomeFragment__currency_conversion">Prepočet meny</string>
     <string name="PaymentsHomeFragment__deactivate_payments">Deaktivovanie platby</string>
     <string name="PaymentsHomeFragment__recovery_phrase">Fráza na obnovenie</string>
     <string name="PaymentsHomeFragment__help">Pomocník</string>
-    <string name="PaymentsHomeFragment__coin_cleanup_fee">Poplatok za vyčistenie mincí</string>
-    <string name="PaymentsHomeFragment__sent_payment">Odoslaná platba</string>
-    <string name="PaymentsHomeFragment__received_payment">Prijatá platba</string>
-    <string name="PaymentsHomeFragment__processing_payment">Spracovanie platby</string>
-    <string name="PaymentsHomeFragment__unknown_amount">---</string>
-    <string name="PaymentsHomeFragment__currency_conversion_not_available">Prepočet meny nie je k dispozícii</string>
-    <string name="PaymentsHomeFragment__cant_display_currency_conversion">Prepočet meny nie je možné zobraziť. Skontrolujte pripojenie telefónu a skúste to znova.</string>
-    <string name="PaymentsHomeFragment__payments_is_not_available_in_your_region">Platby nie sú k dispozícii vo vašej oblasti.</string>
-    <string name="PaymentsHomeFragment__could_not_enable_payments">Nepodarilo sa povoliť platby. Skúste to znova neskôr.</string>
-    <string name="PaymentsHomeFragment__deactivate_payments_question">Deaktivovať platby?</string>
-    <string name="PaymentsHomeFragment__you_will_not_be_able_to_send">Ak deaktivujete platby, nebudete môcť odosielať ani prijímať MobileCoin v Signal.</string>
-    <string name="PaymentsHomeFragment__deactivate">Deaktivovať</string>
-    <string name="PaymentsHomeFragment__continue">Pokračovať</string>
-    <string name="PaymentsHomeFragment__balance_is_not_currently_available">Zostatok nie je momentálne k dispozícii.</string>
-    <string name="PaymentsHomeFragment__payments_deactivated">Platby sú deaktivované.</string>
-    <string name="PaymentsHomeFragment__payment_failed">Platba zlyhala</string>
-    <string name="PaymentsHomeFragment__details">Podrobnosti</string>
   <!-- Removed by excludeNonTranslatables <string name="PaymentsHomeFragment__learn_more__activate_payments" translatable="false">https://support.signal.org/hc/articles/360057625692#payments_activate</string> -->
     <!-- Displayed as a description in a dialog when the user tries to activate payments -->
-    <string name="PaymentsHomeFragment__you_can_use_signal_to_send_and">Signal môžete používať na posielanie a prijímanie MobileCoinu. Všetky platby podliehajú podmienkam používania MobileCoinov a peňaženky MobileCoin. Môžu sa vyskytnúť určité problémy a platby alebo zostatky, ktoré sa prípadne stratia, nie je možné obnoviť. </string>
-    <string name="PaymentsHomeFragment__activate">Aktivovať</string>
-    <string name="PaymentsHomeFragment__view_mobile_coin_terms">Zobraziť podmienky MobileCoin</string>
-    <string name="PaymentsHomeFragment__payments_not_available">Platby v službe Signal už nie sú k dispozícii. Stále môžete prevádzať prostriedky na burzu, ale už nemôžete posielať a prijímať platby ani pridávať prostriedky.</string>
 
   <!-- Removed by excludeNonTranslatables <string name="PaymentsHomeFragment__mobile_coin_terms_url" translatable="false">https://www.mobilecoin.com/terms-of-use.html</string> -->
     <!-- Alert dialog title which shows up after a payment to turn on payment lock -->
-    <string name="PaymentsHomeFragment__turn_on">Zapnúť platobný zámok pre budúce platby?</string>
     <!-- Alert dialog description for why payment lock should be enabled before sending payments -->
-    <string name="PaymentsHomeFragment__add_an_additional_layer">Zvýšte zabezpečenie a na prevod prostriedkov si vyžiadajte zámok obrazovky Android alebo odtlačok prsta.</string>
     <!-- Alert dialog button to enable payment lock -->
     <string name="PaymentsHomeFragment__enable">Zapnúť</string>
     <!-- Alert dialog button to not enable payment lock for now -->
     <string name="PaymentsHomeFragment__not_now">Teraz nie</string>
     <!-- Alert dialog title which shows up to update app to send payments -->
-    <string name="PaymentsHomeFragment__update_required">Vyžaduje sa aktualizácia</string>
     <!-- Alert dialog description that app update is required to send payments-->
-    <string name="PaymentsHomeFragment__an_update_is_required">Ak si želáte naďalej odosielať a prijímať platby a mať prehľad o aktuálnom zostatku platieb, aktualizujte si aplikáciu.</string>
     <!-- Alert dialog button to cancel -->
-    <string name="PaymentsHomeFragment__cancel">Zrušiť</string>
     <!-- Alert dialog button to update now -->
-    <string name="PaymentsHomeFragment__update_now">Aktualizovať teraz</string>
 
 
     <!-- PaymentsSecuritySetupFragment -->
@@ -4752,46 +4697,26 @@
     <!-- Option to cancel -->
     <string name="PaymentsSecuritySetupFragment__not_now">Teraz nie</string>
     <!-- Dialog title to confirm skipping the step -->
-    <string name="PaymentsSecuritySetupFragment__skip_this_step">Preskočiť tento krok?</string>
     <!-- Dialog description to let users know why payment lock is required -->
-    <string name="PaymentsSecuritySetupFragment__skipping_this_step">Preskočením tohto kroku umožníte komukoľvek, kto má fyzický prístup k vášmu telefónu, previesť prostriedky alebo pozrieť si vašu frázu na obnovenie.</string>
     <!-- Dialog option to cancel -->
-    <string name="PaymentsSecuritySetupFragment__cancel">Zrušiť</string>
     <!-- Dialog option to skip -->
-    <string name="PaymentsSecuritySetupFragment__skip">Preskočiť</string>
 
     <!-- PaymentsAddMoneyFragment -->
     <string name="PaymentsAddMoneyFragment__add_funds">Pridať prostriedky</string>
     <string name="PaymentsAddMoneyFragment__your_wallet_address">Adresa vašej peňaženky</string>
     <string name="PaymentsAddMoneyFragment__copy">Kopírovať</string>
-    <string name="PaymentsAddMoneyFragment__copied_to_clipboard">Skopírované do schránky</string>
     <string name="PaymentsAddMoneyFragment__to_add_funds">Ak chcete pridať prostriedky, pošlite MobileCoin na svoju adresu peňaženky. Začnite transakciu zo svojho účtu na burze, ktorá podporuje MobileCoin, potom naskenujte QR kód alebo skopírujte adresu svojej peňaženky.</string>
   <!-- Removed by excludeNonTranslatables <string name="PaymentsAddMoneyFragment__learn_more__information" translatable="false">https://support.signal.org/hc/articles/360057625692#payments_transfer_from_exchange</string> -->
 
     <!-- PaymentsDetailsFragment -->
     <string name="PaymentsDetailsFragment__details">Podrobnosti</string>
     <string name="PaymentsDetailsFragment__status">Stav</string>
-    <string name="PaymentsDetailsFragment__submitting_payment">Odosielanie platby…</string>
-    <string name="PaymentsDetailsFragment__processing_payment">Spracovanie platby…</string>
-    <string name="PaymentsDetailsFragment__payment_complete">Platba dokončená</string>
-    <string name="PaymentsDetailsFragment__payment_failed">Platba zlyhala</string>
     <string name="PaymentsDetailsFragment__network_fee">Sieťový poplatok</string>
     <string name="PaymentsDetailsFragment__sent_by">Odoslané používateľom</string>
-    <string name="PaymentsDetailsFragment__sent_to_s">Odoslané používateľovi %1$s</string>
-    <string name="PaymentsDetailsFragment__you_on_s_at_s">Vy na %1$s s %2$s</string>
-    <string name="PaymentsDetailsFragment__s_on_s_at_s">%1$s na %2$s s %3$s</string>
     <!-- Prefix to a name to indicate who a payment was sent to -->
-    <string name="PaymentsDetailsFragment__to">Komu</string>
-    <string name="PaymentsDetailsFragment__from">Od</string>
     <string name="PaymentsDetailsFragment__information">Podrobnosti o transakcii vrátane sumy a času transakcie sú súčasťou MobileCoin Ledger.</string>
-    <string name="PaymentsDetailsFragment__coin_cleanup_fee">Poplatok za vyčistenie mincí</string>
-    <string name="PaymentsDetailsFragment__coin_cleanup_information">\"Poplatok za upratanie mincí\" sa účtuje, keď mince vo vašom vlastníctve nie je možné skombinovať na dokončenie transakcie. Upratanie vám umožní posielať platby naďalej.</string>
-    <string name="PaymentsDetailsFragment__no_details_available">Pre túto transakciu nie sú k dispozícii žiadne ďalšie podrobnosti</string>
   <!-- Removed by excludeNonTranslatables <string name="PaymentsDetailsFragment__learn_more__information" translatable="false">https://support.signal.org/hc/articles/360057625692#payments_details</string> -->
   <!-- Removed by excludeNonTranslatables <string name="PaymentsDetailsFragment__learn_more__cleanup_fee" translatable="false">https://support.signal.org/hc/articles/360057625692#payments_details_fees</string> -->
-    <string name="PaymentsDetailsFragment__sent_payment">Odoslaná platba</string>
-    <string name="PaymentsDetailsFragment__received_payment">Prijatá platba</string>
-    <string name="PaymentsDeatilsFragment__payment_completed_s">Platba dokončená %1$s</string>
     <string name="PaymentsDetailsFragment__block_number">Číslo bloku</string>
 
     <!-- PaymentsTransferFragment -->
@@ -4800,13 +4725,6 @@
     <string name="PaymentsTransferFragment__to_scan_or_enter_wallet_address">Kam: Naskenujte alebo zadajte adresu peňaženky</string>
     <string name="PaymentsTransferFragment__you_can_transfer">MobileCoin môžete previesť vykonaním prevodu na adresu peňaženky poskytnutú zmenárňou. Adresa peňaženky je reťazec pozostávajúci z číslic a písmen a najčastejšie sa nachádza pod QR kódom.</string>
     <string name="PaymentsTransferFragment__next">Ďalší</string>
-    <string name="PaymentsTransferFragment__invalid_address">Neplatná adresa</string>
-    <string name="PaymentsTransferFragment__check_the_wallet_address">Skontrolujte adresu peňaženky, do ktorej sa snažíte previesť peniaze, a skúste to znovu.</string>
-    <string name="PaymentsTransferFragment__you_cant_transfer_to_your_own_signal_wallet_address">Nemôžete vykonať prevod na adresu vašej Signal peňaženky. Zadajte adresu peňaženky z vášho účtu v podporovanej burze.</string>
-    <string name="PaymentsTransferFragment__to_scan_a_qr_code_signal_needs">Na naskenovanie QR kódu potrebuje Signal prístup k fotoaparátu.</string>
-    <string name="PaymentsTransferFragment__signal_needs_the_camera_permission_to_capture_qr_code_go_to_settings">Pre načítanie QR kódu potrebuje Signal prístup k Fotoaparátu. Prosím v nastaveniach aplikácií zvoľte \"Oprávnenia\", a povoľte \"Fotoaparát\".</string>
-    <string name="PaymentsTransferFragment__to_scan_a_qr_code_signal_needs_access_to_the_camera">Na naskenovanie QR kódu potrebuje Signal prístup k fotoaparátu.</string>
-    <string name="PaymentsTransferFragment__settings">Nastavenia</string>
 
     <!-- PaymentsTransferQrScanFragment -->
     <string name="PaymentsTransferQrScanFragment__scan_address_qr_code">Naskenujte QR kód adresu</string>
@@ -4816,7 +4734,6 @@
     <!-- Button text to request the payment from a user -->
     <string name="CreatePaymentFragment__request">Žiadosť</string>
     <string name="CreatePaymentFragment__pay">Zaplať</string>
-    <string name="CreatePaymentFragment__available_balance_s">Disponibilný zostatok: %1$s</string>
     <string name="CreatePaymentFragment__toggle_content_description">Prepnúť</string>
     <string name="CreatePaymentFragment__1">1</string>
     <string name="CreatePaymentFragment__2">2</string>
@@ -4829,10 +4746,8 @@
     <string name="CreatePaymentFragment__9">9</string>
     <string name="CreatePaymentFragment__decimal">,</string>
     <string name="CreatePaymentFragment__0">0</string>
-    <string name="CreatePaymentFragment__lt">&lt;</string>
     <string name="CreatePaymentFragment__backspace">Backspace</string>
     <string name="CreatePaymentFragment__add_note">Pridať poznámku</string>
-    <string name="CreatePaymentFragment__conversions_are_just_estimates">Prepočty sú len odhadmi a nemusia byť presné.</string>
   <!-- Removed by excludeNonTranslatables <string name="CreatePaymentFragment__learn_more__conversions" translatable="false">https://support.signal.org/hc/articles/360057625692#payments_currency_conversion</string> -->
 
     <!-- EditNoteFragment -->
@@ -4842,26 +4757,10 @@
 
     <!-- ConfirmPaymentFragment -->
     <string name="ConfirmPayment__confirm_payment">Potvrďte platbu</string>
-    <string name="ConfirmPayment__network_fee">Sieťový poplatok</string>
-    <string name="ConfirmPayment__estimated_s">Odhadované %1$s</string>
     <!-- Prefix to a name to indicate who a payment will be sent to -->
-    <string name="ConfirmPayment__to">Komu</string>
-    <string name="ConfirmPayment__total_amount">Celková suma</string>
-    <string name="ConfirmPayment__balance_s">Zostatok: %1$s</string>
-    <string name="ConfirmPayment__submitting_payment">Odosielanie platby…</string>
-    <string name="ConfirmPayment__processing_payment">Spracovanie platby…</string>
-    <string name="ConfirmPayment__payment_complete">Platba dokončená</string>
-    <string name="ConfirmPayment__payment_failed">Platba zlyhala</string>
-    <string name="ConfirmPayment__payment_will_continue_processing">Platba bude pokračovať v spracovaní</string>
-    <string name="ConfirmPaymentFragment__invalid_recipient">Neplatný príjemca</string>
     <!-- Title of a dialog show when we were unable to present the user\'s screenlock before sending a payment -->
-    <string name="ConfirmPaymentFragment__failed_to_show_payment_lock">Nepodarilo sa zobraziť platobný zámok</string>
     <!-- Body of a dialog show when we were unable to present the user\'s screenlock before sending a payment -->
-    <string name="ConfirmPaymentFragment__you_enabled_payment_lock_in_the_settings">Povolili ste platobný zámok v nastaveniach, ale nie je možné ho zobraziť.</string>
     <!-- Button in a dialog that will take the user to the privacy settings -->
-    <string name="ConfirmPaymentFragment__go_to_settings">Prejsť na nastavenia</string>
-    <string name="ConfirmPaymentFragment__this_person_has_not_activated_payments">Táto osoba nemá aktivované platby</string>
-    <string name="ConfirmPaymentFragment__unable_to_request_a_network_fee">Nie je možné požiadať o sieťový poplatok. Ak chcete pokračovať v tejto platbe, ťuknite na tlačidlo OK to skúste znova.</string>
 
     <!-- BiometricDeviceAuthentication -->
     <!-- Biometric/Device authentication prompt title -->
@@ -4873,7 +4772,6 @@
 
     <!-- SetCurrencyFragment -->
     <string name="SetCurrencyFragment__set_currency">Nastaviť menu</string>
-    <string name="SetCurrencyFragment__all_currencies">Všetky meny</string>
 
     <!-- **************************************** -->
     <!-- menus -->
@@ -5791,20 +5689,9 @@
     <!-- InfoCard -->
     <string name="payment_info_card_about_mobilecoin">Čo je MobileCoin</string>
     <string name="payment_info_card_mobilecoin_is_a_new_privacy_focused_digital_currency">MobileCoin je nová digitálna mena zameraná na súkromie.</string>
-    <string name="payment_info_card_adding_funds">Pridávanie finančných prostriedkov</string>
-    <string name="payment_info_card_you_can_add_funds_for_use_in">Prostriedky na použitie v službe Signal môžete pridať poslaním MobileCoinov na adresu vašej peňaženky.</string>
-    <string name="payment_info_card_cashing_out">Vyberanie hotovosti</string>
-    <string name="payment_info_card_you_can_cash_out_mobilecoin">MobileCoin si kedykoľvek môžete zmeniť na hotovosť v zmenárni, ktorá podporuje MobileCoin. Jednoducho vykonajte prevod na váš účet v danej zmenárni.</string>
     <string name="payment_info_card_hide_this_card">Skryť túto kartu?</string>
-    <string name="payment_info_card_hide">Skryť</string>
     <!-- Title of save recovery phrase card -->
-    <string name="payment_info_card_save_recovery_phrase">Uložiť frázu na obnovenie</string>
-    <string name="payment_info_card_your_recovery_phrase_gives_you">Vaša fráza na obnovenie vám dáva ďalší spôsob, ako obnoviť váš platobný účet.</string>
     <!-- Button in save recovery phrase card -->
-    <string name="payment_info_card_save_your_phrase">Uložiť frázu</string>
-    <string name="payment_info_card_update_your_pin">Aktualizujte si PIN</string>
-    <string name="payment_info_card_with_a_high_balance">Pri vysokom zostatku by ste mohli zvážiť prechod na alfanumerický PIN. Zvýšili by ste tak ochranu vášho účtu.</string>
-    <string name="payment_info_card_update_pin">Aktualizovať PIN kód</string>
 
   <!-- Removed by excludeNonTranslatables <string name="payment_info_card__learn_more__about_mobilecoin" translatable="false">https://support.signal.org/hc/articles/360057625692#payments_which_ones</string> -->
   <!-- Removed by excludeNonTranslatables <string name="payment_info_card__learn_more__adding_to_your_wallet" translatable="false">https://support.signal.org/hc/articles/360057625692#payments_transfer_from_exchange</string> -->
@@ -5816,18 +5703,12 @@
     <string name="DeactivateWalletFragment__its_recommended_that_you">Odporúčame vám, aby ste pred deaktiváciou platieb previedli svoje prostriedky na adresu inej peňaženky. Ak sa rozhodnete, že svoje prostriedky neprevediete teraz, zostanú v peňaženke prepojenej so službou Signal, ak platby opätovne aktivujete.</string>
     <string name="DeactivateWalletFragment__transfer_remaining_balance">Previesť zostávajúcu čiastku</string>
     <string name="DeactivateWalletFragment__deactivate_without_transferring">Deaktivovať bez prevodu</string>
-    <string name="DeactivateWalletFragment__deactivate">Deaktivovať</string>
-    <string name="DeactivateWalletFragment__deactivate_without_transferring_question">Deaktivovať bez prevodu?</string>
-    <string name="DeactivateWalletFragment__your_balance_will_remain">V prípade, že sa rozhodnete opätovne aktivovať platby, váš zostatok zostane vo vašej peňaženke prepojenej so službou Signal.</string>
-    <string name="DeactivateWalletFragment__error_deactivating_wallet">Chyba pri deaktivácii peňaženky.</string>
   <!-- Removed by excludeNonTranslatables <string name="DeactivateWalletFragment__learn_more__we_recommend_transferring_your_funds" translatable="false">https://support.signal.org/hc/articles/360057625692#payments_deactivate</string> -->
 
     <!-- PaymentsRecoveryStartFragment -->
     <string name="PaymentsRecoveryStartFragment__recovery_phrase">Fráza na obnovenie</string>
     <string name="PaymentsRecoveryStartFragment__view_recovery_phrase">Zobraziť frázu na obnovenie</string>
     <!-- Title in save recovery phrase screen -->
-    <string name="PaymentsRecoveryStartFragment__save_recovery_phrase">Uložiť frázu na obnovenie</string>
-    <string name="PaymentsRecoveryStartFragment__enter_recovery_phrase">Zadajte frázu na obnovenie</string>
     <plurals name="PaymentsRecoveryStartFragment__your_balance_will_automatically_restore">
         <item quantity="one">Váš zostatok sa automaticky obnoví, keď si Signal preinštalujete, ak potvrdíte váš Signal PIN. Svoj zostatok môžete taktiež obnoviť pomocou frázy na obnovenie, čo je %1$d-slovná fráza, ktorou disponujete iba vy. Zapíšte si ju a uložte na bezpečné miesto.</item>
         <item quantity="few">Váš zostatok sa automaticky obnoví, keď si Signal preinštalujete, ak potvrdíte váš Signal PIN. Svoj zostatok môžete taktiež obnoviť pomocou frázy na obnovenie, čo je %1$d-slovná fráza, ktorou disponujete iba vy. Zapíšte si ju a uložte na bezpečné miesto.</item>
@@ -5835,28 +5716,18 @@
         <item quantity="other">Váš zostatok sa automaticky obnoví, keď si Signal preinštalujete, ak potvrdíte váš Signal PIN. Svoj zostatok môžete taktiež obnoviť pomocou frázy na obnovenie, čo je %1$d-slovná fráza, ktorou disponujete iba vy. Zapíšte si ju a uložte na bezpečné miesto.</item>
     </plurals>
     <!-- Description in save recovery phrase screen which shows up when user has non zero balance -->
-    <string name="PaymentsRecoveryStartFragment__got_balance">Máte zostatok! Je čas uložiť si frázu na obnovenie—24-slovný kľúč, ktorý môžete použiť na obnovenie zostatku.</string>
     <!-- Description in save recovery phrase screen which shows up when user navigates from info card -->
-    <string name="PaymentsRecoveryStartFragment__time_to_save">Je čas uložiť si frázu na obnovenie—24-slovný kľúč, ktorý môžete použiť na obnovenie zostatku.</string>
-    <string name="PaymentsRecoveryStartFragment__your_recovery_phrase_is_a">Vaša fráza na obnovenie je jedinečná s %1$d-slovami. Pomocou tejto frázy obnovíte zostatok.</string>
     <string name="PaymentsRecoveryStartFragment__start">Štart</string>
-    <string name="PaymentsRecoveryStartFragment__enter_manually">Zadať manuálne</string>
     <string name="PaymentsRecoveryStartFragment__paste_from_clipboard">Prilepiť zo schránky</string>
     <!-- Alert dialog title which asks before going back if user wants to save recovery phrase -->
-    <string name="PaymentsRecoveryStartFragment__continue_without_saving">Pokračovať bez uloženia?</string>
     <!-- Alert dialog description to let user know why recovery phrase needs to be saved -->
-    <string name="PaymentsRecoveryStartFragment__your_recovery_phrase">Fráza na obnovenie vám umožní obnoviť zostatok aj v tom najhoršom prípade. Dôrazne vám preto odporúčame, aby ste si ju uložili.</string>
     <!-- Alert dialog option to skip recovery phrase -->
-    <string name="PaymentsRecoveryStartFragment__skip_recovery_phrase">Preskočiť frázu na obnovenie</string>
     <!-- Alert dialog option to cancel dialog-->
-    <string name="PaymentsRecoveryStartFragment__cancel">Zrušiť</string>
 
     <!-- PaymentsRecoveryPasteFragment -->
     <string name="PaymentsRecoveryPasteFragment__paste_recovery_phrase">Prilepiť frázu na obnovenie</string>
     <string name="PaymentsRecoveryPasteFragment__recovery_phrase">Fráza na obnovenie</string>
     <string name="PaymentsRecoveryPasteFragment__next">Ďalší</string>
-    <string name="PaymentsRecoveryPasteFragment__invalid_recovery_phrase">Neplatná fráza na obnovenie</string>
-    <string name="PaymentsRecoveryPasteFragment__make_sure">Uistite sa, že ste zadali %1$d slov, a skúste to znova.</string>
 
   <!-- Removed by excludeNonTranslatables <string name="PaymentsRecoveryStartFragment__learn_more__view" translatable="false">https://support.signal.org/hc/articles/360057625692#payments_wallet_view_passphrase</string> -->
   <!-- Removed by excludeNonTranslatables <string name="PaymentsRecoveryStartFragment__learn_more__restore" translatable="false">https://support.signal.org/hc/articles/360057625692#payments_wallet_restore_passphrase</string> -->
@@ -5866,38 +5737,24 @@
     <string name="PaymentsRecoveryPhraseFragment__edit">Upraviť</string>
     <string name="PaymentsRecoveryPhraseFragment__your_recovery_phrase">Vaša fráza na obnovenie</string>
     <string name="PaymentsRecoveryPhraseFragment__write_down_the_following_d_words">Zapíšte si nasledovných %1$d slov v poradí. Tento zoznam si uložte na bezpečnom mieste.</string>
-    <string name="PaymentsRecoveryPhraseFragment__make_sure_youve_entered">Uistite sa, že ste svoju frázu zadali správne.</string>
     <string name="PaymentsRecoveryPhraseFragment__do_not_screenshot_or_send_by_email">Do not screenshot or send by email.</string>
-    <string name="PaymentsRecoveryPhraseFragment__payments_account_restored">Platobný účet bol obnovený.</string>
-    <string name="PaymentsRecoveryPhraseFragment__invalid_recovery_phrase">Neplatná fráza na obnovenie.</string>
-    <string name="PaymentsRecoveryPhraseFragment__make_sure_youve_entered_your_phrase_correctly_and_try_again">Skontrolujte, či ste frázu zadali správne, a skúste to znova.</string>
-    <string name="PaymentsRecoveryPhraseFragment__copy_to_clipboard">Kopírovať do schránky?</string>
-    <string name="PaymentsRecoveryPhraseFragment__if_you_choose_to_store">Ak sa vašu frázu na obnovenie rozhodnete uložiť digitálne, uistite sa, že je uložená bezpečne na nejakom mieste, ktorému dôverujete.</string>
     <string name="PaymentsRecoveryPhraseFragment__copy">Kopírovať</string>
 
     <!-- PaymentsRecoveryPhraseConfirmFragment -->
     <string name="PaymentRecoveryPhraseConfirmFragment__confirm_recovery_phrase">Potvrdiť frázu na obnovenie</string>
     <string name="PaymentRecoveryPhraseConfirmFragment__enter_the_following_words">Zadajte nasledujúce slová z vašej frázy na obnovenie.</string>
-    <string name="PaymentRecoveryPhraseConfirmFragment__word_d">Slovo %1$d</string>
     <string name="PaymentRecoveryPhraseConfirmFragment__see_phrase_again">Zobraziť frázu znovu</string>
     <string name="PaymentRecoveryPhraseConfirmFragment__done">Hotovo</string>
-    <string name="PaymentRecoveryPhraseConfirmFragment__recovery_phrase_confirmed">Fráza na obnovenie potvrdená</string>
 
     <!-- PaymentsRecoveryEntryFragment -->
     <string name="PaymentsRecoveryEntryFragment__enter_recovery_phrase">Zadajte frázu na obnovenie</string>
-    <string name="PaymentsRecoveryEntryFragment__enter_word_d">Zadajte slovo %1$d</string>
-    <string name="PaymentsRecoveryEntryFragment__word_d">Slovo %1$d</string>
     <string name="PaymentsRecoveryEntryFragment__next">Ďalší</string>
-    <string name="PaymentsRecoveryEntryFragment__invalid_word">Neplatné slovo</string>
 
     <!-- UnreadPayments -->
     <string name="UnreadPayments__s_sent_you_s">%1$s vám poslal %2$s</string>
     <string name="UnreadPayments__d_new_payment_notifications">%1$d nové oznámenia o platbe</string>
 
     <!-- CanNotSendPaymentDialog -->
-    <string name="CanNotSendPaymentDialog__cant_send_payment">Platbu nie je možné odoslať</string>
-    <string name="CanNotSendPaymentDialog__to_send_a_payment_to_this_user">Ak chcete tomuto používateľovi poslať platbu, musí od vás prijať žiadosť o správu. Pošlite mu správu na vytvorenie žiadosti o správu.</string>
-    <string name="CanNotSendPaymentDialog__send_a_message">Poslať správu</string>
 
     <!-- GroupsInCommonMessageRequest -->
     <string name="GroupsInCommonMessageRequest__you_have_no_groups_in_common_with_this_person">S touto osobou nemáte spoločné žiadne skupiny. Pred prijatím žiadosti starostlivo skontrolujte, aby ste predišli nežiaducim správam.</string>
@@ -6352,13 +6209,9 @@
     <!-- ChatColorGradientTool -->
 
     <!-- Title text for prompt to donate. Shown in a popup at the bottom of the chat list. -->
-    <string name="Donate2022Q2Megaphone_donate_to_signal">Prispieť na Signal</string>
     <!-- Body text for prompt to donate. Shown in a popup at the bottom of the chat list. -->
-    <string name="Donate2022Q2Megaphone_signal_is_powered_by_people_like_you">Signal poháňajú vpred ľudia ako vy. Prispievajte mesačne a získajte odznak.</string>
     <!-- Button label that brings a user to the donate screen. Shown in a popup at the bottom of the chat list. -->
-    <string name="Donate2022Q2Megaphone_donate">Prispieť</string>
     <!-- Button label that dismissed a prompt to donate. Shown in a popup at the bottom of the chat list. -->
-    <string name="Donate2022Q2Megaphone_not_now">Teraz nie</string>
 
     <!-- EditReactionsFragment -->
     <string name="EditReactionsFragment__customize_reactions">Prispôsobiť reakcie</string>
@@ -6375,11 +6228,7 @@
     <string name="AddAProfilePhotoMegaphone__add_photo">Pridať fotku</string>
 
     <!-- BecomeASustainerMegaphone -->
-    <string name="BecomeASustainerMegaphone__become_a_sustainer">Staňte sa Sustainerom</string>
     <!-- Displayed in the Become a Sustainer megaphone -->
-    <string name="BecomeASustainerMegaphone__signal_is_powered_by">Signal poháňajú vpred ľudia ako vy. Prispejte a získajte odznak.</string>
-    <string name="BecomeASustainerMegaphone__not_now">Teraz nie</string>
-    <string name="BecomeASustainerMegaphone__donate">Prispieť</string>
 
     <!-- KeyboardPagerFragment -->
     <string name="KeyboardPagerFragment_emoji">Emotikony</string>
@@ -6744,15 +6593,9 @@
     <string name="MediaCaptureFragment_device_link_dialog_continue">Pokračovať</string>
 
 
-    <string name="BadgesOverviewFragment__my_badges">Moje odznaky</string>
     <string name="BadgesOverviewFragment__featured_badge">Zobrazený odznak</string>
-    <string name="BadgesOverviewFragment__display_badges_on_profile">Zobraziť odznaky v profile</string>
-    <string name="BadgesOverviewFragment__failed_to_update_profile">Aktualizácia profilu zlyhala</string>
 
 
-    <string name="SelectFeaturedBadgeFragment__select_a_badge">Vyberte odznak</string>
-    <string name="SelectFeaturedBadgeFragment__you_must_select_a_badge">Musíte vybrať odznak</string>
-    <string name="SelectFeaturedBadgeFragment__failed_to_update_profile">Aktualizácia profilu zlyhala</string>
 
     <!-- Displayed on primary button in the bottom sheet as a call-to-action to launch into the donation flow -->
     <string name="ViewBadgeBottomSheetDialogFragment__donate_now">Prispieť</string>
@@ -6765,29 +6608,21 @@
 
     <string name="ImageView__badge">Odznak</string>
 
-    <string name="SubscribeFragment__cancel_subscription">Zrušiť predplatné</string>
     <string name="SubscribeFragment__confirm_cancellation">Potvrdiť zrušenie?</string>
     <string name="SubscribeFragment__you_wont_be_charged_again">Už vám nebudeme účtovať žiadne poplatky. Na konci fakturačného obdobia bude váš odznak odstránený z vášho profilu.</string>
     <string name="SubscribeFragment__not_now">Teraz nie</string>
     <string name="SubscribeFragment__confirm">Potvrdiť</string>
-    <string name="SubscribeFragment__update_subscription">Aktualizovať predplatné</string>
-    <string name="SubscribeFragment__your_subscription_has_been_cancelled">Vaše predplatné bolo zrušené.</string>
-    <string name="SubscribeFragment__update_subscription_question">Aktualizovať predplatné?</string>
     <string name="SubscribeFragment__update">Aktualizovať</string>
     <string name="SubscribeFragment__you_will_be_charged_the_full_amount_s_of">Dnes vám bude naúčtovaná celá suma (%1$s) nového predplatného. Vaše predplatné sa bude obnovovať mesačne.</string>
 
-    <string name="Subscription__s_per_month">%1$s/mesiac</string>
     <!-- Shown when a subscription is active and isn\'t going to expire at the end of the term -->
-    <string name="Subscription__renews_s">Obnoví sa %1$s</string>
     <!-- Shown when a subscription is active and is going to expire at the end of the term -->
-    <string name="Subscription__expires_s">Platnosť vyprší %1$s</string>
 
     <!-- Title of learn more sheet -->
     <string name="SubscribeLearnMoreBottomSheetDialogFragment__signal_is_different">Ako nezávislá nezisková organizácia Signal zaisťuje maximálne súkromie pre správy a hovory. Žiadne reklamy, žiadne sledovače, žiadne monitorovanie. Prispejte ešte dnes a podporte Signal.</string>
     <!-- First small text blurb on learn more sheet -->
     <string name="SubscribeLearnMoreBottomSheetDialogFragment__private_messaging">No ads, no trackers, no surveillance. Donate today to support Signal.</string>
     <!-- Second small text blurb on learn more sheet -->
-    <string name="SubscribeLearnMoreBottomSheetDialogFragment__donate_and_get_badge">Prispejte a získajte odznak na svojom profile</string>
     <!-- Third small text blurb on learn more sheet -->
     <string name="SubscribeLearnMoreBottomSheetDialogFragment__your_privacy_is_our_mission">Záleží nám na vašom súkromí</string>
     <!-- Fourth small text blurb on learn more sheet. Non-English translations should use "Signal is a nonprofit." instead, dropping the 501c3 reference. -->
@@ -6795,60 +6630,37 @@
 
     <string name="SubscribeThanksForYourSupportBottomSheetDialogFragment__thanks_for_your_support">Ďakujem za tvoju podporu!</string>
     <!-- Subtext underneath the dialog title on the thanks sheet -->
-    <string name="SubscribeThanksForYourSupportBottomSheetDialogFragment__youve_earned_a_donor_badge">Získali ste odznak prispievateľa od Signalu! Ukážte ho vo svojom profile a dajte tak najavo svoju podporu.</string>
     <string name="SubscribeThanksForYourSupportBottomSheetDialogFragment__you_can_also">Môžete tiež</string>
-    <string name="SubscribeThanksForYourSupportBottomSheetDialogFragment__become_a_montly_sustainer">stať sa mesačným podporovateľom.</string>
     <string name="SubscribeThanksForYourSupportBottomSheetDialogFragment__display_on_profile">Zobraziť v profile</string>
-    <string name="SubscribeThanksForYourSupportBottomSheetDialogFragment__make_featured_badge">Zobraziť odznak v profile</string>
     <string name="SubscribeThanksForYourSupportBottomSheetDialogFragment__continue">Pokračovať</string>
     <string name="ThanksForYourSupportBottomSheetFragment__when_you_have_more">Ak máte viac ako jeden odznak, môžete si vybrať ten, ktorý sa zobrazí ostatným vo vašom profile.</string>
 
-    <string name="BecomeASustainerFragment__get_badges">Prispievaním na Signal získate odznaky pre svoj profil.</string>
-    <string name="BecomeASustainerFragment__signal_is_a_non_profit">Signal je nezisková organizácia bez inzerentov a investorov, ktorú podporujú iba ľudia ako vy.</string>
 
     <!-- Button label for creating a donation -->
-    <string name="ManageDonationsFragment__donate_to_signal">Prispieť na Signal</string>
     <!-- Heading for more area of manage subscriptions page -->
-    <string name="ManageDonationsFragment__more">Viac</string>
     <!-- Heading for receipts area of manage subscriptions page -->
     <!-- Heading for my subscription area of manage subscriptions page -->
-    <string name="ManageDonationsFragment__my_support">Moja podpora</string>
-    <string name="ManageDonationsFragment__manage_subscription">Spravovať predplatné</string>
     <!-- Label for Donation Receipts button -->
-    <string name="ManageDonationsFragment__donation_receipts">Potvrdenia o prispení</string>
-    <string name="ManageDonationsFragment__badges">Odznaky</string>
     <!-- Label that externally links to Signal Donor FAQ page -->
-    <string name="ManageDonationsFragment__subscription_faq">Často kladené otázky prispievateľov</string>
     <!-- Preference heading for other ways to donate -->
-    <string name="ManageDonationsFragment__other_ways_to_give">Iné spôsoby, ako dať</string>
     <!-- Preference label to launch badge gifting -->
-    <string name="ManageDonationsFragment__donate_for_a_friend">Prispejte za priateľa</string>
     <!-- Dialog title shown when a donation requires verifying/confirmation outside of the app and the user hasn\'t done that yet -->
-    <string name="ManageDonationsFragment__couldnt_confirm_donation">Príspevok sa nepodarilo potvrdiť</string>
     <!-- Dialog message shown when a monthly donation requires verifying/confirmation outside of the app and the user hasn\'t done that yet, placeholder is money amount -->
-    <string name="ManageDonationsFragment__your_monthly_s_donation_couldnt_be_confirmed_ideal_wero">Your %1$s/month donation couldn\'t be confirmed. Check your banking app to approve your iDEAL | Wero payment.</string>
     <!-- Dialog message shown when a one-time donation requires verifying/confirmation outside of the app and the user hasn\'t done that yet, placeholder is money amount -->
-    <string name="ManageDonationsFragment__your_one_time_s_donation_couldnt_be_confirmed_ideal_wero">Your one-time %1$s donation couldn\'t be confirmed. Check your banking app to approve your iDEAL | Wero payment.</string>
 
-    <string name="Boost__enter_custom_amount">Zadajte vlastnú čiastku</string>
     <!-- Error label when the amount is smaller than what we can accept -->
-    <string name="Boost__the_minimum_amount_you_can_donate_is_s">Minimálna suma, ktorú môžete darovať, je %1$s</string>
 
     <string name="MySupportPreference__s_per_month">%1$s/mesiac</string>
     <string name="MySupportPreference__renews_s">Obnoví sa %1$s</string>
     <!-- Subtitle shown when processing a donation transaction -->
     <string name="MySupportPreference__processing_transaction">Prebieha spracovanie transakcie…</string>
     <!-- Displayed on "My Support" screen when user badge failed to be added to their account -->
-    <string name="MySupportPreference__couldnt_add_badge_s">Odznak sa nepodarilo pridať. %1$s</string>
     <string name="MySupportPreference__please_contact_support">Prosím, kontaktujte podporu.</string>
     <!-- Displayed as a subtitle on a row in the Manage Donations screen when payment for a donation is pending -->
-    <string name="MySupportPreference__payment_pending">Čaká sa na platbu</string>
     <!-- Displayed as a dialog message when clicking on a donation row that is pending. Placeholder is a formatted fiat amount -->
-    <string name="MySupportPreference__your_bank_transfer_of_s">Čaká sa na váš bankový prevod vo výške %1$s. Dokončenie bankového prevodu môže trvať 1 až 14 pracovných dní.  </string>
     <!-- Displayed in the pending help dialog, used to launch user to more details about bank transfers -->
     <string name="MySupportPreference__learn_more">Zistiť viac</string>
     <!-- Displayed when a subscription refresh is being performed -->
-    <string name="MySupportPreference__checking_subscription">Prebieha kontrola predplatného…</string>
 
     <!-- Title of dialog telling user they need to update signal as it expired -->
     <string name="UpdateSignalExpiredDialog__title">Aktualizovať Signal</string>
@@ -6869,126 +6681,66 @@
     <string name="ReregisterSignalDialog__cancel_action">Zrušiť</string>
 
     <!-- Title of expiry sheet when boost badge falls off profile unexpectedly. -->
-    <string name="ExpiredBadgeBottomSheetDialogFragment__boost_badge_expired">Platnosť odznaku Boost vypršala</string>
     <!-- Displayed in the bottom sheet if a monthly donation badge unexpectedly falls off the user\'s profile -->
-    <string name="ExpiredBadgeBottomSheetDialogFragment__monthly_donation_cancelled">Mesačný príspevok zrušený</string>
     <!-- Displayed in the bottom sheet when a boost badge expires -->
-    <string name="ExpiredBadgeBottomSheetDialogFragment__your_boost_badge_has_expired_and">Platnosť vášho odznaku Boost vypršala a už sa vo vašom profile nezobrazuje.</string>
-    <string name="ExpiredBadgeBottomSheetDialogFragment__you_can_reactivate">Svoj odznak Boost môžete znova aktivovať na ďalších 30 dní jednorazovým príspevkom.</string>
     <!-- Displayed when we do not think the user is a subscriber when their boost expires -->
-    <string name="ExpiredBadgeBottomSheetDialogFragment__you_can_keep">Signal môžete používať aj naďalej, ale zvážte možnosť stať sa mesačným podporovateľom technológie, ktorá je vytvorená pre vás.</string>
-    <string name="ExpiredBadgeBottomSheetDialogFragment__become_a_sustainer">Staňte sa Sustainerom</string>
-    <string name="ExpiredBadgeBottomSheetDialogFragment__add_a_boost">Podporte Signal</string>
-    <string name="ExpiredBadgeBottomSheetDialogFragment__not_now">Teraz nie</string>
     <!-- Copy displayed when badge expires after user inactivity -->
-    <string name="ExpiredBadgeBottomSheetDialogFragment__your_recurring_monthly_donation_was_automatically">Vaše opakované mesačné predplatné bolo automaticky zrušené, pretože ste boli príliš dlho neaktívny/a. Váš odznak %1$s sa už vo vašom profile nezobrazuje.</string>
     <!-- Copy displayed when badge expires after payment failure -->
-    <string name="ExpiredBadgeBottomSheetDialogFragment__your_recurring_monthly_donation_was_canceled">Váš opakovaný mesačný príspevok bol zrušený, pretože sme nemohli spracovať vašu platbu. Váš odznak sa už vo vašom profile nezobrazuje.</string>
     <!-- Copy displayed when badge expires after a payment failure and we have a displayable charge failure reason -->
-    <string name="ExpiredBadgeBottomSheetDialogFragment__your_recurring_monthly_donation_was_canceled_s">Váš opakovaný mesačný príspevok bol zrušený. %1$s Váš odznak %2$s sa už vo vašom profile nezobrazuje.</string>
-    <string name="ExpiredBadgeBottomSheetDialogFragment__you_can">Signal môžete používať aj naďalej, ak však chcete podporiť aplikáciu a znova aktivovať svoj odznak, obnovte svoje predplatné.</string>
-    <string name="ExpiredBadgeBottomSheetDialogFragment__renew_subscription">Obnoviť predplatné</string>
     <!-- Button label to send user to Google Pay website -->
-    <string name="ExpiredBadgeBottomSheetDialogFragment__go_to_google_pay">Prejdite do služby Google Pay</string>
 
-    <string name="CantProcessSubscriptionPaymentBottomSheetDialogFragment__cant_process_subscription_payment">Platbu nie je možné spracovať</string>
-    <string name="CantProcessSubscriptionPaymentBottomSheetDialogFragment__were_having_trouble">Máme problém s evidovaním vašej platby za Signal Podporovateľ. Uistite sa, že je váš spôsob platby aktuálny. Ak nie, aktualizujte ho v službe Google Pay. Signal sa pokúsi spracovať platbu znova o niekoľko dní.</string>
-    <string name="CantProcessSubscriptionPaymentBottomSheetDialogFragment__dont_show_this_again">Toto už nezobrazovať</string>
 
-    <string name="Subscription__contact_support">Kontaktovať zákaznícku podporu</string>
-    <string name="Subscription__get_a_s_badge">Získajte odznak %1$s</string>
 
     <!-- *PaymentInProgressFragment strings -->
-    <string name="InAppPaymentInProgressFragment__processing_donation">Spracúva sa príspevok…</string>
-    <string name="InAppPaymentInProgressFragment__processing_payment">Spracovanie platby…</string>
 
     <!--InAppDonations -->
     <!-- Label displayed in google play and on receipts for recurring subscriptions. Placeholder is level -->
-    <string name="InAppDonations__recurring_d">Opakujúce sa %1$d</string>
 
     <!-- InAppPaymentErrors -->
     <!-- Displayed as a title in a dialog or notification when a payment failure happens. -->
-    <string name="InAppPaymentErrors__error_processing_payment">Chyba pri spracovaní platby</string>
     <!-- Displayed as a message in a dialog or notification when a payment setup error happens. -->
-    <string name="InAppPaymentErrors__your_payment_couldnt_be_processed">Vašu platbu sa nepodarilo spracovať a neboli vám účtované žiadne poplatky. Skúste to znova.</string>
     <!-- Displayed as a message in a dialog when we timeout waiting for a payment to be processed and token to be redeemed -->
-    <string name="InAppPaymentErrors__your_payment_is_still">Vaša platba sa stále spracováva. V závislosti od vášho pripojenia to môže trvať niekoľko minút.</string>
     <!-- Displayed as a message in a dialog or notification when stripe decline code issuer not available for backup payment. -->
-    <string name="InAppPaymentErrors__StripeDeclineCode__try_completing_the_payment_again">Skúste znova dokončiť platbu, alebo kontaktujte svoju banku a požiadajte o ďalšie informácie.</string>
     <!-- Failure code text for revoked authorization of payment, displayed in a dialog or notification as a message. -->
-    <string name="InAppPaymentErrors__StripeFailureCode__this_payment_was_revoked">Táto platba bola odvolaná majiteľom účtu a nemohla byť spracovaná. Neboli vám účtované žiadne poplatky.</string>
     <!-- Failure code text for a payment lacking an authorized mandate or incorrect mandate, displayed in a dialog or notification as a message.-->
-    <string name="InAppPaymentErrors__StripeFailureCode__an_error_occurred_while_processing_this_payment">Pri spracovaní tejto platby sa vyskytla chyba, skúste to znova.</string>
 
     <!-- Displayed in notification when user payment fails to process on Stripe -->
-    <string name="DonationsErrors__error_processing_payment">Chyba pri spracovaní príspevku</string>
     <!-- Displayed on manage donations screen as a dialog message when payment method failed -->
-    <string name="DonationsErrors__try_another_payment_method">Skúste iný spôsob platby, alebo kontaktujte svoju banku a požiadajte o viac informácií.</string>
     <!-- Displayed on manage donations screen error dialogs as an action label -->
-    <string name="DonationsErrors__learn_more">Zistiť viac</string>
     <!-- Displayed on "My Support" screen when user subscription payment method failed. -->
-    <string name="DonationsErrors__error_processing_payment_s">Chyba pri spracovaní príspevku. %1$s</string>
-    <string name="DonationsErrors__your_payment">Váš príspevok sa nepodarilo spracovať a neboli vám účtované žiadne poplatky. Skúste to znova.</string>
-    <string name="DonationsErrors__still_processing">Stále sa spracováva</string>
-    <string name="DonationsErrors__couldnt_add_badge">Odznak sa nepodarilo pridať</string>
     <!-- Displayed when backup credential could not be redeemed. Dialog or notification title -->
-    <string name="DonationsError__something_went_wrong">Niekde sa stala chyba</string>
     <!-- Displayed when backup credential could not be redeemed. Dialog or notification body -->
-    <string name="DonationsError__your_backups_subscription_couldnt_be_displayed">Vaše predplatné záloh sa nepodarilo zobraziť. Kontaktujte náš tím podpory.</string>
     <!-- Displayed when badge credential couldn\'t be verified -->
-    <string name="DonationsErrors__failed_to_validate_badge">Nepodarilo sa overiť odznak</string>
     <!-- Displayed when badge credential couldn\'t be verified -->
-    <string name="DonationsErrors__could_not_validate">Nepodarilo sa overiť odpoveď servera. Kontaktujte podporu.</string>
     <!-- Displayed as title when some generic error happens during sending donation on behalf of another user -->
-    <string name="DonationsErrors__donation_failed">Prispenie bolo neúspešné</string>
     <!-- Displayed as message when some generic error happens during sending donation on behalf of another user -->
-    <string name="DonationsErrors__your_payment_was_processed_but">Váš príspevok bol spracovaný ale Signalu sa nepodarilo odoslať správu o prispení. Kontaktujte náš tím podpory.</string>
-    <string name="DonationsErrors__your_badge_could_not">Odznak nebolo možné pridať do vášho účtu, možno vám však boli účtované poplatky. Kontaktujte podporu.</string>
-    <string name="DonationsErrors__your_payment_is_still">Váš príspevok sa stále spracováva. V závislosti od vášho pripojenia to môže trvať niekoľko minút.</string>
-    <string name="DonationsErrors__failed_to_cancel_subscription">Predplatné sa nepodarilo zrušiť</string>
-    <string name="DonationsErrors__subscription_cancellation_requires_an_internet_connection">Zrušenie predplatného vyžaduje internetové pripojenie.</string>
     <string name="ViewBadgeBottomSheetDialogFragment__your_device_doesn_t_support">Vaše zariadenie nepodporuje príspevky v aplikácii, nemôžete sa preto prihlásiť na prispievanie a získať odznak. Signal však môžete stále podporiť príspevkom na našej webovej stránke.</string>
     <string name="NetworkFailure__network_error_check_your_connection_and_try_again">Chyba siete. Skontrolujte pripojenie a skúste to znova.</string>
     <string name="NetworkFailure__retry">Skúsiť znovu</string>
     <!-- Displayed as a dialog title when the selected recipient for a gift doesn\'t support gifting -->
-    <string name="DonationsErrors__cannot_send_donation">Príspevok nie je možné odoslať</string>
     <!-- Displayed as a dialog message when the selected recipient for a gift doesn\'t support gifting -->
-    <string name="DonationsErrors__this_user_cant_receive_donations_until">Tento používateľ nemôže dostávať príspevky, kým si neaktualizuje Signal.</string>
     <!-- Displayed as a dialog message when the user\'s profile could not be fetched, likely due to lack of internet -->
-    <string name="DonationsErrors__your_donation_could_not_be_sent">Váš príspevok nebolo možné odoslať z dôvodu chyby siete. Skontrolujte pripojenie a skúste to znovu.</string>
     <!-- Displayed as a dialog message when the user encounters an error during an iDEAL donation -->
-    <string name="DonationsErrors__your_ideal_wero_couldnt_be_processed">Your iDEAL | Wero donation couldn\'t be processed. Try another payment method or contact your bank for more information.</string>
 
     <!-- Gift message view title -->
-    <string name="GiftMessageView__donation_on_behalf_of_s">Príspevok v mene používateľa %1$s</string>
     <!-- Gift message view title for incoming donations -->
-    <string name="GiftMessageView__s_donated_to_signal_on">Používateľ %1$s prispel na Signal vo vašom mene</string>
     <!-- Gift badge redeem action label -->
-    <string name="GiftMessageView__redeem">Uplatniť</string>
     <!-- Gift badge view action label -->
-    <string name="GiftMessageView__view">Zobraziť</string>
     <!-- Gift badge redeeming action label -->
-    <string name="GiftMessageView__redeeming">Uplatňuje sa…</string>
     <!-- Gift badge redeemed label -->
-    <string name="GiftMessageView__redeemed">Uplatnené</string>
 
 
     <!-- Stripe decline code generic_failure -->
-    <string name="DeclineCode__try_another_payment_method_or_contact_your_bank">Skúste iný spôsob platby, alebo kontaktujte svoju banku a požiadajte o viac informácií.</string>
     <!-- PayPal decline code for payment declined -->
-    <string name="DeclineCode__try_another_payment_method_or_contact_your_bank_for_more_information_if_this_was_a_paypal">Skúste iný spôsob platby alebo kontaktujte svoju banku a požiadajte o viac informácií. Ak ide o PayPal transakciu, kontaktujte PayPal.</string>
     <!-- Stripe decline code verify on Google Pay and try again -->
-    <string name="DeclineCode__verify_your_payment_method_is_up_to_date_in_google_pay_and_try_again">Overte, či je váš spôsob platby aktuálny v službe Google Pay, a skúste to znova.</string>
     <!-- Stripe decline code learn more action label -->
     <string name="DeclineCode__learn_more">Dozvedieť sa viac</string>
     <!-- Stripe decline code contact issuer -->
-    <string name="DeclineCode__verify_your_payment_method_is_up_to_date_in_google_pay_and_try_again_if_the_problem">Overte, či je váš spôsob platby aktuálny v službe Google Pay, a skúste to znova. Ak problém pretrváva, kontaktujte svoju banku.</string>
     <!-- Stripe decline code purchase not supported -->
     <string name="DeclineCode__your_card_does_not_support_this_type_of_purchase">Vaša karta nepodporuje tento typ nákupu. Skúste iný spôsob platby.</string>
     <!-- Stripe decline code your card has expired -->
     <string name="DeclineCode__your_card_has_expired">Platnosť vašej karty vypršala. Aktualizujte svoj spôsob platby v službe Google Pay a skúste to znova.</string>
     <!-- Stripe decline code go to google pay action label -->
-    <string name="DeclineCode__go_to_google_pay">Prejdite do služby Google Pay</string>
     <!-- Stripe decline code try credit card again action label -->
     <string name="DeclineCode__try">Skúsiť znova</string>
     <!-- Stripe decline code incorrect card number -->
@@ -7002,7 +6754,6 @@
     <!-- Stripe decline code incorrect expiration year -->
     <string name="DeclineCode__the_expiration_year">Rok vypršania platnosti vášho spôsobu platby je nesprávny. Aktualizujte ho v službe Google Pay a skúste to znova.</string>
     <!-- Stripe decline code issuer not available -->
-    <string name="DeclineCode__try_completing_the_payment_again">Skúste znova dokončiť odosielanie príspevku alebo kontaktujte svoju banku a požiadajte o ďalšie informácie.</string>
     <!-- Stripe decline code processing error -->
     <string name="DeclineCode__try_again">Skúste to znova, alebo kontaktujte svoju banku a požiadajte o ďalšie informácie.</string>
 
@@ -7024,15 +6775,10 @@
 
     <!-- Stripe Failure Codes for failed bank transfers -->
     <!-- Failure code text for insufficient funds, displayed in a dialog or notification -->
-    <string name="StripeFailureCode__the_bank_account_provided">Zadaný bankový účet nemá dostatok prostriedkov na dokončenie tohto nákupu, skúste to znova alebo kontaktujte svoju banku a požiadajte o ďalšie informácie.</string>
     <!-- Failure code text for revoked authorization of payment, displayed in a dialog or notification -->
-    <string name="StripeFailureCode__this_payment_was_revoked">Tento príspevok bol odvolaný majiteľom účtu a nemohol byť spracovaný. Neboli vám účtované žiadne poplatky.</string>
     <!-- Failure code text for a payment lacking an authorized mandate or incorrect mandate, displayed in a dialog or notification -->
-    <string name="StripeFailureCode__an_error_occurred_while_processing_this_payment">Pri spracovaní tohto príspevku sa vyskytla chyba, skúste to znova.</string>
     <!-- Failure code text for a closed account, deceased recipient, or one with blocked direct debits, displayed in a dialog or notification -->
-    <string name="StripeFailureCode__the_bank_details_provided_could_not_be_processed">Poskytnuté bankové údaje sa nepodarilo spracovať. Kontaktujte svoju banku a požiadajte o ďalšie informácie.</string>
     <!-- Failure code text for a non-existent bank branch, invalid account holder, invalid iban, generic failure, or unknown bank failure, displayed in a dialog or notification -->
-    <string name="StripeFailureCode__verify_your_bank_details_are_correct">Skontrolujte, či sú vaše bankové údaje správne a skúste to znova. Ak problém pretrváva, kontaktujte svoju banku.</string>
 
     <!-- Title of create notification profile screen -->
     <string name="EditNotificationProfileFragment__name_your_profile">Pomenujte svoj profil</string>
@@ -7195,33 +6941,19 @@
     <string name="ReleaseNotes__official_only_chat">Oficiálny a jediný čet Signal</string>
 
     <!-- Donation receipts activity title -->
-    <string name="DonationReceiptListFragment__all_activity">Všetky aktivity</string>
     <!-- Donation receipts all tab label -->
-    <string name="DonationReceiptListFragment__all">Všetko</string>
     <!-- Donation receipts recurring tab label -->
-    <string name="DonationReceiptListFragment__recurring">Opakujúce sa</string>
     <!-- Donation receipts one-time tab label -->
-    <string name="DonationReceiptListFragment__one_time">Raz</string>
     <!-- Donation receipts gift tab -->
-    <string name="DonationReceiptListFragment__for_a_friend">Za priateľa</string>
     <!-- Donation receipts gift tab label -->
-    <string name="DonationReceiptListFragment__donation_for_a_friend">Príspevok za priateľa</string>
     <!-- Donation receipts donation type heading -->
-    <string name="DonationReceiptDetailsFragment__donation_type">Typ príspevku</string>
     <!-- Donation receipts date paid heading -->
-    <string name="DonationReceiptDetailsFragment__date_paid">Dátum zaplatenia</string>
     <!-- Donation receipts share PNG -->
-    <string name="DonationReceiptDetailsFragment__share_receipt">Zdieľať potvrdenie</string>
     <!-- Donation receipts list end note -->
-    <string name="DonationReceiptListFragment__if_you_have">Ak ste preinštalovali Signal, potvrdenia o predchádzajúcich príspevkoch nebudú k dispozícii.</string>
     <!-- Donation receipts document title -->
-    <string name="DonationReceiptDetailsFragment__donation_receipt">Potvrdenie o príspevku</string>
     <!-- Donation receipts amount title -->
-    <string name="DonationReceiptDetailsFragment__amount">Suma</string>
     <!-- Donation receipts thanks -->
-    <string name="DonationReceiptDetailsFragment__thank_you_for_supporting">Ďakujeme, že podporujete Signal. Váš príspevok pomáha podporiť misiu vývoja technológie ochrany súkromia s otvoreným zdrojom, ktorá chráni slobodu prejavu a umožňuje bezpečnú globálnu komunikáciu pre milióny ľudí na celom svete. Ak ste rezidentom Spojených štátov, uchovajte si toto potvrdenie pre svoje daňové záznamy. Signal Technology Foundation je nezisková organizácia v Spojených štátoch oslobodená od daní podľa oddielu 501c3 zákona o vnútorných výnosoch. Naše federálne daňové identifikačné číslo je 82–4506840.</string>
     <!-- Donation reciepts screen empty state title -->
-    <string name="DonationReceiptListFragment__no_receipts">Žiadne účtenky</string>
 
     <!-- region "Stories Tab" -->
 
@@ -7629,7 +7361,6 @@
         <item quantity="other">%1$s · %2$d-dňové trvanie</item>
     </plurals>
     <!-- Headline text on start fragment for gifting a badge -->
-    <string name="GiftFlowStartFragment__donate_for_a_friend">Prispejte za priateľa</string>
     <!-- Description text on start fragment for gifting a badge -->
     <plurals name="GiftFlowStartFragment__support_signal_by">
         <item quantity="one">Podporte Signal príspevkom za priateľa alebo člena rodiny, ktorý používa Signal. Dostanú odznak, ktorý si môžu vystaviť na profile na %1$d deň</item>
@@ -7638,47 +7369,27 @@
         <item quantity="other">Podporte Signal príspevkom za priateľa alebo člena rodiny, ktorý používa Signal. Dostanú odznak, ktorý si môžu vystaviť na profile na %1$d dní</item>
     </plurals>
     <!-- Action button label for start fragment for gifting a badge -->
-    <string name="GiftFlowStartFragment__next">Ďalší</string>
     <!-- Title text on choose recipient page for badge gifting -->
-    <string name="GiftFlowRecipientSelectionFragment__choose_recipient">Vyberte príjemcu</string>
     <!-- Title text on confirm gift page -->
-    <string name="GiftFlowConfirmationFragment__confirm_donation">Potvrdiť príspevok</string>
     <!-- Heading text specifying who the gift will be sent to -->
-    <string name="GiftFlowConfirmationFragment__send_to">Odoslať používateľovi</string>
     <!-- Text explaining that gift will be sent to the chosen recipient -->
-    <string name="GiftFlowConfirmationFragment__the_recipient_will_be_notified">Príjemca bude o príspevku informovaný v správe. Pridajte svoj vlastný text správy nižšie.</string>
     <!-- Text explaining that this gift is a one time donation -->
-    <string name="GiftFlowConfirmationFragment__one_time_donation">Jednorazový príspevok</string>
     <!-- Hint for add message input -->
-    <string name="GiftFlowConfirmationFragment__add_a_message">Pridajte správu</string>
     <!-- Displayed in the dialog while verifying the chosen recipient -->
     <string name="GiftFlowConfirmationFragment__verifying_recipient">Overuje sa príjemca…</string>
     <!-- Title for sheet shown when opening a redeemed gift -->
-    <string name="ViewReceivedGiftBottomSheet__s_made_a_donation_for_you">Používateľ %1$s za vás poslal príspevok</string>
     <!-- Title for sheet shown when opening a sent gift -->
-    <string name="ViewSentGiftBottomSheet__thanks_for_your_support">Ďakujem za tvoju podporu!</string>
     <!-- Description for sheet shown when opening a redeemed gift -->
-    <string name="ViewReceivedGiftBottomSheet__s_made_a_donation_to_signal">Používateľ %1$s prispel na Signal vo vašom mene! Ukážte svoju podporu pre Signal vo svojom profile.</string>
     <!-- Description for sheet shown when opening a sent gift -->
-    <string name="ViewSentGiftBottomSheet__youve_made_a_donation_to_signal">Prispeli ste na Signal v mene používateľa %1$s. Svoju podporu budú môcť zobraziť na svojom profile.</string>
     <!-- Primary action for pending gift sheet to redeem badge now -->
-    <string name="ViewReceivedGiftSheet__redeem">Uplatniť</string>
     <!-- Primary action for pending gift sheet to redeem badge later -->
-    <string name="ViewReceivedGiftSheet__not_now">Teraz nie</string>
     <!-- Dialog text while redeeming a gift -->
-    <string name="ViewReceivedGiftSheet__redeeming_badge">Odomyká sa odznak…</string>
     <!-- Description text in gift thanks sheet -->
-    <string name="GiftThanksSheet__youve_made_a_donation">Prispeli ste na Signal v mene používateľa %1$s. Svoju podporu budú môcť zobraziť na svojom profile.</string>
     <!-- Expired gift sheet title -->
-    <string name="ExpiredGiftSheetConfiguration__your_badge_has_expired">Platnosť vášho odznaku vypršala</string>
     <!-- Expired gift sheet top description text -->
-    <string name="ExpiredGiftSheetConfiguration__your_badge_has_expired_and_is">Platnosť vášho odznaku vypršala a už nie je vo vašom profile viditeľný pre ostatných.</string>
     <!-- Expired gift sheet bottom description text -->
-    <string name="ExpiredGiftSheetConfiguration__to_continue">Ak chcete pokračovať v podpore technológie, ktorá je vytvorená pre vás, zvážte, či sa nestanete mesačným podporovateľom.</string>
     <!-- Expired gift sheet make a monthly donation button -->
-    <string name="ExpiredGiftSheetConfiguration__make_a_monthly_donation">Prispievajte mesačne</string>
     <!-- Expired gift sheet not now button -->
-    <string name="ExpiredGiftSheetConfiguration__not_now">Teraz nie</string>
     <!-- My Story label designating that we will only share with the selected viewers. -->
     <string name="ContactSearchItems__only_share_with">Zdieľať iba s</string>
     <!-- Label under name for custom stories -->
@@ -7758,7 +7469,6 @@
         <item quantity="other">%1$d zostávajúcich minúty</item>
     </plurals>
     <!-- Donation for a friend expiry expired -->
-    <string name="Gifts__expired">Platnosť vypršala</string>
 
     <!-- Label indicating that a user can tap to advance to the next post in a story -->
     <string name="StoryFirstTimeNavigationView__tap_to_advance">Pokračujte ťuknutím</string>
@@ -7908,40 +7618,24 @@
 
     <!-- DonateToSignalFragment -->
     <!-- Title below avatar -->
-    <string name="DonateToSignalFragment__privacy_over_profit">Sme hrdí, že sme neziskovou organizáciou</string>
     <!-- Continue button label -->
-    <string name="DonateToSignalFragment__continue">Pokračovať</string>
     <!-- Description below title -->
-    <string name="DonateToSignalFragment__private_messaging">Prispejte a podporte posielanie súkromných správ. Pomôžte nám k tomu, aby bol Signal aj naďalej nezávislou aplikáciou bez reklám.</string>
     <!-- Dialog title when a user tries to donate while they already have a pending donation. -->
-    <string name="DonateToSignalFragment__you_have_a_donation_pending">Čaká sa na príspevok</string>
     <!-- Dialog body when a user tries to donate while they already have a pending monthly donation. -->
-    <string name="DonateToSignalFragment__bank_transfers_usually_take_1_business_day_to_process_monthly">Spracovanie bankového prevodu môže trvať 1 až 14 pracovných dní. Pred aktualizáciou prispievania počkajte, kým sa platba nedokončí.</string>
     <!-- Dialog body when a user tries to donate while they already have a pending one time donation. -->
-    <string name="DonateToSignalFragment__bank_transfers_usually_take_1_business_day_to_process_onetime">Spracovanie bankového prevodu môže trvať 1 až 14 pracovných dní. Pred odoslaním ďalšieho príspevku počkajte, kým sa platba nedokončí.</string>
     <!-- Dialog body when a user tries to donate while they already have a pending monthly donation. -->
-    <string name="DonateToSignalFragment__your_payment_is_still_being_processed_monthly">Váš príspevok sa stále spracováva. V závislosti od vášho pripojenia to môže trvať niekoľko minút. Pred aktualizáciou prispievania počkajte, kým sa platba nedokončí.</string>
     <!-- Dialog body when a user tries to donate while they already have a pending one time donation. -->
-    <string name="DonateToSignalFragment__your_payment_is_still_being_processed_onetime">Váš príspevok sa stále spracováva. V závislosti od vášho pripojenia to môže trvať niekoľko minút. Pred odoslaním ďalšieho príspevku počkajte, kým sa platba nedokončí.</string>
     <!-- Dialog body when a user opens the manage donations main screen and they have a pending iDEAL donation -->
-    <string name="DonateToSignalFragment__your_ideal_wero_payment_is_still_processing">Your iDEAL | Wero donation is still processing. Check your banking app to approve your payment before making another donation.</string>
     <!-- Dialog title shown when a user tries to donate an amount higher than is allowed for a given payment method. -->
-    <string name="DonateToSignal__donation_amount_too_high">Príliš vysoká suma príspevku</string>
     <!-- Dialog body shown when a user tries to donate an amount higher than is allowed for a given payment method, place holder is the maximum -->
-    <string name="DonateToSignalFragment__you_can_send_up_to_s_via_bank_transfer">Bankovým prevodom môžete poslať maximálne %1$s. Skúste zadať inú sumu alebo iný spôsob platby.</string>
 
     <!-- Donation pill toggle monthly text -->
-    <string name="DonationPillToggle__monthly">Mesačne</string>
     <!-- Donation pill toggle one-time text -->
-    <string name="DonationPillToggle__one_time">Raz</string>
 
     <!-- GatewaySelectorBottomSheet -->
     <!-- Sheet title when subscribing -->
-    <string name="GatewaySelectorBottomSheet__donate_s_month_to_signal">Prispejte na Signal %1$s mesačne</string>
     <!-- Sheet summary when subscribing -->
-    <string name="GatewaySelectorBottomSheet__get_a_s_badge">Získate odznak %1$s</string>
     <!-- Sheet title when giving a one-time donation -->
-    <string name="GatewaySelectorBottomSheet__donate_s_to_signal">Prispejte na Signal %1$s</string>
     <!-- Sheet summary when giving a one-time donation -->
     <plurals name="GatewaySelectorBottomSheet__get_a_s_badge_for_d_days">
         <item quantity="one">Získate odznak %1$s na %2$d deň</item>
@@ -7950,89 +7644,52 @@
         <item quantity="other">Získate odznak %1$s na %2$d dní</item>
     </plurals>
     <!-- Button label for paying with a bank transfer -->
-    <string name="GatewaySelectorBottomSheet__bank_transfer">Bankový prevod</string>
     <!-- Button label for paying with a credit card -->
     <string name="GatewaySelectorBottomSheet__credit_or_debit_card">Kreditná alebo debetná karta</string>
     <!-- Sheet summary when giving donating for a friend -->
-    <string name="GatewaySelectorBottomSheet__donate_for_a_friend">Prispejte za priateľa</string>
     <!-- Button label for paying with iDEAL -->
-    <string name="GatewaySelectorBottomSheet__ideal_wero">iDEAL | Wero</string>
 
     <!-- Dialog title for launching external intent -->
-    <string name="ExternalNavigationHelper__leave_signal_to_confirm_payment">Opustiť Signal a potvrdiť príspevok?</string>
-    <string name="ExternalNavigationHelper__once_this_payment_is_confirmed">Po potvrdení sa vráťte do aplikácie a dokončite spracovanie svojho príspevku.</string>
     <!-- Dialog message shown when leaving Signal to complete a donation in an external app. Placeholder is the resolved app name (e.g. a banking app). -->
-    <string name="ExternalNavigationHelper__once_payment_confirmed_in_app">You\'ll be sent to %1$s. When confirmed, return to Signal to finish processing your donation.</string>
 
     <!-- BankTransferMandateFragment -->
     <!-- Title of screen displaying the bank transfer mandate -->
-    <string name="BankTransferMandateFragment__bank_transfer">Bankový prevod</string>
     <!-- Subtitle of screen displaying the bank transfer mandate, placeholder is \'Learn more\' -->
-    <string name="BankTransferMandateFragment__stripe_processes_donations">Príspevky pre Signal spracováva Stripe. Signal nezhromažďuje ani neukladá vaše osobné údaje. %1$s</string>
     <!-- Subtitle learn more of screen displaying bank transfer mandate -->
-    <string name="BankTransferMandateFragment__learn_more">Zistiť viac</string>
     <!-- Button label to continue with transfer -->
-    <string name="BankTransferMandateFragment__agree">Súhlasím</string>
     <!-- Button label to read more of the bank mandate that is currently off screen -->
-    <string name="BankTransferMandateFragment__read_more">Čítaj viac</string>
     <!-- Text displayed when mandate load fails -->
-    <string name="BankTransferMandateFragment__failed_to_load_mandate">Nepodarilo sa načítať príkaz</string>
 
     <!-- BankTransferDetailsFragment -->
     <!-- Subtext explaining how email is used. Placeholder is \'Learn more\' -->
-    <string name="BankTransferDetailsFragment__enter_your_bank_details">Zadajte údaje svojej banky a e-mail. Stripe používa tento e-mail na odosielanie aktualizácií o vašom príspevku. %1$s</string>
     <!-- Subtext learn more link text -->
-    <string name="BankTransferDetailsFragment__learn_more">Zistiť viac</string>
     <!-- Text field label for name on bank account -->
-    <string name="BankTransferDetailsFragment__name_on_bank_account">Meno majiteľa bankového účtu</string>
     <!-- Text field label for IBAN -->
-    <string name="BankTransferDetailsFragment__iban">IBAN</string>
     <!-- Text field label for email -->
-    <string name="BankTransferDetailsFragment__email">Email</string>
     <!-- Text label for button to show user how to find their IBAN -->
-    <string name="BankTransferDetailsFragment__find_account_info">Nájsť informácie o účte</string>
     <!-- Donate button label for monthly subscription -->
-    <string name="BankTransferDetailsFragment__donate_s_month">Prispieť %1$s/mesačne</string>
     <!-- Donate button label for one-time -->
-    <string name="BankTransferDetailsFragment__donate_s">Prispieť %1$s</string>
     <!-- Error label for IBAN field when number is too short -->
-    <string name="BankTransferDetailsFragment__iban_is_too_short">Číslo IBAN je príliš krátke</string>
     <!-- Error label for IBAN field when number is too long -->
-    <string name="BankTransferDetailsFragment__iban_is_too_long">Číslo IBAN je príliš dlhé</string>
     <!-- Error label for IBAN field when country is not supported -->
-    <string name="BankTransferDetailsFragment__iban_country_code_is_not_supported">Kód krajiny pre IBAN nie je podporovaný</string>
     <!-- Error label for IBAN field when number is invalid -->
-    <string name="BankTransferDetailsFragment__invalid_iban">Neplatné číslo IBAN</string>
     <!-- Error label for name field when name is not at least three characters long (Stripe API enforced minimum) -->
-    <string name="BankTransferDetailsFragment__minimum_3_characters">Minimálne 3 znaky</string>
     <!-- Error label for email field when email is not valid -->
-    <string name="BankTransferDetailsFragment__invalid_email_address">Neplatná emailová adresa</string>
 
     <!-- IdealTransferDetailsFragment -->
     <!-- Title of the screen, displayed in the toolbar -->
-    <string name="IdealTransferDetailsFragment__ideal">iDEAL</string>
     <!-- Subtitle of the screen, displayed below the toolbar. Placeholder is for \'learn more\' -->
-    <string name="IdealTransferDetailsFragment__enter_your_bank">Zadajte svoje meno a e-mail. Stripe používa tento e-mail na odosielanie aktualizácií o vašom príspevku. %1$s</string>
     <!-- Subtitle of the screen, displayed below the toolbar. Placeholder is for \'learn more\' -->
-    <string name="IdealTransferDetailsFragment__enter_your_bank_details_one_time">Zadajte svoje bankové údaje. Signal nezhromažďuje ani neukladá vaše osobné údaje. %1$s</string>
     <!-- Subtitle learn-more button displayed inline with the subtitle text -->
-    <string name="IdealTransferDetailsFragment__learn_more">Zistiť viac</string>
     <!-- Hint label for text entry box for name on bank account -->
-    <string name="IdealTransferDetailsFragment__name_on_bank_account">Meno majiteľa bankového účtu</string>
     <!-- Hint label for text entry box for email -->
-    <string name="IdealTransferDetailsFragment__email">Email</string>
     <!-- Default label for bank selection -->
-    <string name="IdealTransferDetailsFragment__choose_your_bank">Vyberte banku</string>
     <!-- Dialog title shown when using iDEAL payment for setting up a monthly donation -->
-    <string name="IdealTransferDetailsFragment__confirm_your_donation_with_ideal_wero">Confirm your donation with iDEAL | Wero</string>
     <!-- Dialog warning shown when using iDEAL payment for setting up a monthly donation. Placeholder is donation amount.Z -->
-    <string name="IdealTransferDetailsFragment__to_setup_your_recurring_donation">Ak chcete nastaviť pravidelné prispievanie, ťuknutím na Pokračovať potvrďte platbu vo výške 0,01 € vo svojej banke. Táto suma bude automaticky vrátená a umožní, aby bol váš príspevok vo výške %1$s/mesiac odpísaný z vášho účtu.</string>
     <!-- Dialog button shown when using iDEAL payment for setting up a monthly donation to continue with the donation -->
-    <string name="IdealTransferDetailsFragment__continue">Pokračovať</string>
 
     <!-- IdealTransferDetailsBankSelectionDialogFragment -->
     <!-- Title of the screen, displayed in the toolbar -->
-    <string name="IdealTransferDetailsBankSelectionDialogFragment__choose_your_bank">Vyberte banku</string>
 
     <!-- Title of bottom sheet for finding account information -->
     <string name="FindAccountInfoSheet__find_your_account_information">Nájdite informácie o svojom účte</string>
@@ -8040,36 +7697,22 @@
     <string name="FindAccountInfoSheet__look_for_your_iban_at">Vyhľadajte svoje číslo IBAN v hornej časti bankového výpisu. Čísla IBAN obsahujú až 34 znakov. Zadané meno by sa malo zhodovať s celým menom uvedeným na vašom bankovom účte. Ak chcete získať ďalšie informácie, kontaktujte svoju banku.</string>
 
     <!-- Title of donation pending sheet displayed after making a bank transfer -->
-    <string name="DonationPendingBottomSheet__donation_pending">Čaká sa na príspevok</string>
     <!-- Top text block of donation pending sheet displayed after subscribing via a bank transfer. Placeholder is the badge name. -->
-    <string name="DonationPendingBottomSheet__your_monthly_donation_is_pending">Čaká sa na váš mesačný príspevok. Akonáhle bude váš príspevok prijatý, budete môcť vo svojom profile zobraziť odznak %1$s.</string>
     <!-- Top text block of donation pending sheet displayed after one-time donation via a bank transfer. Placeholder is the badge name. -->
-    <string name="DonationPendingBottomSheet__your_one_time_donation_is_pending">Čaká sa na váš jednorazový príspevok. Akonáhle bude váš príspevok prijatý, budete môcť vo svojom profile zobraziť odznak %1$s.</string>
     <!-- Bottom text block of donation pending sheet displayed after donating via a bank transfer. Placeholder is for learn more. -->
-    <string name="DonationPendingBottomSheet__bank_transfers_usually_take">Spracovanie bankového prevodu môže trvať 1 až 14 pracovných dní. %1$s</string>
     <!-- Learn more text for donation pending sheet displayed after donating via a bank transfer. -->
-    <string name="DonationPendingBottomSheet__learn_more">Zistiť viac</string>
     <!-- Confirmation button for donation pending sheet displayed after donating via a bank transfer. -->
-    <string name="DonationPendingBottomSheet__done">Hotovo</string>
 
     <!-- Title of donation error sheet displayed after making a bank transfer that fails -->
-    <string name="DonationErrorBottomSheet__donation_couldnt_be_processed">Príspevok sa nepodarilo spracovať</string>
     <!-- Text block of donation error sheet displayed after making a bank transfer that fails -->
-    <string name="DonationErrorBottomSheet__were_having_trouble">Pri spracovaní vášho bankového prevodu sa vyskytol problém. Neboli vám účtované žiadne poplatky. Skúste iný spôsob platby alebo kontaktujte svoju banku a požiadajte o viac informácií.</string>
     <!-- Button label for retry button of donation error sheet displayed after making a bank transfer that fails -->
-    <string name="DonationErrorBottomSheet__try_again">Skúsiť znova</string>
     <!-- Button label for not now button of donation error sheet displayed after making a bank transfer that fails -->
-    <string name="DonationErrorBottomSheet__not_now">Teraz nie</string>
 
     <!-- Title of \'Donation Complete\' sheet displayed after a bank transfer completes and the badge is redeemed -->
-    <string name="DonationCompletedBottomSheet__donation_complete">Prispenie prebehlo úspešne</string>
     <!-- Text block of \'Donation Complete\' sheet displayed after a bank transfer completes and the badge is redeemed -->
-    <string name="DonationCompleteBottomSheet__your_bank_transfer_was_received">Váš bankový prevod bol prijatý. V profile si môžete vystaviť tento odznak a dať tak najavo svoju podporu.</string>
     <!-- Button text of \'Donation Complete\' sheet displayed after a bank transfer completes and the badge is redeemed to dismiss sheet -->
-    <string name="DonationCompleteBottomSheet__done">Hotovo</string>
 
     <!-- StripePaymentInProgressFragment -->
-    <string name="StripePaymentInProgressFragment__cancelling">Prebieha zrušenie…</string>
 
     <!-- The title of a bottom sheet dialog that tells the user we temporarily can\'t process their contacts. -->
     <string name="CdsTemporaryErrorBottomSheet_title">Bolo spracovaných príliš veľa kontaktov</string>
@@ -8105,7 +7748,6 @@
     <!-- YourInformationIsPrivateBottomSheet -->
     <string name="YourInformationIsPrivateBottomSheet__your_information_is_private">Vaše údaje sú súkromné</string>
     <string name="YourInformationIsPrivateBottomSheet__signal_does_not_collect">Počas vášho prispievania na Signal nezhromažďujeme ani neukladáme žiadne vaše osobné údaje.</string>
-    <string name="YourInformationIsPrivateBottomSheet__we_use_stripe">Na prijímanie vašich príspevkov a spracovanie platieb používame službu Stripe. K údajom, ktoré v rámci tejto platobnej brány poskytnete, nemáme prístup ani ich neukladáme.</string>
     <string name="YourInformationIsPrivateBottomSheet__signal_does_not_and_cannot">Signal si nespája a ani si nemôže spojiť váš príspevok s vaším Signal účtom.</string>
     <string name="YourInformationIsPrivateBottomSheet__thank_you">Ďakujeme za vašu podporu!</string>
 
@@ -8123,8 +7765,6 @@
     <string name="Registration_country_code_entry_hint">+0</string>
 
     <!-- PaypalCompleteOrderBottomSheet -->
-    <string name="PaypalCompleteOrderBottomSheet__donate">Prispieť</string>
-    <string name="PaypalCompleteOrderBottomSheet__payment">Platba</string>
 
     <!-- ChatFilter -->
     <!-- Displayed in a pill at the top of the chat list when it is filtered by unread messages -->
@@ -8632,15 +8272,10 @@
     <string name="GrantFullScreenIntentPermission_bottomsheet_step2">2. %1$s Povoľte upozornenia na celú obrazovku</string>
 
     <!-- Bottom sheet dialog shown when a monthly donation fails to renew, title for dialog -->
-    <string name="MonthlyDonationCanceled__title">Mesačný príspevok bol zrušený</string>
     <!-- Bottom sheet dialog shown when a monthly donation fails to renew, body for dialog. First placeholder is a payment related error message. Second placeholder is \'learn more\' -->
-    <string name="MonthlyDonationCanceled__message">Váš pravidelný mesačný príspevok bol zrušený. %1$s\n\nVáš odznak sa už nebude zobrazovať vo vašom profile. %2$s</string>
     <!-- Bottom sheet dialog shown when a monthly donation fails to renew, learn more used in placeholder for body for dialog. -->
-    <string name="MonthlyDonationCanceled__learn_more">Zistiť viac</string>
     <!-- Bottom sheet dialog shown when a monthly donation fails to renew, primary button to renew subscription with new data -->
-    <string name="MonthlyDonationCanceled__renew_button">Obnoviť predplatné</string>
     <!-- Bottom sheet dialog shown when a monthly donation fails to renew, second button to dismiss the dialog entirely -->
-    <string name="MonthlyDonationCanceled__not_now_button">Teraz nie</string>
 
     <!-- FindByActivity -->
     <!-- Title of activity when finding by username -->
@@ -8732,7 +8367,6 @@
 
     <!-- BackupAlertBottomSheet -->
     <!-- Sheet title when media backups have been disabled -->
-    <string name="BackupAlertBottomSheet__your_backups_subscription_expired">Platnosť vášho predplatného záloh vypršala</string>
     <!-- Sheet body part 1 when media backups have been disabled. Placeholder is the number of days until deletion. -->
     <plurals name="BackupAlertBottomSheet__your_backup_plan_has_expired">
         <item quantity="one">Platnosť vášho zálohovacieho plánu vypršala, pretože ho nebolo možné obnoviť pomocou vášho aktuálneho spôsobu platby. Za %1$d deň budú médiá vo vašej zálohe vymazané.</item>
@@ -8928,21 +8562,15 @@
     <!-- Displayed as the user\'s payment method as a label in a preference row -->
     <string name="BackupsTypeSettingsFragment__credit_or_debit_card">Kreditná alebo debetná karta</string>
     <!-- Displayed as the user\'s payment method as a label in a preference row -->
-    <string name="BackupsTypeSettingsFragment__iDEAL">iDEAL</string>
     <!-- Displayed as the user\'s payment method as a label in a preference row -->
-    <string name="BackupsTypeSettingsFragment__google_pay">Google Pay</string>
     <!-- Displayed as the user\'s payment method as a label in a preference row -->
-    <string name="BackupsTypeSettingsFragment__bank_transfer">Bankový prevod</string>
     <!-- Displayed as the user\'s payment method as a label in a preference row -->
-    <string name="BackupsTypeSettingsFragment__paypal">PayPal</string>
     <!-- Displayed as the user\'s payment method as a label in a preference row -->
     <string name="BackupsTypeSettingsFragment__unknown">Neznáme</string>
     <!-- Row title for entering payment history -->
-    <string name="BackupsTypeSettingsFragment__payment_history">História platieb</string>
     <!-- Row description detailing renewal information. First placeholder is formatted price. Second placeholder is formatted date. -->
     <string name="BackupsTypeSettingsFragment__s_month_renews_s">%1$s/mesiac · Obnovenie %2$s</string>
     <!-- Row title to change or cancel subscription -->
-    <string name="BackupsTypeSettingsFragment__change_or_cancel_subscription">Zmeniť alebo zrušiť predplatné</string>
 
     <!-- GooglePlayServicesAvailability -->
     <!-- Dialog title when Google Play services are missing from the device -->
@@ -9098,7 +8726,6 @@
     <!-- Text shown in a popup indicating that the user needs to enter their screen lock -->
     <string name="RemoteBackupsSettingsFragment__authenticatino_required">Vyžaduje sa overenie</string>
     <!-- Row label to launch payment history screen -->
-    <string name="RemoteBackupsSettingsFragment__payment_history">História platieb</string>
     <!-- Section header for backup information -->
     <string name="RemoteBackupsSettingsFragment__backup_details">Podrobnosti o zálohe</string>
     <!-- Row label to allow the restoration of a backup to occur while on cellular connection -->
@@ -9543,7 +9170,6 @@
     <!-- Primary action button label when selecting paid tier when Google Play API isn\'t available -->
     <string name="MessageBackupsTypeSelectionScreen__more_about_this_plan">Viac o tomto pláne</string>
     <!-- Secondary action button label when selecting a backup tier with a current selection -->
-    <string name="MessageBackupsTypeSelectionScreen__cancel_subscription">Zrušiť predplatné</string>
     <!-- MessageBackupsType block amount for free tier -->
     <string name="MessageBackupsTypeSelectionScreen__free">Zadarmo</string>
     <!-- MessageBackupsType block amount for paid tier when no pricing is available -->
@@ -9591,7 +9217,6 @@
     <!-- Action button label to cancel subscription and download later -->
     <string name="ConfirmBackupCancellationDialog__confirm_and_download_later">Potvrdiť a stiahnuť neskôr</string>
     <!-- Action button label to keep current subscription -->
-    <string name="ConfirmBackupCancellationDialog__keep_subscription">Ponechať predplatné</string>
 
     <!-- Accessible content description for the reminder view, describing the icon in the view. -->
     <string name="ReminderView_icon_content_description">Ikona pripomienky</string>
