@@ -21,7 +21,6 @@ import org.signal.network.api.CallingApi
 import org.signal.network.api.CdsApi
 import org.signal.network.api.CertificateApi
 import org.signal.network.api.LinkDeviceApi
-import org.signal.network.api.PaymentsApi
 import org.signal.network.api.ProvisioningApi
 import org.signal.network.api.RateLimitChallengeApi
 import org.signal.network.api.RemoteConfigApi
@@ -33,7 +32,6 @@ import org.thoughtcrime.securesms.groups.GroupsV2AuthorizationMemoryValueCache
 import org.thoughtcrime.securesms.keyvalue.SignalStore
 import org.thoughtcrime.securesms.messages.IncomingMessageObserver
 import org.thoughtcrime.securesms.net.StandardUserAgentInterceptor
-import org.thoughtcrime.securesms.payments.Payments
 import org.thoughtcrime.securesms.push.SignalServiceNetworkAccess
 import org.thoughtcrime.securesms.push.SignalServiceTrustStore
 import org.whispersystems.signalservice.api.SignalServiceAccountManager
@@ -135,10 +133,6 @@ class NetworkDependenciesModule(
     provider.provideSignalServiceMessageReceiver(pushServiceSocket)
   }
 
-  val payments: Payments by lazy {
-    provider.providePayments(paymentsApi)
-  }
-
   val profileService: ProfileService by lazy {
     provider.provideProfileService(groupsV2Operations.profileOperations, authWebSocket, unauthWebSocket)
   }
@@ -177,10 +171,6 @@ class NetworkDependenciesModule(
 
   val callingApi: CallingApi by lazy {
     provider.provideCallingApi(authWebSocket, unauthWebSocket, pushServiceSocket)
-  }
-
-  val paymentsApi: PaymentsApi by lazy {
-    provider.providePaymentsApi(authWebSocket)
   }
 
   val cdsApi: CdsApi by lazy {

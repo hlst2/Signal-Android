@@ -4,38 +4,20 @@ import androidx.annotation.NonNull;
 
 import org.whispersystems.signalservice.api.payments.Money;
 
-public final class Balance {
-  private final Money fullAmount;
-  private final Money transferableAmount;
-  private final long  checkedAt;
+import java.math.BigDecimal;
 
-  public Balance(@NonNull Money fullAmount, @NonNull Money transferableAmount, long checkedAt) {
-    this.fullAmount         = fullAmount;
-    this.transferableAmount = transferableAmount;
-    this.checkedAt          = checkedAt;
-  }
+/**
+ * Stub in server-private fork. The MobileCoin wallet is gone, so the only
+ * thing this represents is "zero MOB". Kept so [DeleteAccountViewModel]
+ * can still receive a Balance from a stub LiveData without recompiling
+ * its own protocol.
+ */
+public final class Balance {
+  public static final Balance ZERO = new Balance();
+
+  private Balance() {}
 
   public @NonNull Money getFullAmount() {
-    return fullAmount;
-  }
-
-  /**
-   * Full amount minus estimated fees required to send all funds.
-   */
-  public @NonNull Money getTransferableAmount() {
-    return transferableAmount;
-  }
-
-  public long getCheckedAt() {
-    return checkedAt;
-  }
-
-  @Override
-  public String toString() {
-    return "Balance{" +
-           "fullAmount=" + fullAmount +
-           ", transferableAmount=" + transferableAmount +
-           ", checkedAt=" + checkedAt +
-           '}';
+    return Money.mobileCoin(BigDecimal.ZERO);
   }
 }

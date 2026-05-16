@@ -89,7 +89,6 @@ import org.thoughtcrime.securesms.migrations.ProfileMigrationJob;
 import org.thoughtcrime.securesms.migrations.ProfileSharingUpdateMigrationJob;
 import org.thoughtcrime.securesms.migrations.QuoteThumbnailBackfillMigrationJob;
 import org.thoughtcrime.securesms.migrations.RebuildMessageSearchIndexMigrationJob;
-import org.thoughtcrime.securesms.migrations.RecheckPaymentsMigrationJob;
 import org.thoughtcrime.securesms.migrations.ReleaseChannelRecipientFixMigrationJob;
 import org.thoughtcrime.securesms.migrations.RecipientSearchMigrationJob;
 import org.thoughtcrime.securesms.migrations.ResetArchiveTierMigrationJob;
@@ -205,7 +204,7 @@ public final class JobManagerFactories {
       put(MultiDeviceDeleteSyncJob.KEY,                new MultiDeviceDeleteSyncJob.Factory());
       put(MultiDeviceKeysUpdateJob.KEY,                new MultiDeviceKeysUpdateJob.Factory());
       put(MultiDeviceMessageRequestResponseJob.KEY,    new MultiDeviceMessageRequestResponseJob.Factory());
-      put(MultiDeviceOutgoingPaymentSyncJob.KEY,       new MultiDeviceOutgoingPaymentSyncJob.Factory());
+      // MultiDeviceOutgoingPaymentSyncJob retired in server-private (MobileCoin wallet removed). FailingJob below.
       put(MultiDeviceProfileContentUpdateJob.KEY,      new MultiDeviceProfileContentUpdateJob.Factory());
       put(MultiDeviceProfileKeyUpdateJob.KEY,          new MultiDeviceProfileKeyUpdateJob.Factory());
       put(MultiDeviceReadUpdateJob.KEY,                new MultiDeviceReadUpdateJob.Factory());
@@ -220,11 +219,7 @@ public final class JobManagerFactories {
       put(NullMessageSendJob.KEY,                      new NullMessageSendJob.Factory());
       put(OptimizeMediaJob.KEY,                        new OptimizeMediaJob.Factory());
       put(OptimizeMessageSearchIndexJob.KEY,           new OptimizeMessageSearchIndexJob.Factory());
-      put(PaymentLedgerUpdateJob.KEY,                  new PaymentLedgerUpdateJob.Factory());
-      put(PaymentNotificationSendJob.KEY,              new PaymentNotificationSendJob.Factory());
-      put(PaymentNotificationSendJobV2.KEY,            new PaymentNotificationSendJobV2.Factory());
-      put(PaymentSendJob.KEY,                          new PaymentSendJob.Factory());
-      put(PaymentTransactionCheckJob.KEY,              new PaymentTransactionCheckJob.Factory());
+      // Payment* jobs retired in server-private (MobileCoin wallet removed). FailingJob below.
       put(PollVoteJob.KEY,                             new PollVoteJob.Factory());
       put(PreKeysSyncJob.KEY,                          new PreKeysSyncJob.Factory());
       put(ProfileKeySendJob.KEY,                       new ProfileKeySendJob.Factory());
@@ -264,7 +259,7 @@ public final class JobManagerFactories {
       put(RotateProfileKeyJob.KEY,                     new RotateProfileKeyJob.Factory());
       put(SenderKeyDistributionSendJob.KEY,            new SenderKeyDistributionSendJob.Factory());
       put(SendDeliveryReceiptJob.KEY,                  new SendDeliveryReceiptJob.Factory());
-      put(SendPaymentsActivatedJob.KEY,                new SendPaymentsActivatedJob.Factory());
+      // SendPaymentsActivatedJob retired in server-private. FailingJob below.
       put(SendReadReceiptJob.KEY,                      new SendReadReceiptJob.Factory());
       put(SendRetryReceiptJob.KEY,                     new SendRetryReceiptJob.Factory());
       put(SendViewedReceiptJob.KEY,                    new SendViewedReceiptJob.Factory(application));
@@ -337,7 +332,7 @@ public final class JobManagerFactories {
       put(ProfileSharingUpdateMigrationJob.KEY,           new ProfileSharingUpdateMigrationJob.Factory());
       put(QuoteThumbnailBackfillMigrationJob.KEY,         new QuoteThumbnailBackfillMigrationJob.Factory());
       put(RebuildMessageSearchIndexMigrationJob.KEY,      new RebuildMessageSearchIndexMigrationJob.Factory());
-      put(RecheckPaymentsMigrationJob.KEY,                new RecheckPaymentsMigrationJob.Factory());
+      // RecheckPaymentsMigrationJob retired in server-private. PassingMigrationJob below.
       put(ReleaseChannelRecipientFixMigrationJob.KEY,     new ReleaseChannelRecipientFixMigrationJob.Factory());
       put(RecipientSearchMigrationJob.KEY,                new RecipientSearchMigrationJob.Factory());
       put(ResetArchiveTierMigrationJob.KEY,               new ResetArchiveTierMigrationJob.Factory());
@@ -386,6 +381,15 @@ public final class JobManagerFactories {
       put("PostRestoreBackupRedemptionJob",              new FailingJob.Factory());
       put("SubscriberIdMigrationJob",                    new PassingMigrationJob.Factory());
       put("GooglePlayBillingPurchaseTokenMigrationJob",  new PassingMigrationJob.Factory());
+      put("RecheckPaymentsMigrationJob",                 new PassingMigrationJob.Factory());
+      // Payment* (MobileCoin wallet) jobs retired in server-private fork
+      put("MultiDeviceOutgoingPaymentSyncJob",           new FailingJob.Factory());
+      put("PaymentLedgerUpdateJob",                      new FailingJob.Factory());
+      put("PaymentNotificationSendJob",                  new FailingJob.Factory());
+      put("PaymentNotificationSendJobV2",                new FailingJob.Factory());
+      put("PaymentSendJob",                              new FailingJob.Factory());
+      put("PaymentTransactionCheckJob",                  new FailingJob.Factory());
+      put("SendPaymentsActivatedJob",                    new FailingJob.Factory());
       put("PushContentReceiveJob",                       new FailingJob.Factory());
       put("AttachmentUploadJob",                         new FailingJob.Factory());
       put("MmsSendJob",                                  new FailingJob.Factory());

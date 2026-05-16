@@ -684,9 +684,7 @@ public class ApplicationMigrations {
       jobs.put(Version.COPY_USERNAME_TO_SIGNAL_STORE, new CopyUsernameToSignalStoreMigrationJob());
     }
 
-    if (lastSeenVersion < Version.RECHECK_PAYMENTS) {
-      jobs.put(Version.RECHECK_PAYMENTS, new RecheckPaymentsMigrationJob());
-    }
+    // RECHECK_PAYMENTS migration retired in server-private (MobileCoin wallet removed).
 
     if (lastSeenVersion < Version.THREAD_COUNT_DB_MIGRATION) {
       jobs.put(Version.THREAD_COUNT_DB_MIGRATION, new DatabaseMigrationJob());

@@ -21,7 +21,6 @@ import org.signal.network.api.CallingApi
 import org.signal.network.api.CdsApi
 import org.signal.network.api.CertificateApi
 import org.signal.network.api.LinkDeviceApi
-import org.signal.network.api.PaymentsApi
 import org.signal.network.api.ProvisioningApi
 import org.signal.network.api.RateLimitChallengeApi
 import org.signal.network.api.RemoteConfigApi
@@ -39,7 +38,6 @@ import org.thoughtcrime.securesms.jobmanager.JobManager
 import org.thoughtcrime.securesms.megaphone.MegaphoneRepository
 import org.thoughtcrime.securesms.messages.IncomingMessageObserver
 import org.thoughtcrime.securesms.notifications.MessageNotifier
-import org.thoughtcrime.securesms.payments.Payments
 import org.thoughtcrime.securesms.push.SignalServiceNetworkAccess
 import org.thoughtcrime.securesms.recipients.LiveRecipientCache
 import org.thoughtcrime.securesms.revealable.ViewOnceMessageManager
@@ -315,10 +313,6 @@ object AppDependencies {
     get() = networkModule.clientZkReceiptOperations
 
   @JvmStatic
-  val payments: Payments
-    get() = networkModule.payments
-
-  @JvmStatic
   val profileService: ProfileService
     get() = networkModule.profileService
 
@@ -360,9 +354,6 @@ object AppDependencies {
 
   val callingApi: CallingApi
     get() = networkModule.callingApi
-
-  val paymentsApi: PaymentsApi
-    get() = networkModule.paymentsApi
 
   val cdsApi: CdsApi
     get() = networkModule.cdsApi
@@ -445,7 +436,6 @@ object AppDependencies {
     fun provideTypingStatusRepository(): TypingStatusRepository
     fun provideTypingStatusSender(): TypingStatusSender
     fun provideDatabaseObserver(): DatabaseObserver
-    fun providePayments(paymentsApi: PaymentsApi): Payments
     fun provideShakeToReport(): ShakeToReport
     fun provideSignalCallManager(): SignalCallManager
     fun providePendingRetryReceiptManager(): PendingRetryReceiptManager
@@ -472,7 +462,6 @@ object AppDependencies {
     fun provideAccountApi(authWebSocket: SignalWebSocket.AuthenticatedWebSocket): AccountApi
     fun provideUsernameApi(unauthWebSocket: SignalWebSocket.UnauthenticatedWebSocket): UsernameApi
     fun provideCallingApi(authWebSocket: SignalWebSocket.AuthenticatedWebSocket, unauthWebSocket: SignalWebSocket.UnauthenticatedWebSocket, pushServiceSocket: PushServiceSocket): CallingApi
-    fun providePaymentsApi(authWebSocket: SignalWebSocket.AuthenticatedWebSocket): PaymentsApi
     fun provideCdsApi(authWebSocket: SignalWebSocket.AuthenticatedWebSocket): CdsApi
     fun provideRateLimitChallengeApi(authWebSocket: SignalWebSocket.AuthenticatedWebSocket): RateLimitChallengeApi
     fun provideMessageApi(authWebSocket: SignalWebSocket.AuthenticatedWebSocket, unauthWebSocket: SignalWebSocket.UnauthenticatedWebSocket): MessageApi

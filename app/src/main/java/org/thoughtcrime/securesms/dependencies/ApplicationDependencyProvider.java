@@ -56,8 +56,6 @@ import org.thoughtcrime.securesms.net.SignalWebSocketHealthMonitor;
 import org.thoughtcrime.securesms.net.StandardUserAgentInterceptor;
 import org.thoughtcrime.securesms.notifications.MessageNotifier;
 import org.thoughtcrime.securesms.notifications.OptimizedMessageNotifier;
-import org.thoughtcrime.securesms.payments.MobileCoinConfig;
-import org.thoughtcrime.securesms.payments.Payments;
 import org.thoughtcrime.securesms.push.SecurityEventListener;
 import org.thoughtcrime.securesms.push.SignalServiceNetworkAccess;
 import org.thoughtcrime.securesms.recipients.LiveRecipientCache;
@@ -99,7 +97,6 @@ import org.whispersystems.signalservice.api.groupsv2.GroupsV2Operations;
 import org.whispersystems.signalservice.api.keys.KeysApi;
 import org.signal.network.api.LinkDeviceApi;
 import org.whispersystems.signalservice.api.message.MessageApi;
-import org.signal.network.api.PaymentsApi;
 import org.whispersystems.signalservice.api.profiles.ProfileApi;
 import org.signal.network.api.ProvisioningApi;
 import org.signal.core.models.ServiceId.ACI;
@@ -305,17 +302,8 @@ public class ApplicationDependencyProvider implements AppDependencies.Provider {
     return new DatabaseObserver();
   }
 
-  @SuppressWarnings("ConstantConditions")
-  @Override
-  public @NonNull Payments providePayments(@NonNull PaymentsApi paymentsApi) {
-    MobileCoinConfig network;
+  // providePayments removed in server-private fork (MobileCoin wallet gone).
 
-    if      (BuildConfig.MOBILE_COIN_ENVIRONMENT.equals("mainnet")) network = MobileCoinConfig.getMainNet(paymentsApi);
-    else if (BuildConfig.MOBILE_COIN_ENVIRONMENT.equals("testnet")) network = MobileCoinConfig.getTestNet(paymentsApi);
-    else throw new AssertionError("Unknown network " + BuildConfig.MOBILE_COIN_ENVIRONMENT);
-
-    return new Payments(network);
-  }
 
   @Override
   public @NonNull ShakeToReport provideShakeToReport() {
@@ -528,10 +516,7 @@ public class ApplicationDependencyProvider implements AppDependencies.Provider {
     return new CallingApi(authWebSocket, unauthWebSocket, pushServiceSocket);
   }
 
-  @Override
-  public @NonNull PaymentsApi providePaymentsApi(@NonNull SignalWebSocket.AuthenticatedWebSocket authWebSocket) {
-    return new PaymentsApi(authWebSocket);
-  }
+  // providePaymentsApi removed in server-private fork.
 
   @Override
   public @NonNull CdsApi provideCdsApi(@NonNull SignalWebSocket.AuthenticatedWebSocket authWebSocket) {

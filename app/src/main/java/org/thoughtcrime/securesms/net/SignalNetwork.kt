@@ -10,7 +10,6 @@ import org.signal.network.api.CallingApi
 import org.signal.network.api.CdsApi
 import org.signal.network.api.CertificateApi
 import org.signal.network.api.LinkDeviceApi
-import org.signal.network.api.PaymentsApi
 import org.signal.network.api.ProvisioningApi
 import org.signal.network.api.RateLimitChallengeApi
 import org.signal.network.api.RemoteConfigApi
@@ -66,10 +65,7 @@ object SignalNetwork {
   val message: MessageApi
     get() = AppDependencies.messageApi
 
-  @JvmStatic
-  @get:JvmName("payments")
-  val payments: PaymentsApi
-    get() = AppDependencies.paymentsApi
+  // SignalNetwork.payments removed in server-private fork.
 
   @JvmStatic
   @get:JvmName("profile")
