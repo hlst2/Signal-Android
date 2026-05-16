@@ -38,14 +38,6 @@
             app:popExitAnim="@anim/nav_default_pop_exit_anim" />
 
         <action
-            android:id="@+id/go_to_enterDisplayName"
-            app:destination="@id/enterDisplayNameFragment"
-            app:enterAnim="@anim/nav_default_enter_anim"
-            app:exitAnim="@anim/nav_default_exit_anim"
-            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
-            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
-
-        <action
             android:id="@+id/action_welcomeFragment_to_grantPermissionsFragment"
             app:destination="@id/grantPermissionsFragment"
             app:enterAnim="@anim/nav_default_enter_anim"
@@ -78,12 +70,6 @@
             app:popExitAnim="@anim/nav_default_pop_exit_anim" />
 
     </fragment>
-
-    <fragment
-        android:id="@+id/enterDisplayNameFragment"
-        android:name="org.thoughtcrime.securesms.registration.ui.displayname.EnterDisplayNameFragment"
-        android:label="fragment_enter_display_name"
-        tools:layout="@layout/fragment_registration_enter_display_name" />
 
     <fragment
         android:id="@+id/grantPermissionsFragment"

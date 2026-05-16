@@ -19,11 +19,7 @@
     <!-- Validation error shown when the URL is malformed -->
     <string name="ServerSetupFragment_invalid_url">Enter a valid URL starting with http:// or https://</string>
 
-    <!-- EnterDisplayNameFragment -->
-    <!-- Title shown above the display-name input -->
-    <string name="EnterDisplayNameFragment_title">Choose your name</string>
-    <!-- Subtitle / description for the display-name screen -->
-    <string name="EnterDisplayNameFragment_description">This is how other people on the server will see you.</string>
+    <!-- Display-name input on ServerSetupFragment (combined URL + name screen) -->
     <!-- Hint text inside the display-name input -->
     <string name="EnterDisplayNameFragment_hint">Display name</string>
     <!-- Validation error when the user leaves the name field empty -->

@@ -1088,6 +1088,15 @@ class RegistrationViewModel : ViewModel() {
     }
   }
 
+  /**
+   * Marks the post-registration welcome/permissions flow as complete. The activity-level
+   * observer waits for this before launching MainActivity so that the user sees the
+   * permissions screens after registration on the private fork.
+   */
+  fun markWelcomeFlowComplete() {
+    store.update { it.copy(welcomeFlowComplete = true) }
+  }
+
   private suspend fun getRegistrationData(): RegistrationData {
     val currentState = store.value
     val code = currentState.enteredCode

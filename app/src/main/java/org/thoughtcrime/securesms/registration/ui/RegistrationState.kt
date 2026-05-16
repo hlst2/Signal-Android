@@ -56,7 +56,15 @@ data class RegistrationState(
   val sessionCreationError: RegistrationSessionResult? = null,
   val sessionStateError: VerificationCodeRequestResult? = null,
   val registerAccountError: RegisterAccountResult? = null,
-  val challengeInProgress: Boolean = false
+  val challengeInProgress: Boolean = false,
+  /**
+   * server-private fork: registration now happens on the first onboarding screen
+   * (ServerSetupFragment, URL + display name), before WelcomeFragment / permissions.
+   * The activity-level observer must NOT auto-launch MainActivity on
+   * [RegistrationCheckpoint.LOCAL_REGISTRATION_COMPLETE] alone — it waits for this
+   * flag, which the post-registration WelcomeFragment Continue button sets.
+   */
+  val welcomeFlowComplete: Boolean = false
 ) {
   companion object {
     private val TAG = Log.tag(RegistrationState::class)

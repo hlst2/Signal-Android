@@ -45,8 +45,11 @@ class RegistrationActivity : BaseActivity() {
 
     sharedViewModel.isReregister = intent.getBooleanExtra(RE_REGISTRATION_EXTRA, false)
 
-    sharedViewModel.checkpoint.observe(this) {
-      if (it >= RegistrationCheckpoint.LOCAL_REGISTRATION_COMPLETE) {
+    sharedViewModel.uiState.observe(this) { state ->
+      // server-private fork: registration completes on the first screen (ServerSetupFragment).
+      // Defer the MainActivity transition until WelcomeFragment Continue is clicked,
+      // so the user still sees the permissions screens after a successful register.
+      if (state.registrationCheckpoint >= RegistrationCheckpoint.LOCAL_REGISTRATION_COMPLETE && state.welcomeFlowComplete) {
         RegistrationUtil.maybeMarkRegistrationComplete()
         handleSuccessfulVerify()
       }
