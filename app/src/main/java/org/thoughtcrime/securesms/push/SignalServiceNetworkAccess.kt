@@ -93,13 +93,18 @@ class SignalServiceNetworkAccess(context: Context) {
   }
 
   /**
-   * Resolves the base URL the user entered on first boot, falling back to the build-time URL if nothing has
-   * been configured (this only matters during early initialization paths that touch the network before the
-   * registration UI has run).
+   * Resolves the base URL the user entered on first boot. Falls back to [BuildConfig.SIGNAL_URL] only
+   * if nothing has been configured — which on this private fork is the empty string (the build script
+   * carries no reference to upstream Signal infra). The fallback effectively never matters in practice
+   * because every code path that issues network requests sits behind the `account.isRegistered` gate
+   * or the first-boot ServerSetupFragment, both of which require a user-typed URL.
    */
   private fun resolveBaseUrl(): String {
     val configured = SignalStore.customServer.serverUrl
-    return if (configured.isNotBlank()) configured else BuildConfig.SIGNAL_URL
+    if (configured.isBlank()) {
+      Log.w(TAG, "resolveBaseUrl(): no custom server URL configured yet; returning empty fallback")
+    }
+    return configured.ifBlank { BuildConfig.SIGNAL_URL }
   }
 
   val uncensoredConfiguration: SignalServiceConfiguration

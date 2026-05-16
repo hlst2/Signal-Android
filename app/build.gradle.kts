@@ -217,14 +217,20 @@ android {
 
     buildConfigField("long", "BUILD_TIMESTAMP", getLastCommitTimestamp() + "L")
     buildConfigField("String", "GIT_HASH", "\"${getGitHash()}\"")
-    buildConfigField("String", "SIGNAL_URL", "\"https://chat.signal.org\"")
-    buildConfigField("String", "STORAGE_URL", "\"https://storage.signal.org\"")
-    buildConfigField("String", "SIGNAL_CDN_URL", "\"https://cdn.signal.org\"")
-    buildConfigField("String", "SIGNAL_CDN2_URL", "\"https://cdn2.signal.org\"")
-    buildConfigField("String", "SIGNAL_CDN3_URL", "\"https://cdn3.signal.org\"")
-    buildConfigField("String", "SIGNAL_CDSI_URL", "\"https://cdsi.signal.org\"")
-    buildConfigField("String", "SIGNAL_SERVICE_STATUS_URL", "\"uptime.signal.org\"")
-    buildConfigField("String", "SIGNAL_SVR2_URL", "\"https://svr2.signal.org\"")
+    // server-private fork: all of these are overridden at runtime by SignalServiceNetworkAccess,
+    // which builds a SignalServiceConfiguration pointing every endpoint at SignalStore.customServer.serverUrl
+    // (the URL the user types on the first-boot setup screen). They are blanked here so a build of this
+    // fork carries no reference to upstream Signal infrastructure — if SignalServiceNetworkAccess.resolveBaseUrl()
+    // ever falls through to BuildConfig.SIGNAL_URL, the resulting OkHttp call fails loudly with an
+    // empty URL instead of silently hitting chat.signal.org.
+    buildConfigField("String", "SIGNAL_URL", "\"\"")
+    buildConfigField("String", "STORAGE_URL", "\"\"")
+    buildConfigField("String", "SIGNAL_CDN_URL", "\"\"")
+    buildConfigField("String", "SIGNAL_CDN2_URL", "\"\"")
+    buildConfigField("String", "SIGNAL_CDN3_URL", "\"\"")
+    buildConfigField("String", "SIGNAL_CDSI_URL", "\"\"")
+    buildConfigField("String", "SIGNAL_SERVICE_STATUS_URL", "\"\"")
+    buildConfigField("String", "SIGNAL_SVR2_URL", "\"\"")
     buildConfigField("String", "SIGNAL_SFU_URL", "\"https://sfu.voip.signal.org\"")
     buildConfigField("String", "SIGNAL_STAGING_SFU_URL", "\"https://sfu.staging.voip.signal.org\"")
     buildConfigField("String[]", "SIGNAL_SFU_INTERNAL_NAMES", "new String[]{\"Test\", \"Staging\", \"Development\"}")
@@ -443,13 +449,14 @@ android {
 
       applicationIdSuffix = ".staging"
 
-      buildConfigField("String", "SIGNAL_URL", "\"https://chat.staging.signal.org\"")
-      buildConfigField("String", "STORAGE_URL", "\"https://storage-staging.signal.org\"")
-      buildConfigField("String", "SIGNAL_CDN_URL", "\"https://cdn-staging.signal.org\"")
-      buildConfigField("String", "SIGNAL_CDN2_URL", "\"https://cdn2-staging.signal.org\"")
-      buildConfigField("String", "SIGNAL_CDN3_URL", "\"https://cdn3-staging.signal.org\"")
-      buildConfigField("String", "SIGNAL_CDSI_URL", "\"https://cdsi.staging.signal.org\"")
-      buildConfigField("String", "SIGNAL_SVR2_URL", "\"https://svr2.staging.signal.org\"")
+      // server-private fork: staging variant also routes through customServer.serverUrl at runtime.
+      buildConfigField("String", "SIGNAL_URL", "\"\"")
+      buildConfigField("String", "STORAGE_URL", "\"\"")
+      buildConfigField("String", "SIGNAL_CDN_URL", "\"\"")
+      buildConfigField("String", "SIGNAL_CDN2_URL", "\"\"")
+      buildConfigField("String", "SIGNAL_CDN3_URL", "\"\"")
+      buildConfigField("String", "SIGNAL_CDSI_URL", "\"\"")
+      buildConfigField("String", "SIGNAL_SVR2_URL", "\"\"")
       buildConfigField("String", "SVR2_MRENCLAVE_LEGACY", "\"a75542d82da9f6914a1e31f8a7407053b99cc99a0e7291d8fbd394253e19b036\"")
       buildConfigField("String", "SVR2_MRENCLAVE", "\"97f151f6ed078edbbfd72fa9cae694dcc08353f1f5e8d9ccd79a971b10ffc535\"")
       buildConfigField("String[]", "UNIDENTIFIED_SENDER_TRUST_ROOTS", "new String[]{\"BbqY1DzohE4NUZoVF+L18oUPrK3kILllLEJh2UnPSsEx\", \"BYhU6tPjqP46KGZEzRs1OL4U39V5dlPJ/X09ha4rErkm\"}")
