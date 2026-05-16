@@ -8,11 +8,12 @@ package org.thoughtcrime.securesms.dependencies
 import android.content.Context
 import org.signal.core.util.billing.BillingDependencies
 import org.signal.core.util.billing.BillingError
-import org.whispersystems.signalservice.internal.push.SubscriptionsConfiguration
-import java.util.Locale
 
 /**
- * Dependency object for Google Play Billing.
+ * Stubbed BillingDependencies for server-private fork (no paid backup tier, no
+ * Google Play Billing). BillingFactory.create returns BillingApi.Empty when
+ * `Environment.Backups.supportsGooglePlayBilling()` is false (which it always is
+ * in this fork), so these methods should never actually be called.
  */
 object GooglePlayBillingDependencies : BillingDependencies {
 
@@ -20,17 +21,7 @@ object GooglePlayBillingDependencies : BillingDependencies {
 
   override val context: Context get() = AppDependencies.application
 
-  override suspend fun getProductId(): String {
-    val config = AppDependencies.donationsService.getDonationsConfiguration(Locale.getDefault())
+  override suspend fun getProductId(): String = throw BillingError(BILLING_PRODUCT_ID_NOT_AVAILABLE)
 
-    if (config.result.isPresent) {
-      return config.result.get().backupConfiguration.backupLevelConfigurationMap[SubscriptionsConfiguration.BACKUPS_LEVEL]?.playProductId ?: throw BillingError(BILLING_PRODUCT_ID_NOT_AVAILABLE)
-    } else {
-      throw BillingError(BILLING_PRODUCT_ID_NOT_AVAILABLE)
-    }
-  }
-
-  override suspend fun getBasePlanId(): String {
-    return "monthly"
-  }
+  override suspend fun getBasePlanId(): String = "monthly"
 }

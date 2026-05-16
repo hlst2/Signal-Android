@@ -8,15 +8,11 @@ import android.view.Window
 import androidx.activity.viewModels
 import androidx.core.app.ActivityCompat
 import androidx.lifecycle.enableSavedStateHandles
-import io.reactivex.rxjava3.subjects.PublishSubject
-import io.reactivex.rxjava3.subjects.Subject
 import org.signal.core.util.logging.Log
 import org.signal.core.util.logging.Log.tag
 import org.thoughtcrime.securesms.MainActivity
 import org.thoughtcrime.securesms.PassphraseRequiredActivity
 import org.thoughtcrime.securesms.R
-import org.thoughtcrime.securesms.components.settings.app.subscription.GooglePayComponent
-import org.thoughtcrime.securesms.components.settings.app.subscription.GooglePayRepository
 import org.thoughtcrime.securesms.components.voice.VoiceNoteMediaController
 import org.thoughtcrime.securesms.components.voice.VoiceNoteMediaControllerOwner
 import org.thoughtcrime.securesms.conversation.ConversationIntents
@@ -29,7 +25,7 @@ import java.util.concurrent.TimeUnit
 /**
  * Wrapper activity for ConversationFragment.
  */
-open class ConversationActivity : PassphraseRequiredActivity(), VoiceNoteMediaControllerOwner, GooglePayComponent {
+open class ConversationActivity : PassphraseRequiredActivity(), VoiceNoteMediaControllerOwner {
 
   companion object {
     private val TAG = tag(ConversationActivity::class.java)
@@ -41,9 +37,6 @@ open class ConversationActivity : PassphraseRequiredActivity(), VoiceNoteMediaCo
   private val transitionDebouncer: Debouncer = Debouncer(150, TimeUnit.MILLISECONDS)
 
   override val voiceNoteMediaController = VoiceNoteMediaController(this, true)
-
-  override val googlePayRepository: GooglePayRepository by lazy { GooglePayRepository(this) }
-  override val googlePayResultPublisher: Subject<GooglePayComponent.GooglePayResult> = PublishSubject.create()
 
   private val motionEventRelay: MotionEventRelay by viewModels()
   private val shareDataTimestampViewModel: ShareDataTimestampViewModel by viewModels()
@@ -106,12 +99,6 @@ open class ConversationActivity : PassphraseRequiredActivity(), VoiceNoteMediaCo
     // in constraint-layout which mixes up insets when replacing the fragment via onNewIntent.
     finish()
     startActivity(intent)
-  }
-
-  @Suppress("DEPRECATION")
-  override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-    super.onActivityResult(requestCode, resultCode, data)
-    googlePayResultPublisher.onNext(GooglePayComponent.GooglePayResult(requestCode, resultCode, data))
   }
 
   override fun onConfigurationChanged(newConfiguration: Configuration) {

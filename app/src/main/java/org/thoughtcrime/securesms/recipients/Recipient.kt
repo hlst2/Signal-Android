@@ -391,16 +391,10 @@ class Recipient(
 
   /**
    * The badge to feature on a recipient's avatar, if any.
-   * This value respects the local user's [SignalStore.inAppPayments.getDisplayBadgesOnProfile()] preference.
+   * Badge visibility toggle removed in server-private fork (server returns no badges anyway).
    */
   val featuredBadge: Badge?
-    get() {
-      return if (isSelf && !SignalStore.inAppPayments.getDisplayBadgesOnProfile()) {
-        null
-      } else {
-        badges.firstOrNull()
-      }
-    }
+    get() = badges.firstOrNull()
 
   /** A string combining the about emoji + text for displaying various places. */
   val combinedAboutAndEmoji: String? by lazy { listOf(aboutEmoji, about).filter { it.isNotNullOrBlank() }.joinToString(separator = " ").nullIfBlank() }

@@ -56,7 +56,6 @@ open class SignalDatabase(private val context: Application, databaseSecret: Data
   val avatarPickerDatabase: AvatarPickerDatabase = AvatarPickerDatabase(context, this)
   val reactionTable: ReactionTable = ReactionTable(context, this)
   val notificationProfileTables: NotificationProfileTables = NotificationProfileTables(context, this)
-  val donationReceiptTable: DonationReceiptTable = DonationReceiptTable(context, this)
   val distributionListTables: DistributionListTables = DistributionListTables(context, this)
   val storySendTable: StorySendTable = StorySendTable(context, this)
   val cdsTable: CdsTable = CdsTable(context, this)
@@ -66,8 +65,6 @@ open class SignalDatabase(private val context: Application, databaseSecret: Data
   val kyberPreKeyTable: KyberPreKeyTable = KyberPreKeyTable(context, this)
   val callLinkTable: CallLinkTable = CallLinkTable(context, this)
   val nameCollisionTables: NameCollisionTables = NameCollisionTables(context, this)
-  val inAppPaymentTable: InAppPaymentTable = InAppPaymentTable(context, this)
-  val inAppPaymentSubscriberTable: InAppPaymentSubscriberTable = InAppPaymentSubscriberTable(context, this)
   val chatFoldersTable: ChatFolderTables = ChatFolderTables(context, this)
   val backupMediaSnapshotTable: BackupMediaSnapshotTable = BackupMediaSnapshotTable(context, this)
   val pollTable: PollTables = PollTables(context, this)
@@ -111,7 +108,6 @@ open class SignalDatabase(private val context: Application, databaseSecret: Data
     db.execSQL(EmojiSearchTable.CREATE_TABLE)
     db.execSQL(AvatarPickerDatabase.CREATE_TABLE)
     db.execSQL(ReactionTable.CREATE_TABLE)
-    db.execSQL(DonationReceiptTable.CREATE_TABLE)
     db.execSQL(StorySendTable.CREATE_TABLE)
     db.execSQL(CdsTable.CREATE_TABLE)
     db.execSQL(RemoteMegaphoneTable.CREATE_TABLE)
@@ -120,8 +116,6 @@ open class SignalDatabase(private val context: Application, databaseSecret: Data
     db.execSQL(CallTable.CREATE_TABLE)
     db.execSQL(KyberPreKeyTable.CREATE_TABLE)
     executeStatements(db, NameCollisionTables.CREATE_TABLE)
-    db.execSQL(InAppPaymentTable.CREATE_TABLE)
-    db.execSQL(InAppPaymentSubscriberTable.CREATE_TABLE)
     executeStatements(db, RemappedRecordTables.CREATE_TABLE)
     executeStatements(db, MessageSendLogTables.CREATE_TABLE)
     executeStatements(db, NotificationProfileTables.CREATE_TABLE)
@@ -145,7 +139,6 @@ open class SignalDatabase(private val context: Application, databaseSecret: Data
     executeStatements(db, PaymentTable.CREATE_INDEXES)
     executeStatements(db, MessageSendLogTables.CREATE_INDEXES)
     executeStatements(db, NotificationProfileTables.CREATE_INDEXES)
-    executeStatements(db, DonationReceiptTable.CREATE_INDEXS)
     executeStatements(db, StorySendTable.CREATE_INDEXS)
     executeStatements(db, DistributionListTables.CREATE_INDEXES)
     executeStatements(db, PendingPniSignatureMessageTable.CREATE_INDEXES)
@@ -374,11 +367,6 @@ open class SignalDatabase(private val context: Application, databaseSecret: Data
       get() = instance!!.distributionListTables
 
     @get:JvmStatic
-    @get:JvmName("donationReceipts")
-    val donationReceipts: DonationReceiptTable
-      get() = instance!!.donationReceiptTable
-
-    @get:JvmStatic
     @get:JvmName("drafts")
     val drafts: DraftTable
       get() = instance!!.draftTable
@@ -532,16 +520,6 @@ open class SignalDatabase(private val context: Application, databaseSecret: Data
     @get:JvmName("nameCollisions")
     val nameCollisions: NameCollisionTables
       get() = instance!!.nameCollisionTables
-
-    @get:JvmStatic
-    @get:JvmName("inAppPayments")
-    val inAppPayments: InAppPaymentTable
-      get() = instance!!.inAppPaymentTable
-
-    @get:JvmStatic
-    @get:JvmName("inAppPaymentSubscribers")
-    val inAppPaymentSubscribers: InAppPaymentSubscriberTable
-      get() = instance!!.inAppPaymentSubscriberTable
 
     @get:JvmStatic
     @get:JvmName("chatFolders")

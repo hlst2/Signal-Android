@@ -39,7 +39,6 @@ import org.signal.core.util.concurrent.addTo
 import org.signal.core.util.getParcelableArrayListExtraCompat
 import org.signal.core.util.orNull
 import org.signal.core.util.requireParcelableCompat
-import org.signal.donations.InAppPaymentType
 import org.thoughtcrime.securesms.AvatarPreviewActivity
 import org.thoughtcrime.securesms.BlockUnblockDialog
 import org.thoughtcrime.securesms.MainActivity
@@ -60,7 +59,6 @@ import org.thoughtcrime.securesms.components.settings.DSLSettingsIcon
 import org.thoughtcrime.securesms.components.settings.DSLSettingsText
 import org.thoughtcrime.securesms.components.settings.NO_TINT
 import org.thoughtcrime.securesms.components.settings.app.AppSettingsActivity
-import org.thoughtcrime.securesms.components.settings.app.subscription.donate.CheckoutFlowActivity
 import org.thoughtcrime.securesms.components.settings.configure
 import org.thoughtcrime.securesms.components.settings.conversation.preferences.AvatarPreference
 import org.thoughtcrime.securesms.components.settings.conversation.preferences.BioTextPreference
@@ -757,11 +755,7 @@ class ConversationSettingsFragment :
           title = DSLSettingsText.from(R.string.HelpSettingsFragment__contact_us),
           onClick = { startActivity(AppSettingsActivity.help(requireContext())) }
         )
-        clickPref(
-          icon = DSLSettingsIcon.from(R.drawable.symbol_heart_24),
-          title = DSLSettingsText.from(R.string.preferences__donate_to_signal),
-          onClick = { startActivity(CheckoutFlowActivity.createIntent(requireContext(), InAppPaymentType.ONE_TIME_DONATION)) }
-        )
+        // "Donate to Signal" pref removed in server-private fork.
       }
 
       state.withRecipientSettingsState { recipientSettingsState ->
