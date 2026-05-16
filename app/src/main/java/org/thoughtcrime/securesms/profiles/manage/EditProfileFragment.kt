@@ -32,7 +32,6 @@ import org.thoughtcrime.securesms.avatar.Avatars.getForegroundColor
 import org.thoughtcrime.securesms.avatar.Avatars.getTextSizeForLength
 import org.thoughtcrime.securesms.avatar.picker.AvatarPickerFragment
 import org.thoughtcrime.securesms.badges.models.Badge
-import org.thoughtcrime.securesms.badges.self.none.BecomeASustainerFragment.Companion.show
 import org.thoughtcrime.securesms.components.emoji.EmojiUtil
 import org.thoughtcrime.securesms.databinding.EditProfileFragmentBinding
 import org.thoughtcrime.securesms.keyvalue.AccountValues
@@ -147,13 +146,11 @@ class EditProfileFragment : LoggingFragment() {
       }
     }
 
-    binding.manageProfileBadgesContainer.setOnClickListener { v: View ->
+    // Manage profile badges container click handler removed in server-private fork
+    // (badges are inert: server returns empty list, no purchase flow, no Become a Sustainer prompt).
+    binding.manageProfileBadgesContainer.setOnClickListener { _: View ->
       if (!viewModel.isRegisteredAndUpToDate) {
         onClickWhenUnregisteredOrDeprecated()
-      } else if (Recipient.self().badges.isEmpty()) {
-        show(parentFragmentManager)
-      } else {
-        findNavController(v).safeNavigate(EditProfileFragmentDirections.actionManageProfileFragmentToBadgeManageFragment())
       }
     }
 

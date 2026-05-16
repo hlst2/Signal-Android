@@ -10,9 +10,7 @@ import androidx.compose.runtime.Immutable
 import androidx.compose.ui.text.AnnotatedString
 import org.signal.core.util.Base64
 import org.signal.core.util.Hex
-import org.thoughtcrime.securesms.components.settings.app.subscription.InAppPaymentsRepository
 import org.thoughtcrime.securesms.database.SignalDatabase
-import org.thoughtcrime.securesms.database.model.InAppPaymentSubscriberRecord
 import org.thoughtcrime.securesms.database.model.RecipientRecord
 import org.thoughtcrime.securesms.groups.GroupId
 import org.thoughtcrime.securesms.recipients.Recipient
@@ -75,20 +73,7 @@ data class InternalConversationSettingsState(
     }
 
     @WorkerThread
-    private fun buildSubscriberId(recipient: Recipient): String {
-      return if (recipient.isSelf) {
-        val subscriber: InAppPaymentSubscriberRecord? = InAppPaymentsRepository.getSubscriber(InAppPaymentSubscriberRecord.Type.DONATION)
-        if (subscriber != null) {
-          """currency code: ${subscriber.currency!!.currencyCode}
-            |subscriber id: ${subscriber.subscriberId.serialize()}
-          """.trimMargin()
-        } else {
-          "None"
-        }
-      } else {
-        "None"
-      }
-    }
+    private fun buildSubscriberId(@Suppress("UNUSED_PARAMETER") recipient: Recipient): String = "None"
 
     @WorkerThread
     private fun buildCapabilities(recipient: Recipient): AnnotatedString {

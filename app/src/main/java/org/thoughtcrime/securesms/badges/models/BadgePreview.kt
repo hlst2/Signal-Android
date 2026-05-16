@@ -17,8 +17,7 @@ object BadgePreview {
 
   fun register(mappingAdapter: MappingAdapter) {
     mappingAdapter.registerFactory(BadgeModel.FeaturedModel::class.java, LayoutFactory({ ViewHolder(it) }, R.layout.featured_badge_preview_preference))
-    mappingAdapter.registerFactory(BadgeModel.SubscriptionModel::class.java, LayoutFactory({ ViewHolder(it) }, R.layout.subscription_flow_badge_preview_preference))
-    mappingAdapter.registerFactory(BadgeModel.GiftedBadgeModel::class.java, LayoutFactory({ ViewHolder(it) }, R.layout.gift_badge_preview_preference))
+    // SubscriptionModel + GiftedBadgeModel previews removed in server-private fork (their layout files were deleted).
   }
 
   sealed class BadgeModel<T : BadgeModel<T>> : MappingModel<T> {

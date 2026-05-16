@@ -81,8 +81,6 @@ import org.thoughtcrime.securesms.R;
 import org.thoughtcrime.securesms.attachments.Attachment;
 import org.thoughtcrime.securesms.attachments.DatabaseAttachment;
 import org.thoughtcrime.securesms.badges.BadgeImageView;
-import org.thoughtcrime.securesms.badges.gifts.GiftMessageView;
-import org.thoughtcrime.securesms.badges.gifts.OpenableGift;
 import org.thoughtcrime.securesms.calls.links.CallLinks;
 import org.thoughtcrime.securesms.components.AlertView;
 import org.thoughtcrime.securesms.components.AudioView;
@@ -181,7 +179,6 @@ import kotlin.jvm.functions.Function1;
 
 public final class ConversationItem extends RelativeLayout implements BindableConversationItem,
                                                                       RecipientForeverObserver,
-                                                                      OpenableGift,
                                                                       InteractiveConversationElement
 {
   private static final String TAG = Log.tag(ConversationItem.class);
@@ -2538,44 +2535,7 @@ public final class ConversationItem extends RelativeLayout implements BindableCo
     }
   }
 
-  @Override
-  public @Nullable Projection getOpenableGiftProjection(boolean isAnimating) {
-    if (!isGiftMessage(messageRecord) || messageRecord.isRemoteDelete() || (messageRecord.isViewed() && !isAnimating)) {
-      return null;
-    }
-
-    return Projection.relativeToViewRoot(bodyBubble, bodyBubbleCorners)
-                     .translateX(bodyBubble.getTranslationX())
-                     .translateX(getTranslationX())
-                     .scale(bodyBubble.getScaleX());
-  }
-
-  @Override
-  public long getGiftId() {
-    return messageRecord.getId();
-  }
-
-  @Override
-  public void setOpenGiftCallback(@NonNull Function1<? super OpenableGift, Unit> openGift) {
-    if (giftViewStub.resolved()) {
-      bodyBubble.setOnClickListener(unused -> {
-        openGift.invoke(this);
-        eventListener.onGiftBadgeRevealed(messageRecord);
-        bodyBubble.performHapticFeedback(Build.VERSION.SDK_INT >= 30 ? HapticFeedbackConstants.CONFIRM
-                                                                     : HapticFeedbackConstants.KEYBOARD_TAP);
-      });
-      giftViewStub.get().onGiftNotOpened();
-    }
-  }
-
-  @Override
-  public void clearOpenGiftCallback() {
-    if (giftViewStub.resolved()) {
-      bodyBubble.setOnClickListener(null);
-      bodyBubble.setClickable(false);
-      giftViewStub.get().onGiftOpened();
-    }
-  }
+  // Gift-badge OpenableGift interface methods removed in server-private fork (no gift badges).
 
   @Override
   public @NonNull AnimationSign getAnimationSign() {
