@@ -1274,9 +1274,9 @@ object SyncMessageProcessor {
     }
 
     if (address == null && recipientId == null) {
-      log(envelopeTimestamp, "Inserting defrag")
-      address = AppDependencies.payments.wallet.mobileCoinPublicAddress
-      recipientId = Recipient.self().id
+      // server-private fork: MobileCoin wallet removed; can't reconstruct self defrag address.
+      log(envelopeTimestamp, "Ignoring synchronized payment with no address (wallet disabled).")
+      return
     }
 
     val uuid = UUID.randomUUID()

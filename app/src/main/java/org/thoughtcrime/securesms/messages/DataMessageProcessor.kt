@@ -29,7 +29,6 @@ import org.thoughtcrime.securesms.database.MessageTable
 import org.thoughtcrime.securesms.database.MessageTable.InsertResult
 import org.thoughtcrime.securesms.database.MessageType
 import org.thoughtcrime.securesms.database.NoSuchMessageException
-import org.thoughtcrime.securesms.database.PaymentTable.PublicKeyConflictException
 import org.thoughtcrime.securesms.database.SignalDatabase
 import org.thoughtcrime.securesms.database.model.GroupRecord
 import org.thoughtcrime.securesms.database.model.Mention
@@ -56,8 +55,6 @@ import org.thoughtcrime.securesms.jobs.AttachmentDownloadJob
 import org.thoughtcrime.securesms.jobs.DirectoryRefreshJob
 import org.thoughtcrime.securesms.jobs.GroupCallPeekJob
 import org.thoughtcrime.securesms.jobs.GroupV2UpdateSelfProfileKeyJob
-import org.thoughtcrime.securesms.jobs.PaymentLedgerUpdateJob
-import org.thoughtcrime.securesms.jobs.PaymentTransactionCheckJob
 import org.thoughtcrime.securesms.jobs.ProfileKeySendJob
 import org.thoughtcrime.securesms.jobs.PushProcessEarlyMessagesJob
 import org.thoughtcrime.securesms.jobs.PushProcessMessageJob
@@ -675,61 +672,8 @@ object DataMessageProcessor {
     senderRecipientId: RecipientId,
     receivedTime: Long
   ): InsertResult? {
-    log(envelope.clientTimestamp!!, "Payment message.")
-
-    if (message.payment?.notification?.mobileCoin?.receipt == null) {
-      warn(envelope.clientTimestamp!!, "Ignoring payment message without notification")
-      return null
-    }
-
-    val paymentNotification = message.payment!!.notification!!
-    val uuid = UUID.randomUUID()
-    val queue = "Payment_" + PushProcessMessageJob.getQueueName(senderRecipientId)
-
-    try {
-      SignalDatabase.payments.createIncomingPayment(
-        uuid,
-        senderRecipientId,
-        message.timestamp!!,
-        paymentNotification.note ?: "",
-        Money.MobileCoin.ZERO,
-        Money.MobileCoin.ZERO,
-        paymentNotification.mobileCoin!!.receipt!!.toByteArray(),
-        true
-      )
-
-      val mediaMessage = IncomingMessage(
-        from = senderRecipientId,
-        body = uuid.toString(),
-        sentTimeMillis = envelope.clientTimestamp!!,
-        serverTimeMillis = envelope.serverTimestamp!!,
-        receivedTimeMillis = receivedTime,
-        expiresIn = message.expireTimerDuration.inWholeMilliseconds,
-        isUnidentified = metadata.sealedSender,
-        serverGuid = UuidUtil.getStringUUID(envelope.serverGuid, envelope.serverGuidBinary),
-        type = MessageType.PAYMENTS_NOTIFICATION
-      )
-
-      val insertResult: InsertResult? = SignalDatabase.messages.insertMessageInbox(mediaMessage, -1).orNull()
-      if (insertResult != null) {
-        AppDependencies.messageNotifier.updateNotification(context, ConversationId.forConversation(insertResult.threadId))
-        return insertResult
-      }
-    } catch (e: PublicKeyConflictException) {
-      warn(envelope.clientTimestamp!!, "Ignoring payment with public key already in database")
-    } catch (e: SerializationException) {
-      warn(envelope.clientTimestamp!!, "Ignoring payment with bad data.", e)
-    } catch (e: MmsException) {
-      throw StorageFailedException(e, metadata.sourceServiceId.toString(), metadata.sourceDeviceId)
-    } finally {
-      SignalDatabase.runPostSuccessfulTransaction {
-        AppDependencies.jobManager
-          .startChain(PaymentTransactionCheckJob(uuid, queue))
-          .then(PaymentLedgerUpdateJob.updateLedger())
-          .enqueue()
-      }
-    }
-
+    // server-private fork: MobileCoin wallet removed; incoming payment messages are dropped.
+    log(envelope.clientTimestamp!!, "Ignoring incoming payment message (wallet disabled).")
     return null
   }
 
