@@ -174,7 +174,8 @@ public abstract class PassphraseRequiredActivity extends BaseActivity implements
       return STATE_WELCOME_PUSH_SCREEN;
     } else if (userCanTransferOrRestore()) {
       return STATE_TRANSFER_OR_RESTORE;
-    } else if (SignalStore.storageService().getNeedsAccountRestore()) {
+    } else if (SignalStore.storageService().getNeedsAccountRestore() && !SignalStore.customServer().isConfigured()) {
+      // server-private fork: storage-service restore requires SVR2, which is not deployed.
       return STATE_ENTER_SIGNAL_PIN;
     } else if (userMustSetProfileName()) {
       return STATE_CREATE_PROFILE_NAME;
@@ -197,6 +198,13 @@ public abstract class PassphraseRequiredActivity extends BaseActivity implements
   }
 
   private boolean userMustCreateSignalPin() {
+    // server-private fork: Signal-Server's SVR2 enclave is not deployed in the
+    // self-hosted test config; the client-side SVR2 calls all 404 with
+    // "EnclaveNotFound" anyway. Skip the PIN-creation screens entirely so the
+    // user doesn't type a PIN that's never actually stored anywhere.
+    if (SignalStore.customServer().isConfigured()) {
+      return false;
+    }
     return !SignalStore.registration().isRegistrationComplete() &&
            !SignalStore.svr().hasPin() &&
            !SignalStore.svr().lastPinCreateFailed() &&

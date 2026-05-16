@@ -81,7 +81,13 @@ class CheckKeyTransparencyJob private constructor(
     }
 
     private fun canRunJob(): Boolean {
-      return if (!RemoteConfig.internalUser) {
+      return if (SignalStore.customServer.isConfigured) {
+        // server-private fork: key transparency is keyed against Signal's hardcoded
+        // chat.signal.org endpoints through libsignal-net; no point running on a
+        // self-hosted deployment.
+        Log.i(TAG, "Private deployment; skipping key transparency.")
+        false
+      } else if (!RemoteConfig.internalUser) {
         Log.i(TAG, "Remote config is not on. Exiting.")
         false
       } else if (!SignalStore.account.isRegistered) {

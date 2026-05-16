@@ -72,6 +72,12 @@ class ResetSvrGuessCountJob private constructor(
   override fun getFactoryKey(): String = KEY
 
   override fun run(): Result {
+    if (SignalStore.customServer.isConfigured) {
+      // server-private fork: no SVR2 enclave deployed; nothing to reset.
+      Log.i(TAG, "Private deployment; skipping SVR2 guess count reset.")
+      return Result.success()
+    }
+
     SvrRepository.operationLock.withLock {
       val pin = SignalStore.svr.pin
 

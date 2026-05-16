@@ -240,6 +240,12 @@ object SvrRepository {
   @WorkerThread
   @JvmStatic
   fun setPin(userPin: String, keyboardType: PinKeyboardType): BackupResponse {
+    // server-private fork: SVR2 enclave is not deployed; report success without doing any
+    // network work so the PIN UI doesn't get stuck on retries against a 404 EnclaveNotFound.
+    if (SignalStore.customServer.isConfigured) {
+      Log.i(TAG, "[setPin] Private deployment; reporting success without hitting SVR2.")
+      return BackupResponse.EnclaveNotFound
+    }
     return operationLock.withLock {
       val masterKey: MasterKey = SignalStore.svr.masterKey
 

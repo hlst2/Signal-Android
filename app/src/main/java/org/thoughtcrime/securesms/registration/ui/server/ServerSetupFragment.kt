@@ -21,6 +21,7 @@ import org.thoughtcrime.securesms.keyvalue.SignalStore
 import org.thoughtcrime.securesms.registration.data.network.RegisterAccountResult
 import org.thoughtcrime.securesms.registration.ui.RegistrationCheckpoint
 import org.thoughtcrime.securesms.registration.ui.RegistrationViewModel
+import org.thoughtcrime.securesms.registration.ui.welcome.WelcomeUserSelection
 import org.thoughtcrime.securesms.util.navigation.safeNavigate
 import org.signal.registration.R as RegistrationR
 
@@ -100,9 +101,13 @@ class ServerSetupFragment : LoggingFragment(R.layout.fragment_registration_serve
         sharedViewModel.registerAccountErrorShown()
       }
 
-      // Registration succeeded — hand off to WelcomeFragment for permissions/etc.
+      // Registration succeeded — go straight to permissions, then MainActivity. The legacy
+      // WelcomeFragment ("Continue / Transfer or restore") doesn't apply to a private deployment
+      // and we already collected the user's display name on this screen.
       if (state.registrationCheckpoint >= RegistrationCheckpoint.SERVICE_REGISTRATION_COMPLETED && !inProgress) {
-        findNavController().safeNavigate(ServerSetupFragmentDirections.goToWelcome())
+        findNavController().safeNavigate(
+          ServerSetupFragmentDirections.goToGrantPermissions(WelcomeUserSelection.CONTINUE)
+        )
       }
     }
   }

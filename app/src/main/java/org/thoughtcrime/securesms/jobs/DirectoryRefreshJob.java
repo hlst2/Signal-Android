@@ -71,6 +71,14 @@ public class DirectoryRefreshJob extends BaseJob {
   public void onRun() throws IOException {
     Log.i(TAG, "DirectoryRefreshJob.onRun()");
 
+    // server-private fork: CDSI is not deployed on a self-hosted server; the upstream
+    // ContactDiscovery path would route through libsignal-net's hardcoded chat.signal.org.
+    // PrivateDirectoryRefreshJob does the contact sync against the user's server instead.
+    if (org.thoughtcrime.securesms.keyvalue.SignalStore.customServer().isConfigured()) {
+      Log.i(TAG, "Private deployment; skipping CDSI-backed contact discovery.");
+      return;
+    }
+
     if (recipient == null) {
       ContactDiscovery.refreshAll(context, notifyOfNewUsers);
     } else {

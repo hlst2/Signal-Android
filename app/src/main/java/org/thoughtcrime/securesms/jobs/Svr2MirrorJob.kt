@@ -55,6 +55,12 @@ class Svr2MirrorJob private constructor(parameters: Parameters, private var seri
   override fun getFactoryKey(): String = KEY
 
   override fun run(): Result {
+    if (SignalStore.customServer.isConfigured) {
+      // server-private fork: no SVR2 enclave deployed on a self-hosted Signal-Server.
+      Log.i(TAG, "Private deployment; skipping SVR2 mirror.")
+      return Result.success()
+    }
+
     if (SignalStore.account.isLinkedDevice) {
       Log.i(TAG, "Not primary device, skipping mirror")
       return Result.success()

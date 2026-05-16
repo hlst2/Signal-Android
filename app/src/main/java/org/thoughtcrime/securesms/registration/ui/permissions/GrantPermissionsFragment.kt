@@ -79,7 +79,15 @@ class GrantPermissionsFragment : ComposeFragment() {
   }
 
   private fun proceedToNextScreen() {
-    setFragmentResult(REQUEST_KEY, bundleOf(REQUEST_KEY to welcomeUserSelection))
-    findNavController().popBackStack()
+    // server-private fork: if there's no fragment to pop back to (we came directly from
+    // ServerSetupFragment, skipping the legacy WelcomeFragment), signal the activity to
+    // launch MainActivity ourselves. Otherwise fall through to the upstream Welcome-result
+    // flow.
+    val popped = findNavController().popBackStack()
+    if (!popped) {
+      sharedViewModel.markWelcomeFlowComplete()
+    } else {
+      setFragmentResult(REQUEST_KEY, bundleOf(REQUEST_KEY to welcomeUserSelection))
+    }
   }
 }
