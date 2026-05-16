@@ -54,6 +54,7 @@ import org.thoughtcrime.securesms.pin.Svr3Migration
 import org.thoughtcrime.securesms.pin.SvrRepository
 import org.thoughtcrime.securesms.pin.SvrWrongPinException
 import org.thoughtcrime.securesms.profiles.AvatarHelper
+import org.thoughtcrime.securesms.profiles.ProfileName
 import org.thoughtcrime.securesms.push.AccountManagerFactory
 import org.thoughtcrime.securesms.recipients.Recipient
 import org.thoughtcrime.securesms.recipients.RecipientId
@@ -208,6 +209,15 @@ object RegistrationRepository {
     recipientTable.markRegisteredOrThrow(selfId, aci)
     recipientTable.linkIdsForSelf(aci, pni, data.e164)
     recipientTable.setProfileKey(selfId, ProfileKey(data.profileKey.toByteArray()))
+
+    // server-private fork: on a self-hosted deployment, data.e164 is the displayName the user
+    // typed on the first-boot setup screen (the server uses it as the directory key and derives
+    // a synthetic E164 from it). Use it as the profile name too so PassphraseRequiredActivity's
+    // userMustSetProfileName() check returns false and the user isn't asked to type their name
+    // a second time on the CreateProfile screen.
+    if (SignalStore.customServer.isConfigured && data.e164.isNotBlank()) {
+      recipientTable.setProfileName(selfId, ProfileName.asGiven(data.e164))
+    }
 
     AppDependencies.recipientCache.clearSelf()
 
