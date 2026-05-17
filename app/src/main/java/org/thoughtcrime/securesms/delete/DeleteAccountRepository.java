@@ -20,8 +20,10 @@ import org.whispersystems.signalservice.api.push.exceptions.NonSuccessfulRespons
 
 import java.io.IOException;
 
-class DeleteAccountRepository {
+public class DeleteAccountRepository {
   private static final String TAG = Log.tag(DeleteAccountRepository.class);
+
+  public DeleteAccountRepository() {}
 
   @NonNull String getRegionDisplayName(@NonNull String region) {
     return E164Util.getRegionDisplayName(region).orElse("");
@@ -31,7 +33,7 @@ class DeleteAccountRepository {
     return PhoneNumberUtil.getInstance().getCountryCodeForRegion(region);
   }
 
-  void deleteAccount(@NonNull Consumer<DeleteAccountEvent> onDeleteAccountEvent) {
+  public void deleteAccount(@NonNull Consumer<DeleteAccountEvent> onDeleteAccountEvent) {
     SignalExecutors.BOUNDED.execute(() -> {
       Log.i(TAG, "deleteAccount: attempting to leave groups...");
 
