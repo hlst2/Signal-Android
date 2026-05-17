@@ -48,6 +48,9 @@ import org.signal.core.ui.compose.Texts
 import org.thoughtcrime.securesms.R
 import org.thoughtcrime.securesms.compose.rememberStatusBarColorNestedScrollModifier
 import org.thoughtcrime.securesms.contactshare.SimpleTextWatcher
+import org.thoughtcrime.securesms.delete.DeleteAccountEvent
+import org.thoughtcrime.securesms.delete.DeleteAccountProgressDialog
+import org.thoughtcrime.securesms.delete.DeleteAccountRepository
 import org.thoughtcrime.securesms.dependencies.AppDependencies
 import org.thoughtcrime.securesms.keyvalue.SignalStore
 import org.thoughtcrime.securesms.lock.v2.CreateSvrPinActivity
@@ -203,7 +206,56 @@ class AccountSettingsFragment : ComposeFragment() {
     }
 
     override fun openDeleteAccountFlow() {
-      findNavController().safeNavigate(R.id.action_accountSettingsFragment_to_deleteAccountFragment)
+      // server-private fork: upstream Signal pops a fragment that re-asks for the user's phone
+      // number as anti-mistake friction. On this fork accounts are keyed by displayName (synthetic
+      // E164), so that prompt is meaningless. Show a plain confirm dialog and, on confirm, run
+      // the same DeleteAccountRepository flow which leaves groups, calls DELETE /v1/accounts/me on
+      // the server (deregistering the user so contacts no longer see them), and clears local data.
+      MaterialAlertDialogBuilder(requireContext())
+        .setTitle(R.string.DeleteAccountFragment__are_you_sure)
+        .setMessage(R.string.DeleteAccountFragment__this_will_delete_your_signal_account)
+        .setNegativeButton(android.R.string.cancel) { d, _ -> d.dismiss() }
+        .setPositiveButton(R.string.DeleteAccountFragment__delete_account) { d, _ ->
+          d.dismiss()
+          runDeleteAccount()
+        }
+        .setCancelable(true)
+        .show()
+    }
+
+    private fun runDeleteAccount() {
+      val progress = DeleteAccountProgressDialog.show(requireContext())
+      progress.presentDeletingAccount()
+      DeleteAccountRepository().deleteAccount { event ->
+        val activity = activity ?: return@deleteAccount
+        activity.runOnUiThread {
+          when (event.type) {
+            DeleteAccountEvent.Type.LEAVE_GROUPS_PROGRESS -> {
+              progress.presentLeavingGroups(event as DeleteAccountEvent.LeaveGroupsProgress)
+            }
+            DeleteAccountEvent.Type.LEAVE_GROUPS_FINISHED -> {
+              progress.presentDeletingAccount()
+            }
+            DeleteAccountEvent.Type.LEAVE_GROUPS_FAILED,
+            DeleteAccountEvent.Type.SERVER_DELETION_FAILED -> {
+              progress.dismiss()
+              MaterialAlertDialogBuilder(requireContext())
+                .setTitle(R.string.DeleteAccountFragment__account_not_deleted)
+                .setMessage(R.string.DeleteAccountFragment__there_was_a_problem)
+                .setPositiveButton(android.R.string.ok, null)
+                .setCancelable(true)
+                .show()
+            }
+            DeleteAccountEvent.Type.LOCAL_DATA_DELETION_FAILED -> {
+              progress.dismiss()
+              // Server-side deregistration already succeeded; only local wipe failed.
+              // Toast and let the user clear data manually from system settings.
+              Toast.makeText(requireContext(), R.string.DeleteAccountFragment__failed_to_delete_local_data, Toast.LENGTH_LONG).show()
+            }
+            else -> Unit
+          }
+        }
+      }
     }
 
     override fun deleteAllData() {
