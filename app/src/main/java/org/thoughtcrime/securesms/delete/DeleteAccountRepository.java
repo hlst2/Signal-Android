@@ -1,5 +1,11 @@
 package org.thoughtcrime.securesms.delete;
 
+import android.app.AlarmManager;
+import android.app.Application;
+import android.app.PendingIntent;
+import android.content.Context;
+import android.content.Intent;
+
 import androidx.annotation.NonNull;
 import androidx.core.util.Consumer;
 
@@ -77,12 +83,43 @@ public class DeleteAccountRepository {
       }
 
       Log.i(TAG, "deleteAccount: successfully removed account from server");
-      Log.i(TAG, "deleteAccount: attempting to delete user data and close process...");
+      Log.i(TAG, "deleteAccount: scheduling launcher restart so user lands on ServerSetupFragment after wipe...");
 
-      if (!ServiceUtil.getActivityManager(AppDependencies.getApplication()).clearApplicationUserData()) {
+      // server-private fork: clearApplicationUserData() kills the process. Without this scheduled
+      // intent the launcher would be left empty and the user would have to manually re-tap the app
+      // icon to land on ServerSetupFragment. Schedule a one-shot AlarmManager wakeup ~500ms out so
+      // Android relaunches us automatically after the wipe completes.
+      Application application = AppDependencies.getApplication();
+      scheduleLauncherRestart(application);
+
+      Log.i(TAG, "deleteAccount: attempting to delete user data and close process...");
+      if (!ServiceUtil.getActivityManager(application).clearApplicationUserData()) {
         Log.w(TAG, "deleteAccount: failed to delete user data");
         onDeleteAccountEvent.accept(DeleteAccountEvent.LocalDataDeletionFailed.INSTANCE);
       }
     });
+  }
+
+  private static void scheduleLauncherRestart(@NonNull Context context) {
+    Intent launchIntent = context.getPackageManager().getLaunchIntentForPackage(context.getPackageName());
+    if (launchIntent == null) {
+      Log.w(TAG, "scheduleLauncherRestart: no launch intent for package; user will have to reopen manually.");
+      return;
+    }
+    launchIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+
+    PendingIntent pendingIntent = PendingIntent.getActivity(
+        context,
+        0,
+        launchIntent,
+        PendingIntent.FLAG_CANCEL_CURRENT | PendingIntent.FLAG_IMMUTABLE
+    );
+
+    AlarmManager alarmManager = (AlarmManager) context.getSystemService(Context.ALARM_SERVICE);
+    if (alarmManager == null) {
+      Log.w(TAG, "scheduleLauncherRestart: no AlarmManager service; user will have to reopen manually.");
+      return;
+    }
+    alarmManager.set(AlarmManager.RTC, System.currentTimeMillis() + 500, pendingIntent);
   }
 }
