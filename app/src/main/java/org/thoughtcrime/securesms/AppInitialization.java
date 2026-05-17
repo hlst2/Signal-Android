@@ -41,7 +41,7 @@ public final class AppInitialization {
     TextSecurePreferences.setTypingIndicatorsEnabled(context, true);
     AppDependencies.getMegaphoneRepository().onFirstEverAppLaunch();
     SignalStore.onFirstEverAppLaunch();
-    AppDependencies.getJobManager().addAll(BlessedPacks.getFirstInstallJobs());
+    enqueueBlessedPacksIfSupported();
   }
 
   public static void onPostBackupRestore(@NonNull Context context) {
@@ -55,7 +55,7 @@ public final class AppInitialization {
     SignalStore.notificationProfile().setHasSeenTooltip(true);
     TextSecurePreferences.onPostBackupRestore(context);
     SignalStore.settings().setPassphraseDisabled(true);
-    AppDependencies.getJobManager().addAll(BlessedPacks.getFirstInstallJobs());
+    enqueueBlessedPacksIfSupported();
     EmojiSearchIndexDownloadJob.scheduleImmediately();
     DeleteAbandonedAttachmentsJob.enqueue();
 
@@ -79,6 +79,20 @@ public final class AppInitialization {
     SignalStore.settings().setPassphraseDisabled(true);
     AppDependencies.getMegaphoneRepository().onFirstEverAppLaunch();
     SignalStore.onFirstEverAppLaunch();
+    enqueueBlessedPacksIfSupported();
+  }
+
+  /**
+   * server-private fork: BlessedPacks live on cdn.signal.org. A private deployment has no CDN
+   * configured (BuildConfig.SIGNAL_CDN_URL is intentionally blank), so enqueuing these jobs only
+   * leads to StickerPackDownloadJob throwing IllegalArgumentException at OkHttp and killing the
+   * process. Skip the seed entirely on private deployments.
+   */
+  private static void enqueueBlessedPacksIfSupported() {
+    if (SignalStore.customServer().isConfigured()) {
+      Log.i(TAG, "Private deployment; skipping BlessedPacks seed (no CDN).");
+      return;
+    }
     AppDependencies.getJobManager().addAll(BlessedPacks.getFirstInstallJobs());
   }
 }

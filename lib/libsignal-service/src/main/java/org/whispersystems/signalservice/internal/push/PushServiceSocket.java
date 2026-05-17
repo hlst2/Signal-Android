@@ -751,13 +751,22 @@ public class PushServiceSocket {
       throw new MissingConfigurationException("Attempted to download from unsupported CDN number: " + cdnNumber + ", Our configuration supports: " + cdnClientsMap.keySet());
     }
     ConnectionHolder   connectionHolder = getRandom(cdnNumberClients, random);
+    // server-private fork: BuildConfig.SIGNAL_CDN_URL is intentionally blank on private deployments
+    // (no upstream cdn.signal.org reference). Without this guard the URL string we hand to OkHttp
+    // would be "/path", which throws IllegalArgumentException("Expected URL scheme 'http' or 'https'") —
+    // that exception is treated as fatal by BaseJob and kills the JVM. Convert to PushNetworkException
+    // (IOException) so callers can fail gracefully and the JobManager can drop / retry as it sees fit.
+    String baseUrl = connectionHolder.getUrl();
+    if (baseUrl == null || baseUrl.isEmpty() || !(baseUrl.startsWith("http://") || baseUrl.startsWith("https://"))) {
+      throw new PushNetworkException(new IOException("CDN not configured (cdn " + cdnNumber + "); refusing /" + path));
+    }
     OkHttpClient       okHttpClient     = connectionHolder.getClient()
                                                           .newBuilder()
                                                           .connectTimeout(soTimeoutMillis, TimeUnit.MILLISECONDS)
                                                           .readTimeout(soTimeoutMillis, TimeUnit.MILLISECONDS)
                                                           .build();
 
-    Request.Builder request = new Request.Builder().url(connectionHolder.getUrl() + "/" + path).get();
+    Request.Builder request = new Request.Builder().url(baseUrl + "/" + path).get();
 
     if (connectionHolder.getHostHeader().isPresent()) {
       request.addHeader("Host", connectionHolder.getHostHeader().get());

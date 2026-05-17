@@ -3,6 +3,7 @@ package org.thoughtcrime.securesms.migrations
 import org.thoughtcrime.securesms.dependencies.AppDependencies
 import org.thoughtcrime.securesms.jobmanager.Job
 import org.thoughtcrime.securesms.jobs.StickerPackDownloadJob
+import org.thoughtcrime.securesms.keyvalue.SignalStore
 import org.thoughtcrime.securesms.stickers.BlessedPacks
 
 /**
@@ -21,6 +22,10 @@ internal class StickerPackAddition2MigrationJob private constructor(parameters: 
   override fun getFactoryKey(): String = KEY
 
   override fun performMigration() {
+    // server-private fork: BlessedPacks live on cdn.signal.org; we don't run a CDN.
+    if (SignalStore.customServer.isConfigured) {
+      return
+    }
     val jobManager = AppDependencies.jobManager
 
     jobManager.add(StickerPackDownloadJob.forInstall(BlessedPacks.ROCKY_TALK.packId, BlessedPacks.ROCKY_TALK.packKey, false))

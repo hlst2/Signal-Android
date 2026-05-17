@@ -40,6 +40,10 @@ public class StickerLaunchMigrationJob extends MigrationJob {
 
   @Override
   public void performMigration() {
+    // server-private fork: BlessedPacks live on cdn.signal.org; we don't run a CDN.
+    if (SignalStore.customServer().isConfigured()) {
+      return;
+    }
     installPack(context, BlessedPacks.ZOZO);
     installPack(context, BlessedPacks.BANDIT);
   }

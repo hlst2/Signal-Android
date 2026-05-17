@@ -12,6 +12,7 @@ import org.thoughtcrime.securesms.jobmanager.JsonJobData;
 import org.thoughtcrime.securesms.jobmanager.Job;
 import org.thoughtcrime.securesms.jobmanager.JobManager;
 import org.thoughtcrime.securesms.jobs.StickerPackDownloadJob;
+import org.thoughtcrime.securesms.keyvalue.SignalStore;
 import org.thoughtcrime.securesms.stickers.BlessedPacks;
 
 import java.util.Arrays;
@@ -58,6 +59,10 @@ public class StickerAdditionMigrationJob extends MigrationJob {
 
   @Override
   public void performMigration() {
+    // server-private fork: BlessedPacks live on cdn.signal.org; we don't run a CDN.
+    if (SignalStore.customServer().isConfigured()) {
+      return;
+    }
     JobManager jobManager = AppDependencies.getJobManager();
 
     for (BlessedPacks.Pack pack : packs) {

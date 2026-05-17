@@ -6,6 +6,7 @@ import androidx.annotation.Nullable;
 import org.thoughtcrime.securesms.dependencies.AppDependencies;
 import org.thoughtcrime.securesms.jobmanager.Job;
 import org.thoughtcrime.securesms.jobs.StickerPackDownloadJob;
+import org.thoughtcrime.securesms.keyvalue.SignalStore;
 import org.thoughtcrime.securesms.stickers.BlessedPacks;
 
 /**
@@ -35,6 +36,10 @@ public class StickerDayByDayMigrationJob extends MigrationJob {
 
   @Override
   public void performMigration() {
+    // server-private fork: BlessedPacks live on cdn.signal.org; we don't run a CDN.
+    if (SignalStore.customServer().isConfigured()) {
+      return;
+    }
     AppDependencies.getJobManager().add(StickerPackDownloadJob.forInstall(BlessedPacks.DAY_BY_DAY.getPackId(), BlessedPacks.DAY_BY_DAY.getPackKey(), false));
   }
 
