@@ -265,8 +265,18 @@ public class ApplicationContext extends Application implements AppForegroundObse
       checkFreeDiskSpace();
       MemoryTracker.start();
       CheckKeyTransparencyJob.enqueueIfNecessary(true);
-      AppDependencies.getAuthWebSocket().registerKeepAliveToken(SignalWebSocket.FOREGROUND_KEEPALIVE);
-      AppDependencies.getUnauthWebSocket().registerKeepAliveToken(SignalWebSocket.FOREGROUND_KEEPALIVE);
+      // server-private fork: on a fresh install BuildConfig.SIGNAL_URL is intentionally
+      // empty and the user hasn't typed a server URL yet. registerKeepAliveToken would
+      // call SignalWebSocket.connect → OkHttpWebSocketConnection.connect, which tries
+      // to build wss:///v1/websocket/ and OkHttp throws IllegalArgumentException
+      // ("Expected URL scheme 'http' or 'https'"), killing the signal-bounded thread.
+      // Skip until the user configures a server.
+      if (SignalStore.customServer().isConfigured()) {
+        AppDependencies.getAuthWebSocket().registerKeepAliveToken(SignalWebSocket.FOREGROUND_KEEPALIVE);
+        AppDependencies.getUnauthWebSocket().registerKeepAliveToken(SignalWebSocket.FOREGROUND_KEEPALIVE);
+      } else {
+        Log.i(TAG, "Skipping websocket keepalive registration: custom server URL not yet configured.");
+      }
 
       long lastForegroundTime = SignalStore.misc().getLastForegroundTime();
       long currentTime        = System.currentTimeMillis();

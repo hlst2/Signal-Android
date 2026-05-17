@@ -253,6 +253,17 @@ class NetworkDependenciesModule(
   }
 
   fun openConnections() {
+    // server-private fork: on a fresh install the user hasn't typed a server URL yet, and
+    // BuildConfig.SIGNAL_URL is intentionally empty (no upstream Signal infra references).
+    // OkHttpWebSocketConnection would then try to build wss:///v1/websocket/ and OkHttp
+    // throws IllegalArgumentException("Expected URL scheme 'http' or 'https'"), crashing
+    // the app before ServerSetupFragment can render. Skip the eager connect; the websockets
+    // will be reopened once the user configures the server and registration completes.
+    if (!SignalStore.customServer.isConfigured) {
+      Log.i(TAG, "Skipping openConnections(): custom server URL not yet configured.")
+      return
+    }
+
     try {
       authWebSocket.connect()
     } catch (e: WebSocketUnavailableException) {

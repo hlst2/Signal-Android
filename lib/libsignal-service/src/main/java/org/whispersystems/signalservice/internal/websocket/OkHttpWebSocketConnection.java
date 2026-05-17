@@ -132,6 +132,17 @@ public class OkHttpWebSocketConnection extends WebSocketListener implements WebS
       SignalServiceUrl               serviceUrl     = connectionInfo.getFirst();
       String                         wsUri          = connectionInfo.getSecond();
 
+      // server-private fork: defense-in-depth. On a fresh install before the user has
+      // configured a server URL, the base URL is empty and wsUri ends up as "wss:///v1/websocket/"
+      // or similar. OkHttp's Request.Builder.url() throws IllegalArgumentException, killing
+      // the calling thread. Callers should gate on customServer.isConfigured, but if one
+      // slips through we'd rather emit FAILED and log than crash.
+      if (wsUri == null || !(wsUri.startsWith("wss://") || wsUri.startsWith("ws://")) || wsUri.startsWith("wss:///") || wsUri.startsWith("ws:///")) {
+        Log.w(TAG, "Refusing to connect; service URL is empty or malformed: '" + wsUri + "'");
+        webSocketState.onNext(WebSocketConnectionState.FAILED);
+        return webSocketState;
+      }
+
       Pair<SSLSocketFactory, X509TrustManager> socketFactory = createTlsSocketFactory(trustStore);
 
       OkHttpClient.Builder clientBuilder = new OkHttpClient.Builder().sslSocketFactory(new Tls12SocketFactory(socketFactory.getFirst()),
