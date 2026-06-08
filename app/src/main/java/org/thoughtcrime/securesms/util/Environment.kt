@@ -4,6 +4,7 @@ import com.google.android.gms.wallet.WalletConstants
 import org.signal.donations.GooglePayApi
 import org.signal.donations.StripeApi
 import org.thoughtcrime.securesms.BuildConfig
+import org.thoughtcrime.securesms.keyvalue.SignalStore
 
 object Environment {
   private const val GOOGLE_PLAY_BILLING_APPLICATION_ID = "org.thoughtcrime.securesms"
@@ -49,6 +50,12 @@ object Environment {
   object Calling {
     @JvmStatic
     fun defaultSfuUrl(): String {
+      // Private/self-hosted deployments must point group calling at their own SFU (if any); Signal's public SFU is
+      // unreachable on an isolated network. Falls back to the build-time default when no custom SFU is configured.
+      val custom = SignalStore.customServer.sfuUrl
+      if (custom.isNotBlank()) {
+        return custom
+      }
       return if (IS_STAGING) BuildConfig.SIGNAL_STAGING_SFU_URL else BuildConfig.SIGNAL_SFU_URL
     }
   }

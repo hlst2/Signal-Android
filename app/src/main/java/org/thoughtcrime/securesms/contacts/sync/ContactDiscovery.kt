@@ -17,6 +17,7 @@ import org.signal.core.util.logging.Log
 import org.thoughtcrime.securesms.database.RecipientTable
 import org.thoughtcrime.securesms.database.SignalDatabase
 import org.thoughtcrime.securesms.dependencies.AppDependencies
+import org.thoughtcrime.securesms.jobs.PrivateDirectoryRefreshJob
 import org.thoughtcrime.securesms.jobs.SyncSystemContactLinksJob
 import org.thoughtcrime.securesms.keyvalue.SignalStore
 import org.thoughtcrime.securesms.mms.IncomingMessage
@@ -47,6 +48,14 @@ object ContactDiscovery {
   @Throws(IOException::class)
   @WorkerThread
   fun refreshAll(context: Context, notifyOfNewUsers: Boolean) {
+    if (SignalStore.customServer.isConfigured) {
+      // Private/self-hosted deployments have no CDSI enclave. Contact discovery is served by the server-pushed
+      // directory instead; refresh it rather than attempting a (doomed) CDSI lookup.
+      Log.i(TAG, "Custom server configured; using private directory refresh instead of CDSI.")
+      PrivateDirectoryRefreshJob.enqueue()
+      return
+    }
+
     if (TextUtils.isEmpty(SignalStore.account.e164)) {
       Log.w(TAG, "Have not yet set our own local number. Skipping.")
       return
@@ -86,6 +95,11 @@ object ContactDiscovery {
   @Throws(IOException::class)
   @WorkerThread
   fun refresh(context: Context, recipients: List<Recipient>, notifyOfNewUsers: Boolean, timeoutMs: Long? = null) {
+    if (SignalStore.customServer.isConfigured) {
+      Log.i(TAG, "Custom server configured; skipping CDSI refresh for ${recipients.size} recipient(s).")
+      return
+    }
+
     refreshRecipients(
       context = context,
       descriptor = "refresh-multiple",
@@ -100,6 +114,12 @@ object ContactDiscovery {
   @Throws(IOException::class)
   @WorkerThread
   fun refresh(context: Context, recipient: Recipient, notifyOfNewUsers: Boolean, timeoutMs: Long? = null): RecipientTable.RegisteredState {
+    if (SignalStore.customServer.isConfigured) {
+      // No CDSI on private deployments. Trust the locally-known registered state (populated by the directory
+      // refresh) instead of declaring the recipient NOT_REGISTERED on a failed lookup.
+      return if (recipient.isRegistered) RecipientTable.RegisteredState.REGISTERED else RecipientTable.RegisteredState.NOT_REGISTERED
+    }
+
     val result: RefreshResult = refreshRecipients(
       context = context,
       descriptor = "refresh-single",
@@ -125,6 +145,10 @@ object ContactDiscovery {
   @Throws(IOException::class)
   @WorkerThread
   fun lookupE164(e164: String): LookupResult? {
+    if (SignalStore.customServer.isConfigured) {
+      // No CDSI / phone-number directory on private deployments; discovery is ACI-based via the server directory.
+      return null
+    }
     return ContactDiscoveryRefreshV2.lookupE164(e164)
   }
 

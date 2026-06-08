@@ -61,16 +61,49 @@ public class BlacklistingTrustManager implements X509TrustManager {
       TrustManagerFactory trustManagerFactory = TrustManagerFactory.getInstance("X509");
       trustManagerFactory.init(keyStore);
 
-      return BlacklistingTrustManager.createFor(trustManagerFactory.getTrustManagers());
+      X509TrustManager pinned = findX509(trustManagerFactory.getTrustManagers());
+
+      // Private/self-hosted deployments present a certificate that does not chain to the bundled (pinned) CA in
+      // whisper.store. Allow the platform's default CA store as a fallback so a publicly-trusted (e.g. Let's
+      // Encrypt) or otherwise system-trusted server certificate validates. The bundled store is still tried
+      // first, and the serial blacklist is always enforced.
+      X509TrustManager system = systemTrustManager();
+
+      return new TrustManager[] { new BlacklistingTrustManager(pinned, system) };
     } catch (KeyStoreException | CertificateException | IOException | NoSuchAlgorithmException e) {
       throw new AssertionError(e);
     }
   }
 
+  private static X509TrustManager findX509(TrustManager[] trustManagers) {
+    for (TrustManager trustManager : trustManagers) {
+      if (trustManager instanceof X509TrustManager) {
+        return (X509TrustManager) trustManager;
+      }
+    }
+    throw new AssertionError("No X509 Trust Managers!");
+  }
+
+  private static X509TrustManager systemTrustManager() {
+    try {
+      TrustManagerFactory factory = TrustManagerFactory.getInstance(TrustManagerFactory.getDefaultAlgorithm());
+      factory.init((KeyStore) null);
+      return findX509(factory.getTrustManagers());
+    } catch (NoSuchAlgorithmException | KeyStoreException e) {
+      return null;
+    }
+  }
+
   private final X509TrustManager trustManager;
+  private final X509TrustManager systemFallback;
 
   public BlacklistingTrustManager(X509TrustManager trustManager) {
-    this.trustManager = trustManager;
+    this(trustManager, null);
+  }
+
+  public BlacklistingTrustManager(X509TrustManager trustManager, X509TrustManager systemFallback) {
+    this.trustManager   = trustManager;
+    this.systemFallback = systemFallback;
   }
 
   @Override
@@ -84,7 +117,15 @@ public class BlacklistingTrustManager implements X509TrustManager {
   public void checkServerTrusted(X509Certificate[] chain, String authType)
       throws CertificateException
   {
-    trustManager.checkServerTrusted(chain, authType);
+    try {
+      trustManager.checkServerTrusted(chain, authType);
+    } catch (CertificateException e) {
+      if (systemFallback != null) {
+        systemFallback.checkServerTrusted(chain, authType);
+      } else {
+        throw e;
+      }
+    }
 
     for (X509Certificate certificate : chain) {
       for (Pair<String, BigInteger> blacklistedSerial : BLACKLIST) {
@@ -100,6 +141,17 @@ public class BlacklistingTrustManager implements X509TrustManager {
 
   @Override
   public X509Certificate[] getAcceptedIssuers() {
-    return trustManager.getAcceptedIssuers();
+    if (systemFallback == null) {
+      return trustManager.getAcceptedIssuers();
+    }
+
+    X509Certificate[] pinnedIssuers = trustManager.getAcceptedIssuers();
+    X509Certificate[] systemIssuers = systemFallback.getAcceptedIssuers();
+    X509Certificate[] combined      = new X509Certificate[pinnedIssuers.length + systemIssuers.length];
+
+    System.arraycopy(pinnedIssuers, 0, combined, 0, pinnedIssuers.length);
+    System.arraycopy(systemIssuers, 0, combined, pinnedIssuers.length, systemIssuers.length);
+
+    return combined;
   }
 }

@@ -29,16 +29,21 @@ class ServerSetupFragment : LoggingFragment(R.layout.fragment_registration_serve
   override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
     super.onViewCreated(view, savedInstanceState)
 
-    if (SignalStore.customServer.isConfigured) {
+    // Only auto-skip this screen once the account is actually registered. Skipping merely because a URL was
+    // saved would permanently strand an install if the user previously entered a wrong/unreachable URL, since
+    // there would be no way back to correct it. Pre-fill the prior value (below) so it can be edited instead.
+    if (SignalStore.account.isRegistered) {
       findNavController().safeNavigate(ServerSetupFragmentDirections.goToWelcome())
       return
     }
 
     val urlField = view.findViewById<TextInputEditText>(R.id.server_setup_url)
     val urlLayout = view.findViewById<TextInputLayout>(R.id.server_setup_url_layout)
+    val sfuField = view.findViewById<TextInputEditText>(R.id.server_setup_sfu)
     val continueButton = view.findViewById<MaterialButton>(R.id.server_setup_continue)
 
     urlField.setText(SignalStore.customServer.serverUrl)
+    sfuField.setText(SignalStore.customServer.sfuUrl)
 
     continueButton.setOnClickListener {
       val raw = urlField.text?.toString()?.trim().orEmpty()
@@ -49,7 +54,16 @@ class ServerSetupFragment : LoggingFragment(R.layout.fragment_registration_serve
       }
       urlLayout.error = null
 
+      // SFU URL is optional. If present, normalize it the same way (https-only); if blank, clear it.
+      val rawSfu = sfuField.text?.toString()?.trim().orEmpty()
+      val normalizedSfu = if (rawSfu.isBlank()) "" else normalize(rawSfu)
+      if (normalizedSfu == null) {
+        urlLayout.error = getString(RegistrationR.string.ServerSetupFragment_invalid_url)
+        return@setOnClickListener
+      }
+
       SignalStore.customServer.serverUrl = normalized
+      SignalStore.customServer.sfuUrl = normalizedSfu
       AppDependencies.resetNetwork()
 
       findNavController().safeNavigate(ServerSetupFragmentDirections.goToWelcome())
@@ -58,7 +72,10 @@ class ServerSetupFragment : LoggingFragment(R.layout.fragment_registration_serve
 
   private fun normalize(raw: String): String? {
     if (raw.isBlank()) return null
-    val withScheme = if (raw.startsWith("http://") || raw.startsWith("https://")) raw else "https://$raw"
+    // Reject plaintext HTTP outright: the Signal stack mandates TLS (RESTRICTED_TLS) for every connection, so an
+    // http:// URL can never connect and would only produce a confusing later failure. Default missing schemes to https.
+    if (raw.startsWith("http://")) return null
+    val withScheme = if (raw.startsWith("https://")) raw else "https://$raw"
     return withScheme.trimEnd('/').takeIf { it.length > "https://".length + 1 }
   }
 }

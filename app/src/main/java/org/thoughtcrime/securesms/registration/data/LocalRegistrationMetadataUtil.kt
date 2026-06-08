@@ -42,7 +42,11 @@ object LocalRegistrationMetadataUtil {
       remoteResult.masterKey?.serialize()?.toByteString()?.let {
         masterKey = it
       }
-      e164 = registrationData.e164
+      // Prefer the identifier the server actually assigned to the account. For private/self-hosted
+      // deployments this is a synthetic "+999..." number derived from the display name; storing it (rather
+      // than the raw display name) keeps the local account identifier stable and consistent with the server.
+      // Falls back to the registration-time value for the normal phone-number flow, where they are identical.
+      e164 = remoteResult.number.takeIf { it.isNotBlank() } ?: registrationData.e164
       fcmEnabled = registrationData.isFcm
       profileKey = registrationData.profileKey.serialize().toByteString()
       servicePassword = registrationData.password

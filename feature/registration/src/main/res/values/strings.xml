@@ -14,10 +14,12 @@
     <string name="ServerSetupFragment_description">Enter the URL of your private Signal server, including https:// and port if needed.</string>
     <!-- Hint inside the URL text field -->
     <string name="ServerSetupFragment_url_hint">https://10.0.1.50:8443</string>
+    <!-- Hint inside the optional calling-SFU URL text field -->
+    <string name="ServerSetupFragment_sfu_hint">Calling server URL (optional)</string>
     <!-- Continue button label -->
     <string name="ServerSetupFragment_continue">Continue</string>
-    <!-- Validation error shown when the URL is malformed -->
-    <string name="ServerSetupFragment_invalid_url">Enter a valid URL starting with http:// or https://</string>
+    <!-- Validation error shown when the URL is malformed or uses plaintext http:// -->
+    <string name="ServerSetupFragment_invalid_url">Enter a valid HTTPS URL (for example https://10.0.1.50:8443). Plaintext http:// is not supported.</string>
 
     <!-- EnterDisplayNameFragment -->
     <!-- Title shown above the display-name input -->

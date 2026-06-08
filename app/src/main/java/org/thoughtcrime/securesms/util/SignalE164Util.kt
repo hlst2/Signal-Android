@@ -5,10 +5,12 @@
 
 package org.thoughtcrime.securesms.util
 
+import com.google.i18n.phonenumbers.NumberParseException
 import org.signal.core.util.BidiUtil
 import org.signal.core.util.E164Util
 import org.signal.core.util.LRUCache
 import org.signal.core.util.Util
+import org.signal.core.util.logging.Log
 import org.thoughtcrime.securesms.dependencies.AppDependencies
 import org.thoughtcrime.securesms.keyvalue.SignalStore
 
@@ -16,6 +18,8 @@ import org.thoughtcrime.securesms.keyvalue.SignalStore
  * A wrapper around [E164Util] that automatically handles fetching our own number and caching formatters.
  */
 object SignalE164Util {
+
+  private val TAG = Log.tag(SignalE164Util::class.java)
 
   private val cachedFormatters: MutableMap<String, E164Util.Formatter> = LRUCache(2)
   private val defaultFormatter: E164Util.Formatter by lazy {
@@ -102,7 +106,15 @@ object SignalE164Util {
         return formatter
       }
 
-      val newFormatter = E164Util.createFormatterForE164(localNumber)
+      val newFormatter = try {
+        E164Util.createFormatterForE164(localNumber)
+      } catch (e: NumberParseException) {
+        // Private/self-hosted deployments use a synthetic, non-dialable account identifier (e.g. an ITU-reserved
+        // "+999..." number) that libphonenumber cannot parse. Fall back to the region-default formatter instead of
+        // letting the exception propagate and crash every caller. See private-registration flow.
+        Log.w(TAG, "Local number is not a parseable E164; using default formatter.", e)
+        defaultFormatter
+      }
       cachedFormatters[localNumber] = newFormatter
       return newFormatter
     }

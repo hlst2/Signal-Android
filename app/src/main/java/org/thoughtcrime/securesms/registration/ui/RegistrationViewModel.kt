@@ -1067,14 +1067,17 @@ class RegistrationViewModel : ViewModel() {
     setInProgress(true)
 
     viewModelScope.launch(context = coroutineExceptionHandler) {
-      val fcmToken = updateFcmToken(context)
+      // Private/self-hosted deployments stub out APN/FCM server-side, so push wake-ups never fire. Force the
+      // account into websocket-fetch mode by registering with a null FCM token: this makes fetchesMessages=true
+      // and fcmEnabled=false, so the client keeps a persistent foreground websocket and receives messages in the
+      // background without depending on push. See PrivateDirectoryRefreshJob/IncomingMessageObserver.
       val registrationData = RegistrationData(
         code = "",
         e164 = displayName,
         password = password,
         registrationId = RegistrationRepository.getRegistrationId(),
         profileKey = RegistrationRepository.getProfileKey(displayName),
-        fcmToken = fcmToken,
+        fcmToken = null,
         pniRegistrationId = RegistrationRepository.getPniRegistrationId(),
         recoveryPassword = null
       )

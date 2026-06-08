@@ -109,7 +109,9 @@ class InternalValues internal constructor(store: KeyValueStore) : SignalStoreVal
       if (internalServer != null && !listOf(*BuildConfig.SIGNAL_SFU_INTERNAL_URLS).contains(internalServer)) {
         internalServer = null
       }
-      return internalServer ?: BuildConfig.SIGNAL_SFU_URL
+      // Honor a self-hosted SFU override for non-internal (production) users too; otherwise group calling would
+      // always hit Signal's public SFU, which is unreachable on a private deployment.
+      return internalServer ?: defaultSfuUrl()
     }
     set(value) = putString(CALLING_SERVER, value)
 

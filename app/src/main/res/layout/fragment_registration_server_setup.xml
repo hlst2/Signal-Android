@@ -49,6 +49,26 @@
 
     </com.google.android.material.textfield.TextInputLayout>
 
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/server_setup_sfu_layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:hint="@string/ServerSetupFragment_sfu_hint"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/server_setup_url_layout">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/server_setup_sfu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:imeOptions="actionDone"
+            android:inputType="textUri"
+            android:singleLine="true" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
     <TextView
         android:id="@+id/server_setup_error"
         android:layout_width="0dp"
@@ -58,7 +78,7 @@
         android:visibility="gone"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/server_setup_url_layout" />
+        app:layout_constraintTop_toBottomOf="@id/server_setup_sfu_layout" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/server_setup_continue"
